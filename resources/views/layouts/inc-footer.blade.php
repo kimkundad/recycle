@@ -1,5 +1,5 @@
-<footer class="ps-footer">
-    <div class="ps-container">
+<footer class="ps-footer" style="box-shadow: 0px -10px 38px 0px #0000000D;">
+    <div class="container">
         <div class="">
 
             <div class="row ">
@@ -65,8 +65,13 @@
             
             
         </div>
-        <div class="ps-footer__copyright ">
-            <p class="text-center">&copy; Copyright (c) 2015 Wongpanit Recycle Rayong Co., Ltd.</p>
-        </div>
+        
     </div>
 </footer>
+<div class="ps-footer__copyright ">
+    <div class="d-flex justify-content-center">
+        <p class="bg-green"></p>
+        <p class="text-center" >&copy; Copyright (c) 2015 Wongpanit Recycle Rayong Co., Ltd.</p>
+        <p class="bg-green2"></p>
+    </div>
+</div>

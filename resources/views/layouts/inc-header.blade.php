@@ -1,6 +1,6 @@
 <header class="header header--1" data-sticky="true">
     <div class="header__top">
-        <div class="ps-container">
+        <div class="container">
             <div class="header__left">
                 <a class="ps-logo" href="{{ url('/') }}"><img class="max-h-65" src="{{ url('img/wpn-logo.png') }}" alt="" /></a>
             </div>
@@ -102,7 +102,7 @@
         </div>
     </div>
     <nav class="navigation">
-        <div class="ps-container">
+        <div class="container">
             <div class="navigation__right">
                 <ul class="menu">
                     <li class="menu-item"><a class="active" href="{{ url('/') }}">หน้าแรก</a></li>
