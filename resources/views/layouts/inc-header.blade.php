@@ -106,11 +106,11 @@
             <div class="navigation__right">
                 <ul class="menu">
                     <li class="menu-item"><a class="active" href="{{ url('/') }}">หน้าแรก</a></li>
-                    <li class="menu-item"><a href="{{ url('/') }}">บริการ</a></li>
-                    <li class="menu-item"><a href="{{ url('/') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
-                    <li class="menu-item"><a href="{{ url('/') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
-                    <li class="menu-item"><a href="{{ url('/') }}">ติดต่อเรา</a></li>
-                    <li class="menu-item"><a href="{{ url('/') }}">นโยบายส่วนบุคคล</a></li>
+                    <li class="menu-item"><a href="{{ url('/service') }}">บริการ</a></li>
+                    <li class="menu-item"><a href="{{ url('/about') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
+                    <li class="menu-item"><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
+                    <li class="menu-item"><a href="{{ url('/contact') }}">ติดต่อเรา</a></li>
+                    <li class="menu-item"><a href="{{ url('/term ') }}">นโยบายส่วนบุคคล</a></li>
                 </ul>
                 <ul class="navigation__extra">
                     <li><a class="white_btn_kim" href="#">ซื้อสินค้า</a></li>

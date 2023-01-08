@@ -7,127 +7,174 @@
 
 <div class="ps-page--shop" id="shop-sidebar">
         <div class="container">
+            <div class="d-flex justify-content-between mt-15">
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Clothing & Shoes</a>
+                </div>
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Entertainment</a>
+                </div>
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Music</a>
+                </div>
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Sport & Lifestyle</a>
+                </div>
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Pets</a>
+                </div>
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Kitchen Accessories</a>
+                </div>
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Travel Equipment </a>
+                </div>
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Growing & Garden</a>
+                </div>
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Electrical Tools</a>
+                </div>
+                <div class="text-center porduct-top-list">
+                    <i class="icon-3d-rotate"></i><br>
+                    <a href="#">Mother Care </a>
+                </div>
+            </div>
             <div class="ps-layout--shop">
                 <div class="ps-layout__left">
-                    <aside class="widget widget_shop">
-                        <h4 class="widget-title">Categories</h4>
+                    <aside class="widget widget_shop ">
+                        <a class="green_btn_kim_out btn_card_in btn-box2 btn-block" href="#">
+                            <div class="d-flex">
+                                <img src="{{ url('img/filter-variant.png') }}" height="32" width="32">
+                                <div class="pt-5px">
+                                    <h4 class="widget-title">หมวดหมู่ : ทุกหมวด</h4>
+                                </div>
+                            </div>
+                        </a>
+                        <br>
                         <ul class="ps-list--categories">
-                            <li class="current-menu-item menu-item-has-children"><a href="shop-default.html">Clothing &amp; Apparel</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                            <li class="current-menu-item menu-item-has-children"> <a href="#">Clothing &amp; Apparel</a> <span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
                                 <ul class="sub-menu">
-                                    <li class="current-menu-item "><a href="shop-default.html">Womens</a>
+                                    <li class="current-menu-item ">
+                                        <a href="#">Womens</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Mens</a>
+                                    <li class="current-menu-item "><a href="#">Mens</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Bags</a>
+                                    <li class="current-menu-item "><a href="#">Bags</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Sunglasses</a>
+                                    <li class="current-menu-item "><a href="#">Sunglasses</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Accessories</a>
+                                    <li class="current-menu-item "><a href="#">Accessories</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Kid's Fashion</a>
+                                    <li class="current-menu-item "><a href="#">Kid's Fashion</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="current-menu-item menu-item-has-children"><a href="shop-default.html">Garden &amp; Kitchen</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                            <li class="current-menu-item menu-item-has-children"><a href="#">Garden &amp; Kitchen</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
                                 <ul class="sub-menu">
-                                    <li class="current-menu-item "><a href="shop-default.html">Cookware</a>
+                                    <li class="current-menu-item "><a href="#">Cookware</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Decoration</a>
+                                    <li class="current-menu-item "><a href="#">Decoration</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Furniture</a>
+                                    <li class="current-menu-item "><a href="#">Furniture</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Garden Tools</a>
+                                    <li class="current-menu-item "><a href="#">Garden Tools</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Home Improvement</a>
+                                    <li class="current-menu-item "><a href="#">Home Improvement</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Powers And Hand Tools</a>
+                                    <li class="current-menu-item "><a href="#">Powers And Hand Tools</a>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Utensil &amp; Gadget</a>
+                                    <li class="current-menu-item "><a href="#">Utensil &amp; Gadget</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="current-menu-item menu-item-has-children"><a href="shop-default.html">Consumer Electrics</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                            <li class="current-menu-item menu-item-has-children"><a href="#">Consumer Electrics</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
                                 <ul class="sub-menu">
-                                    <li class="current-menu-item menu-item-has-children"><a href="shop-default.html">Air Conditioners</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                    <li class="current-menu-item menu-item-has-children"><a href="#">Air Conditioners</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
                                         <ul class="sub-menu">
-                                            <li class="current-menu-item "><a href="shop-default.html">Accessories</a>
+                                            <li class="current-menu-item "><a href="#">Accessories</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Type Hanging Cell</a>
+                                            <li class="current-menu-item "><a href="#">Type Hanging Cell</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Type Hanging Wall</a>
+                                            <li class="current-menu-item "><a href="#">Type Hanging Wall</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="current-menu-item menu-item-has-children"><a href="shop-default.html">Audios &amp; Theaters</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                    <li class="current-menu-item menu-item-has-children"><a href="#">Audios &amp; Theaters</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
                                         <ul class="sub-menu">
-                                            <li class="current-menu-item "><a href="shop-default.html">Headphone</a>
+                                            <li class="current-menu-item "><a href="#">Headphone</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Home Theater System</a>
+                                            <li class="current-menu-item "><a href="#">Home Theater System</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Speakers</a>
+                                            <li class="current-menu-item "><a href="#">Speakers</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="current-menu-item menu-item-has-children"><a href="shop-default.html">Car Electronics</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                    <li class="current-menu-item menu-item-has-children"><a href="#">Car Electronics</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
                                         <ul class="sub-menu">
-                                            <li class="current-menu-item "><a href="shop-default.html">Audio &amp; Video</a>
+                                            <li class="current-menu-item "><a href="#">Audio &amp; Video</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Car Security</a>
+                                            <li class="current-menu-item "><a href="#">Car Security</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Radar Detector</a>
+                                            <li class="current-menu-item "><a href="#">Radar Detector</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Vehicle GPS</a>
+                                            <li class="current-menu-item "><a href="#">Vehicle GPS</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="current-menu-item menu-item-has-children"><a href="shop-default.html">Office Electronics</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                    <li class="current-menu-item menu-item-has-children"><a href="#">Office Electronics</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
                                         <ul class="sub-menu">
-                                            <li class="current-menu-item "><a href="shop-default.html">Printers</a>
+                                            <li class="current-menu-item "><a href="#">Printers</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Projectors</a>
+                                            <li class="current-menu-item "><a href="#">Projectors</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Scanners</a>
+                                            <li class="current-menu-item "><a href="#">Scanners</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Store &amp; Business</a>
+                                            <li class="current-menu-item "><a href="#">Store &amp; Business</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="current-menu-item menu-item-has-children"><a href="shop-default.html">TV Televisions</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                    <li class="current-menu-item menu-item-has-children"><a href="#">TV Televisions</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
                                         <ul class="sub-menu">
-                                            <li class="current-menu-item "><a href="shop-default.html">4K Ultra HD TVs</a>
+                                            <li class="current-menu-item "><a href="#">4K Ultra HD TVs</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">LED TVs</a>
+                                            <li class="current-menu-item "><a href="#">LED TVs</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">OLED TVs</a>
+                                            <li class="current-menu-item "><a href="#">OLED TVs</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="current-menu-item menu-item-has-children"><a href="shop-default.html">Washing Machines</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+                                    <li class="current-menu-item menu-item-has-children"><a href="#">Washing Machines</a><span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
                                         <ul class="sub-menu">
-                                            <li class="current-menu-item "><a href="shop-default.html">Type Drying Clothes</a>
+                                            <li class="current-menu-item "><a href="#">Type Drying Clothes</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Type Horizontal</a>
+                                            <li class="current-menu-item "><a href="#">Type Horizontal</a>
                                             </li>
-                                            <li class="current-menu-item "><a href="shop-default.html">Type Vertical</a>
+                                            <li class="current-menu-item "><a href="#">Type Vertical</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="current-menu-item "><a href="shop-default.html">Refrigerators</a>
+                                    <li class="current-menu-item "><a href="#">Refrigerators</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="current-menu-item "><a href="shop-default.html">Books &amp; Office</a>
+                            <li class="current-menu-item "><a href="#">Books &amp; Office</a>
                             </li>
-                            <li class="current-menu-item "><a href="shop-default.html">Cars &amp; Motocycles</a>
+                            <li class="current-menu-item "><a href="#">Cars &amp; Motocycles</a>
                             </li>
                         </ul>
                     </aside>
-                    <aside class="widget widget_shop">
-                        <h4 class="widget-title">BY BRANDS</h4>
-                        <form class="ps-form--widget-search" action="do_action" method="get">
-                            <input class="form-control" type="text" placeholder="">
-                            <button><i class="icon-magnifier"></i></button>
-                        </form>
+                    <aside class="widget widget_shop widget_shop_bg">
+                        <h4 class="widget-title mt-10 mb-1">Expanded Filters</h4>
                         <figure class="ps-custom-scrollbar" data-height="250">
                             <div class="ps-checkbox">
                                 <input class="form-control" type="checkbox" id="brand-1" name="brand">
@@ -174,72 +221,6 @@
                                 <label for="brand-11">Sony (0)</label>
                             </div>
                         </figure>
-                        <figure>
-                            <h4 class="widget-title">By Price</h4>
-                            <div class="ps-slider" data-default-min="13" data-default-max="1300" data-max="1311" data-step="100" data-unit="$"></div>
-                            <p class="ps-slider__meta">Price:<span class="ps-slider__value ps-slider__min"></span>-<span class="ps-slider__value ps-slider__max"></span></p>
-                        </figure>
-                        <figure>
-                            <h4 class="widget-title">By Price</h4>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="review-1" name="review">
-                                <label for="review-1"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i></span><small>(13)</small></label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="review-2" name="review">
-                                <label for="review-2"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star"></i></span><small>(13)</small></label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="review-3" name="review">
-                                <label for="review-3"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><small>(5)</small></label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="review-4" name="review">
-                                <label for="review-4"><span><i class="fa fa-star rate"></i><i class="fa fa-star rate"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><small>(5)</small></label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="review-5" name="review">
-                                <label for="review-5"><span><i class="fa fa-star rate"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span><small>(1)</small></label>
-                            </div>
-                        </figure>
-                        <figure>
-                            <h4 class="widget-title">By Color</h4>
-                            <div class="ps-checkbox ps-checkbox--color color-1 ps-checkbox--inline">
-                                <input class="form-control" type="checkbox" id="color-1" name="size">
-                                <label for="color-1"></label>
-                            </div>
-                            <div class="ps-checkbox ps-checkbox--color color-2 ps-checkbox--inline">
-                                <input class="form-control" type="checkbox" id="color-2" name="size">
-                                <label for="color-2"></label>
-                            </div>
-                            <div class="ps-checkbox ps-checkbox--color color-3 ps-checkbox--inline">
-                                <input class="form-control" type="checkbox" id="color-3" name="size">
-                                <label for="color-3"></label>
-                            </div>
-                            <div class="ps-checkbox ps-checkbox--color color-4 ps-checkbox--inline">
-                                <input class="form-control" type="checkbox" id="color-4" name="size">
-                                <label for="color-4"></label>
-                            </div>
-                            <div class="ps-checkbox ps-checkbox--color color-5 ps-checkbox--inline">
-                                <input class="form-control" type="checkbox" id="color-5" name="size">
-                                <label for="color-5"></label>
-                            </div>
-                            <div class="ps-checkbox ps-checkbox--color color-6 ps-checkbox--inline">
-                                <input class="form-control" type="checkbox" id="color-6" name="size">
-                                <label for="color-6"></label>
-                            </div>
-                            <div class="ps-checkbox ps-checkbox--color color-7 ps-checkbox--inline">
-                                <input class="form-control" type="checkbox" id="color-7" name="size">
-                                <label for="color-7"></label>
-                            </div>
-                            <div class="ps-checkbox ps-checkbox--color color-8 ps-checkbox--inline">
-                                <input class="form-control" type="checkbox" id="color-8" name="size">
-                                <label for="color-8"></label>
-                            </div>
-                        </figure>
-                        <figure class="sizes">
-                            <h4 class="widget-title">BY SIZE</h4><a href="#">L</a><a href="#">M</a><a href="#">S</a><a href="#">XL</a>
-                        </figure>
                     </aside>
                 </div>
                 <div class="ps-layout__right">
@@ -251,205 +232,200 @@
                                     <div class="row">
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10">
                                             <div class="ps-product">
-                                                <div class="ps-product__thumbnail"><a href="product-default.html"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                                                <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                                                 </div>
                                                 <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                                    <div class="ps-product__content"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
-                                                    <div class="ps-product__content hover"><a class="ps-product__title" href="product-default.html">Apple iPhone Retina 6s Plus 64GB</a>
-                                                        <p class="ps-product__price">$1310.00</p>
-                                                        <a class="ps-btn ps-btn--fullwidth-green" href="checkout.html">ดูข้อมูลสินค้า</a>
+                                                    <div class="ps-product__content hover">
+                                                        <p class="ps-product__price text-green">$1310.00</p>
+                                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="ps-pagination">
-                                    <ul class="pagination">
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">Next Page<i class="icon-chevron-right"></i></a></li>
-                                    </ul>
+                                <div class="text-center mt-30">
+                                    <a class="green_btn_kim_out btn_card_in btn-box" href="#">ดูเพิ่มเติม</a>
                                 </div>
                             </div>
                            

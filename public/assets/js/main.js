@@ -187,6 +187,30 @@
                     }
                 }
             );
+            $('.ps-list--categories .menu-item-has-children > a').on(
+                'click',
+                function(e) {
+                    e.preventDefault();
+                    var current = $(this).parent('.menu-item-has-children');
+                    $(this).toggleClass('active');
+                    current
+                        .siblings()
+                        .find('.sub-toggle')
+                        .removeClass('active');
+                    current.children('.sub-menu').slideToggle(350);
+                    current
+                        .siblings()
+                        .find('.sub-menu')
+                        .slideUp(350);
+                    if (current.hasClass('has-mega-menu')) {
+                        current.children('.mega-menu').slideToggle(350);
+                        current
+                            .siblings('.has-mega-menu')
+                            .find('.mega-menu')
+                            .slideUp(350);
+                    }
+                }
+            );
         }
     }
 

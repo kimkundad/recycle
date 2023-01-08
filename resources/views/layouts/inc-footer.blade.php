@@ -33,7 +33,7 @@
                         <ul class="ps-list--link">
                             <li><a href="#">หมวดหมู่สินค้า</a></li>
                             <li><a href="#">สินค้าขายดี</a></li>
-                            <li><a href="#">เกี่ยวกับวงษ์พาณิชย์</a></li>
+                            <li><a href="{{ url('/service') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
                             <li><a href="#">รับรองและรางวัล</a></li>
                             <li><a href="#">กิจกรรม & ประชาสัมพันธ์</a></li>
                         </ul>
@@ -54,7 +54,7 @@
                     <aside class="widget widget_footer ">
                         <h4 class="widget-title">แผนที่</h4>
                         <div class="ps-contact-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14049.340485982573!2d-0.12031301106485542!3d51.50228117351734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ce176ac979%3A0x42af85654e23a0b4!2sThe%20National%20Gallery!5e0!3m2!1sen!2s!4v1582441665587!5m2!1sen!2s" height="250"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15562.683656431534!2d101.1492991!3d12.7998603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x23f4b615e2e82d1c!2z4Lia4Lij4Li04Lip4Lix4LiXIOC4p-C4h-C4qeC5jOC4nuC4suC4k-C4tOC4iuC4ouC5jOC4o-C4teC5hOC4i-C5gOC4hOC4tOC4pSDguKPguLDguKLguK3guIcg4LiI4Liz4LiB4Lix4LiU!5e0!3m2!1sth!2sth!4v1673203663218!5m2!1sth!2sth" height="250"></iframe>
                         </div>
                     </aside>
                 </div>
@@ -71,7 +71,7 @@
 <div class="ps-footer__copyright ">
     <div class="d-flex justify-content-center">
         <p class="bg-green"></p>
-        <p class="text-center" >&copy; Copyright (c) 2015 Wongpanit Recycle Rayong Co., Ltd.</p>
+        <p class="text-center fs-12" >&copy; Copyright (c) 2015 Wongpanit Recycle Rayong Co., Ltd.</p>
         <p class="bg-green2"></p>
     </div>
 </div>
