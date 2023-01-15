@@ -1337,6 +1337,14 @@ padding-bottom: 35px;
   border: 1px solid red;
   text-align: center;
 }
+#homepage-2 .ps-site-features .ps-block--site-features {
+  padding: 50px 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+#homepage-2 .ps-top-categories {
+  padding: 70px 0 50px;
+}
 @media (max-width: 767px) {
   .row-mo{
     margin-right: 1px;
