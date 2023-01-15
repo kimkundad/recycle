@@ -1345,6 +1345,9 @@ padding-bottom: 35px;
 #homepage-2 .ps-top-categories {
   padding: 70px 0 50px;
 }
+.header--mobile-img-logo{
+  height: 45px;
+}
 @media (max-width: 767px) {
   .row-mo{
     margin-right: 1px;
