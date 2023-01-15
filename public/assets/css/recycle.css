@@ -1379,6 +1379,8 @@ padding-bottom: 35px;
 .header .header__actions > * {
   margin: 0px;
 }
+
+
 .header--mobile.header--sticky .navigation--mobile {
   background-color: #f8f9fa;
 }
