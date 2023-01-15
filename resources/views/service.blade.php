@@ -6,6 +6,8 @@
 @section('content')
 
 
+
+
 <div class="ps-deal-of-day mt-30">
     <div class="container">
         <div class="ps-section__header">
@@ -14,10 +16,12 @@
                     <h3>บริการของเรา</h3>
                 </div>
             </div>
+            
         </div>
         <div class="ps-section__content">
-            <div class="d-flex">
-                <div class="card-green"> 
+            <div class="row">
+            <div class="col-md-4">
+                <div class="card-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img src="{{ url('img/icon/Group 3112.png') }}">
@@ -29,7 +33,9 @@
                         </div>
                     </div>
                 </div>
-                <div class=" card-out-green"> 
+            </div>
+            <div class="col-md-4">
+                <div class=" card-out-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
@@ -41,6 +47,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-4">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -53,9 +61,8 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-            <div class="d-flex mt-30">
+            <div class="col-md-4">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -68,6 +75,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-4">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -80,6 +89,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-4">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -93,11 +104,14 @@
                     </div>
                 </div>
             </div>
+                
+            </div>
+           
         </div>
     </div>
 </div>
 
-<div class="ps-deal-of-day">
+<div class="ps-deal-of-day mt-30">
     <div class="container">
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
@@ -108,8 +122,8 @@
         </div>
         <div class="ps-section__content">
             
-            <div class="row line-green">
-                <div class="col-md-5  ps-product--detail ps-product--fullwidth">
+            <div class="row line-green row-mo">
+                <div class="col-md-5 desktop-d ps-product--detail ps-product--fullwidth">
                     <img src="{{ url('img/Group 2043.png') }}" class="re-img-service">
                 </div>
                 <div class="col-md-7">
@@ -216,7 +230,7 @@
     </div>
 </div>
 <br><br>
-<div class="ps-deal-of-day mt-20px">
+<div class="ps-deal-of-day mt-30">
     <div class="container">
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
@@ -281,12 +295,12 @@
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image.png') }}" alt="" /></a>
                             </div>
                             <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
-                                <div class="ps-product__content hover"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
                             </div>
@@ -297,15 +311,15 @@
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                             </div>
                             <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                    <div class="ps-product__content">
+                                        <p class="ps-product__price text-green">$1310.00</p>
+                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                    </div>
+                                    <div class="ps-product__content hover">
+                                        <p class="ps-product__price text-green">$1310.00</p>
+                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                    </div>
                                 </div>
-                                <div class="ps-product__content hover"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
@@ -313,12 +327,12 @@
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (2).png') }}" alt="" /></a>
                             </div>
                             <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
-                                <div class="ps-product__content hover"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
                             </div>
@@ -329,12 +343,12 @@
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (3).png') }}" alt="" /></a>
                             </div>
                             <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
-                                <div class="ps-product__content hover"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
                             </div>
@@ -345,12 +359,12 @@
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (4).png') }}" alt="" /></a>
                             </div>
                             <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
-                                <div class="ps-product__content hover"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
                             </div>
@@ -361,12 +375,12 @@
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                             </div>
                             <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
-                                <div class="ps-product__content hover"><a class="ps-product__title" href="{{ url('/product_detail') }}">Apple iPhone Retina 6s Plus 64GB</a>
-                                    <p class="ps-product__price">$1310.00</p>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
                                 </div>
                             </div>

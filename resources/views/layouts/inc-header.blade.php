@@ -123,25 +123,24 @@
 <header class="header header--mobile" data-sticky="true">
     
     <div class="navigation--mobile">
-        <div class="navigation__left"><a class="ps-logo" href="{{ url('') }}"><img src="{{ url('img/wpn-logo.png') }}" alt="" /></a></div>
+        <div class="navigation__left">
+            <a class="ps-logo" href="{{ url('') }}">
+                <img src="{{ url('img/wpn-logo.png') }}" alt="" class="header--mobile-img-logo" />
+            </a>
+        </div>
         <div class="navigation__right">
             <div class="header__actions">
-                <div class="ps-cart--mini"><a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>0</i></span></a>
-                    
-                </div>
+                
                 <div class="ps-block--user-header">
-                    <div class="ps-block__left"><a href="my-account.html"><i class="icon-user"></i></a></div>
-                    <div class="ps-block__right"><a href="my-account.html">Login</a><a href="my-account.html">Register</a></div>
+                    <a class="header__extra btn_green_header" href="#">
+                        <img class="img-icon-green_header" src="{{ url('img/icon/line.png') }}">
+                    </a>
+                    <a class="header__extra btn_green_header" href="#">
+                        <img class="img-icon-green_header" src="{{ url('img/icon/mail.png') }}">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="ps-search--mobile">
-        <form class="ps-form--search-mobile" action="{{ url('/') }}" method="get">
-            <div class="form-group--nest">
-                <input class="form-control" type="text" placeholder="Search something..." />
-                <button><i class="icon-magnifier"></i></button>
-            </div>
-        </form>
-    </div>
+    
 </header>

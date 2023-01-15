@@ -207,7 +207,7 @@ span, p , li ,strong, option , label, input, a, b {
     color: #ffffff !important;
     border: none;
     font-weight: 700;
-    padding: 8px 24px;
+    padding: 5px 20px;
     border-radius: 25px;
     border: 1px solid #ffffff!important;
     
@@ -226,7 +226,7 @@ span, p , li ,strong, option , label, input, a, b {
     color: #009247 !important;
     border: none;
     font-weight: 700;
-    padding: 8px 24px;
+    padding: 5px 20px;
     border-radius: 25px;
 }
 .navigation__extra > li:after {
@@ -465,8 +465,7 @@ span, p , li ,strong, option , label, input, a, b {
     background-color: #009247;
     padding: 25px;
     border-radius: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-top: 15px;
 }
 .btn_card_in{
     height: 40px;
@@ -483,9 +482,8 @@ span, p , li ,strong, option , label, input, a, b {
     background-color: #fff;
     padding: 25px 25px 25px 25px;
     border-radius: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
     border: 1px solid #009247;
+    margin-top: 15px;
 }
 .btn_card_in{
     height: 40px;
@@ -1260,7 +1258,18 @@ padding-bottom: 35px;
   font-size: 14px;
   color: #009247;
 }
-
+.ps-panel--sidebar .ps-panel__header {
+  background-color: #009247;
+}
+.navigation--list .navigation__item.active i {
+  color: #009247;
+}
+.navigation--list .navigation__item.active span {
+  color: #009247;
+}
+.p-15{
+  padding: 15px;
+}
 .form__field:focus {
   ~ .form__label {
     position: absolute;
@@ -1306,5 +1315,112 @@ padding-bottom: 35px;
 }
 .fs-12{
   font-size: 12px !important;
+}
+.desktop-d{
+  display: block;
+}
+.desktop-h{
+  display: none;
+}
+.cell {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto; 
 
+  padding: 10px;
+  margin: 10px;
+
+  background-color: green;
+  border: 1px solid red;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .row-mo{
+    margin-right: 1px;
+    margin-left: 1px;
+  }
+  .desktop-d{
+    display: none;
+  }
+  .desktop-h{
+    display: block;
+  }
+  .header .header__extra {
+    border-radius: 25px;
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: all .4s ease;
+}
+.btn_green_header {
+  padding: 8px;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.img-icon-green_header {
+  height: 25px;
+  width: 25px;
+}
+.header--mobile .navigation--mobile {
+  padding: 10px 10px;
+}
+.header .header__actions > * {
+  margin: 0px;
+}
+.header--mobile.header--sticky .navigation--mobile {
+  background-color: #f8f9fa;
+}
+.bg-green{
+  display: none !important;
+}
+.bg-green2{
+  display: none !important;
+}
+.ps-product--detail > .ps-product__content {
+  padding-top: 0px;
+}
+.ps-product--detail > .ps-product__content .ps-tab-list li a {
+  font-size: 12px;
+}
+h4 {
+  font-size: 16px;
+}
+}
+.set-top-mobile-30{
+  margin-top: 0px;
+}
+
+@media (max-width: 479px) {
+  .col-sm-2{
+    width: 33.33%;
+  }
+  .card-body-x {
+    padding: 10px;
+    margin-bottom: 0rem;
+}
+.card-green {
+}
+.card-out-green{
+  margin-top: 15px;
+}
+.ps-block--countdown-deal .ps-block__left h3 {
+  font-size: 16px;
+}
+#homepage-1 .ps-deal-of-day {
+  padding-bottom: 1px;
+}
+.ps-carousel--nav {
+  margin-bottom: 15px;
+  padding-bottom: 30px;
+}
+.set-top-mobile-30{
+  margin-top: 35px;
+}
+.ps-footer__widgets > * {
+  max-width: 50%;
+  flex-basis: 100%;
+}
 }

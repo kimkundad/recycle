@@ -147,57 +147,59 @@
 <div class="ps-client-say">
     <div class="container">
         <div class="ps-section__content">
-            <div class="d-flex justify-content-between">
+            <div class="row justify-content-center">
+                <div class="col-xs-6 col-sm-2 mt-15">
+                    <img src="{{ url('img/brand/1.png') }}" alt="" class="max-h-45">
+                </div>
+                <div class="col-xs-6 col-sm-2 mt-15">
+                    <img src="{{ url('img/brand/2.png') }}" alt="" class="max-h-45">
+                </div>
+                <div class="col-xs-6 col-sm-2 mt-15">
+                    <img src="{{ url('img/brand/3.png') }}" alt="" class="max-h-45">
+                </div>
+                <div class="col-xs-6 col-sm-2 mt-15">
+                    <img src="{{ url('img/brand/4.png') }}" alt="" class="max-h-45">
+                </div>
+                <div class="col-xs-6 col-sm-2 mt-15">
+                    <img src="{{ url('img/brand/5.png') }}" alt="" class="max-h-45">
+                </div>
+                <div class="col-xs-6 col-sm-2 mt-15">
+                    <img src="{{ url('img/brand/6.png') }}" alt="" class="max-h-45">
+                </div>
+                <div class="col-xs-6 col-sm-2 mt-15">
+                    <img src="{{ url('img/brand/7.png') }}" alt="" class="max-h-45">
+                </div>
+                <div class="col-xs-6 col-sm-2 mt-15">
+                    <img src="{{ url('img/brand/8.png') }}" alt="" class="max-h-45">
+                </div>
+                <div class="col-xs-6 col-sm-2 mt-15">
+                    <img src="{{ url('img/brand/9.png') }}" alt="" class="max-h-45">
+                </div>
 
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/2.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/1.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/3.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/4.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/5.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/6.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/7.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/8.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/9.png') }}" alt="" class="max-h-55">
-                </div>
-
-            </div>
-          
-            <div class="d-flex justify-content-between mt-20">
-
-                <div class="ps-block--testimonial">
+                <div class="col-xs-6 col-sm-2 mt-15">
                     <img src="{{ url('img/brand/image 24.png') }}" alt="" class="max-h-45">
                 </div>
-                <div class="ps-block--testimonial">
+                <div class="col-xs-6 col-sm-2 mt-15">
                     <img src="{{ url('img/brand/image 20.png') }}" alt="" class="max-h-45">
                 </div>
-                <div class="ps-block--testimonial">
+                <div class="col-xs-6 col-sm-2 mt-15">
                     <img src="{{ url('img/brand/image 21.png') }}" alt="" class="max-h-45">
                 </div>
-                <div class="ps-block--testimonial">
+                <div class="col-xs-6 col-sm-2 mt-15">
                     <img src="{{ url('img/brand/image 26 (1).png') }}" alt="" class="max-h-45">
                 </div>
-                <div class="ps-block--testimonial">
+                <div class="col-xs-6 col-sm-2 mt-15">
                     <img src="{{ url('img/brand/image 23.png') }}" alt="" class="max-h-45">
                 </div>
 
             </div>
+            
+          
+        
+
+                
+
+            
             
         </div>
     </div>

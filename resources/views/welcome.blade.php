@@ -39,7 +39,22 @@
             
         </div>
         <div class="ps-section__content">
-            <div class="ps-carousel--nav owl-slider" data-owl-auto="false" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="30" data-owl-nav="true" data-owl-dots="true" data-owl-item="5" data-owl-item-xs="2" data-owl-item-sm="3" data-owl-item-md="4" data-owl-item-lg="5" data-owl-item-xl="6" data-owl-duration="1000" data-owl-mousedrag="on">
+            <div class="ps-carousel--nav owl-slider" 
+            data-owl-auto="false" 
+            data-owl-loop="false" 
+            data-owl-speed="10000" 
+            data-owl-gap="30" 
+            data-interval="false"
+            data-owl-nav="true" 
+            data-owl-dots="true" 
+            data-owl-item="5" 
+            data-owl-item-xs="2" 
+            data-owl-item-sm="3" 
+            data-owl-item-md="4" 
+            data-owl-item-lg="5" 
+            data-owl-item-xl="6" 
+            data-owl-duration="1000" 
+            data-owl-mousedrag="on">
                 <div class="ps-product ps-product--inner">
                     <img class="img-fluid" src="{{ url('img/banner_1.png') }}"> 
                 </div>
@@ -188,7 +203,7 @@
 </div>
 
 
-<div class="ps-deal-of-day">
+<div class="ps-deal-of-day set-top-mobile-30">
     <div class="container">
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
@@ -196,14 +211,13 @@
                     <h3>บริการของเรา</h3>
                 </div>
             </div>
-            <a href="#" class="">
-                ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
-            </a>
+            
             
         </div>
         <div class="ps-section__content">
-            <div class="d-flex">
-                <div class="card-green"> 
+            <div class="row">
+            <div class="col-md-4">
+                <div class="card-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img src="{{ url('img/icon/Group 3112.png') }}">
@@ -215,7 +229,9 @@
                         </div>
                     </div>
                 </div>
-                <div class=" card-out-green"> 
+            </div>
+            <div class="col-md-4">
+                <div class=" card-out-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
@@ -227,6 +243,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-4">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -239,9 +257,8 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-            <div class="d-flex mt-30">
+            <div class="col-md-4">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -254,6 +271,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-4">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -266,6 +285,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-4">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -279,6 +300,9 @@
                     </div>
                 </div>
             </div>
+                
+            </div>
+           
         </div>
     </div>
 </div>
@@ -412,9 +436,9 @@
             data-owl-nav="false" 
             data-owl-dots="false" 
             data-owl-item="8" 
-            data-owl-item-xs="1" 
-            data-owl-item-sm="1" 
-            data-owl-item-md="1" 
+            data-owl-item-xs="2" 
+            data-owl-item-sm="2" 
+            data-owl-item-md="2" 
             data-owl-item-lg="2" 
             data-owl-duration="1000" 
             data-owl-mousedrag="on">

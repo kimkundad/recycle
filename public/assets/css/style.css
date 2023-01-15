@@ -14054,8 +14054,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .ps-vendor-dashboard .ps-section__links li.active a {
   color: #000;
 }
-
+.header--mobile-img-logo{
+  height: 45px;
+}
 @media (max-width: 767px) {
+  .ps-cart--mini{
+    display: none;
+  }
   .ps-vendor-dashboard .ps-section__header {
     padding: 60px 0;
   }
@@ -16582,6 +16587,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 
 @media (max-width: 767px) {
+  
   .ps-footer__widgets {
     flex-flow: row wrap;
   }
@@ -17451,3 +17457,5 @@ html .bg--parallax {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+

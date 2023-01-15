@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div class="ps-vendor-banner bg--cover" data-background="{{ url('img/bg-contact.png') }}" style="background: url({{ url('img/bg-contact.png') }});">
+<div class="ps-vendor-banner bg--cover desktop-d" data-background="{{ url('img/bg-contact.png') }}" style="background: url({{ url('img/bg-contact.png') }});">
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col col-md-3">
@@ -83,6 +83,53 @@
         </div>
         
     </div>
+</div>
+
+<div class="desktop-h">
+    <div class="p-15">
+        <p class="fs-16 fw-700 text-center">ท่านสามารถติดต่อสอบถาม <br> ซื้อสินค้า ขอใช้บริการ ผ่านช่องทางด้านล่าง</p>
+        <div class="d-15">
+            <form class="ps-form--contact-us">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="ระบุชื่อ-นามสกุลของคุณ" name="name" id='name' required />
+                            <label for="name" class="form__label">ชื่อ-นามสกุล</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="ระบุอีเมลของคุณ" name="email" id='email' required />
+                            <label for="email" class="form__label">อีเมล</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-12col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="ระบุเบอร์โทรศัพท์ของคุณ" name="phone" id='phone' required />
+                            <label for="phone" class="form__label">เบอร์โทรศัพท์</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="กรุณาเลือกหัวข้อที่ต้องการ" name="name" id='name' required />
+                            <label for="name" class="form__label">หัวข้อที่ต้องการติดต่อ</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="ระบุข้อความที่ต้องการ" name="massage" id='massage' required />
+                            <label for="massage" class="form__label">ข้อความ (500/500)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-20">
+                    <a class="ps-btn--fullwidth-green btn-block" href="#" style="border-radius: 5px">ส่งข้อความ</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
 </div>
 
 
