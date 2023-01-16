@@ -69,6 +69,7 @@
     }
 
     function siteToggleAction() {
+        
         var navSidebar = $('.navigation--sidebar'),
             filterSidebar = $('.ps-filter--sidebar');
         $('.menu-toggle-open').on('click', function(e) {
@@ -117,6 +118,7 @@
                 $('.ps-site-overlay').removeClass('active');
             }
         });
+        $('.ps-site-overlay').removeClass('active');
     }
 
     function subMenuToggle() {

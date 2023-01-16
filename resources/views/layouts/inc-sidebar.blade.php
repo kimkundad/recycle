@@ -1,5 +1,5 @@
 <div id="back2top"><i class="icon icon-arrow-up"></i></div>
-    <div class="ps-site-overlay"></div>
+   <!-- <div class="ps-site-overlay"></div> -->
     <div class="ps-panel--sidebar" id="cart-mobile">
         <div class="ps-panel__header">
             <h3>ติดต่อเรา</h3>
