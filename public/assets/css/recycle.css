@@ -1348,7 +1348,22 @@ padding-bottom: 35px;
 .header--mobile-img-logo{
   height: 45px;
 }
+.header--mobile.header--sticky .navigation--mobile {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #f8f9fa;
+  -ms-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 12%);
+}
+.header .header__extra {
+  margin-left: 10px;
+}
 @media (max-width: 767px) {
+  .header .header__extra {
+    margin-left: 10px;
+}
   .row-mo{
     margin-right: 1px;
     margin-left: 1px;

@@ -116,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 ">
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
                         <div class="ps-product">
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                             </div>
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 ">
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6">
                         <div class="ps-product">
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (3).png') }}" alt="" /></a>
                             </div>
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 ">
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
                         <div class="ps-product">
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                             </div>
@@ -216,7 +216,7 @@
         </div>
         <div class="ps-section__content">
             <div class="row">
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="card-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -230,7 +230,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -244,7 +244,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -258,7 +258,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -272,7 +272,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -286,7 +286,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -324,7 +324,7 @@
         <div class="ps-section__content">
             
             <div class="row">
-                <div class="col-md-6  ps-product--detail ps-product--fullwidth">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12  ps-product--detail ps-product--fullwidth">
                     <div class="ps-product__thumbnail" data-vertical="false">
                         <figure>
                             <div class="ps-wrapper">
@@ -342,7 +342,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-body ps-product--detail card-body-x">
 
