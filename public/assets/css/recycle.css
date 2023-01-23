@@ -1637,6 +1637,9 @@ padding: 8px 34px;
 .hide-mobile{
   display: block;
 }
+.sec-slide .owl-dots{
+  display: none!important;
+}
 
 .ps-carousel--nav-inside .owl-nav {
   flex-direction: column!important;
