@@ -274,10 +274,10 @@
                     dataItemXL = el.data('owl-item-xl'),
                     dataNavLeft = el.data('owl-nav-left')
                         ? el.data('owl-nav-left')
-                        : "<i class='icon-chevron-left'></i>",
+                        : "<i class='icon-chevron-up'></i>",
                     dataNavRight = el.data('owl-nav-right')
                         ? el.data('owl-nav-right')
-                        : "<i class='icon-chevron-right'></i>",
+                        : "<i class='icon-chevron-down'></i>",
                     duration = el.data('owl-duration'),
                     datamouseDrag =
                         el.data('owl-mousedrag') == 'on' ? true : false;

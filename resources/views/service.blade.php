@@ -17,10 +17,11 @@
                 </div>
             </div>
             
+            
         </div>
         <div class="ps-section__content">
             <div class="row">
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="card-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -34,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -48,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -62,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -76,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -90,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -123,10 +124,15 @@
         <div class="ps-section__content">
             
             <div class="row line-green row-mo">
-                <div class="col-md-5 desktop-d ps-product--detail ps-product--fullwidth">
+                <div class="col-md-5 desktop-d hide-green-ban ps-product--detail ps-product--fullwidth">
                     <img src="{{ url('img/Group 2043.png') }}" class="re-img-service">
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7 desktop-990">
+
+                    <div class="hide-green-ban-mo">
+                        <img src="{{ url('img/Group 2043.png') }}" class="w-100 bor-r-12">
+                    </div>
+
                     <div class="card" style="border: 1px solid rgb(0 0 0 / 0%);">
                         <div class="card-body ps-product--detail card-body-x">
 
@@ -238,7 +244,7 @@
                     <h3>สินค้าที่จำหน่าย</h3>
                 </div>
             </div>
-            <a href="#" class="">
+            <a href="{{ url('/product') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
             
@@ -306,7 +312,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 ">
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
                         <div class="ps-product">
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                             </div>
@@ -338,7 +344,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 ">
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6">
                         <div class="ps-product">
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (3).png') }}" alt="" /></a>
                             </div>
@@ -370,7 +376,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6 ">
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
                         <div class="ps-product">
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
                             </div>

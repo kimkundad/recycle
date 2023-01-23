@@ -16,3 +16,13 @@
     <script src="{{ url('assets/plugins/gmap3.min.js') }}"></script>
     <!-- custom scripts-->
     <script src="{{ url('assets/js/main.js') }}"></script>
+
+    <script>
+
+$('.img_ro').hover(function(){
+  $(this).addClass("active_div", 3000);
+}, function(){
+  $(this).removeClass("active_div", 3000);
+});
+        
+    </script>

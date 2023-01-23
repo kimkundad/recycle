@@ -29,7 +29,7 @@
         <div class="ps-section__content">
             
             <div class="row">
-                <div class="col-md-6  ps-product--detail ps-product--fullwidth">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12  ps-product--detail ps-product--fullwidth">
                     <div class="ps-product__thumbnail" data-vertical="false">
                         <figure>
                             <div class="ps-wrapper">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="card">
                         <div class="card-body ps-product--detail card-body-x">
 
@@ -131,7 +131,54 @@
 </div>
 
 
-<div class="ps-deal-of-day">
+<div class="ps-deal-of-day mt-5">
+    <div class="container">
+        <div class="ps-section__header">
+            <div class="ps-block--countdown-deal">
+                <div class="ps-block__left">
+                    <h3>ใบอนุญาตและรางวัล</h3>
+                </div>
+            </div>
+        </div>
+        <div class="img-portfolio">
+            <div class="dg-wrapper ps-section__content">
+                <div class="text-center img_ro img_rotation1">
+                    <div class="scale-100">
+                        <img src="{{ url('img/img_verify2.png') }}" >
+                        <h4 class="text-gray-400 fs-16px">ใบอนุญาตโรงงาน</h4>
+                    </div>
+                </div>
+                <div class="text-center img_ro img_rotation2">
+                    <div class="scale-100">
+                    <img src="{{ url('img/img_verify4.png') }}" >
+                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                </div>
+                </div>
+                <div class="text-center img_ro img_rotation3">
+                    <div class="scale-100">
+                    <img src="{{ url('img/img_verify1.png') }}" >
+                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                </div>
+                </div>
+                <div class="text-center img_ro img_rotation4">
+                    <div class="scale-100 text-center">
+                    <img src="{{ url('img/img_verify3.png') }}" >
+                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                </div>
+                </div>
+                <div class="text-center img_ro img_rotation5">
+                    <div class="scale-100 text-center">
+                    <img src="{{ url('img/img_verify5.png') }}" >
+                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ps-deal-of-day mt-veri">
     <div class="container">
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">

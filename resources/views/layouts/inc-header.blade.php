@@ -5,7 +5,7 @@
                 <a class="ps-logo" href="{{ url('/') }}"><img class="max-h-65" src="{{ url('img/wpn-logo.png') }}" alt="" /></a>
             </div>
             <div class="header__center pt-10">
-                <form class="ps-form--quick-search" action="{{ url('/') }}" method="get">
+                <form class="ps-form--quick-search" action="{{ url('/product') }}" method="get">
                     <div class="form-group--icon"><i class="icon-chevron-down"></i>
                         <select class="form-control">
                             <option value="0" selected="selected">หมวดหมู่ : ทั้งหมด</option>
@@ -93,9 +93,13 @@
                     <a class="header__extra btn_green_header" href="#">
                         <img class="img-icon-green_header" src="{{ url('img/icon/mail.png') }}">
                     </a>
-                    <a class="header__extra " href="#">
-                        <img height="50" src="{{ url('img/icon/thailand.png') }}">
-                    </a>
+                    
+                    <div class="ps-dropdown language"><a href="#"><img height="50" src="{{ url('img/icon/thailand.png') }}"></a>
+                        <ul class="ps-dropdown-menu">
+                            <li><a href="#"><img src="{{ url('img/flag/en.png') }}" alt="" /> English</a></li>
+                            <li><a href="#"><img src="{{ url('img/flag/th.png') }}" height="12" /> ภาษาไทย</a></li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
@@ -131,7 +135,7 @@
         <div class="navigation__right">
             <div class="header__actions">
                 
-                <div class="ps-block--user-header">
+                <div class="ps-block--user-header ">
                     <a class="header__extra btn_green_header" href="#">
                         <img class="img-icon-green_header" src="{{ url('img/icon/line.png') }}">
                     </a>

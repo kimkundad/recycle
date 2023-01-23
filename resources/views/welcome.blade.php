@@ -7,20 +7,54 @@
 
 
 <div class="ps-home-banner">
-    <div class="ps-carousel--nav-inside owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on" data-owl-animate-in="fadeIn" data-owl-animate-out="fadeOut">
-        <div class="ps-banner--autopart" data-background="{{ url('/img/slider/slide_1.png') }}"><img src="{{ url('/img/slider/slide_1.png') }}" alt="">
-            <div class="ps-banner__content">
-                <h4></h4>
-                <h3></h3>
-                <p>.</p>
-                
+    <div class="ps-carousel--nav-inside owl-slider" 
+    data-owl-auto="true" 
+    data-owl-loop="true" 
+    data-owl-speed="5000" 
+    data-owl-gap="0" 
+    data-owl-nav="true" 
+    data-owl-dots="true" 
+    data-owl-item="1" 
+    data-owl-item-xs="1" 
+    data-owl-item-sm="1" 
+    data-owl-item-md="1" 
+    data-owl-item-lg="1" 
+    data-owl-duration="1000" 
+    data-owl-mousedrag="on" 
+    data-owl-animate-in="fadeIn" 
+    data-owl-animate-out="fadeOut"
+    >
+        <div class="ps-banner--autopart" data-background="{{ url('/img/slider/slide_1.png') }}">
+            <img src="{{ url('/img/slider/slide_1.png') }}" alt="">
+            <div class="d-flex">
+                <div class="ps-banner__content" >
+                    <h4 class="sub-head-w">วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</h4>
+                    <h3 class="head-slide-w">รับซื้อ-ขาย</h3>
+                    <p class="detail-slide-w">จำหน่ายเครื่องจักร ทั้งมือหนึ่ง มือสอง รับเข้าประมูลงานต่างๆ อาทิ เหล็ก <Br>
+                        โครงสร้าง เศษเหล็ก สแตนเลส อลูมิเนียม อัลลอย</p>
+                    <div class="d-flex">
+                        <a class="btn-green-b"> ซื้อสินค้า</a>
+                        <a class="btn-green-w-g"> ขายสินค้า</a>
+                    </div>
+                </div>
+                <div>
+
+                </div>
             </div>
         </div>
         <div class="ps-banner--autopart" data-background="{{ url('/img/slider/slide_1.png') }}"><img src="{{ url('/img/slider/slide_1.png') }}" alt="">
-            <div class="ps-banner__content">
-                <h4></h4>
-                <h3></h3>
-                <p>.</p>
+            <div class="d-flex">
+                <div class="ps-banner__content" >
+                    <h4 class="sub-head-w">วงษ์พาณิชย์รีไซเคิล </h4>
+                    <h3 class="head-slide-w">รับซื้อ-ขาย</h3>
+                    <p class="detail-slide-w">จำหน่ายเครื่องจักร ทั้งมือหนึ่ง มือสอง รับเข้าประมูลงานต่างๆ อาทิ เหล็ก <Br>
+                        โครงสร้าง เศษเหล็ก สแตนเลส อลูมิเนียม อัลลอย</p>
+                    <div class="d-flex">
+                        <a class="btn-green-b"> ซื้อสินค้า</a>
+                        <a class="btn-green-w-g"> ขายสินค้า</a>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -92,7 +126,7 @@
                     <h3>สินค้าแนะนำ</h3>
                 </div>
             </div>
-            <a href="#" class="">
+            <a href="{{ url('/product') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
             
@@ -100,6 +134,7 @@
         <div class="ps-section__content">
             <div class="">
                 <div class="row">
+
                     <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
                         <div class="ps-product">
                             <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image.png') }}" alt="" /></a>
@@ -196,6 +231,104 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
+                        <div class="ps-product">
+                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image.png') }}" alt="" /></a>
+                            </div>
+                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
+                        <div class="ps-product">
+                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                            </div>
+                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
+                                    <div class="ps-product__content">
+                                        <p class="ps-product__price text-green">$1310.00</p>
+                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                    </div>
+                                    <div class="ps-product__content hover">
+                                        <p class="ps-product__price text-green">$1310.00</p>
+                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
+                        <div class="ps-product">
+                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (2).png') }}" alt="" /></a>
+                            </div>
+                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
+                        <div class="ps-product">
+                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (3).png') }}" alt="" /></a>
+                            </div>
+                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
+                        <div class="ps-product">
+                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (4).png') }}" alt="" /></a>
+                            </div>
+                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
+                        <div class="ps-product">
+                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
+                            </div>
+                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
+                                <div class="ps-product__content">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                                <div class="ps-product__content hover">
+                                    <p class="ps-product__price text-green">$1310.00</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -436,13 +569,13 @@
             data-owl-nav="false" 
             data-owl-dots="false" 
             data-owl-item="8" 
-            data-owl-item-xs="2" 
-            data-owl-item-sm="2" 
-            data-owl-item-md="2" 
-            data-owl-item-lg="2" 
+            data-owl-item-xs="3" 
+            data-owl-item-sm="3" 
+            data-owl-item-md="4" 
+            data-owl-item-lg="3" 
             data-owl-duration="1000" 
             data-owl-mousedrag="on">
-                <div class="ps-block--testimonial">
+                <div class="ps-block--testimonial text-center">
                     <img src="{{ url('img/brand/2.png') }}" alt="" class="max-h-55">
                 </div>
                 <div class="ps-block--testimonial">
@@ -476,6 +609,53 @@
 
 
 <div class="ps-deal-of-day mt-5">
+    <div class="container">
+        <div class="ps-section__header">
+            <div class="ps-block--countdown-deal">
+                <div class="ps-block__left">
+                    <h3>ใบอนุญาตและรางวัล</h3>
+                </div>
+            </div>
+        </div>
+        <div class="img-portfolio">
+            <div class="dg-wrapper ps-section__content">
+                <div class="text-center img_ro img_rotation1">
+                    <div class="scale-100">
+                        <img src="{{ url('img/img_verify2.png') }}" >
+                        <h4 class="text-gray-400 fs-16px">ใบอนุญาตโรงงาน</h4>
+                    </div>
+                </div>
+                <div class="text-center img_ro img_rotation2">
+                    <div class="scale-100">
+                    <img src="{{ url('img/img_verify4.png') }}" >
+                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                </div>
+                </div>
+                <div class="text-center img_ro img_rotation3">
+                    <div class="scale-100">
+                    <img src="{{ url('img/img_verify1.png') }}" >
+                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                </div>
+                </div>
+                <div class="text-center img_ro img_rotation4">
+                    <div class="scale-100 text-center">
+                    <img src="{{ url('img/img_verify3.png') }}" >
+                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                </div>
+                </div>
+                <div class="text-center img_ro img_rotation5">
+                    <div class="scale-100 text-center">
+                    <img src="{{ url('img/img_verify5.png') }}" >
+                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ps-deal-of-day mt-veri" >
     <div class="container">
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
