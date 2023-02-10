@@ -82,7 +82,6 @@
                                         <tr>
                                             <th class="p-0 w-50px"></th>
                                             <th class="p-0 "></th>
-                                            <th class="p-0 ">จำนวนสินค้า</th>
                                             <th class="p-0 ">status</th>
                                             <th class="p-0 "></th>
                                         </tr>
@@ -102,9 +101,6 @@
                                             <td>
                                                 <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $item->cat_name }}</a>
                                                 <span class="text-muted fw-semibold d-block fs-7">ซับแบรนด์</span>
-                                            </td>
-                                            <td>
-                                                0
                                             </td>
                                             <td>
                                                 <div class="form-check form-check-solid form-switch form-check-custom fv-row">
@@ -151,7 +147,7 @@
                                     <!--end::Table body-->
                                 </table>
                             </div>
-
+                            @include('admin.pagination.default', ['paginator' => $objs])
                         </div>
                     </div>
                     

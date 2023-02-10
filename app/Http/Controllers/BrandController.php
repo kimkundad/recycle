@@ -31,7 +31,29 @@ class BrandController extends Controller
     public function create()
     {
         //
+        $data['method'] = "post";
+        $data['url'] = url('admin/brands');
+        return view('admin.brands.create', $data);
     }
+
+    public function api_post_status_brands(Request $request){
+
+        $user = brand::findOrFail($request->user_id);
+
+              if($user->status == 1){
+                  $user->status = 0;
+              } else {
+                  $user->status = 1;
+              }
+
+
+      return response()->json([
+      'data' => [
+        'success' => $user->save(),
+      ]
+    ]);
+
+     }
 
     /**
      * Store a newly created resource in storage.
