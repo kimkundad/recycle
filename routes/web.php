@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\BrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,4 +55,24 @@ Route::get('/term', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
+
+    Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
+    Route::resource('/admin/category', CategoryController::class);
+    Route::post('/api/api_post_status_category', [App\Http\Controllers\CategoryController::class, 'api_post_status_category']);
+    Route::get('api/del_cat/{id}', [App\Http\Controllers\CategoryController::class, 'del_cat']);
+
+    Route::resource('/admin/product', ProductController::class);
+    Route::post('/api/api_post_status_product', [App\Http\Controllers\ProductController::class, 'api_post_status_product']);
+    Route::get('api/del_pro/{id}', [App\Http\Controllers\ProductController::class, 'del_pro']);
+
+    Route::resource('/admin/certificate', CertificateController::class);
+    Route::post('/api/api_post_status_certificate', [App\Http\Controllers\CertificateController::class, 'api_post_status_certificate']);
+    Route::get('api/del_cer/{id}', [App\Http\Controllers\CertificateController::class, 'del_cer']);
+
+    Route::resource('/admin/brands', BrandController::class);
+    Route::post('/api/api_post_status_brands', [App\Http\Controllers\BrandController::class, 'api_post_status_brands']);
+    Route::get('api/del_ban/{id}', [App\Http\Controllers\BrandController::class, 'del_ban']);
+    
+
+});

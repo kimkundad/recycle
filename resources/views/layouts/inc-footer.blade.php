@@ -36,6 +36,7 @@
                             <li><a href="{{ url('/service') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
                             <li><a href="#">รับรองและรางวัล</a></li>
                             <li><a href="#">กิจกรรม & ประชาสัมพันธ์</a></li>
+                            <li><a href="{{ url('/login') }}">เข้าสู่ระบบ / Login</a></li>
                         </ul>
                     </aside>
                     <aside class="widget widget_footer">
