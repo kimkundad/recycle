@@ -185,7 +185,7 @@
                 @if(get_category())
                                 @foreach(get_category() as $u)
                                     <li class="current-menu-item ">
-                                        <a href="{{ url('category/'.$u->id) }}">{{ $u->cat_name }}</a>
+                                        <a href="{{ url('category?id='.$u->id) }}">{{ $u->cat_name }}</a>
                                     </li>
                                 @endforeach
                             @endif
