@@ -86,7 +86,7 @@
             
         </div>
         <div class="ps-section__content">
-            <div class="ps-carousel--nav ow2 sec-slide" 
+            <div class="ps-carousel--nav owl-slider sec-slide" 
             data-owl-auto="false" 
             data-owl-loop="false" 
             data-owl-speed="10000" 
@@ -108,7 +108,9 @@
                 @if(get_category())
                     @foreach(get_category() as $u)
                         <div class="ps-product ps-product--inner">
+                            <a href="{{ url('category/'.$u->id) }}">
                             <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
+                            </a>
                         </div>
                     @endforeach
                 @endif
