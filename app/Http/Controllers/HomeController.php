@@ -159,6 +159,10 @@ class HomeController extends Controller
       $objs = news::find($id);
       $data['objs'] = $objs;
 
+      DB::table('news')
+            ->where('id', $id)
+            ->update(['view' => $objs->view+1]);
+
       return view('blog_detail', $data);
     }
     
