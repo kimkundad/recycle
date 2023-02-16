@@ -8,7 +8,7 @@
     <div class="ps-breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><li><a href="{{ url('/category/0') }}">สินค้าทั้งหมด</a></li></li>
+                <li><li><a href="{{ url('category?id=0') }}">สินค้าทั้งหมด</a></li></li>
                 <li>{{ $objs->name_pro }}</li>
             </ul>
         </div>
