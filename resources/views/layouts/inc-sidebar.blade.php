@@ -84,7 +84,7 @@
                 @if(get_category())
                     @foreach(get_category() as $u)
                         <li class="menu-item-has-children has-mega-menu">
-                            <a href="{{ url('category/'.$u->id) }}">{{ $u->cat_name }}</a>
+                            <a href="{{ url('category?id='.$u->id) }}">{{ $u->cat_name }}</a>
                         </li>
                     @endforeach
                 @endif
