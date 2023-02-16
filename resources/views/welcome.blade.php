@@ -46,8 +46,8 @@
         @isset($slide)
             @foreach ($slide as $item)
 
-                <div class="ps-banner--autopart" data-background="{{ url('/img/slider/'.$item->image) }}">
-                    <img src="{{ url('/img/slider/slide_1.png') }}" alt="">
+                <div class="ps-banner--autopart" data-background="{{ url('/img/slide/'.$item->image) }}">
+                    <img src="{{ url('/img/slide/'.$item->image) }}" alt="">
                     <div class="d-flex">
                         <div class="ps-banner__content" >
                             <h4 class="sub-head-w">{{ $item->title }}</h4>
