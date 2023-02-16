@@ -201,7 +201,7 @@
                 @isset($ban)
                     @foreach ($ban as $item)
                         <div class="col-xs-6 col-sm-2 mt-15">
-                            <img src="{{ url('img/brand/1.png') }}" alt="" class="max-h-45">
+                            <img src="{{ url('img/brand/'.$item->image) }}" alt="{{ $item->name }}" class="max-h-45">
                         </div>
                     @endforeach
                 @endisset
