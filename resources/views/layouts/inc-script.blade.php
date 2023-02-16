@@ -39,10 +39,10 @@ shareButton[0].addEventListener("click", (e) => {
   var img = document.getElementById('close_chat').src;
 
   if (img.indexOf('chat.png')!=-1) {
-            document.getElementById('close_chat').src  = 'img/close_img.png';
+            document.getElementById('close_chat').src  = {{ url('img/close_img.png') }};
         }
          else {
-           document.getElementById('close_chat').src = 'img/chat.png';
+           document.getElementById('close_chat').src = {{ url('img/chat.png') }};
        }
 
     for( let i=0; i < shareButton.length; i++ ) {

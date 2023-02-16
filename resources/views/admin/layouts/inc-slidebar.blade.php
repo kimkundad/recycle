@@ -11,7 +11,7 @@
     <!--begin::Logo-->
     <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
         <!--begin::Logo image-->
-        <a href="{{ url('/')}}">
+        <a target="_blank" href="{{ url('/')}}">
 
                         
                               <img src="{{ url('admin/assets/media/logos/wpn-logo.svg') }}" alt="Logo" class="h-35px app-sidebar-logo-default" />
