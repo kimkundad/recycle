@@ -16,7 +16,7 @@
     <script src="{{ url('assets/plugins/select2/dist/js/select2.full.min.js') }}"></script>
     <script src="{{ url('assets/plugins/gmap3.min.js') }}"></script>
     <!-- custom scripts-->
-    <script src="{{ url('assets/js/main.js') }}"></script>
+    <script src="{{ url('assets/js/main.js') }}?v{{time()}}"></script>
 
     <script src='https://www.google.com/recaptcha/api.js?hl=th'></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

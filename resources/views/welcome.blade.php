@@ -86,7 +86,7 @@
             
         </div>
         <div class="ps-section__content">
-            <div class="ps-carousel--nav owl-slider sec-slide" 
+            <div class="ps-carousel--nav ow2 sec-slide" 
             data-owl-auto="false" 
             data-owl-loop="false" 
             data-owl-speed="10000" 
