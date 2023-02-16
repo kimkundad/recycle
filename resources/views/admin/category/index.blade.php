@@ -108,7 +108,7 @@
                                                 <img src="{{ url('img/category/'.$item->icons) }}" alt="">
                                             </td>
                                             <td>
-                                                0
+                                                {{ $item->option }}
                                             </td>
                                             <td>
                                                 <div class="form-check form-check-solid form-switch form-check-custom fv-row">
