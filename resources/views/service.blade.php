@@ -274,7 +274,7 @@
                 @if(get_category())
                     @foreach(get_category() as $u)
                         <div class="ps-product ps-product--inner">
-                            <a href="{{ url('category/'.$u->id) }}">
+                            <a href="{{ url('category?id='.$u->id) }}">
                             <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
                             </a>
                         </div>
