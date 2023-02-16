@@ -55,7 +55,7 @@
                     <li class="menu-item"><a href="{{ url('/term ') }}">นโยบายส่วนบุคคล</a></li>
                 </ul>
                 <ul class="navigation__extra">
-                    <li><a class="white_btn_kim" href="{{ url('product') }}" >ซื้อสินค้า</a></li> 
+                    <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >ซื้อสินค้า</a></li> 
                     <li><a class="green_btn_kim" href="#"  data-toggle="modal" data-target="#product-quickview" >ขายสินค้า</a></li>
                 </ul>
             </div>
