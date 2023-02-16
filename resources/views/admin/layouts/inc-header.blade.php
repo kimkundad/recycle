@@ -197,7 +197,7 @@
                                 <!--end::Username-->
                             </div>
                         </div>
-                        <!--end::Menu item-->
+                        {{-- <!--end::Menu item-->
                         <!--begin::Menu separator-->
                         <div class="separator my-2"></div>
                         <!--end::Menu separator-->
@@ -213,7 +213,7 @@
                         <!--begin::Menu item-->
                         <div class="menu-item px-5 my-1">
                             <a href="#" class="menu-link px-5">Account Settings</a>
-                        </div>
+                        </div> --}}
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">

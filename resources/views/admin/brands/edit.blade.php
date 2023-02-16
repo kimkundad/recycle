@@ -21,7 +21,7 @@
                     <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                         <!--begin::Title-->
                         <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-                            สร้างหมวดหมู่สินค้า</h1>
+                            แก้ไขแบรนด์สินค้า</h1>
                         <!--end::Title-->
                         <!--begin::Breadcrumb-->
                         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
@@ -36,7 +36,7 @@
                             </li>
                             <!--end::Item-->
                             <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">สร้างหมวดหมู่สินค้าใหม่</li>
+                            <li class="breadcrumb-item text-muted">แก้ไขแบรนด์สินค้า</li>
                             <!--end::Item-->
                         </ul>
                         <!--end::Breadcrumb-->
@@ -61,17 +61,17 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รูปหมวดหมู่สินค้า</label>
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รูปแบรนด์สินค้า</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8">
                                         <!--begin::Image input-->
                                         <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{ url('admin/assets/media/svg/avatars/blank.svg') }}')">
                                             <!--begin::Preview existing avatar-->
-                                            <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{ url('img/category/'.$objs->image) }})"></div>
+                                            <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{ url('img/brand/'.$objs->image) }})"></div>
                                             <!--end::Preview existing avatar-->
                                             <!--begin::Label-->
-                                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="เปลี่ยน รูปหมวดหมู่สินค้า">
+                                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="เปลี่ยน รูปแบรนด์สินค้า">
                                                 <i class="bi bi-pencil-fill fs-7"></i>
                                                 <!--begin::Inputs-->
                                                 <input type="file" name="image" accept=".png, .jpg, .jpeg" />
@@ -80,12 +80,12 @@
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Cancel-->
-                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="ยกเลิก รูปหมวดหมู่สินค้า">
+                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="ยกเลิก รูปแบรนด์สินค้า">
                                                 <i class="bi bi-x fs-2"></i>
                                             </span>
                                             <!--end::Cancel-->
                                             <!--begin::Remove-->
-                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="ลบ รูปหมวดหมู่สินค้า">
+                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="ลบ รูปแบรนด์สินค้า">
                                                 <i class="bi bi-x fs-2"></i>
                                             </span>
                                             <!--end::Remove-->
@@ -95,7 +95,7 @@
                                         <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
                                         @if ($errors->has('image'))
                                             <div class="fv-plugins-message-container invalid-feedback">
-                                                <div>กรุณาเลือกรูปหมวดหมู่สินค้า</div>
+                                                <div>กรุณาเลือกรูปแบรนด์สินค้า</div>
                                             </div>
                                         @endif
                                         <!--end::Hint-->
@@ -105,15 +105,15 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อหมวดหมู่สินค้า</label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อแบรนด์สินค้า</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="cat_name" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->cat_name }}">
+                                        <input type="text" name="name" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name }}">
                                     
-                                        @if ($errors->has('cat_name'))
+                                        @if ($errors->has('name'))
                                             <div class="fv-plugins-message-container invalid-feedback">
-                                                <div>กรุณากรอกชื่อหมวดหมู่สินค้า</div>
+                                                <div>กรุณากรอกชื่อแบรนด์สินค้า</div>
                                             </div>
                                         @endif
                                     </div>
@@ -159,19 +159,19 @@
                 <!--begin::Copyright-->
                 <div class="text-dark order-2 order-md-1">
                     <span class="text-muted fw-semibold me-1">2022&copy;</span>
-                    <a href="" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
+                    <a href="" target="_blank" class="text-gray-800 text-hover-primary">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</a>
                 </div>
                 <!--end::Copyright-->
                 <!--begin::Menu-->
                 <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
                     <li class="menu-item">
-                        <a href="" target="_blank" class="menu-link px-2">About</a>
+                        <a href="{{ url('about') }}" target="_blank" class="menu-link px-2">เกี่ยวกับวงษ์พาณิชย์</a>
                     </li>
                     <li class="menu-item">
-                        <a href="" target="_blank" class="menu-link px-2">Support</a>
+                        <a href="{{ url('contatermct') }}" target="_blank" class="menu-link px-2">นโยบายส่วนบุคคล</a>
                     </li>
                     <li class="menu-item">
-                        <a href="" target="_blank" class="menu-link px-2">Purchase</a>
+                        <a href="{{ url('contact') }}" target="_blank" class="menu-link px-2">ติดต่อเรา</a>
                     </li>
                 </ul>
                 <!--end::Menu-->

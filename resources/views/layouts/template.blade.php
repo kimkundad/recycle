@@ -29,6 +29,8 @@
 
     </div>
 
+    
+
     @include('layouts.inc-footer')
 
     @include('layouts.inc-sidebar')

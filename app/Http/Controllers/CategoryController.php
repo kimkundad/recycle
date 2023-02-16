@@ -70,17 +70,24 @@ class CategoryController extends Controller
    
            $this->validate($request, [
             'cat_name' => 'required',
-            'image' => 'required'
+            'image' => 'required',
+            'icons' => 'required'
            ]);
            
            $image = $request->file('image');
+           $icons = $request->file('icons');
 
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
-          $img = Image::make($image->getRealPath());
-          $img->resize(400, 400, function ($constraint) {
-          $constraint->aspectRatio();
-        })->save('img/category/'.$input['imagename']);
+            $img = Image::make($image->getRealPath());
+            $img->resize(400, 400, function ($constraint) {
+            $constraint->aspectRatio();
+            })->save('img/category/'.$input['imagename']);
+
+
+            $path = 'img/category/';
+            $filename = time()."-".$icons->getClientOriginalName();
+            $icons->move($path, $filename);
 
         $status = 0;
         if(isset($request['status'])){
@@ -92,6 +99,7 @@ class CategoryController extends Controller
            $objs = new category();
            $objs->cat_name = $request['cat_name'];
            $objs->image = $input['imagename'];
+           $objs->icons = $filename;
            $objs->status = $status;
            $objs->save();
 
@@ -141,12 +149,36 @@ class CategoryController extends Controller
            ]);
            
            $image = $request->file('image');
+           $icons = $request->file('icons');
+
 
            $status = 0;
             if(isset($request['status'])){
                 if($request['status'] == 1){
                     $status = 1;
                 }
+            }
+
+            if($icons !== NULL){
+
+                $img = DB::table('categories')
+                ->where('id', $id)
+                ->first();
+              //  dd($img->icons);
+          if($img->icons !== null && $img->icons !== ""){
+            $file_path = 'img/category/'.$img->icons;
+            unlink($file_path);
+          }
+         
+
+            $path = 'img/category/';
+            $filename = time()."-".$icons->getClientOriginalName();
+            $icons->move($path, $filename);
+
+            $objs = category::find($id);
+            $objs->icons = $filename;
+            $objs->save();
+
             }
 
 

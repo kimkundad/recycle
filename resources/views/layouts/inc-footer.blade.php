@@ -10,19 +10,19 @@
                             <h5 class="pt-20">บริษัท วงษ์พาณิชย์ รีไซเคิล ระยอง จำกัด</h5>
                             <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 </p>
                             <div class="pt-20">
-                                <a class="ps-btn set-btn-inner-footer ps-btn--outline" href="#">
-                                    <img class="img-phone-footer" src="{{ url('img/icon/phone-call.png') }}"> 038606338
+                                <a class="ps-btn set-btn-inner-footer ps-btn--outline" href="tel:{{ get_phone() }}">
+                                    <img class="img-phone-footer" src="{{ url('img/icon/phone-call.png') }}"> {{ get_phone() }}
                                 </a>
-                                <a class="btn_green_heade_footer" href="#">
+                                <a class="btn_green_heade_footer" href="mailto: {{ get_email() }}">
                                     <img class="img-icon-green_header_footer" src="{{ url('img/icon/mail.png') }}">
                                 </a>
-                                <a class="btn_green_heade_footer" href="#">
+                                <a class="btn_green_heade_footer" target="_blank" href="{{ get_line() }}">
                                     <img class="img-icon-green_header_footer" src="{{ url('img/icon/line.png') }}">
                                 </a>
-                                <a class="btn_green_heade_footer" href="#">
+                                <a class="btn_green_heade_footer" href="{{ get_facebook() }}">
                                     <img class="img-icon-green_header_footer" src="{{ url('img/icon/facebook.png') }}">
                                 </a>
-                                <a class="" href="#">
+                                <a class="" href="fax:+{{ get_fax() }}">
                                     <img class="img-icon-green_header_footer h-34" src="{{ url('img/icon/fax.png') }}">
                                 </a>
                             </div>
@@ -31,23 +31,23 @@
                     <aside class="widget widget_footer">
                         <h4 class="widget-title">หน้าแรก</h4>
                         <ul class="ps-list--link">
-                            <li><a href="#">หมวดหมู่สินค้า</a></li>
-                            <li><a href="#">สินค้าขายดี</a></li>
+                            <li><a href="{{ url('/product') }}">หมวดหมู่สินค้า</a></li>
+                            <li><a href="{{ url('/product') }}">สินค้าขายดี</a></li>
                             <li><a href="{{ url('/service') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
-                            <li><a href="#">รับรองและรางวัล</a></li>
-                            <li><a href="#">กิจกรรม & ประชาสัมพันธ์</a></li>
+                            <li><a href="{{ url('/about') }}">รับรองและรางวัล</a></li>
+                            <li><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
                             <li><a href="{{ url('/login') }}">เข้าสู่ระบบ / Login</a></li>
                         </ul>
                     </aside>
                     <aside class="widget widget_footer">
                         <h4 class="widget-title">บริการ</h4>
                         <ul class="ps-list--link">
-                            <li><a href="#">รับซิ้อวัสดุรีไซเคิล/ไม่ใช้แล้ว</a></li>
-                            <li><a href="#">รับประมูลงานเหล็ก โครงสร้าง ฯลฯ</a></li>
-                            <li><a href="#">ให้คำปรึกษา</a></li>
-                            <li><a href="#">บริการทำลายเอกสาร</a></li>
-                            <li><a href="#">บริการจัดเก็บของเสียอุตสาหกรรม</a></li>
-                            <li><a href="#">บริการพิเศษอื่นๆ</a></li>
+                            <li><a href="{{ url('/contact') }}">รับซิ้อวัสดุรีไซเคิล/ไม่ใช้แล้ว</a></li>
+                            <li><a href="{{ url('/contact') }}">รับประมูลงานเหล็ก โครงสร้าง ฯลฯ</a></li>
+                            <li><a href="{{ url('/contact') }}">ให้คำปรึกษา</a></li>
+                            <li><a href="{{ url('/contact') }}">บริการทำลายเอกสาร</a></li>
+                            <li><a href="{{ url('/contact') }}">บริการจัดเก็บของเสียอุตสาหกรรม</a></li>
+                            <li><a href="{{ url('/contact') }}">บริการพิเศษอื่นๆ</a></li>
                         </ul>
                     </aside>
                 </div>
@@ -69,6 +69,8 @@
         
     </div>
 </footer>
+
+
 <div class="ps-footer__copyright ">
     <div class="d-flex justify-content-center">
         <p class="bg-green"></p>

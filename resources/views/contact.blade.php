@@ -38,7 +38,7 @@
             </div>
             <div class="col col-md-7">
                 <div class="d-flex justify-content-end bg-white-con">
-                    <form class="ps-form--contact-us">
+                    <form class="ps-form--contact-us" id="contactForm">
                         <h3>ติดต่อเรา</h3>
                         <p class="fs-16 fw-700">ท่านสามารถติดต่อสอบถาม ซื้อสินค้า ขอใช้บริการ ผ่านช่องทางด้านล่าง</p>
                         <div class="row">
@@ -62,20 +62,32 @@
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
                                 <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="กรุณาเลือกหัวข้อที่ต้องการ" name="name" id='name' required />
+                                    <select class="form__field" aria-label="Select example" name="type" id='type'>
+                                        <option>กรุณาเลือกหัวข้อที่ต้องการ</option>
+
+                                        @isset($type_contact)
+                                            @foreach ($type_contact as $item)
+                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                            @endforeach
+                                        @endisset
+                                       
+                                    </select>
                                     <label for="name" class="form__label">หัวข้อที่ต้องการติดต่อ</label>
                                 </div>
                             </div>
                             
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                 <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="ระบุข้อความที่ต้องการ" name="massage" id='massage' required />
+                                    <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" name="massage" id='massage'></textarea>
                                     <label for="massage" class="form__label">ข้อความ (500/500)</label>
                                 </div>
                             </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                <div class="g-recaptcha" data-sitekey="6LdQnlkUAAAAAOfsIz7o-U6JSgrSMseulLvu7lI8"></div>
+                            </div>
                         </div>
                         <div class="text-center mt-20">
-                            <a class="ps-btn--fullwidth-green btn-block" href="#" style="border-radius: 5px">ส่งข้อความ</a>
+                            <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData" style="border-radius: 5px">ส่งข้อความ</button >
                         </div>
                     </form>
                 </div>
@@ -89,42 +101,53 @@
     <div class="p-15">
         <p class="fs-16 fw-700 text-center">ท่านสามารถติดต่อสอบถาม <br> ซื้อสินค้า ขอใช้บริการ ผ่านช่องทางด้านล่าง</p>
         <div class="d-15">
-            <form class="ps-form--contact-us">
+            <form class="ps-form--contact-us" id="contactForm2">
                 <div class="row">
                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="ระบุชื่อ-นามสกุลของคุณ" name="name" id='name' required />
+                            <input type="input" class="form__field" placeholder="ระบุชื่อ-นามสกุลของคุณ" name="name" id='name2' required />
                             <label for="name" class="form__label">ชื่อ-นามสกุล</label>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="ระบุอีเมลของคุณ" name="email" id='email' required />
+                            <input type="input" class="form__field" placeholder="ระบุอีเมลของคุณ" name="email" id='email2' required />
                             <label for="email" class="form__label">อีเมล</label>
                         </div>
                     </div>
                     <div class="col-xl-12col-lg-6 col-md-6 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="ระบุเบอร์โทรศัพท์ของคุณ" name="phone" id='phone' required />
+                            <input type="input" class="form__field" placeholder="ระบุเบอร์โทรศัพท์ของคุณ" name="phone" id='phone2' required />
                             <label for="phone" class="form__label">เบอร์โทรศัพท์</label>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="กรุณาเลือกหัวข้อที่ต้องการ" name="name" id='name' required />
+                            <select class="form__field" aria-label="Select example" name="type" id='type2'>
+                                <option>กรุณาเลือกหัวข้อที่ต้องการ</option>
+                                @isset($type_contact)
+                                    @foreach ($type_contact as $item)
+                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                    @endforeach
+                                @endisset
+                            </select>
                             <label for="name" class="form__label">หัวข้อที่ต้องการติดต่อ</label>
                         </div>
                     </div>
                     
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="ระบุข้อความที่ต้องการ" name="massage" id='massage' required />
+                            <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" name="massage" id='massage2'></textarea>
                             <label for="massage" class="form__label">ข้อความ (500/500)</label>
                         </div>
                     </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                        <div class="g-recaptcha" data-sitekey="6LdQnlkUAAAAAOfsIz7o-U6JSgrSMseulLvu7lI8"></div>
+                    </div>
+
                 </div>
                 <div class="text-center mt-20">
-                    <a class="ps-btn--fullwidth-green btn-block" href="#" style="border-radius: 5px">ส่งข้อความ</a>
+                    <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData2" style="border-radius: 5px">ส่งข้อความ</button >
                 </div>
             </form>
         </div>
@@ -141,4 +164,131 @@
 @endsection
 
 @section('scripts')
+
+
+
+
+<script>
+    
+    $(document).on('click','#btnSendData',function (event) {
+      event.preventDefault();
+      
+      var form = $('#contactForm')[0];
+      var formData = new FormData(form);
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var msg = document.getElementById("massage").value;
+      var phone = document.getElementById("phone").value;
+      var type = document.getElementById("type").value;
+        console.log(formData)
+    if(name == '' || msg == '' || email == '' || phone == '' || type == ''){
+      swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+    }else{
+      $.LoadingOverlay("show", {
+        background  : "rgba(255, 255, 255, 0.4)",
+        image       : "{{ url('img/loading-gif.gif') }}",
+        fontawesome : ""
+      });
+      $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="token"]').attr('value')
+        }
+    });
+      $.ajax({
+          url: "{{url('/api/add_contact')}}",
+          headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+          data: formData,
+          processData: false,
+          contentType: false,
+          cache:false,
+          type: 'POST',
+          success: function (data) {
+          //  console.log(data.data.status)
+              if(data.data.status == 200){
+                setTimeout(function(){
+                    $.LoadingOverlay("hide");
+                }, 0);
+                $('#success_popup').modal('show');
+                $("#name").val('');
+                $("#massage").val('');
+                $("#email").val('');
+                $("#phone").val('');
+              setTimeout(function(){
+                //    window.location.replace("{{url('clients/success_payment/')}}/"+data.data.value);
+              }, 3000);
+              }else{
+                setTimeout(function(){
+                    $.LoadingOverlay("hide");
+                }, 500);
+                swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+              }
+          },
+          error: function () {
+          }
+      });
+    }
+    });
+
+
+
+    $(document).on('click','#btnSendData2',function (event) {
+      event.preventDefault();
+      
+      var form = $('#contactForm2')[0];
+      var formData = new FormData(form);
+      var name = document.getElementById("name2").value;
+      var email = document.getElementById("email2").value;
+      var msg = document.getElementById("massage2").value;
+      var phone = document.getElementById("phone2").value;
+      var type = document.getElementById("type2").value;
+        console.log(formData)
+    if(name == '' || msg == '' || email == '' || phone == '' || type == ''){
+      swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+    }else{
+      $.LoadingOverlay("show", {
+        background  : "rgba(255, 255, 255, 0.4)",
+        image       : "{{ url('img/loading-gif.gif') }}",
+        fontawesome : ""
+      });
+      $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="token"]').attr('value')
+        }
+    });
+      $.ajax({
+          url: "{{url('/api/add_contact')}}",
+          headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+          data: formData,
+          processData: false,
+          contentType: false,
+          cache:false,
+          type: 'POST',
+          success: function (data) {
+          //  console.log(data.data.status)
+              if(data.data.status == 200){
+                setTimeout(function(){
+                    $.LoadingOverlay("hide");
+                }, 0);
+                $('#success_popup').modal('show');
+                $("#name2").val('');
+                $("#massage2").val('');
+                $("#email2").val('');
+                $("#phone2").val('');
+              setTimeout(function(){
+                //    window.location.replace("{{url('clients/success_payment/')}}/"+data.data.value);
+              }, 3000);
+              }else{
+                setTimeout(function(){
+                    $.LoadingOverlay("hide");
+                }, 500);
+                swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+              }
+          },
+          error: function () {
+          }
+      });
+    }
+    });
+    </script>
+
 @stop('scripts')

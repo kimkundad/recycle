@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('cat_name')->nullable();
             $table->string('image')->nullable();
+            $table->string('icons')->nullable();
             $table->integer('type')->default('0');
             $table->integer('status')->default('0');
             $table->timestamps();

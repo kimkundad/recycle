@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class BrandController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -64,6 +65,34 @@ class BrandController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'name' => 'required',
+            'image' => 'required'
+           ]);
+           
+           $image = $request->file('image');
+
+           $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+
+          $img = Image::make($image->getRealPath());
+          $img->resize(250, 250, function ($constraint) {
+          $constraint->aspectRatio();
+        })->save('img/brand/'.$input['imagename']);
+
+        $status = 0;
+        if(isset($request['status'])){
+            if($request['status'] == 1){
+                $status = 1;
+            }
+        }
+     
+           $objs = new brand();
+           $objs->name = $request['name'];
+           $objs->image = $input['imagename'];
+           $objs->status = $status;
+           $objs->save();
+
+           return redirect(url('admin/brands'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
     }
 
     /**
@@ -86,6 +115,11 @@ class BrandController extends Controller
     public function edit($id)
     {
         //
+        $objs = brand::find($id);
+        $data['url'] = url('admin/brands/'.$id);
+        $data['method'] = "put";
+        $data['objs'] = $objs;
+        return view('admin.brands.edit', $data);
     }
 
     /**
@@ -98,16 +132,75 @@ class BrandController extends Controller
     public function update(Request $request, $id)
     {
         //
-    }
+        
+        $this->validate($request, [
+            'name' => 'required'
+           ]);
+           
+           $image = $request->file('image');
 
+           $status = 0;
+            if(isset($request['status'])){
+                if($request['status'] == 1){
+                    $status = 1;
+                }
+            }
+
+           if($image == NULL){
+
+           $objs = brand::find($id);
+           $objs->name = $request['name'];
+           $objs->status = $status;
+           $objs->save();
+
+           }else{
+
+            $img = DB::table('brands')
+          ->where('id', $id)
+          ->first();
+
+          $file_path = 'img/brand/'.$img->image;
+          unlink($file_path);
+
+            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+
+          $img = Image::make($image->getRealPath());
+          $img->resize(250, 250, function ($constraint) {
+          $constraint->aspectRatio();
+          })->save('img/brand/'.$input['imagename']);
+     
+           $objs = brand::find($id);
+           $objs->name = $request['name'];
+           $objs->image = $input['imagename'];
+           $objs->status = $status;
+           $objs->save();
+
+           }
+
+           return redirect(url('admin/brands/'.$id.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
+    }
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function del_ban($id)
     {
         //
+
+        $objs = DB::table('brands')
+            ->where('id', $id)
+            ->first();
+
+            if(isset($objs->image)){
+              $file_path = 'img/brand/'.$objs->image;
+               unlink($file_path);
+            }
+
+        $obj = brand::find($id);
+        $obj->delete();
+
+        return redirect(url('admin/brands/'))->with('del_success','คุณทำการลบอสังหา สำเร็จ');
     }
 }

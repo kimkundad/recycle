@@ -24,7 +24,7 @@
     data-owl-animate-in="fadeIn" 
     data-owl-animate-out="fadeOut"
     >
-        <div class="ps-banner--autopart" data-background="{{ url('/img/slider/slide_1.png') }}">
+        {{-- <div class="ps-banner--autopart" data-background="{{ url('/img/slider/slide_1.png') }}">
             <img src="{{ url('/img/slider/slide_1.png') }}" alt="">
             <div class="d-flex">
                 <div class="ps-banner__content" >
@@ -41,22 +41,35 @@
 
                 </div>
             </div>
-        </div>
-        <div class="ps-banner--autopart" data-background="{{ url('/img/slider/slide_1.png') }}"><img src="{{ url('/img/slider/slide_1.png') }}" alt="">
-            <div class="d-flex">
-                <div class="ps-banner__content" >
-                    <h4 class="sub-head-w">วงษ์พาณิชย์รีไซเคิล </h4>
-                    <h3 class="head-slide-w">รับซื้อ-ขาย</h3>
-                    <p class="detail-slide-w">จำหน่ายเครื่องจักร ทั้งมือหนึ่ง มือสอง รับเข้าประมูลงานต่างๆ อาทิ เหล็ก <Br>
-                        โครงสร้าง เศษเหล็ก สแตนเลส อลูมิเนียม อัลลอย</p>
+        </div> --}}
+
+        @isset($slide)
+            @foreach ($slide as $item)
+
+                <div class="ps-banner--autopart" data-background="{{ url('/img/slider/'.$item->image) }}">
+                    <img src="{{ url('/img/slider/slide_1.png') }}" alt="">
                     <div class="d-flex">
-                        <a class="btn-green-b"> ซื้อสินค้า</a>
-                        <a class="btn-green-w-g"> ขายสินค้า</a>
+                        <div class="ps-banner__content" >
+                            <h4 class="sub-head-w">{{ $item->title }}</h4>
+                            <h3 class="head-slide-w">{{ $item->big_title }}</h3>
+                            <p class="detail-slide-w">{{ $item->sub_title }}</p>
+                            <div class="d-flex">
+                                @if( $item->g_btn === 1)
+                                <a class="btn-green-b" href="{{ $item->g_btn_url !== null ? $item->g_btn_url : "#" }}"> {{ $item->g_btn_text }}</a>
+                                @endif
+                                @if( $item->w_btn === 1)
+                                <a class="btn-green-w-g" href="{{ $item->w_btn_url !== null ? $item->w_btn_url : "#" }}"> {{ $item->w_btn_text }}</a>
+                                @endif
+                            </div>
+                        </div>
+                        <div>
+        
+                        </div>
                     </div>
-                    
                 </div>
-            </div>
-        </div>
+                
+            @endforeach
+        @endisset
     </div>
 </div>
 <div class="ps-deal-of-day">
@@ -67,13 +80,13 @@
                     <h3>หมวดหมู่สินค้า</h3>
                 </div>
             </div>
-            <a href="{{ url('/product') }}" class="">
+            <a href="{{ url('/category?id=0') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
             
         </div>
         <div class="ps-section__content">
-            <div class="ps-carousel--nav owl-slider sec-slide" 
+            <div class="ps-carousel--nav ow2 sec-slide" 
             data-owl-auto="false" 
             data-owl-loop="false" 
             data-owl-speed="10000" 
@@ -89,30 +102,19 @@
             data-owl-item-xl="6" 
             data-owl-duration="1000" 
             data-owl-mousedrag="on">
-                <div class="ps-product ps-product--inner">
-                    <img class="img-fluid" src="{{ url('img/banner_1.png') }}"> 
-                </div>
-                <div class="ps-product ps-product--inner">
-                    <img class="img-fluid" src="{{ url('img/img_b-3.png') }}"> 
-                </div>
-                <div class="ps-product ps-product--inner">
-                    <img class="img-fluid" src="{{ url('img/img_b-4.png') }}"> 
-                </div>
-                <div class="ps-product ps-product--inner">
-                    <img class="img-fluid" src="{{ url('img/img_b-5.png') }}"> 
-                </div>
-                <div class="ps-product ps-product--inner">
-                    <img class="img-fluid" src="{{ url('img/banner_1.png') }}"> 
-                </div>
-                <div class="ps-product ps-product--inner">
-                    <img class="img-fluid" src="{{ url('img/banner_1.png') }}"> 
-                </div>
-                <div class="ps-product ps-product--inner">
-                    <img class="img-fluid" src="{{ url('img/banner_1.png') }}"> 
-                </div>
-                <div class="ps-product ps-product--inner">
-                    <img class="img-fluid" src="{{ url('img/img_b-2.png') }}"> 
-                </div>
+
+                
+
+                @if(get_category())
+                    @foreach(get_category() as $u)
+                        <div class="ps-product ps-product--inner">
+                            <a href="{{ url('category/'.$u->id) }}">
+                            <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+                
             </div>
         </div>
     </div>
@@ -126,7 +128,7 @@
                     <h3>สินค้าแนะนำ</h3>
                 </div>
             </div>
-            <a href="{{ url('/product') }}" class="">
+            <a href="{{ url('/category?id=0') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
             
@@ -135,199 +137,46 @@
             <div class="">
                 <div class="row">
 
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image.png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                    <div class="ps-product__content">
-                                        <p class="ps-product__price text-green">$1310.00</p>
-                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                    </div>
-                                    <div class="ps-product__content hover">
-                                        <p class="ps-product__price text-green">$1310.00</p>
-                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (2).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (3).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (4).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image.png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                    <div class="ps-product__content">
-                                        <p class="ps-product__price text-green">$1310.00</p>
-                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                    </div>
-                                    <div class="ps-product__content hover">
-                                        <p class="ps-product__price text-green">$1310.00</p>
-                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (2).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (3).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (4).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 mt-10">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail"><a href="{{ url('/product_detail') }}"><img src="{{ url('img/product/Image (1).png') }}" alt="" /></a>
-                            </div>
-                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
-                                <div class="ps-product__content">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                                <div class="ps-product__content hover">
-                                    <p class="ps-product__price text-green">$1310.00</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/product_detail') }}">ดูข้อมูลสินค้า</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
 
+                    @isset($pro)
+                        @foreach($pro as $u)
+                            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                <div class="ps-product">
+                                    <div class="ps-product__thumbnail"><a href="{{ url('product_detail/'.$u->id_q) }}"><img src="{{ url('img/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
+                                    </div>
+                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
+                                        <div class="ps-product__content">
+                                            @if($u->discount == 0)
+                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}</p>
+                                            @else
+
+                                            @php
+                                                $discount = ($u->amount * $u->discount) / 100 ;
+                                            @endphp
+
+                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del></p>
+                                            @endif
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
+                                        </div>
+                                        <div class="ps-product__content hover">
+                                            @if($u->discount == 0)
+                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}</p>
+                                            @else
+
+                                            @php
+                                                $discount = ($u->amount * $u->discount) / 100 ;
+                                            @endphp
+
+                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del></p>
+                                            @endif
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endisset
 
                 </div>
             </div>
@@ -449,7 +298,7 @@
                     <h3>เกี่ยวกับวงษ์พาณิชย์</h3>
                 </div>
             </div>
-            <a href="#" class="">
+            <a href="{{ url('/about') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
             
@@ -575,33 +424,15 @@
             data-owl-item-lg="3" 
             data-owl-duration="1000" 
             data-owl-mousedrag="on">
-                <div class="ps-block--testimonial text-center">
-                    <img src="{{ url('img/brand/2.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/1.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/3.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/4.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/5.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/6.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/7.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/8.png') }}" alt="" class="max-h-55">
-                </div>
-                <div class="ps-block--testimonial">
-                    <img src="{{ url('img/brand/9.png') }}" alt="" class="max-h-55">
-                </div>
+
+                @isset($ban)
+                    @foreach ($ban as $item)
+                        <div class="ps-block--testimonial text-center">
+                            <img src="{{ url('img/brand/'.$item->image) }}" alt="{{ $item->name }}" class="max-h-55">
+                        </div>
+                    @endforeach
+                @endisset
+
             </div>
         </div>
     </div>
@@ -617,40 +448,44 @@
                 </div>
             </div>
         </div>
+
+        @if(count($cer) === 5 )
         <div class="img-portfolio">
             <div class="dg-wrapper ps-section__content">
                 <div class="text-center img_ro img_rotation1">
                     <div class="scale-100">
-                        <img src="{{ url('img/img_verify2.png') }}" >
-                        <h4 class="text-gray-400 fs-16px">ใบอนุญาตโรงงาน</h4>
+                        <img src="{{ url('img/certificate/'.$cer[0]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[0]->name }}</h4>
                     </div>
                 </div>
                 <div class="text-center img_ro img_rotation2">
                     <div class="scale-100">
-                    <img src="{{ url('img/img_verify4.png') }}" >
-                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                        <img src="{{ url('img/certificate/'.$cer[1]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[1]->name }}</h4>
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation3">
                     <div class="scale-100">
-                    <img src="{{ url('img/img_verify1.png') }}" >
-                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                        <img src="{{ url('img/certificate/'.$cer[2]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[2]->name }}</h4>
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation4">
                     <div class="scale-100 text-center">
-                    <img src="{{ url('img/img_verify3.png') }}" >
-                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                        <img src="{{ url('img/certificate/'.$cer[3]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[3]->name }}</h4>
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation5">
                     <div class="scale-100 text-center">
-                    <img src="{{ url('img/img_verify5.png') }}" >
-                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                        <img src="{{ url('img/certificate/'.$cer[4]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[4]->name }}</h4>
                     </div>
                 </div>
             </div>
         </div>
+        @endif
+
     </div>
 </div>
 
@@ -663,7 +498,7 @@
                     <h3>กิจกรรม & ประชาสัมพันธ์</h3>
                 </div>
             </div>
-            <a href="#" class="">
+            <a href="{{ url('/blog') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
             
@@ -671,42 +506,26 @@
         <div class="ps-section__content">
             
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                    <div class="ps-post">
-                        <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="#"></a>
-                            <img src="{{ url('img/brand/image 25.png') }}" alt="">
+
+                @isset($blog)
+                    @foreach ($blog as $item)
+                        
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                            <div class="ps-post">
+                                <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="{{ url('blog_detail/'.$item->id) }}"></a>
+                                    <img src="{{ url('media/'.$item->image) }}" alt="{{ $item->title }}">
+                                </div>
+                                <div class="ps-post__content">
+                                    <a class="ps-post__title" href="{{ url('blog_detail/'.$item->id) }}">{{ $item->title }}</a>
+                                    <p>{{ $item->sub_title }}</p>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$item->id) }}">อ่านต่อ</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="ps-post__content">
-                            <a class="ps-post__title" href="#">การอบรมคัดแยกขยะเชิงธุรกิจ หลักสูตร 6 วัน</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/blog_detail') }}">อ่านต่อ</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                    <div class="ps-post">
-                        <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="#"></a>
-                            <img src="{{ url('img/brand/image 26.png') }}" alt="">
-                        </div>
-                        <div class="ps-post__content">
-                            <a class="ps-post__title" href="#">การอบรมคัดแยกขยะเชิงธุรกิจ หลักสูตร 6 วัน</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/blog_detail') }}">อ่านต่อ</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                    <div class="ps-post">
-                        <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="#"></a>
-                            <img src="{{ url('img/brand/image 27.png') }}" alt="">
-                        </div>
-                        <div class="ps-post__content">
-                            <a class="ps-post__title" href="#">การอบรมคัดแยกขยะเชิงธุรกิจ หลักสูตร 6 วัน</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/blog_detail') }}">อ่านต่อ</a>
-                        </div>
-                    </div>
-                </div>
+
+                    @endforeach
+                @endisset
+                
             </div>
             
         </div>

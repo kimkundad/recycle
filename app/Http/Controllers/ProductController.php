@@ -34,6 +34,26 @@ class ProductController extends Controller
         return view('admin.product.index', compact('objs'));
     }
 
+    public function recommend(){
+
+        $objs = DB::table('products')->select(
+            'products.*',
+            'products.id as id_q',
+            'products.status as status1',
+            'categories.*'
+            )
+            ->leftjoin('categories', 'categories.id',  'products.cat_id')
+            ->where('products.type_pro', 2)
+            ->paginate(15);
+
+            $objs->setPath('');
+        $data['objs'] = $objs;
+
+        
+        return view('admin.product.recommend', compact('objs'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

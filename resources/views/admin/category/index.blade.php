@@ -82,6 +82,7 @@
                                         <tr>
                                             <th class="p-0 w-50px"></th>
                                             <th class="p-0 "></th>
+                                            <th class="p-0 ">icons</th>
                                             <th class="p-0 ">จำนวนสินค้า</th>
                                             <th class="p-0 ">status</th>
                                             <th class="p-0 "></th>
@@ -102,6 +103,9 @@
                                             <td>
                                                 <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $item->cat_name }}</a>
                                                 <span class="text-muted fw-semibold d-block fs-7">ซับหมวดหมู่</span>
+                                            </td>
+                                            <td>
+                                                <img src="{{ url('img/category/'.$item->icons) }}" alt="">
                                             </td>
                                             <td>
                                                 0
@@ -151,7 +155,9 @@
                                     <!--end::Table body-->
                                 </table>
                             </div>
-
+                            @if(count($objs) > 10)
+                            @include('admin.pagination.default', ['paginator' => $objs])
+                            @endif
                         </div>
                     </div>
                     
@@ -168,19 +174,19 @@
                 <!--begin::Copyright-->
                 <div class="text-dark order-2 order-md-1">
                     <span class="text-muted fw-semibold me-1">2022&copy;</span>
-                    <a href="" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
+                    <a href="" target="_blank" class="text-gray-800 text-hover-primary">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</a>
                 </div>
                 <!--end::Copyright-->
                 <!--begin::Menu-->
                 <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
                     <li class="menu-item">
-                        <a href="" target="_blank" class="menu-link px-2">About</a>
+                        <a href="{{ url('about') }}" target="_blank" class="menu-link px-2">เกี่ยวกับวงษ์พาณิชย์</a>
                     </li>
                     <li class="menu-item">
-                        <a href="" target="_blank" class="menu-link px-2">Support</a>
+                        <a href="{{ url('contatermct') }}" target="_blank" class="menu-link px-2">นโยบายส่วนบุคคล</a>
                     </li>
                     <li class="menu-item">
-                        <a href="" target="_blank" class="menu-link px-2">Purchase</a>
+                        <a href="{{ url('contact') }}" target="_blank" class="menu-link px-2">ติดต่อเรา</a>
                     </li>
                 </ul>
                 <!--end::Menu-->

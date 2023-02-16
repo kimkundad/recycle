@@ -140,40 +140,42 @@
                 </div>
             </div>
         </div>
+        @if(count($cer) === 5 )
         <div class="img-portfolio">
             <div class="dg-wrapper ps-section__content">
                 <div class="text-center img_ro img_rotation1">
                     <div class="scale-100">
-                        <img src="{{ url('img/img_verify2.png') }}" >
-                        <h4 class="text-gray-400 fs-16px">ใบอนุญาตโรงงาน</h4>
+                        <img src="{{ url('img/certificate/'.$cer[0]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[0]->name }}</h4>
                     </div>
                 </div>
                 <div class="text-center img_ro img_rotation2">
                     <div class="scale-100">
-                    <img src="{{ url('img/img_verify4.png') }}" >
-                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                        <img src="{{ url('img/certificate/'.$cer[1]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[1]->name }}</h4>
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation3">
                     <div class="scale-100">
-                    <img src="{{ url('img/img_verify1.png') }}" >
-                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                        <img src="{{ url('img/certificate/'.$cer[2]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[2]->name }}</h4>
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation4">
                     <div class="scale-100 text-center">
-                    <img src="{{ url('img/img_verify3.png') }}" >
-                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                        <img src="{{ url('img/certificate/'.$cer[3]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[3]->name }}</h4>
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation5">
                     <div class="scale-100 text-center">
-                    <img src="{{ url('img/img_verify5.png') }}" >
-                    <h4 class="text-gray-400 fs-16px">รางวัลผู้ประกอบการ</h4>
+                        <img src="{{ url('img/certificate/'.$cer[4]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[4]->name }}</h4>
                     </div>
                 </div>
             </div>
         </div>
+        @endif
     </div>
 </div>
 
@@ -195,49 +197,14 @@
     <div class="container">
         <div class="ps-section__content">
             <div class="row justify-content-center">
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/1.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/2.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/3.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/4.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/5.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/6.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/7.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/8.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/9.png') }}" alt="" class="max-h-45">
-                </div>
 
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/image 24.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/image 20.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/image 21.png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/image 26 (1).png') }}" alt="" class="max-h-45">
-                </div>
-                <div class="col-xs-6 col-sm-2 mt-15">
-                    <img src="{{ url('img/brand/image 23.png') }}" alt="" class="max-h-45">
-                </div>
+                @isset($ban)
+                    @foreach ($ban as $item)
+                        <div class="col-xs-6 col-sm-2 mt-15">
+                            <img src="{{ url('img/brand/1.png') }}" alt="" class="max-h-45">
+                        </div>
+                    @endforeach
+                @endisset
 
             </div>
             
