@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\category;
-use App\Models\product;
 use App\Models\subcat;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
 
-class CategoryController extends Controller
+class SubCatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,51 +18,29 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $objs = category::paginate(30);
-
-        if(isset($objs)){
-            foreach($objs as $u){
-                $count = product::where('cat_id', $u->id)->count();
-                $u->option = $count;
-            }
-        }
-
-        if(isset($objs)){
-            foreach($objs as $u){
-                $count = subcat::where('cat_id', $u->id)->count();
-                $u->subcat = $count;
-            }
-        }
-
-        $objs->setPath('');
-        $data['objs'] = $objs;
-        return view('admin.category.index', compact('objs'));
-
     }
+
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         //
+        $cat = category::find($id);
+        $data['cat_name'] = $cat->cat_name;
+        $data['cat_id'] = $id;
         $data['method'] = "post";
-        $data['url'] = url('admin/category');
-        return view('admin.category.create', $data);
+        $data['url'] = url('admin/subcat');
+        return view('admin.subcat.create', $data);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
 
-     public function api_post_status_category(Request $request){
+    public function api_post_status_subcat(Request $request){
 
-        $user = category::findOrFail($request->user_id);
+        $user = subcat::findOrFail($request->user_id);
 
               if($user->status == 1){
                   $user->status = 0;
@@ -80,17 +57,25 @@ class CategoryController extends Controller
 
      }
 
-
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
         //
    
            $this->validate($request, [
-            'cat_name' => 'required',
-            'image' => 'required'
+            'sub_name' => 'required',
+            'cat_id' => 'required',
+            'image' => 'required',
+            'icons' => 'required'
            ]);
            
            $image = $request->file('image');
+           $icons = $request->file('icons');
 
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
@@ -100,6 +85,10 @@ class CategoryController extends Controller
             })->save('img/category/'.$input['imagename']);
 
 
+            $path = 'img/category/';
+            $filename = time()."-".$icons->getClientOriginalName();
+            $icons->move($path, $filename);
+
         $status = 0;
         if(isset($request['status'])){
             if($request['status'] == 1){
@@ -107,13 +96,16 @@ class CategoryController extends Controller
             }
         }
      
-           $objs = new category();
-           $objs->cat_name = $request['cat_name'];
+           $objs = new subcat();
+           $objs->sub_name = $request['sub_name'];
+           $objs->cat_id = $request['cat_id'];
            $objs->image = $input['imagename'];
+           $objs->icons = $filename;
            $objs->status = $status;
            $objs->save();
 
-           return redirect(url('admin/category'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
+
+           return redirect(url('admin/category/'.$request['cat_id'].'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
     }
 
     /**
@@ -136,14 +128,13 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //
-        $subcat = subcat::where('cat_id', $id)->get();
-        $data['subcat'] = $subcat;
-
-        $objs = category::find($id);
-        $data['url'] = url('admin/category/'.$id);
-        $data['method'] = "put";
+        $cat = category::where('id', $id)->first();
+        $data['cat'] = $cat;
+        $objs = subcat::find($id);
+        $data['url'] = url('admin/post_subcat/'.$id);
+        $data['method'] = "post";
         $data['objs'] = $objs;
-        return view('admin.category.edit', $data);
+        return view('admin.subcat.edit', $data);
     }
 
     /**
@@ -158,10 +149,13 @@ class CategoryController extends Controller
         //
 
            $this->validate($request, [
-            'cat_name' => 'required'
+            'sub_name' => 'required',
+            'cat_id' => 'required',
            ]);
            
            $image = $request->file('image');
+           $icons = $request->file('icons');
+
 
            $status = 0;
             if(isset($request['status'])){
@@ -170,16 +164,40 @@ class CategoryController extends Controller
                 }
             }
 
+            if($icons !== NULL){
+
+                $img = DB::table('subcats')
+                ->where('id', $id)
+                ->first();
+              //  dd($img->icons);
+          if($img->icons !== null && $img->icons !== ""){
+            $file_path = 'img/category/'.$img->icons;
+            unlink($file_path);
+          }
+         
+
+            $path = 'img/category/';
+            $filename = time()."-".$icons->getClientOriginalName();
+            $icons->move($path, $filename);
+
+            $objs = subcat::find($id);
+            $objs->icons = $filename;
+            $objs->save();
+
+            }
+
+
            if($image == NULL){
 
-           $objs = category::find($id);
-           $objs->cat_name = $request['cat_name'];
+           $objs = subcat::find($id);
+           $objs->sub_name = $request['sub_name'];
+           $objs->cat_id = $request['cat_id'];
            $objs->status = $status;
            $objs->save();
 
            }else{
 
-            $img = DB::table('categories')
+            $img = DB::table('subcats')
           ->where('id', $id)
           ->first();
 
@@ -195,8 +213,9 @@ class CategoryController extends Controller
 
             
      
-           $objs = category::find($id);
-           $objs->cat_name = $request['cat_name'];
+           $objs = subcat::find($id);
+           $objs->sub_name = $request['sub_name'];
+           $objs->cat_id = $request['cat_id'];
            $objs->image = $input['imagename'];
            $objs->status = $status;
            $objs->save();
@@ -204,7 +223,7 @@ class CategoryController extends Controller
            }
 
            
-           return redirect(url('admin/category/'.$id.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
+           return redirect(url('admin/category/'.$request['cat_id'].'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
     }
 
     /**
@@ -213,22 +232,23 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function del_cat($id)
+    public function del_subcat($id)
     {
         //
-
-        $objs = DB::table('categories')
+        $objs = DB::table('subcats')
             ->where('id', $id)
             ->first();
+
+           $idcat = $objs->cat_id;
 
             if(isset($objs->image)){
               $file_path = 'img/category/'.$objs->image;
                unlink($file_path);
             }
 
-        $obj = category::find($id);
+        $obj = subcat::find($id);
         $obj->delete();
 
-        return redirect(url('admin/category/'))->with('del_success','คุณทำการลบอสังหา สำเร็จ');
+        return redirect(url('admin/category/'.$idcat.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
     }
 }

@@ -21,7 +21,7 @@
                     <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                         <!--begin::Title-->
                         <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-                            สร้างหมวดหมู่สินค้า</h1>
+                            สร้างพันธมิตร</h1>
                         <!--end::Title-->
                         <!--begin::Breadcrumb-->
                         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
@@ -36,7 +36,7 @@
                             </li>
                             <!--end::Item-->
                             <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">สร้างหมวดหมู่สินค้าใหม่</li>
+                            <li class="breadcrumb-item text-muted">สร้างพันธมิตรใหม่</li>
                             <!--end::Item-->
                         </ul>
                         <!--end::Breadcrumb-->
@@ -61,7 +61,7 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รูปหมวดหมู่สินค้า</label>
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รูปพันธมิตร</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8">
@@ -71,7 +71,7 @@
                                             <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{ url('admin/assets/media/svg/avatars/blank.svg') }})"></div>
                                             <!--end::Preview existing avatar-->
                                             <!--begin::Label-->
-                                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="เปลี่ยน รูปหมวดหมู่สินค้า">
+                                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="เปลี่ยน รูปพันธมิตร">
                                                 <i class="bi bi-pencil-fill fs-7"></i>
                                                 <!--begin::Inputs-->
                                                 <input type="file" name="image" accept=".png, .jpg, .jpeg" />
@@ -80,12 +80,12 @@
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Cancel-->
-                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="ยกเลิก รูปหมวดหมู่สินค้า">
+                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="ยกเลิก รูปพันธมิตร">
                                                 <i class="bi bi-x fs-2"></i>
                                             </span>
                                             <!--end::Cancel-->
                                             <!--begin::Remove-->
-                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="ลบ รูปหมวดหมู่สินค้า">
+                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="ลบ รูปพันธมิตร">
                                                 <i class="bi bi-x fs-2"></i>
                                             </span>
                                             <!--end::Remove-->
@@ -95,7 +95,7 @@
                                         <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
                                         @if ($errors->has('image'))
                                             <div class="fv-plugins-message-container invalid-feedback">
-                                                <div>กรุณาเลือกรูปหมวดหมู่สินค้า</div>
+                                                <div>กรุณาเลือกรูปพันธมิตร</div>
                                             </div>
                                         @endif
                                         <!--end::Hint-->
@@ -105,22 +105,20 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อหมวดหมู่สินค้า</label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อพันธมิตร</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="cat_name" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{old('cat_name') ? old('cat_name') : ''}}">
+                                        <input type="text" name="name" class="form-control form-control-lg form-control-solid" placeholder="makita ซัมซุง" value="{{old('name') ? old('name') : ''}}">
                                     
-                                        @if ($errors->has('cat_name'))
+                                        @if ($errors->has('name'))
                                             <div class="fv-plugins-message-container invalid-feedback">
-                                                <div>กรุณากรอกชื่อหมวดหมู่สินค้า</div>
+                                                <div>กรุณากรอกชื่อพันธมิตร</div>
                                             </div>
                                         @endif
                                     </div>
                                     <!--end::Col-->
                                 </div>
-
-                                
 
                                 <div class="row mb-0">
                                     <!--begin::Label-->

@@ -11,6 +11,8 @@ use App\Http\Controllers\MyUserController;
 use App\Http\Controllers\SlideController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AllianceController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -104,5 +106,23 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::post('api/post_setting/', [App\Http\Controllers\SettingController::class, 'post_setting']);
 
     Route::get('admin/recommend/', [App\Http\Controllers\ProductController::class, 'recommend']);
+
+    Route::get('/admin/subcat/create/{id}', [App\Http\Controllers\SubCatController::class, 'create']);
+
+
+    Route::post('/api/api_post_status_subcat', [App\Http\Controllers\SubCatController::class, 'api_post_status_subcat']);
+    Route::get('api/del_subcat/{id}', [App\Http\Controllers\SubCatController::class, 'del_subcat']);
+    Route::post('/admin/subcat', [App\Http\Controllers\SubCatController::class, 'store']);
+    Route::get('/admin/subcat/{id}/edit', [App\Http\Controllers\SubCatController::class, 'edit']);
+    Route::post('/admin/post_subcat/{id}', [App\Http\Controllers\SubCatController::class, 'update']);
+
+
+    Route::resource('/admin/alliance', AllianceController::class);
+    Route::post('/api/api_post_status_alliance', [App\Http\Controllers\AllianceController::class, 'api_post_status_alliance']);
+    Route::get('api/del_alliance/{id}', [App\Http\Controllers\AllianceController::class, 'del_alliance']);
+    
+    Route::post('/api/upload_img_product/{id}', [App\Http\Controllers\ProductController::class, 'upload_img_product']);
+    Route::get('/api/image_del/{id}', [App\Http\Controllers\ProductController::class, 'image_del']);
+ 
  
 });

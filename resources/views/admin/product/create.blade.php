@@ -126,14 +126,22 @@
                                     <!--end::Col-->
                                 </div>
 
+                              
+
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Brand สินค้า</label>
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">Brand สินค้า</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="brand" class="form-control form-control-lg form-control-solid" placeholder="ซัมซุม พานาโซนิค" value="{{old('brand') ? old('brand') : ''}}">
-                                    
+                                        <select class="form-select" aria-label="Select example" name="brand">
+                                            <option> -- เลือก Brand สินค้า -- </option>
+                                            @isset($brand)
+                                            @foreach($brand as $u)
+                                            <option value="{{$u->id}}">{{$u->name}}</option>
+                                            @endforeach
+                                            @endisset
+                                        </select>
                                         @if ($errors->has('brand'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อ Brand สินค้า</div>
@@ -268,17 +276,17 @@
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <select class="form-select" aria-label="Select example" name="cat_id">
-                                            <option> -- เลือกหมวดหมู่สินค้า -- </option>
+                                        <select class="form-select" aria-label="Select example" name="sub_cat_id">
+                                            <option> -- เลือกซับหมวดหมู่สินค้า -- </option>
                                             @isset($cat)
                                             @foreach($cat as $u)
-                                            <option value="{{$u->id}}">{{$u->cat_name}}</option>
+                                            <option value="{{$u->id}}">{{$u->sub_name}}</option>
                                             @endforeach
                                             @endisset
                                         </select>
-                                        @if ($errors->has('cat_id'))
+                                        @if ($errors->has('sub_cat_id'))
                                             <div class="fv-plugins-message-container invalid-feedback">
-                                                <div>กรุณาเลือกหมวดหมู่สินค้า</div>
+                                                <div>กรุณาเลือกซับหมวดหมู่สินค้า</div>
                                             </div>
                                         @endif
                                     </div>

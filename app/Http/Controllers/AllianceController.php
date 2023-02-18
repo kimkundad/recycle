@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\brand;
-use App\Models\product;
+use App\Models\alliance;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
 
-class BrandController extends Controller
+
+class AllianceController extends Controller
 {
-    
     /**
      * Display a listing of the resource.
      *
@@ -19,18 +18,10 @@ class BrandController extends Controller
     public function index()
     {
         //
-        $objs = brand::paginate(30);
-
-        if(isset($objs)){
-            foreach($objs as $u){
-                $count = product::where('brand', $u->id)->count();
-                $u->option = $count;
-            }
-        }
-
+        $objs = alliance::paginate(30);
         $objs->setPath('');
         $data['objs'] = $objs;
-        return view('admin.brands.index', compact('objs'));
+        return view('admin.alliance.index', compact('objs'));
     }
 
     /**
@@ -42,13 +33,13 @@ class BrandController extends Controller
     {
         //
         $data['method'] = "post";
-        $data['url'] = url('admin/brands');
-        return view('admin.brands.create', $data);
+        $data['url'] = url('admin/alliance');
+        return view('admin.alliance.create', $data);
     }
 
-    public function api_post_status_brands(Request $request){
+    public function api_post_status_alliance(Request $request){
 
-        $user = brand::findOrFail($request->user_id);
+        $user = alliance::findOrFail($request->user_id);
 
               if($user->status == 1){
                   $user->status = 0;
@@ -86,7 +77,7 @@ class BrandController extends Controller
           $img = Image::make($image->getRealPath());
           $img->resize(250, 250, function ($constraint) {
           $constraint->aspectRatio();
-        })->save('img/brand/'.$input['imagename']);
+        })->save('img/alliance/'.$input['imagename']);
 
         $status = 0;
         if(isset($request['status'])){
@@ -95,13 +86,13 @@ class BrandController extends Controller
             }
         }
      
-           $objs = new brand();
+           $objs = new alliance();
            $objs->name = $request['name'];
            $objs->image = $input['imagename'];
            $objs->status = $status;
            $objs->save();
 
-           return redirect(url('admin/brands'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
+           return redirect(url('admin/alliance'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
     }
 
     /**
@@ -124,11 +115,11 @@ class BrandController extends Controller
     public function edit($id)
     {
         //
-        $objs = brand::find($id);
-        $data['url'] = url('admin/brands/'.$id);
+        $objs = alliance::find($id);
+        $data['url'] = url('admin/alliance/'.$id);
         $data['method'] = "put";
         $data['objs'] = $objs;
-        return view('admin.brands.edit', $data);
+        return view('admin.alliance.edit', $data);
     }
 
     /**
@@ -157,18 +148,18 @@ class BrandController extends Controller
 
            if($image == NULL){
 
-           $objs = brand::find($id);
+           $objs = alliance::find($id);
            $objs->name = $request['name'];
            $objs->status = $status;
            $objs->save();
 
            }else{
 
-            $img = DB::table('brands')
+            $img = DB::table('alliances')
           ->where('id', $id)
           ->first();
 
-          $file_path = 'img/brand/'.$img->image;
+          $file_path = 'img/alliance/'.$img->image;
           unlink($file_path);
 
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
@@ -176,9 +167,9 @@ class BrandController extends Controller
           $img = Image::make($image->getRealPath());
           $img->resize(250, 250, function ($constraint) {
           $constraint->aspectRatio();
-          })->save('img/brand/'.$input['imagename']);
+          })->save('img/alliance/'.$input['imagename']);
      
-           $objs = brand::find($id);
+           $objs = alliance::find($id);
            $objs->name = $request['name'];
            $objs->image = $input['imagename'];
            $objs->status = $status;
@@ -186,7 +177,7 @@ class BrandController extends Controller
 
            }
 
-           return redirect(url('admin/brands/'.$id.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
+           return redirect(url('admin/alliance/'.$id.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
     }
     /**
      * Remove the specified resource from storage.
@@ -198,18 +189,18 @@ class BrandController extends Controller
     {
         //
 
-        $objs = DB::table('brands')
+        $objs = DB::table('alliances')
             ->where('id', $id)
             ->first();
 
             if(isset($objs->image)){
-              $file_path = 'img/brand/'.$objs->image;
+              $file_path = 'img/alliance/'.$objs->image;
                unlink($file_path);
             }
 
-        $obj = brand::find($id);
+        $obj = alliance::find($id);
         $obj->delete();
 
-        return redirect(url('admin/brands/'))->with('del_success','คุณทำการลบอสังหา สำเร็จ');
+        return redirect(url('admin/alliance/'))->with('del_success','คุณทำการลบอสังหา สำเร็จ');
     }
 }

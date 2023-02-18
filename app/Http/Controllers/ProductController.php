@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\product;
 use App\Models\category;
+use App\Models\subcat;
+use App\Models\brand;
+use App\Models\product_image;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
+use Response;
 
 class ProductController extends Controller
 {
@@ -62,9 +66,11 @@ class ProductController extends Controller
     public function create()
     {
         //
-        $cat = category::where('status', 1)->get();
-
+        $cat = subcat::where('status', 1)->get();
+        $brand = brand::where('status', 1)->get();
+ 
         $data['cat'] = $cat;
+        $data['brand'] = $brand;
         $data['method'] = "post";
         $data['url'] = url('admin/product');
         return view('admin.product.create', $data);
@@ -83,7 +89,7 @@ class ProductController extends Controller
         $this->validate($request, [
             'name_pro' => 'required',
             'image_pro' => 'required',
-            'cat_id' => 'required',
+            'sub_cat_id' => 'required',
             'brand' => 'required',
             'sku' => 'required',
             'amount' => 'required',
@@ -106,10 +112,13 @@ class ProductController extends Controller
             }
         }
 
+        $sub = subcat::find($request['sub_cat_id']);
+
            $objs = new product();
            $objs->name_pro = $request['name_pro'];
            $objs->image_pro = $input['imagename'];
-           $objs->cat_id = $request['cat_id'];
+           $objs->sub_cat_id = $request['sub_cat_id'];
+           $objs->cat_id = $sub->cat_id;
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
            $objs->amount = $request['amount'];
@@ -167,13 +176,19 @@ class ProductController extends Controller
     {
         //
 
-        $cat = category::where('status', 1)->get();
+        $img = product_image::where('product_id', $id)->get();
+        $data['img'] = $img;
+        $cat = subcat::where('status', 1)->get();
         $data['cat'] = $cat;
+
+        $brand = brand::where('status', 1)->get();
+        $data['brand'] = $brand;
 
         $objs = product::find($id);
         $data['url'] = url('admin/product/'.$id);
         $data['method'] = "put";
         $data['objs'] = $objs;
+        $data['pro_id'] = $id;
         return view('admin.product.edit', $data);
     }
 
@@ -184,18 +199,64 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function upload_img_product(Request $request, $id){
+       
+        $gallary = $request->file('file');
+
+        $this->validate($request, [
+             'file' => 'required|max:8048'
+         ]);
+
+            $path = 'img/cusimage/';
+            $filename = time()."-".$gallary->getClientOriginalName();
+            $gallary->move($path, $filename);
+            $admins[] = [
+                'image' => $filename,
+                'product_id' => $id
+            ];
+          
+          product_image::insert($admins);
+        
+          return Response::json(array('success' => true, 'message' => 'Successfully uploaded file.'), 200);
+
+
+    }
+
+    public function image_del($id){
+
+        $objs = DB::table('product_images')
+            ->where('id', $id)
+            ->first();
+
+          $pid = $objs->product_id;
+
+            if(isset($objs->image)){
+              $file_path = 'img/cusimage/'.$objs->image;
+               unlink($file_path);
+            }
+
+        $obj = product_image::find($id);
+        $obj->delete();
+
+        return redirect(url('admin/product/'.$pid.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
+
+    }
+
     public function update(Request $request, $id)
     {
         //
        // dd($request->all());
         $this->validate($request, [
             'name_pro' => 'required',
-            'cat_id' => 'required',
+            'sub_cat_id' => 'required',
             'brand' => 'required',
             'sku' => 'required',
             'amount' => 'required',
             'sum' => 'required'
         ]);
+
+        $sub = subcat::find($request['sub_cat_id']);
 
         $image = $request->file('image_pro');
 
@@ -210,7 +271,8 @@ class ProductController extends Controller
 
            $objs = product::find($id);
            $objs->name_pro = $request['name_pro'];
-           $objs->cat_id = $request['cat_id'];
+           $objs->sub_cat_id = $request['sub_cat_id'];
+           $objs->cat_id = $sub->cat_id;
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
            $objs->amount = $request['amount'];
@@ -243,7 +305,8 @@ class ProductController extends Controller
             $objs = product::find($id);
            $objs->name_pro = $request['name_pro'];
            $objs->image_pro = $input['imagename'];
-           $objs->cat_id = $request['cat_id'];
+           $objs->sub_cat_id = $request['sub_cat_id'];
+           $objs->cat_id = $sub->cat_id;
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
            $objs->amount = $request['amount'];

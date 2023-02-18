@@ -82,6 +82,7 @@
                                         <tr>
                                             <th class="p-0 w-50px"></th>
                                             <th class="p-0 "></th>
+                                            <th class="p-0 ">จำนวนสินค้า</th>
                                             <th class="p-0 ">status</th>
                                             <th class="p-0 "></th>
                                         </tr>
@@ -94,12 +95,15 @@
                                         
                                         <tr id="{{$item->id}}">
                                             <td>
-                                                <div class="symbol symbol-50px">
-                                                    <img src="{{ url('img/brand/'.$item->image) }}" alt="">
+                                                <div class="">
+                                                    <img src="{{ url('img/brand/'.$item->image) }}" alt="{{ $item->name }}" style="height:35px">
                                                 </div>
                                             </td>
                                             <td>
                                                 <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $item->name }}</a>
+                                            </td>
+                                            <td>
+                                                {{ $item->option }}
                                             </td>
                                             <td>
                                                 <div class="form-check form-check-solid form-switch form-check-custom fv-row">

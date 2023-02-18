@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\brand;
 use App\Models\certificate;
 use App\Models\news;
+use App\Models\alliance;
 
 
 class HomeController extends Controller
@@ -36,7 +37,7 @@ class HomeController extends Controller
       $blog = news::where('status', 1)->orderby('id', 'desc')->limit(3)->get();
       $data['blog'] = $blog;
 
-      $ban = brand::where('status', 1)->get();
+      $ban = alliance::where('status', 1)->get();
       $data['ban'] = $ban;
 
       $cer = certificate::where('status', 1)->get();
@@ -82,7 +83,7 @@ class HomeController extends Controller
 
     public function about(){
 
-      $ban = brand::where('status', 1)->get();
+      $ban = alliance::where('status', 1)->get();
       $data['ban'] = $ban;
 
       $cer = certificate::where('status', 1)->get();

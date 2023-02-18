@@ -5,7 +5,7 @@
     <meta name="description" content=" รายละเอียด วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด">
 @stop
 @section('stylesheet')
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <style>
     .ck-file-dialog-button{
         display: none;
@@ -109,6 +109,98 @@
                                     <!--end::Col-->
                                 </div>
 
+
+                           
+
+                               
+                                    <div class="rounded border p-10">
+                                    <!--begin::Input group-->
+                                    <div class="form-group row">
+                                        <!--begin::Label-->
+                                        <label class="col-lg-2 col-form-label text-lg-right">Upload Files:</label>
+                                        <!--end::Label-->
+
+                                        <!--begin::Col-->
+                                        <div class="col-lg-10">
+                                            <!--begin::Dropzone-->
+                                            <div class="dropzone dropzone-queue mb-2" id="kt_dropzonejs_example_2">
+                                                <!--begin::Controls-->
+                                                <div class="dropzone-panel mb-lg-0 mb-2">
+                                                    <a class="dropzone-select btn btn-sm btn-primary me-2">Attach files</a>
+                                                    <a class="dropzone-upload btn btn-sm btn-light-primary me-2">Upload All</a>
+                                                    <a class="dropzone-remove-all btn btn-sm btn-light-primary">Remove All</a>
+                                                </div>
+                                                <!--end::Controls-->
+
+                                                <!--begin::Items-->
+                                                <div class="dropzone-items wm-200px">
+                                                    <div class="dropzone-item" style="display:none">
+                                                        <!--begin::File-->
+                                                        <div class="dropzone-file">
+                                                            <div class="dropzone-filename" title="some_image_file_name.jpg">
+                                                                <span data-dz-name>some_image_file_name.jpg</span>
+                                                                <strong>(<span data-dz-size>340kb</span>)</strong>
+                                                            </div>
+
+                                                            <div class="dropzone-error" data-dz-errormessage></div>
+                                                        </div>
+                                                        <!--end::File-->
+
+                                                        <!--begin::Progress-->
+                                                        <div class="dropzone-progress">
+                                                            <div class="progress">
+                                                                <div
+                                                                    class="progress-bar bg-primary"
+                                                                    role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end::Progress-->
+
+                                                        <!--begin::Toolbar-->
+                                                        <div class="dropzone-toolbar">
+                                                            <span class="dropzone-start"><i class="bi bi-play-fill fs-3"></i></span>
+                                                            <span class="dropzone-cancel" data-dz-remove style="display: none;"><i class="bi bi-x fs-3"></i></span>
+                                                            <span class="dropzone-delete" data-dz-remove><i class="bi bi-x fs-1"></i></span>
+                                                        </div>
+                                                        <!--end::Toolbar-->
+                                                    </div>
+                                                </div>
+                                                <!--end::Items-->
+                                            </div>
+                                            <!--end::Dropzone-->
+
+                                            <!--begin::Hint-->
+                                            <span class="form-text text-muted">Max file size is 5MB and max number of files is 5.</span>
+                                            <!--end::Hint-->
+                                        </div>
+                                        <!--end::Col-->
+                                    </div>
+                                    <!--end::Input group-->
+                                </div>
+                                <br>
+
+                                <div class="py-5">
+                                    <div class="rounded border p-5 pb-0 d-flex flex-wrap">
+                                        @isset($img)
+                                        @foreach($img as $u)
+                                        <div class=" me-5 mb-5">
+                                            <div class="d-flex flex-column">
+                                                <div class="symbol symbol-150px">
+                                                <img src="{{ url('img/cusimage/'.$u->image) }}" >
+                                                </div>
+                                                <div class="d-flex justify-content-center">
+                                                    <a href="{{ url('api/image_del/'.$u->id) }}" onclick="return confirm('Are you sure?')">
+                                                        <img src="{{ url('img/close_img.png') }}" style="height:30px" >
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                        @endisset
+                                    </div>
+                                </div>
+
                                 <div class="row mb-6">
                                     <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อสินค้า</label>
@@ -126,19 +218,26 @@
                                     <!--end::Col-->
                                 </div>
 
+                                
+
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Brand สินค้า</label>
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">เลือก Brand สินค้า</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="brand" class="form-control form-control-lg form-control-solid" placeholder="ซัมซุม พานาโซนิค" value="{{ $objs->brand }}">
-                                    
-                                        @if ($errors->has('brand'))
-                                            <div class="fv-plugins-message-container invalid-feedback">
-                                                <div>กรุณากรอกชื่อ Brand สินค้า</div>
-                                            </div>
-                                        @endif
+                                        <select class="form-select" aria-label="Select example" name="brand">
+                                            <option> -- เลือก Brand สินค้า -- </option>
+                                            @isset($brand)
+                                            @foreach($brand as $u)
+                                            <option value="{{$u->id}}"
+                                                @if( $objs->brand == $u->id)
+                                                selected='selected'
+                                                @endif
+                                                >{{$u->name}}</option>
+                                            @endforeach
+                                            @endisset
+                                        </select>
                                     </div>
                                     <!--end::Col-->
                                 </div>
@@ -270,19 +369,19 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">เลือกหมวดหมู่สินค้า</label>
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">เลือกซับหมวดหมู่สินค้า</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <select class="form-select" aria-label="Select example" name="cat_id">
-                                            <option> -- เลือกหมวดหมู่สินค้า -- </option>
+                                        <select class="form-select" aria-label="Select example" name="sub_cat_id">
+                                            <option> -- เลือกซับหมวดหมู่สินค้า -- </option>
                                             @isset($cat)
                                             @foreach($cat as $u)
                                             <option value="{{$u->id}}"
-                                                @if( $objs->cat_id == $u->id)
+                                                @if( $objs->sub_cat_id == $u->id)
                                                 selected='selected'
                                                 @endif
-                                                >{{$u->cat_name}}</option>
+                                                >{{$u->sub_name}}</option>
                                             @endforeach
                                             @endisset
                                         </select>
@@ -362,6 +461,26 @@
         <!--end::Footer-->
     </div>
 
+    <!--begin::Toast-->
+<div id="kt_docs_toast_stack_container" class="toast-container position-fixed end-0 p-3 z-index-3" style="top: 80px!important;">
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-kt-docs-toast="stack">
+        <div class="toast-header">
+            <span class="svg-icon svg-icon-2 svg-icon-success me-3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.3" d="M7.16973 20.95C6.26973 21.55 5.16972 20.75 5.46972 19.75L7.36973 14.05L2.46972 10.55C1.56972 9.95005 2.06973 8.55005 3.06973 8.55005H20.8697C21.9697 8.55005 22.3697 9.95005 21.4697 10.55L7.16973 20.95Z" fill="currentColor"></path>
+                <path d="M11.0697 2.75L7.46973 13.95L16.9697 20.85C17.8697 21.45 18.9697 20.65 18.6697 19.65L13.1697 2.75C12.7697 1.75 11.3697 1.75 11.0697 2.75Z" fill="currentColor"></path>
+                </svg>
+                </span>
+            <strong class="me-auto">ยินดีด้วย!</strong>
+            <small>1 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            คุณได้ทำการอัพโหลดรูปสำเร็จ
+        </div>
+    </div>
+</div>
+<!--end::Toast-->
+
 @endsection
 
 @section('scripts')
@@ -378,5 +497,114 @@ ClassicEditor
     .catch(error => {
         console.error(error);
     });
+
+    const container = document.getElementById('kt_docs_toast_stack_container');
+const targetElement = document.querySelector('[data-kt-docs-toast="stack"]');
+
+    // set the dropzone container id
+const id = "#kt_dropzonejs_example_2";
+const dropzone = document.querySelector(id);
+const newToast = targetElement.cloneNode(true);
+    container.append(newToast);
+
+    // Create new toast instance --- more info: https://getbootstrap.com/docs/5.1/components/toasts/#getorcreateinstance
+    const toast = bootstrap.Toast.getOrCreateInstance(newToast);
+
+// set the preview element template
+var previewNode = dropzone.querySelector(".dropzone-item");
+previewNode.id = "";
+var previewTemplate = previewNode.parentNode.innerHTML;
+previewNode.parentNode.removeChild(previewNode);
+
+var myDropzone = new Dropzone(id, { // Make the whole body a dropzone
+    url: "{{ url('api/upload_img_product/'.$pro_id) }}", // Set the url for your upload script location
+    parallelUploads: 10,
+    acceptedFiles: "image/*",
+    previewTemplate: previewTemplate,
+    maxFilesize: 10, // Max filesize in MB
+    autoQueue: false, // Make sure the files aren't queued until manually added
+    previewsContainer: id + " .dropzone-items", // Define the container to display the previews
+    clickable: id + " .dropzone-select", // Define the element that should be used as click trigger to select files.
+    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+});
+
+myDropzone.on("addedfile", function (file) {
+    // Hookup the start button
+    file.previewElement.querySelector(id + " .dropzone-start").onclick = function () { myDropzone.enqueueFile(file); };
+    const dropzoneItems = dropzone.querySelectorAll('.dropzone-item');
+    dropzoneItems.forEach(dropzoneItem => {
+        dropzoneItem.style.display = '';
+    });
+    dropzone.querySelector('.dropzone-upload').style.display = "inline-block";
+    dropzone.querySelector('.dropzone-remove-all').style.display = "inline-block";
+});
+
+// Update the total progress bar
+myDropzone.on("totaluploadprogress", function (progress) {
+    const progressBars = dropzone.querySelectorAll('.progress-bar');
+    progressBars.forEach(progressBar => {
+        progressBar.style.width = progress + "%";
+    });
+});
+
+myDropzone.on("sending", function (file) {
+    // Show the total progress bar when upload starts
+    const progressBars = dropzone.querySelectorAll('.progress-bar');
+    progressBars.forEach(progressBar => {
+        progressBar.style.opacity = "1";
+    });
+    // And disable the start button
+    file.previewElement.querySelector(id + " .dropzone-start").setAttribute("disabled", "disabled");
+});
+
+// Hide the total progress bar when nothing's uploading anymore
+myDropzone.on("complete", function (progress) {
+    const progressBars = dropzone.querySelectorAll('.dz-complete');
+
+    setTimeout(function () {
+        progressBars.forEach(progressBar => {
+            progressBar.querySelector('.progress-bar').style.opacity = "0";
+            progressBar.querySelector('.progress').style.opacity = "0";
+            progressBar.querySelector('.dropzone-start').style.opacity = "0";
+        });
+    }, 300);
+});
+
+// Setup the buttons for all transfers
+dropzone.querySelector(".dropzone-upload").addEventListener('click', function () {
+    myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+});
+
+// Setup the button for remove all files
+dropzone.querySelector(".dropzone-remove-all").addEventListener('click', function () {
+    dropzone.querySelector('.dropzone-upload').style.display = "none";
+    dropzone.querySelector('.dropzone-remove-all').style.display = "none";
+    myDropzone.removeAllFiles(true);
+});
+
+// On all files completed upload
+myDropzone.on("queuecomplete", function (progress) {
+    const uploadIcons = dropzone.querySelectorAll('.dropzone-upload');
+    uploadIcons.forEach(uploadIcon => {
+        uploadIcon.style.display = "none";
+
+    // Toggle toast to show --- more info: https://getbootstrap.com/docs/5.1/components/toasts/#show
+    toast.show();
+
+    setTimeout(function() {
+        location.reload();
+    }, 3000);
+
+    });
+});
+
+// On all files removed
+myDropzone.on("removedfile", function (file) {
+    if (myDropzone.files.length < 1) {
+        dropzone.querySelector('.dropzone-upload').style.display = "none";
+        dropzone.querySelector('.dropzone-remove-all').style.display = "none";
+    }
+});
+
 </script>
 @stop('scripts')
