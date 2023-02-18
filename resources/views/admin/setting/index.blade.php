@@ -98,17 +98,30 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">เบอร์ติดต่อ</label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">เบอร์ติดต่อ 1</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="phone" class="form-control form-control-lg form-control-solid" placeholder="www.figma.com" value="{{ $objs->phone }}">
+                                        <input type="text" name="phone" class="form-control form-control-lg form-control-solid" placeholder="08xxxxxx" value="{{ $objs->phone }}">
                                     
                                         @if ($errors->has('phone'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอก เบอร์ติดต่อ </div>
                                             </div>
                                         @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">เบอร์ติดต่อ 2</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="phone2" class="form-control form-control-lg form-control-solid" placeholder="08xxxxxx" value="{{ $objs->banner_point }}">
+                                    
+                                        
                                     </div>
                                     <!--end::Col-->
                                 </div>

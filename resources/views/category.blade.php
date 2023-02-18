@@ -30,14 +30,14 @@
 <div class="ps-page--shop" id="shop-sidebar">
         <div class="container">
 
-            <div class="d-flex justify-content-between mt-15 hide-mobile">
+            <div class="d-flex justify-content-center mt-15 hide-mobile">
 
                 @if(get_category())
                     @foreach(get_category() as $u)
                     <a href="{{ url('category?id='.$u->id) }}">
                         <div class="text-center porduct-top-list">
                             <img src="{{ url('img/category/'.$u->icons) }}" height="22" width="22"><br>
-                            {{ $u->cat_name }}
+                            {{ $u->sub_name }}
                         </div>
                     </a>
                     @endforeach
@@ -60,67 +60,50 @@
                         </a>
                         <br>
                         <ul class="ps-list--categories">
-                            @if(get_category())
-                                @foreach(get_category() as $u)
+                            
+
+                            @if(get_data_category())
+                            @foreach(get_data_category() as $u)
+                            <li class="current-menu-item menu-item-has-children"> 
+                                <a href="#" class="active">{{ $u->cat_name }}</a> 
+                                <span class="sub-toggle">
+                                    <i class="fa fa-angle-down"></i>
+                                </span>
+                                <ul class="sub-menu" style="display: block;">
+                                    @if($u->option)
+                                    @foreach($u->option as $j)
                                     <li class="current-menu-item ">
-                                        <a href="{{ url('category?id='.$u->id) }}">{{ $u->cat_name }}</a>
+                                        <a href="{{ url('category?id='.$j->id) }}">{{ $j->sub_name }}</a>
                                     </li>
-                                @endforeach
+                                    @endforeach
+                                    @endif
+                                    
+                                </ul>
+                            </li>
+                            @endforeach
                             @endif
                             
                         </ul>
+
+
+                        
                     </aside>
 
-                    {{-- <aside class="widget widget_shop widget_shop_bg">
+                    <aside class="widget widget_shop widget_shop_bg">
                         <h4 class="widget-title mt-10 mb-1">ค้นหาจากแบรนด์สินค้า </h4>
-                        <figure class="ps-custom-scrollbar" data-height="250">
+                        <figure class="ps-custom-scrollbar" data-height="250" id="result_check">
+                            @if(get_brand())
+                            @foreach(get_brand() as $u)
                             <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-1" name="brand" />
-                                <label for="m-brand-1">Adidas (3)</label>
+                                <input class="form-control" type="checkbox" id="m-brand-{{ $u->id }}" name="brand" data-id="{{ $u->id }}"/>
+                                <label for="m-brand-{{ $u->id }}">{{ $u->name }} ({{ $u->option }})</label>
                             </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-2" name="brand" />
-                                <label for="m-brand-2">Amcrest (1)</label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-3" name="brand" />
-                                <label for="m-brand-3">Apple (2)</label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-4" name="brand" />
-                                <label for="m-brand-4">Asus (19)</label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-5" name="brand" />
-                                <label for="m-brand-5">Baxtex (20)</label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-6" name="brand" />
-                                <label for="m-brand-6">Adidas (11)</label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-7" name="brand" />
-                                <label for="m-brand-7">Casio (9)</label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-8" name="brand" />
-                                <label for="m-brand-8">Electrolux (0)</label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-9" name="brand" />
-                                <label for="m-brand-9">Gallaxy (0)</label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-10" name="brand" />
-                                <label for="m-brand-10">Samsung (0)</label>
-                            </div>
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="brand-11" name="brand" />
-                                <label for="brand-11">Sony (0)</label>
-                            </div>
+                            @endforeach
+                            @endif
+                            
                         </figure>
                         
-                    </aside> --}}
+                    </aside>
                 </div>
                 <div class="ps-layout__right">
                     <div class="ps-shopping ps-tab-root">
@@ -182,64 +165,44 @@
             </a>
             <br>
             <ul class="ps-list--categories">
-                @if(get_category())
-                                @foreach(get_category() as $u)
+                
+
+
+                            @if(get_data_category())
+                            @foreach(get_data_category() as $u)
+                            <li class="current-menu-item menu-item-has-children"> 
+                                <a href="#" class="active">{{ $u->cat_name }}</a> 
+                                <span class="sub-toggle">
+                                    <i class="fa fa-angle-down"></i>
+                                </span>
+                                <ul class="sub-menu" style="display: block;">
+                                    @if($u->option)
+                                    @foreach($u->option as $j)
                                     <li class="current-menu-item ">
-                                        <a href="{{ url('category?id='.$u->id) }}">{{ $u->cat_name }}</a>
+                                        <a href="{{ url('category?id='.$j->id) }}">{{ $j->sub_name }}</a>
                                     </li>
-                                @endforeach
+                                    @endforeach
+                                    @endif
+                                    
+                                </ul>
+                            </li>
+                            @endforeach
                             @endif
             </ul>
         </aside>
-        {{-- <aside class="widget widget_shop widget_shop_bg">
-            <h4 class="widget-title mt-10 mb-1">Expanded Filters</h4>
-            <figure class="ps-custom-scrollbar" data-height="250">
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-1" name="brand">
-                    <label for="brand-1">Adidas (3)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-2" name="brand">
-                    <label for="brand-2">Amcrest (1)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-3" name="brand">
-                    <label for="brand-3">Apple (2)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-4" name="brand">
-                    <label for="brand-4">Asus (19)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-5" name="brand">
-                    <label for="brand-5">Baxtex (20)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-6" name="brand">
-                    <label for="brand-6">Adidas (11)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-7" name="brand">
-                    <label for="brand-7">Casio (9)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-8" name="brand">
-                    <label for="brand-8">Electrolux (0)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-9" name="brand">
-                    <label for="brand-9">Gallaxy (0)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-10" name="brand">
-                    <label for="brand-10">Samsung (0)</label>
-                </div>
-                <div class="ps-checkbox">
-                    <input class="form-control" type="checkbox" id="brand-11" name="brand">
-                    <label for="brand-11">Sony (0)</label>
-                </div>
+        <aside class="widget widget_shop widget_shop_bg">
+            <h4 class="widget-title mt-10 mb-1">ค้นหาจากแบรนด์สินค้า</h4>
+            <figure class="ps-custom-scrollbar" data-height="250" id="result_check2">
+                @if(get_brand())
+                    @foreach(get_brand() as $u)
+                        <div class="ps-checkbox">
+                            <input class="form-control" type="checkbox" id="m-brand-{{ $u->id }}x" name="brand" data-id="{{ $u->id }}"/>
+                            <label for="m-brand-{{ $u->id }}x">{{ $u->name }} ({{ $u->option }})</label>
+                        </div>
+                    @endforeach
+                @endif
             </figure>
-        </aside> --}}
+        </aside>
     </div>
 </div>
 
@@ -247,6 +210,18 @@
 
 
 <script>
+
+    $("#result_check input").click(function() {
+        $('#data-wrapper').html('');
+        
+        infinteLoadMore(1);
+    }); 
+    $("#result_check2 input").click(function() {
+        $('#data-wrapper').html('');
+        
+        infinteLoadMore(1);
+    }); 
+
     var ENDPOINT = "{{ url('/') }}";
     var page = 1;
     infinteLoadMore(page);
@@ -259,9 +234,30 @@
     function infinteLoadMore(page) {
 
         var category = {{ $category_id }}
+        var data_brand = '';
+        var receiptNos2 = $("#result_check input:checkbox:checked").map(function () {
+                console.log('<---', $(this).data('id') )
+                return $(this).data('id')
+                }).get();
 
+                var receiptNos3 = $("#result_check2 input:checkbox:checked").map(function () {
+                console.log('<---', $(this).data('id') )
+                return $(this).data('id')
+                }).get();
+
+                if(receiptNos2 == '' && receiptNos3 == ''){
+                    data_brand = '';
+                }else if(receiptNos2 !== '' && receiptNos3 == ''){
+                    data_brand = receiptNos2;
+                }else if(receiptNos2 == '' && receiptNos3 !== ''){
+                    data_brand = receiptNos3;
+                }else{
+
+                }
+
+                console.log('--->', receiptNos2)
         $.ajax({
-                url: ENDPOINT + "/category_find?category="+ category +"&page=" + page,
+                url: ENDPOINT + "/category_find?category="+ category +"&page=" + page + "&brand=" + data_brand,
                 datatype: "html",
                 type: "get",
                 beforeSend: function () {
@@ -269,6 +265,7 @@
                 }
             })
             .done(function (response) {
+                
                 if (response.length == 0) {
                     $('.auto-load').html("We don't have more data to display :(");
                     return;

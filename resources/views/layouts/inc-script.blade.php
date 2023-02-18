@@ -30,6 +30,9 @@ $('.img_ro').hover(function(){
   $(this).removeClass("active_div", 3000);
 });
 
+
+
+
 const shareButton = document.querySelectorAll(".bottomRight img")
 
 const shareButton_list = document.querySelectorAll(".menu-sh .submenu li")

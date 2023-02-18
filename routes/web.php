@@ -45,6 +45,8 @@ Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
 Route::get('/blog', [App\Http\Controllers\HomeController::class, 'blog']);
 Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'getArticles']);
 
+Route::get('/getModal', [App\Http\Controllers\HomeController::class, 'getModal']);
+
 Route::get('/blog_detail/{id}', [App\Http\Controllers\HomeController::class, 'blog_detail']);
 
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);

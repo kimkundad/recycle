@@ -81,13 +81,28 @@
         <div class="ps-panel__content">
             <ul class="menu--mobile">
 
-                @if(get_category())
-                    @foreach(get_category() as $u)
-                        <li class="menu-item-has-children has-mega-menu">
-                            <a href="{{ url('category?id='.$u->id) }}">{{ $u->cat_name }}</a>
-                        </li>
-                    @endforeach
-                @endif
+                
+
+
+                @if(get_data_category())
+                            @foreach(get_data_category() as $u)
+                            <li class="current-menu-item menu-item-has-children"> 
+                                <a href="#" class="active">{{ $u->cat_name }}</a> 
+                                <span class="sub-toggle">
+                                </span>
+                                <ul class="sub-menu" >
+                                    @if($u->option)
+                                    @foreach($u->option as $j)
+                                    <li class="current-menu-item ">
+                                        <a href="{{ url('category?id='.$j->id) }}">{{ $j->sub_name }}</a>
+                                    </li>
+                                    @endforeach
+                                    @endif
+                                    
+                                </ul>
+                            </li>
+                            @endforeach
+                            @endif
                
                 {{-- <li class="menu-item-has-children has-mega-menu"><a href="shop-default">สินค้า 1</a><span class="sub-toggle"></span>
                     <div class="mega-menu">
@@ -330,6 +345,35 @@
                             <img src="{{ url('img/message 1.svg') }}" >
                             <h4 class="text-green fs-22px">ส่งข้อความสำเร็จ</h4>
                             <p>เจ้าหน้าที่ได้รับข้อความของท่าน และจะรีบดำเนินการโดยทันที โปรดรอการติดต่อกลับผ่านช่องทางที่ท่านระบุไว้</p>
+                            <br>
+                            <a class="btn-green-b-pop btn_card_in btn-box mg-5 text-center" data-dismiss="modal" >ปิด</a>
+                       </div>
+                        
+                    </div>
+                </article>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade " id="kt_modal_4_2" tabindex="-1" role="dialog" aria-labelledby="kt_modal_4_2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            
+            <div class="modal-content p-10" style="padding:20px">
+                <div class="d-flex justify-content-end">
+                    <span class="modal-close" data-dismiss="modal"><img src="{{ url('img/close_green.svg') }}" class="h-30px"></span>
+                </div>
+                
+                <article class="ps-product--detailx ps-product--fullwidth ps-product--quickview">
+                    <div class="ps-product__header p-20" >
+                        
+                       <div class="text-center">
+                            
+                            <div class="modal-content-img">
+
+                            </div>
+
+                            
                             <br>
                             <a class="btn-green-b-pop btn_card_in btn-box mg-5 text-center" data-dismiss="modal" >ปิด</a>
                        </div>

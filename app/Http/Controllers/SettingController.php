@@ -57,6 +57,7 @@ class SettingController extends Controller
             $objs->phone = $request['phone'];
             $objs->email = $request['email'];
             $objs->banner_his = $request['fax'];
+            $objs->banner_point = $request['phone2'];
             $objs->facebook_image = $filename;
             $objs->save();
 
@@ -74,6 +75,7 @@ class SettingController extends Controller
             $objs->phone = $request['phone'];
             $objs->email = $request['email'];
             $objs->banner_his = $request['fax'];
+            $objs->banner_point = $request['phone2'];
             $objs->save();
 
           }

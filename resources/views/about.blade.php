@@ -140,37 +140,43 @@
                 </div>
             </div>
         </div>
-        @if(count($cer) === 5 )
+        @if(count($cer) === 6 )
         <div class="img-portfolio">
             <div class="dg-wrapper ps-section__content">
-                <div class="text-center img_ro img_rotation1">
+                <div class="text-center img_ro img_rotation1" data-image="{{ $cer[0]->id }}">
                     <div class="scale-100">
                         <img src="{{ url('img/certificate/'.$cer[0]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[0]->name }}</h4>
                     </div>
                 </div>
-                <div class="text-center img_ro img_rotation2">
+                <div class="text-center img_ro img_rotation2" data-image="{{ $cer[1]->id }}">
                     <div class="scale-100">
                         <img src="{{ url('img/certificate/'.$cer[1]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[1]->name }}</h4>
                 </div>
                 </div>
-                <div class="text-center img_ro img_rotation3">
+                <div class="text-center img_ro img_rotation3" data-image="{{ $cer[2]->id }}">
                     <div class="scale-100">
                         <img src="{{ url('img/certificate/'.$cer[2]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[2]->name }}</h4>
                 </div>
                 </div>
-                <div class="text-center img_ro img_rotation4">
+                <div class="text-center img_ro img_rotation4" data-image="{{ $cer[3]->id }}">
                     <div class="scale-100 text-center">
                         <img src="{{ url('img/certificate/'.$cer[3]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[3]->name }}</h4>
                 </div>
                 </div>
-                <div class="text-center img_ro img_rotation5">
+                <div class="text-center img_ro img_rotation5" data-image="{{ $cer[4]->id }}">
                     <div class="scale-100 text-center">
                         <img src="{{ url('img/certificate/'.$cer[4]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[4]->name }}</h4>
+                    </div>
+                </div>
+                <div class="text-center img_ro img_rotation6" data-image="{{ $cer[5]->id }}">
+                    <div class="scale-100 text-center">
+                        <img src="{{ url('img/certificate/'.$cer[5]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[5]->name }}</h4>
                     </div>
                 </div>
             </div>
@@ -322,4 +328,36 @@
 @endsection
 
 @section('scripts')
+
+
+<script>
+
+    $(document).on('click','.img_ro',function (event) {
+          event.preventDefault();
+          
+          var img = $(this).data('image');
+          var ENDPOINT = "{{ url('/') }}";
+          $.ajax({
+                    url: ENDPOINT + "/getModal?data_id=" + img,
+                    datatype: "html",
+                    type: "get",
+                    beforeSend: function () {
+                        $('.modal-content-img').html('');
+                    }
+                })
+                .done(function (response) {
+                    $('.modal-content-img').html(response);
+                        $('#kt_modal_4_2').modal("show");
+                })
+                .fail(function (jqXHR, ajaxOptions, thrownError) {
+                    console.log('Server error occured');
+                });
+                
+          getModal
+          console.log('img : ', img)
+    
+    });
+    
+    </script>
+    
 @stop('scripts')

@@ -141,7 +141,7 @@
 
                     @isset($pro)
                         @foreach($pro as $u)
-                            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                 <div class="ps-product">
                                     <div class="ps-product__thumbnail"><a href="{{ url('product_detail/'.$u->id_q) }}"><img src="{{ url('img/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
                                     </div>
@@ -198,7 +198,7 @@
         </div>
         <div class="ps-section__content">
             <div class="row">
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+            {{-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="card-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
@@ -211,13 +211,27 @@
                         </div>
                     </div>
                 </div>
+            </div> --}}
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class=" card-out-green "> 
+                    <div class="card-green-content">
+                        <div class="d-flex justify-content-between">
+                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                        </div>
+                        <div class="ps-block__content_out-green pt-20">
+                            <h3>รับซิ้อวัสดุรีไซเคิล/ไม่ใช้แล้ว</h3>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>รับประมูลงานเหล็ก โครงสร้าง ฯลฯ</h3>
@@ -231,7 +245,7 @@
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>ให้คำปรึกษา</h3>
@@ -245,7 +259,7 @@
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>บริการทำลายเอกสาร</h3>
@@ -259,7 +273,7 @@
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>บริการจัดเก็บของเสียอุตสาหกรรม</h3>
@@ -273,7 +287,7 @@
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>บริการพิเศษอื่นๆ</h3>
@@ -449,37 +463,43 @@
             </div>
         </div>
 
-        @if(count($cer) === 5 )
+        @if(count($cer) === 6 )
         <div class="img-portfolio">
             <div class="dg-wrapper ps-section__content">
-                <div class="text-center img_ro img_rotation1">
+                <div class="text-center img_ro img_rotation1" data-image="{{ $cer[0]->id }}">
                     <div class="scale-100">
                         <img src="{{ url('img/certificate/'.$cer[0]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[0]->name }}</h4>
                     </div>
                 </div>
-                <div class="text-center img_ro img_rotation2">
+                <div class="text-center img_ro img_rotation2" data-image="{{ $cer[1]->id }}">
                     <div class="scale-100">
                         <img src="{{ url('img/certificate/'.$cer[1]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[1]->name }}</h4>
                 </div>
                 </div>
-                <div class="text-center img_ro img_rotation3">
+                <div class="text-center img_ro img_rotation3" data-image="{{ $cer[2]->id }}">
                     <div class="scale-100">
                         <img src="{{ url('img/certificate/'.$cer[2]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[2]->name }}</h4>
                 </div>
                 </div>
-                <div class="text-center img_ro img_rotation4">
+                <div class="text-center img_ro img_rotation4" data-image="{{ $cer[3]->id }}">
                     <div class="scale-100 text-center">
                         <img src="{{ url('img/certificate/'.$cer[3]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[3]->name }}</h4>
                 </div>
                 </div>
-                <div class="text-center img_ro img_rotation5">
+                <div class="text-center img_ro img_rotation5" data-image="{{ $cer[4]->id }}">
                     <div class="scale-100 text-center">
                         <img src="{{ url('img/certificate/'.$cer[4]->image) }}" >
                         <h4 class="text-gray-400 fs-16px">{{ $cer[4]->name }}</h4>
+                    </div>
+                </div>
+                <div class="text-center img_ro img_rotation6" data-image="{{ $cer[5]->id }}">
+                    <div class="scale-100 text-center">
+                        <img src="{{ url('img/certificate/'.$cer[5]->image) }}" >
+                        <h4 class="text-gray-400 fs-16px">{{ $cer[5]->name }}</h4>
                     </div>
                 </div>
             </div>
@@ -535,4 +555,35 @@
 @endsection
 
 @section('scripts')
+
+<script>
+
+$(document).on('click','.img_ro',function (event) {
+      event.preventDefault();
+      
+      var img = $(this).data('image');
+      var ENDPOINT = "{{ url('/') }}";
+      $.ajax({
+                url: ENDPOINT + "/getModal?data_id=" + img,
+                datatype: "html",
+                type: "get",
+                beforeSend: function () {
+                    $('.modal-content-img').html('');
+                }
+            })
+            .done(function (response) {
+                $('.modal-content-img').html(response);
+                    $('#kt_modal_4_2').modal("show");
+            })
+            .fail(function (jqXHR, ajaxOptions, thrownError) {
+                console.log('Server error occured');
+            });
+            
+      getModal
+      console.log('img : ', img)
+
+});
+
+</script>
+
 @stop('scripts')

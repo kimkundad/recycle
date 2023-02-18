@@ -305,7 +305,7 @@
                     
                     @isset($pro)
                         @foreach($pro as $u)
-                            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                 <div class="ps-product">
                                     <div class="ps-product__thumbnail"><a href="{{ url('product_detail/'.$u->id_q) }}"><img src="{{ url('img/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
                                     </div>

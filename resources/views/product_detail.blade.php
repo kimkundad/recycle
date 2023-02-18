@@ -20,6 +20,37 @@
                     <div class="ps-product--detail ps-product--fullwidth">
                         <div class="ps-product__header">
                             <div class="ps-product__thumbnail" data-vertical="true">
+
+                                @if(count($img) > 0 )
+
+                                <figure>
+                                    <div class="ps-wrapper">
+                                        <div class="ps-product__gallery" data-arrow="true">
+                                            @isset($img)
+                                            @foreach($img as $u)
+                                            <div class="item">
+                                                <a href="{{ url('img/cusimage/'.$u->image) }}">
+                                                    <img src="{{ url('img/cusimage/'.$u->image) }}" alt="{{ $objs->name_pro }}">
+                                                </a>
+                                            </div>
+                                            @endforeach
+                                            @endisset
+                                        </div>
+                                    </div>
+                                </figure>
+                                <div class="ps-product__variants" data-item="4" data-md="4" data-sm="4" data-arrow="false">
+                                    @isset($img)
+                                        @foreach($img as $u)
+                                            <div class="item">
+                                                <img src="{{ url('img/cusimage/'.$u->image) }}" alt="{{ $objs->name_pro }}">
+                                            </div>
+                                        @endforeach
+                                    @endisset
+                                </div>
+
+                                @else
+                                <img src="{{ url('img/product/'.$objs->image_pro) }}" alt="{{ $objs->name_pro }}" />
+                                @endif
                                 {{-- <figure>
                                     <div class="ps-wrapper">
                                         <div class="ps-product__gallery" data-arrow="true">
@@ -36,7 +67,7 @@
                                     <div class="item"><img src="{{ url('img/product/image 38.png') }}" alt=""></div>
                                     <div class="item"><img src="{{ url('img/product/image 39.png') }}" alt=""></div>
                                 </div> --}}
-                                <img src="{{ url('img/product/'.$objs->image_pro) }}" alt="{{ $objs->name_pro }}" />
+                                
                             </div>
                             <div class="ps-product__info">
                                 <h1>{{ $objs->name_pro }}</h1>
@@ -61,7 +92,7 @@
                                         {{ $objs->title_pro }}
                                     </p>
                                     <div class="ps-product__specification">
-                                        <p class="mt-10px"><strong>Brand:</strong> {{ $objs->brand }}</p>
+                                        <p class="mt-10px"><strong>Brand:</strong> {{ $brand->name }}</p>
                                         <p class="mt-10px"><strong>SKU:</strong> {{ $objs->sku }}</p>
                                         <p class="mt-10px"><strong>Net weight:</strong> {{ $objs->weight }}</p>
                                         <p class="mt-10px"><strong>Condition:</strong> {{ $objs->condition }}</p>
@@ -121,7 +152,7 @@
                             
                             @isset($pro)
                                 @foreach($pro as $u)
-                                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                         <div class="ps-product">
                                             <div class="ps-product__thumbnail"><a href="{{ url('product_detail/'.$u->id_q) }}"><img src="{{ url('img/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
                                             </div>

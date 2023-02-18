@@ -4,12 +4,21 @@ use Illuminate\Support\Facades\DB;
 use App\Models\setting;
 use App\Models\type_contact;
 use App\Models\category;
+use App\Models\subcat;
+use App\Models\brand;
+use App\Models\product;
 
 
 function get_phone(){
     $id = 1;
     $objs = setting::find($id);
     return $objs->phone;
+}
+
+function get_phone2(){
+    $id = 1;
+    $objs = setting::find($id);
+    return $objs->banner_point;
 }
 
 function get_line(){
@@ -42,7 +51,33 @@ function type_contact(){
 }
 
 function get_category(){
+    $objs = subcat::where('status', 1)->get();
+    return $objs;
+}
+
+function get_brand(){
+    $objs = brand::where('status', 1)->get();
+
+    if($objs){
+        foreach($objs as $u ){
+            $sub = product::where('sub_cat_id', $u->id)->where('status', 1)->count();
+            $u->option = $sub;
+        }
+    }
+
+    return $objs;
+}
+
+function get_data_category(){
+
     $objs = category::where('status', 1)->get();
+    if($objs){
+        foreach($objs as $u ){
+            $sub = subcat::where('cat_id', $u->id)->where('status', 1)->get();
+            $u->option = $sub;
+        }
+    }
+    
     return $objs;
 }
 
