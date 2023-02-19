@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+{{ $objs->title }} - wpnrayong
+@stop
+
 @section('stylesheet')
 @stop('stylesheet')
 

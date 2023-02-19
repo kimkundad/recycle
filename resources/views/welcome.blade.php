@@ -1,5 +1,10 @@
 @extends('layouts.template')
 
+
+@section('title')
+วงษ์พาณิชย์รีไซเคิล ระยอง - wpnrayong
+@stop
+
 @section('stylesheet')
 @stop('stylesheet')
 

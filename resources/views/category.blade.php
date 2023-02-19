@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+หมวดหมู่และสินค้า วงษ์พาณิชย์รีไซเคิล ระยอง - wpnrayong
+@stop
+
 @section('stylesheet')
 
 <style>

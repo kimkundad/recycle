@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+เกี่ยวกับวงษ์พาณิชย์ - wpnrayong
+@stop
+
 @section('stylesheet')
 @stop('stylesheet')
 

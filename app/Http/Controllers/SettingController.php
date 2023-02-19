@@ -33,16 +33,21 @@ class SettingController extends Controller
 
             if($img->facebook_image != null){
 
+              if($img->facebook_image !== ''){
+
                 $file_path = 'media/'.$img->facebook_image;
                 unlink($file_path);
+
+              }
+                
     
                 $path = 'media/';
-                $filename = time()."-".$image->getClientOriginalName();
+                $filename = time().'.'.$image->getClientOriginalExtension();
                 $image->move($path, $filename);
     
               }else{
                 $path = 'media/';
-                $filename = time()."-".$image->getClientOriginalName();
+                $filename = time().'.'.$image->getClientOriginalExtension();
                 $image->move($path, $filename);
               }
 

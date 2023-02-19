@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+ติดต่อเรา - wpnrayong
+@stop
+
 @section('stylesheet')
 @stop('stylesheet')
 

@@ -15,6 +15,24 @@ function get_phone(){
     return $objs->phone;
 }
 
+function get_title_facebook(){
+    $id = 1;
+    $objs = setting::find($id);
+    return $objs->facebook_title;
+}
+
+function get_facebook_detail(){
+    $id = 1;
+    $objs = setting::find($id);
+    return $objs->facebook_detail;
+}
+
+function get_facebook_img(){
+    $id = 1;
+    $objs = setting::find($id);
+    return url('media/').$objs->facebook_image;
+}
+
 function get_phone2(){
     $id = 1;
     $objs = setting::find($id);

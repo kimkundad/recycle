@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+กิจกรรม & ประชาสัมพันธ์ วงษ์พาณิชย์ - wpnrayong
+@stop
+
 @section('stylesheet')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @stop('stylesheet')
