@@ -110,7 +110,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="text" name="sub_name" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->sub_name }}">
-                                        <input type="hidden" name="cat_id" value="{{ $cat->id }}">
+                                        <input type="hidden" name="cat_id" value="{{ $cobjst->cat_id }}">
                                         @if ($errors->has('sub_name'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อซับหมวดหมู่สินค้า</div>

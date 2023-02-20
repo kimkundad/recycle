@@ -128,9 +128,10 @@ class SubCatController extends Controller
     public function edit($id)
     {
         //
-        $cat = category::where('id', $id)->first();
-        $data['cat'] = $cat;
+        
         $objs = subcat::find($id);
+        $cat = category::where('id', $objs->cat_id)->first();
+        $data['cat'] = $cat;
         $data['url'] = url('admin/post_subcat/'.$id);
         $data['method'] = "post";
         $data['objs'] = $objs;
