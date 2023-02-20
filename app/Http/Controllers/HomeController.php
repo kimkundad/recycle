@@ -140,7 +140,7 @@ class HomeController extends Controller
     //  $data_b = explode(",",$brand);
 
       $data_b = ($brand != '')?explode(",",$brand):0;
-     // dd(($data_b)); ->whereIn('id', $order)
+      dd(($data_b));
 
       if($cat == 0){
 
