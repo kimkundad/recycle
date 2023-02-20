@@ -135,7 +135,7 @@ class HomeController extends Controller
 
     public function getCategory(Request $request)
     {
-      $cat = $request['category'];
+      $cat = $request['id'];
       $brand = $request['brand'];
     //  $data_b = explode(",",$brand);
 
