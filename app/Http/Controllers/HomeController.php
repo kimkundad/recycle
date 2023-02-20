@@ -140,7 +140,7 @@ class HomeController extends Controller
     //  $data_b = explode(",",$brand);
 
       $data_b = ($brand != '')?explode(",",$brand):0;
-      dd(($data_b));
+      
 
       if($cat == 0){
 
@@ -148,6 +148,7 @@ class HomeController extends Controller
           $results = product::orderBy('id')->paginate(12);
         }else{
           $results = product::whereIn('brand', $data_b)->orderBy('id')->paginate(12);
+          dd(($results));
         }
         
       }else{
