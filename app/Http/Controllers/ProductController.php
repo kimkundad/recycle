@@ -258,6 +258,8 @@ class ProductController extends Controller
 
         $sub = subcat::find($request['sub_cat_id']);
 
+        dd($sub);
+
         $image = $request->file('image_pro');
 
         $status = 0;
