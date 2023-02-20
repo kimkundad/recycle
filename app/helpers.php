@@ -78,7 +78,7 @@ function get_brand(){
 
     if($objs){
         foreach($objs as $u ){
-            $sub = product::where('sub_cat_id', $u->id)->where('status', 1)->count();
+            $sub = product::where('brand', $u->id)->where('status', 1)->count();
             $u->option = $sub;
         }
     }
