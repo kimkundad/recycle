@@ -148,7 +148,7 @@ class HomeController extends Controller
           $results = product::orderBy('id')->paginate(12);
         }else{
           $results = product::whereIn('brand', $data_b)->orderBy('id')->paginate(12);
-          dd(($results));
+       
         }
         
       }else{
