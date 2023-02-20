@@ -115,7 +115,7 @@
                         <div class="ps-product ps-product--inner">
                             <a href="{{ url('category?id='.$u->id) }}" class="text-center">
                             <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
-                            <p>{{ $u->sub_name }}</p>
+                            <p style="margin-top:10px">{{ $u->sub_name }}</p>
                             </a>
                         </div>
                     @endforeach
