@@ -258,8 +258,6 @@ class ProductController extends Controller
 
         $sub = subcat::find($request['sub_cat_id']);
 
-        dd($sub);
-
         $image = $request->file('image_pro');
 
         $status = 0;
@@ -287,6 +285,8 @@ class ProductController extends Controller
            $objs->weight = $request['weight'];
            $objs->status = $status;
            $objs->save();
+
+           dd($objs);
 
             }else{
 
