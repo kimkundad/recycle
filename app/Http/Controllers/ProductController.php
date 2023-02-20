@@ -26,9 +26,9 @@ class ProductController extends Controller
             'products.*',
             'products.id as id_q',
             'products.status as status1',
-            'categories.*'
+            'subcats.*'
             )
-            ->leftjoin('categories', 'categories.id',  'products.cat_id')
+            ->leftjoin('subcats', 'subcats.id',  'products.sub_cat_id')
             ->paginate(15);
 
             $objs->setPath('');
@@ -44,9 +44,9 @@ class ProductController extends Controller
             'products.*',
             'products.id as id_q',
             'products.status as status1',
-            'categories.*'
+            'subcats.*'
             )
-            ->leftjoin('categories', 'categories.id',  'products.cat_id')
+            ->leftjoin('subcats', 'subcats.id',  'products.sub_cat_id')
             ->where('products.type_pro', 2)
             ->paginate(15);
 
@@ -258,6 +258,7 @@ class ProductController extends Controller
 
         $sub = subcat::find($request['sub_cat_id']);
 
+
         $image = $request->file('image_pro');
 
         $status = 0;
@@ -286,7 +287,7 @@ class ProductController extends Controller
            $objs->status = $status;
            $objs->save();
 
-           dd($objs);
+   
 
             }else{
 
