@@ -148,15 +148,14 @@ class HomeController extends Controller
           $results = product::orderBy('id')->paginate(12);
         }else{
           $results = product::whereIn('brand', $data_b)->orderBy('id')->paginate(12);
-       
         }
         
       }else{
 
         if($data_b == 0){
-          $results = product::where('cat_id', $cat)->orderBy('id')->paginate(12);
+          $results = product::where('sub_cat_id', $cat)->orderBy('id')->paginate(12);
         }else{
-          $results = product::where('cat_id', $cat)->whereIn('brand', $data_b)->orderBy('id')->paginate(12);
+          $results = product::where('sub_cat_id', $cat)->whereIn('brand', $data_b)->orderBy('id')->paginate(12);
         }
         
       }
