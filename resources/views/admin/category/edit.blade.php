@@ -208,7 +208,10 @@
                                                 <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $item->sub_name }}</a>
                                             </td>
                                             <td>
-                                                <img src="{{ url('img/category/'.$item->icons) }}" alt="">
+                                                <div class="symbol symbol-50px">
+                                                    <img src="{{ url('img/category/'.$item->icons) }}" alt="">
+                                                </div>
+                                                
                                             </td>
                                             <td>
                                                 <div class="form-check form-check-solid form-switch form-check-custom fv-row">
