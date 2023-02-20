@@ -10,8 +10,14 @@
                             <h5 class="pt-20">บริษัท วงษ์พาณิชย์ รีไซเคิล ระยอง จำกัด</h5>
                             <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 </p>
                             <div class="pt-20">
-                                <a class="ps-btn set-btn-inner-footer ps-btn--outline" href="tel:{{ get_phone() }}">
-                                    <img class="img-phone-footer" src="{{ url('img/icon/phone-call.png') }}"> {{ get_phone() }}
+                                <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone() }}">
+                                    <div class="d-flex">
+                                        <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> 
+                                        <div class="d-flex flex-column">
+                                            <div class="fs-14px">{{ get_phone() }}</div>
+                                            <div class="fs-14px mt--5px">{{ get_phone2() }}</div>
+                                        </div>
+                                    </div>
                                 </a>
                                 <a class="btn_green_heade_footer" href="mailto: {{ get_email() }}">
                                     <img class="img-icon-green_header_footer" src="{{ url('img/icon/mail.png') }}">

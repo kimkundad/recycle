@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+นโยบายส่วนบุคคล - wpnrayong
+@stop
+
 @section('stylesheet')
 @stop('stylesheet')
 

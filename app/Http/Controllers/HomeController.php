@@ -12,6 +12,7 @@ use App\Models\brand;
 use App\Models\certificate;
 use App\Models\news;
 use App\Models\alliance;
+use App\Models\product_image;
 
 
 class HomeController extends Controller
@@ -117,14 +118,46 @@ class HomeController extends Controller
         return view('blog');
     }  
 
+    public function getModal(Request $request){
+
+      $data_id = $request['data_id'];
+
+      $data = certificate::where('id', $data_id)->first();
+
+      $artilces = '';
+      $img = url('img/certificate/'.$data->image);
+        if ($request->ajax()) {
+          $artilces.='<img src="'.$img.'" class="img-fluid" style="width: 100%">';
+          return $artilces;
+        }
+
+    }
 
     public function getCategory(Request $request)
     {
       $cat = $request['category'];
+      $brand = $request['brand'];
+    //  $data_b = explode(",",$brand);
+
+      $data_b = ($brand != '')?explode(",",$brand):0;
+     // dd(($data_b)); ->whereIn('id', $order)
+
       if($cat == 0){
-        $results = product::orderBy('id')->paginate(12);
+
+        if($data_b == 0){
+          $results = product::orderBy('id')->paginate(12);
+        }else{
+          $results = product::whereIn('brand', $data_b)->orderBy('id')->paginate(12);
+        }
+        
       }else{
-        $results = product::where('cat_id', $cat)->orderBy('id')->paginate(12);
+
+        if($data_b == 0){
+          $results = product::where('cat_id', $cat)->orderBy('id')->paginate(12);
+        }else{
+          $results = product::whereIn('brand', $data_b)->where('cat_id', $cat)->orderBy('id')->paginate(12);
+        }
+        
       }
        
         $artilces = '';
@@ -141,7 +174,7 @@ class HomeController extends Controller
                   $price_text = '<p class="ps-product__price sale">฿'.number_format($u->amount-$discount, 2).' <del>฿'.number_format($u->amount, 2).' </del></p>';
                 }
 
-                $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10"><div class="ps-product"><div class="ps-product__thumbnail"><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+                $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail"><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
             }
             return $artilces;
         }
@@ -183,6 +216,9 @@ class HomeController extends Controller
 
     public function product_detail($id){
 
+      $img = product_image::where('product_id', $id)->get();
+      $data['img'] = $img;
+
       $pro = DB::table('products')->select(
         'products.*',
         'products.id as id_q',
@@ -205,6 +241,9 @@ class HomeController extends Controller
         ->leftjoin('categories', 'categories.id',  'products.cat_id')
         ->where('products.id', $id)
         ->first();
+
+        $brand = brand::where('id', $objs->brand)->first();
+        $data['brand'] = $brand;
 
       $data['objs'] = $objs;
       return view('product_detail', $data);

@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+กิจกรรม & ประชาสัมพันธ์ วงษ์พาณิชย์ - wpnrayong
+@stop
+
 @section('stylesheet')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @stop('stylesheet')
@@ -17,7 +21,7 @@
         </div>
         <div class="ps-blog__content">
 
-            @isset($objs)
+            @isset($objs[0])
             <div class="ps-post ps-post--horizontal">
                 <div class="ps-post__thumbnail">
                     <a class="ps-post__overlay" href="{{ url('blog_detail/'.$objs[0]->id) }}"></a>
@@ -55,10 +59,13 @@
 
 
             </div>
+
+            @if(count($objs) > 6)
             <div class="text-center mt-30">
                 <a class="green_btn_kim_out btn_card_in btn-box" href="#">ดูเพิ่มเติม</a>
             </div> 
             <br><br>
+            @endif
 
             <div class="auto-load text-center">
                 <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

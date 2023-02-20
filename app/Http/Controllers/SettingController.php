@@ -33,16 +33,21 @@ class SettingController extends Controller
 
             if($img->facebook_image != null){
 
+              if($img->facebook_image !== ''){
+
                 $file_path = 'media/'.$img->facebook_image;
                 unlink($file_path);
+
+              }
+                
     
                 $path = 'media/';
-                $filename = time()."-".$image->getClientOriginalName();
+                $filename = time().'.'.$image->getClientOriginalExtension();
                 $image->move($path, $filename);
     
               }else{
                 $path = 'media/';
-                $filename = time()."-".$image->getClientOriginalName();
+                $filename = time().'.'.$image->getClientOriginalExtension();
                 $image->move($path, $filename);
               }
 
@@ -57,6 +62,7 @@ class SettingController extends Controller
             $objs->phone = $request['phone'];
             $objs->email = $request['email'];
             $objs->banner_his = $request['fax'];
+            $objs->banner_point = $request['phone2'];
             $objs->facebook_image = $filename;
             $objs->save();
 
@@ -74,6 +80,7 @@ class SettingController extends Controller
             $objs->phone = $request['phone'];
             $objs->email = $request['email'];
             $objs->banner_his = $request['fax'];
+            $objs->banner_point = $request['phone2'];
             $objs->save();
 
           }

@@ -1,0 +1,1 @@
+<img src="{{ url('img/certificate/'.$image) }}" class="img-fluid" style="width: 100%">

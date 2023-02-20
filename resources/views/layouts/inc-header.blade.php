@@ -23,7 +23,13 @@
             <div class="header__right pt-10">
                 <div class="header__actions">
                     <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone() }}">
-                        <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> {{ get_phone() }}
+                        <div class="d-flex">
+                            <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> 
+                            <div class="d-flex flex-column">
+                                <div class="fs-14px">{{ get_phone() }}</div>
+                                <div class="fs-14px mt--5px">{{ get_phone2() }}</div>
+                            </div>
+                        </div>
                     </a>
                     <a class="header__extra btn_green_header" target="_blank" href="{{ get_line() }}">
                         <img class="img-icon-green_header" src="{{ url('img/icon/line.png') }}">
