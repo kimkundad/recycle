@@ -107,7 +107,7 @@
                                                 <span class="text-muted fw-semibold d-block fs-7">SKU {{ $item->sku }}</span>
                                             </td>
                                             <td>
-                                                {{ ($item->cat_name) }}
+                                                {{ ($item->sub_name) }}
                                             </td>
                                             <td>
                                                 {{ number_format($item->amount,2) }}
