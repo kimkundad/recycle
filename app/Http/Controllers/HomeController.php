@@ -135,7 +135,7 @@ class HomeController extends Controller
 
     public function getCategory(Request $request)
     {
-      $cat = $request['id'];
+      $cat = $request['category'];
       $brand = $request['brand'];
     //  $data_b = explode(",",$brand);
 
@@ -156,7 +156,7 @@ class HomeController extends Controller
         if($data_b == 0){
           $results = product::where('cat_id', $cat)->orderBy('id')->paginate(12);
         }else{
-          $results = product::whereIn('brand', $data_b)->where('cat_id', $cat)->orderBy('id')->paginate(12);
+          $results = product::where('cat_id', $cat)->whereIn('brand', $data_b)->orderBy('id')->paginate(12);
         }
         
       }
