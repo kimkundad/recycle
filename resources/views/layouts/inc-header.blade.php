@@ -11,7 +11,7 @@
                             <option value="0" selected="selected">หมวดหมู่ : ทั้งหมด</option>
                             @if(get_category())
                                 @foreach(get_category() as $u)
-                                    <option class="level-0" value="{{ $u->id }}">{{ $u->cat_name }}</option>
+                                    <option class="level-0" value="{{ $u->id }}">{{ $u->sub_name }}</option>
                                 @endforeach
                             @endif
                         </select>
