@@ -437,7 +437,7 @@
             data-owl-gap="30" 
             data-owl-nav="false" 
             data-owl-dots="false" 
-            data-owl-item="8" 
+            data-owl-item="6" 
             data-owl-item-xs="3" 
             data-owl-item-sm="3" 
             data-owl-item-md="4" 
