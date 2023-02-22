@@ -42,7 +42,11 @@
                             <li><a href="{{ url('/service') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
                             <li><a href="{{ url('/about') }}">รับรองและรางวัล</a></li>
                             <li><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
+                            @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">เข้าสู่ระบบ / Login</a></li>
+                            @else
+                            <li><a href="{{ url('/admin/dashboard') }}">เข้าสู่หลังบ้าน</a></li>
+                            @endif
                         </ul>
                     </aside>
                     <aside class="widget widget_footer">
