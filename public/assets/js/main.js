@@ -344,11 +344,11 @@
                     dataGap = el.data('owl-gap'),
                     dataNav = el.data('owl-nav'),
                     dataDots = el.data('owl-dots'),
-                    dataAnimateIn = el.data('owl-animate-in')
-                        ? el.data('owl-animate-in')
+                    dataAnimateIn = el.data('slideInUp')
+                        ? el.data('slideInUp')
                         : '',
-                    dataAnimateOut = el.data('owl-animate-out')
-                        ? el.data('owl-animate-out')
+                    dataAnimateOut = el.data('slideOutUp')
+                        ? el.data('slideOutUp')
                         : '',
                     dataDefaultItem = el.data('owl-item'),
                     dataItemXS = el.data('owl-item-xs'),
