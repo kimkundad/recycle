@@ -121,7 +121,7 @@
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
-                    <h3>วัสดุที่รับซื้อ</h3>
+                    <h3>Hilight Project</h3>
                 </div>
             </div>
         </div>
