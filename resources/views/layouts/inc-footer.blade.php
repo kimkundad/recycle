@@ -45,7 +45,9 @@
                             @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">เข้าสู่ระบบ / Login</a></li>
                             @else
+                            @if(Auth::user()->is_admin == 1)
                             <li><a href="{{ url('/admin/dashboard') }}">เข้าสู่หลังบ้าน</a></li>
+                            @endif
                             @endif
                         </ul>
                     </aside>
