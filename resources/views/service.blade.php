@@ -25,20 +25,21 @@
         </div>
         <div class="ps-section__content">
             <div class="row">
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="card-green "> 
-                    <div class="card-green-content">
-                        <div class="d-flex justify-content-between">
-                            <img src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim btn_card_in" href="#">ขอรับบริการ</a>
-                        </div>
-                        <div class="ps-block__content_green pt-20">
-                            <h3>รับซิ้อวัสดุรีไซเคิล/ไม่ใช้แล้ว</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class=" card-out-green "> 
+                        <div class="card-green-content">
+                            <div class="d-flex justify-content-between">
+                                <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                            </div>
+                            <div class="ps-block__content_out-green pt-20">
+                                <h3>รับซิ้อวัสดุรีไซเคิล/ไม่ใช้แล้ว</h3>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green "> 
                     <div class="card-green-content">
