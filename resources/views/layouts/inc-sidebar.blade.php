@@ -3,6 +3,9 @@
     .fb_dialog{
         display: none !important;
     }
+    .fb-customerchat{
+        display: none !important;
+    }
 </style>
 
 <ul class="menu-sh bottomRight">
