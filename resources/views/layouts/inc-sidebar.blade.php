@@ -1,4 +1,10 @@
 
+<style>
+    .fb_dialog{
+        display: none !important;
+    }
+</style>
+
 <ul class="menu-sh bottomRight">
     <li class="share top">
       <img src="{{ url('img/chat.png') }}" id="close_chat">
