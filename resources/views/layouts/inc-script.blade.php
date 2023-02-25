@@ -23,8 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
 
 
-  <!-- Messenger ปลั๊กอินแชท Code -->
-  <div id="fb-root"></div>
+  
 
   <!-- Your ปลั๊กอินแชท code -->
   <div id="fb-customer-chat" class="fb-customerchat">
