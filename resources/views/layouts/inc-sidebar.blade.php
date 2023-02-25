@@ -1,5 +1,17 @@
 
+<ul class="menu-sh bottomRight">
+    <li class="share top">
+      <img src="{{ url('img/chat.png') }}" id="close_chat">
+      <ul class="submenu">
+        <li><a href="#" class="facebook"><img src="{{ url('img/messenger.png') }}"></a></li>
+        <li><a href="{{ get_line() }}" class="twitter"><img src="{{ url('img/line.png') }}"></a></li>
+        <li><a href="mailto: {{ get_email() }}" class="googlePlus"><img src="{{ url('img/email.png') }}"></a></li>
+        <li><a href="tel:{{ get_phone() }}" class="instagram"><img src="{{ url('img/call.png') }}"></a></li>
+      </ul>
+    </li>
+  </ul>
 
+  
 <div id="back2top"><i class="icon icon-arrow-up"></i></div>
    <!-- <div class="ps-site-overlay"></div> -->
     <div class="ps-panel--sidebar" id="cart-mobile">
