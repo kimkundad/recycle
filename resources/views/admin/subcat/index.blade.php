@@ -100,7 +100,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $item->cat_name }}</a>
+                                                <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $item->sub_name }}</a>
                                                 <span class="text-muted fw-semibold d-block fs-7">ซับหมวดหมู่</span>
                                             </td>
                                            <td>
