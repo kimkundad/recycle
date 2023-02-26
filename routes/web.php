@@ -110,7 +110,7 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::get('admin/recommend/', [App\Http\Controllers\ProductController::class, 'recommend']);
 
     Route::get('/admin/subcat/create/{id}', [App\Http\Controllers\SubCatController::class, 'create']);
-
+    Route::get('/admin/subcat/create_new', [App\Http\Controllers\SubCatController::class, 'create_new']);
 
     Route::post('/api/api_post_status_subcat', [App\Http\Controllers\SubCatController::class, 'api_post_status_subcat']);
     Route::get('api/del_subcat/{id}', [App\Http\Controllers\SubCatController::class, 'del_subcat']);

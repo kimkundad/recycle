@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\category;
 use App\Models\subcat;
+use App\Models\product;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
 
@@ -39,6 +40,16 @@ class SubCatController extends Controller
         $data['method'] = "post";
         $data['url'] = url('admin/subcat');
         return view('admin.subcat.create', $data);
+    }
+
+    public function create_new()
+    {
+        //
+        $cat = category::all();
+        $data['cat'] = $cat;
+        $data['method'] = "post";
+        $data['url'] = url('admin/subcat');
+        return view('admin.subcat.create_new', $data);
     }
 
 
@@ -244,7 +255,20 @@ class SubCatController extends Controller
             ->where('id', $id)
             ->first();
 
-           $idcat = $objs->cat_id;
+            if($objs->sub_name == 'ไม่มีหมวดหมู่'){
+
+                return redirect(url('admin/subcat/'))->with('edit_error','คุณทำการเพิ่มอสังหา สำเร็จ');
+
+            }else{
+
+                $new = DB::table('subcats')
+                ->where('sub_name', 'ไม่มีหมวดหมู่')
+                ->first();
+
+                product::where('sub_cat_id', $id)
+                ->update(['sub_cat_id' => $new->id]);
+
+                $idcat = $objs->cat_id;
 
             if(isset($objs->image)){
               $file_path = 'img/category/'.$objs->image;
@@ -255,5 +279,9 @@ class SubCatController extends Controller
         $obj->delete();
 
         return redirect(url('admin/category/'.$idcat.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
+
+            }
+
+           
     }
 }

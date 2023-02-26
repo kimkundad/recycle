@@ -136,7 +136,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //
-        $subcat = subcat::where('cat_id', $id)->get();
+        $subcat = subcat::where('cat_id', $id)->where('sub_name', '!=', 'ไม่มีหมวดหมู่')->get();
         $data['subcat'] = $subcat;
 
         $objs = category::find($id);

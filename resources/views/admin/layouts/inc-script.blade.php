@@ -77,6 +77,21 @@ if ( document.documentElement )
         }
     });
     @endif
+
+    @if ($message = Session::get('edit_error'))
+    Swal.fire({
+        text: "ไม่สามารถลบรายการนี้ได้!",
+        icon: "error",
+        buttonsStyling: false,
+        confirmButtonText: "Ok, got it!",
+        customClass: {
+            confirmButton: "btn btn-primary"
+        }
+    });
+    @endif
+
+    
+
 </script>
 <!--end::Custom Javascript-->
 <!--end::Javascript-->

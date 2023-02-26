@@ -272,7 +272,7 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">เลือกหมวดหมู่สินค้า</label>
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">เลือกซับหมวดหมู่สินค้า</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
