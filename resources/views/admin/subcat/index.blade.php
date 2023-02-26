@@ -106,8 +106,10 @@
                                            <td>
                                             {{ $item->subcat }}
                                            </td>
-                                            
-                                            
+                                           <td>
+                                            {{ $item->option }}
+                                           </td>
+                                           
                                             <td>
                                                 <div class="form-check form-check-solid form-switch form-check-custom fv-row">
                                                     <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" name="status" 
