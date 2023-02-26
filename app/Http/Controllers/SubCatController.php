@@ -20,6 +20,12 @@ class SubCatController extends Controller
     {
         //
         $objs = subcat::paginate(30);
+        if(isset($objs)){
+            foreach($objs as $u){
+                $count = product::where('cat_id', $u->id)->count();
+                $u->option = $count;
+            }
+        }
         $objs->setPath('');
         $data['objs'] = $objs;
         return view('admin.subcat.index', compact('objs'));
