@@ -18,6 +18,10 @@ class SubCatController extends Controller
     public function index()
     {
         //
+        $objs = subcat::paginate(30);
+        $objs->setPath('');
+        $data['objs'] = $objs;
+        return view('admin.subcat.index', compact('objs'));
     }
 
 

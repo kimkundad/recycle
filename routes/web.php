@@ -114,6 +114,8 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
 
     Route::post('/api/api_post_status_subcat', [App\Http\Controllers\SubCatController::class, 'api_post_status_subcat']);
     Route::get('api/del_subcat/{id}', [App\Http\Controllers\SubCatController::class, 'del_subcat']);
+
+    Route::get('/admin/subcat', [App\Http\Controllers\SubCatController::class, 'index']);
     Route::post('/admin/subcat', [App\Http\Controllers\SubCatController::class, 'store']);
     Route::get('/admin/subcat/{id}/edit', [App\Http\Controllers\SubCatController::class, 'edit']);
     Route::post('/admin/post_subcat/{id}', [App\Http\Controllers\SubCatController::class, 'update']);
