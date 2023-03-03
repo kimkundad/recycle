@@ -238,7 +238,7 @@
     function infinteLoadMore(page) {
 
         var category = {{ $category_id }}
-        var search = {{ $search }}
+        var search = '{{ $search }}'
         var data_brand = '';
         var receiptNos2 = $("#result_check input:checkbox:checked").map(function () {
                 console.log('<---', $(this).data('id') )
