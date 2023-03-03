@@ -25,27 +25,43 @@
         </div>
         <div class="ps-section__content">
             <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div class=" card-out-green "> 
-                        <div class="card-green-content">
-                            <div class="d-flex justify-content-between">
-                                <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
-                            </div>
-                            <div class="ps-block__content_out-green pt-20">
-                                <h3>รับซิ้อวัสดุรีไซเคิล/ไม่ใช้แล้ว</h3>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                            </div>
+            {{-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="card-green "> 
+                    <div class="card-green-content">
+                        <div class="d-flex justify-content-between">
+                            <img src="{{ url('img/icon/Group 3112.png') }}">
+                            <a class="green_btn_kim btn_card_in" href="#">ขอรับบริการ</a>
+                        </div>
+                        <div class="ps-block__content_green pt-20">
+                            <h3>รับซิ้อวัสดุรีไซเคิล/ไม่ใช้แล้ว</h3>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                         </div>
                     </div>
                 </div>
-            
+            </div> --}}
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class=" card-out-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <img class="bg_green_icon" src="{{ url('img/service/01-รับซื้อวัสดุรีไซเคิล.jpg') }}" height="60" width="60">
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                        </div>
+                        <div class="ps-block__content_out-green pt-20">
+                            <h3>รับซิ้อวัสดุรีไซเคิล/ไม่ใช้แล้ว</h3>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class=" card-out-green "> 
+                    <div class="card-green-content">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex">
+                                <img class="bg_green_icon" src="{{ url('img/service/02-รับประมูลงานเหล็ก.jpg') }}" height="60" width="60">
+                                <img class="bg_green_icon ml-5px" src="{{ url('img/service/02-รับประมูลงานเหล็ก_2.jpg') }}" height="60" width="60">
+                            </div>
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>รับประมูลงานเหล็ก โครงสร้าง ฯลฯ</h3>
@@ -58,8 +74,8 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <img class="bg_green_icon" src="{{ url('img/service/03-ให้คำปรึกษา.jpg') }}" height="60" width="60">
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>ให้คำปรึกษา</h3>
@@ -72,8 +88,8 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <img class="bg_green_icon" src="{{ url('img/service/04-บริการทำลายเอกสาร.jpg') }}" height="60" width="60">
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>บริการทำลายเอกสาร</h3>
@@ -86,8 +102,11 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <div class="d-flex">
+                                <img class="bg_green_icon" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม.jpg') }}" height="60" width="60">
+                                <img class="bg_green_icon ml-5px" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม_2.jpg') }}" height="60" width="60">
+                            </div>
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>บริการจัดเก็บของเสียอุตสาหกรรม</h3>
@@ -100,8 +119,8 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
-                            <a class="green_btn_kim_out btn_card_in" href="#">ขอรับบริการ</a>
+                            <img class="bg_green_icon" src="{{ url('img/service/06-บริการพิเศษอื่นๆ.jpg') }}" height="60" width="60">
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>บริการพิเศษอื่นๆ</h3>
@@ -130,12 +149,12 @@
             
             <div class="row line-green row-mo">
                 <div class="col-md-5 desktop-d hide-green-ban ps-product--detail ps-product--fullwidth">
-                    <img src="{{ url('img/Group 2043.png') }}" class="re-img-service">
+                    <img src="{{ url('img/highlight project620x640.jpg') }}" class="re-img-service bor-r-12" >
                 </div>
                 <div class="col-md-7 desktop-990">
 
                     <div class="hide-green-ban-mo">
-                        <img src="{{ url('img/Group 2043.png') }}" class="w-100 bor-r-12">
+                        <img src="{{ url('img/highlight project620x640.jpg') }}" class="w-100 bor-r-12">
                     </div>
 
                     <div class="card" style="border: 1px solid rgb(0 0 0 / 0%);">

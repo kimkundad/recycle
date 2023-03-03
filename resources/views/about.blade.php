@@ -38,16 +38,18 @@
                         <figure>
                             <div class="ps-wrapper">
                                 <div class="ps-product__gallery" data-arrow="true">
-                                    <div class="item"><a href="{{ url('img/thum/image 4.png') }}"><img src="{{ url('img/thum/image 4.png') }}" alt=""></a></div>
-                                    <div class="item"><a href="{{ url('img/thum/image 2.png') }}"><img src="{{ url('img/thum/image 2.png') }}" alt=""></a></div>
-                                    <div class="item"><a href="{{ url('img/thum/image 3.png') }}"><img src="{{ url('img/thum/image 3.png') }}" alt=""></a></div>
+                                    <div class="item"><a href="{{ url('img/About/626x418-about-1.jpg') }}"><img src="{{ url('img/About/626x418-about-1.jpg') }}" alt=""></a></div>
+                                    <div class="item"><a href="{{ url('img/About/626x418-about-2.jpg') }}"><img src="{{ url('img/About/626x418-about-2.jpg') }}" alt=""></a></div>
+                                    <div class="item"><a href="{{ url('img/About/626x418-about-3.jpg') }}"><img src="{{ url('img/About/626x418-about-3.jpg') }}" alt=""></a></div>
+                                    <div class="item"><a href="{{ url('img/About/626x418-about-4.jpg') }}"><img src="{{ url('img/About/626x418-about-4.jpg') }}" alt=""></a></div>
                                 </div>
                             </div>
                         </figure>
-                        <div class="ps-product__variants" data-item="3" data-md="3" data-sm="3" data-arrow="false">
-                            <div class="item"><img src="{{ url('img/thum/image 4.png') }}" alt=""></div>
-                            <div class="item"><img src="{{ url('img/thum/image 2.png') }}" alt=""></div>
-                            <div class="item"><img src="{{ url('img/thum/image 3.png') }}" alt=""></div>
+                        <div class="ps-product__variants" data-item="4" data-md="3" data-sm="3" data-arrow="false">
+                            <div class="item"><img src="{{ url('img/About/626x418-about-1.jpg') }}" alt=""></div>
+                            <div class="item"><img src="{{ url('img/About/626x418-about-2.jpg') }}" alt=""></div>
+                            <div class="item"><img src="{{ url('img/About/626x418-about-3.jpg') }}" alt=""></div>
+                            <div class="item"><img src="{{ url('img/About/626x418-about-4.jpg') }}" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -253,7 +255,7 @@
                         <div class="ps-tab active" id="tab-1">
                             <div class="row align-content-lg-stretch">
                                 <div class="col-md-4">
-                                    <img src="{{ url('img/sustainable.png') }}">
+                                    <img src="{{ url('img/policy 448x542.jpg') }}" class="bor-r-12">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="row ">

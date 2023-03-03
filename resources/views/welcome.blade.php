@@ -222,7 +222,7 @@
                 <div class=" card-out-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
+                            <img class="bg_green_icon" src="{{ url('img/service/01-รับซื้อวัสดุรีไซเคิล.jpg') }}" height="60" width="60">
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
@@ -236,7 +236,10 @@
                 <div class=" card-out-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
+                            <div class="d-flex">
+                                <img class="bg_green_icon" src="{{ url('img/service/02-รับประมูลงานเหล็ก.jpg') }}" height="60" width="60">
+                                <img class="bg_green_icon ml-5px" src="{{ url('img/service/02-รับประมูลงานเหล็ก_2.jpg') }}" height="60" width="60">
+                            </div>
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
@@ -250,7 +253,7 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
+                            <img class="bg_green_icon" src="{{ url('img/service/03-ให้คำปรึกษา.jpg') }}" height="60" width="60">
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
@@ -264,7 +267,7 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
+                            <img class="bg_green_icon" src="{{ url('img/service/04-บริการทำลายเอกสาร.jpg') }}" height="60" width="60">
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
@@ -278,7 +281,10 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
+                            <div class="d-flex">
+                                <img class="bg_green_icon" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม.jpg') }}" height="60" width="60">
+                                <img class="bg_green_icon ml-5px" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม_2.jpg') }}" height="60" width="60">
+                            </div>
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
@@ -292,7 +298,7 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/icon/Group 3112.png') }}">
+                            <img class="bg_green_icon" src="{{ url('img/service/06-บริการพิเศษอื่นๆ.jpg') }}" height="60" width="60">
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
@@ -331,16 +337,18 @@
                         <figure>
                             <div class="ps-wrapper">
                                 <div class="ps-product__gallery" data-arrow="true">
-                                    <div class="item"><a href="{{ url('img/thum/image 4.png') }}"><img src="{{ url('img/thum/image 4.png') }}" alt=""></a></div>
-                                    <div class="item"><a href="{{ url('img/thum/image 2.png') }}"><img src="{{ url('img/thum/image 2.png') }}" alt=""></a></div>
-                                    <div class="item"><a href="{{ url('img/thum/image 3.png') }}"><img src="{{ url('img/thum/image 3.png') }}" alt=""></a></div>
+                                    <div class="item"><a href="{{ url('img/About/626x418-about-1.jpg') }}"><img src="{{ url('img/About/626x418-about-1.jpg') }}" alt=""></a></div>
+                                    <div class="item"><a href="{{ url('img/About/626x418-about-2.jpg') }}"><img src="{{ url('img/About/626x418-about-2.jpg') }}" alt=""></a></div>
+                                    <div class="item"><a href="{{ url('img/About/626x418-about-3.jpg') }}"><img src="{{ url('img/About/626x418-about-3.jpg') }}" alt=""></a></div>
+                                    <div class="item"><a href="{{ url('img/About/626x418-about-4.jpg') }}"><img src="{{ url('img/About/626x418-about-4.jpg') }}" alt=""></a></div>
                                 </div>
                             </div>
                         </figure>
-                        <div class="ps-product__variants" data-item="3" data-md="3" data-sm="3" data-arrow="false">
-                            <div class="item"><img src="{{ url('img/thum/image 4.png') }}" alt=""></div>
-                            <div class="item"><img src="{{ url('img/thum/image 2.png') }}" alt=""></div>
-                            <div class="item"><img src="{{ url('img/thum/image 3.png') }}" alt=""></div>
+                        <div class="ps-product__variants" data-item="4" data-md="3" data-sm="3" data-arrow="false">
+                            <div class="item"><img src="{{ url('img/About/626x418-about-1.jpg') }}" alt=""></div>
+                            <div class="item"><img src="{{ url('img/About/626x418-about-2.jpg') }}" alt=""></div>
+                            <div class="item"><img src="{{ url('img/About/626x418-about-3.jpg') }}" alt=""></div>
+                            <div class="item"><img src="{{ url('img/About/626x418-about-4.jpg') }}" alt=""></div>
                         </div>
                     </div>
                 </div>
