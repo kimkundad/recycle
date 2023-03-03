@@ -23,7 +23,6 @@
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="314" />
     <meta property="fb:admins" content="100002037238809">
-    <meta property="fb:admins" content="100002037238809">
     
     @include('layouts.inc-style')
     @yield('stylesheet')
