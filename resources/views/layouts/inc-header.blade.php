@@ -16,7 +16,11 @@
                             @endif
                         </select>
                     </div>
+                    @isset($search)
                     <input class="form-control" name="search" type="text" value="{{ $search === "" ?  : $search }}" placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่..." id="input-search" />
+                    @else
+                    <input class="form-control" name="search" type="text"  placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่..." id="input-search" />
+                    @endisset
                     <button>ค้นหา</button>
                 </form>
             </div>
