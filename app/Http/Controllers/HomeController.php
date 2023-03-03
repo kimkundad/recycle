@@ -135,9 +135,10 @@ class HomeController extends Controller
 
     public function getCategory(Request $request)
     {
+      $search = $request['search'];
       $cat = $request['category'];
       $brand = $request['brand'];
-    //  $data_b = explode(",",$brand);
+    //  $data_b = explode(",",$brand); $count = product::where('name_pro', 'like', "%$search%")->count();
 
       $data_b = ($brand != '')?explode(",",$brand):0;
       
@@ -145,17 +146,43 @@ class HomeController extends Controller
       if($cat == 0){
 
         if($data_b == 0){
-          $results = product::orderBy('id')->paginate(12);
+
+          if($search == ''){
+            $results = product::orderBy('id')->paginate(12);
+          }else{
+            $results = product::orderBy('id')->where('name_pro', 'like', "%$search%")->paginate(12);
+          }
+          
         }else{
-          $results = product::whereIn('brand', $data_b)->orderBy('id')->paginate(12);
+
+          if($search == ''){
+            $results = product::whereIn('brand', $data_b)->orderBy('id')->paginate(12);
+          }else{
+            $results = product::whereIn('brand', $data_b)->where('name_pro', 'like', "%$search%")->orderBy('id')->paginate(12);
+          }
+          
         }
         
       }else{
 
         if($data_b == 0){
-          $results = product::where('sub_cat_id', $cat)->orderBy('id')->paginate(12);
+
+          if($search == ''){
+
+            $results = product::where('sub_cat_id', $cat)->orderBy('id')->paginate(12);
+
+          }else{
+            $results = product::where('sub_cat_id', $cat)->where('name_pro', 'like', "%$search%")->orderBy('id')->paginate(12);
+          }
+          
         }else{
-          $results = product::where('sub_cat_id', $cat)->whereIn('brand', $data_b)->orderBy('id')->paginate(12);
+
+          if($search == ''){
+            $results = product::where('sub_cat_id', $cat)->whereIn('brand', $data_b)->orderBy('id')->paginate(12);
+          }else{
+            $results = product::where('sub_cat_id', $cat)->where('name_pro', 'like', "%$search%")->whereIn('brand', $data_b)->orderBy('id')->paginate(12);
+          }
+          
         }
         
       }
@@ -201,15 +228,33 @@ class HomeController extends Controller
     }
     
     public function category(Request $request){
+      $search = $request['search'];
 
       if($request['id'] == 0){
-        $count = product::count();
+
+        if($search == ''){
+          $count = product::count();
+        }else{
+          $count = product::where('name_pro', 'like', "%$search%")->count();
+        }
+        
       }else{
-        $count = product::where('cat_id', $request['id'])->count();
+
+        if($search == ''){
+
+          $count = product::where('cat_id', $request['id'])->count();
+          
+        }else{
+
+          $count = product::where('cat_id', $request['id'])->where('name_pro', 'like', "%$search%")->count();
+
+        }
+        
       }
       
       $data['count'] = $count;
       $data['category_id'] = $request['id'];
+      $data['search'] = $search;
       return view('category', $data);
 
     }

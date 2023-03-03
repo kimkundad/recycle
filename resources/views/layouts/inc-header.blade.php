@@ -16,7 +16,7 @@
                             @endif
                         </select>
                     </div>
-                    <input class="form-control" type="text" placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่..." id="input-search" />
+                    <input class="form-control" name="search" type="text" value="{{ $search === "" ?  : $search }}" placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่..." id="input-search" />
                     <button>ค้นหา</button>
                 </form>
             </div>

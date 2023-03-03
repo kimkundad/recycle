@@ -238,6 +238,7 @@
     function infinteLoadMore(page) {
 
         var category = {{ $category_id }}
+        var search = {{ $search }}
         var data_brand = '';
         var receiptNos2 = $("#result_check input:checkbox:checked").map(function () {
                 console.log('<---', $(this).data('id') )
@@ -261,7 +262,7 @@
 
                 console.log('--->', receiptNos2)
         $.ajax({
-                url: ENDPOINT + "/category_find?category="+ category +"&page=" + page + "&brand=" + data_brand,
+                url: ENDPOINT + "/category_find?category="+ category +"&page=" + page + "&brand=" + data_brand + "&search=" + search,
                 datatype: "html",
                 type: "get",
                 beforeSend: function () {
