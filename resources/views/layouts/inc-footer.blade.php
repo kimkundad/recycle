@@ -28,9 +28,7 @@
                                 <a class="btn_green_heade_footer" href="{{ get_facebook() }}">
                                     <img class="img-icon-green_header_footer" src="{{ url('img/icon/facebook.png') }}">
                                 </a>
-                                <a class="" href="fax:+{{ get_fax() }}">
-                                    <img class="img-icon-green_header_footer h-34" src="{{ url('img/icon/fax.png') }}">
-                                </a>
+                               
                             </div>
                         </div>
                     </aside>

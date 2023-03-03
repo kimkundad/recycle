@@ -30,7 +30,7 @@ function get_facebook_detail(){
 function get_facebook_img(){
     $id = 1;
     $objs = setting::find($id);
-    return url('media/').$objs->facebook_image;
+    return url('media/').'/'.$objs->facebook_image;
 }
 
 function get_phone2(){
