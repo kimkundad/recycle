@@ -470,6 +470,8 @@ span, p , li ,strong, option , label, input, a, b {
 }
 
 
+
+
 .card-green{
     background-color: #009247;
     padding: 25px;
@@ -2446,4 +2448,11 @@ h4 {
 .fix-pad{
   padding-right: 5px !important;
     padding-left: 5px !important;
+}
+
+#homepage-1 .ps-home-banner .owl-slider .owl-stage-outer .owl-stage {
+
+}
+#homepage-1 .ps-home-banner .owl-slider .owl-stage-outer .owl-stage .owl-item {
+
 }

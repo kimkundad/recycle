@@ -298,6 +298,8 @@
                         nav: dataNav,
                         mouseDrag: datamouseDrag,
                         touchDrag: true,
+                        touchDrag  : false,
+                        mouseDrag  : false,
                         autoplaySpeed: duration,
                         navSpeed: duration,
                         dotsSpeed: duration,
