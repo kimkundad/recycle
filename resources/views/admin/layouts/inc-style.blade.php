@@ -1,4 +1,4 @@
-        <link rel="shortcut icon" href="{{ url('admin/assets/media/logos/favicon.ico') }}" />
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ url('img/favicon-32x32.png') }}" />
 		<!--begin::Fonts(mandatory for all pages)-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 		<!--end::Fonts-->
@@ -17,3 +17,4 @@
 	font-size: 16px;
 }
 		</style>
+
