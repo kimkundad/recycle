@@ -33,7 +33,7 @@
 
                 @isset($objs)
                 @foreach($objs as $u)
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-15">
                       <button class="ps-btn--fullwidth-green btn-block" id="btnSendData" style="border-radius: 5px">{{ $u->name }}</button>
                         <img src="{{ url('img/certificate/'.$u->image) }}" data-toggle="modal" data-target="#product-cer{{ $u->id }}" alt="{{ $u->name }}" class='img-fluid' 
                         style="border: solid 1px #009247; 
