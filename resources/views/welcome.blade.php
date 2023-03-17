@@ -480,7 +480,7 @@
             </a>
         </div>
 
-        @if(count($cer) === 6 )
+        @if(count($cer) > 5 )
         <div class="img-portfolio">
             <div class="dg-wrapper ps-section__content">
                 <div class="text-center img_ro img_rotation1" data-image="{{ $cer[0]->id }}">
