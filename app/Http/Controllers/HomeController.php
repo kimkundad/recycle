@@ -28,7 +28,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the application dashboard. sort
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
@@ -41,7 +41,7 @@ class HomeController extends Controller
       $ban = alliance::where('status', 1)->get();
       $data['ban'] = $ban;
 
-      $cer = certificate::where('status', 1)->get();
+      $cer = certificate::where('status', 1)->orderby('sort', 'asc')->get();
       $data['cer'] = $cer;
 
       $slide = slideshow::where('status', 1)->get();
@@ -65,7 +65,7 @@ class HomeController extends Controller
 
     public function certificate(){
 
-      $objs = certificate::all();
+      $objs = certificate::orderby('sort', 'asc')->get();
 
       $data['objs'] = $objs;
 
