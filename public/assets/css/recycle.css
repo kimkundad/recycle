@@ -2485,3 +2485,7 @@ h4 {
 #homepage-1 .ps-home-banner .owl-slider .owl-stage-outer .owl-stage .owl-item {
 
 }
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100% !important;
+}
