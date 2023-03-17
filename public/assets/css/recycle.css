@@ -1422,7 +1422,9 @@ padding-bottom: 35px;
     height: 450px;
     position: relative;
 }
-
+.img_ro img{
+  max-width: 283px !important;
+}
 .dg-wrapper{
   margin: 0 auto;
   position: relative;
