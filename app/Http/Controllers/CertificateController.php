@@ -75,7 +75,7 @@ class CertificateController extends Controller
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
           $img = Image::make($image->getRealPath());
-          $img->resize(400, 400, function ($constraint) {
+          $img->resize(800, 800, function ($constraint) {
           $constraint->aspectRatio();
         })->save('img/certificate/'.$input['imagename']);
 
@@ -165,7 +165,7 @@ class CertificateController extends Controller
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
           $img = Image::make($image->getRealPath());
-          $img->resize(400, 400, function ($constraint) {
+          $img->resize(800, 800, function ($constraint) {
           $constraint->aspectRatio();
             })->save('img/certificate/'.$input['imagename']);
      
