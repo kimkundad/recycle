@@ -136,7 +136,7 @@ class HomeController extends Controller
       $artilces = '';
       $img = url('img/certificate/'.$data->image);
         if ($request->ajax()) {
-          $artilces.='<h4 class="text-gray-400 fs-16px">"'.$data->name.'"</h4><img src="'.$img.'" class="img-fluid" style="width: 100%">';
+          $artilces.='<h4 class="text-gray-400 fs-16px">'.$data->name.'</h4><img src="'.$img.'" class="img-fluid" style="width: 100%">';
           return $artilces;
         }
 
