@@ -376,7 +376,7 @@
                 </div>
                 
                 <article class="ps-product--detailx ps-product--fullwidth ">
-                    <div class="ps-product__header p-20" >
+                    <div class="ps-product__header " >
                         
                        <div class="text-center">
                             
