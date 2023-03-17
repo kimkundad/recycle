@@ -80,14 +80,19 @@ class CertificateController extends Controller
         })->save('img/certificate/'.$input['imagename']);
 
         $status = 0;
+        $sort = 0;
         if(isset($request['status'])){
             if($request['status'] == 1){
                 $status = 1;
             }
         }
+        if(isset($request['sort'])){
+            $sort = $request['sort'];
+        }
      
            $objs = new certificate();
            $objs->name = $request['name'];
+           $objs->sort = $sort;
            $objs->image = $input['imagename'];
            $objs->status = $status;
            $objs->save();
@@ -136,6 +141,12 @@ class CertificateController extends Controller
         $this->validate($request, [
             'name' => 'required'
            ]);
+
+           $sort = 0;
+
+           if(isset($request['sort'])){
+            $sort = $request['sort'];
+            }
            
            $image = $request->file('image');
 
@@ -151,6 +162,7 @@ class CertificateController extends Controller
            $objs = certificate::find($id);
            $objs->name = $request['name'];
            $objs->status = $status;
+           $objs->sort = $sort;
            $objs->save();
 
            }else{
@@ -172,6 +184,7 @@ class CertificateController extends Controller
            $objs = certificate::find($id);
            $objs->name = $request['name'];
            $objs->image = $input['imagename'];
+           $objs->sort = $sort;
            $objs->status = $status;
            $objs->save();
 
