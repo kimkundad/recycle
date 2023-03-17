@@ -34,7 +34,7 @@
 <div class="ps-page--shop" id="shop-sidebar">
         <div class="container">
 
-            <div class="d-flex flex-wrap justify-content-center mt-15 hide-mobile">
+            {{-- <div class="d-flex flex-wrap justify-content-center mt-15 hide-mobile">
 
                 @if(get_category())
                     @foreach(get_category() as $u)
@@ -47,7 +47,7 @@
                     @endforeach
                 @endif
                 
-            </div>
+            </div> --}}
 
             
 
