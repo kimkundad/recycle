@@ -91,12 +91,10 @@ class SubCatController extends Controller
            $this->validate($request, [
             'sub_name' => 'required',
             'cat_id' => 'required',
-            'image' => 'required',
-            'icons' => 'required'
+            'image' => 'required'
            ]);
            
            $image = $request->file('image');
-           $icons = $request->file('icons');
 
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
@@ -106,9 +104,6 @@ class SubCatController extends Controller
             })->save('img/category/'.$input['imagename']);
 
 
-            $path = 'img/category/';
-            $filename = time()."-".$icons->getClientOriginalName();
-            $icons->move($path, $filename);
 
         $status = 0;
         if(isset($request['status'])){
@@ -121,7 +116,6 @@ class SubCatController extends Controller
            $objs->sub_name = $request['sub_name'];
            $objs->cat_id = $request['cat_id'];
            $objs->image = $input['imagename'];
-           $objs->icons = $filename;
            $objs->status = $status;
            $objs->save();
 
@@ -176,7 +170,6 @@ class SubCatController extends Controller
            ]);
            
            $image = $request->file('image');
-           $icons = $request->file('icons');
 
 
            $status = 0;
@@ -186,27 +179,7 @@ class SubCatController extends Controller
                 }
             }
 
-            if($icons !== NULL){
-
-                $img = DB::table('subcats')
-                ->where('id', $id)
-                ->first();
-              //  dd($img->icons);
-          if($img->icons !== null && $img->icons !== ""){
-            $file_path = 'img/category/'.$img->icons;
-            unlink($file_path);
-          }
-         
-
-            $path = 'img/category/';
-            $filename = time()."-".$icons->getClientOriginalName();
-            $icons->move($path, $filename);
-
-            $objs = subcat::find($id);
-            $objs->icons = $filename;
-            $objs->save();
-
-            }
+       
 
 
            if($image == NULL){

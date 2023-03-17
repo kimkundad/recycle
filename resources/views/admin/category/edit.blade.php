@@ -187,7 +187,7 @@
                                         <tr>
                                             <th class="p-0 w-50px"></th>
                                             <th class="p-0 "></th>
-                                            <th class="p-0 ">icons</th>
+                                            {{-- <th class="p-0 ">icons</th> --}}
                                             <th class="p-0 ">status</th>
                                             <th class="p-0 "></th>
                                         </tr>
@@ -207,12 +207,12 @@
                                             <td>
                                                 <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $item->sub_name }}</a>
                                             </td>
-                                            <td>
+                                            {{-- <td>
                                                 <div class="symbol symbol-50px">
                                                     <img src="{{ url('img/category/'.$item->icons) }}" alt="">
                                                 </div>
                                                 
-                                            </td>
+                                            </td> --}}
                                             <td>
                                                 <div class="form-check form-check-solid form-switch form-check-custom fv-row">
                                                     <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" name="status" 

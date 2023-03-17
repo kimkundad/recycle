@@ -69,7 +69,7 @@
                         <div class="card-header border-0 pt-5">
                             <h3 class="card-title align-items-start flex-column">
                                 <span class="card-label fw-bold fs-3 mb-1">ใบอนุญาตและรางวัลทั้งหมด</span>
-                                <span class="text-muted mt-1 fw-semibold fs-7"> ใส่ได้เพียง 6 รูปเท่านั้น</span>
+                                <span class="text-muted mt-1 fw-semibold fs-7"> เลือกแสดงหน้าแรก 6 รูปเท่านั้น</span>
                             </h3>
                         </div>
                         <div class="card-body py-3">
@@ -82,7 +82,7 @@
                                         <tr>
                                             <th class="p-0 w-50px"></th>
                                             <th class="p-0 "></th>
-                                            <th class="p-0 ">status</th>
+                                            <th class="p-0 ">แสดงหน้าแรก</th>
                                             <th class="p-0 "></th>
                                         </tr>
                                     </thead>

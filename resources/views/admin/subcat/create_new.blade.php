@@ -144,7 +144,7 @@
                                     <!--end::Col-->
                                 </div>
 
-                                <div class="row mb-6">
+                                {{-- <div class="row mb-6">
                                     <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">รูป Icon</label>
                                     <!--end::Label-->
@@ -159,7 +159,7 @@
                                         @endif
                                     </div>
                                     <!--end::Col-->
-                                </div>
+                                </div> --}}
 
                                 <div class="row mb-0">
                                     <!--begin::Label-->

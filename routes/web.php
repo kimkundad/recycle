@@ -55,6 +55,8 @@ Route::get('/category', [App\Http\Controllers\HomeController::class, 'category']
 
 Route::get('/category_find', [App\Http\Controllers\HomeController::class, 'getCategory']);
 
+Route::get('/certificate', [App\Http\Controllers\HomeController::class, 'certificate']);
+
 
 Route::get('/term', function () {
     return view('term');

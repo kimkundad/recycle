@@ -63,6 +63,15 @@ class HomeController extends Controller
       return view('welcome', $data);
     }
 
+    public function certificate(){
+
+      $objs = certificate::all();
+
+      $data['objs'] = $objs;
+
+      return view('certificate', $data);
+    }
+
     public function service(){
 
       $pro = DB::table('products')->select(

@@ -475,6 +475,9 @@
                     <h3>ใบอนุญาตและรางวัล</h3>
                 </div>
             </div>
+            <a href="{{ url('/certificate') }}" class="">
+                ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+            </a>
         </div>
 
         @if(count($cer) === 6 )
