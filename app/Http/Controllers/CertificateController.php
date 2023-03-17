@@ -155,11 +155,11 @@ class CertificateController extends Controller
 
            }else{
 
-            $img = DB::table('categories')
+            $img = DB::table('certificates')
           ->where('id', $id)
           ->first();
 
-          $file_path = url('/').'img/certificate/'.$img->image;
+          $file_path = 'img/certificate/'.$img->image;
           unlink($file_path);
 
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
