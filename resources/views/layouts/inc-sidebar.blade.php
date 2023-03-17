@@ -375,7 +375,7 @@
                     <span class="modal-close" data-dismiss="modal"><img src="{{ url('img/close_green.svg') }}" class="h-30px"></span>
                 </div>
                 
-                <article class="ps-product--detailx ps-product--fullwidth ps-product--quickview">
+                <article class="ps-product--detailx ps-product--fullwidth ">
                     <div class="ps-product__header p-20" >
                         
                        <div class="text-center">
