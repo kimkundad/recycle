@@ -6,42 +6,7 @@
 
 @section('stylesheet')
 
-<style>
-.grid-container {
-  columns: 5 200px;
-  column-gap: 1.5rem;
-  width: 90%;
-  margin: 0 auto;
-}
-.grid-container div {
-  width: 150px;
-  margin: 0 1.5rem 1.5rem 0;
-  display: inline-block;
-  width: 100%;
-  border: solid 2px black;
-  padding: 5px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  transition: all 0.25s ease-in-out;
-}
-.grid-container div:hover img {
-  filter: grayscale(0);
-}
-.grid-container div:hover {
-  border-color: #009247;
-}
-.grid-container div img {
-  width: 100%;
-  border-radius: 5px;
-  transition: all 0.25s ease-in-out;
-}
-.grid-container div p {
-  margin: 5px 0;
-  padding: 0;
-  text-align: center;
-  font-style: italic;
-}
-</style>
+
 
 @stop('stylesheet')
 
@@ -64,13 +29,15 @@
         <div class="ps-section__content">
 
             
-            <div class="grid-container">
+            <div class="row">
 
                 @isset($objs)
                 @foreach($objs as $u)
-                    <div>
-                        <img src="{{ url('img/certificate/'.$u->image) }}" data-toggle="modal" data-target="#product-cer{{ $u->id }}" alt="{{ $u->name }}" class='grid-item grid-item-1' >
+                    <div class="col-md-4">
                         <p> {{ $u->name }} </p>
+                        <img src="{{ url('img/certificate/'.$u->image) }}" data-toggle="modal" data-target="#product-cer{{ $u->id }}" alt="{{ $u->name }}" class='img-fluid' 
+                        style="border: solid 1px #009247; 
+                        border-radius: 5px;     width: 100%;">
                     </div>
 
                 @endforeach
