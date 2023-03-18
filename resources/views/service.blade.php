@@ -50,7 +50,7 @@
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>รับซิ้อวัสดุรีไซเคิล/ไม่ใช้แล้ว</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            <p class="mb-0">รับซิ้อ ฝาก ขาย วัสดุและอุปกรณ์ที่ไม่ใช้แล้วทุกประเภท</p>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>รับประมูลงานเหล็ก โครงสร้าง ฯลฯ</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            <p class="mb-0">รับรื้อ ถอน ขนย้าย และทำลายวัสดุอุปกรณ์ที่ไม่ใช้แล้ว</p>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>ให้คำปรึกษา</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            <p class="mb-0">ให้คำปรึกษาด้านรีไซเคิลแบบครบวงจร</p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>บริการทำลายเอกสาร</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            <p class="mb-0">รับบริการจัดเก็บสินค้ารีไซเคิล</p>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>บริการจัดเก็บของเสียอุตสาหกรรม</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            <p class="mb-0">รับบริการจัดการขนส่งกากของเสียเพื่อนำไปบำบัด/กำจัดยังปลายทาง</p>
                         </div>
                     </div>
                 </div>
@@ -125,8 +125,8 @@
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
-                            <h3>บริการพิเศษอื่นๆ</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            <h3>รับบริการพิเศษอื่นๆ</h3>
+                            <p class="mb-0">รับบริการพิเศษอื่นๆ เช่น ทำใบอนุญาตที่เกี่ยวข้องของกรมโรงงานอุตสาหกรรม</p>
                         </div>
                     </div>
                 </div>
