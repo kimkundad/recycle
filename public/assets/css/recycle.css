@@ -1424,6 +1424,7 @@ padding-bottom: 35px;
 }
 .img_ro img{
   max-width: 283px !important;
+  width: 100%;
 }
 .dg-wrapper{
   margin: 0 auto;
