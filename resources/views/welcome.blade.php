@@ -440,7 +440,7 @@
             data-owl-auto="true" 
             data-owl-loop="true" 
             data-owl-speed="10000" 
-            data-owl-gap="30" 
+            data-owl-gap="10" 
             data-owl-nav="false" 
             data-owl-dots="false" 
             data-owl-item="6" 
