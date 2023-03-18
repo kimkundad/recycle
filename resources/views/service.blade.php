@@ -60,7 +60,6 @@
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
-                                <img class="bg_green_icon" src="{{ url('img/service/02-รับประมูลงานเหล็ก.jpg') }}" height="60" width="60">
                                 <img class="bg_green_icon ml-5px" src="{{ url('img/service/02-รับประมูลงานเหล็ก_2.jpg') }}" height="60" width="60">
                             </div>
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
@@ -106,7 +105,6 @@
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
                                 <img class="bg_green_icon" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม.jpg') }}" height="60" width="60">
-                                <img class="bg_green_icon ml-5px" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม_2.jpg') }}" height="60" width="60">
                             </div>
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
