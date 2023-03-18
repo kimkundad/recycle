@@ -272,7 +272,7 @@
             .done(function (response) {
                 
                 if (response.length == 0) {
-                    $('.auto-load').html("We don't have more data to display :(");
+                    $('.auto-load').html("");
                     return;
                 }
                 $('.auto-load').hide();
