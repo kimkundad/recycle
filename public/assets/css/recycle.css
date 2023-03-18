@@ -2502,3 +2502,34 @@ h4 {
 .fs-13px{
   font-size: 13px !important;
 }
+.me-2 {
+  margin-right: 0.5rem !important;
+  font-weight: 700;
+  font-size: 18px;
+}
+.top-10{
+  margin-top: -18px;
+}
+.min-h-67{
+  min-height: 67px;
+}
+
+.card-out-green-head {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #009247;
+  margin-top: 15px;
+  color: #000;
+}
+.card-out-greenxx{
+  background-color: #fff;
+  padding: 25px 25px 25px 25px;
+  border-radius: 25px;
+  border: 1px solid #009247;
+  margin-top: 15px;
+  color: #000;
+}
+.min-h-134{
+  min-height: 134px;
+}

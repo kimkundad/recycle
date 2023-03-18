@@ -63,64 +63,53 @@
                                     <li><a href="#tab-2">วิสัยทัศน์</a></li>
                                     <li><a href="#tab-3">พันธกิจ</a></li>
                                 </ul>
-                                <div class="ps-tabs">
-                                    <div class="ps-tab active" id="tab-1">
-                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                            <div class="scrollable-content">
-                                                <h4>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</h4>
-                                                <p>ก่อตั้งขึ้นโดยทีมบริหารที่มีประสบการณ์และมีความชำนาญในธุรกิจด้านการนำวัสดุที่ใช้แล้วกลับมาใช้ใหม่ <br><br>
-                                                    ตลอดระยะเวลาที่ผ่านมา บริษัทวงษ์พาณิชย์รีไซเคิลฯ  จัดจำหน่ายสินค้าที่ได้มาตราฐาน อีกทั้งการบริการที่รวดเร็ว 
-                                                    ตรงต่อเวลา เพื่อตอบสนองความต้องการของตลาดอย่างแท้จริง เพื่อให้ลูกค้าทุกท่านได้รับความพึงพอใจสูงสุด 
-                                                    โดยทีมงานฝ่ายขาย ฝ่ายการตลาด และฝ่ายจัดส่ง ที่พร้อมจะตอบสนองความต้องการของลูกค้าตลอดไป  
-                                                    ซึ่ง สินค้าที่ทาง บริษัทวงษ์พาณิชย์รีไซเคิลฯ รับซื้อ และ ขาย หลักๆ นอกเหนือจาก เศษเหล็กทั่วไป พลาสติก ก็จะมี 
-                                                    เหล็กกล้าไร้สนิม โลหะอัลลอย ซิงค์ นิกเกิล ดีบุก สแตนเลส อลูมิเนียม ตะกั่ว ทองแดง สายไฟ พาเลทพลาสติกพาเลทไม้
-                                                     เครื่องจักรต่าง ทั้งนี้ทางบริษัทวงษ์พาณิชย์รีไซเคิล ระยอง จำกัด. เรายังรับริการทำลายเอกสารสำคัญต่างๆ อีกด้วย <br><br>
-                                                    เริ่มต้นกิจการเมื่อปี 2517 ด้วยเงินลงทุนเพียง 1,000 บาท โดยใช้รถปิกอัพเก่าๆ 1 คัน ออกรับซื้อของเก่าตามหมู่บ้านต่างๆ ทั้ง 9 อำเภอ
-                                                     ในจังหวัดพิษณุโลก จากนั้นธุรกิจได้เติบโตอย่างต่อเนื่องจนเพิ่มรถเป็น 3 คัน และมีตึกแถวหลายคูหา ปริมาณขยะที่รับซื้อเพิ่มมากขึ้นจนกระทั่งในปี 2532
-                                                      จึงได้มีการสร้างโรงงานคัดแยกขยะครบวงจรบนเนื้อที่ 6 ไร่ 2 งาน นับเป็นโรงงานคัดแยกขยะรีไซเคิลที่ทันสมัยที่สุดแห่งประเทศไทย ด้วยเงินลงทุนกว่า50ล้านบาท
-                                                       สามารถรองรับปริมาณขยะได้ถึง 800,000 – 1,000,000 กิโลกรัม/วัน ปัจจุบันมีเนื้อที่กว่า 12 ไร่ มีพนักงานกว่า 150 คน โดยรับซื้อวัสดุเหลือใช้และวัสดุที่ต้องการกำจัดประเภท 
-                                                       พลาสติก กระดาษ โลหะ ขวดแก้ว อุปกรณ์สำนักงาน หรือแม้แต่ขยะเศษอาหารและขยะที่ไม่สามารถนำกลับมาใช้ใหม่ได้ 
-                                                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ps-tab" id="tab-2">
-                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                            <div class="scrollable-content">
-                                                <h4>วิสัยทัศน์ วงษ์พาณิชย์รีไซเคิล </h4>
-                                                <p>ก่อตั้งขึ้นโดยทีมบริหารที่มีประสบการณ์และมีความชำนาญในธุรกิจด้านการนำวัสดุที่ใช้แล้วกลับมาใช้ใหม่ <br><br>
-                                                    ตลอดระยะเวลาที่ผ่านมา บริษัทวงษ์พาณิชย์รีไซเคิลฯ  จัดจำหน่ายสินค้าที่ได้มาตราฐาน อีกทั้งการบริการที่รวดเร็ว 
-                                                    ตรงต่อเวลา เพื่อตอบสนองความต้องการของตลาดอย่างแท้จริง เพื่อให้ลูกค้าทุกท่านได้รับความพึงพอใจสูงสุด 
-                                                    โดยทีมงานฝ่ายขาย ฝ่ายการตลาด และฝ่ายจัดส่ง ที่พร้อมจะตอบสนองความต้องการของลูกค้าตลอดไป  
-                                                    ซึ่ง สินค้าที่ทาง บริษัทวงษ์พาณิชย์รีไซเคิลฯ รับซื้อ และ ขาย หลักๆ นอกเหนือจาก เศษเหล็กทั่วไป พลาสติก ก็จะมี 
-                                                    เหล็กกล้าไร้สนิม โลหะอัลลอย ซิงค์ นิกเกิล ดีบุก สแตนเลส อลูมิเนียม ตะกั่ว ทองแดง สายไฟ พาเลทพลาสติกพาเลทไม้
-                                                     เครื่องจักรต่าง ทั้งนี้ทางบริษัทวงษ์พาณิชย์รีไซเคิล ระยอง จำกัด. เรายังรับริการทำลายเอกสารสำคัญต่างๆ อีกด้วย <br><br>
-                                                    เริ่มต้นกิจการเมื่อปี 2517 ด้วยเงินลงทุนเพียง 1,000 บาท โดยใช้รถปิกอัพเก่าๆ 1 คัน ออกรับซื้อของเก่าตามหมู่บ้านต่างๆ ทั้ง 9 อำเภอ
-                                                     ในจังหวัดพิษณุโลก จากนั้นธุรกิจได้เติบโตอย่างต่อเนื่องจนเพิ่มรถเป็น 3 คัน และมีตึกแถวหลายคูหา ปริมาณขยะที่รับซื้อเพิ่มมากขึ้นจนกระทั่งในปี 2532
-                                                      จึงได้มีการสร้างโรงงานคัดแยกขยะครบวงจรบนเนื้อที่ 6 ไร่ 2 งาน นับเป็นโรงงานคัดแยกขยะรีไซเคิลที่ทันสมัยที่สุดแห่งประเทศไทย ด้วยเงินลงทุนกว่า50ล้านบาท
-                                                       สามารถรองรับปริมาณขยะได้ถึง 800,000 – 1,000,000 กิโลกรัม/วัน ปัจจุบันมีเนื้อที่กว่า 12 ไร่ มีพนักงานกว่า 150 คน โดยรับซื้อวัสดุเหลือใช้และวัสดุที่ต้องการกำจัดประเภท 
-                                                       พลาสติก กระดาษ โลหะ ขวดแก้ว อุปกรณ์สำนักงาน หรือแม้แต่ขยะเศษอาหารและขยะที่ไม่สามารถนำกลับมาใช้ใหม่ได้ 
-                                                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ps-tab" id="tab-3">
-                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                            <div class="scrollable-content">
-                                                <h4>พันธกิจ วงษ์พาณิชย์รีไซเคิล </h4>
-                                                <p>ก่อตั้งขึ้นโดยทีมบริหารที่มีประสบการณ์และมีความชำนาญในธุรกิจด้านการนำวัสดุที่ใช้แล้วกลับมาใช้ใหม่ <br>
-                                                    ตลอดระยะเวลาที่ผ่านมา บริษัทวงษ์พาณิชย์รีไซเคิลฯ  จัดจำหน่ายสินค้าที่ได้มาตราฐาน อีกทั้งการบริการที่รวดเร็ว 
-                                                    ตรงต่อเวลา เพื่อตอบสนองความต้องการของตลาดอย่างแท้จริง เพื่อให้ลูกค้าทุกท่านได้รับความพึงพอใจสูงสุด 
-                                                    โดยทีมงานฝ่ายขาย ฝ่ายการตลาด และฝ่ายจัดส่ง ที่พร้อมจะตอบสนองความต้องการของลูกค้าตลอดไป  
-                                                    ซึ่ง สินค้าที่ทาง บริษัทวงษ์พาณิชย์รีไซเคิลฯ รับซื้อ และ ขาย หลักๆ นอกเหนือจาก เศษเหล็กทั่วไป พลาสติก ก็จะมี 
-                                                    เหล็กกล้าไร้สนิม โลหะอัลลอย ซิงค์ นิกเกิล ดีบุก สแตนเลส อลูมิเนียม ตะกั่ว ทองแดง สายไฟ พาเลทพลาสติกพาเลทไม้
-                                                     เครื่องจักรต่าง ทั้งนี้ทางบริษัทวงษ์พาณิชย์รีไซเคิล ระยอง จำกัด. เรายังรับริการทำลายเอกสารสำคัญต่างๆ อีกด้วย <br>
-                                                    เริ่มต้นกิจการเมื่อปี 2517 ด้วยเงินลงทุนเพียง 1,000 บาท โดยใช้รถปิกอัพเก่าๆ 1 คัน ออกรับซื้อของเก่าตามหมู่บ้านต่างๆ ทั้ง 9 อำเภอ
-                                                     ในจังหวัดพิษณุโลก จากนั้นธุรกิจได้เติบโตอย่างต่อเนื่องจนเพิ่มรถเป็น 3 คัน และมีตึกแถวหลายคูหา ปริมาณขยะที่รับซื้อเพิ่มมากขึ้นจนกระทั่งในปี 2532
-                                                      จึงได้มีการสร้างโรงงานคัดแยกขยะครบวงจรบนเนื้อที่ 6 ไร่ 2 งาน นับเป็นโรงงานคัดแยกขยะรีไซเคิลที่ทันสมัยที่สุดแห่งประเทศไทย ด้วยเงินลงทุนกว่า50ล้านบาท
-                                                       สามารถรองรับปริมาณขยะได้ถึง 800,000 – 1,000,000 กิโลกรัม/วัน ปัจจุบันมีเนื้อที่กว่า 12 ไร่ มีพนักงานกว่า 150 คน โดยรับซื้อวัสดุเหลือใช้และวัสดุที่ต้องการกำจัดประเภท 
-                                                       พลาสติก กระดาษ โลหะ ขวดแก้ว อุปกรณ์สำนักงาน หรือแม้แต่ขยะเศษอาหารและขยะที่ไม่สามารถนำกลับมาใช้ใหม่ได้ 
-                                                    </p>
+                                <div class="ps-tab" id="tab-3">
+                                    <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
+                                        <div class="scrollable-content">
+                                         
+                                            <style>
+                                                .table td, .table th {
+                                                    border-top: 1px solid #ffffff;
+                                                }
+                                            </style>
+                                            <br>
+                                            <div class="table-responsive mb-9">
+                                                <table class="table mb-3">
+                                                    <tbody>
+                                                        
+                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                            <td class="d-flex align-items-center">
+                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                มุ่งพัฒนาธุรกิจรีไซเคิลอย่างครบวงจร เพื่อสร้างความพึงพอใจให้แก่ลูกค้าผ่านการนำเสนอผลิตภัณฑ์และการบริการที่มีคุณภาพ
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                            <td class="d-flex align-items-center">
+                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                นำ Digital Technology มาช่วยต่อยอดการบริการ เพื่อรองรับลูกค้าทั้งในประเทศและต่างประเทศ
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                            <td class="d-flex align-items-center">
+                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                แสวงหาพันธมิตรทางธุรกิจ เพื่อพัฒนาศักยภาพและขีดความสามารถในการแข่งขัน 
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                            <td class="d-flex align-items-center">
+                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                มุ่งเน้นการบริหารจัดการ โดยคำนึงถึงสิ่งแวดล้อมตามมาตรฐานสากลและความปลอดภัยของชุมชนเป็นสำคัญ
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                            <td class="d-flex align-items-center">
+                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                ปฏิบัติตามกฎหมายอย่างเคร่งครัด ภายใต้หลักการกำกับดูแลกิจการที่ดี มีธรรมาภิบาลและมีความรับผิดชอบต่อสังคม
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -246,13 +235,13 @@
 
                 <div class="ps-product__content ps-tab-root">
                     <ul class="ps-tab-list">
-                        <li class="active"><a href="#tab-1">นโยบายสิ่งแวดล้อม</a></li>
-                        <li><a href="#tab-2">Quality Policy</a></li>
-                        <li><a href="#tab-3">CSR Policy</a></li>
-                        <li><a href="#tab-4">SHE Policy </a></li>
+                        <li class="active"><a href="#tabx-1">นโยบายสิ่งแวดล้อม</a></li>
+                        <li><a href="#tabx-2">นโยบายควบคุมคุณภาพ</a></li>
+                        <li><a href="#tabx-3">นโยบาย HSE</a></li>
+                        <li><a href="#tabx-4">นโยบาย CSR </a></li>
                     </ul>
                     <div class="ps-tabs">
-                        <div class="ps-tab active" id="tab-1">
+                        <div class="ps-tab active" id="tabx-1">
                             <div class="row align-content-lg-stretch">
                                 <div class="col-md-4">
                                     <img src="{{ url('img/policy 448x542.jpg') }}" class="bor-r-12">
@@ -266,31 +255,31 @@
                                                         <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
-                                                        <p class="mb-0">To commit practice in accordance with the law of environment and strictly in related regulations.</p>
+                                                        <p class="mb-0 min-h-67">ดำเนินธุรกิจตามข้อกำหนดและระเบียบปฏิบัติด้านกฎหมายสิ่งแวดล้อมอย่างเคร่งครัด</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-green set-margin-card"> 
+                                            <div class=" card-out-greenxx set-margin-card"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
-                                                        <p class="mb-0">To commit practice in accordance with the law of environment and strictly in related regulations.</p>
+                                                        <p class="mb-0 min-h-67">มุ่งเน้นการบริหารจัดการ โดยคำนึงถึงการลดผลกระทบด้านสิ่งแวดล้อม และความปลอดภัยของชุมชนเป็นสำคัญ</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-green set-margin-card mt-16"> 
+                                            <div class=" card-out-greenxx set-margin-card mt-16"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
-                                                        <p class="mb-0">To commit practice in accordance with the law of environment and strictly in related regulations.</p>
+                                                        <p class="mb-0 min-h-67">จัดทำระบบการจัดการสิ่งแวดล้อมโดยถือเป็นส่วนหนึ่งของการดำเนินธุรกิจ รวมทั้งการติดตามและรายงานผลการดำเนินงานด้านการพัฒนาอย่างต่อเนื่อง                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -302,7 +291,7 @@
                                                         <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
-                                                        <p class="mb-0">To commit practice in accordance with the law of environment and strictly in related regulations.</p>
+                                                        <p class="mb-0 min-h-67">เสริมสร้างความตระหนักรู้และส่งเสริมการมีส่วนร่วมเกี่ยวกับมาตรฐานสิ่งแวดล้อมให้แก่พนักงานทุกระดับ</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -313,16 +302,254 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ps-tab" id="tab-2">
-                            <div >
-                                
+                        <div class="ps-tab" id="tabx-2">
+                            <div class="row align-content-lg-stretch">
+                                <div class="col-md-4">
+                                    <img src="{{ url('img/policy 448x542.jpg') }}" class="bor-r-12">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row ">
+                                        <div class="col-md-6 set-pad-in-md ">
+                                            <div class="card-green set-margin-card"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_green pt-25">
+                                                        <p class="mb-0 min-h-67">บริหารจัดการด้านคุณภาพและความปลอดภัยอย่างต่อเนื่อง เพื่อให้สอดคล้องกับข้อกำหนดตามมาตรฐานการดำเนินงานของบริษัทอย่างเคร่งครัดและมีประสิทธิผล                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 set-pad-in-md">
+                                            <div class=" card-out-greenxx set-margin-card"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_out-green pt-25">
+                                                        <p class="mb-0 min-h-67">ตรวจสอบประสิทธิภาพและผลลัพธ์ของการควบคุมคุณภาพ เพื่อให้เกิดประสิทธิภาพสูงสุด</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 set-pad-in-md">
+                                            <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_out-green pt-25">
+                                                        <p class="mb-0 min-h-67">เสริมสร้างความตระหนักรู้เกี่ยวกับนโยบายควบคุมคุณภาพให้แก่พนักงาน
+                                                            เพื่อให้การดำเนินงานดำรงอยู่ในมาตรฐาน และสร้างความพึงพอใจให้แก้ผู้ใช้บริการ</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 set-pad-in-md">
+                                            <div class="card-green set-margin-card mt-16"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_green pt-25">
+                                                        <p class="mb-0 min-h-67">พัฒนาศักยภาพของบุคลากรให้มีความรู้ความสามารถ เพื่อให้การดำเนินงานบรรลุวัตถุประสงค์ตามเป้าหมายขององค์กร</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
-                        <div class="ps-tab" id="tab-3">
-                            <div >
-                                
+                        <div class="ps-tab" id="tabx-3">
+                            <div class="row align-content-lg-stretch">
+                                <div class="col-md-12">
+                                    <div class=" card-out-green-head set-margin-card"> 
+                                        <div class="card-green-content">
+                                            <div class="ps-block__content_out-green text-center">
+                                                <p class="mb-0"><b>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด มีความมุ่งมั่นในการสร้างสถานที่ทำงานให้น่าอยู่โดยเน้น 4 เรื่องสำคัญ ได้แก่ สะอาด ปลอดภัย ไร้มลพิษ มีชีวิตชีวาในการทำงาน</b></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row ">
+                                        <div class="col-md-3 set-pad-in-md ">
+                                            <div class="card-green set-margin-card"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_green pt-25">
+                                                        <p class="mb-0 min-h-134">มุ่งมั่นที่จะลดอุบัติเหตุและป้องกันพนักงานรวมทั้งบุคคลภายนอก ที่เข้ามาภายในบริษัทไม่ให้เกิดอุบัติเหตุหรือโรคจากการทำงานใดๆ ทั้งสิ้น รวมทั้งมุ่งมั่นที่จะปฏิบัติตามที่กฎหมายกำหนด                                                      </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 set-pad-in-md">
+                                            <div class=" card-out-greenxx set-margin-card"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_out-green pt-25">
+                                                        <p class="mb-0 min-h-134">มุ่งมั่นที่จะป้องกันและปราบปรามพร้อมทั้งให้ความรู้ถึงพิษภัยและโทษทัณฑ์ของยาเสพติด เพื่อให้พนักงานปราศจากยากเสพติดและเป็นบริษัทสีขาว</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-3 set-pad-in-md">
+                                            <div class="card-green set-margin-card mt-16"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="mt-8px" src="{{ url('img/three.png') }}" style="height:60px">
+                                                    </div>
+                                                    <div class="ps-block__content_green pt-25">
+                                                        <p class="mb-0 min-h-134">ส่งเสริมกิจกรรมสร้างความปลอดภัยและสุขภาพอนามัยที่ดีแก่พนักงาน ตลอดจนพัฒนาและปรับปรุงสภาพแวดล้อมการทำงานให้เป็นสถานที่ทำงานที่ปลอดภัยน่าอยู่น่าทำงานและไม่เกิดผลกระทบต่อสิ่งแวดล้อม
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 set-pad-in-md">
+                                            <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3117.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_out-green pt-25">
+                                                        <p class="mb-0 min-h-134">พนักงานและบุคคลภายนอกที่เข้ามาภายในบริษัทฯ ทุกคน ต้องให้ความร่วมมือในกิจกรรมความปลอดภัยทุกกิจกรรมและดูแลรักษาความสะอาดและความเป็นระเบียบเรียบร้อยของสถานที่ปฏิบัติงานตามมาตรฐาน 5 ส
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 set-pad-in-md">
+                                            <div class="card-green set-margin-card mt-16"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="mt-8px" src="{{ url('img/five.png') }}" style="height:60px">
+                                                    </div>
+                                                    <div class="ps-block__content_green pt-25">
+                                                        <p class="mb-0 min-h-134">พนักงานทุกคนรวมทั้งบุคคลภายนอกที่เข้ามาภายในบริษัทฯ มีหน้าที่ต้องปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ อย่างเคร่งครัดและระมัดระวังไม่ให้เกิดอุบัติเหตุและความสูญเสียใดๆ ทั้งต่อตนเองและเพื่อนร่วมงาน ตลอดจนทรัพย์สินของบริษัทฯ
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 set-pad-in-md">
+                                            <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/six.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_out-green pt-25">
+                                                        <p class="mb-0 min-h-134">ผู้บังคับบัญชาทุกระดับมีหน้าที่รับผิดชอบเกี่ยวกับความปลอดภัยของผู้ใต้บังคับบัญชาตามสายงานอย่างจริงจังและต่อเนื่อง ตลอดจนต้องฝึกสอนและเป็นตัวอย่างในการปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 set-pad-in-md">
+                                            <div class="card-green set-margin-card mt-16"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="mt-8px" src="{{ url('img/seven.png') }}" style="height:60px">
+                                                    </div>
+                                                    <div class="ps-block__content_green pt-25">
+                                                        <p class="mb-0 min-h-134">ทางบริษัทฯ จะนำการปฏิบัติงานด้านความปลอดภัยและการเกิดอุบัติเหตุในแต่ละแผนกเป็นส่วนหนึ่งในการพิจารณาต่อสัญญาการจ้างและประเมินผลการปฏิบัติงานประจำปี
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
+
+                        <div class="ps-tab" id="tabx-4">
+                            <div class="row align-content-lg-stretch">
+                                <div class="col-md-12" style="margin-bottom:20px">
+                                    <div class=" card-out-green-head set-margin-card"> 
+                                        <div class="card-green-content">
+                                            <div class="ps-block__content_out-green text-center">
+                                                <p class="mb-0"><b>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด ยึดมั่นในหลักจริยธรรมทางธุรกิจ <br>โดยมุ่งหวังที่จะยกระดับและพัฒนาคุณภาพชีวิตของคนในสังคม เพื่อเป็นรากฐานที่ดีในการสร้างสังคมที่แข็งแกร่งอย่างยั่งยืน
+                                                </b></p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="{{ url('img/policy 448x542.jpg') }}" class="bor-r-12">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row ">
+                                        <div class="col-md-6 set-pad-in-md ">
+                                            <div class="card-green set-margin-card"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_green pt-25">
+                                                        <p class="mb-0 min-h-67">มุ่งมั่นดำเนินธุรกิจด้วยการรับผิดชอบต่อสังคม (Corporate Social Responsibility: CSR) ภายใต้หลักพื้นฐานทางจริยธรรม เพื่อการเติบโตอย่างยั่งยืนร่วมกับชุมชน</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 set-pad-in-md">
+                                            <div class=" card-out-greenxx set-margin-card"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_out-green pt-25">
+                                                        <p class="mb-0 min-h-67">นำประสบการณ์และความเชี่ยวชาญทางด้านเทคโนโลยี มาร่วมพัฒนาคุณภาพชีวิตของคนในชุมชน และสิ่งแวดล้อม</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 set-pad-in-md">
+                                            <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_out-green pt-25">
+                                                        <p class="mb-0 min-h-67">ส่งเสริมกิจกรรมเพื่อสังคมและชุมชน มุ่งลดการใช้งานทรัพยากรจากเขตภูมิภาคให้น้อยที่สุด                                                      </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 set-pad-in-md">
+                                            <div class="card-green set-margin-card mt-16"> 
+                                                <div class="card-green-content">
+                                                    <div class="d-flex justify-content-between">
+                                                        <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
+                                                    </div>
+                                                    <div class="ps-block__content_green pt-25">
+                                                        <p class="mb-0 min-h-67">สร้างความตระหนักรู้ ความเข้าใจ และความร่วมมือ ในโครงการหรือกิจกรรมด้าน CSR ให้แก่บุคคลากรทุกระดับ
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
