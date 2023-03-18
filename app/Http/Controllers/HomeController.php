@@ -35,7 +35,7 @@ class HomeController extends Controller
     public function index()
     {
 
-      $blog = news::where('status', 1)->orderby('id', 'desc')->limit(3)->get();
+      $blog = news::where('status', 1)->whereDate('startdate', '<=', date("Y-m-d"))->orderby('id', 'desc')->limit(3)->get();
       $data['blog'] = $blog;
 
       $ban = alliance::where('status', 1)->get();
@@ -105,7 +105,7 @@ class HomeController extends Controller
     public function blog(){
 
 
-      $objs = news::where('status', 1)->orderby('id', 'desc')->limit(1)->get();
+      $objs = news::where('status', 1)->whereDate('startdate', '<=', date("Y-m-d"))->orderby('id', 'desc')->limit(1)->get();
       $data['objs'] = $objs;
 
       return view('blog', $data);
@@ -114,7 +114,7 @@ class HomeController extends Controller
 
     public function getArticles(Request $request)
     {
-        $results = news::where('status', 1)->orderBy('id')->paginate(6);
+        $results = news::where('status', 1)->whereDate('startdate', '<=', date("Y-m-d"))->orderBy('id')->paginate(6);
         $artilces = '';
         if ($request->ajax()) {
             foreach ($results as $result) {

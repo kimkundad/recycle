@@ -81,6 +81,7 @@
                                     <thead>
                                         <tr>
                                             <th class="p-0 ">หัวข้อ</th>
+                                            <th class="p-0 ">วันที่แสดง</th>
                                             <th class="p-0 ">ยอดวิว</th>
                                             <th class="p-0 ">status</th>
                                             <th class="p-0 "></th>
@@ -96,6 +97,7 @@
                                             <td>
                                                 <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $item->title }}</a>
                                             </td>
+                                            <td>{{ $item->startdate }}</td>
                                             <td>{{ $item->view }}</td>
                                             <td>
                                                 <div class="form-check form-check-solid form-switch form-check-custom fv-row">

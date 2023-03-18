@@ -80,11 +80,12 @@ class NewConController extends Controller
 
     public function store(Request $request)
     {
-        //
+        // startdate
         $this->validate($request, [
             'title' => 'required',
             'sub_title' => 'required',
             'detail' => 'required',
+            'startdate' => 'required',
             'image' => 'required'
         ]);
 
@@ -109,6 +110,7 @@ class NewConController extends Controller
            $objs->sub_title = $request['sub_title'];
            $objs->detail = $request['detail'];
            $objs->type = $request['type'];
+           $objs->startdate = $request['startdate'];
            $objs->image = $input['imagename'];
            $objs->type = 0;
            $objs->status = $status;
@@ -160,6 +162,7 @@ class NewConController extends Controller
             'title' => 'required',
             'sub_title' => 'required',
             'detail' => 'required',
+            'startdate' => 'required'
            ]);
            
            $image = $request->file('image');
@@ -178,6 +181,7 @@ class NewConController extends Controller
            $objs->sub_title = $request['sub_title'];
            $objs->detail = $request['detail'];
            $objs->type = $request['type'];
+           $objs->startdate = $request['startdate'];
            $objs->type = 0;
            $objs->status = $status;
            $objs->save();
@@ -204,6 +208,7 @@ class NewConController extends Controller
            $objs->detail = $request['detail'];
            $objs->type = $request['type'];
            $objs->image = $input['imagename'];
+           $objs->startdate = $request['startdate'];
            $objs->type = 0;
            $objs->status = $status;
            $objs->save();
