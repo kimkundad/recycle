@@ -2493,6 +2493,9 @@ h4 {
 .mt-15{
   margin-top: 15px;
 }
-.min-h-45{
-  min-height: 45px;
+.min-h-145{
+  min-height: 145px;
+}
+.fs-13px{
+  font-size: 13px !important;
 }
