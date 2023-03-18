@@ -395,9 +395,23 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="ps-tab" id="tabx-3">
+                            <style>
+                                .owl-carousel .owl-item img {
+    display: block;
+    width: 60px !important;
+}
+.set-pad-in-md {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+.min-h-90{
+    min-height: 90px
+}
+                            </style>
                             <div class="row align-content-lg-stretch">
-                                <div class="col-md-12">
+                                <div class="col-md-12" style="margin-bottom:20px">
                                     <div class=" card-out-green-head set-margin-card"> 
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
@@ -410,7 +424,137 @@
                                     <img src="{{ url('img/policy 448x542.jpg') }}" class="bor-r-12">
                                 </div>
                                 <div class="col-md-8">
-                                    <div class="row ">
+
+                                    <div class="ps-section__header" style="margin-bottom: 0px !important; border-bottom: 1px solid #ffffff; padding-bottom: 0px;">
+                                        <h3></h3>
+                                        <div class="ps-section__nav">
+                                            <a class="ps-carousel__prev" href=".ps-carousel--testimonials">
+                                                <i class="icon-chevron-left"></i>
+                                            </a>
+                                            <a class="ps-carousel__next" href=".ps-carousel--testimonials">
+                                                <i class="icon-chevron-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="ps-carousel--testimonials owl-slider" 
+                                    data-owl-auto="true"
+                                     data-owl-loop="true" 
+                                     data-owl-speed="15000" 
+                                     data-owl-gap="10" 
+                                     data-owl-nav="false" 
+                                     data-owl-dots="false" 
+                                     data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on">
+                                       
+                                        <div class="row">
+                                            <div class="col-md-6 set-pad-in-md ">
+                                                <div class="card-green set-margin-card"> 
+                                                    <div class="card-green-content">
+                                                        <div class="d-flex justify-content-between">
+                                                            <img class="mt-8px img-60" src="{{ url('img/Group 3115.png') }}">
+                                                        </div>
+                                                        <div class="ps-block__content_green pt-25">
+                                                            <p class="mb-0 min-h-90">มุ่งมั่นที่จะลดอุบัติเหตุและป้องกันพนักงานรวมทั้งบุคคลภายนอก ที่เข้ามาภายในบริษัทไม่ให้เกิดอุบัติเหตุหรือโรคจากการทำงานใดๆ ทั้งสิ้น รวมทั้งมุ่งมั่นที่จะปฏิบัติตามที่กฎหมายกำหนด                                                      </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 set-pad-in-md">
+                                                <div class=" card-out-greenxx set-margin-card"> 
+                                                    <div class="card-green-content">
+                                                        <div class="d-flex justify-content-between">
+                                                            <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}">
+                                                        </div>
+                                                        <div class="ps-block__content_out-green pt-25">
+                                                            <p class="mb-0 min-h-90">มุ่งมั่นที่จะป้องกันและปราบปรามพร้อมทั้งให้ความรู้ถึงพิษภัยและโทษทัณฑ์ของยาเสพติด เพื่อให้พนักงานปราศจากยากเสพติดและเป็นบริษัทสีขาว</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-md-6 set-pad-in-md">
+                                                <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                    <div class="card-green-content">
+                                                        <div class="d-flex justify-content-between">
+                                                            <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="height:60px">
+                                                            
+                                                        </div>
+                                                        <div class="ps-block__content_out-green pt-25">
+                                                            <p class="mb-0 min-h-90">
+                                                                ส่งเสริมกิจกรรมสร้างความปลอดภัยและสุขภาพอนามัยที่ดีแก่พนักงาน ตลอดจนพัฒนาและปรับปรุงสภาพแวดล้อมการทำงานให้เป็นสถานที่ทำงานที่ปลอดภัยน่าอยู่น่าทำงานและไม่เกิดผลกระทบต่อสิ่งแวดล้อม
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6 set-pad-in-md">
+                                                <div class="card-green set-margin-card mt-16"> 
+                                                    <div class="card-green-content">
+                                                        <div class="d-flex justify-content-between">
+                                                            <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}">
+                                                        </div>
+                                                        <div class="ps-block__content_green pt-25">
+                                                            <p class="mb-0 min-h-90">
+                                                                พนักงานและบุคคลภายนอกที่เข้ามาภายในบริษัทฯ ทุกคน ต้องให้ความร่วมมือในกิจกรรมความปลอดภัยทุกกิจกรรมและดูแลรักษาความสะอาดและความเป็นระเบียบเรียบร้อยของสถานที่ปฏิบัติงานตามมาตรฐาน 5 ส
+                                                                
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 set-pad-in-md">
+                                                <div class="card-green set-margin-card mt-16"> 
+                                                    <div class="card-green-content">
+                                                        <div class="d-flex justify-content-between">
+                                                            <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="height:60px">
+                                                        </div>
+                                                        <div class="ps-block__content_green pt-25">
+                                                            <p class="mb-0 min-h-90">พนักงานทุกคนรวมทั้งบุคคลภายนอกที่เข้ามาภายในบริษัทฯ มีหน้าที่ต้องปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ อย่างเคร่งครัดและระมัดระวังไม่ให้เกิดอุบัติเหตุและความสูญเสียใดๆ ทั้งต่อตนเองและเพื่อนร่วมงาน ตลอดจนทรัพย์สินของบริษัทฯ
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-md-6 set-pad-in-md">
+                                                <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                    <div class="card-green-content">
+                                                        <div class="d-flex justify-content-between">
+                                                            <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}">
+                                                        </div>
+                                                        <div class="ps-block__content_out-green pt-25">
+                                                            <p class="mb-0 min-h-90">ผู้บังคับบัญชาทุกระดับมีหน้าที่รับผิดชอบเกี่ยวกับความปลอดภัยของผู้ใต้บังคับบัญชาตามสายงานอย่างจริงจังและต่อเนื่อง ตลอดจนต้องฝึกสอนและเป็นตัวอย่างในการปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ
+    
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-md-6 set-pad-in-md">
+                                                <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                    <div class="card-green-content">
+                                                        <div class="d-flex justify-content-between">
+                                                            <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}">
+                                                        </div>
+                                                        <div class="ps-block__content_out-green pt-25">
+                                                            <p class="mb-0 min-h-90"> 
+                                                                ทางบริษัทฯ จะนำการปฏิบัติงานด้านความปลอดภัยและการเกิดอุบัติเหตุในแต่ละแผนกเป็นส่วนหนึ่งในการพิจารณาต่อสัญญาการจ้างและประเมินผลการปฏิบัติงานประจำปี
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    {{-- <div class="row ">
+
                                         <div class="col-md-6 set-pad-in-md ">
                                             <div class="card-green set-margin-card"> 
                                                 <div class="card-green-content">
@@ -418,7 +562,7 @@
                                                         <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
-                                                        <p class="mb-0 min-h-134">มุ่งมั่นที่จะลดอุบัติเหตุและป้องกันพนักงานรวมทั้งบุคคลภายนอก ที่เข้ามาภายในบริษัทไม่ให้เกิดอุบัติเหตุหรือโรคจากการทำงานใดๆ ทั้งสิ้น รวมทั้งมุ่งมั่นที่จะปฏิบัติตามที่กฎหมายกำหนด                                                      </p>
+                                                        <p class="mb-0 ">มุ่งมั่นที่จะลดอุบัติเหตุและป้องกันพนักงานรวมทั้งบุคคลภายนอก ที่เข้ามาภายในบริษัทไม่ให้เกิดอุบัติเหตุหรือโรคจากการทำงานใดๆ ทั้งสิ้น รวมทั้งมุ่งมั่นที่จะปฏิบัติตามที่กฎหมายกำหนด                                                      </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -430,7 +574,7 @@
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
-                                                        <p class="mb-0 min-h-134">มุ่งมั่นที่จะป้องกันและปราบปรามพร้อมทั้งให้ความรู้ถึงพิษภัยและโทษทัณฑ์ของยาเสพติด เพื่อให้พนักงานปราศจากยากเสพติดและเป็นบริษัทสีขาว</p>
+                                                        <p class="mb-0 ">มุ่งมั่นที่จะป้องกันและปราบปรามพร้อมทั้งให้ความรู้ถึงพิษภัยและโทษทัณฑ์ของยาเสพติด เพื่อให้พนักงานปราศจากยากเสพติดและเป็นบริษัทสีขาว</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -444,7 +588,7 @@
                                                         
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
-                                                        <p class="mb-0 min-h-134">
+                                                        <p class="mb-0 ">
                                                             ส่งเสริมกิจกรรมสร้างความปลอดภัยและสุขภาพอนามัยที่ดีแก่พนักงาน ตลอดจนพัฒนาและปรับปรุงสภาพแวดล้อมการทำงานให้เป็นสถานที่ทำงานที่ปลอดภัยน่าอยู่น่าทำงานและไม่เกิดผลกระทบต่อสิ่งแวดล้อม
                                                         </p>
                                                     </div>
@@ -459,7 +603,7 @@
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3117.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
-                                                        <p class="mb-0 min-h-134">
+                                                        <p class="mb-0 ">
                                                             พนักงานและบุคคลภายนอกที่เข้ามาภายในบริษัทฯ ทุกคน ต้องให้ความร่วมมือในกิจกรรมความปลอดภัยทุกกิจกรรมและดูแลรักษาความสะอาดและความเป็นระเบียบเรียบร้อยของสถานที่ปฏิบัติงานตามมาตรฐาน 5 ส
                                                             
                                                         </p>
@@ -475,12 +619,13 @@
                                                         <img class="mt-8px" src="{{ url('img/five.png') }}" style="height:60px">
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
-                                                        <p class="mb-0 min-h-134">พนักงานทุกคนรวมทั้งบุคคลภายนอกที่เข้ามาภายในบริษัทฯ มีหน้าที่ต้องปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ อย่างเคร่งครัดและระมัดระวังไม่ให้เกิดอุบัติเหตุและความสูญเสียใดๆ ทั้งต่อตนเองและเพื่อนร่วมงาน ตลอดจนทรัพย์สินของบริษัทฯ
+                                                        <p class="mb-0 ">พนักงานทุกคนรวมทั้งบุคคลภายนอกที่เข้ามาภายในบริษัทฯ มีหน้าที่ต้องปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ อย่างเคร่งครัดและระมัดระวังไม่ให้เกิดอุบัติเหตุและความสูญเสียใดๆ ทั้งต่อตนเองและเพื่อนร่วมงาน ตลอดจนทรัพย์สินของบริษัทฯ
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="col-md-6 set-pad-in-md">
                                             <div class=" card-out-greenxx set-margin-card mt-16"> 
                                                 <div class="card-green-content">
@@ -488,7 +633,7 @@
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/six.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
-                                                        <p class="mb-0 min-h-134">ผู้บังคับบัญชาทุกระดับมีหน้าที่รับผิดชอบเกี่ยวกับความปลอดภัยของผู้ใต้บังคับบัญชาตามสายงานอย่างจริงจังและต่อเนื่อง ตลอดจนต้องฝึกสอนและเป็นตัวอย่างในการปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ
+                                                        <p class="mb-0 ">ผู้บังคับบัญชาทุกระดับมีหน้าที่รับผิดชอบเกี่ยวกับความปลอดภัยของผู้ใต้บังคับบัญชาตามสายงานอย่างจริงจังและต่อเนื่อง ตลอดจนต้องฝึกสอนและเป็นตัวอย่างในการปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ
 
                                                         </p>
                                                     </div>
@@ -503,7 +648,7 @@
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
-                                                        <p class="mb-0 min-h-134"> 
+                                                        <p class="mb-0 "> 
                                                             ทางบริษัทฯ จะนำการปฏิบัติงานด้านความปลอดภัยและการเกิดอุบัติเหตุในแต่ละแผนกเป็นส่วนหนึ่งในการพิจารณาต่อสัญญาการจ้างและประเมินผลการปฏิบัติงานประจำปี
                                                         </p>
                                                     </div>
@@ -513,7 +658,7 @@
 
                                         
                                         
-                                    </div>
+                                    </div> --}}
                                     
                                 </div>
                             </div>
