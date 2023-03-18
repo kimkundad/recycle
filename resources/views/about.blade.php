@@ -406,9 +406,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-4">
+                                    <img src="{{ url('img/policy 448x542.jpg') }}" class="bor-r-12">
+                                </div>
+                                <div class="col-md-8">
                                     <div class="row ">
-                                        <div class="col-md-3 set-pad-in-md ">
+                                        <div class="col-md-6 set-pad-in-md ">
                                             <div class="card-green set-margin-card"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
@@ -420,7 +423,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 set-pad-in-md">
+                                        <div class="col-md-6 set-pad-in-md">
                                             <div class=" card-out-greenxx set-margin-card"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
@@ -432,34 +435,40 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <div class="col-md-3 set-pad-in-md">
-                                            <div class="card-green set-margin-card mt-16"> 
+
+                                        <div class="col-md-6 set-pad-in-md">
+                                            <div class=" card-out-greenxx set-margin-card mt-16"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="mt-8px" src="{{ url('img/three.png') }}" style="height:60px">
+                                                        <img class="mt-8px" src="{{ url('img/Group 3118.png') }}" style="height:60px">
+                                                        
                                                     </div>
-                                                    <div class="ps-block__content_green pt-25">
-                                                        <p class="mb-0 min-h-134">ส่งเสริมกิจกรรมสร้างความปลอดภัยและสุขภาพอนามัยที่ดีแก่พนักงาน ตลอดจนพัฒนาและปรับปรุงสภาพแวดล้อมการทำงานให้เป็นสถานที่ทำงานที่ปลอดภัยน่าอยู่น่าทำงานและไม่เกิดผลกระทบต่อสิ่งแวดล้อม
+                                                    <div class="ps-block__content_out-green pt-25">
+                                                        <p class="mb-0 min-h-134">
+                                                            ส่งเสริมกิจกรรมสร้างความปลอดภัยและสุขภาพอนามัยที่ดีแก่พนักงาน ตลอดจนพัฒนาและปรับปรุงสภาพแวดล้อมการทำงานให้เป็นสถานที่ทำงานที่ปลอดภัยน่าอยู่น่าทำงานและไม่เกิดผลกระทบต่อสิ่งแวดล้อม
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                        
+                                        <div class="col-md-6 set-pad-in-md">
+                                            <div class="card-green set-margin-card mt-16"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3117.png') }}">
                                                     </div>
-                                                    <div class="ps-block__content_out-green pt-25">
-                                                        <p class="mb-0 min-h-134">พนักงานและบุคคลภายนอกที่เข้ามาภายในบริษัทฯ ทุกคน ต้องให้ความร่วมมือในกิจกรรมความปลอดภัยทุกกิจกรรมและดูแลรักษาความสะอาดและความเป็นระเบียบเรียบร้อยของสถานที่ปฏิบัติงานตามมาตรฐาน 5 ส
+                                                    <div class="ps-block__content_green pt-25">
+                                                        <p class="mb-0 min-h-134">
+                                                            พนักงานและบุคคลภายนอกที่เข้ามาภายในบริษัทฯ ทุกคน ต้องให้ความร่วมมือในกิจกรรมความปลอดภัยทุกกิจกรรมและดูแลรักษาความสะอาดและความเป็นระเบียบเรียบร้อยของสถานที่ปฏิบัติงานตามมาตรฐาน 5 ส
+                                                            
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 set-pad-in-md">
+                                        
+                                        <div class="col-md-6 set-pad-in-md">
                                             <div class="card-green set-margin-card mt-16"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
@@ -472,7 +481,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 set-pad-in-md">
+                                        <div class="col-md-6 set-pad-in-md">
                                             <div class=" card-out-greenxx set-margin-card mt-16"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
@@ -486,20 +495,23 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 set-pad-in-md">
-                                            <div class="card-green set-margin-card mt-16"> 
+
+                                        <div class="col-md-6 set-pad-in-md">
+                                            <div class=" card-out-greenxx set-margin-card mt-16"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="mt-8px" src="{{ url('img/seven.png') }}" style="height:60px">
+                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}">
                                                     </div>
-                                                    <div class="ps-block__content_green pt-25">
-                                                        <p class="mb-0 min-h-134">ทางบริษัทฯ จะนำการปฏิบัติงานด้านความปลอดภัยและการเกิดอุบัติเหตุในแต่ละแผนกเป็นส่วนหนึ่งในการพิจารณาต่อสัญญาการจ้างและประเมินผลการปฏิบัติงานประจำปี
-
+                                                    <div class="ps-block__content_out-green pt-25">
+                                                        <p class="mb-0 min-h-134"> 
+                                                            ทางบริษัทฯ จะนำการปฏิบัติงานด้านความปลอดภัยและการเกิดอุบัติเหตุในแต่ละแผนกเป็นส่วนหนึ่งในการพิจารณาต่อสัญญาการจ้างและประเมินผลการปฏิบัติงานประจำปี
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        
                                         
                                     </div>
                                     

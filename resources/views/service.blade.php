@@ -178,7 +178,7 @@
                                             <div class="scrollable-content">
                                                 <h4>1. PTTEP-Offshore surplus</h4>
                                                 <p>WPN ได้รับคัดเลือกจาก PTTEP ในการจัดซื้ออุปกรณ์ที่เหลือใช้จากกระบวนการขุดเจาะและการผลิตของ(E&P) อาทิ หัวขุดเจาะ Drilling Bits, casing, production tubing, wellhead Christmas tree, structure steel,  sparepart, 
-                                                    offshore crane รวมถึงอุปกรณ์ทางเรือ เช่น <br>offshore crane, <br>mooring rope, <br>anchore, <br>fender ฯลฯ <br>โดยอุปกรณ์ต่างๆสามารถนำไปใช้เพื่อนำเข้าสู่กระบวนการ reused และ รีไซเคิลเพื่อจำหน่ายต่อไป
+                                                    offshore crane รวมถึงอุปกรณ์ทางเรือ เช่น offshore crane, mooring rope, anchore, fender ฯลฯ โดยอุปกรณ์ต่างๆสามารถนำไปใช้เพื่อนำเข้าสู่กระบวนการ reused และ รีไซเคิลเพื่อจำหน่ายต่อไป
                                                     </p>
                                             </div>
                                         </div>
