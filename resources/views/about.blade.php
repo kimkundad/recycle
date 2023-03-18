@@ -421,6 +421,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <div style="margin-top:35px"></div>
                                     <img src="{{ url('img/policy 448x542.jpg') }}" class="bor-r-12">
                                 </div>
                                 <div class="col-md-8">
