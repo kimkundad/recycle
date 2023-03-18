@@ -19,6 +19,12 @@ span, p , li ,strong, option , label, input, a, b {
 .navigation {
     background-color: #009247;
 }
+.table {
+  font-family: 'Prompt', sans-serif !important;
+}
+.table td, .table th {
+  font-family: 'Prompt', sans-serif !important;
+}
 .ps-post .ps-post__title {
   font-family: 'Prompt', sans-serif !important;
   display: block;
