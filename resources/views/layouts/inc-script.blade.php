@@ -24,11 +24,22 @@
 
 
   <!-- Messenger ปลั๊กอินแชท Code -->
-  <div id="fb-root"></div>
+  <div id="fb-root" style="display:none"></div>
 
   <!-- Your ปลั๊กอินแชท code -->
   <div id="fb-customer-chat" class="fb-customerchat">
   </div>
+
+  <script>
+
+$(document).on('click','#open_fb',function (event) {
+      event.preventDefault();
+
+      var element = document.getElementById('fb-root');
+      element.style.display = null;
+});
+
+  </script>
 
   <script>
     var chatbox = document.getElementById('fb-customer-chat');
