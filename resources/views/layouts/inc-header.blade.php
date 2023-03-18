@@ -62,7 +62,7 @@
                     <li class="menu-item"><a href="{{ url('/about') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
                     <li class="menu-item"><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
                     <li class="menu-item"><a href="{{ url('/contact') }}">ติดต่อเรา</a></li>
-                    <li class="menu-item"><a href="{{ url('/term ') }}">นโยบายส่วนบุคคล</a></li>
+                    <li class="menu-item"><a href="{{ url('/term ') }}">นโยบายข้อมูลส่วนบุคคล</a></li>
                 </ul>
                 <ul class="navigation__extra">
                     <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >ซื้อสินค้า</a></li> 

@@ -245,7 +245,7 @@
                     <a href="{{ url('/contact') }}">ติดต่อเรา</a>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="{{ url('/term') }}">นโยบายส่วนบุคคล</a>
+                    <a href="{{ url('/term') }}">นโยบายข้อมูลส่วนบุคคล</a>
                 </li>
             </ul>
         </div>
