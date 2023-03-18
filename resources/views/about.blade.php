@@ -59,57 +59,88 @@
 
                             <div class="ps-product__content ps-tab-root">
                                 <ul class="ps-tab-list">
-                                    <li class="active"><a href="#tab-1">เกี่ยวกับบริษัท</a></li>
+                                    <li class="active"><a href="#tab-1">เกี่ยวกับเรา</a></li>
                                     <li><a href="#tab-2">วิสัยทัศน์</a></li>
                                     <li><a href="#tab-3">พันธกิจ</a></li>
                                 </ul>
-                                <div class="ps-tab" id="tab-3">
-                                    <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                        <div class="scrollable-content">
-                                         
-                                            <style>
-                                                .table td, .table th {
-                                                    border-top: 1px solid #ffffff;
-                                                }
-                                            </style>
-                                            <br>
-                                            <div class="table-responsive mb-9">
-                                                <table class="table mb-3">
-                                                    <tbody>
-                                                        
-                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                            <td class="d-flex align-items-center">
-                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
-                                                                มุ่งพัฒนาธุรกิจรีไซเคิลอย่างครบวงจร เพื่อสร้างความพึงพอใจให้แก่ลูกค้าผ่านการนำเสนอผลิตภัณฑ์และการบริการที่มีคุณภาพ
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                            <td class="d-flex align-items-center">
-                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
-                                                                นำ Digital Technology มาช่วยต่อยอดการบริการ เพื่อรองรับลูกค้าทั้งในประเทศและต่างประเทศ
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                            <td class="d-flex align-items-center">
-                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
-                                                                แสวงหาพันธมิตรทางธุรกิจ เพื่อพัฒนาศักยภาพและขีดความสามารถในการแข่งขัน 
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                            <td class="d-flex align-items-center">
-                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
-                                                                มุ่งเน้นการบริหารจัดการ โดยคำนึงถึงสิ่งแวดล้อมตามมาตรฐานสากลและความปลอดภัยของชุมชนเป็นสำคัญ
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                            <td class="d-flex align-items-center">
-                                                                <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
-                                                                ปฏิบัติตามกฎหมายอย่างเคร่งครัด ภายใต้หลักการกำกับดูแลกิจการที่ดี มีธรรมาภิบาลและมีความรับผิดชอบต่อสังคม
-                                                            </td>
-                                                        </tr>
+                                <div class="ps-tabs">
+                                    <div class="ps-tab active" id="tab-1">
+                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
+                                            <div class="scrollable-content">
+                                                <br>
+                                                <h4>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</h4>
+                                                <p>ผู้นำด้านธุรกิจรีไซเคิลที่มีประสบการณ์และความเชี่ยวชาญด้านการรีไซเคิลวัสดุเหลือใช้ <br><br>
+                                                    ทั้งที่ไม่เป็นอันตรายและเป็นอันตรายจากโรงงานอุตสาหกรรม รวมไปถึงโลหะทุกประเภท 
+                                                    อาทิเช่น เหล็ก สแตนเลส ทองแดง ทองเหลือง อะลูมิเนียม แบตเตอรี่ น้ำมันที่ใช้แล้ว 
+                                                    พลาสติกทุกชนิด เครื่องยนต์ เครื่องจักร อะไหล่ ฯลฯ <br><br> โดยเราเป็นทั้งผู้รับซื้อและผู้จำหน่าย 
+                                                    ครอบคลุมไปถึงการประมูลวัสดุเหลือใช้ทั้งจากโรงงานอุตสาหกรรมขนาดใหญ่ เช่นแยกก๊าซ ปิโตรเคมี 
+                                                    โรงกลั่นน้ำมัน โรงไฟฟ้า โรงงานชิ้นส่วนยานยนต์ และอุตสาหกรรมหนักทุกประเภท 
+                                                    ด้วยมาตรฐานการจัดเก็บที่ถูกต้อง ปลอดภัย และมีประสิทธิภาพ โดยคำนึงถึงสภาพแวดล้อมเป็นสำคัญ
 
-                                                    </tbody>
-                                                </table>
+                                                    </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ps-tab" id="tab-2">
+                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
+                                            <div class="scrollable-content">
+                                                <br>
+                                                <h4>วิสัยทัศน์ วงษ์พาณิชย์รีไซเคิล </h4>
+                                                <p>วงษ์พาณิชย์รีไซเคิล ระยอง มุ่งมั่นสู่การเป็นผู้นำด้านธุรกิจรีไซเคิลระดับประเทศ <br><br>
+                                                    ด้วยกลยุทธ์ ความเชี่ยวชาญมาตรฐานระดับสากล บุคลากรมืออาชีพ สร้างระบบเศรษฐกิจหมุนเวียนเพื่อการเติบโตอย่างยั่งยืน
+                                                     โดยคำนึงถึงคุณภาพสิ่งแวดล้อม และความปลอดภัยเป็นสำคัญ 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ps-tab" id="tab-3">
+                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
+                                            <div class="scrollable-content">
+                                             
+                                                <style>
+                                                    .table td, .table th {
+                                                        border-top: 1px solid #ffffff;
+                                                    }
+                                                </style>
+                                                <br>
+                                                <div class="table-responsive mb-9">
+                                                    <table class="table mb-3">
+                                                        <tbody>
+                                                            
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex align-items-center">
+                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    มุ่งพัฒนาธุรกิจรีไซเคิลอย่างครบวงจร เพื่อสร้างความพึงพอใจให้แก่ลูกค้าผ่านการนำเสนอผลิตภัณฑ์และการบริการที่มีคุณภาพ
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex align-items-center">
+                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    นำ Digital Technology มาช่วยต่อยอดการบริการ เพื่อรองรับลูกค้าทั้งในประเทศและต่างประเทศ
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex align-items-center">
+                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    แสวงหาพันธมิตรทางธุรกิจ เพื่อพัฒนาศักยภาพและขีดความสามารถในการแข่งขัน 
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex align-items-center">
+                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    มุ่งเน้นการบริหารจัดการ โดยคำนึงถึงสิ่งแวดล้อมตามมาตรฐานสากลและความปลอดภัยของชุมชนเป็นสำคัญ
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex align-items-center">
+                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    ปฏิบัติตามกฎหมายอย่างเคร่งครัด ภายใต้หลักการกำกับดูแลกิจการที่ดี มีธรรมาภิบาลและมีความรับผิดชอบต่อสังคม
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

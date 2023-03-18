@@ -2281,6 +2281,7 @@ padding: 8px 34px;
 }
 .ps-product--detail > .ps-product__content .ps-tab-list li a {
   font-size: 12px;
+  width: 100% !important;
 }
 h4 {
   font-size: 16px;
@@ -2301,6 +2302,10 @@ h4 {
 }
 
 @media (max-width: 479px) {
+
+  .ps-product--detail .ps-tab-list {
+    flex-direction: column!important;
+}
 
   .btn-box{
     border-radius: 2px !important;
