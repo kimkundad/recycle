@@ -233,25 +233,30 @@
 <div class="ps-client-say">
     <div class="container">
         <div class="ps-section__content">
-            <div class="row justify-content-center">
+            <div class="ps-carousel--testimonials owl-slider" 
+            data-owl-auto="true" 
+            data-owl-loop="true" 
+            data-owl-speed="10000" 
+            data-owl-gap="0" 
+            data-owl-nav="false" 
+            data-owl-dots="false" 
+            data-owl-item="6" 
+            data-owl-item-xs="3" 
+            data-owl-item-sm="3" 
+            data-owl-item-md="4" 
+            data-owl-item-lg="3" 
+            data-owl-duration="1000" 
+            data-owl-mousedrag="on">
 
                 @isset($ban)
                     @foreach ($ban as $item)
-                        <div class="col-xs-6 col-sm-2 mt-15">
-                            <img src="{{ url('img/alliance/'.$item->image) }}" alt="{{ $item->name }}" class="max-h-45">
+                        <div class="ps-block--testimonial text-center">
+                            <img src="{{ url('img/alliance/'.$item->image) }}" alt="{{ $item->name }}" class="max-h-55">
                         </div>
                     @endforeach
                 @endisset
 
             </div>
-            
-          
-        
-
-                
-
-            
-            
         </div>
     </div>
 </div>

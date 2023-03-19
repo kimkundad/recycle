@@ -114,7 +114,10 @@ class HomeController extends Controller
 
     public function getArticles(Request $request)
     {
-        $results = news::where('status', 1)->whereDate('startdate', '<=', date("Y-m-d"))->orderby('id', 'desc')->paginate(6);
+
+      $objs = news::where('status', 1)->whereDate('startdate', '<=', date("Y-m-d"))->orderby('id', 'desc')->first();
+
+        $results = news::where('status', 1)->whereDate('startdate', '<=', date("Y-m-d"))->where('id', '!==', $objs->id)->orderby('id', 'desc')->paginate(6);
         $artilces = '';
         if ($request->ajax()) {
             foreach ($results as $result) {
