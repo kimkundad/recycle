@@ -26,7 +26,7 @@
             <img src="{{ url('media/'.$objs->image) }}" class="img-fluid" style="width:100%">
             <div class="blog_detail_in">
                 <h4 class="mt-20">{{ $objs->title }}</h4>
-                <p class="blog_date">{{ formatDateThat($objs->created_at) }} By วงษ์พาณิชย์ รีไซเคิล</p>
+                <p class="blog_date">{{ formatDateThat($objs->startdate) }} By วงษ์พาณิชย์ รีไซเคิล</p>
                 
                 <p>
                     {!! $objs->detail !!}
