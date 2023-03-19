@@ -165,49 +165,54 @@
                     <h3>ใบอนุญาตและรางวัล</h3>
                 </div>
             </div>
+            <a href="{{ url('/certificate') }}" class="">
+                ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+            </a>
         </div>
-        @if(count($cer) === 6 )
+
+        @if(count($cer) > 5 )
         <div class="img-portfolio">
             <div class="dg-wrapper ps-section__content">
                 <div class="text-center img_ro img_rotation1" data-image="{{ $cer[0]->id }}">
                     <div class="scale-100">
                         <img src="{{ url('img/certificate/'.$cer[0]->image) }}" >
-                        <h4 class="text-gray-400 fs-16px">{{ $cer[0]->name }}</h4>
+                        {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[0]->name }}</h4> --}}
                     </div>
                 </div>
                 <div class="text-center img_ro img_rotation2" data-image="{{ $cer[1]->id }}">
                     <div class="scale-100">
                         <img src="{{ url('img/certificate/'.$cer[1]->image) }}" >
-                        <h4 class="text-gray-400 fs-16px">{{ $cer[1]->name }}</h4>
+                        {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[1]->name }}</h4> --}}
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation3" data-image="{{ $cer[2]->id }}">
                     <div class="scale-100">
                         <img src="{{ url('img/certificate/'.$cer[2]->image) }}" >
-                        <h4 class="text-gray-400 fs-16px">{{ $cer[2]->name }}</h4>
+                        {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[2]->name }}</h4> --}}
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation4" data-image="{{ $cer[3]->id }}">
                     <div class="scale-100 text-center">
                         <img src="{{ url('img/certificate/'.$cer[3]->image) }}" >
-                        <h4 class="text-gray-400 fs-16px">{{ $cer[3]->name }}</h4>
+                        {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[3]->name }}</h4> --}}
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation5" data-image="{{ $cer[4]->id }}">
                     <div class="scale-100 text-center">
                         <img src="{{ url('img/certificate/'.$cer[4]->image) }}" >
-                        <h4 class="text-gray-400 fs-16px">{{ $cer[4]->name }}</h4>
+                        {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[4]->name }}</h4> --}}
                     </div>
                 </div>
                 <div class="text-center img_ro img_rotation6" data-image="{{ $cer[5]->id }}">
                     <div class="scale-100 text-center">
                         <img src="{{ url('img/certificate/'.$cer[5]->image) }}" >
-                        <h4 class="text-gray-400 fs-16px">{{ $cer[5]->name }}</h4>
+                        {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[5]->name }}</h4> --}}
                     </div>
                 </div>
             </div>
         </div>
         @endif
+
     </div>
 </div>
 
