@@ -251,7 +251,7 @@
                 @isset($ban)
                     @foreach ($ban as $item)
                         <div class="ps-block--testimonial text-center">
-                            <img src="{{ url('img/alliance/'.$item->image) }}" alt="{{ $item->name }}" class="max-h-55">
+                            <img src="{{ url('img/alliance/'.$item->image) }}" alt="{{ $item->name }}" class="" style="width: 100% !important;">
                         </div>
                     @endforeach
                 @endisset
