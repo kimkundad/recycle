@@ -326,9 +326,7 @@
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between">
-                                <div class="w-100 mg-5">
-                                    <a class="green_btn_kim_out btn_card_in btn-box btn-block mg-5 text-center" href="{{ url('/contact') }}">สอบถามเพิ่มเติม</a>
-                                </div>
+                                
                                 <div class="w-100 mg-5">
                                     <a class="btn-green-b-pop btn_card_in btn-box btn-block mg-5 text-center" href="{{ url('/contact') }}">สอบถามเพิ่มเติม</a>
                                 </div>
