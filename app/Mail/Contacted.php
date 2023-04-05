@@ -28,40 +28,8 @@ class Contacted extends Mailable
     public function build()
     {
         return $this->subject('ข้อมูลการติดต่อจากลูกค้าหน้าเว็บ วงษ์พาณิชย์ รีไซเคิล ')
-        ->markdown('emails.contacts');
+        ->view('emails.contacts');
     }
 
-    /**
-     * Get the message envelope.
-     *
-     * @return \Illuminate\Mail\Mailables\Envelope
-     */
-    public function envelope()
-    {
-        return new Envelope(
-            subject: 'Contacted',
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     *
-     * @return \Illuminate\Mail\Mailables\Content
-     */
-    public function content()
-    {
-        return new Content(
-            markdown: 'emails.contacts',
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array
-     */
-    public function attachments()
-    {
-        return [];
-    }
+    
 }
