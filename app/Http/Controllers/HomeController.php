@@ -13,6 +13,10 @@ use App\Models\certificate;
 use App\Models\news;
 use App\Models\alliance;
 use App\Models\product_image;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\JsonResponse;
+use App\Mail\Contacted;
 
 
 class HomeController extends Controller
@@ -385,6 +389,24 @@ class HomeController extends Controller
     //    echo "message : ". $result_['message'];
         }
         curl_close($chOne);
+
+    
+
+        $mailData = [
+          'name' => $request['name'],
+          'email' => $request['email'],
+          'phone' => $request['phone'],
+          'type' => $data_contact,
+          'messenger' => $request['massage']
+        ];
+
+        $subscriber = Contacted::create([
+          'mydata' => $mailData
+      ]);
+
+      if($subscriber){
+        Mail::to($request['email'])->send(new Subscribe($request['email']));
+    }
 
         return response()->json([
             'data' => [
