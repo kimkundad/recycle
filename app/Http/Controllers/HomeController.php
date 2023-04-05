@@ -13,7 +13,7 @@ use App\Models\certificate;
 use App\Models\news;
 use App\Models\alliance;
 use App\Models\product_image;
-use Illuminate\Support\Facades\Mail;
+use Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\JsonResponse;
 use App\Mail\Contacted;
@@ -400,13 +400,13 @@ class HomeController extends Controller
           'messenger' => $request['massage']
         ];
 
-        $subscriber = Contacted::create([
-          'mydata' => $mailData
-      ]);
+      //   $subscriber = Contacted::create([
+      //     'mydata' => $mailData
+      // ]);
 
-      if($subscriber){
+    
         Mail::to($request['email'])->send(new Contacted($mailData));
-    }
+  
 
         return response()->json([
             'data' => [
