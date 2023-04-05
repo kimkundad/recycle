@@ -63,7 +63,8 @@
                                 <a class="btn-green-b" href="{{ $item->g_btn_url !== null ? $item->g_btn_url : "#" }}"> {{ $item->g_btn_text }}</a>
                                 @endif
                                 @if( $item->w_btn === 1)
-                                <a class="btn-green-w-g" href="#"  data-toggle="modal" data-target="#product-quickview"> {{ $item->w_btn_text }}</a>
+                                {{-- <a class="btn-green-w-g" href="#"  data-toggle="modal" data-target="#product-quickview"> {{ $item->w_btn_text }}</a> --}}
+                                <a class="btn-green-w-g" href="{{ $item->w_btn_url !== null ? $item->w_btn_url : "#" }}"> {{ $item->w_btn_text }}</a>
                                 @endif
                             </div>
                         </div>
