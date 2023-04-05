@@ -405,7 +405,7 @@ class HomeController extends Controller
       ]);
 
       if($subscriber){
-        Mail::to($request['email'])->send(new Subscribe($request['email']));
+        Mail::to($request['email'])->send(new Contacted($request['email']));
     }
 
         return response()->json([
