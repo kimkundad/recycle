@@ -4,7 +4,7 @@
 		<tbody>
 			<tr>
 				<td align="center" valign="center" style="text-align:center; padding: 40px">
-					<a href="https://keenthemes.com" rel="noopener" target="_blank">
+					<a href="https://wpnrayong.com" rel="noopener" target="_blank">
 						<img alt="logo wpnrayong" src="https://wpnrayong.com/img/wpn-logo.png" />
 					</a>
 				</td>
