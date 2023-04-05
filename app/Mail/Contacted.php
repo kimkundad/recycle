@@ -27,7 +27,7 @@ class Contacted extends Mailable
 
     public function build()
     {
-        return $this->subject('ข้อมูลการติดต่อจากลูกค้าหน้าเว็บ วงษ์พาณิชย์ รีไซเคิล ')
+        return $this->subject('ข้อมูลการติดต่อจากลูกค้าหน้าเว็บ วงษ์พาณิชย์ รีไซเคิล')
         ->view('emails.contacts');
     }
 
