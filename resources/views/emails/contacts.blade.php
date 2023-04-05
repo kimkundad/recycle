@@ -25,7 +25,7 @@
                         
                         <p>Thank you</p>
 						<!--end:Email content-->
-						<div style="padding-bottom: 10px">ข้อความจากเว้บไซต์
+						<div style="padding-bottom: 10px">ข้อความจากเว็บไซต์
 						<br>ถึง บริษัท วงษ์พาณิชย์ รีไซเคิล ระยอง จำกัด
 						<tr>
 							<td align="center" valign="center" style="font-size: 13px; text-align:center;padding: 20px; color: #6d6e7c;">
