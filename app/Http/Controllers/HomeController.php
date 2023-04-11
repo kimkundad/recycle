@@ -17,6 +17,7 @@ use Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\JsonResponse;
 use App\Mail\Contacted;
+use App\Models\hproject;
 
 
 class HomeController extends Controller
@@ -77,6 +78,9 @@ class HomeController extends Controller
     }
 
     public function service(){
+
+      $hpro = hproject::where('status', 1)->get();
+      $data['hpro'] = $hpro;
 
       $pro = DB::table('products')->select(
         'products.*',

@@ -166,57 +166,55 @@
                         <div class="card-body ps-product--detail card-body-x">
 
                             <div class="ps-product__content ps-tab-root">
+                                @php
+                                    $h = 1;
+                                    @endphp
                                 <ul class="ps-tab-list">
-                                    <li class="active"><a href="#tab-1" class="fs-12">PTTEP-Offshore surplus</a></li>
-                                    <li><a href="#tab-2" class="fs-12">Thai Oil Refinery</a></li>
-                                    <li><a href="#tab-3" class="fs-12">AGC Vinythai Chemical</a></li>
-                                    <li><a href="#tab-4" class="fs-12">Metropolitan Electricity Authorit</a></li>
+                                    @if(isset($hpro))
+                                    @foreach($hpro as $u)
+
+                                    <li class="
+                                    @if($h == 1)
+                                    active
+                                    @endif"><a href="#tab-{{ $u->id }}" class="fs-12">{{ $u->header }}</a></li>
+
+                                    @php
+                                    $h++;
+                                    @endphp
+                                    @endforeach
+                                    @endif
+                                    
+                                 
                                 </ul>
                                 <div class="ps-tabs">
-                                    <div class="ps-tab active" id="tab-1">
-                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                            <div class="scrollable-content">
-                                                <h4>1. PTTEP-Offshore surplus</h4>
-                                                <p>WPN ได้รับคัดเลือกจาก PTTEP ในการจัดซื้ออุปกรณ์ที่เหลือใช้จากกระบวนการขุดเจาะและการผลิตของ(E&P) อาทิ หัวขุดเจาะ Drilling Bits, casing, production tubing, wellhead Christmas tree, structure steel,  sparepart, 
-                                                    offshore crane รวมถึงอุปกรณ์ทางเรือ เช่น offshore crane, mooring rope, anchore, fender ฯลฯ โดยอุปกรณ์ต่างๆสามารถนำไปใช้เพื่อนำเข้าสู่กระบวนการ reused และ รีไซเคิลเพื่อจำหน่ายต่อไป
-                                                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ps-tab" id="tab-2">
-                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                            <div class="scrollable-content">
-                                                <h4>2. Thai Oil Refinery </h4>
-                                                <p>WPN ได้รับการคัดเลือกจากโรงกลั่นน้ำมันไทยออยล์จัดซื้ออุปกรณ์ที่เหลือใช้จากโครงการและขบวนการผลิตของโรงกลั่นน้ำมัน อาทิ สายไฟ ท่อเหล็ก  
-                                                    เหล็กถังน้ำมัน เครื่องจักร หม้อแปลงแรงสูงขนาดใหญ่ ฯลฯ โดย WPN ได้นำเข้าสู่กระบวนการรีไซเคิลอย่างมีประสิทธิภาพ และเน้นขบวนการการนำวัสดุที่ได้มาไปใช้ประโยชน์ในอุตสาหกรรมอื่น เช่น 
-                                                    แผ่นถังน้ำมันซึ่งเป็นเศษเหล็กมาทำเป็นแผ่นเหล็ก เพื่อนำไปใช้ในงานปูพื้น อุตสาหกรรมต่อเรือ ส่วนท่อน้ำมันได้นำไปใช้ในอุตสาหกรรมเรือดูดทราย 
-                                                    เป็นต้น หม้อแปลงไฟฟ้าได้นำมาแยกส่วนซึ่งได้ทั้งน้ำมัน ทองแดง และเหล็ก โดยน้ำมันสามารถนำไปใช้เป็นเชื้อเพลิงสำรองในอุตสาหกรรมที่รองรับน้ำมันที่ใช้แล้ว
-                                                     ส่วนเหล็กและทองแดงสามารถนำไปเข้าเตาหลอม ซึ่งบางตัวที่เป็นเหล็กซิลิคอนสามารถส่งไปใช้ในอุตสาหกรรมการผลิตหม้อแปลงได้อีกด้วย
+                                    @php
+                                    $s = 1;
+                                    @endphp
+                                    @if(isset($hpro))
+                                    @foreach($hpro as $u)
 
-                                                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ps-tab" id="tab-3">
-                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                            <div class="scrollable-content">
-                                                <h4>3. AGC Vinythai Chemical </h4>
-                                                <p>WPN ได้รับการคัดเลือกจาก AGC Vinythai Chemical ในการจัดซื้อเหล็กและอุปกรณ์ทั้งหมดของอาคารขบวนการผลิต และอาคารคลังจัดเก็บวัตถุดิบ โดย WPN ได้นำเหล็กบีมและเหล็กทั้งหมดที่เป็นโครงสร้างของโรงงานเข้าสู่กระบวนการรีไซเคิล ด้วยการนำมาตัดแต่งเพื่อนำกลับไปใช้ประโยชน์ในงานอื่น ๆ ไม่ว่าจะเป็นการสร้างโรงงานใหม่ สร้างบ้าน หรือสร้างสำนักงาน เป็นต้น
 
-                                                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ps-tab" id="tab-4">
+                                    <div class="ps-tab 
+                                    @if($s == 1)
+                                    active
+                                    @endif
+                                    " id="tab-{{ $u->id }}">
                                         <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
                                             <div class="scrollable-content">
-                                                <h4>4. Metropolitan Electricity Authorit
-                                                </h4>
-                                                <p>WPN ได้รับการคัดเลือกจากการไฟฟ้านครหลวง (กฟน.) ให้ชนะประมูลการจัดซื้อหม้อแปลงไฟฟ้าจำนวนกว่า200ลูกที่หมดอายุการใช้งานทั้งในเขตกรุงเทพฯ และปริมณฑลของการไฟฟ้านครหลวง โดย WPN ได้นำหม้อแปลงเข้าสู่กระบวนการรีไซเคิล ด้วยการคัดแยกชิ้นส่วนซึ่งได้ทั้งน้ำมัน ทองแดง และเหล็ก เพื่อจำหน่ายต่อไป
+                                                <h4>{{ $u->header }}</h4>
+                                                <p>{{ $u->content }}
                                                     </p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    @php
+                                    $s++;
+                                    @endphp
+                                    @endforeach
+                                    @endif
+                                    
+                                  
                                 </div>
                             </div>
 

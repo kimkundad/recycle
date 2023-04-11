@@ -12,6 +12,7 @@ use App\Http\Controllers\SlideController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AllianceController;
+use App\Http\Controllers\HProjectController;
 
 
 /*
@@ -129,6 +130,11 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     
     Route::post('/api/upload_img_product/{id}', [App\Http\Controllers\ProductController::class, 'upload_img_product']);
     Route::get('/api/image_del/{id}', [App\Http\Controllers\ProductController::class, 'image_del']);
+
+
+    Route::resource('/admin/hproject', HProjectController::class);
+    Route::post('/api/api_post_status_hproject', [App\Http\Controllers\HProjectController::class, 'api_post_status_hproject']);
+    Route::get('api/del_hproject/{id}', [App\Http\Controllers\HProjectController::class, 'del_hproject']);
  
  
 });
