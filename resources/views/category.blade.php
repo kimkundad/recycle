@@ -93,7 +93,7 @@
                         
                     </aside>
 
-                    <aside class="widget widget_shop widget_shop_bg">
+                    {{-- <aside class="widget widget_shop widget_shop_bg">
                         <h4 class="widget-title mt-10 mb-1">ค้นหาจากแบรนด์สินค้า </h4>
                         <figure class="ps-custom-scrollbar" data-height="250" id="result_check">
                             @if(get_brand())
@@ -107,7 +107,7 @@
                             
                         </figure>
                         
-                    </aside>
+                    </aside> --}}
                 </div>
                 <div class="ps-layout__right">
                     <div class="ps-shopping ps-tab-root">
@@ -194,7 +194,7 @@
                             @endif
             </ul>
         </aside>
-        <aside class="widget widget_shop widget_shop_bg">
+        {{-- <aside class="widget widget_shop widget_shop_bg">
             <h4 class="widget-title mt-10 mb-1">ค้นหาจากแบรนด์สินค้า</h4>
             <figure class="ps-custom-scrollbar" data-height="250" id="result_check2">
                 @if(get_brand())
@@ -206,7 +206,7 @@
                     @endforeach
                 @endif
             </figure>
-        </aside>
+        </aside> --}}
     </div>
 </div>
 
