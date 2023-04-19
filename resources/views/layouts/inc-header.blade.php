@@ -9,12 +9,18 @@
                     <div class="form-group--icon"><i class="icon-chevron-down"></i>
                         <select class="form-control" name="id">
                             <option value="0" selected="selected">หมวดหมู่ : ทั้งหมด</option>
-                            @if(get_category())
-                                @foreach(get_category() as $u)
-                                    <option class="level-0" value="{{ $u->id }}">{{ $u->sub_name }}</option>
+                            @if(get_data_category())
+                                @foreach(get_data_category() as $u)
+                                    <option class="level-0" style="color: #009247; font-weight: 700; font-size: 14px;" disabled>{{ $u->cat_name }}</option>
+                                    @if($u->option)
+                                        @foreach($u->option as $j)
+                                            <option class="level-0" value="{{ $j->id }}" style="padding-left:15px">{{ $j->sub_name }}</option>
+                                        @endforeach
+                                    @endif
                                 @endforeach
                             @endif
                         </select>
+
                     </div>
                     @isset($search)
                     <input class="form-control" name="search" type="text" value="{{ $search === "" ?  : $search }}" placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่..." id="input-search" />
@@ -58,7 +64,7 @@
             <div class="navigation__right">
                 <ul class="menu">
                     <li class="menu-item"><a class="active" href="{{ url('/') }}">หน้าแรก</a></li>
-                    <li class="menu-item"><a href="{{ url('/service') }}">บริการ</a></li>
+                    <li class="menu-item"><a href="{{ url('/service') }}">สินค้าและบริการ</a></li>
                     <li class="menu-item"><a href="{{ url('/about') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
                     <li class="menu-item"><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
                     <li class="menu-item"><a href="{{ url('/contact') }}">ติดต่อเรา</a></li>

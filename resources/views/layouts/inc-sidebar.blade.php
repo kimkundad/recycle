@@ -233,7 +233,7 @@
                     <a href="{{ url('/') }}">หน้าแรก</a>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="{{ url('/service') }}">บริการ</a>
+                    <a href="{{ url('/service') }}">สินค้าและบริการ</a>
                 </li>
                 <li class="menu-item-has-children">
                     <a href="{{ url('/about') }}">เกี่ยวกับวงษ์พาณิชย์</a>

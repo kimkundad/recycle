@@ -95,7 +95,7 @@
         <div class="ps-section__content">
             <div class="ps-carousel--nav ow2 sec-slide" 
             data-owl-auto="false" 
-            data-owl-loop="false" 
+            data-owl-loop="true" 
             data-owl-speed="10000" 
             data-owl-gap="30" 
             data-interval="false"
