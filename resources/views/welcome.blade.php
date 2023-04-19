@@ -78,6 +78,7 @@
         @endisset
     </div>
 </div>
+
 <div class="ps-deal-of-day">
     <div class="container">
         <div class="ps-section__header">
