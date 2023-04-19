@@ -1768,6 +1768,13 @@ padding: 8px 34px;
 
 @media (max-width: 1000px) {
 
+  .ps-carousel--nav-inside .owl-nav{
+    display: none!important;
+  }
+  .ps-carousel--nav-inside .owl-dots{
+    display: none!important;
+  }
+
   .ps-carousel--nav-inside .owl-nav {
     flex-direction: column!important;
     position: absolute;
@@ -2573,5 +2580,5 @@ h4 {
   height: 60px !important;
 }
 .ps-carousel--nav-inside .owl-nav {
-    transform: translateY(80%)!important;
+    transform: translateY(70%)!important;
 }
