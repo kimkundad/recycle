@@ -1768,12 +1768,7 @@ padding: 8px 34px;
 
 @media (max-width: 1000px) {
 
-  .ps-carousel--nav-inside .owl-nav{
-    display: none!important;
-  }
-  .ps-carousel--nav-inside .owl-dots{
-    display: none!important;
-  }
+  
 
   .ps-carousel--nav-inside .owl-nav {
     flex-direction: column!important;
@@ -1801,6 +1796,14 @@ padding: 8px 34px;
     opacity: 1!important;
     right: 0;
     left: auto!important;
+  }
+
+
+  .ps-carousel--nav-inside .owl-nav{
+    display: none!important;
+  }
+  .ps-carousel--nav-inside .owl-dots{
+    display: none!important;
   }
 
 }
