@@ -2173,6 +2173,14 @@ padding: 8px 34px;
 
 @media (max-width: 767px) {
 
+
+  .ps-carousel--nav-inside .owl-nav{
+    display: none!important;
+  }
+  .ps-carousel--nav-inside .owl-dots{
+    display: none!important;
+  }
+
   .ps-banner__content{
     max-width: 520px !important;
     left: 45%!important;
@@ -2296,6 +2304,13 @@ h4 {
 }
 
 @media (max-width: 582px) {
+
+  .ps-carousel--nav-inside .owl-nav{
+    display: none!important;
+  }
+  .ps-carousel--nav-inside .owl-dots{
+    display: none!important;
+  }
 
   .ps-banner__content{
     max-width: 520px !important;
