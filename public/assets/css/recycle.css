@@ -2311,7 +2311,7 @@ h4 {
 @media (max-width: 479px) {
 
   .ps-carousel--nav-inside .owl-nav{
-    display: none;
+    display: none!important;
   }
 
   .ps-product--detail .ps-tab-list {
@@ -2322,7 +2322,7 @@ h4 {
     border-radius: 2px !important;
     padding: 10px 10px!important;
   }
-  
+
 
   .btn-green-b-pop {
     background: #009247;
