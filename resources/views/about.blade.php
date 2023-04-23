@@ -236,7 +236,7 @@
             <div class="ps-carousel--testimonials owl-slider" 
             data-owl-auto="true" 
             data-owl-loop="true" 
-            data-owl-speed="10000" 
+            data-owl-speed="5000" 
             data-owl-gap="0" 
             data-owl-nav="false" 
             data-owl-dots="false" 

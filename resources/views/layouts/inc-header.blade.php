@@ -32,7 +32,7 @@
             </div>
             <div class="header__right pt-10">
                 <div class="header__actions">
-                    <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone() }}">
+                    <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}">
                         <div class="d-flex">
                             <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> 
                             <div class="d-flex flex-column">
