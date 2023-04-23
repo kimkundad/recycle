@@ -37,7 +37,7 @@
                       <button class="ps-btn--fullwidth-green btn-block" id="btnSendData" style="border-radius: 5px; border: solid 1px #009247 ">{{ $u->name }}</button>
                         <img src="{{ url('img/certificate/'.$u->image) }}" data-toggle="modal" data-target="#product-cer{{ $u->id }}" alt="{{ $u->name }}" class='img-fluid' 
                         style="border: solid 1px #009247; 
-                        border-radius: 5px;     width: 100%;">
+                        border-radius: 5px;  max-height:537px;   width: 100%;">
                     </div>
 
                 @endforeach
