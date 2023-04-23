@@ -2183,6 +2183,10 @@ padding: 8px 34px;
 
 @media (max-width: 767px) {
 
+  .res-center{
+    text-align: center;
+  }
+
 
   .ps-carousel--nav-inside .owl-nav{
     display: none!important;
@@ -2584,4 +2588,27 @@ h4 {
 }
 .ps-carousel--nav-inside .owl-nav {
     transform: translateY(50%)!important;
+}
+.header .header__extra {
+  margin-left: 3px;
+}
+.header .header__actions > * {
+  margin: 0 4px;
+}
+.foot-social{
+  height: 45px;
+  width: 45px;
+  margin: 0px 5px;
+}
+.ps-product--detail .ps-tab-list li a {
+  padding: 15px 10px;
+}
+.min-h-89{
+  min-height: 90px;
+}
+.set-padd-new{
+  padding: 15px 25px;
+}
+.pt-20 {
+  padding-top: 20px!important;
 }

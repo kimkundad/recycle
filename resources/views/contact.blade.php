@@ -30,12 +30,14 @@
                 <div class="set-box-green-800">
                     <div class="box-green-800">
                         <h4>ที่อยู่</h4>
-                        <p>บริษัท วงษ์พาณิชย์ รีไซเคิล ระยอง จำกัด</p>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัทสำนักงานใหญ่ วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">(สาขา สงขลา)</p>
+                        <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                         <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                        <p>สำนักงาน : +66 (0)38 606 338-40<br>
-                        โทรศัพท์ : +66 (0)81 140 0850-1<br>
-                        อีเมล : office@wongpanit-rayong.com</p>
+                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a><br>
+                        โทรศัพท์ : <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a><br>
+                        อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                 </div>
             </div>
@@ -81,7 +83,7 @@
                             
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                 <div class="form__group field">
-                                    <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" name="massage" id='massage'></textarea>
+                                    <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage" id='massage'></textarea>
                                     <label for="massage" class="form__label">ข้อความ (500/500)</label>
                                 </div>
                             </div>
@@ -102,7 +104,19 @@
 
 <div class="desktop-h">
     <div class="p-15">
-        <p class="fs-16 fw-700 text-center">ท่านสามารถติดต่อสอบถาม <br> ซื้อสินค้า ขอใช้บริการ ผ่านช่องทางด้านล่าง</p>
+        <div class="">
+            <div class="box-green-800">
+                <h4>ที่อยู่</h4>
+                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัทสำนักงานใหญ่ วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
+                <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
+                <p style="padding-bottom: 1px; margin-bottom: 0rem;">(สาขา สงขลา)</p>
+                <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
+                <h4 class="mt-10">ช่องทางการติดต่อ</h4>
+                <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a><br>
+                โทรศัพท์ : <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a><br>
+                อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
+            </div>
+        </div>
         <div class="d-15">
             <form class="ps-form--contact-us" id="contactForm2">
                 <div class="row">
@@ -140,7 +154,7 @@
                     
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" name="massage" id='massage2'></textarea>
+                            <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage" id='massage2'></textarea>
                             <label for="massage" class="form__label">ข้อความ (500/500)</label>
                         </div>
                     </div>

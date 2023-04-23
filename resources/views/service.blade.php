@@ -153,17 +153,17 @@
         <div class="ps-section__content">
             
             <div class="row line-green row-mo">
-                <div class="col-md-5 desktop-d hide-green-ban ps-product--detail ps-product--fullwidth">
-                    <img src="{{ url('img/highlight project620x640.jpg') }}" class="re-img-service bor-r-12" >
+                <div class="col-md-5 desktop-d hide-green-ban ps-product--detail ps-product--fullwidth" style="margin-bottom: 0rem;">
+                    <img id="img-hili2" src="{{ url('img/hproject/'.$hpro[0]->image) }}" class="img-fluid bor-r-12" >
                 </div>
                 <div class="col-md-7 desktop-990">
 
                     <div class="hide-green-ban-mo">
-                        <img src="{{ url('img/highlight project620x640.jpg') }}" class="w-100 bor-r-12">
+                        <img id="img-hili" src="{{ url('img/hproject/'.$hpro[0]->image) }}" class="w-100 bor-r-12">
                     </div>
 
                     <div class="card" style="border: 1px solid rgb(0 0 0 / 0%);">
-                        <div class="card-body ps-product--detail card-body-x">
+                        <div class="card-body ps-product--detail " style="margin-bottom: 0rem;">
 
                             <div class="ps-product__content ps-tab-root">
                                 @php
@@ -176,7 +176,7 @@
                                     <li class="
                                     @if($h == 1)
                                     active
-                                    @endif"><a href="#tab-{{ $u->id }}" class="fs-12">{{ $u->header }}</a></li>
+                                    @endif"><a href="#tab-{{ $u->id }}" class="fs-12 aHilight" data-image="{{ $u->image }}">{{ $u->header }}</a></li>
 
                                     @php
                                     $h++;
@@ -202,7 +202,7 @@
                                         <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
                                             <div class="scrollable-content">
                                                 <h4>{{ $u->header }}</h4>
-                                                <p>{{ $u->content }}
+                                                <p style="font-size: 16px;">{{ $u->content }}
                                                     </p>
                                             </div>
                                         </div>
@@ -237,7 +237,7 @@
                     <h3>หมวดหมู่สินค้า</h3>
                 </div>
             </div>
-            <a href="{{ url('/product') }}" class="">
+            <a href="{{ url('category?id=0') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
             
@@ -343,4 +343,16 @@
 @endsection
 
 @section('scripts')
+
+<script type="text/javascript">
+
+        $(".aHilight").click(function() {
+            var image = $(this).data('image');
+            console.log(image);
+            $("#img-hili").attr('src', "img/hproject/"+image);
+            $("#img-hili2").attr('src', "img/hproject/"+image);
+        });
+    
+</script>
+
 @stop('scripts')

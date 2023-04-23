@@ -5,11 +5,11 @@
             <div class="row ">
                 <div class="col-md-8 ps-footer__widgets">
                     <aside class="widget widget_footer widget_contact-us">
-                        <div class="widget_content">
+                        <div class="widget_content res-center">
                             <img class="max-h-65" src="{{ url('img/wpn-logo.png') }}" alt="" />
-                            <h5 class="pt-20">บริษัท วงษ์พาณิชย์ รีไซเคิล ระยอง จำกัด</h5>
+                            <h5 class="pt-20">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</h5>
                             <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 </p>
-                            <div class="pt-20">
+                            <div class="pt-20 d-flex justify-content-center">
                                 <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone() }}">
                                     <div class="d-flex">
                                         <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> 
@@ -19,16 +19,16 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="btn_green_heade_footer" href="mailto: {{ get_email() }}">
-                                    <img class="img-icon-green_header_footer" src="{{ url('img/icon/mail.png') }}">
+                                <a class="header__extra foot-social" target="_blank" href="{{ get_line() }}">
+                                    <img class="img-fluid" src="{{ url('img/line_new_icon.png') }}">
                                 </a>
-                                <a class="btn_green_heade_footer" target="_blank" href="{{ get_line() }}">
-                                    <img class="img-icon-green_header_footer" src="{{ url('img/icon/line.png') }}">
+                                <a class="header__extra foot-social" href="mailto: {{ get_email() }}">
+                                    <img class="img-fluid" src="{{ url('img/email_new_icon.png') }}">
                                 </a>
-                                <a class="btn_green_heade_footer" href="{{ get_facebook() }}">
-                                    <img class="img-icon-green_header_footer" src="{{ url('img/icon/facebook.png') }}">
+                                <a class="header__extra foot-social" target="_blank" href="{{ get_facebook() }}">
+                                    <img class="img-fluid" src="{{ url('img/facebook_new_icon.png') }}">
                                 </a>
-                               
+                
                             </div>
                         </div>
                     </aside>
@@ -37,8 +37,8 @@
                         <ul class="ps-list--link">
                             <li><a href="{{ url('category?id=0') }}">หมวดหมู่สินค้า</a></li>
                             <li><a href="{{ url('category?id=0') }}">สินค้าขายดี</a></li>
-                            <li><a href="{{ url('/service') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
-                            <li><a href="{{ url('/about') }}">รับรองและรางวัล</a></li>
+                            <li><a href="{{ url('/about') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
+                            <li><a href="{{ url('/certificate') }}">ใบอนุญาตและรางวัล</a></li>
                             <li><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
                             @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">เข้าสู่ระบบ / Login</a></li>

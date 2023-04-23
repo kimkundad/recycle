@@ -43,6 +43,50 @@
                             
                             <div class="card-body border-top p-9">
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รูป Hilight Project</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8">
+                                        <!--begin::Image input-->
+                                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{ url('img/1676212425285.jpg') }}')">
+                                            <!--begin::Preview existing avatar-->
+                                            <div class="image-input-wrapper " style="background-image: url({{ url('img/1676212425285.jpg') }}); width:380px; height:200px"></div>
+                                            <!--end::Preview existing avatar-->
+                                            <!--begin::Label-->
+                                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="เปลี่ยน รูป slide show สินค้า">
+                                                <i class="bi bi-pencil-fill fs-7"></i>
+                                                <!--begin::Inputs-->
+                                                <input type="file" name="image" accept=".png, .jpg, .jpeg" />
+                                                <input type="hidden" name="avatar_remove" />
+                                                <!--end::Inputs-->
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Cancel-->
+                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="ยกเลิก รูป slide show สินค้า">
+                                                <i class="bi bi-x fs-2"></i>
+                                            </span>
+                                            <!--end::Cancel-->
+                                            <!--begin::Remove-->
+                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="ลบ รูป slide show สินค้า">
+                                                <i class="bi bi-x fs-2"></i>
+                                            </span>
+                                            <!--end::Remove-->
+                                        </div>
+                                        <!--end::Image input-->
+                                        <!--begin::Hint-->
+                                        <div class="form-text">Allowed file types: png, jpg, jpeg. (500px X 500px)</div>
+                                        @if ($errors->has('image'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณาเลือกรูป Hilight Project</div>
+                                            </div>
+                                        @endif
+                                        <!--end::Hint-->
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
                                
                                 <div class="row mb-6">
                                     <!--begin::Label-->
@@ -81,7 +125,7 @@
                                 </div>
 
                                 
-                                
+                            
 
                                 <div class="row mb-0">
                                     <!--begin::Label-->

@@ -26,6 +26,7 @@ class HProjectController extends Controller
     }
 
 
+
     public function api_post_status_hproject(Request $request){
 
         $user = hproject::findOrFail($request->user_id);
@@ -69,8 +70,15 @@ class HProjectController extends Controller
         //
         $this->validate($request, [
             'header' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'image' => 'required'
            ]);
+
+           $image = $request->file('image');
+
+           $path = 'img/hproject/';
+            $filename = time()."-".$image->getClientOriginalName();
+            $image->move($path, $filename);
 
            $status = 0;
             if(isset($request['status'])){
@@ -82,6 +90,7 @@ class HProjectController extends Controller
            $objs = new hproject();
            $objs->header = $request['header'];
            $objs->content = $request['content'];
+           $objs->image = $filename;
            $objs->status = $status;
            $objs->save();
 
@@ -130,6 +139,8 @@ class HProjectController extends Controller
             'content' => 'required'
            ]);
 
+           $image = $request->file('image');
+
            $status = 0;
             if(isset($request['status'])){
                 if($request['status'] == 1){
@@ -137,11 +148,42 @@ class HProjectController extends Controller
                 }
             }
 
-           $objs = hproject::find($id);
-           $objs->header = $request['header'];
-           $objs->content = $request['content'];
-           $objs->status = $status;
-           $objs->save();
+            if($image == NULL){
+
+                $objs = hproject::find($id);
+                $objs->header = $request['header'];
+                $objs->content = $request['content'];
+                $objs->status = $status;
+                $objs->save();
+
+            }else{
+
+                $img = DB::table('hprojects')
+                ->where('id', $id)
+                ->first();
+
+                if($img->image){
+
+                    $file_path = 'img/hproject/'.$img->image;
+                    unlink($file_path);
+
+                }
+
+                $path = 'img/hproject/';
+                $filename = time()."-".$image->getClientOriginalName();
+                $image->move($path, $filename);
+
+
+                $objs = hproject::find($id);
+                $objs->header = $request['header'];
+                $objs->content = $request['content'];
+                $objs->status = $status;
+                $objs->image = $filename;
+                $objs->save();
+
+            }
+
+           
 
             return redirect(url('admin/hproject/'.$id.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
     }
@@ -154,6 +196,15 @@ class HProjectController extends Controller
      */
     public function del_hproject($id)
     {
+
+        $objs = DB::table('hprojects')
+            ->where('id', $id)
+            ->first();
+
+            if(isset($objs->image)){
+              $file_path = 'img/hproject/'.$objs->image;
+               unlink($file_path);
+            }
         //
         $obj = hproject::find($id);
         $obj->delete();

@@ -41,11 +41,14 @@
                             </div>
                         </div>
                     </a>
-                    <a class="header__extra btn_green_header" target="_blank" href="{{ get_line() }}">
-                        <img class="img-icon-green_header" src="{{ url('img/icon/line.png') }}">
+                    <a class="header__extra " target="_blank" href="{{ get_line() }}">
+                        <img class="img-fluid" src="{{ url('img/line_new_icon.png') }}">
                     </a>
-                    <a class="header__extra btn_green_header" href="mailto: {{ get_email() }}">
-                        <img class="img-icon-green_header" src="{{ url('img/icon/mail.png') }}">
+                    <a class="header__extra " href="mailto: {{ get_email() }}">
+                        <img class="img-fluid" src="{{ url('img/email_new_icon.png') }}">
+                    </a>
+                    <a class="header__extra" target="_blank" href="{{ get_facebook() }}">
+                        <img class="img-fluid" src="{{ url('img/facebook_new_icon.png') }}">
                     </a>
                     
                     <div class="ps-dropdown language"><a href="#"><img height="50" src="{{ url('img/icon/thailand.png') }}"></a>
@@ -91,11 +94,14 @@
             <div class="header__actions">
                 
                 <div class="ps-block--user-header ">
-                    <a class="header__extra btn_green_header" target="_blank" href="{{ get_line() }}">
-                        <img class="img-icon-green_header" src="{{ url('img/icon/line.png') }}">
+                    <a class="header__extra " target="_blank" href="{{ get_line() }}">
+                        <img class="img-fluid" src="{{ url('img/line_new_icon.png') }}">
                     </a>
-                    <a class="header__extra btn_green_header" href="mailto: {{ get_email() }}">
-                        <img class="img-icon-green_header" src="{{ url('img/icon/mail.png') }}">
+                    <a class="header__extra " href="mailto: {{ get_email() }}">
+                        <img class="img-fluid" src="{{ url('img/email_new_icon.png') }}">
+                    </a>
+                    <a class="header__extra" target="_blank" href="{{ get_facebook() }}">
+                        <img class="img-fluid" src="{{ url('img/facebook_new_icon.png') }}">
                     </a>
                 </div>
             </div>
