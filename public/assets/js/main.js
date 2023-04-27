@@ -515,6 +515,7 @@
                 fade: true,
                 dots: false,
                 infinite: false,
+                autoplay: true,
                 arrows: primary.data('arrow'),
                 prevArrow: "<a href='#'><i class='fa fa-angle-left'></i></a>",
                 nextArrow: "<a href='#'><i class='fa fa-angle-right'></i></a>",
@@ -529,6 +530,7 @@
                 nextArrow: "<a href='#'><i class='fa fa-angle-down'></i></a>",
                 asNavFor: '.ps-product__gallery',
                 vertical: vertical,
+                autoplay: true,
                 responsive: [
                     {
                         breakpoint: 1200,
@@ -627,7 +629,7 @@
                 thumbnail: true,
                 share: false,
                 fullScreen: false,
-                autoplay: false,
+                autoplay: true,
                 autoplayControls: false,
                 actualSize: false,
             });
@@ -637,7 +639,7 @@
                     thumbnail: true,
                     share: false,
                     fullScreen: false,
-                    autoplay: false,
+                    autoplay: true,
                     autoplayControls: false,
                     actualSize: false,
                 });

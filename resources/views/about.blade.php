@@ -37,7 +37,7 @@
                     <div class="ps-product__thumbnail" data-vertical="false">
                         <figure>
                             <div class="ps-wrapper">
-                                <div class="ps-product__gallery" data-arrow="true" data-loop="true">
+                                <div class="ps-product__gallery" data-arrow="true" data-loops="true">
                                     <div class="item"><a href="{{ url('img/About/626x418-about-1.jpg') }}"><img src="{{ url('img/About/626x418-about-1.jpg') }}" alt=""></a></div>
                                     <div class="item"><a href="{{ url('img/About/626x418-about-2.jpg') }}"><img src="{{ url('img/About/626x418-about-2.jpg') }}" alt=""></a></div>
                                     <div class="item"><a href="{{ url('img/About/626x418-about-3.jpg') }}"><img src="{{ url('img/About/626x418-about-3.jpg') }}" alt=""></a></div>
