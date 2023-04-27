@@ -474,9 +474,8 @@
                                     </div>
 
                                     <div class="ps-carousel--testimonials owl-slider" 
-                                    data-owl-auto="true"
+                                    data-owl-auto="false"
                                      data-owl-loop="false" 
-                                     data-owl-speed="15000" 
                                      data-owl-gap="10" 
                                      data-owl-nav="false" 
                                      data-owl-dots="false" 
