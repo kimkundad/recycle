@@ -37,7 +37,7 @@
                     <div class="ps-product__thumbnail" data-vertical="false">
                         <figure>
                             <div class="ps-wrapper">
-                                <div class="ps-product__gallery" data-arrow="true">
+                                <div class="ps-product__gallery" data-arrow="true" data-loop="true">
                                     <div class="item"><a href="{{ url('img/About/626x418-about-1.jpg') }}"><img src="{{ url('img/About/626x418-about-1.jpg') }}" alt=""></a></div>
                                     <div class="item"><a href="{{ url('img/About/626x418-about-2.jpg') }}"><img src="{{ url('img/About/626x418-about-2.jpg') }}" alt=""></a></div>
                                     <div class="item"><a href="{{ url('img/About/626x418-about-3.jpg') }}"><img src="{{ url('img/About/626x418-about-3.jpg') }}" alt=""></a></div>
@@ -418,7 +418,7 @@
                                                         <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
-                                                        <p class="mb-0 min-h-89">เผนแพร่นโยบายคุณภาพให้พนักงานทุกคน ตลอดจนผู้มีส่วนได้เสียที่เกี่ยวข้อทราบ เพื่อให้มั่นใจว่าบริษัทฯ มีความมุ่งมั่นที่จะรักษาไว้ซึ่งมาตรฐานการบริการอย่างมีคุณภาพ</p>
+                                                        <p class="mb-0 min-h-89">เผยแพร่นโยบายคุณภาพให้พนักงานทุกคน ตลอดจนผู้มีส่วนได้เสียที่เกี่ยวข้อทราบ เพื่อให้มั่นใจว่าบริษัทฯ มีความมุ่งมั่นที่จะรักษาไว้ซึ่งมาตรฐานการบริการอย่างมีคุณภาพ</p>
                                                     </div>
                                                 </div>
                                             </div>
