@@ -10,7 +10,7 @@
                             <h5 class="pt-20">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</h5>
                             <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 </p>
                             <div class="pt-20 d-flex justify-content-center">
-                                <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone() }}">
+                                <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}">
                                     <div class="d-flex">
                                         <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> 
                                         <div class="d-flex flex-column">
