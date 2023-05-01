@@ -35,7 +35,7 @@
                     <aside class="widget widget_footer">
                         <h4 class="widget-title">หน้าแรก</h4>
                         <ul class="ps-list--link">
-                            <li><a href="{{ url('category?id=0') }}">หมวดหมู่สินค้า</a></li>
+                            <li><a href="{{ url('category?id=0') }}">สินค้าและบริการ</a></li>
                             <li><a href="{{ url('category?id=0') }}">สินค้าขายดี</a></li>
                             <li><a href="{{ url('/about') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
                             <li><a href="{{ url('/certificate') }}">ใบอนุญาตและรางวัล</a></li>
