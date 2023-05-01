@@ -109,7 +109,7 @@
                             <li class="current-menu-item menu-item-has-children"> 
                                 <a href="#" class="active">{{ $u->cat_name }}</a> 
                                 <span class="sub-toggle">
-                                    <i class="fa fa-angle-down"></i>
+                                    
                                 </span>
                                 <ul class="sub-menu" >
                                     @if($u->option)

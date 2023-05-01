@@ -2618,3 +2618,7 @@ h4 {
 .set-pad-20x{
   padding: 20px!important;
 }
+/* .fa-angle-down:before {
+  content: "\f107";
+  display: none;
+} */
