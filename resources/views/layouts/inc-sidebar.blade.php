@@ -111,7 +111,7 @@
                                 <span class="sub-toggle">
                                     <i class="fa fa-angle-down"></i>
                                 </span>
-                                <ul class="sub-menu" style="display: block;">
+                                <ul class="sub-menu" >
                                     @if($u->option)
                                     @foreach($u->option as $j)
                                     <li class="current-menu-item ">
