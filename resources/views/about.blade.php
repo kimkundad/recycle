@@ -483,7 +483,7 @@
                                        
                                         <div class="row">
                                             <div class="col-md-6 set-pad-in-md ">
-                                                <div class="card-green set-margin-card"> 
+                                                <div class="card-green set-margin-card set-pad-20"> 
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="mt-8px img-60" src="{{ url('img/Group 3115.png') }}">
@@ -495,7 +495,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card"> 
+                                                <div class=" card-out-greenxx set-margin-card set-pad-20"> 
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}">
@@ -508,13 +508,13 @@
                                             </div>
     
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20"> 
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="height:60px">
                                                             
                                                         </div>
-                                                        <div class="ps-block__content_out-green pt-25">
+                                                        <div class="ps-block__content_out-green ">
                                                             <p class="mb-0 min-h-90">
                                                             บริษัทฯ จะส่งเสริมกิจกรรมทุกกิจกรรมที่จะสร้างความปลอดภัยและสุขภาพอนามัยที่ดีแก่พนักงานตลอดจนพัฒนาและปรับปรุงสภาพแวดล้อมการทำงานให้เป็นสถานที่ทำงานที่ปลอดภัยน่าอยู่น่าทำงานและไม่เกิดผลกระทบต่อสิ่งแวดล้อม
                                                             </p>
@@ -524,7 +524,7 @@
                                             </div>
                                             
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class="card-green set-margin-card mt-16"> 
+                                                <div class="card-green set-margin-card mt-16 set-pad-20"> 
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}">
@@ -541,12 +541,12 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class="card-green set-margin-card mt-16"> 
+                                                <div class="card-green set-margin-card mt-16 set-pad-20"> 
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="height:60px">
                                                         </div>
-                                                        <div class="ps-block__content_green pt-25">
+                                                        <div class="ps-block__content_green ">
                                                             <p class="mb-0 min-h-90">พนักงานทุกคนรวมทั้งบุคคลภายนอกที่เข้ามาภายในบริษัทฯ มีหน้าที่ต้องปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ อย่างเคร่งครัดและระมัดระวังไม่ให้เกิดอุบัติเหตุและความสูญเสียใดๆ ทั้งต่อตนเองและเพื่อนร่วมงาน ตลอดจนทรัพย์สินของบริษัทฯ
                                                             </p>
                                                         </div>
@@ -555,12 +555,12 @@
                                             </div>
     
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20"> 
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}">
                                                         </div>
-                                                        <div class="ps-block__content_out-green pt-25">
+                                                        <div class="ps-block__content_out-green ">
                                                             <p class="mb-0 min-h-90">ผู้บังคับบัญชาทุกระดับมีหน้าที่รับผิดชอบเกี่ยวกับความปลอดภัยของผู้ใต้บังคับบัญชาตามสายงานอย่างจริงจังและต่อเนื่อง ตลอดจนต้องฝึกสอนและเป็นตัวอย่างในการปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ
     
                                                             </p>
@@ -570,7 +570,7 @@
                                             </div>
     
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20"> 
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}">
@@ -702,7 +702,7 @@
                         <div class="ps-tab" id="tabx-4">
                             <div class="row align-content-lg-stretch">
                                 <div class="col-md-12" style="margin-bottom:20px">
-                                    <div class=" card-out-green-head set-margin-card"> 
+                                    <div class=" card-out-green-head set-margin-card set-pad-20x"> 
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
                                                 <p class="mb-0"><b>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด ดำเนินธุรกิจการประมูลค้าของเก่า การให้บริการด้านการจัดการวัสดุที่ใช้แล้ว การคัดแยกเพื่อการรีไซเคลิ นำกลับมาใช้และจำหน่าย มีความรับผิดชอบต่อชุมชน และสังคม เป็นหนึ่งในนโยบายหลักในการบริหาร โดยให้ความสำคัญต่อการสร้างสรรค์สิ่งแวดล้อมให้สังคมในชุมชนรอบโรงงาน และ การมีส่วนร่วมในชุมชน ซึ่งมีนโยบายในการดำเนินงานดังต่อไปนี้
@@ -718,7 +718,7 @@
                                 <div class="col-md-8">
                                     <div class="row ">
                                         <div class="col-md-6 set-pad-in-md ">
-                                            <div class="card-green set-margin-card"> 
+                                            <div class="card-green set-margin-card set-pad-20x"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
@@ -731,7 +731,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card"> 
+                                            <div class=" card-out-greenxx set-margin-card set-pad-20x"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
@@ -744,7 +744,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                            <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20x"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
