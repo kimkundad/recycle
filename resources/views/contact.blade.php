@@ -30,9 +30,9 @@
                 <div class="set-box-green-800">
                     <div class="box-green-800">
                         <h4>ที่อยู่</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัทสำนักงานใหญ่ วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สำนักงานใหญ่)</p>
                         <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">(สาขา สงขลา)</p>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สาขา สงขลา)</p>
                         <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                         <h4 class="mt-10">ช่องทางการติดต่อ</h4>
                         <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a><br>
@@ -107,9 +107,9 @@
         <div class="">
             <div class="box-green-800">
                 <h4>ที่อยู่</h4>
-                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัทสำนักงานใหญ่ วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
+                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สำนักงานใหญ่)</p>
                 <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
-                <p style="padding-bottom: 1px; margin-bottom: 0rem;">(สาขา สงขลา)</p>
+                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สาขา สงขลา)</p>
                 <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                 <h4 class="mt-10">ช่องทางการติดต่อ</h4>
                 <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a><br>
