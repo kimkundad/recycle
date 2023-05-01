@@ -104,16 +104,14 @@
         <div class="ps-panel__content">
             <ul class="menu--mobile">
 
-                
-
-
                 @if(get_data_category())
                             @foreach(get_data_category() as $u)
                             <li class="current-menu-item menu-item-has-children"> 
                                 <a href="#" class="active">{{ $u->cat_name }}</a> 
                                 <span class="sub-toggle">
+                                    <i class="fa fa-angle-down"></i>
                                 </span>
-                                <ul class="sub-menu" >
+                                <ul class="sub-menu" style="display: block;">
                                     @if($u->option)
                                     @foreach($u->option as $j)
                                     <li class="current-menu-item ">
@@ -126,6 +124,9 @@
                             </li>
                             @endforeach
                             @endif
+
+
+               
                
                 {{-- <li class="menu-item-has-children has-mega-menu"><a href="shop-default">สินค้า 1</a><span class="sub-toggle"></span>
                     <div class="mega-menu">
