@@ -99,7 +99,7 @@
     <!--include ../../data/menu/menu-product-categories-->
     <div class="ps-panel--sidebar" id="navigation-mobile">
         <div class="ps-panel__header">
-            <h3>หมวดหมู่สินค้า</h3>
+            <h3>สินค้าและบริการ</h3>
         </div>
         <div class="ps-panel__content">
             <ul class="menu--mobile">
@@ -211,7 +211,7 @@
             </a>
             <a class="navigation__item ps-toggle--sidebar" href="#navigation-mobile">
                 <i class="icon-bag2"></i>
-                <span> หมวดหมู่สินค้า</span>
+                <span> สินค้าและบริการ</span>
             </a>
             <a class="navigation__item ps-toggle--sidebar" href="#search-sidebar">
                 <i class="icon-magnifier"></i>
