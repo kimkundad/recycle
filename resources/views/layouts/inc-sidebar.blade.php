@@ -211,7 +211,7 @@
                 <span> เมนู</span>
             </a>
             <a class="navigation__item ps-toggle--sidebar" href="#navigation-mobile">
-                <i class="icon-bag2"></i>
+                <img src="{{ url('img/icon_product.png') }}" style="height: 28px;">
                 <span> สินค้าและบริการ</span>
             </a>
             <a class="navigation__item ps-toggle--sidebar" href="#search-sidebar">
