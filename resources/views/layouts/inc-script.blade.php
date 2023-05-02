@@ -18,6 +18,9 @@
     <!-- custom scripts-->
     <script src="{{ url('assets/js/main.js') }}?v{{time()}}"></script>
 
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.6/dist/cookieconsent.js"></script>
+    <script defer src="{{ url('assets/js/cookieconsent-init.js') }}"></script>
+
     <script src='https://www.google.com/recaptcha/api.js?hl=th'></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
@@ -31,6 +34,7 @@
   </div>
 
   <script>
+    
 
 $(document).on('click','#open_fb',function (event) {
       event.preventDefault();
