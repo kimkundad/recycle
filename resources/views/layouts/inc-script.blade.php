@@ -19,7 +19,7 @@
     <script src="{{ url('assets/js/main.js') }}?v{{time()}}"></script>
 
     <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.6/dist/cookieconsent.js"></script>
-    <script defer src="{{ url('assets/js/cookieconsent-init.js') }}"></script>
+    <script defer src="{{ url('assets/js/cookieconsent-init.js') }}?v{{time()}}"></script>
 
     <script src='https://www.google.com/recaptcha/api.js?hl=th'></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
