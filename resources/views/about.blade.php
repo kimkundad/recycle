@@ -109,31 +109,31 @@
                                                         <tbody>
                                                             
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center">
+                                                                <td class="d-flex align-items-center f-about-1st">
                                                                     <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     มุ่งพัฒนาธุรกิจรีไซเคิลอย่างครบวงจร เพื่อสร้างความพึงพอใจให้แก่ลูกค้าผ่านการนำเสนอผลิตภัณฑ์และการบริการที่มีคุณภาพ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center">
+                                                                <td class="d-flex align-items-center f-about-1st">
                                                                     <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     นำ Digital Technology มาช่วยต่อยอดการบริการ เพื่อรองรับลูกค้าทั้งในประเทศและต่างประเทศ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center">
+                                                                <td class="d-flex align-items-center f-about-1st">
                                                                     <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     แสวงหาพันธมิตรทางธุรกิจ เพื่อพัฒนาศักยภาพและขีดความสามารถในการแข่งขัน 
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center">
+                                                                <td class="d-flex align-items-center f-about-1st">
                                                                     <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     มุ่งเน้นการบริหารจัดการ โดยคำนึงถึงสิ่งแวดล้อมตามมาตรฐานสากลและความปลอดภัยของชุมชนเป็นสำคัญ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center">
+                                                                <td class="d-flex align-items-center f-about-1st">
                                                                     <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     ปฏิบัติตามกฎหมายอย่างเคร่งครัด ภายใต้หลักการกำกับดูแลกิจการที่ดี มีธรรมาภิบาลและมีความรับผิดชอบต่อสังคม
                                                                 </td>
