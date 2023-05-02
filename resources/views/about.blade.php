@@ -703,7 +703,7 @@
                         <div class="ps-tab" id="tabx-4">
                             <div class="row align-content-lg-stretch">
                                 <div class="col-md-12" style="margin-bottom:20px">
-                                    <div class=" card-out-green-head set-margin-card set-pad-20x"> 
+                                    <div class=" card-out-green-head set-margin-card set-pad-18x"> 
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
                                                 <p class="mb-0"><b>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด ดำเนินธุรกิจการประมูลค้าของเก่า การให้บริการด้านการจัดการวัสดุที่ใช้แล้ว การคัดแยกเพื่อการรีไซเคลิ นำกลับมาใช้และจำหน่าย มีความรับผิดชอบต่อชุมชน และสังคม เป็นหนึ่งในนโยบายหลักในการบริหาร โดยให้ความสำคัญต่อการสร้างสรรค์สิ่งแวดล้อมให้สังคมในชุมชนรอบโรงงาน และ การมีส่วนร่วมในชุมชน ซึ่งมีนโยบายในการดำเนินงานดังต่อไปนี้
@@ -719,7 +719,7 @@
                                 <div class="col-md-8">
                                     <div class="row ">
                                         <div class="col-md-6 set-pad-in-md ">
-                                            <div class="card-green set-margin-card set-pad-20x"> 
+                                            <div class="card-green set-margin-card set-pad-18x"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
@@ -732,7 +732,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card set-pad-20x"> 
+                                            <div class=" card-out-greenxx set-margin-card set-pad-18x"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
@@ -745,7 +745,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20x"> 
+                                            <div class=" card-out-greenxx set-margin-card mt-16 set-pad-18x"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
@@ -758,7 +758,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class="card-green set-margin-card mt-16"> 
+                                            <div class="card-green set-margin-card mt-16 set-pad-18x"> 
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
