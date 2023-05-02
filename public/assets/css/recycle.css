@@ -1707,7 +1707,7 @@ padding: 8px 34px;
 .ps-carousel--nav-inside .owl-nav {
   flex-direction: column!important;
   position: absolute;
-  top: 70%!important;
+  top: 85%!important;
   text-align: center;
   display: flex !important;
   visibility: inherit!important;
@@ -1735,7 +1735,7 @@ padding: 8px 34px;
   .ps-carousel--nav-inside .owl-nav {
     flex-direction: row!important;
     position: absolute;
-    top: 70%!important;
+    top: 85%!important;
     text-align: center;
     display: flex !important;
     visibility: inherit!important;
@@ -1745,7 +1745,7 @@ padding: 8px 34px;
   .owl-dots {
     flex-direction: row!important;
     position: absolute;
-    bottom: 26.5%!important;
+    bottom: 9%!important;
     width: 50px!important;
     left: 48.6%!important;
     text-align: center;
@@ -1761,7 +1761,7 @@ padding: 8px 34px;
   .owl-dots {
     flex-direction: row!important;
     position: absolute;
-    bottom: 24.5%!important;
+    bottom: 9%!important;
     width: 50px!important;
     left: 48.6%!important;
     text-align: center;
@@ -1780,7 +1780,7 @@ padding: 8px 34px;
   .ps-carousel--nav-inside .owl-nav {
     flex-direction: column!important;
     position: absolute;
-    top: 70%!important;
+    top: 85%!important;
     width: 50px!important;
     right: 5%!important;
     text-align: center;
@@ -1794,7 +1794,7 @@ padding: 8px 34px;
   .owl-dots {
     flex-direction: row!important;
     position: absolute;
-    bottom: 26.5%!important;
+    bottom: 9%!important;
     width: 50px!important;
     left: 48.6%!important;
     text-align: center;
