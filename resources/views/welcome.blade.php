@@ -6,6 +6,11 @@
 @stop
 
 @section('stylesheet')
+<style>
+    .owl-prev{
+  padding: 20px!important;
+}
+</style>
 @stop('stylesheet')
 
 @section('content')
@@ -26,8 +31,6 @@
     data-owl-item-lg="1" 
     data-owl-duration="1000" 
     data-owl-mousedrag="on" 
-    data-owl-animate-in="fadeIn" 
-    data-owl-animate-out="fadeOut"
     >
         {{-- <div class="ps-banner--autopart" data-background="{{ url('/img/slider/slide_1.png') }}">
             <img src="{{ url('/img/slider/slide_1.png') }}" alt="">
