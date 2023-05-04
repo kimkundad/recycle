@@ -2342,7 +2342,15 @@ h4 {
   margin-top: 0px;
 }
 
+.ps-footer__copyright {
+   padding: 0;
+}
+
 @media (max-width: 479px) {
+
+  .ps-footer__copyright {
+    padding-bottom: 80px!important;
+}
 
   .ps-carousel--nav-inside .owl-nav{
     display: none!important;
