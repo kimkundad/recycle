@@ -2188,6 +2188,10 @@ padding: 8px 34px;
 
 @media (max-width: 767px) {
 
+  .ps-footer__copyright {
+    padding-bottom: 80px!important;
+}
+
   .res-center{
     text-align: center;
   }
@@ -2323,6 +2327,10 @@ h4 {
 }
 
 @media (max-width: 582px) {
+
+  .ps-footer__copyright {
+    padding-bottom: 80px!important;
+}
 
   .ps-carousel--nav-inside .owl-nav{
     display: none!important;
