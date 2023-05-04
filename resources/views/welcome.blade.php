@@ -310,7 +310,7 @@
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>รับบริการพิเศษอื่นๆ เช่น ทำใบอนุญาตที่เกี่ยวข้องของกรมโรงงานอุตสาหกรรม</h3>
-                            <p class="mb-0 min-h-125 fs-13px">บริการให้คำปรึกษา การขอใบอนุญาตที่เกี่ยวข้องกับกรมโรงงานอุตสาหกรรม รับดำเนินการจัดเตรียมเอกสารและรายงานต่าง ๆ ในการขออนุญาตเกี่ยวกับโรงงานโดยทีมงานผู้เชี่ยวชาญ
+                            <p class="mb-0 min-h-125 fs-13px">บริการให้คำปรึกษา การขอใบอนุญาตที่เกี่ยวข้องกับกรมโรงงานอุตสาหกรรม รับดำเนินการจัดเตรียมเอกสารและรายงานต่าง ๆ ในการขออนุญาตเกี่ยวกับโรงงานโดยทีม<br>งานผู้เชี่ยวชาญ
                             </p>
                         </div>
                     </div>
@@ -373,36 +373,43 @@
                                 <div class="ps-tabs">
                                     <div class="ps-tab active" id="tab-1">
                                         <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                            <div class="scrollable-content">
+                                            <div class="scrollable-content d-flex justify-content-center">
+                                                <div style="max-width:380px">
                                                 <br>
                                                 <h4>เกี่ยวกับเรา</h4>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">ผู้นำด้านธุรกิจรีไซเคิลที่มีประสบการณ์และความเชี่ยวชาญด้านการรีไซเคิลวัสดุเหลือใช้ </p>
-                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">   ทั้งที่ไม่เป็นอันตรายและเป็นอันตรายจากโรงงานอุตสาหกรรม รวมไปถึงโลหะทุกประเภท 
-                                                    อาทิเช่น เหล็ก สแตนเลส ทองแดง ทองเหลือง อะลูมิเนียม แบตเตอรี่ น้ำมันที่ใช้แล้ว 
-                                                    พลาสติกทุกชนิด เครื่องยนต์ เครื่องจักร อะไหล่ ฯลฯ </p> <p style="text-indent: 1.5em;margin-bottom: 0px;">โดยเราเป็นทั้งผู้รับซื้อและผู้จำหน่าย 
-                                                    ครอบคลุมไปถึงการประมูลวัสดุเหลือใช้ทั้งจากโรงงานอุตสาหกรรมขนาดใหญ่ เช่นแยกก๊าซ ปิโตรเคมี 
-                                                    โรงกลั่นน้ำมัน โรงไฟฟ้า โรงงานชิ้นส่วนยานยนต์ และอุตสาหกรรมหนักทุกประเภท 
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px; ">
+                                                    ทั้งที่ไม่เป็นอันตรายและเป็นอันตรายจากโรงงานอุตสาหกรรม รวมไปถึงโลหะทุกประเภท 
+                                                    อาทิเช่น เหล็ก สแตนเลส ทองแดง <br>ทองเหลือง อะลูมิเนียม แบตเตอรี่ น้ำมันที่ใช้แล้ว 
+                                                    พลาสติกทุกชนิด เครื่องยนต์ เครื่องจักร อะไหล่ ฯลฯ </p> <p style="text-indent: 1.5em;margin-bottom: 0px;">
+                                                    โดยเราเป็นทั้งผู้รับซื้อและผู้จำหน่าย 
+                                                    ครอบคลุมไปถึงการประมูลวัสดุเหลือใช้ทั้งจากโรงงานอุตสาหกรรมขนาดใหญ่ เช่น <br>แยกก๊าซปิโตรเคมี 
+                                                    โรงกลั่นน้ำมัน โรงไฟฟ้า โรงงานชิ้นส่วน <br>ยานยนต์ และอุตสาหกรรมหนักทุกประเภท 
                                                     ด้วยมาตรฐานการจัดเก็บที่ถูกต้อง ปลอดภัย และมีประสิทธิภาพ โดยคำนึงถึงสภาพแวดล้อมเป็นสำคัญ
 
                                                     </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="ps-tab" id="tab-2">
                                         <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                            <div class="scrollable-content">
+                                            <div class="scrollable-content d-flex justify-content-center">
+                                                <div style="max-width:380px">
                                                 <br>
                                                 <h4>วิสัยทัศน์ วงษ์พาณิชย์รีไซเคิล </h4>
-                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">วงษ์พาณิชย์รีไซเคิล ระยอง มุ่งมั่นสู่การเป็นผู้นำด้านธุรกิจรีไซเคิลระดับประเทศ <br><br>
-                                                    ด้วยกลยุทธ์ ความเชี่ยวชาญมาตรฐานระดับสากล บุคลากรมืออาชีพ สร้างระบบเศรษฐกิจหมุนเวียนเพื่อการเติบโตอย่างยั่งยืน
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">วงษ์พาณิชย์รีไซเคิล ระยอง มุ่งมั่นสู่การเป็นผู้นำด้านธุรกิจรีไซเคิลระดับประเทศ </p>
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">  ด้วยกลยุทธ์ ความเชี่ยวชาญมาตรฐานระดับสากล <br>บุคลากรมืออาชีพ สร้างระบบเศรษฐกิจหมุนเวียนเพื่อการเติบโตอย่างยั่งยืน
                                                      โดยคำนึงถึงคุณภาพสิ่งแวดล้อม และความปลอดภัยเป็นสำคัญ 
                                                 </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="ps-tab" id="tab-3">
                                         <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
-                                            <div class="scrollable-content">
+                                            <div class="scrollable-content d-flex justify-content-center">
+                                                <div style="max-width:380px">
                                              
                                                 <style>
                                                     .table td, .table th {
@@ -424,13 +431,13 @@
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex align-items-center f-about-1st">
                                                                     <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
-                                                                    นำ Digital Technology มาช่วยต่อยอดการบริการ เพื่อรองรับลูกค้าทั้งในประเทศและต่างประเทศ
+                                                                    นำ Digital Technology มาช่วยต่อยอดการบริการ <br>เพื่อรองรับลูกค้าทั้งในประเทศและต่างประเทศ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex align-items-center f-about-1st">
                                                                     <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
-                                                                    แสวงหาพันธมิตรทางธุรกิจ เพื่อพัฒนาศักยภาพและขีดความสามารถในการแข่งขัน 
+                                                                    แสวงหาพันธมิตรทางธุรกิจ เพื่อพัฒนาศักยภาพและ<br>ขีดความสามารถในการแข่งขัน 
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
@@ -450,6 +457,7 @@
                                                     </table>
                                                 </div>
                                             </div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
