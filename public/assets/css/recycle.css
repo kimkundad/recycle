@@ -2346,16 +2346,12 @@ h4 {
    padding: 0;
 }
 
-@media (max-width: 1199) {
+
+@media (max-width: 479px) {
 
   .ps-footer__copyright {
     padding-bottom: 80px!important;
 }
-}
-
-@media (max-width: 479px) {
-
- 
 
   .ps-carousel--nav-inside .owl-nav{
     display: none!important;
