@@ -116,32 +116,32 @@
                                                         <tbody>
                                                             
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center f-about-1st">
-                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     มุ่งพัฒนาธุรกิจรีไซเคิลอย่างครบวงจร เพื่อสร้างความพึงพอใจให้แก่ลูกค้าผ่านการนำเสนอผลิตภัณฑ์และการบริการที่มีคุณภาพ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center f-about-1st">
-                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     นำ Digital Technology มาช่วยต่อยอดการบริการ <br>เพื่อรองรับลูกค้าทั้งในประเทศและต่างประเทศ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center f-about-1st">
-                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     แสวงหาพันธมิตรทางธุรกิจ เพื่อพัฒนาศักยภาพและ<br>ขีดความสามารถในการแข่งขัน 
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center f-about-1st">
-                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     มุ่งเน้นการบริหารจัดการ โดยคำนึงถึงสิ่งแวดล้อมตามมาตรฐานสากลและความปลอดภัยของชุมชนเป็นสำคัญ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
-                                                                <td class="d-flex align-items-center f-about-1st">
-                                                                    <b class="top-10"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
                                                                     ปฏิบัติตามกฎหมายอย่างเคร่งครัด ภายใต้หลักการกำกับดูแลกิจการที่ดี มีธรรมาภิบาลและมีความรับผิดชอบต่อสังคม
                                                                 </td>
                                                             </tr>
@@ -370,7 +370,7 @@
                                     <div class=" card-out-green-head set-margin-card"> 
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
-                                                <p class="mb-0"><b>บริษัท วงพาณิชย์รีไซเคิล ระยอง จำกัด ดำเนินธุรกิจการให้บริการกำจัดวัสดุที่ไม่ใช้แล้วที่ไม่เปนเปื้อน โดยวิธีการรีไซเคิล เพื่อให้เกิดความมั่นใจต่อชุมชน สังคม และกลุ่มโรงงานอุตสาหกรรม เพื่อให้เกิดความมุ่งมั่นต่อองค์กร ชุมชน และผู้มีส่วนได้ส่วนเสียว่า บริษัทมีความมุ่งมั่นในการบริหารจัดการคุณภาพและสิ่งแวดล้อมให้สอดคล้องกับธุรกิจ เพื่อช่วยลดปัญหาที่อาจเกิดผลกระทบโดยรวม ดังนี้
+                                                <p class="mb-0"><b>บริษัท วงพาณิชย์รีไซเคิล ระยอง จำกัด ดำเนินธุรกิจการให้บริการกำจัดวัสดุที่ไม่ใช้แล้วที่ไม่ปนเปื้อน โดยวิธีการรีไซเคิล เพื่อให้เกิดความมั่นใจต่อชุมชน สังคม และกลุ่มโรงงานอุตสาหกรรม เพื่อให้เกิดความมุ่งมั่นต่อองค์กร ชุมชน และผู้มีส่วนได้ส่วนเสียว่า บริษัทมีความมุ่งมั่นในการบริหารจัดการคุณภาพและสิ่งแวดล้อมให้สอดคล้องกับธุรกิจ เพื่อช่วยลดปัญหาที่อาจเกิดผลกระทบโดยรวม ดังนี้
                                                 </b></p>
                                             </div>
                                         </div>
@@ -714,7 +714,7 @@
                                     <div class=" card-out-green-head set-margin-card set-pad-18x"> 
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
-                                                <p class="mb-0"><b>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด ดำเนินธุรกิจการประมูลค้าของเก่า การให้บริการด้านการจัดการวัสดุที่ใช้แล้ว การคัดแยกเพื่อการรีไซเคลิ นำกลับมาใช้และจำหน่าย มีความรับผิดชอบต่อชุมชน และสังคม เป็นหนึ่งในนโยบายหลักในการบริหาร โดยให้ความสำคัญต่อการสร้างสรรค์สิ่งแวดล้อมให้สังคมในชุมชนรอบโรงงาน และ การมีส่วนร่วมในชุมชน ซึ่งมีนโยบายในการดำเนินงานดังต่อไปนี้
+                                                <p class="mb-0"><b>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด ดำเนินธุรกิจการประมูลค้าของเก่า การให้บริการด้านการจัดการวัสดุที่ใช้แล้ว การคัดแยกเพื่อการรีไซเคิล นำกลับมาใช้และจำหน่าย มีความรับผิดชอบต่อชุมชน และสังคม เป็นหนึ่งในนโยบายหลักในการบริหาร โดยให้ความสำคัญต่อการสร้างสรรค์สิ่งแวดล้อมให้สังคมในชุมชนรอบโรงงาน และ การมีส่วนร่วมในชุมชน ซึ่งมีนโยบายในการดำเนินงานดังต่อไปนี้
                                                 </b></p>
                                                 
                                             </div>

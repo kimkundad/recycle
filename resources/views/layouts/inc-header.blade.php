@@ -66,7 +66,7 @@
         <div class="container">
             <div class="navigation__right">
                 <ul class="menu">
-                    <li class="menu-item"><a class="active" href="{{ url('/') }}">หน้าแรก</a></li>
+                    <li class="menu-item"><a href="{{ url('/') }}">หน้าแรก</a></li>
                     <li class="menu-item"><a href="{{ url('/service') }}">สินค้าและบริการ</a></li>
                     <li class="menu-item"><a href="{{ url('/about') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
                     <li class="menu-item"><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
