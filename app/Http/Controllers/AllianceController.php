@@ -185,9 +185,10 @@ class AllianceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function del_ban($id)
+    public function del_alliance($id)
     {
         //
+
 
         $objs = DB::table('alliances')
             ->where('id', $id)
