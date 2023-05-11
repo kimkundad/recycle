@@ -146,7 +146,7 @@
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
-                    <h3>Hilight Project</h3>
+                    <h3>Highlight Projects</h3>
                 </div>
             </div>
         </div>
