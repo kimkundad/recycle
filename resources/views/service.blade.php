@@ -237,25 +237,41 @@
                     <h3>หมวดหมู่สินค้า</h3>
                 </div>
             </div>
-            {{-- <a href="{{ url('category?id=0') }}" class="">
+            <a href="{{ url('category?id=0') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
-            </a> --}}
+            </a>
             
         </div>
         <div class="ps-section__content">
-            <div class="row">
-            
-                @if(get_data_category())
-                        @foreach(get_data_category() as $u)
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                            <a href="{{ url('category?id='.$u->id) }}" class="text-center">
-                                <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
-                                <p style="margin-top:10px">{{ $u->cat_name }}</p>
+            <div class="ps-carousel--nav ow2 sec-slide" 
+            data-owl-auto="false" 
+            data-owl-loop="false" 
+            data-owl-speed="10000" 
+            data-owl-gap="30" 
+            data-interval="false"
+            data-owl-nav="true" 
+            data-owl-dots="true" 
+            data-owl-item="5" 
+            data-owl-item-xs="2" 
+            data-owl-item-sm="3" 
+            data-owl-item-md="4" 
+            data-owl-item-lg="5" 
+            data-owl-item-xl="6" 
+            data-owl-duration="1000" 
+            data-owl-mousedrag="on">
+
+                
+
+                @if(get_category())
+                    @foreach(get_category() as $u)
+                        <div class="ps-product ps-product--inner">
+                            <a href="{{ url('category?id='.$u->id) }}">
+                            <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
                             </a>
                         </div>
-                        @endforeach
+                    @endforeach
                 @endif
-
+                
             </div>
         </div>
     </div>
