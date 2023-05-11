@@ -94,9 +94,9 @@
                     <h3>หมวดหมู่สินค้า</h3>
                 </div>
             </div>
-            <a href="{{ url('/category?id=0') }}" class="">
+            {{-- <a href="{{ url('/category?id=0') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
-            </a>
+            </a> --}}
             
         </div>
         <div class="ps-section__content">
@@ -119,12 +119,12 @@
 
                 
 
-                @if(get_category())
-                    @foreach(get_category() as $u)
+                @if(get_data_category())
+                    @foreach(get_data_category() as $u)
                         <div class="ps-product ps-product--inner">
                             <a href="{{ url('category?id='.$u->id) }}" class="text-center">
                             <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
-                            <p style="margin-top:10px">{{ $u->sub_name }}</p>
+                            <p style="margin-top:10px">{{ $u->cat_name }}</p>
                             </a>
                         </div>
                     @endforeach
