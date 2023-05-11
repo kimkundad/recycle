@@ -100,7 +100,7 @@
             
         </div>
         <div class="ps-section__content">
-            <div class="ps-carousel--nav ow2 sec-slide" 
+            {{-- <div class="ps-carousel--nav ow2 sec-slide" 
             data-owl-auto="false" 
             data-owl-loop="true" 
             data-owl-speed="10000" 
@@ -130,7 +130,22 @@
                     @endforeach
                 @endif
                 
+            </div> --}}
+            <div class="row">
+            
+                @if(get_data_category())
+                        @foreach(get_data_category() as $u)
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                            <a href="{{ url('category?id='.$u->id) }}" class="text-center">
+                                <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
+                                <p style="margin-top:10px">{{ $u->cat_name }}</p>
+                            </a>
+                        </div>
+                        @endforeach
+                @endif
+
             </div>
+
         </div>
     </div>
 </div>
