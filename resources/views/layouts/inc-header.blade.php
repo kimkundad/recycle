@@ -62,7 +62,7 @@
             </div>
         </div>
     </div>
-    <nav class="navigation">
+    <nav class="navigation navigation_header">
         <div class="container">
             <div class="navigation__right">
                 <ul class="menu">

@@ -217,6 +217,7 @@
     }
 
     function stickyHeader() {
+        var navigation_header = $('.navigation_header')
         var header = $('.header'),
             scrollPosition = 0,
             checkpoint = 50;
@@ -227,8 +228,10 @@
                     var currentPosition = $(this).scrollTop();
                     if (currentPosition > checkpoint) {
                         el.addClass('header--sticky');
+                        navigation_header.addClass('headerx--sticky');
                     } else {
                         el.removeClass('header--sticky');
+                        navigation_header.removeClass('headerx--sticky');
                     }
                 });
             }
