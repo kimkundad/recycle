@@ -10,11 +10,15 @@
     .owl-prev{
   padding: 20px!important;
 }
+.cover {
+  background-size: cover!important;
+  background-position: center!important;
+  background-repeat: no-repeat!important;
+}
 </style>
 @stop('stylesheet')
 
 @section('content')
-
 
 <div class="ps-home-banner">
     <div class="ps-carousel--nav-inside owl-slider " 
@@ -54,7 +58,7 @@
         @isset($slide)
             @foreach ($slide as $item)
 
-                <div class="ps-banner--autopart" data-background="{{ url('/img/slide/'.$item->image) }}">
+                <div class="ps-banner--autopart align-items-center cover" data-background="{{ url('/img/slide/'.$item->image) }}">
                     <img src="{{ url('/img/slide/'.$item->image) }}" alt="">
                     <div class="d-flex">
                         <div class="ps-banner__content" >

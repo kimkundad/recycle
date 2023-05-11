@@ -29,14 +29,15 @@
             <div class="col col-md-3">
                 <div class="set-box-green-800">
                     <div class="box-green-800">
-                        <h4>ที่อยู่</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สำนักงานใหญ่)</p>
+                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
+                        <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สาขา สงขลา)</p>
+                        <h4 style="margin-bottom: 4px;">สำนักงานสงขลา</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                         <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a><br>
-                        โทรศัพท์ : <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a><br>
+                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a><br>
                         อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                 </div>
@@ -106,14 +107,15 @@
     <div class="p-15">
         <div class="">
             <div class="box-green-800">
-                <h4>ที่อยู่</h4>
-                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สำนักงานใหญ่)</p>
+                <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
+                <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
+                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                 <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
-                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สาขา สงขลา)</p>
+                <h4 style="margin-bottom: 4px;">สำนักงานสงขลา</h4>
+                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                 <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                 <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a><br>
-                โทรศัพท์ : <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a><br>
+                <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a><br>
                 อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
             </div>
         </div>
