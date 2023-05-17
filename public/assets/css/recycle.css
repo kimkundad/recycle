@@ -2670,3 +2670,16 @@ h4 {
     z-index: 1000;
     border-bottom: none;
 }
+.ps-block__number {
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 2px solid #009247;
+  border-radius: 50%;
+}
+.shadow-category{
+  min-height: 60px ;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+}

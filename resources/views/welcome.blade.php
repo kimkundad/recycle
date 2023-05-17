@@ -123,7 +123,9 @@
                     @foreach(get_category() as $u)
                         <div class="ps-product ps-product--inner">
                             <a href="{{ url('category?id='.$u->id) }}" class="text-center">
-                            <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
+                                <div class="ps-block__number">
+                                    <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
+                                </div>
                             <p style="margin-top:10px">{{ $u->sub_name }}</p>
                             </a>
                         </div>
