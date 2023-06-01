@@ -5,7 +5,7 @@
 			<tr>
 				<td align="center" valign="center" style="text-align:center; padding: 40px">
 					<a href="https://wpnrayong.com" rel="noopener" target="_blank">
-						<img alt="logo wpnrayong" src="https://wpnrayong.com/img/wpn-logo.png" />
+						<img alt="logo wpnrayong" src="https://wpnrayong.com/img/wpn-logo_v2.png" />
 					</a>
 				</td>
 			</tr>

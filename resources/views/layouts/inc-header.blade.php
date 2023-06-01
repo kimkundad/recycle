@@ -2,7 +2,7 @@
     <div class="header__top">
         <div class="container">
             <div class="header__left">
-                <a class="ps-logo" href="{{ url('/') }}"><img class="max-h-65" src="{{ url('img/wpn-logo.png') }}" alt="" /></a>
+                <a class="ps-logo" href="{{ url('/') }}"><img class="max-h-65" src="{{ url('img/wpn-logo_v2.png') }}" alt="" /></a>
             </div>
             <div class="header__center pt-10">
                 <form class="ps-form--quick-search" action="{{ url('/category') }}" method="get">
@@ -87,7 +87,7 @@
     <div class="navigation--mobile">
         <div class="navigation__left">
             <a class="ps-logo" href="{{ url('/') }}">
-                <img src="{{ url('img/wpn-logo.png') }}" alt="" class="header--mobile-img-logo" />
+                <img src="{{ url('img/wpn-logo_v2.png') }}" alt="" class="header--mobile-img-logo" />
             </a>
         </div>
         <div class="navigation__right">

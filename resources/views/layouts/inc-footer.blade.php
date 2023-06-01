@@ -6,7 +6,7 @@
                 <div class="col-md-8 ps-footer__widgets">
                     <aside class="widget widget_footer widget_contact-us">
                         <div class="widget_content res-center">
-                            <img class="max-h-65" src="{{ url('img/wpn-logo.png') }}" alt="" />
+                            <img class="max-h-65" src="{{ url('img/wpn-logo_v2.png') }}" alt="" />
                             <h5 class="pt-20">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สำนักงานใหญ่)</h5>
                             <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 </p>
                             <div class="pt-20 d-flex justify-content-center">
