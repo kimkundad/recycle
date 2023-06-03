@@ -154,18 +154,18 @@ class UnitproductController extends Controller
     public function del_unit_product($id)
     {
 
+        dd($id);
+    //     if($id !== 2){
 
-        if($id !== 2){
+    //     product::where('unit_id', $id)
+    //    ->update([
+    //        'unit_id' => 1
+    //     ]);
 
-        product::where('unit_id', $id)
-       ->update([
-           'unit_id' => 1
-        ]);
-
-        //
-        $obj = unit_product::find($id);
-        $obj->delete();
-    }
+    //     //
+    //     $obj = unit_product::find($id);
+    //     $obj->delete();
+    // }
 
         return redirect(url('admin/unit_product/'))->with('del_success','คุณทำการลบอสังหา สำเร็จ');
     }
