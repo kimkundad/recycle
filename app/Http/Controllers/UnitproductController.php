@@ -153,6 +153,9 @@ class UnitproductController extends Controller
      */
     public function del_unit_product($id)
     {
+
+        if($id !== 1){
+
         product::where('unit_id', $id)
        ->update([
            'unit_id' => 1
@@ -161,6 +164,7 @@ class UnitproductController extends Controller
         //
         $obj = unit_product::find($id);
         $obj->delete();
+    }
 
         return redirect(url('admin/unit_product/'))->with('del_success','คุณทำการลบอสังหา สำเร็จ');
     }
