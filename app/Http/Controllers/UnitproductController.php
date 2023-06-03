@@ -154,7 +154,8 @@ class UnitproductController extends Controller
     public function del_unit_product($id)
     {
 
-        if($id !== 1){
+
+        if($id !== 2){
 
         product::where('unit_id', $id)
        ->update([
