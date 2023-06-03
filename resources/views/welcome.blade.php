@@ -167,7 +167,7 @@
                                             @if($u->discount == 0)
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
                                                 @if($u->unit_id !== 1 && $u->unit_id !== null)
-                                                <b>{{ $u->name_unit }}</b>
+                                                <b> {{ $u->name_unit }}</b>
                                                 @endif
                                             </p>
                                             @else
@@ -178,7 +178,7 @@
 
                                             <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
                                                 @if($u->unit_id !== 1 && $u->unit_id !== null)
-                                                <b>{{ $u->name_unit }}</b>
+                                                <b> {{ $u->name_unit }}</b>
                                                 @endif
                                             </p>
                                             @endif
@@ -188,7 +188,7 @@
                                             @if($u->discount == 0)
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
                                                 @if($u->unit_id !== 1 && $u->unit_id !== null)
-                                                <b>{{ $u->name_unit }}</b>
+                                                <b> {{ $u->name_unit }}</b>
                                                 @endif
                                             </p>
                                             @else
@@ -199,7 +199,7 @@
 
                                             <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
                                                 @if($u->unit_id !== 1 && $u->unit_id !== null)
-                                                <b>{{ $u->name_unit }}</b>
+                                                <b> {{ $u->name_unit }}</b>
                                                 @endif
                                             </p>
                                             @endif
