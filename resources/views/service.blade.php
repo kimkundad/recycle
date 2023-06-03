@@ -307,7 +307,7 @@
                                         <div class="ps-product__content">
                                             @if($u->discount == 0)
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
-                                                @if($u->unit_id !== 1 && $u->unit_id !== null)
+                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
                                                 <b> {{ $u->name_unit }}</b>
                                                 @endif
                                             </p>
@@ -318,7 +318,7 @@
                                             @endphp
 
                                             <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
-                                                @if($u->unit_id !== 1 && $u->unit_id !== null)
+                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
                                                 <b> {{ $u->name_unit }}</b>
                                                 @endif
                                             </p>
@@ -328,7 +328,7 @@
                                         <div class="ps-product__content hover">
                                             @if($u->discount == 0)
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
-                                                @if($u->unit_id !== 1 && $u->unit_id !== null)
+                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
                                                 <b> {{ $u->name_unit }}</b>
                                                 @endif
                                             </p>
@@ -339,7 +339,7 @@
                                             @endphp
 
                                             <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
-                                            @if($u->unit_id !== 1 && $u->unit_id !== null)
+                                            @if($u->unit_id !== 3 && $u->unit_id !== null)
                                             <b> {{ $u->name_unit }}</b>
                                             @endif
                                             </p>
