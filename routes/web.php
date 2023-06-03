@@ -29,6 +29,20 @@ use App\Http\Controllers\UnitproductController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/images/{file}', function ($file) {
+	$url = Storage::disk('do_spaces')->temporaryUrl(
+	  $file,
+	  date('Y-m-d H:i:s', strtotime("+5 min"))
+	);
+	if ($url) {
+	   return Redirect::to($url);
+	}
+	return abort(404);
+  })->where('file', '.+');
+
+  
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::get('/product', function () {
@@ -143,3 +157,15 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     // UnitproductController
 
 });
+
+//การนำเอาไฟล์ที่อัพโหลดมาใช้งานใน Application
+Route::get('/images/{file}', function ($file) {
+    $url = Storage::disk('do_spaces')->temporaryUrl(
+        $file,
+        now()->addMinutes(5)
+    );
+    if ($url) {
+        return Redirect::to($url);
+    }
+    return abort(404);
+})->where('file', '.+');
