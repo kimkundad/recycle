@@ -250,7 +250,6 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <select class="form-select" aria-label="Select example" name="unit_id">
-                                            <option> -- เลือก หน่วยของสินค้า -- </option>
                                             @isset($unit_product)
                                             @foreach($unit_product as $u)
                                             <option value="{{$u->id}}"
