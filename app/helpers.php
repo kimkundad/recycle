@@ -39,6 +39,12 @@ function get_phone2(){
     return $objs->banner_point;
 }
 
+function get_youtube(){
+    $id = 1;
+    $objs = setting::find($id);
+    return $objs->youtube;
+}
+
 function get_line(){
     $id = 1;
     $objs = setting::find($id);

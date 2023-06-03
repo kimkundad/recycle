@@ -16,6 +16,20 @@
         margin-left: 8px !important;
     margin-right: 8px !important;
     }
+    .video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid red;
+  overflow: hidden;
+  position: relative;
+}
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
 </style>
 
 @section('content')
@@ -25,7 +39,7 @@
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
-                    <h3>เกี่ยวกับวงษ์พาณิชย์</h3>
+                    <h3>เกี่ยวกับเรา</h3>
                 </div>
             </div>
             
@@ -165,6 +179,24 @@
     </div>
 </div>
 
+
+@if((get_youtube() !== null))
+<div class="ps-deal-of-day mt-30 pb-5px">
+    <div class="container">
+        <div class="ps-section__content">
+            
+            <div class="row justify-content-md-center">
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12  ps-product--detail ps-product--fullwidth">
+                    <div class="video">
+                        <iframe src="{{ get_youtube() }}?version=3&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;mute=0&amp;loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@endif
 
 <div class="ps-deal-of-day mt-5">
     <div class="container">

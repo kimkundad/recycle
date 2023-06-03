@@ -229,7 +229,7 @@
 <br><br>
 
 
-<div class="ps-deal-of-day mt-30">
+<div class="ps-deal-of-day">
     <div class="container">
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
@@ -237,7 +237,7 @@
                     <h3>หมวดหมู่สินค้า</h3>
                 </div>
             </div>
-            <a href="{{ url('category?id=0') }}" class="">
+            <a href="{{ url('/category?id=0') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
             
@@ -245,7 +245,7 @@
         <div class="ps-section__content">
             <div class="ps-carousel--nav ow2 sec-slide" 
             data-owl-auto="false" 
-            data-owl-loop="false" 
+            data-owl-loop="true" 
             data-owl-speed="10000" 
             data-owl-gap="30" 
             data-interval="false"
@@ -265,8 +265,11 @@
                 @if(get_category())
                     @foreach(get_category() as $u)
                         <div class="ps-product ps-product--inner">
-                            <a href="{{ url('category?id='.$u->id) }}">
-                            <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
+                            <a href="{{ url('category?id='.$u->id) }}" class="text-center">
+                                <div class="ps-block__number">
+                                    <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
+                                </div>
+                            <p style="margin-top:10px">{{ $u->sub_name }}</p>
                             </a>
                         </div>
                     @endforeach
@@ -303,27 +306,43 @@
                                     <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
                                         <div class="ps-product__content">
                                             @if($u->discount == 0)
-                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}</p>
+                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
+                                                @if($u->unit_id !== 1 && $u->unit_id !== null)
+                                                <b>{{ $u->name_unit }}</b>
+                                                @endif
+                                            </p>
                                             @else
 
                                             @php
                                                 $discount = ($u->amount * $u->discount) / 100 ;
                                             @endphp
 
-                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del></p>
+                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
+                                                @if($u->unit_id !== 1 && $u->unit_id !== null)
+                                                <b>{{ $u->name_unit }}</b>
+                                                @endif
+                                            </p>
                                             @endif
                                             <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
                                         </div>
                                         <div class="ps-product__content hover">
                                             @if($u->discount == 0)
-                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}</p>
+                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
+                                                @if($u->unit_id !== 1 && $u->unit_id !== null)
+                                                <b>{{ $u->name_unit }}</b>
+                                                @endif
+                                            </p>
                                             @else
 
                                             @php
                                                 $discount = ($u->amount * $u->discount) / 100 ;
                                             @endphp
 
-                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del></p>
+                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
+                                            @if($u->unit_id !== 1 && $u->unit_id !== null)
+                                            <b>{{ $u->name_unit }}</b>
+                                            @endif
+                                            </p>
                                             @endif
                                             <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
                                         </div>

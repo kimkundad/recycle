@@ -56,9 +56,11 @@ class HomeController extends Controller
         'products.*',
         'products.id as id_q',
         'products.status as status1',
-        'categories.*'
+        'categories.*',
+        'unit_products.*'
         )
         ->leftjoin('categories', 'categories.id',  'products.cat_id')
+        ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')
         ->where('products.type_pro', 2)
         ->limit(12)
         ->get();
@@ -86,9 +88,11 @@ class HomeController extends Controller
         'products.*',
         'products.id as id_q',
         'products.status as status1',
-        'categories.*'
+        'categories.*',
+        'unit_products.*'
         )
         ->leftjoin('categories', 'categories.id',  'products.cat_id')
+        ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')
         ->where('products.type_pro', 2)
         ->limit(6)
         ->get();

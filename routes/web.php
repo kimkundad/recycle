@@ -13,7 +13,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AllianceController;
 use App\Http\Controllers\HProjectController;
-
+use App\Http\Controllers\UnitproductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -135,6 +135,11 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::resource('/admin/hproject', HProjectController::class);
     Route::post('/api/api_post_status_hproject', [App\Http\Controllers\HProjectController::class, 'api_post_status_hproject']);
     Route::get('api/del_hproject/{id}', [App\Http\Controllers\HProjectController::class, 'del_hproject']);
+
+    Route::resource('/admin/unit_product', UnitproductController::class);
+    Route::post('/api/api_post_status_unit_product', [App\Http\Controllers\UnitproductController::class, 'api_post_status_unit_product']);
+    Route::get('api/del_unit_product/{id}', [App\Http\Controllers\UnitproductController::class, 'del_unit_product']);
  
- 
+    // UnitproductController
+
 });

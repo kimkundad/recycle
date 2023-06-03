@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\product;
+use App\Models\unit_product;
 use App\Models\category;
 use App\Models\subcat;
 use App\Models\brand;
@@ -26,9 +27,11 @@ class ProductController extends Controller
             'products.*',
             'products.id as id_q',
             'products.status as status1',
-            'subcats.*'
+            'subcats.*',
+            'unit_products.*'
             )
             ->leftjoin('subcats', 'subcats.id',  'products.sub_cat_id')
+            ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')
             ->paginate(15);
 
             $objs->setPath('');
@@ -68,7 +71,9 @@ class ProductController extends Controller
         //
         $cat = subcat::where('status', 1)->get();
         $brand = brand::where('status', 1)->get();
- 
+        $unit_product = unit_product::where('unit_status', 1)->get();
+        
+        $data['unit_product'] = $unit_product;
         $data['cat'] = $cat;
         $data['brand'] = $brand;
         $data['method'] = "post";
@@ -129,6 +134,7 @@ class ProductController extends Controller
            $objs->detail_pro = $request['kt_docs_ckeditor_classic'];
            $objs->type_pro = $request['type_pro'];
            $objs->weight = $request['weight'];
+           $objs->unit_id = $request['unit_id'];
            $objs->status = $status;
            $objs->save();
 
@@ -175,6 +181,8 @@ class ProductController extends Controller
     public function edit($id)
     {
         //
+        $unit_product = unit_product::where('unit_status', 1)->get();
+        $data['unit_product'] = $unit_product;
 
         $img = product_image::where('product_id', $id)->get();
         $data['img'] = $img;
@@ -285,6 +293,7 @@ class ProductController extends Controller
            $objs->type_pro = $request['type_pro'];
            $objs->weight = $request['weight'];
            $objs->status = $status;
+           $objs->unit_id = $request['unit_id'];
            $objs->save();
 
    
@@ -321,6 +330,7 @@ class ProductController extends Controller
            $objs->type_pro = $request['type_pro'];
            $objs->weight = $request['weight'];
            $objs->status = $status;
+           $objs->unit_id = $request['unit_id'];
            $objs->save();
 
             }    

@@ -250,7 +250,7 @@
                     <a href="{{ url('/service') }}">สินค้าและบริการ</a>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="{{ url('/about') }}">เกี่ยวกับวงษ์พาณิชย์</a>
+                    <a href="{{ url('/about') }}">เกี่ยวกับเรา</a>
                 </li>
                 <li class="menu-item-has-children">
                     <a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a>

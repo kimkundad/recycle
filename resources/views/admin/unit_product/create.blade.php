@@ -21,7 +21,7 @@
                     <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                         <!--begin::Title-->
                         <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-                            แก้ไขประเภทการติดต่อ</h1>
+                            สร้างหน่วยของสินค้า</h1>
                         <!--end::Title-->
                         <!--begin::Breadcrumb-->
                         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
@@ -36,7 +36,7 @@
                             </li>
                             <!--end::Item-->
                             <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">แก้ไขประเภทการติดต่อใหม่</li>
+                            <li class="breadcrumb-item text-muted">สร้างหน่วยของสินค้าใหม่</li>
                             <!--end::Item-->
                         </ul>
                         <!--end::Breadcrumb-->
@@ -59,18 +59,18 @@
                             
                             <div class="card-body border-top p-9">
 
-                                
+                               
                                 <div class="row mb-6">
                                     <!--begin::Label-->
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อประเภทการติดต่อ</label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อหน่วยของสินค้า</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="name" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name }}">
+                                        <input type="text" name="name_unit" class="form-control form-control-lg form-control-solid" placeholder="กิโลกรัม กรัม" value="{{old('name_unit') ? old('name_unit') : ''}}">
                                     
-                                        @if ($errors->has('name'))
+                                        @if ($errors->has('name_unit'))
                                             <div class="fv-plugins-message-container invalid-feedback">
-                                                <div>กรุณากรอกชื่อประเภทการติดต่อ</div>
+                                                <div>กรุณากรอกชื่อหน่วยของสินค้า</div>
                                             </div>
                                         @endif
                                     </div>
@@ -84,11 +84,7 @@
                                     <!--begin::Label-->
                                     <div class="col-lg-8 d-flex align-items-center">
                                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                                            <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" name="status" 
-                                                @if($objs->status == 1)
-                                                    checked="checked"
-                                                @endif
-                                             value="1"/>
+                                            <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" name="status" checked="checked" value="1"/>
                                             <label class="form-check-label" for="allowmarketing"></label>
                                         </div>
                                     </div>
