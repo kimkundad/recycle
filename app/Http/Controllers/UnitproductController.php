@@ -159,7 +159,7 @@ class UnitproductController extends Controller
 
         product::where('unit_id', $id)
        ->update([
-           'unit_id' => 1
+           'unit_id' => 3
         ]);
 
         //
