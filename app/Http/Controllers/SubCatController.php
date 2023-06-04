@@ -8,6 +8,7 @@ use App\Models\subcat;
 use App\Models\product;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class SubCatController extends Controller
 {
@@ -101,8 +102,9 @@ class SubCatController extends Controller
             $img = Image::make($image->getRealPath());
             $img->resize(400, 400, function ($constraint) {
             $constraint->aspectRatio();
-            })->save('img/category/'.$input['imagename']);
-
+            });
+            $img->stream();
+            Storage::disk('do_spaces')->put('wpnrayong/subcat/'.$image->hashName(), $img, 'public');
 
 
         $status = 0;
@@ -115,7 +117,7 @@ class SubCatController extends Controller
            $objs = new subcat();
            $objs->sub_name = $request['sub_name'];
            $objs->cat_id = $request['cat_id'];
-           $objs->image = $input['imagename'];
+           $objs->image = $image->hashName();
            $objs->status = $status;
            $objs->save();
 
@@ -196,22 +198,24 @@ class SubCatController extends Controller
           ->where('id', $id)
           ->first();
 
-          $file_path = 'img/category/'.$img->image;
-          unlink($file_path);
+          $storage = Storage::disk('do_spaces');
+          $storage->delete('wpnrayong/subcat/' . $img->image, 'public');
 
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
           $img = Image::make($image->getRealPath());
           $img->resize(400, 400, function ($constraint) {
           $constraint->aspectRatio();
-            })->save('img/category/'.$input['imagename']);
+        });
+        $img->stream();
+        Storage::disk('do_spaces')->put('wpnrayong/subcat/'.$image->hashName(), $img, 'public');
 
             
      
            $objs = subcat::find($id);
            $objs->sub_name = $request['sub_name'];
            $objs->cat_id = $request['cat_id'];
-           $objs->image = $input['imagename'];
+           $objs->image = $image->hashName();
            $objs->status = $status;
            $objs->save();
 
@@ -250,8 +254,8 @@ class SubCatController extends Controller
                 $idcat = $objs->cat_id;
 
             if(isset($objs->image)){
-              $file_path = 'img/category/'.$objs->image;
-               unlink($file_path);
+                $storage = Storage::disk('do_spaces');
+                $storage->delete('wpnrayong/subcat/' . $objs->image, 'public');
             }
 
         $obj = subcat::find($id);
