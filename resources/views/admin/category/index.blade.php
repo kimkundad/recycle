@@ -90,6 +90,7 @@
                                     </thead>
                                     <!--end::Table head-->
                                     <!--begin::Table body-->
+                                    
                                     <tbody>
                                         @isset($objs)
                                             @foreach ($objs as $item)

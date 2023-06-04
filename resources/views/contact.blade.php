@@ -157,7 +157,7 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <div class="form__group field">
                             <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage" id='massage2'></textarea>
-                            <label for="massage" class="form__label">ข้อความ (500/500)</label>
+                            <label for="massage" class="form__label">ข้อความ (<span id="count"></span>/500)</label>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
@@ -188,6 +188,10 @@
 
 
 <script>
+
+$("#massage2").keyup(function(){
+  $("#count").text("Characters left: " + (500 - $(this).val().length));
+});
     
     $(document).on('click','#btnSendData',function (event) {
       event.preventDefault();
