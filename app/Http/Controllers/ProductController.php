@@ -250,7 +250,7 @@ class ProductController extends Controller
 
             if(isset($objs->image)){
                 $storage = Storage::disk('do_spaces');
-                $storage->delete('kozang/product_images/' . $objs->image, 'public');
+                $storage->delete('wpnrayong/product_images/' . $objs->image, 'public');
             }
 
         $obj = product_image::find($id);
