@@ -187,7 +187,7 @@ class CategoryController extends Controller
           ->first();
 
           $storage = Storage::disk('do_spaces');
-          $storage->delete('wpnrayong/category/' . $objs->image, 'public');
+          $storage->delete('wpnrayong/category/' . $img->image, 'public');
 
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
