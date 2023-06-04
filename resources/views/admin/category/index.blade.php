@@ -97,7 +97,7 @@
                                         <tr id="{{$item->id}}">
                                             <td>
                                                 <div class="symbol symbol-50px">
-                                                    <img src="{{ url('img/category/'.$item->image) }}" alt="">
+                                                    <img src="{{ url('images/wpnrayong/category/'.$item->image) }}" alt="">
                                                 </div>
                                             </td>
                                             <td>
