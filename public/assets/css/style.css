@@ -15731,7 +15731,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: transparent;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1099px) {
   .header {
     display: none;
   }
