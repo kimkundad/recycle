@@ -33,8 +33,8 @@
                                             @isset($img)
                                             @foreach($img as $u)
                                             <div class="item">
-                                                <a href="{{ url('img/cusimage/'.$u->image) }}">
-                                                    <img src="{{ url('img/cusimage/'.$u->image) }}" alt="{{ $objs->name_pro }}">
+                                                <a href="{{ url('images/wpnrayong/product_images/'.$u->image) }}">
+                                                    <img src="{{ url('images/wpnrayong/product_images/'.$u->image) }}" alt="{{ $objs->name_pro }}">
                                                 </a>
                                             </div>
                                             @endforeach
@@ -46,14 +46,14 @@
                                     @isset($img)
                                         @foreach($img as $u)
                                             <div class="item">
-                                                <img src="{{ url('img/cusimage/'.$u->image) }}" alt="{{ $objs->name_pro }}">
+                                                <img src="{{ url('images/wpnrayong/product_images/'.$u->image) }}" alt="{{ $objs->name_pro }}">
                                             </div>
                                         @endforeach
                                     @endisset
                                 </div>
 
                                 @else
-                                <img src="{{ url('img/product/'.$objs->image_pro) }}" alt="{{ $objs->name_pro }}" />
+                                <img src="{{ url('images/wpnrayong/product/'.$objs->image_pro) }}" alt="{{ $objs->name_pro }}" />
                                 @endif
                                 {{-- <figure>
                                     <div class="ps-wrapper">
