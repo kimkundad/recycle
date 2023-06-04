@@ -267,7 +267,7 @@
                         <div class="ps-product ps-product--inner">
                             <a href="{{ url('category?id='.$u->id) }}" class="text-center">
                                 <div class="ps-block__number">
-                                    <img class="img-fluid" src="{{ url('img/category/'.$u->image) }}"> 
+                                    <img class="img-fluid" src="{{ url('images/wpnrayong/subcat/'.$u->image) }}"> 
                                 </div>
                             <p style="margin-top:10px">{{ $u->sub_name }}</p>
                             </a>
@@ -301,7 +301,8 @@
                         @foreach($pro as $u)
                             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                 <div class="ps-product">
-                                    <div class="ps-product__thumbnail"><a href="{{ url('product_detail/'.$u->id_q) }}"><img src="{{ url('img/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
+                                    <div class="ps-product__thumbnail"><a href="{{ url('product_detail/'.$u->id_q) }}">
+                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
                                     </div>
                                     <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
                                         <div class="ps-product__content">
