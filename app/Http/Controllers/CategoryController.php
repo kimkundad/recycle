@@ -8,6 +8,7 @@ use App\Models\product;
 use App\Models\subcat;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -97,7 +98,9 @@ class CategoryController extends Controller
             $img = Image::make($image->getRealPath());
             $img->resize(400, 400, function ($constraint) {
             $constraint->aspectRatio();
-            })->save('img/category/'.$input['imagename']);
+            });
+            $img->stream();
+            Storage::disk('do_spaces')->put('wpnrayong/category/'.$image->hashName(), $img, 'public');
 
 
         $status = 0;
@@ -109,7 +112,7 @@ class CategoryController extends Controller
      
            $objs = new category();
            $objs->cat_name = $request['cat_name'];
-           $objs->image = $input['imagename'];
+           $objs->image = $image->hashName();
            $objs->status = $status;
            $objs->save();
 
@@ -183,21 +186,23 @@ class CategoryController extends Controller
           ->where('id', $id)
           ->first();
 
-          $file_path = 'img/category/'.$img->image;
-          unlink($file_path);
+          $storage = Storage::disk('do_spaces');
+          $storage->delete('wpnrayong/category/' . $objs->image, 'public');
 
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
           $img = Image::make($image->getRealPath());
           $img->resize(400, 400, function ($constraint) {
           $constraint->aspectRatio();
-            })->save('img/category/'.$input['imagename']);
+        });
+        $img->stream();
+        Storage::disk('do_spaces')->put('wpnrayong/category/'.$image->hashName(), $img, 'public');
 
             
      
            $objs = category::find($id);
            $objs->cat_name = $request['cat_name'];
-           $objs->image = $input['imagename'];
+           $objs->image = $image->hashName();
            $objs->status = $status;
            $objs->save();
 
@@ -222,8 +227,8 @@ class CategoryController extends Controller
             ->first();
 
             if(isset($objs->image)){
-              $file_path = 'img/category/'.$objs->image;
-               unlink($file_path);
+                $storage = Storage::disk('do_spaces');
+                $storage->delete('wpnrayong/category/' . $objs->image, 'public');
             }
 
         $obj = category::find($id);
