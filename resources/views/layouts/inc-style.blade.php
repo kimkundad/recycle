@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ url('assets/plugins/lightGallery-master/dist/css/lightgallery.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css') }}">
     <link rel="stylesheet" href="{{ url('assets/plugins/select2/dist/css/select2.min.css') }}">
-    <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/style.css') }}?v{{time()}}">
     <link rel="stylesheet" href="{{ url('assets/css/recycle.css') }}?v{{time()}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.6/dist/cookieconsent.css">
 
