@@ -2683,13 +2683,4 @@ h4 {
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
 }
-@media (max-width: 1199px){
-  .header.header--mobile {
-    display: none !important;
-}
-}
-@media (max-width: 1099px){
-  .header.header--mobile {
-    display: block !important;
-}
-}
+
