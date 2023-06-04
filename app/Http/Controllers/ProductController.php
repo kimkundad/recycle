@@ -226,7 +226,7 @@ class ProductController extends Controller
             $constraint->aspectRatio();
            });
            $img->stream();
-           Storage::disk('do_spaces')->put('wpnrayong/product_images'.$gallary->hashName(), $img, 'public');
+           Storage::disk('do_spaces')->put('wpnrayong/product_images/'.$gallary->hashName(), $img, 'public');
 
             $admins[] = [
                 'image' => $gallary->hashName(),
