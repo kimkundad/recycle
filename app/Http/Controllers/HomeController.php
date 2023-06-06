@@ -217,7 +217,7 @@ class HomeController extends Controller
             foreach ($results as $u) {
 
                 $url = url('product_detail/'.$u->id);
-                $img = url('img/product/'.$u->image_pro);
+                $img = url('images/wpnrayong/product/'.$u->image_pro);
                 $discount = ($u->amount * $u->discount) / 100 ;
 
                 if($u->discount == 0){

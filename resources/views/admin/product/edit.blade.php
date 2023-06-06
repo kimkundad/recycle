@@ -74,7 +74,7 @@
                                         <!--begin::Image input-->
                                         <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{ url('admin/assets/media/svg/avatars/blank.svg') }}')">
                                             <!--begin::Preview existing avatar-->
-                                            <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{ url('img/product/'.$objs->image_pro) }})"></div>
+                                            <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{ url('images/wpnrayong/product/'.$objs->image_pro) }})"></div>
                                             <!--end::Preview existing avatar-->
                                             <!--begin::Label-->
                                             <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="เปลี่ยน รูปสินค้า">
@@ -187,7 +187,7 @@
                                         <div class=" me-5 mb-5">
                                             <div class="d-flex flex-column">
                                                 <div class="symbol symbol-150px">
-                                                <img src="{{ url('img/cusimage/'.$u->image) }}" >
+                                                <img src="{{ url('images/wpnrayong/product_images/'.$u->image) }}" >
                                                 </div>
                                                 <div class="d-flex justify-content-center">
                                                     <a href="{{ url('api/image_del/'.$u->id) }}" onclick="return confirm('Are you sure?')">

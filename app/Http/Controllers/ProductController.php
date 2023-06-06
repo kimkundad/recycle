@@ -12,6 +12,7 @@ use App\Models\product_image;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
 use Response;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -108,7 +109,9 @@ class ProductController extends Controller
           $img = Image::make($image->getRealPath());
           $img->resize(800, 800, function ($constraint) {
           $constraint->aspectRatio();
-        })->save('img/product/'.$input['imagename']);
+        });
+        $img->stream();
+        Storage::disk('do_spaces')->put('wpnrayong/product/'.$image->hashName(), $img, 'public');
 
         $status = 0;
         if(isset($request['status'])){
@@ -121,7 +124,7 @@ class ProductController extends Controller
 
            $objs = new product();
            $objs->name_pro = $request['name_pro'];
-           $objs->image_pro = $input['imagename'];
+           $objs->image_pro = $image->hashName();
            $objs->sub_cat_id = $request['sub_cat_id'];
            $objs->cat_id = $sub->cat_id;
            $objs->brand = $request['brand'];
@@ -216,11 +219,17 @@ class ProductController extends Controller
              'file' => 'required|max:8048'
          ]);
 
-            $path = 'img/cusimage/';
-            $filename = time()."-".$gallary->getClientOriginalName();
-            $gallary->move($path, $filename);
+
+         $input['imagename'] = time().'.'.$gallary->getClientOriginalExtension();
+           $img = Image::make($gallary->getRealPath());
+           $img->resize(400, 400, function ($constraint) {
+            $constraint->aspectRatio();
+           });
+           $img->stream();
+           Storage::disk('do_spaces')->put('wpnrayong/product_images/'.$gallary->hashName(), $img, 'public');
+
             $admins[] = [
-                'image' => $filename,
+                'image' => $gallary->hashName(),
                 'product_id' => $id
             ];
           
@@ -240,8 +249,8 @@ class ProductController extends Controller
           $pid = $objs->product_id;
 
             if(isset($objs->image)){
-              $file_path = 'img/cusimage/'.$objs->image;
-               unlink($file_path);
+                $storage = Storage::disk('do_spaces');
+                $storage->delete('wpnrayong/product_images/' . $objs->image, 'public');
             }
 
         $obj = product_image::find($id);
@@ -304,19 +313,23 @@ class ProductController extends Controller
           ->where('id', $id)
           ->first();
 
-          $file_path = 'img/product/'.$img->image_pro;
-          unlink($file_path);
+          $storage = Storage::disk('do_spaces');
+          $storage->delete('wpnrayong/product/' . $img->image_pro, 'public');
+
+        
 
           $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
           $img = Image::make($image->getRealPath());
           $img->resize(800, 800, function ($constraint) {
           $constraint->aspectRatio();
-        })->save('img/product/'.$input['imagename']);
+        });
+        $img->stream();
+        Storage::disk('do_spaces')->put('wpnrayong/product/'.$image->hashName(), $img, 'public');
 
             $objs = product::find($id);
            $objs->name_pro = $request['name_pro'];
-           $objs->image_pro = $input['imagename'];
+           $objs->image_pro = $image->hashName();
            $objs->sub_cat_id = $request['sub_cat_id'];
            $objs->cat_id = $sub->cat_id;
            $objs->brand = $request['brand'];
@@ -353,8 +366,8 @@ class ProductController extends Controller
             ->first();
 
             if(isset($objs->image_pro)){
-              $file_path = 'img/product/'.$objs->image_pro;
-               unlink($file_path);
+                $storage = Storage::disk('do_spaces');
+                $storage->delete('wpnrayong/product/' . $objs->image_pro, 'public');
             }
 
         $obj = product::find($id);

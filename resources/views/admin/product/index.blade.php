@@ -100,7 +100,7 @@
                                         <tr id="{{$item->id_q}}">
                                             <td>
                                                 <div class="symbol symbol-50px">
-                                                    <img src="{{ url('img/product/'.$item->image_pro) }}" alt="">
+                                                    <img src="{{ url('images/wpnrayong/product/'.$item->image_pro) }}" alt="">
                                                 </div>
                                             </td>
                                             <td>

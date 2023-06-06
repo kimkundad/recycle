@@ -103,6 +103,9 @@ shareButton[0].addEventListener("click", (e) => {
 })
 
 
+$("#massage3").keyup(function(){
+  $("#count3").text("" + (500 - $(this).val().length));
+});
     
     $(document).on('click','#btnSendData_mobile',function (event) {
       event.preventDefault();

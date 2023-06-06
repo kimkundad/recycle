@@ -85,7 +85,7 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                 <div class="form__group field">
                                     <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage" id='massage'></textarea>
-                                    <label for="massage" class="form__label">ข้อความ (500/500)</label>
+                                    <label for="massage" class="form__label">ข้อความ (<span id="count">500</span>/500)</label>
                                 </div>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
@@ -157,7 +157,7 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <div class="form__group field">
                             <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage" id='massage2'></textarea>
-                            <label for="massage" class="form__label">ข้อความ (500/500)</label>
+                            <label for="massage" class="form__label">ข้อความ (<span id="count2">500</span>/500)</label>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
@@ -175,6 +175,7 @@
 </div>
 
 
+
 <div class="ps-contact-map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15562.683656431534!2d101.1492991!3d12.7998603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x23f4b615e2e82d1c!2z4Lia4Lij4Li04Lip4Lix4LiXIOC4p-C4h-C4qeC5jOC4nuC4suC4k-C4tOC4iuC4ouC5jOC4o-C4teC5hOC4i-C5gOC4hOC4tOC4pSDguKPguLDguKLguK3guIcg4LiI4Liz4LiB4Lix4LiU!5e0!3m2!1sth!2sth!4v1673203663218!5m2!1sth!2sth" height="500"></iframe>
 </div>
@@ -188,6 +189,13 @@
 
 
 <script>
+
+$("#massage").keyup(function(){
+  $("#count").text("" + (500 - $(this).val().length));
+});
+$("#massage2").keyup(function(){
+  $("#count2").text("" + (500 - $(this).val().length));
+});
     
     $(document).on('click','#btnSendData',function (event) {
       event.preventDefault();
