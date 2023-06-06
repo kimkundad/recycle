@@ -14,9 +14,9 @@
         <a target="_blank" href="{{ url('/')}}">
 
                         
-                              <img src="{{ url('admin/assets/media/logos/wpn-logo.svg') }}" alt="Logo" class="h-35px app-sidebar-logo-default" />
+            <img src="{{ url('img/wpn-logo_v2.png') }}" alt="Logo" class="h-35px app-sidebar-logo-default" />
                
-                              <img src="{{ url('admin/assets/media/logos/wpn-logo.svg') }}" alt="Logo" class="h-35px app-sidebar-logo-minimize" />
+            <img src="{{ url('img/wpn-logo_v2.png') }}" alt="Logo" class="h-35px app-sidebar-logo-minimize" />
                     
 
         </a>
