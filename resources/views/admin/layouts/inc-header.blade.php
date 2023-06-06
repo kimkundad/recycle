@@ -38,48 +38,12 @@
                 <!--begin::Search-->
                 
                 <!--end::Search-->
-                <!--begin::Activities-->
-                {{-- <div class="app-navbar-item ms-1 ms-lg-3">
-                    <!--begin::Drawer toggle-->
-                    <div class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-40px h-md-40px" id="kt_activities_toggle">
-                        <!--begin::Svg Icon | path: icons/duotune/general/gen032.svg-->
-                        <span class="svg-icon svg-icon-1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="8" y="9" width="3" height="10" rx="1.5" fill="currentColor" />
-                                <rect opacity="0.5" x="13" y="5" width="3" height="14" rx="1.5" fill="currentColor" />
-                                <rect x="18" y="11" width="3" height="8" rx="1.5" fill="currentColor" />
-                                <rect x="3" y="13" width="3" height="6" rx="1.5" fill="currentColor" />
-                            </svg>
-                        </span>
-                        <!--end::Svg Icon-->
-                    </div>
-                    <!--end::Drawer toggle-->
-                </div> --}}
-                <!--end::Activities-->
-                
-                <!--begin::Chat-->
-                <div class="app-navbar-item ms-1 ms-lg-3">
-                    <!--begin::Menu wrapper-->
-                    {{-- <div class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-40px h-md-40px position-relative" id="kt_drawer_chat_toggle">
-                        <!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
-                        <span class="svg-icon svg-icon-1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor" />
-                                <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor" />
-                                <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor" />
-                            </svg>
-                        </span>
-                        <!--end::Svg Icon-->
-                        <span class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>
-                    </div> --}}
-                    <!--end::Menu wrapper-->
-                </div>
-                <!--end::Chat-->
+              
                 
                 <!--begin::Theme mode-->
                 <div class="app-navbar-item ms-1 ms-lg-3">
                     <!--begin::Menu toggle-->
-                    {{-- <a href="#" class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-40px h-md-40px" data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+                    <a href="#" class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-40px h-md-40px" data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
                         <!--begin::Svg Icon | path: icons/duotune/general/gen060.svg-->
                         <span class="svg-icon theme-light-show svg-icon-2">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,12 +69,12 @@
                             </svg>
                         </span>
                         <!--end::Svg Icon-->
-                    </a> --}}
+                    </a>
                     <!--begin::Menu toggle-->
                     <!--begin::Menu-->
                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-muted menu-active-bg menu-state-color fw-semibold py-4 fs-base w-175px" data-kt-menu="true" data-kt-element="theme-mode-menu">
                         <!--begin::Menu item-->
-                        {{-- <div class="menu-item px-3 my-0">
+                        <div class="menu-item px-3 my-0">
                             <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="light">
                                 <span class="menu-icon" data-kt-element="icon">
                                     <!--begin::Svg Icon | path: icons/duotune/general/gen060.svg-->
@@ -131,7 +95,7 @@
                                 </span>
                                 <span class="menu-title">Light</span>
                             </a>
-                        </div> --}}
+                        </div>
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-3 my-0">
