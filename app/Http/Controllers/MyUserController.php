@@ -112,7 +112,7 @@ class MyUserController extends Controller
     {
         //
         $get_role = DB::table('role_user')->where('user_id',$id)->first();
-        dd($get_role);
+        
         $data['get_role'] = $get_role;
         $objs = User::find($id);
         $data['url'] = url('admin/MyUser/'.$id);
@@ -173,9 +173,20 @@ class MyUserController extends Controller
            
             // dd($request['role']);
 
-           DB::table('role_user')
-              ->where('user_id', $id)
-              ->update(['role_id' => $request['role']]);
+            $get_role = DB::table('role_user')->where('user_id',$id)->first();
+            if($get_role){
+                DB::table('role_user')
+                ->where('user_id', $id)
+                ->update(['role_id' => $request['role']]);
+            }else{
+
+                role_user::create([
+                    'role_id' => $request['role'],
+                    'user_id' => $id,
+                ]);
+                
+            }
+           
 
               return redirect(url('admin/MyUser/'.$id.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
     }
