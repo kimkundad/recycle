@@ -112,7 +112,7 @@ class MyUserController extends Controller
     {
         //
         $get_role = DB::table('role_user')->where('user_id',$id)->first();
-     
+        dd($get_role);
         $data['get_role'] = $get_role;
         $objs = User::find($id);
         $data['url'] = url('admin/MyUser/'.$id);
@@ -171,7 +171,7 @@ class MyUserController extends Controller
             }
 
            
-            dd($request['role']);
+            // dd($request['role']);
 
            DB::table('role_user')
               ->where('user_id', $id)
