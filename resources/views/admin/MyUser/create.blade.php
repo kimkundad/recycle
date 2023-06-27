@@ -195,7 +195,7 @@
                                             @endisset
                                             
                                         </select>
-                                        @if ($errors->has('email'))
+                                        @if ($errors->has('role'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากำหนด Role User</div>
                                             </div>
