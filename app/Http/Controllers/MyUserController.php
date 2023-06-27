@@ -180,10 +180,11 @@ class MyUserController extends Controller
                 ->update(['role_id' => $request['role']]);
             }else{
 
-                role_user::create([
-                    'role_id' => $request['role'],
-                    'user_id' => $id,
-                ]);
+                $obj = Role::where('id', $request['role'])->first();
+
+                $objs
+                ->roles()
+                ->attach(Role::where('name', $obj->name)->first());
                 
             }
            
