@@ -171,6 +171,7 @@ class MyUserController extends Controller
             }
 
            
+            dd($request['role']);
 
            DB::table('role_user')
               ->where('user_id', $id)
