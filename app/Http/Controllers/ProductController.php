@@ -24,6 +24,7 @@ class ProductController extends Controller
     public function index()
     {
         //
+        $count = DB::table('products')->count();
         $objs = DB::table('products')->select(
             'products.*',
             'products.id as id_q',
@@ -39,7 +40,7 @@ class ProductController extends Controller
         $data['objs'] = $objs;
 
         
-        return view('admin.product.index', compact('objs'));
+        return view('admin.product.index', compact('objs', 'count'));
     }
 
     public function recommend(){
