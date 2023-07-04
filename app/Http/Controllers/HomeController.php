@@ -62,6 +62,7 @@ class HomeController extends Controller
         ->leftjoin('categories', 'categories.id',  'products.cat_id')
         ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')
         ->where('products.type_pro', 2)
+        ->where('products.status', 1)
         ->limit(12)
         ->get();
 
