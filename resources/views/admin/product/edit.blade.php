@@ -218,6 +218,19 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">ลำดับของสินค้าแนะนำ</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="sort" class="form-control form-control-lg form-control-solid"  placeholder="1,2,3,4,5,6," value="{{ $objs->sort }}">
+                                    
+                                    
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
                                 
 
                                 <div class="row mb-6">

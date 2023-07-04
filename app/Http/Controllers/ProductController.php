@@ -133,6 +133,7 @@ class ProductController extends Controller
            $objs->amount = $request['amount'];
            $objs->sum = $request['sum'];
            $objs->condition = $request['condition'];
+           $objs->sort = $request['sort'];
            $objs->discount = $request['discount'];
            $objs->title_pro = $request['title_pro'];
            $objs->detail_pro = $request['kt_docs_ckeditor_classic'];
@@ -304,6 +305,7 @@ class ProductController extends Controller
            $objs->weight = $request['weight'];
            $objs->status = $status;
            $objs->unit_id = $request['unit_id'];
+           $objs->sort = $request['sort'];
            $objs->save();
 
    
@@ -345,6 +347,7 @@ class ProductController extends Controller
            $objs->weight = $request['weight'];
            $objs->status = $status;
            $objs->unit_id = $request['unit_id'];
+           $objs->sort = $request['sort'];
            $objs->save();
 
             }    

@@ -63,6 +63,7 @@ class HomeController extends Controller
         ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')
         ->where('products.type_pro', 2)
         ->where('products.status', 1)
+        ->orderBy('products.sort', 'asc')
         ->limit(12)
         ->get();
 
