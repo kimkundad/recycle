@@ -203,5 +203,13 @@ class MyUserController extends Controller
     public function del_MyUser($id)
     {
         //
+        $obj = User::find($id);
+        $obj->delete();
+
+        DB::table('role_user')
+            ->where('user_id', $id)
+            ->delete();
+
+        return redirect(url('admin/MyUser/'))->with('del_success','คุณทำการลบอสังหา สำเร็จ');
     }
 }
