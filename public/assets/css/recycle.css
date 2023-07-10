@@ -2334,6 +2334,13 @@ h4 {
 
 @media (max-width: 582px) {
 
+  .h-min-set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 238px;
+  }
+
   .ps-footer__copyright {
     padding-bottom: 80px!important;
 }
