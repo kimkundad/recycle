@@ -1546,6 +1546,14 @@ padding: 8px 34px;
   margin-bottom: 5px;
 }
 @media (max-width: 1199px){
+
+  .h-min-set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 287px;
+  }
+
   .widget_shop_bg {
     background-color: #f7f7fa00!important;
 }
@@ -1630,7 +1638,12 @@ padding: 8px 34px;
 }
 @media (max-width: 990px) {
 
-  
+  .h-min-set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 208px;
+  }
 
   .card-body-x {
     padding: 0px;
@@ -2193,6 +2206,13 @@ padding: 8px 34px;
 
 
 @media (max-width: 767px) {
+
+  .h-min-set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 238px;
+  }
 
   .ps-footer__copyright {
     padding-bottom: 80px!important;
