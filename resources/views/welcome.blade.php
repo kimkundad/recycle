@@ -160,10 +160,7 @@
                         @foreach($pro as $u)
                             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                 <div class="ps-product">
-                                    <div class="ps-product__thumbnail" style="display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    min-height: 173px;"><a href="{{ url('product_detail/'.$u->id_q) }}">
+                                    <div class="ps-product__thumbnail" ><a href="{{ url('product_detail/'.$u->id_q) }}">
                                         <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
                                     </div>
                                     <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>

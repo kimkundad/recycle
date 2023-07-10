@@ -19,6 +19,12 @@ span, p , li ,strong, option , label, input, a, b {
 .navigation {
     background-color: #009247;
 }
+.h-min-set{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 173px;
+}
 .table {
   font-family: 'Prompt', sans-serif !important;
 }
@@ -2356,6 +2362,13 @@ h4 {
 
 
 @media (max-width: 479px) {
+
+  .h-min-set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 173px;
+  }
 
   .ps-footer__copyright {
     padding-bottom: 80px!important;
