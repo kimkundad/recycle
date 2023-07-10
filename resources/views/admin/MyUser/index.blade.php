@@ -84,9 +84,7 @@
                                             <th class="p-0 "></th>
                                             <th class="p-0 ">อีเมล</th>
                                             <th class="p-0 ">เบอร์ติดต่อ</th>
-                                            @if($item->name1 == 'superadmin')
-                                            <th class="p-0 "></th>
-                                            @endif
+                                            <th class="p-0 ">password</th>
                                             <th class="p-0 ">provider</th>
                                             <th class="p-0 "></th>
                                         </tr>
@@ -121,6 +119,8 @@
                                             <td>
                                                 {{ $item->code_user }}
                                             </td>
+                                            @else
+                                            <td></td>
                                             @endif
                                             <td>
                                                 {{ $item->provider }}
