@@ -75,6 +75,7 @@ class MyUserController extends Controller
             'email' => $request['email'],
             'phone' => $request['phone'],
             'avatar' => $request['option2'],
+            'code_user' => $request['password'],
             'provider' => 'email',
             'email_verified_at' => date('Y-m-d H:i:s'),
             'is_admin' => 0,
@@ -165,6 +166,7 @@ class MyUserController extends Controller
                 $objs->email = $request['email'];
                 $objs->phone = $request['phone'];
                 $objs->avatar = $request['option2'];
+                $objs->code_user = $request['password'];
                 $objs->password = Hash::make($request['password']);
                 $objs->save();
 

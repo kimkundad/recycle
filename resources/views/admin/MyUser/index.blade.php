@@ -77,13 +77,16 @@
                             <div class="table-responsive">
                                 <!--begin::Table-->
                                 <table class="table align-middle gs-0 gy-3">
-                                    <!--begin::Table head-->
+                                    <!--begin::Table head superadmin--> 
                                     <thead>
                                         <tr>
                                             <th class="p-0 w-50px"></th>
                                             <th class="p-0 "></th>
                                             <th class="p-0 ">อีเมล</th>
                                             <th class="p-0 ">เบอร์ติดต่อ</th>
+                                            @if($item->name1 == 'superadmin')
+                                            <th class="p-0 "></th>
+                                            @endif
                                             <th class="p-0 ">provider</th>
                                             <th class="p-0 "></th>
                                         </tr>
@@ -114,6 +117,11 @@
                                             <td>
                                                 {{ $item->phone }}
                                             </td>
+                                            @if($item->name1 == 'superadmin')
+                                            <td>
+                                                {{ $item->code_user }}
+                                            </td>
+                                            @endif
                                             <td>
                                                 {{ $item->provider }}
                                             </td>
