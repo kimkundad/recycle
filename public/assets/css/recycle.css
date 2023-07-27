@@ -23,7 +23,8 @@ span, p , li ,strong, option , label, input, a, b {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 173px;
+  min-height: 193px;
+    max-height: 193px;
 }
 .table {
   font-family: 'Prompt', sans-serif !important;

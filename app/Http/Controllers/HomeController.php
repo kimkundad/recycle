@@ -377,7 +377,6 @@ class HomeController extends Controller
 
         $message = "ข้อความจากหน้าติดต่อ หัวข้อติดต่อ : ". $data_contact ." ชื่อผู้ติดต่อ : ".$request['name'].", ".$request['email'].", ".$request['phone'].", ข้อความ : ".$request['massage'];
         $lineapi = env('line_token');
-        
 
         $mms =  trim($message);
         $chOne = curl_init();
