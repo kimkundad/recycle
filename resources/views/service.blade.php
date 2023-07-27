@@ -12,7 +12,7 @@
 @section('content')
 
 
-<div class="ps-deal-of-day">
+<div class="ps-deal-of-day" style="    padding-top: 50px;"> 
     <div class="container">
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
