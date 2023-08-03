@@ -154,7 +154,7 @@
                 <div class="ps-section__header">
                     <div class="d-flex justify-content-between">
                         <h3>สินค้าแนะนำ</h3>
-                        <a href="{{ url('/category/0') }}" class="">
+                        <a href="{{ url('/category?id=0') }}" class="">
                             ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
                         </a>
                     </div>
@@ -164,44 +164,60 @@
                         <div class="row">
                             
                             @isset($pro)
-                                @foreach($pro as $u)
-                                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
-                                        <div class="ps-product">
-                                            <div class="ps-product__thumbnail"><a href="{{ url('product_detail/'.$u->id_q) }}">
-                                                <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
-                                            </div>
-                                            <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
-                                                <div class="ps-product__content">
-                                                    @if($u->discount == 0)
-                                                    <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}</p>
-                                                    @else
-        
-                                                    @php
-                                                        $discount = ($u->amount * $u->discount) / 100 ;
-                                                    @endphp
-        
-                                                    <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del></p>
-                                                    @endif
-                                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
-                                                </div>
-                                                <div class="ps-product__content hover">
-                                                    @if($u->discount == 0)
-                                                    <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}</p>
-                                                    @else
-        
-                                                    @php
-                                                        $discount = ($u->amount * $u->discount) / 100 ;
-                                                    @endphp
-        
-                                                    <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del></p>
-                                                    @endif
-                                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
-                                                </div>
-                                            </div>
+                        @foreach($pro as $u)
+                            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
+                                <div class="ps-product">
+                                    <div class="ps-product__thumbnail h-min-set" ><a href="{{ url('product_detail/'.$u->id_q) }}">
+                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
+                                    </div>
+                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
+                                        <div class="ps-product__content">
+                                            @if($u->discount == 0)
+                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
+                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
+                                                <b> {{ $u->name_unit }}</b>
+                                                @endif
+                                            </p>
+                                            @else
+
+                                            @php
+                                                $discount = ($u->amount * $u->discount) / 100 ;
+                                            @endphp
+
+                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
+                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
+                                                <b> {{ $u->name_unit }}</b>
+                                                @endif
+                                            </p>
+                                            @endif
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
+                                        </div>
+                                        <div class="ps-product__content hover">
+                                            @if($u->discount == 0)
+                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
+                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
+                                                <b> {{ $u->name_unit }}</b>
+                                                @endif
+                                            </p>
+                                            @else
+
+                                            @php
+                                                $discount = ($u->amount * $u->discount) / 100 ;
+                                            @endphp
+
+                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
+                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
+                                                <b> {{ $u->name_unit }}</b>
+                                                @endif
+                                            </p>
+                                            @endif
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
                                         </div>
                                     </div>
-                                @endforeach
-                            @endisset
+                                </div>
+                            </div>
+                        @endforeach
+                    @endisset
         
                         </div>
                     </div>
@@ -210,6 +226,7 @@
            
         </div>
     </div>
+
 
 @endsection
 

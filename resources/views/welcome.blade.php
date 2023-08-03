@@ -155,7 +155,6 @@
                 <div class="row">
 
             
-
                     @isset($pro)
                         @foreach($pro as $u)
                             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
