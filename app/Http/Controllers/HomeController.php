@@ -291,16 +291,30 @@ class HomeController extends Controller
       $img = product_image::where('product_id', $id)->get();
       $data['img'] = $img;
 
-      $pro = DB::table('products')->select(
-        'products.*',
-        'products.id as id_q',
-        'products.status as status1',
-        'categories.*'
-        )
-        ->leftjoin('categories', 'categories.id',  'products.cat_id')
-        ->where('products.type_pro', 2)
-        ->limit(6)
-        ->get();
+      // $pro = DB::table('products')->select(
+      //   'products.*',
+      //   'products.id as id_q',
+      //   'products.status as status1',
+      //   'categories.*'
+      //   )
+      //   ->leftjoin('categories', 'categories.id',  'products.cat_id')
+      //   ->where('products.type_pro', 2)
+      //   ->limit(6)
+      //   ->get();
+
+        $pro = DB::table('products')->select(
+          'products.*',
+          'products.id as id_q',
+          'products.status as status1',
+          'categories.*',
+          'unit_products.*'
+          )
+          ->leftjoin('categories', 'categories.id',  'products.cat_id')
+          ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')
+          ->where('products.type_pro', 2)
+          ->where('products.status', 1)
+          ->limit(6)
+          ->get();
 
       $data['pro'] = $pro;
 
