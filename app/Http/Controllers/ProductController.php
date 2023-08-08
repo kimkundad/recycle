@@ -121,13 +121,27 @@ class ProductController extends Controller
             }
         }
 
+
         $sub = subcat::find($request['sub_cat_id']);
+
+        if($sub){
+            $mysub = $request['sub_cat_id'];
+            $cat_id = $sub->cat_id;
+        }else{
+
+            $new = DB::table('subcats')
+                ->where('sub_name', 'ไม่มีหมวดหมู่')
+                ->first();
+
+            $mysub = $new->id;
+            $cat_id = $new->cat_id;
+        }
 
            $objs = new product();
            $objs->name_pro = $request['name_pro'];
            $objs->image_pro = $image->hashName();
-           $objs->sub_cat_id = $request['sub_cat_id'];
-           $objs->cat_id = $sub->cat_id;
+           $objs->sub_cat_id = $mysub;
+           $objs->cat_id = $cat_id;
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
            $objs->amount = $request['amount'];
@@ -277,6 +291,18 @@ class ProductController extends Controller
 
         $sub = subcat::find($request['sub_cat_id']);
 
+        if($sub){
+            $mysub = $request['sub_cat_id'];
+            $cat_id = $sub->cat_id;
+        }else{
+
+            $new = DB::table('subcats')
+                ->where('sub_name', 'ไม่มีหมวดหมู่')
+                ->first();
+
+            $mysub = $new->id;
+            $cat_id = $new->cat_id;
+        }
 
         $image = $request->file('image_pro');
 
@@ -291,8 +317,8 @@ class ProductController extends Controller
 
            $objs = product::find($id);
            $objs->name_pro = $request['name_pro'];
-           $objs->sub_cat_id = $request['sub_cat_id'];
-           $objs->cat_id = $sub->cat_id;
+           $objs->sub_cat_id = $mysub;
+           $objs->cat_id = $cat_id;
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
            $objs->amount = $request['amount'];
@@ -333,8 +359,8 @@ class ProductController extends Controller
             $objs = product::find($id);
            $objs->name_pro = $request['name_pro'];
            $objs->image_pro = $image->hashName();
-           $objs->sub_cat_id = $request['sub_cat_id'];
-           $objs->cat_id = $sub->cat_id;
+           $objs->sub_cat_id = $mysub;
+           $objs->cat_id = $cat_id;
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
            $objs->amount = $request['amount'];

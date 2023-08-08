@@ -87,13 +87,14 @@
                                             <th class="p-0 "></th>
                                         </tr>
                                     </thead>
+
                                     <!--end::Table head-->
                                     <!--begin::Table body-->
                                     <tbody>
                                         @isset($objs)
                                             @foreach ($objs as $item)
                                         
-                                        <tr id="{{$item->id}}">
+                                        <tr id="{{$item->id}}" class="{{ $item->cat_id }}">
                                             <td>
                                                 <div class="symbol symbol-50px">
                                                     <img src="{{ url('images/wpnrayong/subcat/'.$item->image) }}" alt="">
