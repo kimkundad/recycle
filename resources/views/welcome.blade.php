@@ -176,11 +176,18 @@
                                                 $discount = ($u->amount * $u->discount) / 100 ;
                                             @endphp
 
+                                            @if($u->amount == 0)
                                             <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
                                                 @if($u->unit_id !== 3 && $u->unit_id !== null)
                                                 <b> {{ $u->name_unit }}</b>
                                                 @endif
                                             </p>
+                                            @else
+                                            <p class="ps-product__price sale">
+                                                ติดต่อเจ้าหน้าที่
+                                            </p>
+                                            @endif
+
                                             @endif
                                             <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
                                         </div>
