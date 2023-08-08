@@ -168,7 +168,7 @@
 
                                             @if($u->amount == 0)
                                             <p class="ps-product__price sale">
-                                                ติดต่อเจ้าหน้าที่
+                                                <a href="{{ url('/contact') }}">ติดต่อเจ้าหน้าที่</a>
                                             </p>
                                             @else
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
@@ -186,7 +186,7 @@
 
                                             @if($u->amount == 0)
                                             <p class="ps-product__price sale">
-                                                ติดต่อเจ้าหน้าที่
+                                                <a href="{{ url('/contact') }}">ติดต่อเจ้าหน้าที่</a>
                                             </p>
                                             @else
                                             <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
@@ -204,7 +204,7 @@
 
                                             @if($u->amount == 0)
                                             <p class="ps-product__price sale">
-                                                ติดต่อเจ้าหน้าที่
+                                                <a href="{{ url('/contact') }}">ติดต่อเจ้าหน้าที่</a>
                                             </p>
                                             @else
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
@@ -221,7 +221,7 @@
                                             @endphp
                                             @if($u->amount == 0)
                                             <p class="ps-product__price sale">
-                                                ติดต่อเจ้าหน้าที่
+                                                <a href="{{ url('/contact') }}">ติดต่อเจ้าหน้าที่</a>
                                             </p>
                                             @else
                                             <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
