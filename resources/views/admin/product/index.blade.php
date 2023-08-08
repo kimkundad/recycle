@@ -80,6 +80,7 @@
                                     <!--begin::Table head-->
                                     <thead>
                                         <tr>
+                                            <th class="p-0 w-50px">ลำดับ</th>
                                             <th class="p-0 w-50px"></th>
                                             <th class="p-0 "></th>
                                             <th class="p-0 ">ซับหมวดหมู่สินค้า</th>
@@ -98,6 +99,9 @@
                                         
 
                                         <tr id="{{$item->id_q}}">
+                                            <td>
+                                                {{ ($item->mysort) }}
+                                            </td>
                                             <td>
                                                 <div class="symbol symbol-50px">
                                                     <img src="{{ url('images/wpnrayong/product/'.$item->image_pro) }}" alt="">

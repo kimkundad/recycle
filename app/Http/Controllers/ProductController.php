@@ -34,6 +34,8 @@ class ProductController extends Controller
             )
             ->leftjoin('subcats', 'subcats.id',  'products.sub_cat_id')
             ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')
+            ->orderBy('products.mysort', 'asc')
+            ->orderBy('products.status', 'desc')
             ->paginate(15);
 
             $objs->setPath('');
@@ -53,6 +55,8 @@ class ProductController extends Controller
             )
             ->leftjoin('subcats', 'subcats.id',  'products.sub_cat_id')
             ->where('products.type_pro', 2)
+            ->orderBy('products.sort', 'asc')
+            ->orderBy('products.status', 'desc')
             ->paginate(15);
 
             $objs->setPath('');
@@ -155,6 +159,7 @@ class ProductController extends Controller
            $objs->weight = $request['weight'];
            $objs->unit_id = $request['unit_id'];
            $objs->status = $status;
+           $objs->mysort = $request['mysort'];
            $objs->save();
 
            return redirect(url('admin/product'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
@@ -332,6 +337,7 @@ class ProductController extends Controller
            $objs->status = $status;
            $objs->unit_id = $request['unit_id'];
            $objs->sort = $request['sort'];
+           $objs->mysort = $request['mysort'];
            $objs->save();
 
    
@@ -374,6 +380,7 @@ class ProductController extends Controller
            $objs->status = $status;
            $objs->unit_id = $request['unit_id'];
            $objs->sort = $request['sort'];
+           $objs->mysort = $request['mysort'];
            $objs->save();
 
             }    
