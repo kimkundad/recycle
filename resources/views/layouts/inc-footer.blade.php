@@ -33,7 +33,7 @@
                         </div>
                     </aside>
                     <aside class="widget widget_footer">
-                        <h4 class="widget-title">หน้าแรก</h4>
+                        <h4 class="widget-title">หน้าแรก </h4>
                         <ul class="ps-list--link">
                             <li><a href="{{ url('category?id=0') }}">สินค้าและบริการ</a></li>
                             <li><a href="{{ url('category?id=0') }}">สินค้าขายดี</a></li>
@@ -43,7 +43,7 @@
                             @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">เข้าสู่ระบบ / Login</a></li>
                             @else
-                            @if(Auth::user()->is_admin == 1)
+                            @if(Auth::user()->roles[0]->name == 'superadmin' || Auth::user()->roles[0]->name == 'admin')
                             <li><a href="{{ url('/admin/dashboard') }}">เข้าสู่หลังบ้าน</a></li>
                             @endif
                             @endif
