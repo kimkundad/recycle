@@ -2727,6 +2727,9 @@ h4 {
 .photo_cat{
     height: 211px;
     width: 211px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
 .inheritpho{
   height: inherit;
