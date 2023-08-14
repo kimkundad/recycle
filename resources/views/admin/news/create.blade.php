@@ -5,6 +5,16 @@
     <meta name="description" content=" รายละเอียด วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด">
 @stop
 @section('stylesheet')
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<style>
+    .note-editor.note-frame .note-editing-area .note-editable {
+        padding: 35px;
+        overflow: auto;
+        color: #000;
+        background-color: #fff;
+    }
+    </style>
 
 @stop('stylesheet')
 
@@ -172,8 +182,8 @@
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-10 fv-row fv-plugins-icon-container">
-                                        <textarea name="detail" id="kt_docs_ckeditor_classic" >
-                                            <h1>กรอกรายละเอียด...</h1>
+                                        <textarea name="detail" class="summernote" id="kt_docs_ckeditor_classic" >
+                                            <h3>กรอกรายละเอียด...</h3>
                                             {{old('detail') ? old('detail') : ''}}
                                         </textarea>
                                         @if ($errors->has('detail'))
@@ -254,11 +264,15 @@
 
 </script>
 
-<script src="{{ url('admin/assets/plugins/custom/ckeditor/ckeditor-classic.bundle.js') }}"></script>
+<!-- include summernote css/js -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+{{-- <script src="{{ url('admin/assets/plugins/custom/ckeditor/ckeditor-classic.bundle.js') }}"></script> --}}
 
 <script src="{{ url('admin/assets/js/custom/apps/projects/settings/settings.js') }}"></script>
 
-<script>
+{{-- <script>
     
 ClassicEditor
     .create(document.querySelector('#kt_docs_ckeditor_classic'),{
@@ -272,7 +286,65 @@ ClassicEditor
     .catch(error => {
         console.error(error);
     });
-</script>
+</script> --}}
+
+<script>
+
+    $(document).ready(function() {
+      $('.summernote').summernote({
+        fontSizes: ['8', '9', '10', '11', '12', '14', '18', '24', '36', '48' , '64', '82', '150'],
+        fontNames: ['Arial', 'Prompt', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana', 'Roboto'],
+        height: 550,
+        popover: {
+                image: [
+                    ['custom', ['imageAttributes']],
+                    ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+                    ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                    ['remove', ['removeMedia']]
+                ],
+            },
+            imageAttributes:{
+                icon:'<i class="note-icon-pencil"/>',
+                removeEmpty:false, // true = remove attributes | false = leave empty if present
+                disableUpload: false // true = don't display Upload Options | Display Upload Options
+            },
+      callbacks: {
+      onImageUpload: function(image) {
+      editor = $(this);
+      uploadImageContent(image[0], editor);
+      }
+      }
+    });
+    
+    
+    
+    
+      function uploadImageContent(image, editor) {
+        var data = new FormData();
+        data.append("image", image);
+        $.ajax({
+            headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+            url: "{{ url('api/upload_img') }}",
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: data,
+            type: "post",
+            success: function(url) {
+            var image = $('<img>').attr({src: url, width: '100%'});
+            $(editor).summernote("insertNode", image[0]);
+            },
+            error: function(data) {
+            console.log(data);
+            }
+        });
+      }
+    
+    
+    
+    });
+    
+    </script>
 
 
 @stop('scripts')

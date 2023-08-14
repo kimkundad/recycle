@@ -17,7 +17,7 @@ class NewConController extends Controller
     public function index()
     {
         //
-        $objs = news::paginate(7);
+        $objs = news::paginate(15);
         $objs->setPath('');
         return view('admin.news.index', compact('objs'));
     }
@@ -36,6 +36,16 @@ class NewConController extends Controller
             return response()->json(['fileName' => $fileName, 'uploaded'=> 1, 'url' => $url]);
         }
     }
+
+    public function upload_img(Request $request){
+
+        $image = $request->file('image');
+        $pathaa = 'img/all_image/';
+              $filename = time()."-".$image->getClientOriginalName();
+              $image->move($pathaa, $filename);
+
+        echo url('img/all_image/'.$filename);
+      }
 
 
     /**
@@ -80,6 +90,7 @@ class NewConController extends Controller
 
     public function store(Request $request)
     {
+      
         // startdate
         $this->validate($request, [
             'title' => 'required',

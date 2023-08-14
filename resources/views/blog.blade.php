@@ -35,7 +35,7 @@
                             <p>{{ $objs[0]->sub_title }}…</p>
                         </div>
                     </div>
-                    <p>{{ formatDateThat($objs[0]->startdate) }} by<a href="#"> วงษ์พาณิชย์ รีไซเคิล</a></p>
+                    <p>{{ formatDateThat($objs[0]->startdate) }} BY ทีมงาน WPN </a></p>
                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$objs[0]->id) }}">อ่านต่อ</a>
                 </div>
             </div>

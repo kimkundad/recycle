@@ -653,8 +653,13 @@
                                     <img src="{{ url('media/'.$item->image) }}" alt="{{ $item->title }}">
                                 </div>
                                 <div class="ps-post__content">
-                                    <a class="ps-post__title" href="{{ url('blog_detail/'.$item->id) }}">{{ $item->title }}</a>
-                                    <p>{{ $item->sub_title }}</p>
+                                    <a 
+                                    style="min-height: 72px; max-height: 72px; overflow: hidden;"
+                                    class="ps-post__title" 
+                                    href="{{ url('blog_detail/'.$item->id) }}">
+                                    {{ $item->title }}
+                                    </a>
+                                    <p style="min-height: 68px; max-height: 68px; overflow: hidden;">{{ $item->sub_title }}</p>
                                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$item->id) }}">อ่านต่อ</a>
                                 </div>
                             </div>

@@ -138,7 +138,7 @@ class HomeController extends Controller
 
                 $url = url('blog_detail/'.$result->id);
                 $img = url('media/'.$result->image);
-                $artilces.='<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$result->title.'"></div><div class="ps-post__content"><a class="ps-post__title"  href="'.$url.'">'.$result->title.'</a><p>'.$result->sub_title.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">อ่านต่อ</a></div></div></div>';
+                $artilces.='<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$result->title.'"></div><div class="ps-post__content"><a class="ps-post__title" style="min-height: 72px; max-height: 72px; overflow: hidden;"  href="'.$url.'">'.$result->title.'</a><p style="min-height: 68px; max-height: 68px; overflow: hidden;">'.$result->sub_title.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">อ่านต่อ</a></div></div></div>';
             }
             return $artilces;
         }

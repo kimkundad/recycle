@@ -5,6 +5,18 @@
 @stop
 
 @section('stylesheet')
+
+<style>
+
+.ck-widget__type-around{
+    display: none;
+}
+.ck-widget__resizer{
+    display: none;
+}
+
+</style>
+
 @stop('stylesheet')
 
 @section('content')
@@ -26,7 +38,7 @@
             <img src="{{ url('media/'.$objs->image) }}" class="img-fluid" style="width:100%">
             <div class="blog_detail_in">
                 <h4 class="mt-20">{{ $objs->title }}</h4>
-                <p class="blog_date">{{ formatDateThat($objs->startdate) }} By วงษ์พาณิชย์ รีไซเคิล</p>
+                <p class="blog_date">{{ formatDateThat($objs->startdate) }} BY ทีมงาน WPN </p>
                 
                 <p>
                     {!! $objs->detail !!}
