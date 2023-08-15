@@ -13,7 +13,7 @@
     <meta name="description" content="จำหน่ายเครื่องจักร ทั้งมือหนึ่ง มือสอง รับเข้าประมูลงานต่างๆ อาทิ เหล็ก 
     โครงสร้าง เศษเหล็ก สแตนเลส อลูมิเนียม อัลลอย">
     <title> @yield('title')</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('img/favicon-32x32.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('img/favicon_v5.png') }}" />
 
     <meta property="og:url"           content="http://wpnrayong.com/" />
     <meta property="og:type"          content="website" />

@@ -36,7 +36,7 @@
                         <div class="d-flex">
                             <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> 
                             <div class="d-flex flex-column">
-                                <div class="fs-14px">{{ get_phone() }}</div>
+                                <div class="fs-14px m-mt-10" >{{ get_phone() }}</div>
                                 <div class="fs-14px mt--5px">{{ get_phone2() }}</div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                         <img class="img-fluid" src="{{ url('img/facebook_new_icon.png') }}">
                     </a>
                     
-                    <div class="ps-dropdown language"><a href="#"><img height="50" src="{{ url('img/icon/thailand.png') }}"></a>
+                    <div class="ps-dropdown language"><a href="#"><img height="50" class="img-flag" src="{{ url('img/icon/thailand.png') }}"></a>
                         <ul class="ps-dropdown-menu">
                             <li><a href="#"><img src="{{ url('img/flag/en.png') }}" alt="" /> English</a></li>
                             <li><a href="#"><img src="{{ url('img/flag/th.png') }}" height="12" /> ภาษาไทย</a></li>
@@ -73,7 +73,7 @@
                     <li class="menu-item"><a href="{{ url('/contact') }}">ติดต่อเรา</a></li>
                     <li class="menu-item"><a href="{{ url('/term ') }}">นโยบายข้อมูลส่วนบุคคล</a></li>
                 </ul>
-                <ul class="navigation__extra">
+                <ul class="navigation__extra ">
                     <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >ซื้อสินค้า</a></li> 
                     {{-- <li><a class="green_btn_kim" href="#"  data-toggle="modal" data-target="#product-quickview" >ขายสินค้า</a></li> --}}
                     <li><a class="green_btn_kim" href="{{ url('/contact') }}"  >ขายสินค้า</a></li>

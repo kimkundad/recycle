@@ -2749,3 +2749,41 @@ h4 {
 }
 }
 
+@media (min-width: 992px)
+{
+  .navigation__extra{
+    display: flex;
+  }
+  .white_btn_kim {
+    background-color: #ffffff;
+    color: #009247 !important;
+    border: none;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+.green_btn_kim {
+  background-color: #009247;
+  color: #ffffff !important;
+  border: none;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 25px;
+  border: 1px solid #ffffff!important;
+}
+.ps-btn--outline, button.ps-btn--outline{
+  min-width: 115px;
+  padding: 4px 8px;
+}
+.m-mt-10{
+  margin-top: 5px;
+}
+.img-flag{
+  min-width: 40px;
+    width: 40px !important;
+    height: 40px;
+}
+.container, .container-lg, .container-md, .container-sm {
+  max-width: 980px;
+}
+}
