@@ -237,6 +237,7 @@ class HomeController extends Controller
                   }
                   
                 }else{
+                  
 
                   if($u->typePrice == 1){
                     $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
