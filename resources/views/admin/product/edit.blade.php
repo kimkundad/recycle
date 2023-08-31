@@ -335,6 +335,25 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รูปแบบราคาสินค้า</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <select class="form-select" name="typePrice">
+                                            <option value="0" @if( $objs->typePrice == 0)
+                                                selected='selected'
+                                                @endif> -- เลือกพิมพ์ราคาเอง -- </option>
+                                            <option value="1" @if( $objs->typePrice == 1)
+                                                selected='selected'
+                                                @endif> -- เลือกเป็นติดต่อฝ่ายขาย -- </option>
+                                        </select>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">ราคาสินค้า</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->

@@ -103,9 +103,16 @@ class ProductController extends Controller
             'sub_cat_id' => 'required',
             'brand' => 'required',
             'sku' => 'required',
-            'amount' => 'required',
             'sum' => 'required'
         ]);
+
+        $amount = $request['amount'];
+
+        if($request['amount'] == null){
+            $amount = 0;
+        }else{
+            $amount = $request['amount'];
+        }
 
         $image = $request->file('image_pro');
 
@@ -148,7 +155,7 @@ class ProductController extends Controller
            $objs->cat_id = $cat_id;
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
-           $objs->amount = $request['amount'];
+           $objs->amount = $amount;
            $objs->sum = $request['sum'];
            $objs->condition = $request['condition'];
            $objs->sort = $request['sort'];
@@ -160,6 +167,7 @@ class ProductController extends Controller
            $objs->unit_id = $request['unit_id'];
            $objs->status = $status;
            $objs->mysort = $request['mysort'];
+           $objs->typePrice = $request['typePrice'];
            $objs->save();
 
            return redirect(url('admin/product'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
@@ -311,11 +319,20 @@ class ProductController extends Controller
 
         $image = $request->file('image_pro');
 
-        $status = 0;
+            $status = 0;
             if(isset($request['status'])){
                 if($request['status'] == 1){
                     $status = 1;
                 }
+            }
+
+
+            $amount = $request['amount'];
+
+            if($request['amount'] == null){
+                $amount = 0;
+            }else{
+                $amount = $request['amount'];
             }
 
             if($image == NULL){
@@ -326,7 +343,7 @@ class ProductController extends Controller
            $objs->cat_id = $cat_id;
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
-           $objs->amount = $request['amount'];
+           $objs->amount = $amount;
            $objs->sum = $request['sum'];
            $objs->condition = $request['condition'];
            $objs->discount = $request['discount'];
@@ -338,6 +355,7 @@ class ProductController extends Controller
            $objs->unit_id = $request['unit_id'];
            $objs->sort = $request['sort'];
            $objs->mysort = $request['mysort'];
+           $objs->typePrice = $request['typePrice'];
            $objs->save();
 
    
@@ -369,7 +387,7 @@ class ProductController extends Controller
            $objs->cat_id = $cat_id;
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
-           $objs->amount = $request['amount'];
+           $objs->amount = $amount;
            $objs->sum = $request['sum'];
            $objs->condition = $request['condition'];
            $objs->discount = $request['discount'];
@@ -381,6 +399,7 @@ class ProductController extends Controller
            $objs->unit_id = $request['unit_id'];
            $objs->sort = $request['sort'];
            $objs->mysort = $request['mysort'];
+           $objs->typePrice = $request['typePrice'];
            $objs->save();
 
             }    

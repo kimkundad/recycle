@@ -93,9 +93,9 @@
                                         <div class="ps-product__content">
                                             @if($u->discount == 0)
 
-                                            @if($u->amount == 0)
+                                            @if($u->typePrice == 1)
                                             <p class="ps-product__price sale">
-                                                <a href="{{ url('/contact') }}"><b>ติดต่อทีม WPN</b></a>
+                                                <a href="{{ url('/contact') }}"><b>ติดต่อฝ่ายขาย</b></a>
                                             </p>
                                             @else
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
@@ -111,9 +111,9 @@
                                                 $discount = ($u->amount * $u->discount) / 100 ;
                                             @endphp
 
-                                            @if($u->amount == 0)
+                                            @if($u->typePrice == 1)
                                             <p class="ps-product__price sale">
-                                                <a href="{{ url('/contact') }}"><b>ติดต่อทีม WPN</b></a>
+                                                <a href="{{ url('/contact') }}"><b>ติดต่อฝ่ายขาย</b></a>
                                             </p>
                                             @else
                                             <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
@@ -129,9 +129,9 @@
                                         <div class="ps-product__content hover">
                                             @if($u->discount == 0)
 
-                                            @if($u->amount == 0)
+                                            @if($u->typePrice == 1)
                                             <p class="ps-product__price sale">
-                                                <a href="{{ url('/contact') }}"><b>ติดต่อทีม WPN</b></a>
+                                                <a href="{{ url('/contact') }}"><b>ติดต่อฝ่ายขาย</b></a>
                                             </p>
                                             @else
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
@@ -146,9 +146,10 @@
                                             @php
                                                 $discount = ($u->amount * $u->discount) / 100 ;
                                             @endphp
-                                            @if($u->amount == 0)
+
+                                            @if($u->typePrice == 1)
                                             <p class="ps-product__price sale">
-                                                <a href="{{ url('/contact') }}"><b>ติดต่อทีม WPN</b></a>
+                                                <a href="{{ url('/contact') }}"><b>ติดต่อฝ่ายขาย</b></a>
                                             </p>
                                             @else
                                             <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
