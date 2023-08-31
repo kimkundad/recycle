@@ -166,9 +166,9 @@
                                     <!--end::Table body-->
                                 </table>
                             </div>
-                            @if(count($objs) > 10)
+                        
                             @include('admin.pagination.default', ['paginator' => $objs])
-                            @endif
+                            
                         </div>
                     </div>
                     
