@@ -175,17 +175,33 @@ class HomeController extends Controller
         if($data_b == 0){
 
           if($search == ''){
-            $results = product::orderBy('id', 'desc')->where('status', 1)->paginate(12);
+            $results = DB::table('products')->select(
+              'products.*',
+              'unit_products.*'
+              )
+              ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->orderBy('products.id', 'desc')->where('products.status', 1)->paginate(12);
           }else{
-            $results = product::orderBy('id', 'desc')->where('name_pro', 'like', "%$search%")->where('status', 1)->paginate(12);
+            $results = DB::table('products')->select(
+              'products.*',
+              'unit_products.*'
+              )
+              ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->orderBy('products.id', 'desc')->where('products.name_pro', 'like', "%$search%")->where('products.status', 1)->paginate(12);
           }
           
         }else{
 
           if($search == ''){
-            $results = product::whereIn('brand', $data_b)->orderBy('id', 'desc')->where('status', 1)->paginate(12);
+            $results = DB::table('products')->select(
+              'products.*',
+              'unit_products.*'
+              )
+              ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->whereIn('products.brand', $data_b)->orderBy('products.id', 'desc')->where('products.status', 1)->paginate(12);
           }else{
-            $results = product::whereIn('brand', $data_b)->where('name_pro', 'like', "%$search%")->where('status', 1)->orderBy('id', 'desc')->paginate(12);
+            $results = DB::table('products')->select(
+              'products.*',
+              'unit_products.*'
+              )
+              ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->whereIn('products.brand', $data_b)->where('products.name_pro', 'like', "%$search%")->where('products.status', 1)->orderBy('products.id', 'desc')->paginate(12);
           }
           
         }
@@ -196,18 +212,34 @@ class HomeController extends Controller
 
           if($search == ''){
 
-            $results = product::where('sub_cat_id', $cat)->orderBy('id', 'desc')->where('status', 1)->paginate(12);
+            $results = DB::table('products')->select(
+              'products.*',
+              'unit_products.*'
+              )
+              ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.sub_cat_id', $cat)->orderBy('products.id', 'desc')->where('products.status', 1)->paginate(12);
 
           }else{
-            $results = product::where('sub_cat_id', $cat)->where('name_pro', 'like', "%$search%")->where('status', 1)->orderBy('id', 'desc')->paginate(12);
+            $results = DB::table('products')->select(
+              'products.*',
+              'unit_products.*'
+              )
+              ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.sub_cat_id', $cat)->where('products.name_pro', 'like', "%$search%")->where('products.status', 1)->orderBy('products.id', 'desc')->paginate(12);
           }
           
         }else{
 
           if($search == ''){
-            $results = product::where('sub_cat_id', $cat)->whereIn('brand', $data_b)->orderBy('id', 'desc')->where('status', 1)->paginate(12);
+            $results = DB::table('products')->select(
+              'products.*',
+              'unit_products.*'
+              )
+              ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.sub_cat_id', $cat)->whereIn('products.brand', $data_b)->orderBy('products.id', 'desc')->where('products.status', 1)->paginate(12);
           }else{
-            $results = product::where('sub_cat_id', $cat)->where('name_pro', 'like', "%$search%")->whereIn('brand', $data_b)->where('status', 1)->orderBy('id')->paginate(12);
+            $results = DB::table('products')->select(
+              'products.*',
+              'unit_products.*'
+              )
+              ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.sub_cat_id', $cat)->where('products.name_pro', 'like', "%$search%")->whereIn('products.brand', $data_b)->where('products.status', 1)->orderBy('products.id', 'desc')->paginate(12);
           }
           
         }
