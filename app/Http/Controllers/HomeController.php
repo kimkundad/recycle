@@ -223,9 +223,39 @@ class HomeController extends Controller
                 $discount = ($u->amount * $u->discount) / 100 ;
 
                 if($u->discount == 0){
-                  $price_text = '<p class="ps-product__price text-green">฿'.number_format($u->amount, 2).' </p>';
+
+                  if($u->typePrice == 1){
+                    $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                  }else{
+
+                    if($u->unit_id !== 3 && $u->unit_id !== null){
+                      $price_text = '<p class="ps-product__price text-green">฿'.number_format($u->amount, 2).'<b>'. $u->name_unit .'</b> </p>';
+                    }else{
+                      $price_text = '<p class="ps-product__price text-green">฿'.number_format($u->amount, 2).' </p>';
+                    }
+
+                  }
+                  
                 }else{
-                  $price_text = '<p class="ps-product__price sale">฿'.number_format($u->amount-$discount, 2).' <del>฿'.number_format($u->amount, 2).' </del></p>';
+
+                  if($u->typePrice == 1){
+                    $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                  }else{
+
+                  if($u->unit_id !== 3 && $u->unit_id !== null){
+                    $price_text = '<p class="ps-product__price sale">฿'.number_format($u->amount-$discount, 2).' <del>฿'.number_format($u->amount, 2).' </del><b>'. $u->name_unit .'</b></p>';
+                  }else{
+                    $price_text = '<p class="ps-product__price sale">฿'.number_format($u->amount-$discount, 2).' <del>฿'.number_format($u->amount, 2).' </del></p>';
+                  }
+
+                }
+                  
+                }
+
+                if($u->image_pro == 0){
+
+                }else{
+
                 }
 
                 $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
@@ -276,7 +306,6 @@ class HomeController extends Controller
           $count = product::where('cat_id', $request['id'])->where('name_pro', 'like', "%$search%")->count();
 
         }
-        
       }
       
       $data['count'] = $count;
