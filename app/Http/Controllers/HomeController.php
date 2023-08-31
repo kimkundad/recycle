@@ -175,7 +175,7 @@ class HomeController extends Controller
         if($data_b == 0){
 
           if($search == ''){
-            $results = product::orderBy('id', 'desc')->paginate(12);
+            $results = product::orderBy('id', 'desc')->where('status', 1)->paginate(12);
           }else{
             $results = product::orderBy('id', 'desc')->where('name_pro', 'like', "%$search%")->where('status', 1)->paginate(12);
           }
@@ -183,7 +183,7 @@ class HomeController extends Controller
         }else{
 
           if($search == ''){
-            $results = product::whereIn('brand', $data_b)->orderBy('id', 'desc')->paginate(12);
+            $results = product::whereIn('brand', $data_b)->orderBy('id', 'desc')->where('status', 1)->paginate(12);
           }else{
             $results = product::whereIn('brand', $data_b)->where('name_pro', 'like', "%$search%")->where('status', 1)->orderBy('id', 'desc')->paginate(12);
           }
@@ -196,7 +196,7 @@ class HomeController extends Controller
 
           if($search == ''){
 
-            $results = product::where('sub_cat_id', $cat)->orderBy('id', 'desc')->paginate(12);
+            $results = product::where('sub_cat_id', $cat)->orderBy('id', 'desc')->where('status', 1)->paginate(12);
 
           }else{
             $results = product::where('sub_cat_id', $cat)->where('name_pro', 'like', "%$search%")->where('status', 1)->orderBy('id', 'desc')->paginate(12);
