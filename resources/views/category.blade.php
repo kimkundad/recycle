@@ -259,7 +259,6 @@
                 }else{
 
                 }
-
                 console.log('--->', receiptNos2)
         $.ajax({
                 url: ENDPOINT + "/category_find?category="+ category +"&page=" + page + "&brand=" + data_brand + "&search=" + search,

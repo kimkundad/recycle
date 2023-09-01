@@ -390,8 +390,14 @@ class HomeController extends Controller
         ->where('products.id', $id)
         ->first();
 
+        if($objs->brand){
         $brand = brand::where('id', $objs->brand)->first();
         $data['brand'] = $brand;
+        }else{
+        $data['brand'] = null;
+        }
+
+        
 
       $data['objs'] = $objs;
       return view('product_detail', $data);
