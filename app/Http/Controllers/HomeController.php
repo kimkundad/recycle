@@ -397,7 +397,7 @@ class HomeController extends Controller
         $data['brand'] = null;
         }
 
-        
+        dd($objs);
 
       $data['objs'] = $objs;
       return view('product_detail', $data);
