@@ -1,5 +1,5 @@
 @extends('layouts.template')
-
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url('img/favicon_v5.png') }}" />
 @section('title')
 หมวดหมู่และสินค้า วงษ์พาณิชย์รีไซเคิล ระยอง - wpnrayong
 @stop
