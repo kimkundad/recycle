@@ -177,12 +177,14 @@ class HomeController extends Controller
           if($search == ''){
             $results = DB::table('products')->select(
               'products.*',
+              'products.id as id_q',
               'unit_products.*'
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->orderBy('products.id', 'desc')->where('products.status', 1)->paginate(12);
           }else{
             $results = DB::table('products')->select(
               'products.*',
+              'products.id as id_q',
               'unit_products.*'
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->orderBy('products.id', 'desc')->where('products.name_pro', 'like', "%$search%")->where('products.status', 1)->paginate(12);
@@ -193,12 +195,14 @@ class HomeController extends Controller
           if($search == ''){
             $results = DB::table('products')->select(
               'products.*',
+              'products.id as id_q',
               'unit_products.*'
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->whereIn('products.brand', $data_b)->orderBy('products.id', 'desc')->where('products.status', 1)->paginate(12);
           }else{
             $results = DB::table('products')->select(
               'products.*',
+              'products.id as id_q',
               'unit_products.*'
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->whereIn('products.brand', $data_b)->where('products.name_pro', 'like', "%$search%")->where('products.status', 1)->orderBy('products.id', 'desc')->paginate(12);
@@ -214,6 +218,7 @@ class HomeController extends Controller
 
             $results = DB::table('products')->select(
               'products.*',
+              'products.id as id_q',
               'unit_products.*'
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.sub_cat_id', $cat)->orderBy('products.id', 'desc')->where('products.status', 1)->paginate(12);
@@ -221,6 +226,7 @@ class HomeController extends Controller
           }else{
             $results = DB::table('products')->select(
               'products.*',
+              'products.id as id_q',
               'unit_products.*'
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.sub_cat_id', $cat)->where('products.name_pro', 'like', "%$search%")->where('products.status', 1)->orderBy('products.id', 'desc')->paginate(12);
@@ -231,12 +237,14 @@ class HomeController extends Controller
           if($search == ''){
             $results = DB::table('products')->select(
               'products.*',
+              'products.id as id_q',
               'unit_products.*'
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.sub_cat_id', $cat)->whereIn('products.brand', $data_b)->orderBy('products.id', 'desc')->where('products.status', 1)->paginate(12);
           }else{
             $results = DB::table('products')->select(
               'products.*',
+              'products.id as id_q',
               'unit_products.*'
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.sub_cat_id', $cat)->where('products.name_pro', 'like', "%$search%")->whereIn('products.brand', $data_b)->where('products.status', 1)->orderBy('products.id', 'desc')->paginate(12);
@@ -250,7 +258,7 @@ class HomeController extends Controller
         if ($request->ajax()) {
             foreach ($results as $u) {
 
-                $url = url('product_detail/'.$u->id);
+                $url = url('product_detail/'.$u->id_q);
                 $img = url('images/wpnrayong/product/'.$u->image_pro);
                 $discount = ($u->amount * $u->discount) / 100 ;
 
@@ -397,7 +405,7 @@ class HomeController extends Controller
         $data['brand'] = null;
         }
 
-        dd($objs);
+     
 
       $data['objs'] = $objs;
       return view('product_detail', $data);
