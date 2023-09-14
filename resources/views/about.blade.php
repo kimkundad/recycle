@@ -188,8 +188,8 @@ iframe {
             <div class="row justify-content-md-center">
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12  ps-product--detail ps-product--fullwidth">
                     <div class="video">
-                        <iframe src="{{ get_youtube() }}?version=3&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;mute=0&amp;loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                      </div>
+                        <iframe src="{{ get_youtube() }}?version=3&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=0&amp;mute=0&amp;loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
 
