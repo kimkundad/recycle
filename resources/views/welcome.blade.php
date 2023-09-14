@@ -277,12 +277,20 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/service/03-ให้คำปรึกษา.jpg') }}" height="60" width="60">
+                            <img class="bg_green_icon" src="{{ url('img/service/03-ให้คำปรึกษา.png') }}" height="60" width="60">
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>ให้คำปรึกษาด้านรีไซเคิลแบบครบวงจร</h3>
-                            <p class="mb-0 min-h-145 fs-13px">บริการให้คำปรึกษาด้านการรีไซเคิลแบบครบวงจร ด้วยประสบการณ์และความเชี่ยวชาญด้านการรีไซเคิลวัสดุเหลือใช้ ทั้งที่ไม่เป็นอันตรายและเป็นอันตรายจากโรงงานอุตสาหกรรม รวมไปถึงโลหะและวัสดุเหลือใช้ทุกประเภท ให้คำปรึกษาเรื่องการจัดการคุณภาพสิ่งแวดล้อม จัดอบรมเรื่องการแยกของเสียและการจัดการของเสีย ด้วยกระบวนการรีไซเคิลที่มีประสิทธิภาพ</p>
+                            <p class="mb-0 min-h-145 fs-13px">
+                                บริการให้คำปรึกษาด้านการรีไซเคิลแบบครบวงจร <br>
+                                ด้วยประสบการณ์และความเชี่ยวชาญด้านการรีไซเคิลวัสดุเหลือใช้ 
+                                ทั้งที่ไม่เป็นอันตรายและเป็นอันตรายจากโรงงานอุตสาหกรรม 
+                                รวมไปถึงโลหะและวัสดุเหลือใช้ทุกประเภท <br>
+                                ให้คำปรึกษาเรื่องการจัดการคุณภาพสิ่งแวดล้อม 
+                                จัดอบรมเรื่องการแยกของเสียและการจัดการของเสีย <br>
+                                ด้วยกระบวนการรีไซเคิลที่มีประสิทธิภาพ
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -291,12 +299,15 @@
                 <div class=" card-out-green "> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/service/04-บริการทำลายเอกสาร.jpg') }}" height="60" width="60">
+                            <img class="bg_green_icon" src="{{ url('img/service/04-บริการทำลายเอกสาร.png') }}" height="60" width="60">
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>รับรื้อ ถอน ขนย้าย และทำลายวัสดุอุปกรณ์ที่ไม่ใช้แล้ว</h3>
-                            <p class="mb-0 min-h-125 fs-13px">บริการรื้อ ถอน ขนย้าย โรงงาน คลังสินค้า เครื่องจักร และทำลายวัสดุอุปกรณ์ที่ไม่ใช้แล้ว ดำเนินงานโดยทีมงานมืออาชีพที่มีประสบการณ์และความเชี่ยวชาญ ด้วยเครื่องจักรทุ่นแรงในการเคลื่อนย้าย พร้อมรถบรรทุกและการบริหารระบบขนส่งที่ปลอดภัย</p>
+                            <p class="mb-0 min-h-125 fs-13px">บริการรื้อ ถอน ขนย้าย โรงงาน คลังสินค้า เครื่องจักร 
+                                และทำลายวัสดุอุปกรณ์ที่ไม่ใช้แล้ว โดยทีมงานมืออาชีพที่มีประสบการณ์และความเชี่ยวชาญ ด้วยเครื่องจักรทุ่นแรงในการเคลื่อนย้าย 
+                                พร้อมรถบรรทุกและการบริหารระบบขนส่งที่ปลอดภัย
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -306,14 +317,13 @@
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
-                                <img class="bg_green_icon ml-5px" src="{{ url('img/service/02-รับประมูลงานเหล็ก_2.jpg') }}" height="60" width="60">
+                                <img class="bg_green_icon ml-5px" src="{{ url('img/service/02-รับประมูลงานเหล็ก_2.png') }}" height="60" width="60">
                             </div>
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
-                            <h3>รับซื้อ ฝาก ขาย วัสดุและอุปกรณ์ที่ไม่ใช้แล้วทุกประเภท</h3>
-                            <p class="mb-0 min-h-125 fs-13px">รับซื้อ ฝาก ขาย วัสดุและอุปกรณ์ที่ไม่ใช้แล้วทุกประเภท ทั้งที่เป็นอันตรายและไม่เป็นอันตรายจากโรงงาน
-                                อุตสาหกรรม อาทิ เช่น เหล็ก สแตนเลส ทองแดง ทองเหลือง อะลูมิเนียม แบตเตอรี่ น้ำมันเก่าที่ใช้แล้ว พลาสติกทุกชนิด เครื่องยนต์ เครื่องจักร อะไหล่ ฯลฯ
+                            <h3>รับซื้อ ฝาก ขาย วัสดุและอุปกรณ์ที่ไม่ใช้แล้วทุกประเภท (Surplus Materials)</h3>
+                            <p class="mb-0 min-h-125 fs-13px">รับซื้อ ฝาก ขาย วัสดุและอุปกรณ์ที่ไม่ใช้แล้วทุกประเภท ทั้งที่เป็นอันตรายและไม่เป็นอันตรายจากโรงงาน อุตสาหกรรม อาทิ เช่น เหล็ก สแตนเลส ทองแดง <br>ทองเหลือง อะลูมิเนียม แบตเตอรี่ น้ำมันเก่าที่ใช้แล้ว พลาสติกทุกชนิด เครื่องยนต์ เครื่องจักร อะไหล่ ฯลฯ
                                 </p>
                         </div>
                     </div>
@@ -325,12 +335,12 @@
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             
-                            <img class="bg_green_icon" src="{{ url('img/service/01-รับซื้อวัสดุรีไซเคิล.jpg') }}" height="60" width="60">
+                            <img class="bg_green_icon" src="{{ url('img/service/01-รับซื้อวัสดุรีไซเคิล.png') }}" height="60" width="60">
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
                             <h3>รับบริการจัดเก็บสินค้ารีไซเคิล</h3>
-                            <p class="mb-0 min-h-145 fs-13px">บริการจัดเก็บสินค้ารีไซเคิลที่ถูกต้องเหมาะสม คำนึงถึงการรักษาสภาพแวดล้อมและความปลอดภัย มีพื้นที่รองรับปริมาณอย่างเพียงพอ</p>
+                            <p class="mb-0 min-h-145 fs-13px">บริการจัดเก็บสินค้ารีไซเคิลที่ถูกต้องเหมาะสม คำนึงถึงการรักษาสภาพแวดล้อมและความปลอดภัย มีพื้นที่รองรับปริมาณอย่างเพียงพอ </p>
                         </div>
                     </div>
                 </div>
@@ -340,7 +350,7 @@
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <div class="d-flex">
-                                <img class="bg_green_icon" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม.jpg') }}" height="60" width="60">
+                                <img class="bg_green_icon" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม.png') }}" height="60" width="60">
                             </div>
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
@@ -355,12 +365,13 @@
                 <div class=" card-out-green"> 
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
-                            <img class="bg_green_icon" src="{{ url('img/service/06-บริการพิเศษอื่นๆ.jpg') }}" height="60" width="60">
+                            <img class="bg_green_icon" src="{{ url('img/service/shredder-industrial-icon.png') }}" height="60" width="60">
                             <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
-                            <h3>รับบริการพิเศษอื่นๆ เช่น ทำใบอนุญาตที่เกี่ยวข้องของกรมโรงงานอุตสาหกรรม</h3>
-                            <p class="mb-0 min-h-125 fs-13px">บริการให้คำปรึกษา การขอใบอนุญาตที่เกี่ยวข้องกับกรมโรงงานอุตสาหกรรม รับดำเนินการจัดเตรียมเอกสารและรายงานต่าง ๆ ในการขออนุญาตเกี่ยวกับโรงงานโดยทีม<br>งานผู้เชี่ยวชาญ
+                            <h3>รับบริการบดย่อย คัดแยก สกรีนนิ่ง และบรรจุในภาชนะ งานพลาสติกทุกประเภท</h3>
+                            <p class="mb-0 min-h-125 fs-13px">รับบริการงานด้านพลาสติกโดยเฉพาะ คัดแยก บดและสกรีนนิ่งแยกตามชนิดของพลาสติก พลาสติกที่	บดแล้วเรานำมาเข้าสู่กระบวนการ COMPOUND <br>และส่งคืนให้โรงงานนั้นๆ เพื่อช่วยลดต้นทุนในการ	ผลิตและช่วยสนับสนุนด้านสิ่งแวดล้อม
+
                             </p>
                         </div>
                     </div>
