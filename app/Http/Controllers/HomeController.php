@@ -504,7 +504,7 @@ class HomeController extends Controller
       // ]);
 
     
-        Mail::to('info@wpnrayong.com')->send(new Contacted($mailData));
+        Mail::to('sales@wpnrayong.com')->send(new Contacted($mailData));
   
 
         return response()->json([
