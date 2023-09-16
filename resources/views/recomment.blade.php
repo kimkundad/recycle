@@ -47,7 +47,7 @@
                         </a>
                         <br>
                         <ul class="ps-list--categories">
-                            <li class="current-menu-item menu-item-has-children">
+                            <li class="">
                                 <a href="{{ url('/recomment') }}">สินค้าแนะนำ</a>
                             </li>
 
@@ -134,7 +134,7 @@
             <br>
             <ul class="ps-list--categories">
                 
-                <li class="current-menu-item menu-item-has-children">
+                <li class="">
                     <a href="{{ url('/recomment') }}">สินค้าแนะนำ</a>
                 </li>
 
