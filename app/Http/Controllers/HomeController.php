@@ -160,6 +160,69 @@ class HomeController extends Controller
 
     }
 
+    public function getRecomment(Request $request)
+    {
+     
+      $results = DB::table('products')->select(
+        'products.*',
+        'products.id as id_q',
+        'unit_products.*'
+        )
+        ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->orderBy('products.id', 'desc')->where('products.status', 1)->where('products.type_pro', 2)->paginate(12);
+       
+        $artilces = '';
+        if ($request->ajax()) {
+            foreach ($results as $u) {
+
+                $url = url('product_detail/'.$u->id_q);
+                $img = url('images/wpnrayong/product/'.$u->image_pro);
+                $discount = ($u->amount * $u->discount) / 100 ;
+
+                if($u->discount == 0){
+
+                  if($u->typePrice == 1){
+                    $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                  }else{
+
+                    if($u->unit_id !== 3 && $u->unit_id !== null){
+                      $price_text = '<p class="ps-product__price text-green">฿'.number_format($u->amount, 2).'<b>'. $u->name_unit .'</b> </p>';
+                    }else{
+                      $price_text = '<p class="ps-product__price text-green">฿'.number_format($u->amount, 2).' </p>';
+                    }
+
+                  }
+                  
+                }else{
+
+
+                  if($u->typePrice == 1){
+                    $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                  }else{
+
+                  if($u->unit_id !== 3 && $u->unit_id !== null){
+                    $price_text = '<p class="ps-product__price sale">฿'.number_format($u->amount-$discount, 2).' <del>฿'.number_format($u->amount, 2).' </del><b>'. $u->name_unit .'</b></p>';
+                  }else{
+                    $price_text = '<p class="ps-product__price sale">฿'.number_format($u->amount-$discount, 2).' <del>฿'.number_format($u->amount, 2).' </del></p>';
+                  }
+
+                }
+                  
+                }
+
+                if($u->image_pro == 0){
+
+                }else{
+
+                }
+
+                $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+            }
+            return $artilces;
+        }
+        return view('blog');
+    }  
+
+
     public function getCategory(Request $request)
     {
       $search = $request['search'];
@@ -353,6 +416,15 @@ class HomeController extends Controller
       $data['category_id'] = $request['id'];
       $data['search'] = $search;
       return view('category', $data);
+
+    }
+
+    public function recomment(Request $request){
+      
+      $count = product::where('type_pro', 2)->where('status', 1)->count();
+      
+      $data['count'] = $count;
+      return view('recomment', $data);
 
     }
 

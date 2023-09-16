@@ -145,7 +145,7 @@
                     <h3>สินค้าแนะนำ</h3>
                 </div>
             </div>
-            <a href="{{ url('/category?id=0') }}" class="">
+            <a href="{{ url('/recomment') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
             

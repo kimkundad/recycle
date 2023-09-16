@@ -1,7 +1,7 @@
 @extends('layouts.template')
 <link rel="icon" type="image/png" sizes="32x32" href="{{ url('img/favicon_v5.png') }}" />
 @section('title')
-หมวดหมู่และสินค้า วงษ์พาณิชย์รีไซเคิล ระยอง - wpnrayong
+สินค้าแนะนำ วงษ์พาณิชย์รีไซเคิล ระยอง - wpnrayong
 @stop
 
 @section('stylesheet')
@@ -23,7 +23,7 @@
         <div class="d-flex justify-content-between">
             <ul class="breadcrumb">
                 <li><a href="{{ url('/') }}">หน้าแรก</a></li>
-                <li>สินค้าทั้งหมด</li>
+                <li>สินค้าแนะนำ</li>
             </ul>
             <a class="hide-green-ban-filter ps-btn set-btn-inner ps-btn--outline" href="#" id="filter-sidebar"><i class="icon-equalizer"></i> Filter</a>
         </div>
@@ -33,23 +33,6 @@
 
 <div class="ps-page--shop" id="shop-sidebar">
         <div class="container">
-
-            {{-- <div class="d-flex flex-wrap justify-content-center mt-15 hide-mobile">
-
-                @if(get_category())
-                    @foreach(get_category() as $u)
-                    <a href="{{ url('category?id='.$u->id) }}">
-                        <div class="text-center porduct-top-list">
-                            <img src="{{ url('img/category/'.$u->icons) }}" height="22" width="22"><br>
-                            {{ $u->sub_name }}
-                        </div>
-                    </a>
-                    @endforeach
-                @endif
-                
-            </div> --}}
-
-            
 
             <div class="ps-layout--shop">
                 <div class="ps-layout__left">
@@ -64,10 +47,10 @@
                         </a>
                         <br>
                         <ul class="ps-list--categories">
-                            
                             <li class="current-menu-item menu-item-has-children">
                                 <a href="{{ url('/recomment') }}">สินค้าแนะนำ</a>
                             </li>
+
                             @if(get_data_category())
                             @foreach(get_data_category() as $u)
                             <li class="current-menu-item menu-item-has-children"> 
@@ -89,27 +72,14 @@
                             @endforeach
                             @endif
                             
+                            
                         </ul>
 
 
                         
                     </aside>
 
-                    {{-- <aside class="widget widget_shop widget_shop_bg">
-                        <h4 class="widget-title mt-10 mb-1">ค้นหาจากแบรนด์สินค้า </h4>
-                        <figure class="ps-custom-scrollbar" data-height="250" id="result_check">
-                            @if(get_brand())
-                            @foreach(get_brand() as $u)
-                            <div class="ps-checkbox">
-                                <input class="form-control" type="checkbox" id="m-brand-{{ $u->id }}" name="brand" data-id="{{ $u->id }}"/>
-                                <label for="m-brand-{{ $u->id }}">{{ $u->name }} ({{ $u->option }})</label>
-                            </div>
-                            @endforeach
-                            @endif
-                            
-                        </figure>
-                        
-                    </aside> --}}
+                   
                 </div>
                 <div class="ps-layout__right">
                     <div class="ps-shopping ps-tab-root">
@@ -123,15 +93,7 @@
                                     </div>
                                 </div>
 
-                                @if($count > 12)
-
-                                <div class="text-center mt-30">
-                                    <a class="green_btn_kim_out btn_card_in btn-box" href="#">ดูเพิ่มเติม</a>
-                                </div>
-
-                                <br><br>
-
-                                @endif
+                               
                                 
                                 <div class="auto-load text-center">
                                     <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -172,10 +134,10 @@
             <br>
             <ul class="ps-list--categories">
                 
-
                 <li class="current-menu-item menu-item-has-children">
                     <a href="{{ url('/recomment') }}">สินค้าแนะนำ</a>
                 </li>
+
                             @if(get_data_category())
                             @foreach(get_data_category() as $u)
                             <li class="current-menu-item menu-item-has-children"> 
@@ -191,31 +153,20 @@
                                     </li>
                                     @endforeach
                                     @endif
-                                    
+                                    <li class="current-menu-item ">
+                                        <a href="{{ url('/recomment') }}">สินค้าแนะนำ</a>
+                                    </li>
                                 </ul>
                             </li>
                             @endforeach
                             @endif
             </ul>
         </aside>
-        {{-- <aside class="widget widget_shop widget_shop_bg">
-            <h4 class="widget-title mt-10 mb-1">ค้นหาจากแบรนด์สินค้า</h4>
-            <figure class="ps-custom-scrollbar" data-height="250" id="result_check2">
-                @if(get_brand())
-                    @foreach(get_brand() as $u)
-                        <div class="ps-checkbox">
-                            <input class="form-control" type="checkbox" id="m-brand-{{ $u->id }}x" name="brand" data-id="{{ $u->id }}"/>
-                            <label for="m-brand-{{ $u->id }}x">{{ $u->name }} ({{ $u->option }})</label>
-                        </div>
-                    @endforeach
-                @endif
-            </figure>
-        </aside> --}}
+       
     </div>
 </div>
 
 @section('scripts')
-
 
 <script>
 
@@ -241,31 +192,8 @@
     });
     function infinteLoadMore(page) {
 
-        var category = {{ $category_id }}
-        var search = '{{ $search }}'
-        var data_brand = '';
-        var receiptNos2 = $("#result_check input:checkbox:checked").map(function () {
-                console.log('<---', $(this).data('id') )
-                return $(this).data('id')
-                }).get();
-
-                var receiptNos3 = $("#result_check2 input:checkbox:checked").map(function () {
-                console.log('<---', $(this).data('id') )
-                return $(this).data('id')
-                }).get();
-
-                if(receiptNos2 == '' && receiptNos3 == ''){
-                    data_brand = '';
-                }else if(receiptNos2 !== '' && receiptNos3 == ''){
-                    data_brand = receiptNos2;
-                }else if(receiptNos2 == '' && receiptNos3 !== ''){
-                    data_brand = receiptNos3;
-                }else{
-
-                }
-                console.log('--->', receiptNos2)
         $.ajax({
-                url: ENDPOINT + "/category_find?category="+ category +"&page=" + page + "&brand=" + data_brand + "&search=" + search,
+                url: ENDPOINT + "/recomment_find?page=" + page,
                 datatype: "html",
                 type: "get",
                 beforeSend: function () {
@@ -286,6 +214,7 @@
             });
     }
 </script>
+
 
 
 @stop('scripts')
