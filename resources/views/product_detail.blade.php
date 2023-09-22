@@ -96,7 +96,9 @@
                                         {{ $objs->title_pro }}
                                     </p>
                                     <div class="ps-product__specification">
+                                        @if($brand)
                                         <p class="mt-10px"><strong>Brand:</strong> {{ $brand->name }}</p>
+                                        @endif
                                         <p class="mt-10px"><strong>SKU:</strong> {{ $objs->sku }}</p>
                                         <p class="mt-10px"><strong>Net weight:</strong> {{ $objs->weight }}</p>
                                         <p class="mt-10px"><strong>Condition:</strong> {{ $objs->condition }}</p>
