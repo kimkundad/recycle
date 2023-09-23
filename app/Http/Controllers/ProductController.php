@@ -156,10 +156,10 @@ class ProductController extends Controller
            $objs->brand = $request['brand'];
            $objs->sku = $request['sku'];
            $objs->amount = $amount;
-           $objs->sum = $request['sum'];
+           $objs->sum = $request->has('sum') ? $request->input('sum') : 0;
            $objs->condition = $request['condition'];
-           $objs->sort = $request['sort'];
-           $objs->discount = $request['discount'];
+           $objs->sort = $request->has('sort') ? $request->input('sort') : 0;
+           $objs->discount = $request->has('discount') ? $request->input('discount') : 0;
            $objs->title_pro = $request['title_pro'];
            $objs->detail_pro = $request['kt_docs_ckeditor_classic'];
            $objs->type_pro = $request['type_pro'];
