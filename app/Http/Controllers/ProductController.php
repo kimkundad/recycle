@@ -162,7 +162,7 @@ class ProductController extends Controller
            $objs->discount = $request->has('discount') ? $request->input('discount') : 0;
            $objs->title_pro = $request['title_pro'];
            $objs->detail_pro = $request['kt_docs_ckeditor_classic'];
-           $objs->type_pro = $request['type_pro'];
+           $objs->type_pro = $request->has('type_pro') ? $request->input('type_pro') : 1;
            $objs->weight = $request['weight'];
            $objs->unit_id = $request['unit_id'];
            $objs->status = $status;
