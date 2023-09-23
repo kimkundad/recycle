@@ -159,7 +159,6 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <select class="form-select" aria-label="Select example" name="brand">
-                                            <option> -- เลือก Brand สินค้า -- </option>
                                             @isset($brand)
                                             @foreach($brand as $u)
                                             <option value="{{$u->id}}">{{$u->name}}</option>
@@ -326,7 +325,6 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <select class="form-select" aria-label="Select example" name="type_pro">
-                                            <option> -- เลือกการแสดงสินค้า -- </option>
                                             <option value="1">ปกติ</option>
                                             <option value="2">สินค้าแนะนำ</option>
                                             <option value="3">สินค้ายอดนิยม</option>
@@ -342,7 +340,6 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <select class="form-select" aria-label="Select example" name="sub_cat_id">
-                                            <option> -- เลือกซับหมวดหมู่สินค้า -- </option>
                                             @isset($cat)
                                             @foreach($cat as $u)
                                             <option value="{{$u->id}}">{{$u->sub_name}}</option>
