@@ -17,13 +17,14 @@ class SubCatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
         $objs = subcat::paginate(30);
         if(isset($objs)){
             foreach($objs as $u){
-                $count = product::where('cat_id', $u->id)->count();
+                $count = product::where('sub_cat_id', $u->id)->count();
                 $u->option = $count;
             }
         }
