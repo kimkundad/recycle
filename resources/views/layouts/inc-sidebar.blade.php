@@ -264,10 +264,10 @@
             </ul>
         </div>
     </div>
-    <div id="loader-wrapper">
+    {{-- <div id="loader-wrapper">
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-    </div>
+    </div> --}}
     <div class="ps-search" id="site-search"><a class="ps-btn--close" href="#"></a>
         <div class="ps-search__content">
             <form class="ps-form--primary-search" action="{{ url('/category') }}" method="get">
