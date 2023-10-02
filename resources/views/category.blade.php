@@ -11,6 +11,9 @@
     padding: 20px 0;
     background-color: #f0f6fb;
 }
+.hidden{
+    display: none
+}
 </style>
 
 @stop('stylesheet')
@@ -155,7 +158,7 @@
 
 @endsection
 
-<div class="ps-filter--sidebar">
+<div class="ps-filter--sidebar hidden" id="filter_bar" style="display: none">
     <div class="ps-filter__header">
         <h3 class="text-green">ค้นหาหมวดหมู่และสินค้า</h3><a class="ps-btn--close ps-btn--no-boder" href="#"></a>
     </div>
@@ -218,6 +221,15 @@
 
 
 <script>
+
+    setTimeout(function(){ 
+        
+        const el = document.querySelector('#filter_bar');
+        el.classList.remove("hidden");
+        $('#filter_bar').css('display', '')
+
+     }, 2000);
+    
 
     $("#result_check input").click(function() {
         $('#data-wrapper').html('');
