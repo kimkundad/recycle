@@ -209,7 +209,7 @@ class NewConController extends Controller
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
           $img = Image::make($image->getRealPath());
-          $img->resize(250, 250, function ($constraint) {
+          $img->resize(800, 800, function ($constraint) {
           $constraint->aspectRatio();
           })->save('media/'.$input['imagename']);
      
