@@ -4,14 +4,20 @@
 {{ $objs->title }} - wpnrayong
 @stop
 
+@section('og')
+    <meta property="og:url"           content="https://wpnrayong.com/blog_detail/{{ $objs->id }}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ $objs->title }}" />
+    <meta property="og:image"         content="{{ url('media/'.$objs->image) }}?v{{time()}}" />
+    <meta property="og:description"   content="{{ $objs->sub_title }}" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="314" />
+@stop('og')
+
 @section('stylesheet')
 
 
-<meta data-react-helmet="true" property="og:title" content="{{ $objs->title }}">
-<meta data-react-helmet="true" property="og:type" content="website">
-<meta data-react-helmet="true" property="og:url" content="https://wpnrayong.com/blog_detail/{{ $objs->id }}">
-<meta data-react-helmet="true" property="og:description" content="{{ $objs->sub_title }}">
-<meta data-react-helmet="true" property="og:image" content="{{ url('media/'.$objs->image) }}">
+
 
 <style>
 
