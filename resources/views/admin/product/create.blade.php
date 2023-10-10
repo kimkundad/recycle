@@ -132,7 +132,7 @@
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="mysort" class="form-control form-control-lg form-control-solid" placeholder="1,2,3,4,5" value="0">
+                                        <input type="number" name="mysort" class="form-control form-control-lg form-control-solid" placeholder="1,2,3,4,5" value="0">
                                     </div>
                                     <!--end::Col-->
                                 </div>
@@ -143,7 +143,7 @@
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="sort" class="form-control form-control-lg form-control-solid" placeholder="1,2,3,4,5" value="0">
+                                        <input type="number" name="sort" class="form-control form-control-lg form-control-solid" placeholder="1,2,3,4,5" value="0">
                                     
                                     
                                     </div>
@@ -263,7 +263,7 @@
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="amount" class="form-control form-control-lg form-control-solid" placeholder="1050.20" value="{{old('amount') ? old('amount') : ''}}">
+                                        <input type="number" name="amount" class="form-control form-control-lg form-control-solid" placeholder="1050.20" value="{{old('amount') ? old('amount') : ''}}">
                                     
                                         @if ($errors->has('amount'))
                                             <div class="fv-plugins-message-container invalid-feedback">
@@ -281,7 +281,7 @@
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="discount" class="form-control form-control-lg form-control-solid" placeholder="20 30 40" value="{{old('discount') ? old('discount') : 0}}">
+                                        <input type="number" name="discount" class="form-control form-control-lg form-control-solid" placeholder="20 30 40" value="{{old('discount') ? old('discount') : 0}}">
                                     </div>
                                     <!--end::Col-->
                                 </div>
@@ -292,7 +292,7 @@
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="sum" class="form-control form-control-lg form-control-solid" placeholder="1050.20" value="{{old('sum') ? old('sum') : ''}}">
+                                        <input type="number" name="sum" class="form-control form-control-lg form-control-solid" placeholder="1050.20" value="{{old('sum') ? old('sum') : ''}}">
                                     
                                         @if ($errors->has('sum'))
                                             <div class="fv-plugins-message-container invalid-feedback">
