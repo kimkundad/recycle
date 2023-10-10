@@ -33,7 +33,7 @@
 
             @isset($objs[0])
             <div class="ps-post ps-post--horizontal">
-                <div class="ps-post__thumbnail">
+                <div class="ps-post__thumbnail" >
                     <a class="ps-post__overlay" href="{{ url('blog_detail/'.$objs[0]->id) }}"></a>
                     <img src="{{ url('media/'.$objs[0]->image) }}" alt="{{ $objs[0]->title }}">
                 </div>

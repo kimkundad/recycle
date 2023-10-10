@@ -105,7 +105,7 @@ class NewConController extends Controller
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
           $img = Image::make($image->getRealPath());
-          $img->resize(800, 800, function ($constraint) {
+          $img->resize(1405, 729, function ($constraint) {
           $constraint->aspectRatio();
         })->save('media/'.$input['imagename']);
 
@@ -209,7 +209,7 @@ class NewConController extends Controller
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
           $img = Image::make($image->getRealPath());
-          $img->resize(800, 800, function ($constraint) {
+          $img->resize(1405, 729, function ($constraint) {
           $constraint->aspectRatio();
           })->save('media/'.$input['imagename']);
      
