@@ -4,6 +4,16 @@
 กิจกรรม & ประชาสัมพันธ์ วงษ์พาณิชย์ - wpnrayong
 @stop
 
+@section('og')
+    <meta property="og:url"           content="http://wpnrayong.com/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ get_title_facebook() }}" />
+    <meta property="og:image"         content="{{ get_facebook_img() }}?v{{time()}}" />
+    <meta property="og:description"   content="{{ get_facebook_detail() }}" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="314" />
+@stop('og')
+
 @section('stylesheet')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @stop('stylesheet')

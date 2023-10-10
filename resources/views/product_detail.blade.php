@@ -4,7 +4,18 @@
 {{ $objs->name_pro }} - wpnrayong
 @stop
 
+@section('og')
+    <meta property="og:url"           content="{{ url('/product_detail/'.$objs->id_q) }}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{ $objs->name_pro }}" />
+    <meta property="og:image"         content="{{ url('images/wpnrayong/product/'.$objs->image_pro) }}?v{{time()}}" />
+    <meta property="og:description"   content="{{ get_facebook_detail() }}" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="314" />
+@stop('og')
+
 @section('stylesheet')
+
 @stop('stylesheet')
 
 @section('content')
