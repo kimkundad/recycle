@@ -111,7 +111,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <select class="form-select" aria-label="Select example" name="cat_id">
-                                            <option> -- เลือกหมวดหมู่สินค้า -- </option>
+                                            <option value=""> -- เลือกหมวดหมู่สินค้า -- </option>
                                             @isset($cat)
                                             @foreach($cat as $u)
                                             <option value="{{$u->id}}">{{$u->cat_name}}</option>
