@@ -672,7 +672,7 @@
                             <div class="ps-post">
                                 <div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;">
                                     <a class="ps-post__overlay" href="{{ url('blog_detail/'.$item->id) }}"></a>
-                                    <img src="{{ url('media/'.$item->image) }}" alt="{{ $item->title }}">
+                                    <img src="{{ url('media/'.$item->image) }}" alt="{{ $item->title }}" style="max-height: 190px; min-height: 190px;">
                                 </div>
                                 <div class="ps-post__content">
                                     <a 
