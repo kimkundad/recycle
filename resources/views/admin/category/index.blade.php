@@ -27,7 +27,7 @@
                         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
                             <li class="breadcrumb-item text-muted">
-                                <a href="{{ url('dashboard') }}" class="text-muted text-hover-primary">จัดการ</a>
+                                <a href="{{ url('admin/dashboard') }}" class="text-muted text-hover-primary">จัดการ</a>
                             </li>
                             <!--end::Item-->
                             <!--begin::Item-->
