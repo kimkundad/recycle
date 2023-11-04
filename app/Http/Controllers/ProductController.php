@@ -251,7 +251,7 @@ class ProductController extends Controller
 
          $input['imagename'] = time().'.'.$gallary->getClientOriginalExtension();
            $img = Image::make($gallary->getRealPath());
-           $img->resize(400, 400, function ($constraint) {
+           $img->resize(800, 800, function ($constraint) {
             $constraint->aspectRatio();
            });
            $img->stream();
