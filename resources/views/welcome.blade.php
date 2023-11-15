@@ -25,6 +25,13 @@
   background-position: center!important;
   background-repeat: no-repeat!important;
 }
+.photo_cat {
+    height: 201px;
+    width: 201px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
 </style>
 @stop('stylesheet')
 
