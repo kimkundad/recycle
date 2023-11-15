@@ -133,8 +133,8 @@
                     @foreach(get_category() as $u)
                         <div class="ps-product ps-product--inner">
                             <a href="{{ url('category?id='.$u->id) }}" class="text-center">
-                                <div class="ps-block__number photo_cat">
-                                    <img class="img-fluid inheritpho" src="{{ url('images/wpnrayong/subcat/'.$u->image) }}"> 
+                                <div class="ps-block__number ">
+                                    <img class="img-fluid inheritpho photo_cat" src="{{ url('images/wpnrayong/subcat/'.$u->image) }}"> 
                                 </div>
                             <p style="margin-top:10px">{{ $u->sub_name }}</p>
                             </a>
