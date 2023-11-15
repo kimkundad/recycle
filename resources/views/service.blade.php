@@ -16,7 +16,12 @@
 @stop('og')
 @section('stylesheet')
 
-
+<style>
+    .photo_cat {
+    height: 201px;
+    width: 201px;
+}
+    </style>
 @stop('stylesheet')
 
 @section('content')
