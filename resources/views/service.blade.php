@@ -59,10 +59,10 @@
 
                 @if(get_category())
                     @foreach(get_category() as $u)
-                        <div class="ps-product ps-product--inner">
-                            <a href="{{ url('category?id='.$u->id) }}" class="text-center">
+                        <div class="ps-product ps-product--inner photo_cat">
+                            <a href="{{ url('category?id='.$u->id) }}" class="text-center photo_cat">
                                 <div class="ps-block__number photo_cat">
-                                    <img class="img-fluid inheritpho" src="{{ url('images/wpnrayong/subcat/'.$u->image) }}"> 
+                                    <img class="img-fluid inheritpho " src="{{ url('images/wpnrayong/subcat/'.$u->image) }}"> 
                                 </div>
                             <p style="margin-top:10px">{{ $u->sub_name }}</p>
                             </a>
