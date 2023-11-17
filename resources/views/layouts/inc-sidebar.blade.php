@@ -230,13 +230,14 @@
             <form class="ps-form--search-mobile" action="{{ url('/category') }}" method="get">
                 <div class="form-group--nest">
                     <input type="hidden" name="id" value="0">
-                    <input class="form-control" type="text" placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่...">
+                    <input class="form-control" name="search" type="text" placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่...">
                     <button><i class="icon-magnifier"></i></button>
                 </div>
             </form>
         </div>
         <div class="navigation__content"></div>
     </div>
+
     <div class="ps-panel--sidebar" id="menu-mobile">
         <div class="ps-panel__header">
             <h3>เมนู</h3>
@@ -272,7 +273,7 @@
         <div class="ps-search__content">
             <form class="ps-form--primary-search" action="{{ url('/category') }}" method="get">
                 <input type="hidden" name="id" value="0">
-                <input class="form-control" type="text" placeholder="Search for...">
+                <input class="form-control" name="search" type="text" placeholder="Search for...">
                 <button><i class="aroma-magnifying-glass"></i></button>
             </form>
         </div>
