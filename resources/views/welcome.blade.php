@@ -74,7 +74,7 @@
                         <div class="ps-banner__content" >
                             <h4 class="sub-head-w">{{ $item->title }}</h4>
                             <h3 class="head-slide-w">{{ $item->big_title }}</h3>
-                            <p class="detail-slide-w">{{ nl2br($item->sub_title) }}</p>
+                            <p class="detail-slide-w"><?php echo nl2br($item->sub_title); ?></p>
                             <div class="d-flex">
                                 @if( $item->g_btn === 1)
                                 <a class="btn-green-b" href="{{ $item->g_btn_url !== null ? $item->g_btn_url : "#" }}"> {{ $item->g_btn_text }}</a>
