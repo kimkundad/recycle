@@ -36,9 +36,9 @@
                         <div class="d-flex">
                             <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}" style="margin-top: 8px;"> 
                             <div class="d-flex flex-column">
-                                <div class=" m-mt-10" style="font-size: 13px; line-height: 12px;">{{ get_phone() }}</div>
-                                <div class="" style="font-size: 13px; line-height: 12px;">{{ get_phone2() }}</div>
-                                <div class="" style="font-size: 13px; line-height: 12px;">0875577730</div>
+                                <div class=" m-mt-10" style="font-size: 13px; line-height: 15px;">{{ get_phone() }}</div>
+                                <div class="" style="font-size: 13px; line-height: 15px;">{{ get_phone2() }}</div>
+                                <div class="" style="font-size: 13px; line-height: 15px;">0875577730</div>
                             </div>
                         </div>
                     </a>
