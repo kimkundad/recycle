@@ -10,13 +10,13 @@
                             <h5 class="pt-20">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด (สำนักงานใหญ่)</h5>
                             <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 </p>
                             <div class="pt-20 d-flex justify-content-center">
-                                <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}" style="border-radius: 15px; padding: 0px 8px;">
+                                <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}" style="border-radius: 15px; padding: 3px 8px;">
                                     <div class="d-flex">
                                         <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}" style="margin-top: 15px;"> 
                                         <div class="d-flex flex-column">
-                                            <div class=" m-mt-10" style="font-size: 13px">{{ get_phone() }}</div>
-                                            <div class=" mt--5px" style="font-size: 13px">{{ get_phone2() }}</div>
-                                            <div class=" mt--5px" style="font-size: 13px">0875577730</div>
+                                            <div class=" m-mt-10" style="font-size: 13px; line-height: 12px;">{{ get_phone() }}</div>
+                                            <div class=" mt--5px" style="font-size: 13px; line-height: 12px;">{{ get_phone2() }}</div>
+                                            <div class=" mt--5px" style="font-size: 13px; line-height: 12px;">0875577730</div>
                                         </div>
                                     </div>
                                 </a>
