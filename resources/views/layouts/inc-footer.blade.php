@@ -12,11 +12,11 @@
                             <div class="pt-20 d-flex justify-content-center">
                                 <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}" style="border-radius: 15px; padding: 0px 8px;">
                                     <div class="d-flex">
-                                        <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> 
+                                        <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}" style="margin-top: 15px;"> 
                                         <div class="d-flex flex-column">
-                                            <div class="fs-14px m-mt-10" >{{ get_phone() }}</div>
-                                            <div class="fs-14px mt--5px">{{ get_phone2() }}</div>
-                                            <div class="fs-14px mt--5px">0875577730</div>
+                                            <div class=" m-mt-10" style="font-size: 13px">{{ get_phone() }}</div>
+                                            <div class=" mt--5px" style="font-size: 13px">{{ get_phone2() }}</div>
+                                            <div class=" mt--5px" style="font-size: 13px">0875577730</div>
                                         </div>
                                     </div>
                                 </a>
