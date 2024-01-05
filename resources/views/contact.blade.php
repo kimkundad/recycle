@@ -125,7 +125,7 @@
                 <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                 <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                 <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a><br>
+                <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a> <br>
                 อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
             </div>
         </div>
