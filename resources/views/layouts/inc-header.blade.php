@@ -32,12 +32,13 @@
             </div>
             <div class="header__right pt-10">
                 <div class="header__actions">
-                    <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}">
+                    <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}" style="border-radius: 15px; padding: 0px 8px;">
                         <div class="d-flex">
                             <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> 
                             <div class="d-flex flex-column">
                                 <div class="fs-14px m-mt-10" >{{ get_phone() }}</div>
                                 <div class="fs-14px mt--5px">{{ get_phone2() }}</div>
+                                <div class="fs-14px mt--5px">0875577730</div>
                             </div>
                         </div>
                     </a>
