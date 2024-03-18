@@ -7,6 +7,7 @@
             <div class="header__center pt-10">
                 <form class="ps-form--quick-search" action="{{ url('/category') }}" method="get">
                     <div class="form-group--icon"><i class="icon-chevron-down"></i>
+                        @if(session()->get('locale') == 'th')
                         <select class="form-control" name="id">
                             <option value="0" selected="selected">หมวดหมู่ : ทั้งหมด</option>
                             @if(get_data_category())
@@ -20,14 +21,43 @@
                                 @endforeach
                             @endif
                         </select>
+                        @else
+                        <select class="form-control" name="id">
+                            <option value="0" selected="selected">Category : All</option>
+                            @if(get_data_category())
+                                @foreach(get_data_category() as $u)
+                                    <option class="level-0" style="color: #009247; font-weight: 700; font-size: 14px;" disabled>{{ $u->cat_name }}</option>
+                                    @if($u->option)
+                                        @foreach($u->option as $j)
+                                            <option class="level-0" value="{{ $j->id }}" style="padding-left:15px">{{ $j->sub_name }}</option>
+                                        @endforeach
+                                    @endif
+                                @endforeach
+                            @endif
+                        </select>
+                        @endif
 
                     </div>
+
+                    @if(session()->get('locale') == 'th')
+
                     @isset($search)
                     <input class="form-control" name="search" type="text" value="{{ $search === "" ?  : $search }}" placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่..." id="input-search" />
                     @else
                     <input class="form-control" name="search" type="text"  placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่..." id="input-search" />
                     @endisset
                     <button>ค้นหา</button>
+
+                    @else
+
+                    @isset($search)
+                    <input class="form-control" name="search" type="text" value="{{ $search === "" ?  : $search }}" placeholder="Find what you need here..." id="input-search" />
+                    @else
+                    <input class="form-control" name="search" type="text"  placeholder="Find what you need here..." id="input-search" />
+                    @endisset
+                    <button>Find</button>
+
+                    @endif
                 </form>
             </div>
             <div class="header__right pt-10">
@@ -52,10 +82,16 @@
                         <img class="img-fluid" src="{{ url('img/facebook_new_icon.png') }}">
                     </a>
                     
-                    <div class="ps-dropdown language"><a href="#"><img height="50" class="img-flag" src="{{ url('img/icon/thailand.png') }}"></a>
+                    <div class="ps-dropdown language"><a href="#">
+                        @if(session()->get('locale') == 'en')
+                        <img height="50" class="img-flag" src="{{ url('img/icon/english_icon.png') }}"></a>
+                        @else
+                        <img height="50" class="img-flag" src="{{ url('img/icon/thai_icon.png') }}"></a>
+                        @endif
+                        
                         <ul class="ps-dropdown-menu">
-                            <li><a href="#"><img src="{{ url('img/flag/en.png') }}" alt="" /> English</a></li>
-                            <li><a href="#"><img src="{{ url('img/flag/th.png') }}" height="12" /> ภาษาไทย</a></li>
+                            <li><a href="{{ url('/lang/change?lang=en') }}"><img src="{{ url('img/flag/en.png') }}" alt="" /> English</a></li>
+                            <li><a href="{{ url('/lang/change?lang=th') }}"><img src="{{ url('img/flag/th.png') }}" height="12" /> ภาษาไทย</a></li>
                         </ul>
                     </div>
 
@@ -65,6 +101,7 @@
     </div>
     <nav class="navigation navigation_header">
         <div class="container">
+            @if(session()->get('locale') == 'th')
             <div class="navigation__right">
                 <ul class="menu">
                     <li class="menu-item"><a href="{{ url('/') }}">หน้าแรก</a></li>
@@ -80,6 +117,23 @@
                     <li><a class="green_btn_kim" href="{{ url('/contact') }}"  >ขายสินค้า</a></li>
                 </ul>
             </div>
+            @else
+            <div class="navigation__right">
+                <ul class="menu">
+                    <li class="menu-item"><a href="{{ url('/') }}">Home</a></li>
+                    <li class="menu-item"><a href="{{ url('/service') }}">Product and Sevice</a></li>
+                    <li class="menu-item"><a href="{{ url('/about') }}">About us</a></li>
+                    <li class="menu-item"><a href="{{ url('/blog') }}">New</a></li>
+                    <li class="menu-item"><a href="{{ url('/contact') }}">Contact is</a></li>
+                    <li class="menu-item"><a href="{{ url('/term ') }}">Privacy Policy</a></li>
+                </ul>
+                <ul class="navigation__extra ">
+                    <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >Buy</a></li> 
+                    {{-- <li><a class="green_btn_kim" href="#"  data-toggle="modal" data-target="#product-quickview" >ขายสินค้า</a></li> --}}
+                    <li><a class="green_btn_kim" href="{{ url('/contact') }}"  >Sale</a></li>
+                </ul>
+            </div>
+            @endif
         </div>
     </nav>
 </header>

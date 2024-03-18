@@ -14,6 +14,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AllianceController;
 use App\Http\Controllers\HProjectController;
 use App\Http\Controllers\UnitproductController;
+use App\Http\Controllers\LangController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('lang/home', [LangController::class, 'index']);
+Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
 
 Route::get('/images/{file}', function ($file) {
 	$url = Storage::disk('do_spaces')->temporaryUrl(

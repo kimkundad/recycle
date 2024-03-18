@@ -336,12 +336,16 @@
             
             <div class="row line-green row-mo">
                 <div class="col-md-5 desktop-d hide-green-ban ps-product--detail ps-product--fullwidth" style="margin-bottom: 0rem;">
+                    @if(isset($hpro[0]->image))
                     <img id="img-hili2" src="{{ url('img/hproject/'.$hpro[0]->image) }}" class="img-fluid bor-r-12" >
+                    @endif
                 </div>
                 <div class="col-md-7 desktop-990">
 
                     <div class="hide-green-ban-mo">
+                        @if(isset($hpro[0]->image))
                         <img id="img-hili" src="{{ url('img/hproject/'.$hpro[0]->image) }}" class="w-100 bor-r-12">
+                        @endif
                     </div>
 
                     <div class="card" style="border: 1px solid rgb(0 0 0 / 0%);">
