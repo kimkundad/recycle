@@ -106,6 +106,7 @@
 <div class="ps-deal-of-day">
     <div class="container">
         <div class="ps-section__header">
+
             @if(session()->get('locale') == 'th')
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
