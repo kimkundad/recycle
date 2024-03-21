@@ -123,8 +123,8 @@
                     <li class="menu-item"><a href="{{ url('/') }}">Home</a></li>
                     <li class="menu-item"><a href="{{ url('/service') }}">Product and Sevice</a></li>
                     <li class="menu-item"><a href="{{ url('/about') }}">About us</a></li>
-                    <li class="menu-item"><a href="{{ url('/blog') }}">New</a></li>
-                    <li class="menu-item"><a href="{{ url('/contact') }}">Contact is</a></li>
+                    <li class="menu-item"><a href="{{ url('/blog') }}">News</a></li>
+                    <li class="menu-item"><a href="{{ url('/contact') }}">Contact us</a></li>
                     <li class="menu-item"><a href="{{ url('/term ') }}">Privacy Policy</a></li>
                 </ul>
                 <ul class="navigation__extra ">

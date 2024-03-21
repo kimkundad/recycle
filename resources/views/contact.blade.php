@@ -1,7 +1,11 @@
 @extends('layouts.template')
 
 @section('title')
+@if (session()->get('locale') == 'th')
 ติดต่อเรา - wpnrayong
+@else
+Contact us - wpnrayong
+@endif
 @stop
 
 @section('og')
@@ -25,7 +29,11 @@
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
+                    @if(session()->get('locale') == 'th')
                     <h3>ติดต่อเรา</h3>
+                    @else
+                    <h3>Contact us</h3>
+                    @endif
                 </div>
             </div>
         </div>
@@ -38,6 +46,8 @@
         <div class="row justify-content-md-center">
             <div class="col col-md-3">
                 <div class="set-box-green-800">
+
+                    @if(session()->get('locale') == 'th')
                     <div class="box-green-800">
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
                         <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
@@ -50,13 +60,35 @@
                         <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a><br>
                         อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
+                    @else
+                    <div class="box-green-800">
+                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
+                        <h4 style="margin-bottom: 4px;">Head office</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
+                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district Rayong 21180</p>
+                        <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
+                        <p>428 Moo. 2, Phawong Subdistrict, Mueang Songkhla District, Songkhla Province 90100</p>
+                        <h4 class="mt-10">Contact</h4>
+                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a><br>
+                        Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
+                    </div>
+                    @endif
+
                 </div>
             </div>
             <div class="col col-md-7">
                 <div class="d-flex justify-content-end bg-white-con">
                     <form class="ps-form--contact-us" id="contactForm">
+                        @if(session()->get('locale') == 'th')
                         <h3>ติดต่อเรา</h3>
                         <p class="fs-16 fw-700">ท่านสามารถติดต่อสอบถาม ซื้อสินค้า ขอใช้บริการ ผ่านช่องทางด้านล่าง</p>
+                        @else
+                        <h3>Contact us</h3>
+                        <p class="fs-16 fw-700">You can contact us to inquire, purchase products, and request services through the channels below.</p>
+                        @endif
+
+                        @if(session()->get('locale') == 'th')
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
                                 <div class="form__group field">
@@ -105,6 +137,57 @@
                         <div class="text-center mt-20">
                             <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData" style="border-radius: 5px">ส่งข้อความ</button >
                         </div>
+                        @else
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                                <div class="form__group field">
+                                    <input type="input" class="form__field" placeholder="Enter your first and last name." name="name" id='name' required />
+                                    <label for="name" class="form__label">First name and last name</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                                <div class="form__group field">
+                                    <input type="input" class="form__field" placeholder="Enter your email" name="email" id='email' required />
+                                    <label for="email" class="form__label">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                                <div class="form__group field">
+                                    <input type="input" class="form__field" placeholder="Enter your phone number" name="phone" id='phone' required />
+                                    <label for="phone" class="form__label">Phone No.</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                                <div class="form__group field">
+                                    <select class="form__field" aria-label="Select example" name="type" id='type'>
+                                        <option>Please select the desired topic.</option>
+
+                                        @isset($type_contact)
+                                            @foreach ($type_contact as $item)
+                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                            @endforeach
+                                        @endisset
+                                       
+                                    </select>
+                                    <label for="name" class="form__label">Topic you want to contact</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                <div class="form__group field">
+                                    <textarea class="form__field" placeholder="Required message" style="height:80px" maxlength="500" name="massage" id='massage'></textarea>
+                                    <label for="massage" class="form__label">message (<span id="count">500</span>/500)</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                <div class="g-recaptcha" data-sitekey="6LdQnlkUAAAAAOfsIz7o-U6JSgrSMseulLvu7lI8"></div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-20">
+                            <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData" style="border-radius: 5px">Send</button >
+                        </div>
+                        @endif
+
                     </form>
                 </div>
             </div>
@@ -116,21 +199,39 @@
 <div class="desktop-h">
     <div class="p-15">
         <div class="">
-            <div class="box-green-800">
-                <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
-                <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
-                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
-                <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
-                <h4 style="margin-bottom: 4px;">สำนักงานสงขลา</h4>
-                <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
-                <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
-                <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a> <br>
-                อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
-            </div>
+            
+                    @if(session()->get('locale') == 'th')
+                    <div class="box-green-800">
+                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
+                        <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
+                        <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
+                        <h4 style="margin-bottom: 4px;">สำนักงานสงขลา</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
+                        <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
+                        <h4 class="mt-10">ช่องทางการติดต่อ</h4>
+                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a><br>
+                        อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
+                    </div>
+                    @else
+                    <div class="box-green-800">
+                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
+                        <h4 style="margin-bottom: 4px;">Head office</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
+                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district Rayong 21180</p>
+                        <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
+                        <p>428 Moo. 2, Phawong Subdistrict, Mueang Songkhla District, Songkhla Province 90100</p>
+                        <h4 class="mt-10">Contact</h4>
+                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a><br>
+                        Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
+                    </div>
+                    @endif
         </div>
         <div class="d-15">
             <form class="ps-form--contact-us" id="contactForm2">
+
+                @if(session()->get('locale') == 'th')
                 <div class="row">
                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                         <div class="form__group field">
@@ -178,6 +279,56 @@
                 <div class="text-center mt-20">
                     <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData2" style="border-radius: 5px">ส่งข้อความ</button >
                 </div>
+                @else
+                <div class="row">
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="ระบุชื่อ-นามสกุลของคุณ" name="name" id='name2' required />
+                            <label for="name" class="form__label">Enter your first and last name.</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="Enter your email" name="email" id='email2' required />
+                            <label for="email" class="form__label">Email</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-12col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="Enter your phone number" name="phone" id='phone2' required />
+                            <label for="phone" class="form__label">Phone No.</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <select class="form__field" aria-label="Select example" name="type" id='type2'>
+                                <option>Please select the desired topic.</option>
+                                @isset($type_contact)
+                                    @foreach ($type_contact as $item)
+                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                    @endforeach
+                                @endisset
+                            </select>
+                            <label for="name" class="form__label">Topic you want to contact</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                        <div class="form__group field">
+                            <textarea class="form__field" placeholder="Required message" style="height:80px" maxlength="500" name="massage" id='massage2'></textarea>
+                            <label for="massage" class="form__label">message (<span id="count2">500</span>/500)</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                        <div class="g-recaptcha" data-sitekey="6LdQnlkUAAAAAOfsIz7o-U6JSgrSMseulLvu7lI8"></div>
+                    </div>
+
+                </div>
+                <div class="text-center mt-20">
+                    <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData2" style="border-radius: 5px">Send</button >
+                </div>
+                @endif
+
             </form>
         </div>
     </div>
@@ -219,7 +370,13 @@ $("#massage2").keyup(function(){
       var type = document.getElementById("type").value;
         console.log(formData)
     if(name == '' || msg == '' || email == '' || phone == '' || type == ''){
-      swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+
+    @if(session()->get('locale') == 'th')
+        swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+    @else
+        swal("Please enter complete information.");
+    @endif
+
     }else{
       $.LoadingOverlay("show", {
         background  : "rgba(255, 255, 255, 0.4)",
@@ -257,7 +414,13 @@ $("#massage2").keyup(function(){
                 setTimeout(function(){
                     $.LoadingOverlay("hide");
                 }, 500);
-                swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+                
+                @if(session()->get('locale') == 'th')
+                    swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+                @else
+                    swal("Please enter complete information.");
+                @endif
+
               }
           },
           error: function () {
@@ -280,7 +443,13 @@ $("#massage2").keyup(function(){
       var type = document.getElementById("type2").value;
         console.log(formData)
     if(name == '' || msg == '' || email == '' || phone == '' || type == ''){
-      swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+      
+        @if(session()->get('locale') == 'th')
+            swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+        @else
+            swal("Please enter complete information.");
+        @endif
+
     }else{
       $.LoadingOverlay("show", {
         background  : "rgba(255, 255, 255, 0.4)",
@@ -318,7 +487,13 @@ $("#massage2").keyup(function(){
                 setTimeout(function(){
                     $.LoadingOverlay("hide");
                 }, 500);
-                swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+                
+                @if(session()->get('locale') == 'th')
+                    swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+                @else
+                    swal("Please enter complete information.");
+                @endif
+
               }
           },
           error: function () {

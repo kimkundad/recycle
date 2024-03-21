@@ -64,7 +64,8 @@ class TypeConController extends Controller
         //
 
         $this->validate($request, [
-            'name' => 'required'
+            'name' => 'required',
+            'name_en' => 'required'
            ]);
            
 
@@ -77,6 +78,7 @@ class TypeConController extends Controller
      
            $objs = new type_contact();
            $objs->name = $request['name'];
+           $objs->name_en = $request['name_en'];
            $objs->status = $status;
            $objs->save();
 
@@ -122,7 +124,8 @@ class TypeConController extends Controller
         //
         
         $this->validate($request, [
-            'name' => 'required'
+            'name' => 'required',
+            'name_en' => 'required'
            ]);
            
 
@@ -135,6 +138,7 @@ class TypeConController extends Controller
 
             $objs = type_contact::find($id);
             $objs->name = $request['name'];
+            $objs->name_en = $request['name_en'];
             $objs->status = $status;
             $objs->save();
 

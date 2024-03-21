@@ -1,7 +1,12 @@
 @extends('layouts.template')
 
 @section('title')
+@if (session()->get('locale') == 'th')
 กิจกรรม & ประชาสัมพันธ์ วงษ์พาณิชย์ - wpnrayong
+@else
+News - wpnrayong
+@endif
+
 @stop
 
 @section('og')
@@ -25,7 +30,11 @@
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
+                    @if(session()->get('locale') == 'th')
                     <h3>กิจกรรม & ประชาสัมพันธ์</h3>
+                    @else
+                    <h3>News</h3>
+                    @endif
                 </div>
             </div>
         </div>
@@ -46,33 +55,28 @@
                         </div>
                     </div>
                     <p>{{ formatDateThat($objs[0]->startdate) }} BY WPN </a></p>
+                    @if(session()->get('locale') == 'th')
                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$objs[0]->id) }}">อ่านต่อ</a>
+                    @else
+                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$objs[0]->id) }}">Read more</a>
+                    @endif
                 </div>
             </div>
             @endisset
 
             <div class="row " id="data-wrapper">
-                {{-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                    <div class="ps-post">
-                        <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="{{ url('/blog_detail') }}"></a>
-                            <img src="{{ url('img/brand/image 25.png') }}" alt="">
-                        </div>
-                        <div class="ps-post__content">
-                            <a class="ps-post__title" href="#">การอบรมคัดแยกขยะเชิงธุรกิจ หลักสูตร 6 วัน</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('/blog_detail') }}">อ่านต่อ</a>
-                        </div>
-                    </div>
-                </div> --}}
-
-                
-
 
             </div>
 
             @if(count($objs) > 6)
             <div class="text-center mt-30">
-                <a class="green_btn_kim_out btn_card_in btn-box" href="#">ดูเพิ่มเติม</a>
+
+                    @if(session()->get('locale') == 'th')
+                    <a class="green_btn_kim_out btn_card_in btn-box" href="#">ดูเพิ่มเติม</a>
+                    @else
+                    <a class="green_btn_kim_out btn_card_in btn-box" href="#">Read more</a>
+                    @endif
+                
             </div> 
             <br><br>
             @endif

@@ -67,6 +67,7 @@ class CertificateController extends Controller
 
         $this->validate($request, [
             'name' => 'required',
+            'name_en' => 'required',
             'image' => 'required'
            ]);
            
@@ -92,6 +93,7 @@ class CertificateController extends Controller
      
            $objs = new certificate();
            $objs->name = $request['name'];
+           $objs->name_en = $request['name_en'];
            $objs->sort = $sort;
            $objs->image = $input['imagename'];
            $objs->status = $status;
@@ -139,7 +141,8 @@ class CertificateController extends Controller
         //
         
         $this->validate($request, [
-            'name' => 'required'
+            'name' => 'required',
+            'name_en' => 'required'
            ]);
 
            $sort = 0;
@@ -161,6 +164,7 @@ class CertificateController extends Controller
 
            $objs = certificate::find($id);
            $objs->name = $request['name'];
+           $objs->name_en = $request['name_en'];
            $objs->status = $status;
            $objs->sort = $sort;
            $objs->save();
@@ -183,6 +187,7 @@ class CertificateController extends Controller
      
            $objs = certificate::find($id);
            $objs->name = $request['name'];
+           $objs->name_en = $request['name_en'];
            $objs->image = $input['imagename'];
            $objs->sort = $sort;
            $objs->status = $status;

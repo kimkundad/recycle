@@ -120,6 +120,24 @@
                                     <!--end::Col-->
                                 </div>
 
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อแบรนด์สินค้า En</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="name_eng" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name_eng }}">
+                                    
+                                        @if ($errors->has('name_eng'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกชื่อแบรนด์สินค้า En</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
                                 <div class="row mb-0">
                                     <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label fw-semibold fs-6">เปิดใช้งานทันที</label>

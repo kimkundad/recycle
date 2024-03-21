@@ -76,6 +76,7 @@ class BrandController extends Controller
         //
         $this->validate($request, [
             'name' => 'required',
+            'name_eng' => 'required',
             'image' => 'required'
            ]);
            
@@ -97,6 +98,7 @@ class BrandController extends Controller
      
            $objs = new brand();
            $objs->name = $request['name'];
+           $objs->name_eng = $request['name_eng'];
            $objs->image = $input['imagename'];
            $objs->status = $status;
            $objs->save();
@@ -143,7 +145,8 @@ class BrandController extends Controller
         //
         
         $this->validate($request, [
-            'name' => 'required'
+            'name' => 'required',
+            'name_eng' => 'required'
            ]);
            
            $image = $request->file('image');
@@ -159,6 +162,7 @@ class BrandController extends Controller
 
            $objs = brand::find($id);
            $objs->name = $request['name'];
+           $objs->name_eng = $request['name_eng'];
            $objs->status = $status;
            $objs->save();
 
@@ -180,6 +184,7 @@ class BrandController extends Controller
      
            $objs = brand::find($id);
            $objs->name = $request['name'];
+           $objs->name_eng = $request['name_eng'];
            $objs->image = $input['imagename'];
            $objs->status = $status;
            $objs->save();

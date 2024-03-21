@@ -220,6 +220,23 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อสินค้า En</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="name_pro_en" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name_pro_en }}">
+                                    
+                                        @if ($errors->has('name_pro_en'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกชื่อสินค้า En</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">ลำดับของสินค้าหลัก</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
@@ -332,6 +349,17 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label  fw-semibold fs-6">สภาพสินค้า สินค้า En</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="condition_en" class="form-control form-control-lg form-control-solid" placeholder="ใช้แล้ว, สภาพใหม่" value="{{ $objs->condition_en }}">
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
@@ -406,8 +434,19 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <textarea type="text" name="title_pro" style="height: 100px"
-                                        class="form-control form-control-lg form-control-solid"
-                                        value="{{old('title_pro') ? old('title_pro') : ''}}">{{ $objs->title_pro }}</textarea>
+                                        class="form-control form-control-lg form-control-solid">{{ $objs->title_pro }}</textarea>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">คำอธิบายสั้นๆ สินค้า En</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <textarea type="text" name="title_pro_en" style="height: 100px"
+                                        class="form-control form-control-lg form-control-solid" >{{ $objs->title_pro_en }}</textarea>
                                     </div>
                                     <!--end::Col-->
                                 </div>
@@ -465,6 +504,19 @@
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <textarea name="kt_docs_ckeditor_classic" id="kt_docs_ckeditor_classic" >
                                             {{ $objs->detail_pro }}
+                                        </textarea>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รายละเอียดสินค้า En</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <textarea name="kt_docs_ckeditor_classic_en" id="kt_docs_ckeditor_classic_en" >
+                                            {{ $objs->detail_pro_en }}
                                         </textarea>
                                     </div>
                                     <!--end::Col-->
@@ -559,12 +611,14 @@
 <script>
 ClassicEditor
     .create(document.querySelector('#kt_docs_ckeditor_classic'))
+    ClassicEditor.create(document.querySelector('#kt_docs_ckeditor_classic_en'))
     .then(editor => {
         console.log(editor);
     })
     .catch(error => {
         console.error(error);
     });
+    
 
     const container = document.getElementById('kt_docs_toast_stack_container');
 const targetElement = document.querySelector('[data-kt-docs-toast="stack"]');

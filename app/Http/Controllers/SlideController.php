@@ -39,7 +39,6 @@ class SlideController extends Controller
                   $user->status = 1;
               }
 
-
       return response()->json([
       'data' => [
         'success' => $user->save(),
@@ -70,6 +69,9 @@ class SlideController extends Controller
             'title' => 'required',
             'big_title' => 'required',
             'sub_title' => 'required',
+            'title_en' => 'required',
+            'big_title_en' => 'required',
+            'sub_title_en' => 'required',
             'image' => 'required'
            ]);
            
@@ -106,11 +108,16 @@ class SlideController extends Controller
            $objs->title = $request['title'];
            $objs->big_title = $request['big_title'];
            $objs->sub_title = $request['sub_title'];
+           $objs->title_en = $request['title_en'];
+           $objs->big_title_en = $request['big_title_en'];
+           $objs->sub_title_en = $request['sub_title_en'];
            $objs->g_btn = $g_btn;
            $objs->g_btn_text = $request['g_btn_text'];
+           $objs->g_btn_text_en = $request['g_btn_text_en'];
            $objs->g_btn_url = $request['g_btn_url'];
            $objs->w_btn = $w_btn;
            $objs->w_btn_text = $request['w_btn_text'];
+           $objs->w_btn_text_en = $request['w_btn_text_en'];
            $objs->w_btn_url = $request['w_btn_url'];
            $objs->image = $filename;
            $objs->status = $status;
@@ -160,7 +167,10 @@ class SlideController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'big_title' => 'required',
-            'sub_title' => 'required'
+            'sub_title' => 'required',
+            'title_en' => 'required',
+            'big_title_en' => 'required',
+            'sub_title_en' => 'required'
            ]);
            
            $image = $request->file('image');
@@ -194,11 +204,16 @@ class SlideController extends Controller
             $objs->title = $request['title'];
             $objs->big_title = $request['big_title'];
             $objs->sub_title = $request['sub_title'];
+            $objs->title_en = $request['title_en'];
+            $objs->big_title_en = $request['big_title_en'];
+            $objs->sub_title_en = $request['sub_title_en'];
             $objs->g_btn = $g_btn;
             $objs->g_btn_text = $request['g_btn_text'];
+            $objs->g_btn_text_en = $request['g_btn_text_en'];
             $objs->g_btn_url = $request['g_btn_url'];
             $objs->w_btn = $w_btn;
             $objs->w_btn_text = $request['w_btn_text'];
+            $objs->w_btn_text_en = $request['w_btn_text_en'];
             $objs->w_btn_url = $request['w_btn_url'];
             $objs->status = $status;
             $objs->save();
@@ -220,11 +235,16 @@ class SlideController extends Controller
            $objs->title = $request['title'];
            $objs->big_title = $request['big_title'];
            $objs->sub_title = $request['sub_title'];
+           $objs->title_en = $request['title_en'];
+           $objs->big_title_en = $request['big_title_en'];
+           $objs->sub_title_en = $request['sub_title_en'];
            $objs->g_btn = $g_btn;
            $objs->g_btn_text = $request['g_btn_text'];
+           $objs->g_btn_text_en = $request['g_btn_text_en'];
            $objs->g_btn_url = $request['g_btn_url'];
            $objs->w_btn = $w_btn;
            $objs->w_btn_text = $request['w_btn_text'];
+           $objs->w_btn_text_en = $request['w_btn_text_en'];
            $objs->w_btn_url = $request['w_btn_url'];
            $objs->image = $filename;
            $objs->status = $status;

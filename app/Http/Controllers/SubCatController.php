@@ -92,6 +92,7 @@ class SubCatController extends Controller
    
            $this->validate($request, [
             'sub_name' => 'required',
+            'sub_name_en' => 'required',
             'cat_id' => 'required',
             'image' => 'required'
            ]);
@@ -117,6 +118,7 @@ class SubCatController extends Controller
      
            $objs = new subcat();
            $objs->sub_name = $request['sub_name'];
+           $objs->sub_name_en = $request['sub_name_en'];
            $objs->cat_id = $request['cat_id'];
            $objs->image = $image->hashName();
            $objs->status = $status;
@@ -169,6 +171,7 @@ class SubCatController extends Controller
 
            $this->validate($request, [
             'sub_name' => 'required',
+            'sub_name_en' => 'required',
             'cat_id' => 'required',
            ]);
            
@@ -189,6 +192,7 @@ class SubCatController extends Controller
 
            $objs = subcat::find($id);
            $objs->sub_name = $request['sub_name'];
+           $objs->sub_name_en = $request['sub_name_en'];
            $objs->cat_id = $request['cat_id'];
            $objs->status = $status;
            $objs->save();
@@ -215,6 +219,7 @@ class SubCatController extends Controller
      
            $objs = subcat::find($id);
            $objs->sub_name = $request['sub_name'];
+           $objs->sub_name_en = $request['sub_name_en'];
            $objs->cat_id = $request['cat_id'];
            $objs->image = $image->hashName();
            $objs->status = $status;

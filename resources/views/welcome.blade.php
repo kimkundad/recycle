@@ -2,7 +2,11 @@
 
 
 @section('title')
-วงษ์พาณิชย์รีไซเคิล ระยอง - wpnrayong
+    @if (session()->get('locale') == 'th')
+        วงษ์พาณิชย์รีไซเคิล ระยอง - wpnrayong
+    @else
+        Wongpanit Recycle Rayong
+    @endif
 @stop
 
 @section('og')
@@ -24,6 +28,9 @@
   background-size: cover!important;
   background-position: center!important;
   background-repeat: no-repeat!important;
+}
+.fs-12px{
+    font-size: 12px;
 }
 </style>
 @stop('stylesheet')
@@ -448,15 +455,15 @@
                                 <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
                             </div>
                             <div class="ps-block__content_out-green pt-20">
-                                <h3>ให้คำปรึกษาด้านรีไซเคิลแบบครบวงจร</h3>
-                                <p class="mb-0 min-h-145 fs-13px">
-                                    บริการให้คำปรึกษาด้านการรีไซเคิลแบบครบวงจร <br>
-                                    ด้วยประสบการณ์และความเชี่ยวชาญด้านการรีไซเคิลวัสดุเหลือใช้ 
-                                    ทั้งที่ไม่เป็นอันตรายและเป็นอันตรายจากโรงงานอุตสาหกรรม 
-                                    รวมไปถึงโลหะและวัสดุเหลือใช้ทุกประเภท <br>
-                                    ให้คำปรึกษาเรื่องการจัดการคุณภาพสิ่งแวดล้อม 
-                                    จัดอบรมเรื่องการแยกของเสียและการจัดการของเสีย <br>
-                                    ด้วยกระบวนการรีไซเคิลที่มีประสิทธิภาพ
+                                <h3>Consultancy about Comprehensive Recycling</h3>
+                                <p class="mb-0 min-h-145 fs-12px">
+                                    Consultancy services about comprehensive recycling 
+                                    with experience and expertise in recycling scrap materials, 
+                                    including both non-hazardous and hazardous materials from industrial factories, 
+                                    metals and all types of scrap materials. 
+                                    Consultancy about environmental quality management 
+                                    Providing training in waste separation and management 
+                                    with efficient recycling processes.
                                 </p>
                             </div>
                         </div>
@@ -470,10 +477,10 @@
                                 <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
                             </div>
                             <div class="ps-block__content_out-green pt-20">
-                                <h3>รับรื้อ ถอน ขนย้าย และทำลายวัสดุอุปกรณ์ที่ไม่ใช้แล้ว</h3>
-                                <p class="mb-0 min-h-125 fs-13px">บริการรื้อ ถอน ขนย้าย โรงงาน คลังสินค้า เครื่องจักร 
-                                    และทำลายวัสดุอุปกรณ์ที่ไม่ใช้แล้ว โดยทีมงานมืออาชีพที่มีประสบการณ์และความเชี่ยวชาญ ด้วยเครื่องจักรทุ่นแรงในการเคลื่อนย้าย 
-                                    พร้อมรถบรรทุกและการบริหารระบบขนส่งที่ปลอดภัย
+                                <h3>Dismantling, Removal, Transporting and Demolition of Scrap Materials</h3>
+                                <p class="mb-0 min-h-125 fs-13px">Dismantling, removal, and transport services for factories, warehouses, machinery,
+                                    and disused equipment by an efficient professional team with experience and expertise using labor-saving machinery for transporting goods,
+                                    trucks, and safe cargo transport system management.
                                 </p>
                             </div>
                         </div>
@@ -486,11 +493,14 @@
                                 <div class="d-flex">
                                     <img class="bg_green_icon ml-5px" src="{{ url('img/service/02-รับประมูลงานเหล็ก_2.png') }}" height="60" width="60">
                                 </div>
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
                             </div>
                             <div class="ps-block__content_out-green pt-20">
-                                <h3>รับซื้อ ฝาก ขาย วัสดุและอุปกรณ์ที่ไม่ใช้แล้วทุกประเภท (Surplus Materials)</h3>
-                                <p class="mb-0 min-h-125 fs-13px">รับซื้อ ฝาก ขาย วัสดุและอุปกรณ์ที่ไม่ใช้แล้วทุกประเภท ทั้งที่เป็นอันตรายและไม่เป็นอันตรายจากโรงงาน อุตสาหกรรม อาทิ เช่น เหล็ก สแตนเลส ทองแดง <br>ทองเหลือง อะลูมิเนียม แบตเตอรี่ น้ำมันเก่าที่ใช้แล้ว พลาสติกทุกชนิด เครื่องยนต์ เครื่องจักร อะไหล่ ฯลฯ
+                                <h3>Purchase, Custody, and Sale of All Types of Scrap Materials and Equipment.</h3>
+                                <p class="mb-0 min-h-125 fs-13px">
+                                    Purchase, Custody, and Sale of all types of scrap materials and disused equipment,
+                                    including both hazardous and non-hazardous materials from industrial factories, such as metals, stainless steel, copper,
+                                    brass, aluminum, batteries, used oil, all types of plastic, motors, machinery, parts, etc.
                                     </p>
                             </div>
                         </div>
@@ -503,11 +513,14 @@
                             <div class="d-flex justify-content-between">
                                 
                                 <img class="bg_green_icon" src="{{ url('img/service/01-รับซื้อวัสดุรีไซเคิล.png') }}" height="60" width="60">
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
                             </div>
                             <div class="ps-block__content_out-green pt-20">
-                                <h3>ให้บริการจัดเก็บสินค้ารีไซเคิล</h3>
-                                <p class="mb-0 min-h-145 fs-13px">บริการจัดเก็บสินค้ารีไซเคิลที่ถูกต้องเหมาะสม <br>มีพื้นที่รองรับปริมาณอย่างเพียงพอและเป็นระบบ โดยคำนึงถึงการรักษาสภาพแวดล้อมและความปลอดภัย<br> </p>
+                                <h3>Recyclable Product Collection Services</h3>
+                                <p class="mb-0 min-h-145 fs-13px">
+                                    The right recyclable product collection services 
+                                    Sufficient space and system for handling goods
+                                    with consideration given to saving the environment and ensuring safety.<br> </p>
                             </div>
                         </div>
                     </div>
@@ -519,11 +532,15 @@
                                 <div class="d-flex">
                                     <img class="bg_green_icon" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม.png') }}" height="60" width="60">
                                 </div>
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
                             </div>
                             <div class="ps-block__content_out-green pt-20">
-                                <h3>บริการจัดการขนส่งกากของเสียเพื่อนำไปบำบัด/กำจัดยังปลายทาง</h3>
-                                <p class="mb-0 min-h-125 fs-13px">ให้บริการระบบขนส่งกากของเสียเพื่อนำไปบำบัดและกำจัดยังปลายทาง ที่ปลอดภัยได้มาตรฐาน มีแผนรับมือเหตุการณ์ฉุกเฉินในด้านการขนส่ง และใบอนุญาตขนส่งสำหรับทั้งของเสียเป็นพิษและปลอดพิษ รวมทั้งให้บริการแบบเร่งด่วนเมื่อโรงงานมีความต้องการใช้บริการ</p>
+                                <h3>Waste and Bagasse Transport Services for Treatment/Disposal at the Destination </h3>
+                                <p class="mb-0 min-h-125 fs-13px">
+                                    Waste and bagasse transport service provision for treatment and disposal at the destination that is safe and meets standards.
+                                    Plans for handling transport in emergency situations 
+                                    and permission to transport both toxic and non-toxic waste, 
+                                    including urgent service provision when factories require such services.</p>
                             </div>
                         </div>
                     </div>
@@ -533,11 +550,14 @@
                         <div class="card-green-content">
                             <div class="d-flex justify-content-between">
                                 <img class="bg_green_icon" src="{{ url('img/service/shredder-industrial-icon.png') }}" height="60" width="60">
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
                             </div>
                             <div class="ps-block__content_out-green pt-20">
-                                <h3>บริการบดย่อย คัดแยก สกรีนนิ่ง และบรรจุในภาชนะ งานพลาสติกทุกประเภท</h3>
-                                <p class="mb-0 min-h-125 fs-13px">ให้บริการงานด้านพลาสติกโดยเฉพาะ คัดแยก บดและสกรีนนิ่งแยกตามชนิดของพลาสติก พลาสติกที่บดแล้วนำมาเข้าสู่กระบวนการ COMPOUND <br>และส่งคืนให้โรงงานนั้นๆ เพื่อช่วยลดต้นทุนในการผลิตและช่วยสนับสนุนด้านสิ่งแวดล้อม
+                                <h3>Grinding, Sorting, Screening and Packaging Services for All Types of Plastic Objects</h3>
+                                <p class="mb-0 min-h-125 fs-13px">
+                                    Plastic service provision, particularly plastic sorting,
+                                    grinding and screening for sorting by plastic type. Sending crushed plastic to the COMPOUND process 
+                                    and returning it to the factory to help reduce production costs and help support the environment.
 
                                 </p>
                             </div>
@@ -557,6 +577,7 @@
 <div class="ps-deal-of-day set-top-mobile-30">
     <div class="container">
         <div class="ps-section__header">
+            @if(session()->get('locale') == 'th')
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
                     <h3>เกี่ยวกับเรา</h3>
@@ -565,6 +586,16 @@
             <a href="{{ url('/about') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
+            @else
+            <div class="ps-block--countdown-deal">
+                <div class="ps-block__left">
+                    <h3>About us</h3>
+                </div>
+            </div>
+            <a href="{{ url('/about') }}" class="">
+                View all <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+            </a>
+            @endif
             
         </div>
         <div class="ps-section__content">
@@ -594,6 +625,7 @@
                     <div class="card">
                         <div class="card-body ps-product--detail card-body-x">
 
+                            @if(session()->get('locale') == 'th')
                             <div class="ps-product__content ps-tab-root">
                                 <ul class="ps-tab-list">
                                     <li class="active"><a href="#tab-1">เกี่ยวกับเรา</a></li>
@@ -692,6 +724,107 @@
                                     </div>
                                 </div>
                             </div>
+                            @else
+                            <div class="ps-product__content ps-tab-root">
+                                <ul class="ps-tab-list">
+                                    <li class="active"><a href="#tab-1">About us</a></li>
+                                    <li><a href="#tab-2">Vision</a></li>
+                                    <li><a href="#tab-3">Mission</a></li>
+                                </ul>
+                                <div class="ps-tabs">
+                                    <div class="ps-tab active" id="tab-1">
+                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
+                                            <div class="scrollable-content d-flex justify-content-center">
+                                                <div style="max-width:380px">
+                                                <br>
+                                                <h4>เกี่ยวกับเรา</h4>
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">Recycling Business Leaders with Experience and Expertise in Recycling Scrap Materials </p>
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px; ">
+                                                    including both hazardous and non-hazardous materials from industrial factories and all types of metals,
+                                                    such as metals, stainless steel, copper, brass, aluminum, battery, used oil,
+                                                    all types of plastic, motors, machinery, parts, etc.
+                                                    We are both buyers and sellers 
+                                                    whose roles include bidding for scrap materials from large industrial factories such as petrochemical gas separation plants, 
+                                                    oil refineries, electrical power plants, parts factories vehicle factories, and all types of plants in heavy industries
+                                                    with correct, safe and efficient collection standards with primary consideration given to environmental conditions.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ps-tab" id="tab-2">
+                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
+                                            <div class="scrollable-content d-flex justify-content-center">
+                                                <div style="max-width:380px">
+                                                <br>
+                                                <h4>Wongpanit Recycle's Vision </h4>
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">Wongpanit Recycle Rayong is committed to becoming a national leader in the recycling business </p>
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">  with strategy and expertise meeting international standards, 
+                                                    professional personnel generating economic systems for sustainable growth,
+                                                    and primary consideration given to environmental conditions and safety. 
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ps-tab" id="tab-3">
+                                        <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
+                                            <div class="scrollable-content d-flex justify-content-center">
+                                                <div style="max-width:380px">
+                                             
+                                                <style>
+                                                    .table td, .table th {
+                                                        border-top: 1px solid #ffffff;
+                                                    }
+                                                </style>
+                                                <br>
+                                                <h4>Wongpanit Recycle's Mission </h4>
+                                                <div class="table-responsive mb-9">
+                                                    <table class="table mb-3">
+                                                        <tbody>
+                                                            
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    Commitment to development of a one-stop recycling business to build customer satisfaction through the provision of quality products and services.
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    Application of digital technology to improve services in order to support both domestic and foreign customers.
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    Seeking of business allies to develop competitive capacity and ability.
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    Commitment to management with primary consideration given to environmental conditions and safety.
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fw-bold text-gray-700 fs-5 text-end">
+                                                                <td class="d-flex  f-about-1st">
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    Strict compliance with the law under good governance principles with corporate social responsibility.
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
 
                         </div>
                     </div>
@@ -707,7 +840,11 @@
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
+                    @if(session()->get('locale') == 'th')
                     <h3>ลูกค้าของเรา</h3>
+                    @else
+                    <h3>Our Customers</h3>
+                    @endif
                 </div>
             </div>
             
@@ -749,6 +886,8 @@
 
 <div class="ps-deal-of-day mt-5">
     <div class="container">
+
+        @if(session()->get('locale') == 'th')
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
@@ -759,6 +898,18 @@
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
         </div>
+        @else
+        <div class="ps-section__header">
+            <div class="ps-block--countdown-deal">
+                <div class="ps-block__left">
+                    <h3>License and Awards</h3>
+                </div>
+            </div>
+            <a href="{{ url('/certificate') }}" class="">
+                View More <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+            </a>
+        </div>
+        @endif
 
         @if(count($cer) > 5 )
         <div class="img-portfolio">
@@ -809,6 +960,8 @@
 
 <div class="ps-deal-of-day mt-veri" >
     <div class="container">
+
+        @if(session()->get('locale') == 'th')
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
@@ -818,8 +971,20 @@
             <a href="{{ url('/blog') }}" class="">
                 ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
             </a>
-            
         </div>
+        @else
+        <div class="ps-section__header">
+            <div class="ps-block--countdown-deal">
+                <div class="ps-block__left">
+                    <h3>News</h3>
+                </div>
+            </div>
+            <a href="{{ url('/blog') }}" class="">
+                View More <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+            </a>
+        </div>
+        @endif
+
         <div class="ps-section__content">
             
             <div class="row">
@@ -841,7 +1006,7 @@
                                     {{ $item->title }}
                                     </a>
                                     <p style="min-height: 68px; max-height: 68px; overflow: hidden;">{{ $item->sub_title }}</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$item->id) }}">อ่านต่อ</a>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$item->id) }}">Read more</a>
                                 </div>
                             </div>
                         </div>

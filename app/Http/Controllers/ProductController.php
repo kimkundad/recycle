@@ -99,6 +99,7 @@ class ProductController extends Controller
        
         $this->validate($request, [
             'name_pro' => 'required',
+            'name_pro_en' => 'required',
             'image_pro' => 'required',
             'sub_cat_id' => 'required',
             'brand' => 'required',
@@ -168,6 +169,10 @@ class ProductController extends Controller
            $objs->status = $status;
            $objs->mysort = $request['mysort'];
            $objs->typePrice = $request['typePrice'];
+           $objs->name_pro_en = $request['name_pro_en'];
+           $objs->condition_en = $request['condition_en'];
+           $objs->title_pro_en = $request['title_pro_en'];
+           $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
            $objs->save();
 
            return redirect(url('admin/product'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
@@ -292,9 +297,10 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         //
-       // dd($request->all());
+    //    dd($request['kt_docs_ckeditor_classic_en']);
         $this->validate($request, [
             'name_pro' => 'required',
+            'name_pro_en' => 'required',
             'sub_cat_id' => 'required',
             'brand' => 'required',
             'sku' => 'required',
@@ -356,6 +362,10 @@ class ProductController extends Controller
            $objs->sort = $request['sort'];
            $objs->mysort = $request['mysort'];
            $objs->typePrice = $request['typePrice'];
+           $objs->name_pro_en = $request['name_pro_en'];
+           $objs->condition_en = $request['condition_en'];
+           $objs->title_pro_en = $request['title_pro_en'];
+           $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
            $objs->save();
 
    
@@ -400,6 +410,10 @@ class ProductController extends Controller
            $objs->sort = $request['sort'];
            $objs->mysort = $request['mysort'];
            $objs->typePrice = $request['typePrice'];
+           $objs->name_pro_en = $request['name_pro_en'];
+           $objs->condition_en = $request['condition_en'];
+           $objs->title_pro_en = $request['title_pro_en'];
+           $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
            $objs->save();
 
             }    

@@ -71,6 +71,7 @@ class HProjectController extends Controller
         $this->validate($request, [
             'header' => 'required',
             'content' => 'required',
+            'content_en' => 'required',
             'image' => 'required'
            ]);
 
@@ -90,6 +91,7 @@ class HProjectController extends Controller
            $objs = new hproject();
            $objs->header = $request['header'];
            $objs->content = $request['content'];
+           $objs->content_en = $request['content_en'];
            $objs->image = $filename;
            $objs->status = $status;
            $objs->save();
@@ -136,6 +138,7 @@ class HProjectController extends Controller
         //
         $this->validate($request, [
             'header' => 'required',
+            'content_en' => 'required',
             'content' => 'required'
            ]);
 
@@ -153,6 +156,7 @@ class HProjectController extends Controller
                 $objs = hproject::find($id);
                 $objs->header = $request['header'];
                 $objs->content = $request['content'];
+                $objs->content_en = $request['content_en'];
                 $objs->status = $status;
                 $objs->save();
 
@@ -177,6 +181,7 @@ class HProjectController extends Controller
                 $objs = hproject::find($id);
                 $objs->header = $request['header'];
                 $objs->content = $request['content'];
+                $objs->content_en = $request['content_en'];
                 $objs->status = $status;
                 $objs->image = $filename;
                 $objs->save();

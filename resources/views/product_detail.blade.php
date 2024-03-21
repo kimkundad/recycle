@@ -23,7 +23,13 @@
     <div class="ps-breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><li><a href="{{ url('category?id=0') }}">สินค้าทั้งหมด</a></li></li>
+                <li>
+                    @if (session()->get('locale') == 'th')
+                    <a href="{{ url('category?id=0') }}">สินค้าทั้งหมด</a>
+                    @else
+                    <a href="{{ url('category?id=0') }}">All Products</a>
+                    @endif
+                </li>
                 <li>{{ $objs->name_pro }}</li>
             </ul>
         </div>
@@ -117,8 +123,11 @@
                                 </div>
                                 <div class="ps-product__variations bor-line-top">
                                     <figure>
+                                        @if (session()->get('locale') == 'th')
                                         <figcaption class="contact-product-title">ติดต่อเพื่อซื้อสินค้า</figcaption>
-                                        
+                                        @else
+                                        <figcaption class="contact-product-title">Contact to buy products</figcaption>
+                                        @endif
                                     </figure>
                                 </div>
                                 <div class="header d-flex">
@@ -150,7 +159,11 @@
 
                         <div class="ps-section--default mt-20 mb-5px">
                             <div class="ps-section__header mb-20">
+                                @if (session()->get('locale') == 'th')
                                 <h3>ข้อมูลเพิ่มเติม</h3>
+                                @else
+                                <h3>Additional information</h3>
+                                @endif
                             </div>
                         </div>
                  
@@ -165,12 +178,21 @@
             </div>
             <div class="ps-section--default ps-customer-bought">
                 <div class="ps-section__header">
+                    @if (session()->get('locale') == 'th')
                     <div class="d-flex justify-content-between">
                         <h3>สินค้าแนะนำ</h3>
                         <a href="{{ url('/category?id=0') }}" class="">
                             ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
                         </a>
                     </div>
+                    @else
+                    <div class="d-flex justify-content-between">
+                        <h3>Recommended</h3>
+                        <a href="{{ url('/category?id=0') }}" class="">
+                            View Moew <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+                        </a>
+                    </div>
+                    @endif
                 </div>
                 <div class="ps-section__content">
                     <div class="">
@@ -203,7 +225,11 @@
                                                 @endif
                                             </p>
                                             @endif
+                                            @if(session()->get('locale') == 'th')
                                             <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
+                                            @else
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">View</a>
+                                            @endif
                                         </div>
                                         <div class="ps-product__content hover">
                                             @if($u->discount == 0)
@@ -224,7 +250,11 @@
                                                 @endif
                                             </p>
                                             @endif
+                                            @if(session()->get('locale') == 'th')
                                             <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
+                                            @else
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">View</a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

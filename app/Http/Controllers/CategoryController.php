@@ -88,6 +88,7 @@ class CategoryController extends Controller
    
            $this->validate($request, [
             'cat_name' => 'required',
+            'cat_name_en' => 'required',
             'image' => 'required'
            ]);
            
@@ -112,6 +113,7 @@ class CategoryController extends Controller
      
            $objs = new category();
            $objs->cat_name = $request['cat_name'];
+           $objs->cat_name_en = $request['cat_name_en'];
            $objs->image = $image->hashName();
            $objs->status = $status;
            $objs->save();
@@ -161,7 +163,8 @@ class CategoryController extends Controller
         //
 
            $this->validate($request, [
-            'cat_name' => 'required'
+            'cat_name' => 'required',
+            'cat_name_en' => 'required'
            ]);
            
            $image = $request->file('image');
@@ -177,6 +180,7 @@ class CategoryController extends Controller
 
            $objs = category::find($id);
            $objs->cat_name = $request['cat_name'];
+           $objs->cat_name_en = $request['cat_name_en'];
            $objs->status = $status;
            $objs->save();
 
@@ -202,6 +206,7 @@ class CategoryController extends Controller
      
            $objs = category::find($id);
            $objs->cat_name = $request['cat_name'];
+           $objs->cat_name_en = $request['cat_name_en'];
            $objs->image = $image->hashName();
            $objs->status = $status;
            $objs->save();

@@ -81,7 +81,7 @@
                             <li><a href="{{ url('category?id=0') }}">Recommend</a></li>
                             <li><a href="{{ url('/about') }}">About us</a></li>
                             <li><a href="{{ url('/certificate') }}">License and Awards</a></li>
-                            <li><a href="{{ url('/blog') }}">New</a></li>
+                            <li><a href="{{ url('/blog') }}">News</a></li>
                             @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">เข้าสู่ระบบ / Login</a></li>
                             @else

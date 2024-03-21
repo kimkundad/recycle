@@ -133,7 +133,10 @@ class HomeController extends Controller
 
         $results = news::where('status', 1)->where('id', '!=', $objs->id)->whereDate('startdate', '<=', date("Y-m-d"))->orderby('id', 'desc')->paginate(6);
         $artilces = '';
-        if ($request->ajax()) {
+
+        if(session()->get('locale') == 'th'){
+
+          if ($request->ajax()) {
             foreach ($results as $result) {
 
                 $url = url('blog_detail/'.$result->id);
@@ -142,6 +145,21 @@ class HomeController extends Controller
             }
             return $artilces;
         }
+
+        }else{
+
+          if ($request->ajax()) {
+            foreach ($results as $result) {
+
+                $url = url('blog_detail/'.$result->id);
+                $img = url('media/'.$result->image);
+                $artilces.='<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$result->title.'" style="max-height: 190px; min-height: 190px;"></div><div class="ps-post__content"><a class="ps-post__title" style="min-height: 72px; max-height: 72px; overflow: hidden;"  href="'.$url.'">'.$result->title.'</a><p style="min-height: 68px; max-height: 68px; overflow: hidden;">'.$result->sub_title.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">Read more</a></div></div></div>';
+            }
+            return $artilces;
+        }
+
+        }
+        
         return view('blog');
     }  
 
@@ -181,7 +199,12 @@ class HomeController extends Controller
                 if($u->discount == 0){
 
                   if($u->typePrice == 1){
-                    $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                    if(session()->get('locale') == 'th'){
+                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                    }else{
+                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
+                    }
+                    
                   }else{
 
                     if($u->unit_id !== 3 && $u->unit_id !== null){
@@ -196,7 +219,12 @@ class HomeController extends Controller
 
 
                   if($u->typePrice == 1){
-                    $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                    if(session()->get('locale') == 'th'){
+                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                    }else{
+                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
+                    }
+                    
                   }else{
 
                   if($u->unit_id !== 3 && $u->unit_id !== null){
@@ -329,7 +357,11 @@ class HomeController extends Controller
                 if($u->discount == 0){
 
                   if($u->typePrice == 1){
-                    $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                    if(session()->get('locale') == 'th'){
+                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                    }else{
+                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
+                    }
                   }else{
 
                     if($u->unit_id !== 3 && $u->unit_id !== null){
@@ -344,7 +376,11 @@ class HomeController extends Controller
 
 
                   if($u->typePrice == 1){
-                    $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                    if(session()->get('locale') == 'th'){
+                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                    }else{
+                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
+                    }
                   }else{
 
                   if($u->unit_id !== 3 && $u->unit_id !== null){

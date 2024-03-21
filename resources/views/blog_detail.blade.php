@@ -38,7 +38,13 @@
 <div class="ps-breadcrumb">
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
+            <li>
+                @if(session()->get('locale') == 'th')
+                <a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a>
+                @else
+                <a href="{{ url('/blog') }}">News</a>
+                @endif
+            </li>
             <li>{{ $objs->title }}</li>
         </ul>
     </div>
