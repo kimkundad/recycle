@@ -29,9 +29,7 @@
   background-position: center!important;
   background-repeat: no-repeat!important;
 }
-.fs-12px{
-    font-size: 12px;
-}
+
 </style>
 @stop('stylesheet')
 

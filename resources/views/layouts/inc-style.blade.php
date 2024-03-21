@@ -21,5 +21,8 @@
         .headerx--sticky{
             margin-top: 5px;
         }
+        .fs-12px{
+    font-size: 12px;
+}
     </style>
 
