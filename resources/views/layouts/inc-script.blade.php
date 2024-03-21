@@ -33,6 +33,16 @@
   <div id="fb-customer-chat" class="fb-customerchat">
   </div>
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W54W3329L7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W54W3329L7');
+</script>
+
   <script>
     
 
