@@ -14,4 +14,12 @@
     <link rel="stylesheet" href="{{ url('assets/css/style.css') }}?v{{time()}}">
     <link rel="stylesheet" href="{{ url('assets/css/recycle.css') }}?v{{time()}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.6/dist/cookieconsent.css">
+    <style>
+        .header__top{
+         z-index: 1002 !important;
+        }
+        .headerx--sticky{
+            margin-top: 5px;
+        }
+    </style>
 

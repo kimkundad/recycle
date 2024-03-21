@@ -99,7 +99,7 @@
             </div>
         </div>
     </div>
-    <nav class="navigation navigation_header">
+    <nav class="navigation navigation_header" style="">
         <div class="container">
             @if(session()->get('locale') == 'th')
             <div class="navigation__right">
@@ -158,6 +158,19 @@
                     <a class="header__extra" target="_blank" href="{{ get_facebook() }}">
                         <img class="img-fluid" src="{{ url('img/facebook_new_icon.png') }}">
                     </a>
+                    <div class="ps-dropdown language" style="padding-left: 5px;">
+                        <a href="#">
+                        @if(session()->get('locale') == 'en')
+                        <img height="50" class="img-flag" src="{{ url('img/icon/english_icon.png') }}" style="width: 38px; height: 38px;"></a>
+                        @else
+                        <img height="50" class="img-flag" src="{{ url('img/icon/thai_icon.png') }}" style="width: 38px; height: 38px;"></a>
+                        @endif
+                        
+                        <ul class="ps-dropdown-menu">
+                            <li><a href="{{ url('/lang/change?lang=en') }}"><img src="{{ url('img/flag/en.png') }}" alt="" /> English</a></li>
+                            <li><a href="{{ url('/lang/change?lang=th') }}"><img src="{{ url('img/flag/th.png') }}" height="12" /> ภาษาไทย</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
