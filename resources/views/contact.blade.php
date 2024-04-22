@@ -57,7 +57,7 @@ Contact us - wpnrayong
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                         <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a><br>
+                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0945692969">0945692969</a><br>
                         อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @else
@@ -70,7 +70,7 @@ Contact us - wpnrayong
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
                         <p>428 Moo. 2, Phawong Subdistrict, Mueang Songkhla District, Songkhla Province 90100</p>
                         <h4 class="mt-10">Contact</h4>
-                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a><br>
+                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0945692969">0945692969</a><br>
                         Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @endif
@@ -210,7 +210,7 @@ Contact us - wpnrayong
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                         <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a><br>
+                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0945692969">0945692969</a><br>
                         อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @else
@@ -223,7 +223,7 @@ Contact us - wpnrayong
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
                         <p>428 Moo. 2, Phawong Subdistrict, Mueang Songkhla District, Songkhla Province 90100</p>
                         <h4 class="mt-10">Contact</h4>
-                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0875577730">0875577730</a><br>
+                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0945692969">0945692969</a><br>
                         Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @endif

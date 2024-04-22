@@ -44,7 +44,7 @@
                         <h4 class="mt-10">ช่องทางการติดต่อ</h4>
                         <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a
                                 href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a
-                                href="tel:0875577730">0875577730</a><br>
+                                href="tel:0945692969">0945692969</a><br>
                             อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                 @else
@@ -59,7 +59,7 @@
                         <h4 class="mt-10">Contact</h4>
                         <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a
                                 href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a
-                                href="tel:0875577730">0875577730</a><br>
+                                href="tel:0945692969">0945692969</a><br>
                             Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                 @endif

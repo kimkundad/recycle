@@ -23,7 +23,7 @@
                                         <div class="d-flex flex-column">
                                             <div class=" m-mt-10" style="font-size: 13px; line-height: 15px;">{{ get_phone() }}</div>
                                             <div class="" style="font-size: 13px; line-height: 15px;">{{ get_phone2() }}</div>
-                                            <div class="" style="font-size: 13px; line-height: 15px;">0875577730</div>
+                                            <div class="" style="font-size: 13px; line-height: 15px;">0945692969</div>
                                         </div>
                                     </div>
                                 </a>
