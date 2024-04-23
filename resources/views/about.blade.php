@@ -22,6 +22,7 @@ About us - wpnrayong
 @stop('stylesheet')
 
 <style>
+
     .set-pad-in-md{
         padding-right: 0px !important;
     padding-left: 0px !important;
@@ -72,10 +73,10 @@ min-height: 90px
                     @endif
                 </div>
             </div>
-            
+
         </div>
         <div class="ps-section__content">
-            
+
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12  ps-product--detail ps-product--fullwidth">
                     <div class="ps-product__thumbnail" data-vertical="false">
@@ -117,12 +118,12 @@ min-height: 90px
                                                 <h4>เกี่ยวกับเรา</h4>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">ผู้นำด้านธุรกิจรีไซเคิลที่มีประสบการณ์และความเชี่ยวชาญด้านการรีไซเคิลวัสดุเหลือใช้ </p>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px; ">
-                                                    ทั้งที่ไม่เป็นอันตรายและเป็นอันตรายจากโรงงานอุตสาหกรรม รวมไปถึงโลหะทุกประเภท 
-                                                    อาทิเช่น เหล็ก สแตนเลส ทองแดง <br>ทองเหลือง อะลูมิเนียม แบตเตอรี่ น้ำมันที่ใช้แล้ว 
+                                                    ทั้งที่ไม่เป็นอันตรายและเป็นอันตรายจากโรงงานอุตสาหกรรม รวมไปถึงโลหะทุกประเภท
+                                                    อาทิเช่น เหล็ก สแตนเลส ทองแดง <br>ทองเหลือง อะลูมิเนียม แบตเตอรี่ น้ำมันที่ใช้แล้ว
                                                     พลาสติกทุกชนิด เครื่องยนต์ เครื่องจักร อะไหล่ ฯลฯ </p> <p style="text-indent: 1.5em;margin-bottom: 0px;">
-                                                    โดยเราเป็นทั้งผู้รับซื้อและผู้จำหน่าย 
-                                                    ครอบคลุมไปถึงการประมูลวัสดุเหลือใช้ทั้งจากโรงงานอุตสาหกรรมขนาดใหญ่ เช่น <br>แยกก๊าซปิโตรเคมี 
-                                                    โรงกลั่นน้ำมัน โรงไฟฟ้า โรงงานชิ้นส่วน <br>ยานยนต์ และอุตสาหกรรมหนักทุกประเภท 
+                                                    โดยเราเป็นทั้งผู้รับซื้อและผู้จำหน่าย
+                                                    ครอบคลุมไปถึงการประมูลวัสดุเหลือใช้ทั้งจากโรงงานอุตสาหกรรมขนาดใหญ่ เช่น <br>แยกก๊าซปิโตรเคมี
+                                                    โรงกลั่นน้ำมัน โรงไฟฟ้า โรงงานชิ้นส่วน <br>ยานยนต์ และอุตสาหกรรมหนักทุกประเภท
                                                     ด้วยมาตรฐานการจัดเก็บที่ถูกต้อง ปลอดภัย และมีประสิทธิภาพ โดยคำนึงถึงสภาพแวดล้อมเป็นสำคัญ
 
                                                     </p>
@@ -138,7 +139,7 @@ min-height: 90px
                                                 <h4>วิสัยทัศน์ วงษ์พาณิชย์รีไซเคิล </h4>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">วงษ์พาณิชย์รีไซเคิล ระยอง มุ่งมั่นสู่การเป็นผู้นำด้านธุรกิจรีไซเคิลระดับประเทศ </p>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">  ด้วยกลยุทธ์ ความเชี่ยวชาญมาตรฐานระดับสากล <br>บุคลากรมืออาชีพ สร้างระบบเศรษฐกิจหมุนเวียนเพื่อการเติบโตอย่างยั่งยืน
-                                                     โดยคำนึงถึงคุณภาพสิ่งแวดล้อม และความปลอดภัยเป็นสำคัญ 
+                                                     โดยคำนึงถึงคุณภาพสิ่งแวดล้อม และความปลอดภัยเป็นสำคัญ
                                                 </p>
                                                 </div>
                                             </div>
@@ -148,7 +149,7 @@ min-height: 90px
                                         <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
                                             <div class="scrollable-content d-flex justify-content-center">
                                                 <div style="max-width:380px">
-                                             
+
                                                 <style>
                                                     .table td, .table th {
                                                         border-top: 1px solid #ffffff;
@@ -159,34 +160,34 @@ min-height: 90px
                                                 <div class="table-responsive mb-9">
                                                     <table class="table mb-3">
                                                         <tbody>
-                                                            
+
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
                                                                     มุ่งพัฒนาธุรกิจรีไซเคิลอย่างครบวงจร เพื่อสร้างความพึงพอใจให้แก่ลูกค้าผ่านการนำเสนอผลิตภัณฑ์และการบริการที่มีคุณภาพ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
                                                                     นำ Digital Technology มาช่วยต่อยอดการบริการ <br>เพื่อรองรับลูกค้าทั้งในประเทศและต่างประเทศ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
-                                                                    แสวงหาพันธมิตรทางธุรกิจ เพื่อพัฒนาศักยภาพและ<br>ขีดความสามารถในการแข่งขัน 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
+                                                                    แสวงหาพันธมิตรทางธุรกิจ เพื่อพัฒนาศักยภาพและ<br>ขีดความสามารถในการแข่งขัน
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
                                                                     มุ่งเน้นการบริหารจัดการ โดยคำนึงถึงสิ่งแวดล้อมตามมาตรฐานสากลและความปลอดภัยของชุมชนเป็นสำคัญ
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
                                                                     ปฏิบัติตามกฎหมายอย่างเคร่งครัด ภายใต้หลักการกำกับดูแลกิจการที่ดี มีธรรมาภิบาลและมีความรับผิดชอบต่อสังคม
                                                                 </td>
                                                             </tr>
@@ -213,14 +214,14 @@ min-height: 90px
                                             <div class="scrollable-content d-flex justify-content-center">
                                                 <div style="max-width:380px">
                                                 <br>
-                                                <h4>เกี่ยวกับเรา</h4>
+                                                <h4>About us</h4>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">Recycling Business Leaders with Experience and Expertise in Recycling Scrap Materials </p>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px; ">
                                                     including both hazardous and non-hazardous materials from industrial factories and all types of metals,
                                                     such as metals, stainless steel, copper, brass, aluminum, battery, used oil,
                                                     all types of plastic, motors, machinery, parts, etc.
-                                                    We are both buyers and sellers 
-                                                    whose roles include bidding for scrap materials from large industrial factories such as petrochemical gas separation plants, 
+                                                    We are both buyers and sellers
+                                                    whose roles include bidding for scrap materials from large industrial factories such as petrochemical gas separation plants,
                                                     oil refineries, electrical power plants, parts factories vehicle factories, and all types of plants in heavy industries
                                                     with correct, safe and efficient collection standards with primary consideration given to environmental conditions.
 
@@ -236,9 +237,9 @@ min-height: 90px
                                                 <br>
                                                 <h4>Wongpanit Recycle's Vision </h4>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">Wongpanit Recycle Rayong is committed to becoming a national leader in the recycling business </p>
-                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">  with strategy and expertise meeting international standards, 
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">  with strategy and expertise meeting international standards,
                                                     professional personnel generating economic systems for sustainable growth,
-                                                    and primary consideration given to environmental conditions and safety. 
+                                                    and primary consideration given to environmental conditions and safety.
                                                 </p>
                                                 </div>
                                             </div>
@@ -248,7 +249,7 @@ min-height: 90px
                                         <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
                                             <div class="scrollable-content d-flex justify-content-center">
                                                 <div style="max-width:380px">
-                                             
+
                                                 <style>
                                                     .table td, .table th {
                                                         border-top: 1px solid #ffffff;
@@ -259,34 +260,34 @@ min-height: 90px
                                                 <div class="table-responsive mb-9">
                                                     <table class="table mb-3">
                                                         <tbody>
-                                                            
+
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
                                                                     Commitment to development of a one-stop recycling business to build customer satisfaction through the provision of quality products and services.
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
                                                                     Application of digital technology to improve services in order to support both domestic and foreign customers.
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
                                                                     Seeking of business allies to develop competitive capacity and ability.
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
                                                                     Commitment to management with primary consideration given to environmental conditions and safety.
                                                                 </td>
                                                             </tr>
                                                             <tr class="fw-bold text-gray-700 fs-5 text-end">
                                                                 <td class="d-flex  f-about-1st">
-                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b> 
+                                                                    <b class="top-10x"><i class="fa fa-genderless text-success fs-2 me-2"></i></b>
                                                                     Strict compliance with the law under good governance principles with corporate social responsibility.
                                                                 </td>
                                                             </tr>
@@ -305,7 +306,7 @@ min-height: 90px
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -315,7 +316,7 @@ min-height: 90px
 <div class="ps-deal-of-day mt-30 pb-5px">
     <div class="container">
         <div class="ps-section__content">
-            
+
             <div class="row justify-content-md-center">
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12  ps-product--detail ps-product--fullwidth">
                     <div class="video">
@@ -339,7 +340,7 @@ min-height: 90px
                 </div>
             </div>
             <a href="{{ url('/certificate') }}" class="">
-                ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+                ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
             </a>
         </div>
         @else
@@ -350,7 +351,7 @@ min-height: 90px
                 </div>
             </div>
             <a href="{{ url('/certificate') }}" class="">
-                View More <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+                View More <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
             </a>
         </div>
         @endif
@@ -414,7 +415,7 @@ min-height: 90px
                     @endif
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -422,19 +423,19 @@ min-height: 90px
 <div class="ps-client-say">
     <div class="container">
         <div class="ps-section__content">
-            <div class="ps-carousel--testimonials owl-slider" 
-            data-owl-auto="true" 
-            data-owl-loop="true" 
-            data-owl-speed="2000" 
-            data-owl-gap="0" 
-            data-owl-nav="false" 
-            data-owl-dots="false" 
-            data-owl-item="6" 
-            data-owl-item-xs="3" 
-            data-owl-item-sm="3" 
-            data-owl-item-md="4" 
-            data-owl-item-lg="3" 
-            data-owl-duration="1000" 
+            <div class="ps-carousel--testimonials owl-slider"
+            data-owl-auto="true"
+            data-owl-loop="true"
+            data-owl-speed="2000"
+            data-owl-gap="0"
+            data-owl-nav="false"
+            data-owl-dots="false"
+            data-owl-item="6"
+            data-owl-item-xs="3"
+            data-owl-item-sm="3"
+            data-owl-item-md="4"
+            data-owl-item-lg="3"
+            data-owl-duration="1000"
             data-owl-mousedrag="on">
 
                 @isset($ban)
@@ -479,7 +480,7 @@ min-height: 90px
                             <div class="ps-tab active" id="tabx-1">
                                 <div class="row align-content-lg-stretch">
                                     <div class="col-md-12" style="margin-bottom:20px">
-                                        <div class=" card-out-green-head set-margin-card"> 
+                                        <div class=" card-out-green-head set-margin-card">
                                             <div class="card-green-content">
                                                 <div class="ps-block__content_out-green text-center">
                                                     <p class="mb-0"><b>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด ดำเนินธุรกิจการให้บริการกำจัดวัสดุที่ไม่ใช้แล้วที่ไม่ปนเปื้อน โดยวิธีการรีไซเคิล เพื่อให้เกิดความมั่นใจต่อชุมชน สังคม และกลุ่มโรงงานอุตสาหกรรม บริษัทมีความมุ่งมั่นในการบริหารจัดการสิ่งแวดล้อม เพื่อลดปัญหาที่จะส่งผลกระทบต่อสิ่งแวดล้อมให้สอดคล้องกับธุรกิจ ดังนี้
@@ -495,10 +496,10 @@ min-height: 90px
                                     <div class="col-md-8">
                                         <div class="row ">
                                             <div class="col-md-6 set-pad-in-md ">
-                                                <div class="card-green set-margin-card set-padd-new"> 
+                                                <div class="card-green set-margin-card set-padd-new">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
+                                                            <img class="img-60 mt-8px" src="{{ url('img/Group 3115.png') }}">
                                                         </div>
                                                         <div class="ps-block__content_green pt-20">
                                                             <p class="mb-0 min-h-89">มุ่งมั่นที่จะดำเนินระบบให้เป็นไปตามข้อกำหนดกฎหมายที่ว่าด้วย สิ่งแวดล้อม ระเบียบ และข้อบังคับที่เกี่ยวข้องอย่างเคร่งครัด</p>
@@ -507,10 +508,10 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card set-padd-new"> 
+                                                <div class=" card-out-greenxx set-margin-card set-padd-new">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
+                                                            <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-20">
                                                             <p class="mb-0 min-h-89">เราจะสร้างความพึงพอใจให้กับลูกค้า และพัฒนาวิธีการนำวัสดุที่ไม่ใช้แล้ว นำกลับมาใช้ใหม่ให้ได้เกิดประโยชน์สูงสุด โดยไม่ก่อให้เกิดความเดือดร้อนรำคาญต่อชุมชนข้างเคียง</p>
@@ -519,10 +520,10 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
+                                                            <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-20">
                                                             <p class="mb-0 min-h-89">
@@ -532,10 +533,10 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class="card-green set-margin-card mt-16 set-padd-new"> 
+                                                <div class="card-green set-margin-card mt-16 set-padd-new">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
+                                                            <img class="img-60 mt-8px" src="{{ url('img/Group 3117.png') }}">
                                                         </div>
                                                         <div class="ps-block__content_green pt-20">
                                                             <p class="mb-0 min-h-89">มุ่งมั่นส่งเสริมและสร้างจิตสำนึกให้พนักงานทุกระดับปฏิบัติตามมาตรการต่าง ๆ ด้านสิ่งแวดล้อม อาชีวอนามัย และความปลอดภัย โดยมีการปรับปรุงอย่างต่อเนื่อง อย่างมีประสิทธิภาพ</p>
@@ -543,16 +544,16 @@ min-height: 90px
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
                             <div class="ps-tab" id="tabx-2">
                                 <div class="row align-content-lg-stretch">
                                     <div class="col-md-12" style="margin-bottom:20px">
-                                        <div class=" card-out-green-head set-margin-card"> 
+                                        <div class=" card-out-green-head set-margin-card">
                                             <div class="card-green-content">
                                                 <div class="ps-block__content_out-green text-center">
                                                     <p class="mb-0"><b>บริษัท วงพาณิชย์รีไซเคิล ระยอง จำกัด ดำเนินธุรกิจการให้บริการกำจัดวัสดุที่ไม่ใช้แล้วที่ไม่ปนเปื้อน โดยวิธีการรีไซเคิล เพื่อให้เกิดความมั่นใจต่อชุมชน สังคม และกลุ่มโรงงานอุตสาหกรรม เพื่อให้เกิดความมุ่งมั่นต่อองค์กร ชุมชน และผู้มีส่วนได้ส่วนเสียว่า บริษัทมีความมุ่งมั่นในการบริหารจัดการคุณภาพและสิ่งแวดล้อมให้สอดคล้องกับธุรกิจ เพื่อช่วยลดปัญหาที่อาจเกิดผลกระทบโดยรวม ดังนี้
@@ -567,10 +568,10 @@ min-height: 90px
                                     <div class="col-md-8">
                                         <div class="row ">
                                             <div class="col-md-6 set-pad-in-md ">
-                                                <div class="card-green set-margin-card set-padd-new"> 
+                                                <div class="card-green set-margin-card set-padd-new">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
+                                                            <img class="img-60 mt-8px" src="{{ url('img/Group 3115.png') }}">
                                                         </div>
                                                         <div class="ps-block__content_green pt-20">
                                                             <p class="mb-0 min-h-89">ผู้บริหารและพนักงานทุกคนตระหนักถึงความสำคัญและมุ่งเน้นการบริการอย่างมีคุณภาพ ควบคู่ความปลอดภัยและปฏิบัติตามข้อกำหนดกฎหมายที่เกี่ยวข้อง ทั้งนี้เพื่อให้ลูกค้าเกิดความพึงพอใจสูงสุด
@@ -580,10 +581,10 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card set-padd-new"> 
+                                                <div class=" card-out-greenxx set-margin-card set-padd-new">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
+                                                            <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-20">
                                                             <p class="mb-0 min-h-89">ทบทวนประสิทธิภาพและประสิทธิผลของระบบบริหารคุณภาพเป็นระยะ เพื่อนำไปสู่กระบวนการปรับปรุงอย่างต่อเนื่อง
@@ -593,10 +594,10 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
+                                                            <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-20">
                                                             <p class="mb-0 min-h-89">
@@ -606,10 +607,10 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class="card-green set-margin-card mt-16 set-padd-new"> 
+                                                <div class="card-green set-margin-card mt-16 set-padd-new">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
+                                                            <img class="img-60 mt-8px" src="{{ url('img/Group 3117.png') }}">
                                                         </div>
                                                         <div class="ps-block__content_green pt-20">
                                                             <p class="mb-0 min-h-89">เผยแพร่นโยบายคุณภาพให้พนักงานทุกคน ตลอดจนผู้มีส่วนได้เสียที่เกี่ยวข้อทราบ เพื่อให้มั่นใจว่าบริษัทฯ มีความมุ่งมั่นที่จะรักษาไว้ซึ่งมาตรฐานการบริการอย่างมีคุณภาพ</p>
@@ -617,16 +618,16 @@ min-height: 90px
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
                             <div class="ps-tab" id="tabx-3">
                                 <div class="row align-content-lg-stretch">
                                     <div class="col-md-12" style="margin-bottom:20px">
-                                        <div class=" card-out-green-head set-margin-card"> 
+                                        <div class=" card-out-green-head set-margin-card">
                                             <div class="card-green-content">
                                                 <div class="ps-block__content_out-green text-center">
                                                     <p class="mb-0"><b>นโยบาย HSE (นโยบายความปลอดภัยอาชีวอนามัยและสภาพแวดล้อมในการทำงาน)
@@ -653,20 +654,20 @@ min-height: 90px
                                             </div>
                                         </div>
 
-                                        <div class="ps-carousel--testimonials owl-slider" 
+                                        <div class="ps-carousel--testimonials owl-slider"
                                         data-owl-auto="false"
-                                        data-owl-loop="false" 
-                                        data-owl-gap="10" 
-                                        data-owl-nav="false" 
-                                        data-owl-dots="false" 
+                                        data-owl-loop="false"
+                                        data-owl-gap="10"
+                                        data-owl-nav="false"
+                                        data-owl-dots="false"
                                         data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on">
-                                        
+
                                             <div class="row">
                                                 <div class="col-md-6 set-pad-in-md ">
-                                                    <div class="card-green set-margin-card set-pad-20"> 
+                                                    <div class="card-green set-margin-card set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="mt-8px img-60" src="{{ url('img/Group 3115.png') }}">
+                                                                <img class="num_img_x mt-8px img-60" src="{{ url('img/Group 3115.png') }}">
                                                             </div>
                                                             <div class="ps-block__content_green pt-25">
                                                                 <p class="mb-0 min-h-90">บริษัทฯ มุ่งมั่นที่จะลดอุบัติเหตุและป้องกันพนักงานรวมทั้งบุคคลภายนอก ที่เข้ามาภายในบริษัทไม่ ให้เกิดอุบัติเหตุหรือโรคจากการทำงานใด ๆ ทั้งสิ้น รวมทั้งการมุ่งมั่นที่จะปฏิบัติตามกฎหมายกำหนด </p>
@@ -675,10 +676,10 @@ min-height: 90px
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 set-pad-in-md">
-                                                    <div class=" card-out-greenxx set-margin-card set-pad-20"> 
+                                                    <div class=" card-out-greenxx set-margin-card set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}">
+                                                                <img class="num_img_x bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}">
                                                             </div>
                                                             <div class="ps-block__content_out-green pt-25">
                                                                 <p class="mb-0 min-h-90">บริษัทฯ มุ่งมั่นที่จะป้องการและปราบปรามพร้อมทั้งให้ความรู้ถึงพิษภัยและโทษทัณฑ์ของยาเสพติด เพื่อให้พนักงานบริษัท วงษ์พาณิชย์ฯ ปราศจากยาเสพติดและเป็นบริษัทสีขาว</p>
@@ -686,13 +687,13 @@ min-height: 90px
                                                         </div>
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="col-md-6 set-pad-in-md">
-                                                    <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20"> 
+                                                    <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
                                                                 <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="height:60px">
-                                                                
+
                                                             </div>
                                                             <div class="ps-block__content_out-green ">
                                                                 <p class="mb-0 min-h-90">
@@ -702,9 +703,9 @@ min-height: 90px
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="col-md-6 set-pad-in-md">
-                                                    <div class="card-green set-margin-card mt-16 set-pad-20"> 
+                                                    <div class="card-green set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
                                                                 <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}">
@@ -712,7 +713,7 @@ min-height: 90px
                                                             <div class="ps-block__content_green pt-25">
                                                                 <p class="mb-0 min-h-90">
                                                                     พนักงานและบุคคลภายนอกที่เข้ามาภายในบริษัทฯ ทุกคน ต้องให้ความร่วมมือในกิจกรรมความปลอดภัยทุกกิจกรรมและดูแลรักษาความสะอาดและความเป็นระเบียบเรียบร้อยของสถานที่ปฏิบัติงานตามมาตรฐาน 5 ส
-                                                                    
+
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -721,7 +722,7 @@ min-height: 90px
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 set-pad-in-md">
-                                                    <div class="card-green set-margin-card mt-16 set-pad-20"> 
+                                                    <div class="card-green set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
                                                                 <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="height:60px">
@@ -733,30 +734,30 @@ min-height: 90px
                                                         </div>
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="col-md-6 set-pad-in-md">
-                                                    <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20"> 
+                                                    <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
                                                                 <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}">
                                                             </div>
                                                             <div class="ps-block__content_out-green ">
                                                                 <p class="mb-0 min-h-90">ผู้บังคับบัญชาทุกระดับมีหน้าที่รับผิดชอบเกี่ยวกับความปลอดภัยของผู้ใต้บังคับบัญชาตามสายงานอย่างจริงจังและต่อเนื่อง ตลอดจนต้องฝึกสอนและเป็นตัวอย่างในการปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงาน<br>ของบริษัทฯ
-        
+
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="col-md-6 set-pad-in-md">
-                                                    <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20"> 
+                                                    <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}">
+                                                                <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/seven.png') }}">
                                                             </div>
                                                             <div class="ps-block__content_out-green pt-25">
-                                                                <p class="mb-0 min-h-90"> 
+                                                                <p class="mb-0 min-h-90">
                                                                     ทางบริษัทฯ จะนำการปฏิบัติงานด้านความปลอดภัยและการเกิดอุบัติเหตุในแต่ละแผนกเป็นส่วนหนึ่งในการพิจารณาต่อสัญญาการจ้างและประเมินผลการปฏิบัติ<br>งานประจำปี
                                                                 </p>
                                                             </div>
@@ -771,7 +772,7 @@ min-height: 90px
                                         {{-- <div class="row ">
 
                                             <div class="col-md-6 set-pad-in-md ">
-                                                <div class="card-green set-margin-card"> 
+                                                <div class="card-green set-margin-card">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
@@ -783,7 +784,7 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card"> 
+                                                <div class=" card-out-greenxx set-margin-card">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
@@ -796,11 +797,11 @@ min-height: 90px
                                             </div>
 
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="mt-8px" src="{{ url('img/Group 3118.png') }}" style="height:60px">
-                                                            
+
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
                                                             <p class="mb-0 ">
@@ -810,9 +811,9 @@ min-height: 90px
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class="card-green set-margin-card mt-16"> 
+                                                <div class="card-green set-margin-card mt-16">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3117.png') }}">
@@ -820,15 +821,15 @@ min-height: 90px
                                                         <div class="ps-block__content_green pt-25">
                                                             <p class="mb-0 ">
                                                                 พนักงานและบุคคลภายนอกที่เข้ามาภายในบริษัทฯ ทุกคน ต้องให้ความร่วมมือในกิจกรรมความปลอดภัยทุกกิจกรรมและดูแลรักษาความสะอาดและความเป็นระเบียบเรียบร้อยของสถานที่ปฏิบัติงานตามมาตรฐาน 5 ส
-                                                                
+
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class="card-green set-margin-card mt-16"> 
+                                                <div class="card-green set-margin-card mt-16">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="mt-8px" src="{{ url('img/five.png') }}" style="height:60px">
@@ -842,7 +843,7 @@ min-height: 90px
                                             </div>
 
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/six.png') }}">
@@ -857,13 +858,13 @@ min-height: 90px
                                             </div>
 
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
-                                                            <p class="mb-0 "> 
+                                                            <p class="mb-0 ">
                                                                 ทางบริษัทฯ จะนำการปฏิบัติงานด้านความปลอดภัยและการเกิดอุบัติเหตุในแต่ละแผนกเป็นส่วนหนึ่งในการพิจารณาต่อสัญญาการจ้างและประเมินผลการปฏิบัติงานประจำปี
                                                             </p>
                                                         </div>
@@ -871,22 +872,22 @@ min-height: 90px
                                                 </div>
                                             </div>
 
-                                            
-                                            
+
+
                                         </div> --}}
-                                        
+
                                     </div>
                                 </div>
                             </div>
                             <div class="ps-tab" id="tabx-4">
                                 <div class="row align-content-lg-stretch">
                                     <div class="col-md-12" style="margin-bottom:20px">
-                                        <div class=" card-out-green-head set-margin-card set-pad-18x"> 
+                                        <div class=" card-out-green-head set-margin-card set-pad-18x">
                                             <div class="card-green-content">
                                                 <div class="ps-block__content_out-green text-center">
                                                     <p class="mb-0"><b>บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด ดำเนินธุรกิจการประมูลค้าของเก่า การให้บริการด้านการจัดการวัสดุที่ใช้แล้ว การคัดแยกเพื่อการรีไซเคิล นำกลับมาใช้และจำหน่าย มีความรับผิดชอบต่อชุมชน และสังคม เป็นหนึ่งในนโยบายหลักในการบริหาร โดยให้ความสำคัญต่อการสร้างสรรค์สิ่งแวดล้อมให้สังคมในชุมชนรอบโรงงาน และ การมีส่วนร่วมในชุมชน ซึ่งมีนโยบายในการดำเนินงานดังต่อไปนี้
                                                     </b></p>
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
@@ -897,7 +898,7 @@ min-height: 90px
                                     <div class="col-md-8">
                                         <div class="row ">
                                             <div class="col-md-6 set-pad-in-md ">
-                                                <div class="card-green set-margin-card set-pad-18x"> 
+                                                <div class="card-green set-margin-card set-pad-18x">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
@@ -910,7 +911,7 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card set-pad-18x"> 
+                                                <div class=" card-out-greenxx set-margin-card set-pad-18x">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
@@ -923,7 +924,7 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-18x"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-18x">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
@@ -936,7 +937,7 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class="card-green set-margin-card mt-16 set-pad-18x"> 
+                                                <div class="card-green set-margin-card mt-16 set-pad-18x">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
                                                             <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
@@ -948,9 +949,9 @@ min-height: 90px
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -968,7 +969,7 @@ min-height: 90px
                         <div class="ps-tab active" id="tabx-1">
                             <div class="row align-content-lg-stretch">
                                 <div class="col-md-12" style="margin-bottom:20px">
-                                    <div class=" card-out-green-head set-margin-card"> 
+                                    <div class=" card-out-green-head set-margin-card">
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
                                                 <p class="mb-0"><b>
@@ -988,10 +989,10 @@ min-height: 90px
                                 <div class="col-md-8">
                                     <div class="row ">
                                         <div class="col-md-6 set-pad-in-md ">
-                                            <div class="card-green set-margin-card set-padd-new"> 
+                                            <div class="card-green set-margin-card set-padd-new">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
+                                                        <img class="img-60 mt-8px" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
                                                         <p class="mb-0 min-h-89">
@@ -1002,26 +1003,26 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card set-padd-new"> 
+                                            <div class=" card-out-greenxx set-margin-card set-padd-new">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
+                                                        <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
                                                         <p class="mb-0 min-h-89">
-                                                            We will build customer satisfaction 
-                                                            and develop methods for leveraging scrap materials 
-                                                            by reusing them 
+                                                            We will build customer satisfaction
+                                                            and develop methods for leveraging scrap materials
+                                                            by reusing them
                                                             without causing disturbance or annoyance for surrounding communities</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new"> 
+                                            <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
+                                                        <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
                                                         <p class="mb-0 min-h-89">
@@ -1035,10 +1036,10 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class="card-green set-margin-card mt-16 set-padd-new"> 
+                                            <div class="card-green set-margin-card mt-16 set-padd-new">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
+                                                        <img class="img-60 mt-8px" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
                                                         <p class="mb-0 min-h-89">
@@ -1051,16 +1052,16 @@ min-height: 90px
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
                         <div class="ps-tab" id="tabx-2">
                             <div class="row align-content-lg-stretch">
                                 <div class="col-md-12" style="margin-bottom:20px">
-                                    <div class=" card-out-green-head set-margin-card"> 
+                                    <div class=" card-out-green-head set-margin-card">
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
                                                 <p class="mb-0"><b>
@@ -1083,15 +1084,15 @@ min-height: 90px
                                 <div class="col-md-8">
                                     <div class="row ">
                                         <div class="col-md-6 set-pad-in-md ">
-                                            <div class="card-green set-margin-card set-padd-new"> 
+                                            <div class="card-green set-margin-card set-padd-new">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
+                                                        <img class="img-60 mt-8px" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
                                                         <p class="mb-0 min-h-89">
                                                             All executives and employees recognize the importance of
-                                                            and are committed to service quality 
+                                                            and are committed to service quality
                                                             in combination with safety and compliance with the requirements of
                                                             related laws in order to build maximum customer satisfaction
                                                         </p>
@@ -1100,14 +1101,14 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card set-padd-new"> 
+                                            <div class=" card-out-greenxx set-margin-card set-padd-new">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
+                                                        <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
                                                         <p class="mb-0 min-h-89">
-                                                            and periodically review the efficiency and effectiveness of the quality management system 
+                                                            and periodically review the efficiency and effectiveness of the quality management system
                                                             to facilitate the process of continuous improvement
                                                         </p>
                                                     </div>
@@ -1115,10 +1116,10 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new"> 
+                                            <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
+                                                        <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
                                                         <p class="mb-0 min-h-89">
@@ -1131,32 +1132,32 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class="card-green set-margin-card mt-16 set-padd-new"> 
+                                            <div class="card-green set-margin-card mt-16 set-padd-new">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
+                                                        <img class="img-60 mt-8px" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
                                                         <p class="mb-0 min-h-89">
-                                                            and dissemination of quality policies to all employees 
-                                                            and stakeholders involved 
-                                                            to ensure that the company 
+                                                            and dissemination of quality policies to all employees
+                                                            and stakeholders involved
+                                                            to ensure that the company
                                                             is committed to maintaining quality service standards.
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
                         <div class="ps-tab" id="tabx-3">
                             <div class="row align-content-lg-stretch">
                                 <div class="col-md-12" style="margin-bottom:20px">
-                                    <div class=" card-out-green-head set-margin-card"> 
+                                    <div class=" card-out-green-head set-margin-card">
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
                                                 <p class="mb-0">
@@ -1188,20 +1189,20 @@ min-height: 90px
                                         </div>
                                     </div>
 
-                                    <div class="ps-carousel--testimonials owl-slider" 
+                                    <div class="ps-carousel--testimonials owl-slider"
                                     data-owl-auto="false"
-                                    data-owl-loop="false" 
-                                    data-owl-gap="10" 
-                                    data-owl-nav="false" 
-                                    data-owl-dots="false" 
+                                    data-owl-loop="false"
+                                    data-owl-gap="10"
+                                    data-owl-nav="false"
+                                    data-owl-dots="false"
                                     data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1" data-owl-item-md="1" data-owl-item-lg="1" data-owl-duration="1000" data-owl-mousedrag="on">
-                                    
+
                                         <div class="row">
                                             <div class="col-md-6 set-pad-in-md ">
-                                                <div class="card-green set-margin-card set-pad-20"> 
+                                                <div class="card-green set-margin-card set-pad-20">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="mt-8px img-60" src="{{ url('img/Group 3115.png') }}">
+                                                            <img class="mt-8px img-60" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green pt-25">
                                                             <p class="mb-0 min-h-90">
@@ -1214,10 +1215,10 @@ min-height: 90px
                                                 </div>
                                             </div>
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card set-pad-20"> 
+                                                <div class=" card-out-greenxx set-margin-card set-pad-20">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}">
+                                                            <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
                                                             <p class="mb-0 min-h-90">
@@ -1229,13 +1230,13 @@ min-height: 90px
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="height:60px">
-                                                            
+                                                            <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="width: 60px !important;">
+
                                                         </div>
                                                         <div class="ps-block__content_out-green ">
                                                             <p class="mb-0 min-h-90">
@@ -1249,12 +1250,12 @@ min-height: 90px
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class="card-green set-margin-card mt-16 set-pad-20"> 
+                                                <div class="card-green set-margin-card mt-16 set-pad-20">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}">
+                                                            <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green pt-25">
                                                             <p class="mb-0 min-h-90">
@@ -1270,10 +1271,10 @@ min-height: 90px
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class="card-green set-margin-card mt-16 set-pad-20"> 
+                                                <div class="card-green set-margin-card mt-16 set-pad-20">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="height:60px">
+                                                            <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green ">
                                                             <p class="mb-0 min-h-90">
@@ -1287,12 +1288,12 @@ min-height: 90px
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}">
+                                                            <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green ">
                                                             <p class="mb-0 min-h-90">
@@ -1305,15 +1306,15 @@ min-height: 90px
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class="col-md-6 set-pad-in-md">
-                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20"> 
+                                                <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                     <div class="card-green-content">
                                                         <div class="d-flex justify-content-between">
-                                                            <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}">
+                                                            <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
-                                                            <p class="mb-0 min-h-90"> 
+                                                            <p class="mb-0 min-h-90">
                                                                 The company will take into account compliance with workplace safety rules and
                                                                 the occurrence of accidents in each department
                                                                 as part of the consideration for renewing employment contracts and annual work performance evaluations.
@@ -1330,7 +1331,7 @@ min-height: 90px
                         <div class="ps-tab" id="tabx-4">
                             <div class="row align-content-lg-stretch">
                                 <div class="col-md-12" style="margin-bottom:20px">
-                                    <div class=" card-out-green-head set-margin-card set-pad-18x"> 
+                                    <div class=" card-out-green-head set-margin-card set-pad-18x">
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
                                                 <p class="mb-0"><b>
@@ -1342,7 +1343,7 @@ min-height: 90px
                                                     by giving importance to the creation of creative environments for society in the communities surrounding its factories
                                                     and particpation in communities with the following work policies:
                                                 </b></p>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -1353,10 +1354,10 @@ min-height: 90px
                                 <div class="col-md-8">
                                     <div class="row ">
                                         <div class="col-md-6 set-pad-in-md ">
-                                            <div class="card-green set-margin-card set-pad-18x"> 
+                                            <div class="card-green set-margin-card set-pad-18x">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="mt-8px" src="{{ url('img/Group 3115.png') }}">
+                                                        <img class="img-60 mt-8px" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
                                                         <p class="mb-0 min-h-67">
@@ -1369,10 +1370,10 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card set-pad-18x"> 
+                                            <div class=" card-out-greenxx set-margin-card set-pad-18x">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}">
+                                                        <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
                                                         <p class="mb-0 min-h-67">
@@ -1384,10 +1385,10 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card mt-16 set-pad-18x"> 
+                                            <div class=" card-out-greenxx set-margin-card mt-16 set-pad-18x">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}">
+                                                        <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
                                                         <p class="mb-0 min-h-67">
@@ -1400,10 +1401,10 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class="card-green set-margin-card mt-16 set-pad-18x"> 
+                                            <div class="card-green set-margin-card mt-16 set-pad-18x">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
-                                                        <img class="mt-8px" src="{{ url('img/Group 3117.png') }}">
+                                                        <img class="img-60 mt-8px" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
                                                         <p class="mb-0 min-h-67" style="min-height:89px">
@@ -1414,9 +1415,9 @@ min-height: 90px
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -1438,7 +1439,7 @@ min-height: 90px
 
     $(document).on('click','.img_ro',function (event) {
           event.preventDefault();
-          
+
           var img = $(this).data('image');
           var ENDPOINT = "{{ url('/') }}";
           $.ajax({
@@ -1456,12 +1457,12 @@ min-height: 90px
                 .fail(function (jqXHR, ajaxOptions, thrownError) {
                     console.log('Server error occured');
                 });
-                
+
           getModal
           console.log('img : ', img)
-    
+
     });
-    
+
     </script>
-    
+
 @stop('scripts')

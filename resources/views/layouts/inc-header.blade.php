@@ -64,7 +64,7 @@
                 <div class="header__actions">
                     <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}" style="border-radius: 15px; padding: 3px 8px;">
                         <div class="d-flex">
-                            <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}" style="margin-top: 8px;"> 
+                            <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}" style="margin-top: 8px;">
                             <div class="d-flex flex-column">
                                 <div class=" m-mt-10" style="font-size: 13px; line-height: 15px;">{{ get_phone() }}</div>
                                 <div class="" style="font-size: 13px; line-height: 15px;">{{ get_phone2() }}</div>
@@ -81,14 +81,14 @@
                     <a class="header__extra" target="_blank" href="{{ get_facebook() }}">
                         <img class="img-fluid" src="{{ url('img/facebook_new_icon.png') }}">
                     </a>
-                    
+
                     <div class="ps-dropdown language"><a href="#">
                         @if(session()->get('locale') == 'en')
                         <img height="50" class="img-flag" src="{{ url('img/icon/english_icon.png') }}"></a>
                         @else
                         <img height="50" class="img-flag" src="{{ url('img/icon/thai_icon.png') }}"></a>
                         @endif
-                        
+
                         <ul class="ps-dropdown-menu">
                             <li><a href="{{ url('/lang/change?lang=en') }}"><img src="{{ url('img/flag/en.png') }}" alt="" /> English</a></li>
                             <li><a href="{{ url('/lang/change?lang=th') }}"><img src="{{ url('img/flag/th.png') }}" height="12" /> ภาษาไทย</a></li>
@@ -112,7 +112,7 @@
                     <li class="menu-item"><a href="{{ url('/term ') }}">นโยบายข้อมูลส่วนบุคคล</a></li>
                 </ul>
                 <ul class="navigation__extra ">
-                    <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >ซื้อสินค้า</a></li> 
+                    <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >ซื้อสินค้า</a></li>
                     {{-- <li><a class="green_btn_kim" href="#"  data-toggle="modal" data-target="#product-quickview" >ขายสินค้า</a></li> --}}
                     <li><a class="green_btn_kim" href="{{ url('/contact') }}"  >ขายสินค้า</a></li>
                 </ul>
@@ -128,7 +128,7 @@
                     <li class="menu-item"><a href="{{ url('/term ') }}">Privacy Policy</a></li>
                 </ul>
                 <ul class="navigation__extra ">
-                    <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >Buy</a></li> 
+                    <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >Buy</a></li>
                     {{-- <li><a class="green_btn_kim" href="#"  data-toggle="modal" data-target="#product-quickview" >ขายสินค้า</a></li> --}}
                     <li><a class="green_btn_kim" href="{{ url('/contact') }}"  >Sale</a></li>
                 </ul>
@@ -138,7 +138,7 @@
     </nav>
 </header>
 <header class="header header--mobile" data-sticky="true">
-    
+
     <div class="navigation--mobile">
         <div class="navigation__left">
             <a class="ps-logo" href="{{ url('/') }}">
@@ -147,7 +147,7 @@
         </div>
         <div class="navigation__right">
             <div class="header__actions">
-                
+
                 <div class="ps-block--user-header ">
                     <a class="header__extra " target="_blank" href="{{ get_line() }}">
                         <img class="img-fluid" src="{{ url('img/line_new_icon.png') }}">
@@ -161,11 +161,11 @@
                     <div class="ps-dropdown language" style="padding-left: 5px;">
                         <a href="#">
                         @if(session()->get('locale') == 'en')
-                        <img height="50" class="img-flag" src="{{ url('img/icon/english_icon.png') }}" style="width: 38px; height: 38px;"></a>
+                        <img height="50" class="img-flag img_langx" src="{{ url('img/icon/english_icon.png') }}" ></a>
                         @else
-                        <img height="50" class="img-flag" src="{{ url('img/icon/thai_icon.png') }}" style="width: 38px; height: 38px;"></a>
+                        <img height="50" class="img-flag img_langx" src="{{ url('img/icon/thai_icon.png') }}" ></a>
                         @endif
-                        
+
                         <ul class="ps-dropdown-menu">
                             <li><a href="{{ url('/lang/change?lang=en') }}"><img src="{{ url('img/flag/en.png') }}" alt="" /> English</a></li>
                             <li><a href="{{ url('/lang/change?lang=th') }}"><img src="{{ url('img/flag/th.png') }}" height="12" /> ภาษาไทย</a></li>
@@ -175,5 +175,5 @@
             </div>
         </div>
     </div>
-    
+
 </header>
