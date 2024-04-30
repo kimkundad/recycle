@@ -22,14 +22,27 @@
                             @endif
                         </select>
                         @else
+
                         <select class="form-control" name="id">
                             <option value="0" selected="selected">Category : All</option>
                             @if(get_data_category())
                                 @foreach(get_data_category() as $u)
-                                    <option class="level-0" style="color: #009247; font-weight: 700; font-size: 14px;" disabled>{{ $u->cat_name }}</option>
+
+                                @if($u->cat_name_en == null)
+                                <option class="level-0" style="color: #009247; font-weight: 700; font-size: 14px;" disabled>{{ $u->cat_name }}</option>
+                                @else
+                                <option class="level-0" style="color: #009247; font-weight: 700; font-size: 14px;" disabled>{{ $u->cat_name_en }}</option>
+                                @endif
+
                                     @if($u->option)
                                         @foreach($u->option as $j)
-                                            <option class="level-0" value="{{ $j->id }}" style="padding-left:15px">{{ $j->sub_name }}</option>
+
+                                        @if($u->cat_name_en == null)
+                                        <option class="level-0" value="{{ $j->id }}" style="padding-left:15px">{{ $j->sub_name }}</option>
+                                        @else
+                                        <option class="level-0" value="{{ $j->id }}" style="padding-left:15px">{{ $j->sub_name_en }}</option>
+                                        @endif
+
                                         @endforeach
                                     @endif
                                 @endforeach

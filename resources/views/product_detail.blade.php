@@ -1,7 +1,17 @@
 @extends('layouts.template')
 
 @section('title')
-{{ $objs->name_pro }} - wpnrayong
+
+    @if (session()->get('locale') == 'th')
+    {{ $objs->name_pro }} - wpnrayong
+    @else
+        @if ($objs->name_pro_en == null)
+        {{ $objs->name_pro }} - wpnrayong
+        @else
+        {{ $objs->name_pro_en }} - wpnrayong
+        @endif
+    @endif
+
 @stop
 
 @section('og')
@@ -30,7 +40,17 @@
                     <a href="{{ url('category?id=0') }}">All Products</a>
                     @endif
                 </li>
-                <li>{{ $objs->name_pro }}</li>
+                <li>
+                    @if (session()->get('locale') == 'th')
+                    {{ $objs->name_pro }}
+                    @else
+                        @if ($objs->name_pro_en == null)
+                        {{ $objs->name_pro }}
+                        @else
+                        {{ $objs->name_pro_en }}
+                        @endif
+                    @endif
+                </li>
             </ul>
         </div>
     </div>
@@ -88,10 +108,20 @@
                                     <div class="item"><img src="{{ url('img/product/image 38.png') }}" alt=""></div>
                                     <div class="item"><img src="{{ url('img/product/image 39.png') }}" alt=""></div>
                                 </div> --}}
-                                
+
                             </div>
                             <div class="ps-product__info">
+
+                            @if (session()->get('locale') == 'th')
+                            <h1>{{ $objs->name_pro }}</h1>
+                            @else
+                                @if ($objs->name_pro_en == null)
                                 <h1>{{ $objs->name_pro }}</h1>
+                                @else
+                                <h1>{{ $objs->name_pro_en }}</h1>
+                                @endif
+                            @endif
+
                                 <div class="d-flex">
                                             @if($objs->discount == 0)
                                             <p class="ps-product__price text-green">฿{{ number_format($objs->amount, 2) }}</p>
@@ -107,7 +137,7 @@
                                     <span class="badge badge-light-success fs-base w-80px p-5px mt-10px ml-10px">{{ $objs->discount }}% ส่วนลด</span>
                                     @endif
                                 </div>
-                            
+
                                 <div class="ps-product__desc">
                                     <p>
                                         {{ $objs->title_pro }}
@@ -118,7 +148,17 @@
                                         @endif
                                         <p class="mt-10px"><strong>SKU:</strong> {{ $objs->sku }}</p>
                                         <p class="mt-10px"><strong>Net weight:</strong> {{ $objs->weight }}</p>
-                                        <p class="mt-10px"><strong>Condition:</strong> {{ $objs->condition }}</p>
+                                        <p class="mt-10px"><strong>Condition:</strong>
+                                            @if (session()->get('locale') == 'th')
+                                            <h1>{{ $objs->condition }}</h1>
+                                            @else
+                                                @if ($objs->condition_en == null)
+                                                <h1>{{ $objs->condition }}</h1>
+                                                @else
+                                                <h1>{{ $objs->condition_en }}</h1>
+                                                @endif
+                                            @endif
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="ps-product__variations bor-line-top">
@@ -134,14 +174,14 @@
                                     <div class="header__actions con-position-pro">
                                         <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}">
                                             <div class="d-flex">
-                                                <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}"> 
+                                                <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}">
                                                 <div class="d-flex flex-column">
                                                     <div class="fs-14px">{{ get_phone() }}</div>
                                                     <div class="fs-14px mt--5px">{{ get_phone2() }}</div>
                                                 </div>
                                             </div>
                                         </a>
-                                        
+
                                         <a class="header__extra btn_green_header" target="_blank" href="{{ get_line() }}">
                                             <img class="img-icon-green_header" src="{{ url('img/icon/line.png') }}">
                                         </a>
@@ -153,7 +193,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
 
@@ -166,15 +206,23 @@
                                 @endif
                             </div>
                         </div>
-                 
+
                             <p>
-                                {!! $objs->detail_pro !!}
+                                @if (session()->get('locale') == 'th')
+                                    {!! $objs->detail_pro !!}
+                                @else
+                                    @if ($objs->condition_en == null)
+                                    {!! $objs->detail_pro !!}
+                                    @else
+                                    {!! $objs->detail_pro_en !!}
+                                    @endif
+                                @endif
                             </p>
-                            
+
 
                     </div>
                 </div>
-                
+
             </div>
             <div class="ps-section--default ps-customer-bought">
                 <div class="ps-section__header">
@@ -182,14 +230,14 @@
                     <div class="d-flex justify-content-between">
                         <h3>สินค้าแนะนำ</h3>
                         <a href="{{ url('/category?id=0') }}" class="">
-                            ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+                            ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
                         </a>
                     </div>
                     @else
                     <div class="d-flex justify-content-between">
                         <h3>Recommended</h3>
                         <a href="{{ url('/category?id=0') }}" class="">
-                            View Moew <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}"> 
+                            View Moew <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
                         </a>
                     </div>
                     @endif
@@ -197,7 +245,7 @@
                 <div class="ps-section__content">
                     <div class="">
                         <div class="row">
-                            
+
                             @isset($pro)
                         @foreach($pro as $u)
                             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
@@ -205,7 +253,17 @@
                                     <div class="ps-product__thumbnail h-min-set" ><a href="{{ url('product_detail/'.$u->id_q) }}">
                                         <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
                                     </div>
-                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
+                                    <div class="ps-product__container">
+                                        @if(session()->get('locale') == 'th')
+                                        <a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
+                                        @else
+                                            @if($u->name_pro_en == null)
+                                                <a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
+                                            @else
+                                                <a class="ps-product__vendor" href="#">{{ $u->name_pro_en }}</a>
+                                            @endif
+
+                                        @endif
                                         <div class="ps-product__content">
                                             @if($u->discount == 0)
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
@@ -261,12 +319,12 @@
                             </div>
                         @endforeach
                     @endisset
-        
+
                         </div>
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </div>
 

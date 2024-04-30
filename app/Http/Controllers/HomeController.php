@@ -151,17 +151,29 @@ class HomeController extends Controller
           if ($request->ajax()) {
             foreach ($results as $result) {
 
-                $url = url('blog_detail/'.$result->id);
-                $img = url('media/'.$result->image);
-                $artilces.='<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$result->title.'" style="max-height: 190px; min-height: 190px;"></div><div class="ps-post__content"><a class="ps-post__title" style="min-height: 72px; max-height: 72px; overflow: hidden;"  href="'.$url.'">'.$result->title.'</a><p style="min-height: 68px; max-height: 68px; overflow: hidden;">'.$result->sub_title.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">Read more</a></div></div></div>';
+                if($result->title_en == null){
+
+                    $url = url('blog_detail/'.$result->id);
+                    $img = url('media/'.$result->image);
+                    $artilces.='<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$result->title.'" style="max-height: 190px; min-height: 190px;"></div><div class="ps-post__content"><a class="ps-post__title" style="min-height: 72px; max-height: 72px; overflow: hidden;"  href="'.$url.'">'.$result->title.'</a><p style="min-height: 68px; max-height: 68px; overflow: hidden;">'.$result->sub_title.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">อ่านต่อ</a></div></div></div>';
+
+
+                }else{
+
+                    $url = url('blog_detail/'.$result->id);
+                    $img = url('media/'.$result->image);
+                    $artilces.='<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$result->title_en.'" style="max-height: 190px; min-height: 190px;"></div><div class="ps-post__content"><a class="ps-post__title" style="min-height: 72px; max-height: 72px; overflow: hidden;"  href="'.$url.'">'.$result->title_en.'</a><p style="min-height: 68px; max-height: 68px; overflow: hidden;">'.$result->sub_title_en.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">Read more</a></div></div></div>';
+
+                }
+
             }
             return $artilces;
         }
 
         }
-        
+
         return view('blog');
-    }  
+    }
 
     public function getModal(Request $request){
 
@@ -180,14 +192,14 @@ class HomeController extends Controller
 
     public function getRecomment(Request $request)
     {
-     
+
       $results = DB::table('products')->select(
         'products.*',
         'products.id as id_q',
         'unit_products.*'
         )
         ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->orderBy('products.id', 'desc')->where('products.status', 1)->where('products.type_pro', 2)->paginate(12);
-       
+
         $artilces = '';
         if ($request->ajax()) {
             foreach ($results as $u) {
@@ -204,7 +216,7 @@ class HomeController extends Controller
                     }else{
                       $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
                     }
-                    
+
                   }else{
 
                     if($u->unit_id !== 3 && $u->unit_id !== null){
@@ -214,7 +226,7 @@ class HomeController extends Controller
                     }
 
                   }
-                  
+
                 }else{
 
 
@@ -224,7 +236,7 @@ class HomeController extends Controller
                     }else{
                       $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
                     }
-                    
+
                   }else{
 
                   if($u->unit_id !== 3 && $u->unit_id !== null){
@@ -234,7 +246,7 @@ class HomeController extends Controller
                   }
 
                 }
-                  
+
                 }
 
                 if($u->image_pro == 0){
@@ -243,12 +255,27 @@ class HomeController extends Controller
 
                 }
 
-                $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+                if(session()->get('locale') == 'th'){
+
+                    $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+
+                }else{
+
+                    if($u->name_pro_en == null){
+
+                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+
+                    }else{
+
+                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro_en.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro_en.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">View</a></div></div></div></div>';
+
+                    }
+                }
             }
             return $artilces;
         }
         return view('blog');
-    }  
+    }
 
 
     public function getCategory(Request $request)
@@ -259,7 +286,7 @@ class HomeController extends Controller
     //  $data_b = explode(",",$brand); $count = product::where('name_pro', 'like', "%$search%")->count();
 
       $data_b = ($brand != '')?explode(",",$brand):0;
-      
+
 
       if($cat == 0){
 
@@ -280,7 +307,7 @@ class HomeController extends Controller
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.mysort', '!=', 0)->orderBy('products.mysort', 'asc')->where('products.name_pro', 'like', "%$search%")->where('products.status', 1)->paginate(12);
           }
-          
+
 
         }else{
 
@@ -299,9 +326,9 @@ class HomeController extends Controller
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.mysort', '!=', 0)->whereIn('products.brand', $data_b)->where('products.name_pro', 'like', "%$search%")->where('products.status', 1)->orderBy('products.mysort', 'asc')->paginate(12);
           }
-          
+
         }
-        
+
       }else{
 
         if($data_b == 0){
@@ -323,7 +350,7 @@ class HomeController extends Controller
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.mysort', '!=', 0)->where('products.sub_cat_id', $cat)->where('products.name_pro', 'like', "%$search%")->where('products.status', 1)->orderBy('products.mysort', 'asc')->paginate(12);
           }
-          
+
         }else{
 
           if($search == ''){
@@ -341,11 +368,11 @@ class HomeController extends Controller
               )
               ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.mysort', '!=', 0)->where('products.sub_cat_id', $cat)->where('products.name_pro', 'like', "%$search%")->whereIn('products.brand', $data_b)->where('products.status', 1)->orderBy('products.mysort', 'asc')->paginate(12);
           }
-          
+
         }
-        
+
       }
-       
+
         $artilces = '';
         if ($request->ajax()) {
             foreach ($results as $u) {
@@ -371,7 +398,7 @@ class HomeController extends Controller
                     }
 
                   }
-                  
+
                 }else{
 
 
@@ -390,7 +417,7 @@ class HomeController extends Controller
                   }
 
                 }
-                  
+
                 }
 
                 if($u->image_pro == 0){
@@ -399,18 +426,35 @@ class HomeController extends Controller
 
                 }
 
-                $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+                if(session()->get('locale') == 'th'){
+
+                    $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+
+                }else{
+
+                    if($u->name_pro_en == null){
+
+                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+
+                    }else{
+
+                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro_en.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro_en.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">View</a></div></div></div></div>';
+
+                    }
+                }
+
+
             }
             return $artilces;
         }
         return view('blog');
-    }  
+    }
 
 
 
-        
 
-    
+
+
 
 
     public function blog_detail($id){
@@ -424,7 +468,7 @@ class HomeController extends Controller
 
       return view('blog_detail', $data);
     }
-    
+
     public function category(Request $request){
       $search = $request['search'];
 
@@ -435,20 +479,20 @@ class HomeController extends Controller
         }else{
           $count = product::where('name_pro', 'like', "%$search%")->count();
         }
-        
+
       }else{
 
         if($search == ''){
 
           $count = product::where('cat_id', $request['id'])->count();
-          
+
         }else{
 
           $count = product::where('cat_id', $request['id'])->where('name_pro', 'like', "%$search%")->count();
 
         }
       }
-      
+
       $data['count'] = $count;
       $data['category_id'] = $request['id'];
       $data['search'] = $search;
@@ -457,9 +501,9 @@ class HomeController extends Controller
     }
 
     public function recomment(Request $request){
-      
+
       $count = product::where('type_pro', 2)->where('status', 1)->count();
-      
+
       $data['count'] = $count;
       return view('recomment', $data);
 
@@ -514,14 +558,14 @@ class HomeController extends Controller
         $data['brand'] = null;
         }
 
-     
+
 
       $data['objs'] = $objs;
       return view('product_detail', $data);
 
     }
 
-    
+
 
 
     public function contact(){
@@ -529,13 +573,13 @@ class HomeController extends Controller
       $objs = type_contact::where('status', 1)->get();
       $data['type_contact'] = $objs;
       return view('contact', $data);
-      
+
     }
 
     public function add_contact(Request $request){
-        
 
-      
+
+
         $secret=env('reCAPTCHA');
     //  $response = $request['captcha'];
 
@@ -598,7 +642,7 @@ class HomeController extends Controller
         }
         curl_close($chOne);
 
-    
+
 
         $mailData = [
           'name' => $request['name'],
@@ -612,9 +656,9 @@ class HomeController extends Controller
       //     'mydata' => $mailData
       // ]);
 
-    
+
         Mail::to('sales@wpnrayong.com')->send(new Contacted($mailData));
-  
+
 
         return response()->json([
             'data' => [

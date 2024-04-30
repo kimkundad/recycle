@@ -1,7 +1,18 @@
 @extends('layouts.template')
 
 @section('title')
-{{ $objs->title }} - wpnrayong
+
+            @if(session()->get('locale') == 'th')
+            {{ $objs->title }} - wpnrayong
+            @else
+                @if ($objs->title_en == null)
+                {{ $objs->title }} - wpnrayong
+                @else
+                {{ $objs->title_en }} - wpnrayong
+                @endif
+            @endif
+
+
 @stop
 
 @section('og')
@@ -45,7 +56,11 @@
                 <a href="{{ url('/blog') }}">News</a>
                 @endif
             </li>
+            @if(session()->get('locale') == 'th')
             <li>{{ $objs->title }}</li>
+            @else
+            <li>{{ $objs->title_en }}</li>
+            @endif
         </ul>
     </div>
 </div>
@@ -55,16 +70,37 @@
     <div class="container">
         <div class="ps-blog__content bor_shadow">
             <img src="{{ url('media/'.$objs->image) }}" class="img-fluid" style="width:100%">
+
+            @if(session()->get('locale') == 'th')
             <div class="blog_detail_in">
                 <h4 class="mt-20">{{ $objs->title }}</h4>
                 <p class="blog_date">{{ formatDateThat($objs->startdate) }} BY WPN </p>
-                
                 <p>
                     {!! $objs->detail !!}
                 </p>
-                
             </div>
-            
+            @else
+
+                @if($objs->title_en == null)
+                <div class="blog_detail_in">
+                    <h4 class="mt-20">{{ $objs->title }}</h4>
+                    <p class="blog_date">{{ formatDateThat($objs->startdate) }} BY WPN </p>
+                    <p>
+                        {!! $objs->detail !!}
+                    </p>
+                </div>
+                @else
+                <div class="blog_detail_in">
+                    <h4 class="mt-20">{{ $objs->title_en }}</h4>
+                    <p class="blog_date">{{ formatDateThat($objs->startdate) }} BY WPN </p>
+                    <p>
+                        {!! $objs->detail_en !!}
+                    </p>
+                </div>
+                @endif
+
+            @endif
+
         </div>
     </div>
 </div>

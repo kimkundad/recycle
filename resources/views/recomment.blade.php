@@ -93,7 +93,17 @@ Recommended - wpnrayong
                             @if (get_data_category())
                                 @foreach (get_data_category() as $u)
                                     <li class="current-menu-item menu-item-has-children">
-                                        <a href="#">{{ $u->cat_name }}</a>
+
+                                    @if (session()->get('locale') == 'th')
+                                            <a href="#">{{ $u->cat_name }}</a>
+                                        @else
+                                            @if($u->cat_name_en == null)
+                                                <a href="#">{{ $u->cat_name }}</a>
+                                            @else
+                                                <a href="#">{{ $u->cat_name_en }}</a>
+                                            @endif
+                                        @endif
+
                                         <span class="sub-toggle">
                                             <i class="fa fa-angle-down"></i>
                                         </span>
@@ -101,7 +111,15 @@ Recommended - wpnrayong
                                             @if ($u->option)
                                                 @foreach ($u->option as $j)
                                                     <li class="current-menu-item ">
+                                                    @if (session()->get('locale') == 'th')
                                                         <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
+                                                    @else
+                                                        @if($j->sub_name_en == null)
+                                                        <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
+                                                        @else
+                                                            <a class="ps-product__vendor" href="#">{{ $j->sub_name_en }}</a>
+                                                        @endif
+                                                    @endif
                                                     </li>
                                                 @endforeach
                                             @endif

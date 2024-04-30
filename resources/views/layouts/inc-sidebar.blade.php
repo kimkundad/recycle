@@ -197,7 +197,17 @@
             @if (get_data_category())
                 @foreach (get_data_category() as $u)
                     <li class="current-menu-item menu-item-has-children">
-                        <a href="#" class="active">{{ $u->cat_name }}</a>
+
+                                        @if (session()->get('locale') == 'th')
+                                            <a href="#">{{ $u->cat_name }}</a>
+                                        @else
+                                            @if($u->cat_name_en == null)
+                                                <a href="#">{{ $u->cat_name }}</a>
+                                            @else
+                                                <a href="#">{{ $u->cat_name_en }}</a>
+                                            @endif
+                                        @endif
+
                         <span class="sub-toggle">
 
                         </span>
@@ -208,7 +218,13 @@
                                         @if(session()->get('locale') == 'th')
                                         <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
                                         @else
-                                        <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name_en }}</a>
+
+                                            @if($j->sub_name_en == null)
+                                            <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
+                                            @else
+                                            <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name_en }}</a>
+                                            @endif
+
                                         @endif
                                     </li>
                                 @endforeach

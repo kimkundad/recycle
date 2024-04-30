@@ -47,13 +47,36 @@ News - wpnrayong
                     <img src="{{ url('media/'.$objs[0]->image) }}" alt="{{ $objs[0]->title }}">
                 </div>
                 <div class="ps-post__content">
-                    <div class="ps-post__top">
-                        <div class="ps-post__meta">
-                        </div><a class="ps-post__title" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ $objs[0]->title }}</a>
-                        <div class="ps-post__desc">
-                            <p>{{ $objs[0]->sub_title }}…</p>
+
+                    @if(session()->get('locale') == 'th')
+                        <div class="ps-post__top">
+                            <div class="ps-post__meta">
+                            </div><a class="ps-post__title" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ $objs[0]->title }}</a>
+                            <div class="ps-post__desc">
+                                <p style="overflow: hidden; max-height: 270px;">{{ $objs[0]->sub_title }}…</p>
+                            </div>
                         </div>
-                    </div>
+                    @else
+                        @if($objs[0]->title_en == null)
+                        <div class="ps-post__top">
+                            <div class="ps-post__meta">
+                            </div><a class="ps-post__title" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ $objs[0]->title }}</a>
+                            <div class="ps-post__desc">
+                                <p style="overflow: hidden; max-height: 270px;">{{ $objs[0]->sub_title }}…</p>
+                            </div>
+                        </div>
+                        @else
+                        <div class="ps-post__top">
+                            <div class="ps-post__meta">
+                            </div><a class="ps-post__title" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ $objs[0]->title_en }}</a>
+                            <div class="ps-post__desc">
+                                <p style="overflow: hidden; max-height: 270px;">{{ $objs[0]->sub_title_en }}…</p>
+                            </div>
+                        </div>
+                        @endif
+
+                    @endif
+
                     <p>{{ formatDateThat($objs[0]->startdate) }} BY WPN </a></p>
                     @if(session()->get('locale') == 'th')
                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$objs[0]->id) }}">อ่านต่อ</a>
@@ -76,8 +99,8 @@ News - wpnrayong
                     @else
                     <a class="green_btn_kim_out btn_card_in btn-box" href="#">Read more</a>
                     @endif
-                
-            </div> 
+
+            </div>
             <br><br>
             @endif
 
