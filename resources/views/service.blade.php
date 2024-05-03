@@ -381,125 +381,125 @@ Product and Sevice - wpnrayong
 
             <div class="row">
 
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div class=" card-out-green">
-                        <div class="card-green-content">
-                            <div class="d-flex justify-content-between">
-                                <img class="bg_green_icon" src="{{ url('img/service/03-ให้คำปรึกษา.png') }}" height="60" width="60">
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
-                            </div>
-                            <div class="ps-block__content_out-green pt-20">
-                                <h3>Consultancy about Comprehensive Recycling</h3>
-                                <p class="mb-0 min-h-145 fs-12px">
-                                    Consultancy services about comprehensive recycling
-                                    with experience and expertise in recycling scrap materials,
-                                    including both non-hazardous and hazardous materials from industrial factories,
-                                    metals and all types of scrap materials.
-                                    Consultancy about environmental quality management
-                                    Providing training in waste separation and management
-                                    with efficient recycling processes.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div class=" card-out-green ">
-                        <div class="card-green-content">
-                            <div class="d-flex justify-content-between">
-                                <img class="bg_green_icon" src="{{ url('img/service/04-บริการทำลายเอกสาร.png') }}" height="60" width="60">
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
-                            </div>
-                            <div class="ps-block__content_out-green pt-20">
-                                <h3>Dismantling, Removal, Transporting and Demolition of Scrap Materials</h3>
-                                <p class="mb-0 min-h-125 fs-13px">Dismantling, removal, and transport services for factories, warehouses, machinery,
-                                    and disused equipment by an efficient professional team with experience and expertise using labor-saving machinery for transporting goods,
-                                    trucks, and safe cargo transport system management.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div class=" card-out-green ">
-                        <div class="card-green-content">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex">
-                                    <img class="bg_green_icon ml-5px" src="{{ url('img/service/02-รับประมูลงานเหล็ก_2.png') }}" height="60" width="60">
-                                </div>
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
-                            </div>
-                            <div class="ps-block__content_out-green pt-20">
-                                <h3>Purchase, Custody, and Sale of All Types of Scrap Materials and Equipment.</h3>
-                                <p class="mb-0 min-h-125 fs-13px">
-                                    Purchase, Custody, and Sale of all types of scrap materials and disused equipment,
-                                    including both hazardous and non-hazardous materials from industrial factories, such as metals, stainless steel, copper,
-                                    brass, aluminum, batteries, used oil, all types of plastic, motors, machinery, parts, etc.
-                                    </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div class=" card-out-green">
-                        <div class="card-green-content">
-                            <div class="d-flex justify-content-between">
-
-                                <img class="bg_green_icon" src="{{ url('img/service/01-รับซื้อวัสดุรีไซเคิล.png') }}" height="60" width="60">
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
-                            </div>
-                            <div class="ps-block__content_out-green pt-20">
-                                <h3>Recyclable Product Collection Services</h3>
-                                <p class="mb-0 min-h-145 fs-13px">
-                                    The right recyclable product collection services
-                                    Sufficient space and system for handling goods
-                                    with consideration given to saving the environment and ensuring safety.<br> </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div class=" card-out-green">
-                        <div class="card-green-content">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex">
-                                    <img class="bg_green_icon" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม.png') }}" height="60" width="60">
-                                </div>
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
-                            </div>
-                            <div class="ps-block__content_out-green pt-20">
-                                <h3>Waste and Bagasse Transport Services for Treatment/Disposal at the Destination </h3>
-                                <p class="mb-0 min-h-125 fs-13px">
-                                    Waste and bagasse transport service provision for treatment and disposal at the destination that is safe and meets standards.
-                                    Plans for handling transport in emergency situations
-                                    and permission to transport both toxic and non-toxic waste,
-                                    including urgent service provision when factories require such services.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div class=" card-out-green">
-                        <div class="card-green-content">
-                            <div class="d-flex justify-content-between">
-                                <img class="bg_green_icon" src="{{ url('img/service/shredder-industrial-icon.png') }}" height="60" width="60">
-                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
-                            </div>
-                            <div class="ps-block__content_out-green pt-20">
-                                <h3>Grinding, Sorting, Screening and Packaging Services for All Types of Plastic Objects</h3>
-                                <p class="mb-0 min-h-125 fs-13px">
-                                    Plastic service provision, particularly plastic sorting,
-                                    grinding and screening for sorting by plastic type. Sending crushed plastic to the COMPOUND process
-                                    and returning it to the factory to help reduce production costs and help support the environment.
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+    <div class=" card-out-green">
+        <div class="card-green-content">
+            <div class="d-flex justify-content-between">
+                <img class="bg_green_icon" src="{{ url('img/service/03-ให้คำปรึกษา.png') }}" height="60" width="60">
+                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+            </div>
+            <div class="ps-block__content_out-green pt-20">
+                <h3>Consultancy about Comprehensive Recycling</h3>
+                <p class="mb-0 min-h-145 fs-12px hi-153">
+                    Consultancy services about comprehensive recycling
+                    with experience and expertise in recycling scrap materials,
+                    including both non-hazardous and hazardous materials from industrial factories,
+                    metals and all types of scrap materials.
+                    Consultancy about environmental quality management
+                    Providing training in waste separation and management
+                    with efficient recycling processes.
+                </p>
+            </div>
         </div>
+    </div>
+</div>
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+    <div class=" card-out-green ">
+        <div class="card-green-content">
+            <div class="d-flex justify-content-between">
+                <img class="bg_green_icon" src="{{ url('img/service/04-บริการทำลายเอกสาร.png') }}" height="60" width="60">
+                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+            </div>
+            <div class="ps-block__content_out-green pt-20">
+                <h3>Dismantling, Removal, Transporting and Demolition of Scrap Materials</h3>
+                <p class="mb-0 min-h-125 fs-13px hi-153">Dismantling, removal, and transport services for factories, warehouses, machinery,
+                    and disused equipment by an efficient professional team with experience and expertise using labor-saving machinery for transporting goods,
+                    trucks, and safe cargo transport system management.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+    <div class=" card-out-green ">
+        <div class="card-green-content">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img class="bg_green_icon ml-5px" src="{{ url('img/service/02-รับประมูลงานเหล็ก_2.png') }}" height="60" width="60">
+                </div>
+                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+            </div>
+            <div class="ps-block__content_out-green pt-20">
+                <h3 style="font-size: 16px;">Purchase, Custody, and Sale of All Types of Scrap Materials and Equipment.</h3>
+                <p class="mb-0 min-h-125 fs-13px hi-153">
+                    Purchase, Custody, and Sale of all types of scrap materials and disused equipment,
+                    including both hazardous and non-hazardous materials from industrial factories, such as metals, stainless steel, copper,
+                    brass, aluminum, batteries, used oil, all types of plastic, motors, machinery, parts, etc.
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+    <div class=" card-out-green">
+        <div class="card-green-content">
+            <div class="d-flex justify-content-between">
+
+                <img class="bg_green_icon" src="{{ url('img/service/01-รับซื้อวัสดุรีไซเคิล.png') }}" height="60" width="60">
+                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+            </div>
+            <div class="ps-block__content_out-green pt-20">
+                <h3>Recyclable Product Collection Services</h3>
+                <p class="mb-0 min-h-145 fs-13p hi-153x">
+                    The right recyclable product collection services
+                    Sufficient space and system for handling goods
+                    with consideration given to saving the environment and ensuring safety.<br> </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+    <div class=" card-out-green">
+        <div class="card-green-content">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img class="bg_green_icon" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม.png') }}" height="60" width="60">
+                </div>
+                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+            </div>
+            <div class="ps-block__content_out-green pt-20">
+                <h3 style="font-size: 16px;">Waste and Bagasse Transport Services for Treatment/Disposal at the Destination </h3>
+                <p class="mb-0 min-h-125 fs-13px hi-153">
+                    Waste and bagasse transport service provision for treatment and disposal at the destination that is safe and meets standards.
+                    Plans for handling transport in emergency situations
+                    and permission to transport both toxic and non-toxic waste,
+                    including urgent service provision when factories require such services.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+    <div class=" card-out-green">
+        <div class="card-green-content">
+            <div class="d-flex justify-content-between">
+                <img class="bg_green_icon" src="{{ url('img/service/shredder-industrial-icon.png') }}" height="60" width="60">
+                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+            </div>
+            <div class="ps-block__content_out-green pt-20">
+                <h3 style="font-size: 16px;">Grinding, Sorting, Screening and Packaging Services for All Types of Plastic Objects</h3>
+                <p class="mb-0 min-h-125 fs-13px hi-153">
+                    Plastic service provision, particularly plastic sorting,
+                    grinding and screening for sorting by plastic type. Sending crushed plastic to the COMPOUND process
+                    and returning it to the factory to help reduce production costs and help support the environment.
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
 
             @endif
 

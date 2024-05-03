@@ -13,13 +13,13 @@
                             <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 </p>
                             @else
                             <h5 class="pt-20">Wongpanit Recycle Rayong Co., LTD.</h5>
-                            <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district Rayong 21180 </p>
+                            <p>1/1 Moo 4 Nikhompattana subdistrict, <br> Nikhompattana district Rayong 21180 </p>
                             @endif
 
                             <div class="pt-20 d-flex justify-content-center">
                                 <a class="ps-btn set-btn-inner ps-btn--outline" href="tel:{{ get_phone2() }}" style="border-radius: 15px; padding: 3px 8px;">
                                     <div class="d-flex">
-                                        <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}" style="margin-top: 8px;"> 
+                                        <img class="img-phone" src="{{ url('img/icon/phone-call.png') }}" style="margin-top: 8px;">
                                         <div class="d-flex flex-column">
                                             <div class=" m-mt-10" style="font-size: 13px; line-height: 15px;">{{ get_phone() }}</div>
                                             <div class="" style="font-size: 13px; line-height: 15px;">{{ get_phone2() }}</div>
@@ -36,7 +36,7 @@
                                 <a class="header__extra foot-social" target="_blank" href="{{ get_facebook() }}">
                                     <img class="img-fluid" src="{{ url('img/facebook_new_icon.png') }}">
                                 </a>
-                
+
                             </div>
                         </div>
                     </aside>
@@ -119,13 +119,13 @@
                     </aside>
                 </div>
             </div>
-                
-         
-            
-            
-            
+
+
+
+
+
         </div>
-        
+
     </div>
 </footer>
 

@@ -58,6 +58,10 @@ padding-left: 10px !important;
 .min-h-90{
 min-height: 90px
 }
+.h-100-lh-20{
+    height:100px;
+    line-height:20px
+}
 </style>
 @section('content')
 
@@ -216,7 +220,7 @@ min-height: 90px
                                                 <br>
                                                 <h4>About us</h4>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">Recycling Business Leaders with Experience and Expertise in Recycling Scrap Materials </p>
-                                                <p style="text-indent: 1.5em;margin-bottom: 0px; ">
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px; text-align: justify">
                                                     including both hazardous and non-hazardous materials from industrial factories and all types of metals,
                                                     such as metals, stainless steel, copper, brass, aluminum, battery, used oil,
                                                     all types of plastic, motors, machinery, parts, etc.
@@ -237,7 +241,7 @@ min-height: 90px
                                                 <br>
                                                 <h4>Wongpanit Recycle's Vision </h4>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">Wongpanit Recycle Rayong is committed to becoming a national leader in the recycling business </p>
-                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">  with strategy and expertise meeting international standards,
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px; text-align: justify">  with strategy and expertise meeting international standards,
                                                     professional personnel generating economic systems for sustainable growth,
                                                     and primary consideration given to environmental conditions and safety.
                                                 </p>
@@ -972,7 +976,7 @@ min-height: 90px
                                     <div class=" card-out-green-head set-margin-card">
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
-                                                <p class="mb-0"><b>
+                                                <p class="mb-0" style="line-height: 20px;"><b>
                                                     Wongpanit Recycle Rayong Co., Ltd.
                                                     is engaged in the business of providing disposal services for uncontaminated scrap materials
                                                     through recycling to build confidence among communities, societies
@@ -989,13 +993,13 @@ min-height: 90px
                                 <div class="col-md-8">
                                     <div class="row ">
                                         <div class="col-md-6 set-pad-in-md ">
-                                            <div class="card-green set-margin-card set-padd-new">
+                                            <div class="card-green set-margin-card set-padd-new" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 mt-8px" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
-                                                        <p class="mb-0 min-h-89">
+                                                        <p class="mb-0 min-h-89 h-100-lh-20">
                                                             Commitment to operate systematically for strict compliance with the related specfications of the laws governing
                                                             the environment, regulations and rules.</p>
                                                     </div>
@@ -1003,13 +1007,13 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card set-padd-new">
+                                            <div class=" card-out-greenxx set-margin-card set-padd-new" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
-                                                        <p class="mb-0 min-h-89">
+                                                        <p class="mb-0 min-h-89 h-100-lh-20">
                                                             We will build customer satisfaction
                                                             and develop methods for leveraging scrap materials
                                                             by reusing them
@@ -1019,13 +1023,13 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new">
+                                            <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
-                                                        <p class="mb-0 min-h-89">
+                                                        <p class="mb-0 min-h-89 h-100-lh-20">
                                                             with measures for preventing and controlling contaminated water
                                                             from flowing into public drainage pipes,
                                                             environmental management with efficient use
@@ -1036,13 +1040,13 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class="card-green set-margin-card mt-16 set-padd-new">
+                                            <div class="card-green set-margin-card mt-16 set-padd-new" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 mt-8px" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
-                                                        <p class="mb-0 min-h-89">
+                                                        <p class="mb-0 min-h-89 h-100-lh-20">
                                                             commitment to promoting and building consciousness among employees at all levels,
                                                             practice in line with various environmental,
                                                             health and safety measures
@@ -1064,7 +1068,7 @@ min-height: 90px
                                     <div class=" card-out-green-head set-margin-card">
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
-                                                <p class="mb-0"><b>
+                                                <p class="mb-0" style="line-height: 20px;"><b>
                                                     Wongpanit Recycle Rayong Co., Ltd.
                                                     is engaged in the business of providing disposal services for uncontaminated scrap materials
                                                     by the method of recycling to build confidence in communities, society
@@ -1084,13 +1088,13 @@ min-height: 90px
                                 <div class="col-md-8">
                                     <div class="row ">
                                         <div class="col-md-6 set-pad-in-md ">
-                                            <div class="card-green set-margin-card set-padd-new">
+                                            <div class="card-green set-margin-card set-padd-new" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 mt-8px" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
-                                                        <p class="mb-0 min-h-89">
+                                                        <p class="mb-0 min-h-89 h-100-lh-20">
                                                             All executives and employees recognize the importance of
                                                             and are committed to service quality
                                                             in combination with safety and compliance with the requirements of
@@ -1101,13 +1105,13 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card set-padd-new">
+                                            <div class=" card-out-greenxx set-margin-card set-padd-new" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
-                                                        <p class="mb-0 min-h-89">
+                                                        <p class="mb-0 min-h-89 h-100-lh-20">
                                                             and periodically review the efficiency and effectiveness of the quality management system
                                                             to facilitate the process of continuous improvement
                                                         </p>
@@ -1116,13 +1120,13 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new">
+                                            <div class=" card-out-greenxx set-margin-card mt-16 set-padd-new" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
-                                                        <p class="mb-0 min-h-89">
+                                                        <p class="mb-0 min-h-89 h-100-lh-20">
                                                         and seek to promote the creation of good consciousness,
                                                         particpation in various activities,
                                                         support of environmental work and work for the public interest,
@@ -1132,13 +1136,13 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class="card-green set-margin-card mt-16 set-padd-new">
+                                            <div class="card-green set-margin-card mt-16 set-padd-new" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 mt-8px" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
-                                                        <p class="mb-0 min-h-89">
+                                                        <p class="mb-0 min-h-89 h-100-lh-20">
                                                             and dissemination of quality policies to all employees
                                                             and stakeholders involved
                                                             to ensure that the company
@@ -1160,7 +1164,7 @@ min-height: 90px
                                     <div class=" card-out-green-head set-margin-card">
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
-                                                <p class="mb-0">
+                                                <p class="mb-0" style="line-height: 20px;">
                                                     <b>
                                                     HSE Policy
                                                     (occupational health, safety and environmental policy)
@@ -1205,7 +1209,7 @@ min-height: 90px
                                                             <img class="mt-8px img-60" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green pt-25">
-                                                            <p class="mb-0 min-h-90">
+                                                            <p class="mb-0 min-h-90 h-100-lh-20" >
                                                                 The company is committed to reducing accidents and preventing both employees and third parties
                                                                 who enter the company from having accidents or contracting diseases from any work.
                                                                 We are also committed to acting in compliance with the specifications of the law.
@@ -1221,7 +1225,7 @@ min-height: 90px
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
-                                                            <p class="mb-0 min-h-90">
+                                                            <p class="mb-0 min-h-90 h-100-lh-20">
                                                                 The company is committed to preventing and suppressing, including providing knowledge about the hazards
                                                                 and dangers of narcotics so that Wongpanit employees
                                                                 stay free of drugs and the company is a white company.
@@ -1238,8 +1242,8 @@ min-height: 90px
                                                             <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="width: 60px !important;">
 
                                                         </div>
-                                                        <div class="ps-block__content_out-green ">
-                                                            <p class="mb-0 min-h-90">
+                                                        <div class="ps-block__content_out-green pt-25">
+                                                            <p class="mb-0 min-h-90 h-100-lh-20">
                                                             The company will promote any activities that
                                                             create safety and good health for employees,
                                                             including development and improvement of the working environment
@@ -1258,7 +1262,7 @@ min-height: 90px
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green pt-25">
-                                                            <p class="mb-0 min-h-90">
+                                                            <p class="mb-0 min-h-90 h-100-lh-20">
                                                                 All employees and outsiders who enter the Company
                                                                 are required to cooperate with every safety activity
                                                                 and maintain the cleanliness and orderliness
@@ -1277,7 +1281,7 @@ min-height: 90px
                                                             <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green ">
-                                                            <p class="mb-0 min-h-90">
+                                                            <p class="mb-0 min-h-90 h-100-lh-20">
                                                                 All employees and outsiders who enter
                                                                 the company are obligated to follow safety rules and regulations
                                                                 while working for the Company with strictness and caution to prevent the occurrence of
@@ -1296,7 +1300,7 @@ min-height: 90px
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green ">
-                                                            <p class="mb-0 min-h-90">
+                                                            <p class="mb-0 min-h-90 h-100-lh-20">
                                                                 Superiors at all levels are obligated to take responsibility concerning
                                                                 the safety of the subordinates in all fields of work in a serious
                                                                 and ongoing manner, including providing training and serving as an example
@@ -1314,7 +1318,7 @@ min-height: 90px
                                                             <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
-                                                            <p class="mb-0 min-h-90">
+                                                            <p class="mb-0 min-h-90 h-100-lh-20">
                                                                 The company will take into account compliance with workplace safety rules and
                                                                 the occurrence of accidents in each department
                                                                 as part of the consideration for renewing employment contracts and annual work performance evaluations.
@@ -1334,7 +1338,7 @@ min-height: 90px
                                     <div class=" card-out-green-head set-margin-card set-pad-18x">
                                         <div class="card-green-content">
                                             <div class="ps-block__content_out-green text-center">
-                                                <p class="mb-0"><b>
+                                                <p class="mb-0" style="line-height: 20px;"><b>
                                                     Wongpanit Recycle Rayong Co., Ltd.
                                                     is engaged in the business of bidding for used items,
                                                     providing the service of scrap material management,
@@ -1354,13 +1358,13 @@ min-height: 90px
                                 <div class="col-md-8">
                                     <div class="row ">
                                         <div class="col-md-6 set-pad-in-md ">
-                                            <div class="card-green set-margin-card set-pad-18x">
+                                            <div class="card-green set-margin-card set-pad-18x" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 mt-8px" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
-                                                        <p class="mb-0 min-h-67">
+                                                        <p class="mb-0 min-h-67 h-100-lh-20">
                                                             Be committed to the development of businesses with sustainable growth
                                                             in combination with care and attention to the environments and safety of communities
                                                             and help the society with determination.
@@ -1370,13 +1374,13 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card set-pad-18x">
+                                            <div class=" card-out-greenxx set-margin-card set-pad-18x" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
-                                                        <p class="mb-0 min-h-67">
+                                                        <p class="mb-0 min-h-67 h-100-lh-20">
                                                             Help and improve the society by using its strong experience and
                                                             management of used materials for corporate social responsibility.
                                                         </p>
@@ -1385,13 +1389,13 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class=" card-out-greenxx set-margin-card mt-16 set-pad-18x">
+                                            <div class=" card-out-greenxx set-margin-card mt-16 set-pad-18x" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/Group 3118.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
-                                                        <p class="mb-0 min-h-67">
+                                                        <p class="mb-0 min-h-67 h-100-lh-20">
                                                             Organize corporate social responsibility activities for the benefit of the society, including
                                                             nearby factories:  communities surrounding the factory and those located far away from it
                                                             as well as remote communities where public utilities are inaccessible (Society).
@@ -1401,13 +1405,13 @@ min-height: 90px
                                             </div>
                                         </div>
                                         <div class="col-md-6 set-pad-in-md">
-                                            <div class="card-green set-margin-card mt-16 set-pad-18x">
+                                            <div class="card-green set-margin-card mt-16 set-pad-18x" style="margin-top: 5px;">
                                                 <div class="card-green-content">
                                                     <div class="d-flex justify-content-between">
                                                         <img class="img-60 mt-8px" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
-                                                        <p class="mb-0 min-h-67" style="min-height:89px">
+                                                        <p class="mb-0 min-h-67 h-100-lh-20" style="min-height:89px">
                                                             Be committed to resource utilization for maximum benefit rather than wasteful use
                                                             by relying on the principles of Sufficiency Economy in which maximum benefit is gained from the use of local resources.
                                                         </p>

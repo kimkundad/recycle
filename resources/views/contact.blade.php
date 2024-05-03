@@ -37,7 +37,7 @@ Contact us - wpnrayong
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 
@@ -57,7 +57,7 @@ Contact us - wpnrayong
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                         <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0945692969">0945692969</a><br>
+                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
                         อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @else
@@ -65,12 +65,12 @@ Contact us - wpnrayong
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
                         <h4 style="margin-bottom: 4px;">Head office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district Rayong 21180</p>
+                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana District, Rayong 21180</p>
                         <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
                         <p>428 Moo. 2, Phawong Subdistrict, Mueang Songkhla District, Songkhla Province 90100</p>
                         <h4 class="mt-10">Contact</h4>
-                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0945692969">0945692969</a><br>
+                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
                         Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @endif
@@ -118,12 +118,12 @@ Contact us - wpnrayong
                                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
                                         @endisset
-                                       
+
                                     </select>
                                     <label for="name" class="form__label">หัวข้อที่ต้องการติดต่อ</label>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                 <div class="form__group field">
                                     <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage" id='massage'></textarea>
@@ -167,12 +167,12 @@ Contact us - wpnrayong
                                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
                                         @endisset
-                                       
+
                                     </select>
                                     <label for="name" class="form__label">Topic you want to contact</label>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                 <div class="form__group field">
                                     <textarea class="form__field" placeholder="Required message" style="height:80px" maxlength="500" name="massage" id='massage'></textarea>
@@ -192,14 +192,14 @@ Contact us - wpnrayong
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 
 <div class="desktop-h">
     <div class="p-15">
         <div class="">
-            
+
                     @if(session()->get('locale') == 'th')
                     <div class="box-green-800">
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
@@ -210,7 +210,7 @@ Contact us - wpnrayong
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100</p>
                         <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0945692969">0945692969</a><br>
+                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
                         อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @else
@@ -218,12 +218,12 @@ Contact us - wpnrayong
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
                         <h4 style="margin-bottom: 4px;">Head office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district Rayong 21180</p>
+                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana District, Rayong 21180</p>
                         <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
                         <p>428 Moo. 2, Phawong Subdistrict, Mueang Songkhla District, Songkhla Province 90100</p>
                         <h4 class="mt-10">Contact</h4>
-                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a href="tel:0945692969">0945692969</a><br>
+                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
                         Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @endif
@@ -264,7 +264,7 @@ Contact us - wpnrayong
                             <label for="name" class="form__label">หัวข้อที่ต้องการติดต่อ</label>
                         </div>
                     </div>
-                    
+
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <div class="form__group field">
                             <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage" id='massage2'></textarea>
@@ -312,7 +312,7 @@ Contact us - wpnrayong
                             <label for="name" class="form__label">Topic you want to contact</label>
                         </div>
                     </div>
-                    
+
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <div class="form__group field">
                             <textarea class="form__field" placeholder="Required message" style="height:80px" maxlength="500" name="massage" id='massage2'></textarea>
@@ -357,10 +357,10 @@ $("#massage").keyup(function(){
 $("#massage2").keyup(function(){
   $("#count2").text("" + (500 - $(this).val().length));
 });
-    
+
     $(document).on('click','#btnSendData',function (event) {
       event.preventDefault();
-      
+
       var form = $('#contactForm')[0];
       var formData = new FormData(form);
       var name = document.getElementById("name").value;
@@ -414,7 +414,7 @@ $("#massage2").keyup(function(){
                 setTimeout(function(){
                     $.LoadingOverlay("hide");
                 }, 500);
-                
+
                 @if(session()->get('locale') == 'th')
                     swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
                 @else
@@ -433,7 +433,7 @@ $("#massage2").keyup(function(){
 
     $(document).on('click','#btnSendData2',function (event) {
       event.preventDefault();
-      
+
       var form = $('#contactForm2')[0];
       var formData = new FormData(form);
       var name = document.getElementById("name2").value;
@@ -443,7 +443,7 @@ $("#massage2").keyup(function(){
       var type = document.getElementById("type2").value;
         console.log(formData)
     if(name == '' || msg == '' || email == '' || phone == '' || type == ''){
-      
+
         @if(session()->get('locale') == 'th')
             swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
         @else
@@ -487,7 +487,7 @@ $("#massage2").keyup(function(){
                 setTimeout(function(){
                     $.LoadingOverlay("hide");
                 }, 500);
-                
+
                 @if(session()->get('locale') == 'th')
                     swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
                 @else
