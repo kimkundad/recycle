@@ -487,7 +487,7 @@ Product and Sevice - wpnrayong
                 <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
             </div>
             <div class="ps-block__content_out-green pt-20">
-                <h3 style="font-size: 16px;">Grinding, Sorting, Screening and Packaging Services for All Types of Plastic Objects</h3>
+                <h3 style="font-size: 14px;">Grinding, Sorting, Screening and Packaging Services for All Types of Plastic Objects</h3>
                 <p class="mb-0 min-h-125 fs-13px hi-153">
                     Plastic service provision, particularly plastic sorting,
                     grinding and screening for sorting by plastic type. Sending crushed plastic to the COMPOUND process
