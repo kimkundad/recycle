@@ -788,9 +788,9 @@
                                             <div class="scrollable-content d-flex justify-content-center">
                                                 <div style="max-width:380px">
                                                 <br>
-                                                <h4>เกี่ยวกับเรา</h4>
+                                                <h4>About us</h4>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">Recycling Business Leaders with Experience and Expertise in Recycling Scrap Materials </p>
-                                                <p style="text-indent: 1.5em;margin-bottom: 0px; ">
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px; text-align: justify">
                                                     including both hazardous and non-hazardous materials from industrial factories and all types of metals,
                                                     such as metals, stainless steel, copper, brass, aluminum, battery, used oil,
                                                     all types of plastic, motors, machinery, parts, etc.
@@ -811,7 +811,7 @@
                                                 <br>
                                                 <h4>Wongpanit Recycle's Vision </h4>
                                                 <p style="text-indent: 1.5em;margin-bottom: 0px;">Wongpanit Recycle Rayong is committed to becoming a national leader in the recycling business </p>
-                                                <p style="text-indent: 1.5em;margin-bottom: 0px;">  with strategy and expertise meeting international standards,
+                                                <p style="text-indent: 1.5em;margin-bottom: 0px; text-align: justify">  with strategy and expertise meeting international standards,
                                                     professional personnel generating economic systems for sustainable growth,
                                                     and primary consideration given to environmental conditions and safety.
                                                 </p>
@@ -1049,6 +1049,8 @@
                                     <a class="ps-post__overlay" href="{{ url('blog_detail/'.$item->id) }}"></a>
                                     <img src="{{ url('media/'.$item->image) }}" alt="{{ $item->title }}" style="max-height: 190px; min-height: 190px;">
                                 </div>
+
+                                @if(session()->get('locale') == 'th')
                                 <div class="ps-post__content">
                                     <a
                                     style="min-height: 72px; max-height: 72px; overflow: hidden;"
@@ -1057,8 +1059,33 @@
                                     {{ $item->title }}
                                     </a>
                                     <p style="min-height: 68px; max-height: 68px; overflow: hidden;">{{ $item->sub_title }}</p>
-                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$item->id) }}">Read more</a>
+                                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$item->id) }}">อ่านต่อ</a>
                                 </div>
+                                @else
+                                    @if($item->title_en == null)
+                                    <div class="ps-post__content">
+                                        <a
+                                        style="min-height: 72px; max-height: 72px; overflow: hidden;"
+                                        class="ps-post__title"
+                                        href="{{ url('blog_detail/'.$item->id) }}">
+                                        {{ $item->title }}
+                                        </a>
+                                        <p style="min-height: 68px; max-height: 68px; overflow: hidden;">{{ $item->sub_title }}</p>
+                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$item->id) }}">อ่านต่อ</a>
+                                    </div>
+                                    @else
+                                    <div class="ps-post__content">
+                                        <a
+                                        style="min-height: 72px; max-height: 72px; overflow: hidden;"
+                                        class="ps-post__title"
+                                        href="{{ url('blog_detail/'.$item->id) }}">
+                                        {{ $item->title_en }}
+                                        </a>
+                                        <p style="min-height: 68px; max-height: 68px; overflow: hidden;">{{ $item->sub_title_en }}</p>
+                                        <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$item->id) }}">Read more</a>
+                                    </div>
+                                    @endif
+                                @endif
                             </div>
                         </div>
 

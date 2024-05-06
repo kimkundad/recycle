@@ -52,7 +52,7 @@
                             <li><a href="{{ url('/certificate') }}">ใบอนุญาตและรางวัล</a></li>
                             <li><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
                             @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">เข้าสู่ระบบ / Login</a></li>
+                            <li><a href="{{ url('/login') }}">Admin Login</a></li>
                             @else
                             @if(Auth::user()->roles[0]->name == 'superadmin' || Auth::user()->roles[0]->name == 'admin')
                             <li><a href="{{ url('/admin/dashboard') }}">เข้าสู่หลังบ้าน</a></li>
