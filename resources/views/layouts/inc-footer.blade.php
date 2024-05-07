@@ -55,7 +55,7 @@
                             <li><a href="{{ url('/login') }}">Admin Login</a></li>
                             @else
                             @if(Auth::user()->roles[0]->name == 'superadmin' || Auth::user()->roles[0]->name == 'admin')
-                            <li><a href="{{ url('/admin/dashboard') }}">เข้าสู่หลังบ้าน</a></li>
+                            <li><a href="{{ url('/admin/dashboard') }}">Admin Login</a></li>
                             @endif
                             @endif
                         </ul>
