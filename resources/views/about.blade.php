@@ -696,7 +696,7 @@ min-height: 90px
                                                     <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="height:60px" style="width: 60px !important;">
+                                                                <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="height:60px; width: 60px !important;" >
 
                                                             </div>
                                                             <div class="ps-block__content_out-green ">
