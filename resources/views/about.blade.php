@@ -671,7 +671,7 @@ min-height: 90px
                                                     <div class="card-green set-margin-card set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="num_img_x mt-8px img-60" src="{{ url('img/Group 3115.png') }}">
+                                                                <img class="num_img_x mt-8px img-60" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                             </div>
                                                             <div class="ps-block__content_green pt-25">
                                                                 <p class="mb-0 min-h-90">บริษัทฯ มุ่งมั่นที่จะลดอุบัติเหตุและป้องกันพนักงานรวมทั้งบุคคลภายนอก ที่เข้ามาภายในบริษัทไม่ ให้เกิดอุบัติเหตุหรือโรคจากการทำงานใด ๆ ทั้งสิ้น รวมทั้งการมุ่งมั่นที่จะปฏิบัติตามกฎหมายกำหนด </p>
@@ -683,7 +683,7 @@ min-height: 90px
                                                     <div class=" card-out-greenxx set-margin-card set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="num_img_x bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}">
+                                                                <img class="num_img_x bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                             </div>
                                                             <div class="ps-block__content_out-green pt-25">
                                                                 <p class="mb-0 min-h-90">บริษัทฯ มุ่งมั่นที่จะป้องการและปราบปรามพร้อมทั้งให้ความรู้ถึงพิษภัยและโทษทัณฑ์ของยาเสพติด เพื่อให้พนักงานบริษัท วงษ์พาณิชย์ฯ ปราศจากยาเสพติดและเป็นบริษัทสีขาว</p>
@@ -696,7 +696,7 @@ min-height: 90px
                                                     <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="height:60px">
+                                                                <img class="mt-8px img-60" src="{{ url('img/Group 3118.png') }}" style="height:60px" style="width: 60px !important;">
 
                                                             </div>
                                                             <div class="ps-block__content_out-green ">
@@ -712,7 +712,7 @@ min-height: 90px
                                                     <div class="card-green set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}">
+                                                                <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                             </div>
                                                             <div class="ps-block__content_green pt-25">
                                                                 <p class="mb-0 min-h-90">
@@ -729,7 +729,7 @@ min-height: 90px
                                                     <div class="card-green set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="height:60px">
+                                                                <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="height:60px; width: 60px !important;" >
                                                             </div>
                                                             <div class="ps-block__content_green ">
                                                                 <p class="mb-0 min-h-90">พนักงานทุกคนรวมทั้งบุคคลภายนอกที่เข้ามาภายในบริษัทฯ มีหน้าที่ต้องปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงานของบริษัทฯ อย่างเคร่งครัดและระมัดระวังไม่ให้เกิดอุบัติเหตุและความสูญเสียใดๆ ทั้งต่อตนเองและเพื่อนร่วมงาน ตลอดจนทรัพย์สินของบริษัทฯ
@@ -743,7 +743,7 @@ min-height: 90px
                                                     <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}">
+                                                                <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}" style="height:60px; width: 60px !important;">
                                                             </div>
                                                             <div class="ps-block__content_out-green ">
                                                                 <p class="mb-0 min-h-90">ผู้บังคับบัญชาทุกระดับมีหน้าที่รับผิดชอบเกี่ยวกับความปลอดภัยของผู้ใต้บังคับบัญชาตามสายงานอย่างจริงจังและต่อเนื่อง ตลอดจนต้องฝึกสอนและเป็นตัวอย่างในการปฏิบัติตามกฎระเบียบความปลอดภัยในการทำงาน<br>ของบริษัทฯ
@@ -758,7 +758,7 @@ min-height: 90px
                                                     <div class=" card-out-greenxx set-margin-card mt-16 set-pad-20">
                                                         <div class="card-green-content">
                                                             <div class="d-flex justify-content-between">
-                                                                <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/seven.png') }}">
+                                                                <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/seven.png') }}" style="height:60px; width: 60px !important;">
                                                             </div>
                                                             <div class="ps-block__content_out-green pt-25">
                                                                 <p class="mb-0 min-h-90">
