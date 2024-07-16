@@ -586,9 +586,9 @@
                                 <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
                             </div>
                             <div class="ps-block__content_out-green pt-20">
-                                <h3 style="font-size: 16px;">Waste and Bagasse Transport Services for Treatment/Disposal at the Destination </h3>
+                                <h3 style="font-size: 16px;">Waste and Materials Transport Services for Treatment/Disposal at the Destination </h3>
                                 <p class="mb-0 min-h-125 fs-13px hi-153">
-                                    Waste and bagasse transport service provision for treatment and disposal at the destination that is safe and meets standards.
+                                    Waste and Materials transport service provision for treatment and disposal at the destination that is safe and meets standards.
                                     Plans for handling transport in emergency situations
                                     and permission to transport both toxic and non-toxic waste,
                                     including urgent service provision when factories require such services.</p>

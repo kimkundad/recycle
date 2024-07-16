@@ -65,10 +65,10 @@ Contact us - wpnrayong
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
                         <h4 style="margin-bottom: 4px;">Head office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana District, Rayong 21180</p>
+                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district, Rayong province 21180</p>
                         <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>428 Moo. 2, Phawong Subdistrict, Mueang Songkhla District, Songkhla Province 90100</p>
+                        <p>428 Moo. 2, Phawong subdistrict, Mueang Songkhla district, Songkhla province 90100</p>
                         <h4 class="mt-10">Contact</h4>
                         <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
                         Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
@@ -218,10 +218,10 @@ Contact us - wpnrayong
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
                         <h4 style="margin-bottom: 4px;">Head office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana District, Rayong 21180</p>
+                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district, Rayong province 21180</p>
                         <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>428 Moo. 2, Phawong Subdistrict, Mueang Songkhla District, Songkhla Province 90100</p>
+                        <p>428 Moo. 2, Phawong subdistrict, Mueang Songkhla district, Songkhla province 90100</p>
                         <h4 class="mt-10">Contact</h4>
                         <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
                         Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>

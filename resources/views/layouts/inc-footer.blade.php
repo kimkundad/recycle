@@ -77,7 +77,7 @@
                     <aside class="widget widget_footer">
                         <h4 class="widget-title">Home </h4>
                         <ul class="ps-list--link">
-                            <li><a href="{{ url('category?id=0') }}">Product and Sevice</a></li>
+                            <li><a href="{{ url('category?id=0') }}">Products and Sevice</a></li>
                             <li><a href="{{ url('category?id=0') }}">Recommend</a></li>
                             <li><a href="{{ url('/about') }}">About us</a></li>
                             <li><a href="{{ url('/certificate') }}">License and Awards</a></li>
@@ -96,7 +96,7 @@
                         <ul class="ps-list--link">
                             <li><a href="{{ url('/contact') }}">Buying recyclable and surplus materials</a></li>
                             <li><a href="{{ url('/contact') }}">Bidding, auction steel structure and more</a></li>
-                            <li><a href="{{ url('/contact') }}">Counseling service</a></li>
+                            <li><a href="{{ url('/contact') }}">Consultancy</a></li>
                             <li><a href="{{ url('/contact') }}">Document demolition service</a></li>
                             <li><a href="{{ url('/contact') }}">Industrial waste collection service</a></li>
                             <li><a href="{{ url('/contact') }}">Other services</a></li>

@@ -1095,10 +1095,7 @@ min-height: 90px
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
                                                         <p class="mb-0 min-h-89 h-100-lh-20">
-                                                            All executives and employees recognize the importance of
-                                                            and are committed to service quality
-                                                            in combination with safety and compliance with the requirements of
-                                                            related laws in order to build maximum customer satisfaction
+                                                            To commit practice in accordance with the law of environment and strictly in related regulations.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1112,8 +1109,7 @@ min-height: 90px
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
                                                         <p class="mb-0 min-h-89 h-100-lh-20">
-                                                            and periodically review the efficiency and effectiveness of the quality management system
-                                                            to facilitate the process of continuous improvement
+                                                            To provide customer satisfaction recognizing the importance of the environment by recycling and avoiding to cause a nuisance to the community.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1127,9 +1123,7 @@ min-height: 90px
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-20">
                                                         <p class="mb-0 min-h-89 h-100-lh-20">
-                                                        and seek to promote the creation of good consciousness,
-                                                        particpation in various activities,
-                                                        support of environmental work and work for the public interest,
+                                                        Having wastewater and environmental management along with the efficient usage of resources which sustain our community.
                                                     </p>
                                                     </div>
                                                 </div>
@@ -1143,10 +1137,7 @@ min-height: 90px
                                                     </div>
                                                     <div class="ps-block__content_green pt-20">
                                                         <p class="mb-0 min-h-89 h-100-lh-20">
-                                                            and dissemination of quality policies to all employees
-                                                            and stakeholders involved
-                                                            to ensure that the company
-                                                            is committed to maintaining quality service standards.
+                                                            To commit promote environmental awareness and sound environmental behavior in its employees through the laws in environmental and occupational health and safety.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1226,9 +1217,7 @@ min-height: 90px
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
                                                             <p class="mb-0 min-h-90 h-100-lh-20">
-                                                                The company is committed to preventing and suppressing, including providing knowledge about the hazards
-                                                                and dangers of narcotics so that Wongpanit employees
-                                                                stay free of drugs and the company is a white company.
+                                                                The company is commit protect suppress & also give knowledge of bad effect from drug addict for white factory including an encourage HSE activities for all staff and keep good working place and environment.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -1365,9 +1354,7 @@ min-height: 90px
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
                                                         <p class="mb-0 min-h-67 h-100-lh-20">
-                                                            Be committed to the development of businesses with sustainable growth
-                                                            in combination with care and attention to the environments and safety of communities
-                                                            and help the society with determination.
+                                                            Committed to develop a sustainable economic growth with environmental caring, Safety in community and willing to do social assistance.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1381,8 +1368,7 @@ min-height: 90px
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
                                                         <p class="mb-0 min-h-67 h-100-lh-20">
-                                                            Help and improve the society by using its strong experience and
-                                                            management of used materials for corporate social responsibility.
+                                                            To do social responsibilities, We help and develop our social by using strong points of experiences, Our technological expertise and waste management to the community.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1396,9 +1382,7 @@ min-height: 90px
                                                     </div>
                                                     <div class="ps-block__content_out-green pt-25">
                                                         <p class="mb-0 min-h-67 h-100-lh-20">
-                                                            Organize corporate social responsibility activities for the benefit of the society, including
-                                                            nearby factories:  communities surrounding the factory and those located far away from it
-                                                            as well as remote communities where public utilities are inaccessible (Society).
+                                                            To do activity for all involved of our social responsibilities our nearby community and remote communities without access to utilities.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1412,8 +1396,7 @@ min-height: 90px
                                                     </div>
                                                     <div class="ps-block__content_green pt-25">
                                                         <p class="mb-0 min-h-67 h-100-lh-20" style="min-height:89px">
-                                                            Be committed to resource utilization for maximum benefit rather than wasteful use
-                                                            by relying on the principles of Sufficiency Economy in which maximum benefit is gained from the use of local resources.
+                                                            Committed to maximize use of resources from our regional area instead of emissions dropped by wasted, Based on the philosophy of sufficiency economy.
                                                         </p>
                                                     </div>
                                                 </div>
