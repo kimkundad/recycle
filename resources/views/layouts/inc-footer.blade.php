@@ -77,7 +77,7 @@
                     <aside class="widget widget_footer">
                         <h4 class="widget-title">Home </h4>
                         <ul class="ps-list--link">
-                            <li><a href="{{ url('category?id=0') }}">Products and Sevice</a></li>
+                            <li><a href="{{ url('category?id=0') }}">Products and Sevices</a></li>
                             <li><a href="{{ url('category?id=0') }}">Recommend</a></li>
                             <li><a href="{{ url('/about') }}">About us</a></li>
                             <li><a href="{{ url('/certificate') }}">License and Awards</a></li>
