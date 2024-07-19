@@ -41,7 +41,7 @@ class ProductController extends Controller
             $objs->setPath('');
         $data['objs'] = $objs;
 
-        
+
         return view('admin.product.index', compact('objs', 'count'));
     }
 
@@ -62,7 +62,7 @@ class ProductController extends Controller
             $objs->setPath('');
         $data['objs'] = $objs;
 
-        
+
         return view('admin.product.recommend', compact('objs'));
 
     }
@@ -78,7 +78,7 @@ class ProductController extends Controller
         $cat = subcat::where('status', 1)->get();
         $brand = brand::where('status', 1)->get();
         $unit_product = unit_product::where('unit_status', 1)->get();
-        
+
         $data['unit_product'] = $unit_product;
         $data['cat'] = $cat;
         $data['brand'] = $brand;
@@ -96,7 +96,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-       
+
         $this->validate($request, [
             'name_pro' => 'required',
             'name_pro_en' => 'required',
@@ -246,7 +246,7 @@ class ProductController extends Controller
      */
 
     public function upload_img_product(Request $request, $id){
-       
+
         $gallary = $request->file('file');
 
         $this->validate($request, [
@@ -266,9 +266,9 @@ class ProductController extends Controller
                 'image' => $gallary->hashName(),
                 'product_id' => $id
             ];
-          
+
           product_image::insert($admins);
-        
+
           return Response::json(array('success' => true, 'message' => 'Successfully uploaded file.'), 200);
 
 
@@ -300,7 +300,6 @@ class ProductController extends Controller
     //    dd($request['kt_docs_ckeditor_classic_en']);
         $this->validate($request, [
             'name_pro' => 'required',
-            'name_pro_en' => 'required',
             'sub_cat_id' => 'required',
             'brand' => 'required',
             'sku' => 'required',
@@ -368,7 +367,7 @@ class ProductController extends Controller
            $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
            $objs->save();
 
-   
+
 
             }else{
 
@@ -379,7 +378,7 @@ class ProductController extends Controller
           $storage = Storage::disk('do_spaces');
           $storage->delete('wpnrayong/product/' . $img->image_pro, 'public');
 
-        
+
 
           $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
@@ -416,7 +415,7 @@ class ProductController extends Controller
            $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
            $objs->save();
 
-            }    
+            }
 
 
             return redirect(url('admin/product/'.$id.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
