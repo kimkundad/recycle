@@ -66,6 +66,10 @@ min-height: 90px
     height:120px !important;
     line-height:20px
 }
+.h-140-lh-20{
+    height:140px !important;
+    line-height:20px
+}
 </style>
 @section('content')
 
@@ -1255,7 +1259,7 @@ min-height: 90px
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green pt-25">
-                                                            <p class="mb-0 min-h-90 h-120-lh-20" >
+                                                            <p class="mb-0 min-h-90 h-140-lh-20" >
                                                                 All employees and outsiders who enter the Company
                                                                 are required to cooperate with every safety activity
                                                                 and maintain the cleanliness and orderliness
@@ -1274,7 +1278,7 @@ min-height: 90px
                                                             <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green ">
-                                                            <p class="mb-0 min-h-90 h-120-lh-20" style="height: 130px;">
+                                                            <p class="mb-0 min-h-90 h-140-lh-20" style="height: 130px;">
                                                                 All employees and outsiders who enter
                                                                 the company are obligated to follow safety rules and regulations
                                                                 while working for the Company with strictness and caution to prevent the occurrence of
