@@ -63,7 +63,7 @@ min-height: 90px
     line-height:20px
 }
 .h-120-lh-20{
-    height:12px;
+    height:120px !important;
     line-height:20px
 }
 </style>
