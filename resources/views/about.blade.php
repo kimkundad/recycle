@@ -1259,7 +1259,7 @@ min-height: 90px
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green pt-25">
-                                                            <p class="mb-0 min-h-90 h-140-lh-20" >
+                                                            <p class="mb-0 min-h-90 h-120-lh-20" >
                                                                 All employees and outsiders who enter the Company
                                                                 are required to cooperate with every safety activity
                                                                 and maintain the cleanliness and orderliness
@@ -1297,7 +1297,7 @@ min-height: 90px
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green ">
-                                                            <p class="mb-0 min-h-90 h-120-lh-20" style="height: 130px;">
+                                                            <p class="mb-0 min-h-90 h-140-lh-20" style="height: 130px;">
                                                                 Superiors at all levels are obligated to take responsibility concerning
                                                                 the safety of the subordinates in all fields of work in a serious
                                                                 and ongoing manner, including providing training and serving as an example
