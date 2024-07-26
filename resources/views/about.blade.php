@@ -62,6 +62,10 @@ min-height: 90px
     height:100px;
     line-height:20px
 }
+.h-120-lh-20{
+    height:12px;
+    line-height:20px
+}
 </style>
 @section('content')
 
@@ -1200,7 +1204,7 @@ min-height: 90px
                                                             <img class="mt-8px img-60" src="{{ url('img/Group 3115.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green pt-25">
-                                                            <p class="mb-0 min-h-90 h-100-lh-20" >
+                                                            <p class="mb-0 min-h-90 h-120-lh-20" >
                                                                 The company is committed to reducing accidents and preventing both employees and third parties
                                                                 who enter the company from having accidents or contracting diseases from any work.
                                                                 We are also committed to acting in compliance with the specifications of the law.
@@ -1216,7 +1220,7 @@ min-height: 90px
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3116.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
-                                                            <p class="mb-0 min-h-90 h-100-lh-20">
+                                                            <p class="mb-0 min-h-90 h-120-lh-20" >
                                                                 The company is commit protect suppress & also give knowledge of bad effect from drug addict for white factory including an encourage HSE activities for all staff and keep good working place and environment.
                                                             </p>
                                                         </div>
@@ -1232,7 +1236,7 @@ min-height: 90px
 
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
-                                                            <p class="mb-0 min-h-90 h-100-lh-20">
+                                                            <p class="mb-0 min-h-90 h-120-lh-20" >
                                                             The company will promote any activities that
                                                             create safety and good health for employees,
                                                             including development and improvement of the working environment
@@ -1251,7 +1255,7 @@ min-height: 90px
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/Group 3117.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green pt-25">
-                                                            <p class="mb-0 min-h-90 h-100-lh-20">
+                                                            <p class="mb-0 min-h-90 h-120-lh-20" >
                                                                 All employees and outsiders who enter the Company
                                                                 are required to cooperate with every safety activity
                                                                 and maintain the cleanliness and orderliness
@@ -1270,7 +1274,7 @@ min-height: 90px
                                                             <img class="mt-8px img-60" src="{{ url('img/five.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_green ">
-                                                            <p class="mb-0 min-h-90 h-100-lh-20" style="height: 130px;">
+                                                            <p class="mb-0 min-h-90 h-120-lh-20" style="height: 130px;">
                                                                 All employees and outsiders who enter
                                                                 the company are obligated to follow safety rules and regulations
                                                                 while working for the Company with strictness and caution to prevent the occurrence of
@@ -1289,7 +1293,7 @@ min-height: 90px
                                                             <img class="bg_green_icon rd-10 mt-8px img-60" src="{{ url('img/six.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green ">
-                                                            <p class="mb-0 min-h-90 h-100-lh-20" style="height: 130px;">
+                                                            <p class="mb-0 min-h-90 h-120-lh-20" style="height: 130px;">
                                                                 Superiors at all levels are obligated to take responsibility concerning
                                                                 the safety of the subordinates in all fields of work in a serious
                                                                 and ongoing manner, including providing training and serving as an example
@@ -1307,7 +1311,7 @@ min-height: 90px
                                                             <img class="img-60 bg_green_icon rd-10 mt-8px" src="{{ url('img/seven.png') }}" style="width: 60px !important;">
                                                         </div>
                                                         <div class="ps-block__content_out-green pt-25">
-                                                            <p class="mb-0 min-h-90 h-100-lh-20">
+                                                            <p class="mb-0 min-h-90 h-120-lh-20">
                                                                 The company will take into account compliance with workplace safety rules and
                                                                 the occurrence of accidents in each department
                                                                 as part of the consideration for renewing employment contracts and annual work performance evaluations.
