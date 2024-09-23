@@ -52,8 +52,8 @@
                         <!--end::Breadcrumb-->
                     </div>
                     <!--end::Page title-->
-                    
-                    
+
+
                 </div>
                 <!--end::Toolbar container-->
             </div>
@@ -66,7 +66,7 @@
                         {{ method_field($method) }}
                         {{ csrf_field() }}
                         <div class="card card-xl-stretch mb-5 mb-xl-8">
-                            
+
                             <div class="card-body border-top p-9">
 
                                 <div class="row mb-6">
@@ -120,7 +120,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="text" name="title" class="form-control form-control-lg form-control-solid" placeholder="10 อันดับขยะที่นำมารีไซเคิลมากที่สุด" value="{{old('title') ? old('title') : ''}}">
-                                    
+
                                         @if ($errors->has('title'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อกิจกรรม & ประชาสัมพันธ์สินค้า</div>
@@ -138,7 +138,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="text" name="title_en" class="form-control form-control-lg form-control-solid" placeholder="10 อันดับขยะที่นำมารีไซเคิลมากที่สุด" value="{{old('title_en') ? old('title_en') : ''}}">
-                                    
+
                                         @if ($errors->has('title_en'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อกิจกรรม & ประชาสัมพันธ์สินค้า En</div>
@@ -167,7 +167,7 @@
                                             <!--end::Svg Icon-->
                                             <input class="form-control form-control-solid ps-12" name="startdate" placeholder="เนื้อหาจะแสดงภายในวันที่กำหนด" id="kt_datepicker_1" />
                                         </div>
-                                    
+
                                         @if ($errors->has('startdate'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณาตั้งวันที่แสดงกิจกรรม & ประชาสัมพันธ์สินค้า</div>
@@ -235,7 +235,7 @@
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-10 fv-row fv-plugins-icon-container">
-                                        <textarea name="detail" class="summernote" id="kt_docs_ckeditor_classic" >
+                                        <textarea name="detail_en" class="summernote" id="kt_docs_ckeditor_classic" >
                                             <h3>กรอกรายละเอียด...</h3>
                                             {{old('detail_en') ? old('detail_en') : ''}}
                                         </textarea>
@@ -261,7 +261,7 @@
                                     </div>
                                     <!--begin::Label-->
                                 </div>
-                            
+
 
                             </div>
                             <div class="card-footer d-flex justify-content-end py-6 px-9">
@@ -326,7 +326,7 @@
 <script src="{{ url('admin/assets/js/custom/apps/projects/settings/settings.js') }}"></script>
 
 {{-- <script>
-    
+
 ClassicEditor
     .create(document.querySelector('#kt_docs_ckeditor_classic'),{
         ckfinder: {
@@ -368,10 +368,10 @@ ClassicEditor
       }
       }
     });
-    
-    
-    
-    
+
+
+
+
       function uploadImageContent(image, editor) {
         var data = new FormData();
         data.append("image", image);
@@ -392,11 +392,11 @@ ClassicEditor
             }
         });
       }
-    
-    
-    
+
+
+
     });
-    
+
     </script>
 
 
