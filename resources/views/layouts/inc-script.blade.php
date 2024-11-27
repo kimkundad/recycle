@@ -1,4 +1,4 @@
-    
+
     <script src="{{ url('assets/plugins/jquery.min.js') }}"></script>
     <script src="{{ url('assets/plugins/nouislider/nouislider.min.js') }}"></script>
     <script src="{{ url('assets/plugins/popper.min.js') }}"></script>
@@ -43,8 +43,13 @@
   gtag('config', 'G-W54W3329L7');
 </script>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZKRSMNG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <script>
-    
+
 
 $(document).on('click','#open_fb',function (event) {
       event.preventDefault();
@@ -79,7 +84,7 @@ $(document).on('click','#open_fb',function (event) {
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
-  
+
     <script>
 
 $('.img_ro').hover(function(){
@@ -116,10 +121,10 @@ shareButton[0].addEventListener("click", (e) => {
 $("#massage3").keyup(function(){
   $("#count3").text("" + (500 - $(this).val().length));
 });
-    
+
     $(document).on('click','#btnSendData_mobile',function (event) {
       event.preventDefault();
-      
+
       var form = $('#contactForm3')[0];
       var formData = new FormData(form);
       var name = document.getElementById("name3").value;
