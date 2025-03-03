@@ -1,10 +1,10 @@
 <?php
-  
+
 namespace App\Http\Middleware;
-  
+
 use Closure;
 use App;
-  
+
 class LanguageManager
 {
     /**
@@ -21,7 +21,7 @@ class LanguageManager
         }else{
             session()->put('locale', 'th');
         }
-          
+
         return $next($request);
     }
 }

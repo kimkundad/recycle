@@ -85,13 +85,13 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-   
+
            $this->validate($request, [
             'cat_name' => 'required',
             'cat_name_en' => 'required',
             'image' => 'required'
            ]);
-           
+
            $image = $request->file('image');
 
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
@@ -110,7 +110,7 @@ class CategoryController extends Controller
                 $status = 1;
             }
         }
-     
+
            $objs = new category();
            $objs->cat_name = $request['cat_name'];
            $objs->cat_name_en = $request['cat_name_en'];
@@ -166,7 +166,7 @@ class CategoryController extends Controller
             'cat_name' => 'required',
             'cat_name_en' => 'required'
            ]);
-           
+
            $image = $request->file('image');
 
            $status = 0;
@@ -202,8 +202,8 @@ class CategoryController extends Controller
         $img->stream();
         Storage::disk('do_spaces')->put('wpnrayong/category/'.$image->hashName(), $img, 'public');
 
-            
-     
+
+
            $objs = category::find($id);
            $objs->cat_name = $request['cat_name'];
            $objs->cat_name_en = $request['cat_name_en'];
@@ -213,7 +213,7 @@ class CategoryController extends Controller
 
            }
 
-           
+
            return redirect(url('admin/category/'.$id.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
     }
 

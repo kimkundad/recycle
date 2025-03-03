@@ -64,7 +64,7 @@
             <div id="kt_app_content" class="app-content flex-column-fluid">
                 <!--begin::Content container-->
                 <div id="kt_app_content_container" class="app-container container-xxl">
-                    
+
                     <div class="card card-xl-stretch mb-5 mb-xl-8">
                         <div class="card-header border-0 pt-5">
                             <h3 class="card-title align-items-start flex-column">
@@ -77,7 +77,7 @@
                             <div class="table-responsive">
                                 <!--begin::Table-->
                                 <table class="table align-middle gs-0 gy-3">
-                                    <!--begin::Table head superadmin--> 
+                                    <!--begin::Table head superadmin-->
                                     <thead>
                                         <tr>
                                             <th class="p-0 w-50px"></th>
@@ -94,7 +94,7 @@
                                     <tbody>
                                         @isset($objs)
                                             @foreach ($objs as $item)
-                                        
+
                                         <tr id="{{$item->id_q}}">
                                             <td>
                                                 <div class="symbol symbol-50px">
@@ -155,7 +155,7 @@
                                             @endforeach
 
                                         @endisset
-                                       
+
                                     </tbody>
                                     <!--end::Table body-->
                                 </table>
@@ -165,7 +165,7 @@
                             @endif
                         </div>
                     </div>
-                    
+
                 </div>
                 <!--end::Content container-->
             </div>
@@ -207,7 +207,7 @@
 
 
 <script type="text/javascript">
-   
+
 </script>
 
 @stop('scripts')

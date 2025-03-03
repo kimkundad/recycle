@@ -48,8 +48,8 @@
                         <!--end::Breadcrumb-->
                     </div>
                     <!--end::Page title-->
-                    
-                    
+
+
                 </div>
                 <!--end::Toolbar container-->
             </div>
@@ -62,7 +62,7 @@
                         {{ method_field($method) }}
                         {{ csrf_field() }}
                         <div class="card card-xl-stretch mb-5 mb-xl-8">
-                            
+
                             <div class="card-body border-top p-9">
 
                                 <div class="row mb-6">
@@ -110,9 +110,9 @@
                                 </div>
 
 
-                           
 
-                               
+
+
                                     <div class="rounded border p-10">
                                     <!--begin::Input group-->
                                     <div class="form-group row">
@@ -208,7 +208,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="text" name="name_pro" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name_pro }}">
-                                    
+
                                         @if ($errors->has('name_pro'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อสินค้า</div>
@@ -225,7 +225,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="text" name="name_pro_en" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name_pro_en }}">
-                                    
+
                                         @if ($errors->has('name_pro_en'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อสินค้า En</div>
@@ -257,7 +257,7 @@
                                     <!--end::Col-->
                                 </div>
 
-                                
+
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
@@ -315,7 +315,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="text" name="sku" class="form-control form-control-lg form-control-solid" placeholder="SF1133569600-1" value="{{ $objs->sku }}">
-                                    
+
                                         @if ($errors->has('sku'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อ SKU สินค้า</div>
@@ -387,7 +387,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="number" name="amount" class="form-control form-control-lg form-control-solid" placeholder="1050.20" value="{{ $objs->amount }}">
-                                    
+
                                         @if ($errors->has('amount'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกราคาสินค้า</div>
@@ -416,7 +416,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="number" name="sum" class="form-control form-control-lg form-control-solid" placeholder="1050.20" value="{{ $objs->sum }}">
-                                    
+
                                         @if ($errors->has('sum'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกจำนวนสินค้าในคลัง</div>
@@ -537,7 +537,7 @@
                                     </div>
                                     <!--begin::Label-->
                                 </div>
-                            
+
 
                             </div>
                             <div class="card-footer d-flex justify-content-end py-6 px-9">
@@ -618,7 +618,7 @@ ClassicEditor
     .catch(error => {
         console.error(error);
     });
-    
+
 
     const container = document.getElementById('kt_docs_toast_stack_container');
 const targetElement = document.querySelector('[data-kt-docs-toast="stack"]');
