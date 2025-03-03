@@ -49,7 +49,7 @@ class HomeController extends Controller
       $cer = certificate::where('status', 1)->orderby('sort', 'asc')->get();
       $data['cer'] = $cer;
 
-      $slide = slideshow::where('status', 1)->get();
+      $slide = slideshow::where('status', 1)->orderby('id', 'desc')->get();
       $data['slide'] = $slide;
 
       $pro = DB::table('products')->select(
