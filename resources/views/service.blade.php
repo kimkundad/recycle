@@ -271,6 +271,24 @@ Product and Sevice - wpnrayong
             @if(session()->get('locale') == 'th')
             <div class="row">
 
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class=" card-out-green">
+                            <div class="card-green-content">
+                                <div class="d-flex justify-content-between">
+                                    <img class="bg_green_icon" src="{{ url('img/service/รับรื้อถอน.png') }}" height="60" width="60">
+                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">รับรื้อถอน</a>
+                                </div>
+                                <div class="ps-block__content_out-green pt-20">
+                                    <h3>ให้บริการรับรื้อถอนโรงงานอุตสาหกรรม โรงงานปิโตรเคมี โรงไฟฟ้า อาคารขนาดใหญ่ คลังสินค้า</h3>
+                                    <p class="mb-0 fs-13px">
+                                        ให้บริการรับรื้อถอนโรงงานอุตสาหกรรม โรงงานปิโตรเคมี โรงไฟฟ้า อาคารขนาดใหญ่ คลังสินค้า วางแผนงานอย่างเป็นระบบ ควบคุมงานด้วยวิศวกรผู้เชี่ยวชาญเรื่องรื้ออาคาร ด้วยเครื่องจักรอันทันสมัย มีประสิทธิภาพสูง และระบบขนส่งอย่างครบวงจร รวมทั้งรับซื้ออุปกรณ์เหลือใช้ จากการรื้อถอน เครื่องจักร เศษเหล็ก เศษทองแดง      สแตนเลส ให้ราคาดี ประเมินหน้างานฟรียินดีให้คำปรึกษา
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class=" card-out-green">
                             <div class="card-green-content">
@@ -380,6 +398,26 @@ Product and Sevice - wpnrayong
             @else
 
             <div class="row">
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class=" card-out-green">
+                            <div class="card-green-content">
+                                <div class="d-flex justify-content-between">
+                                    <img class="bg_green_icon" src="{{ url('img/service/รับรื้อถอน.png') }}" height="60" width="60">
+                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Provide demolition services</a>
+                                </div>
+                                <div class="ps-block__content_out-green pt-20">
+                                    <h3>We provide demolition services for industrial factories, petrochemical plants, power plants, large buildings</h3>
+                                    <p class="mb-0 fs-12px">
+                                    We provide demolition services for industrial factories, petrochemical plants, power plants, large buildings,
+                                    and warehouses. Our work is systematically planned and managed by engineers specializing in demolition, utilizing modern and highly
+                                    efficient machinery, along with a comprehensive transportation system. Additionally, we purchase surplus materials from demolition projects,
+                                    including machinery, scrap metal, copper and stainless at competitive prices. On-site evaluations are free and we are pleasure to offer consultation services.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
     <div class=" card-out-green">
