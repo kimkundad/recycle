@@ -134,7 +134,7 @@
             <div class="navigation__right">
                 <ul class="menu">
                     <li class="menu-item"><a href="{{ url('/') }}">Home</a></li>
-                    <li class="menu-item"><a href="{{ url('/service') }}">Products and Sevices</a></li>
+                    <li class="menu-item"><a href="{{ url('/service') }}">Products and Services</a></li>
                     <li class="menu-item"><a href="{{ url('/about') }}">About us</a></li>
                     <li class="menu-item"><a href="{{ url('/blog') }}">News</a></li>
                     <li class="menu-item"><a href="{{ url('/contact') }}">Contact us</a></li>
