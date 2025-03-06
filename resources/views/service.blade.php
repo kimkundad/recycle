@@ -277,7 +277,7 @@ Product and Sevice - wpnrayong
                             <div class="card-green-content">
                                 <div class="d-flex justify-content-between">
                                     <img class="bg_green_icon" src="{{ url('img/service/รับรื้อถอน.png') }}" height="60" width="60">
-                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">รับรื้อถอน</a>
+                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
                                 </div>
                                 <div class="ps-block__content_out-green pt-20">
                                     <h3>ให้บริการรับรื้อถอนโรงงานอุตสาหกรรม โรงงานปิโตรเคมี โรงไฟฟ้า อาคารขนาดใหญ่ คลังสินค้า</h3>
@@ -404,7 +404,7 @@ Product and Sevice - wpnrayong
                             <div class="card-green-content">
                                 <div class="d-flex justify-content-between">
                                     <img class="bg_green_icon" src="{{ url('img/service/รับรื้อถอน.png') }}" height="60" width="60">
-                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Provide demolition services</a>
+                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
                                 </div>
                                 <div class="ps-block__content_out-green pt-20">
                                     <h3>We provide demolition services for industrial factories, petrochemical plants, power plants, large buildings</h3>
