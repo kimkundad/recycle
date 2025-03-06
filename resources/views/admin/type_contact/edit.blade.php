@@ -42,8 +42,8 @@
                         <!--end::Breadcrumb-->
                     </div>
                     <!--end::Page title-->
-                    
-                    
+
+
                 </div>
                 <!--end::Toolbar container-->
             </div>
@@ -56,10 +56,10 @@
                         {{ method_field($method) }}
                         {{ csrf_field() }}
                         <div class="card card-xl-stretch mb-5 mb-xl-8">
-                            
+
                             <div class="card-body border-top p-9">
 
-                                
+
                                 <div class="row mb-6">
                                     <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อประเภทการติดต่อ</label>
@@ -67,7 +67,7 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="text" name="name" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name }}">
-                                    
+
                                         @if ($errors->has('name'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อประเภทการติดต่อ</div>
@@ -84,8 +84,8 @@
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                        <input type="text" name="name_en" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name_env }}">
-                                    
+                                        <input type="text" name="name_en" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name_en }}">
+
                                         @if ($errors->has('name_en'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อประเภทการติดต่อ En</div>
@@ -102,7 +102,7 @@
                                     <!--begin::Label-->
                                     <div class="col-lg-8 d-flex align-items-center">
                                         <div class="form-check form-check-solid form-switch form-check-custom fv-row">
-                                            <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" name="status" 
+                                            <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" name="status"
                                                 @if($objs->status == 1)
                                                     checked="checked"
                                                 @endif
@@ -112,7 +112,7 @@
                                     </div>
                                     <!--begin::Label-->
                                 </div>
-                            
+
 
                             </div>
                             <div class="card-footer d-flex justify-content-end py-6 px-9">
