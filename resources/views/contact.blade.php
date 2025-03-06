@@ -52,8 +52,9 @@ Contact us - wpnrayong
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
                         <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
-                        <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
-                        <p><a href="https://g.co/kgs/BJHYTHx" target="_blank">Map</a></p>
+                        <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 <br>
+                        <a href="https://g.co/kgs/BJHYTHx" target="_blank">Map</a>
+                        </p>
 
                         <h4 style="margin-bottom: 4px;">สำนักงานห้วยโป่ง</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
@@ -71,8 +72,8 @@ Contact us - wpnrayong
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
                         <h4 style="margin-bottom: 4px;">Head office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district, Rayong province 21180</p>
-                        <p><a href="https://g.co/kgs/BJHYTHx" target="_blank">Map</a></p>
+                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district, Rayong province 21180 <br>
+                        <a href="https://g.co/kgs/BJHYTHx" target="_blank">Map</a></p>
 
                         <h4 style="margin-bottom: 4px;">Huai Pong Office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
@@ -220,8 +221,8 @@ Contact us - wpnrayong
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
                         <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
-                        <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180</p>
-                        <p><a href="https://g.co/kgs/BJHYTHx" target="_blank">Map</a></p>
+                        <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 <br>
+                        <a href="https://g.co/kgs/BJHYTHx" target="_blank">Map</a></p>
 
                         <h4 style="margin-bottom: 4px;">สำนักงานห้วยโป่ง</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
@@ -238,8 +239,8 @@ Contact us - wpnrayong
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
                         <h4 style="margin-bottom: 4px;">Head office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district, Rayong province 21180</p>
-                        <p><a href="https://g.co/kgs/BJHYTHx" target="_blank">Map</a></p>
+                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district, Rayong province 21180 <br>
+                        <a href="https://g.co/kgs/BJHYTHx" target="_blank">Map</a></p>
 
                         <h4 style="margin-bottom: 4px;">Huai Pong Office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
