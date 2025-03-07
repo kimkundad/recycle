@@ -59,7 +59,7 @@ Contact us - wpnrayong
                         <h4 style="margin-bottom: 4px;">สำนักงานห้วยโป่ง</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 22/9 ซ.ชากลูกหญ้า 4 ถ.วัดชากลูกหญ้า ต.ห้วยโป่ง อ.เมืองระยอง จ.ระยอง 21150 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/@12.7513181,101.1252694,17z?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">แผนที่</a></p>
+                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+Rayong+Branch+3/@12.7513181,101.1252694,17z/data=!4m6!3m5!1s0x3102f028518c91f1:0xe8e3cd3c3b3c5ff3!8m2!3d12.7513181!4d101.1252694!16s%2Fg%2F11gblv0sqr?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">แผนที่</a></p>
 
                         <h4 style="margin-bottom: 4px;">สำนักงานสงขลา</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
@@ -82,7 +82,7 @@ Contact us - wpnrayong
                         <p>22/9 Soi.Chaklukya 4, Watchaklukya Road,
                             Huaypong subdistrict, Muang Rayong district,
                             Rayong province 21150 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/@12.7513181,101.1252694,17z?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
+                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+Rayong+Branch+3/@12.7513181,101.1252694,17z/data=!4m6!3m5!1s0x3102f028518c91f1:0xe8e3cd3c3b3c5ff3!8m2!3d12.7513181!4d101.1252694!16s%2Fg%2F11gblv0sqr?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
 
 
                         <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
@@ -231,7 +231,7 @@ Contact us - wpnrayong
                         <h4 style="margin-bottom: 4px;">สำนักงานห้วยโป่ง</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 22/9 ซ.ชากลูกหญ้า 4 ถ.วัดชากลูกหญ้า ต.ห้วยโป่ง อ.เมืองระยอง จ.ระยอง 21150 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/@12.7513181,101.1252694,17z?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
+                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+Rayong+Branch+3/@12.7513181,101.1252694,17z/data=!4m6!3m5!1s0x3102f028518c91f1:0xe8e3cd3c3b3c5ff3!8m2!3d12.7513181!4d101.1252694!16s%2Fg%2F11gblv0sqr?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
                         <h4 style="margin-bottom: 4px;">สำนักงานสงขลา</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
                         <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100 <br>
@@ -253,7 +253,7 @@ Contact us - wpnrayong
                         <p>22/9 Soi.Chaklukya 4, Watchaklukya Road,
                             Huaypong subdistrict, Muang Rayong district,
                             Rayong province 21150 <br>
-                        <a href="https://www.google.com/maps/@12.7513181,101.1252694,17z?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
+                        <a href="https://www.google.com/maps/place/WPN+Rayong+Branch+3/@12.7513181,101.1252694,17z/data=!4m6!3m5!1s0x3102f028518c91f1:0xe8e3cd3c3b3c5ff3!8m2!3d12.7513181!4d101.1252694!16s%2Fg%2F11gblv0sqr?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
 
                         <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
                         <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
