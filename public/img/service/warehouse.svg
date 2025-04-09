@@ -1,0 +1,19 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="background-color: #007A33;">
+  <g fill="none" stroke="white" stroke-width="4" stroke-linejoin="round">
+    <!-- ตัวอาคารหลัก -->
+    <rect x="10" y="40" width="80" height="40" />
+    
+    <!-- หลังคา -->
+    <polygon points="10,40 50,10 90,40" />
+    
+    <!-- ประตูใหญ่ -->
+    <rect x="35" y="55" width="30" height="25" />
+
+    <!-- ลายประตู (แนวตั้ง) -->
+    <line x1="45" y1="55" x2="45" y2="80" />
+    <line x1="55" y1="55" x2="55" y2="80" />
+
+    <!-- ช่องระบายอากาศ (เหนือประตู) -->
+    <line x1="40" y1="50" x2="60" y2="50" />
+  </g>
+</svg>

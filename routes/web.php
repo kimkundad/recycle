@@ -46,7 +46,7 @@ Route::get('/images/{file}', function ($file) {
 	return abort(404);
   })->where('file', '.+');
 
-  
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::get('/product', function () {
@@ -115,9 +115,9 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::resource('/admin/news', NewConController::class);
     Route::post('/api/api_post_status_news', [App\Http\Controllers\NewConController::class, 'api_post_status_news']);
     Route::get('api/del_news/{id}', [App\Http\Controllers\NewConController::class, 'del_news']);
-    
+
     Route::post('api/upload_img', [NewConController::class, 'upload_img']);
-   
+
     Route::get('admin/contact/', [App\Http\Controllers\ContactController::class, 'index']);
     Route::post('/api/api_post_status_contact', [App\Http\Controllers\ContactController::class, 'api_post_status_contact']);
 
@@ -149,7 +149,7 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::resource('/admin/alliance', AllianceController::class);
     Route::post('/api/api_post_status_alliance', [App\Http\Controllers\AllianceController::class, 'api_post_status_alliance']);
     Route::get('api/del_alliance/{id}', [App\Http\Controllers\AllianceController::class, 'del_alliance']);
-    
+
     Route::post('/api/upload_img_product/{id}', [App\Http\Controllers\ProductController::class, 'upload_img_product']);
     Route::get('/api/image_del/{id}', [App\Http\Controllers\ProductController::class, 'image_del']);
 
@@ -161,7 +161,7 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::resource('/admin/unit_product', UnitproductController::class);
     Route::post('/api/api_post_status_unit_product', [App\Http\Controllers\UnitproductController::class, 'api_post_status_unit_product']);
     Route::get('api/del_unit_product/{id}', [App\Http\Controllers\UnitproductController::class, 'del_unit_product']);
- 
+
     // UnitproductController
 
 });

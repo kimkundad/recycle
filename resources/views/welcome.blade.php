@@ -388,7 +388,7 @@
             @if(session()->get('locale') == 'th')
             <div class="row">
 
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    {{-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                         <div class=" card-out-green">
                             <div class="card-green-content">
                                 <div class="d-flex justify-content-between">
@@ -403,7 +403,70 @@
                                 </div>
                             </div>
                         </div>
+                    </div> --}}
+
+
+
+                    <!-- /////////////////////////////////////////////// -->
+
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class=" card-out-green">
+                            <div class="card-green-content">
+                                <div class="d-flex justify-content-between">
+                                    <img class="bg_green_icon" src="{{ url('img/service/รับรื้อถอน.png') }}" height="60" width="60">
+                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                                </div>
+                                <div class="ps-block__content_out-green pt-20">
+                                    <h3>รับรื้อถอนโรงงานอุตสาหกรรม โรงงานปิโตรเคมี โรงไฟฟ้า</h3>
+                                    <p class="mb-0 min-h-125 fs-13px">
+                                        ให้บริการรับรื้อถอนโรงงานอุตสาหกรรม โรงงานปิโตรเคมี <br>
+                                        โรงไฟฟ้า อาคารขนาดใหญ่ คลังสินค้า วางแผนงานอย่างเป็นระบบ ควบคุมงานด้วยวิศวกรผู้เชี่ยวชาญเรื่องรื้ออาคาร ด้วยเครื่องจักรอันทันสมัย มีประสิทธิภาพสูง และระบบขนส่งอย่างครบวงจร รวมทั้งรับซื้ออุปกรณ์เหลือใช้ จากการรื้อถอน เครื่องจักร เศษเหล็ก เศษทองแดง สแตนเลส ให้ราคาดี
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class=" card-out-green">
+                            <div class="card-green-content">
+                                <div class="d-flex justify-content-between">
+                                    <img class="bg_green_icon" src="{{ url('img/service/steel.svg') }}" height="60" width="60">
+                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                                </div>
+                                <div class="ps-block__content_out-green pt-20">
+                                    <h3>เหล็กรูปพรรณ</h3>
+                                    <p class="mb-0 min-h-145 fs-13px">
+                                        จัดจำหน่ายเหล็กรูปพรรณทุกชนิดแบบครบวงจรในภาคตะวันออก ภายใต้ชื่อที่ลูกค้าไว้วางใจมายาวนาน “WPN” เรามุ่งมั่นในการคัดสรรสินค้าเหล็กคุณภาพสูง ควบคุมคุณภาพอย่างเข้มงวด ด้วยกระบวนการผลิตที่ได้มาตรฐาน มอก. เพื่อรองรับทุกความต้องการของงานก่อสร้าง โครงการอุตสาหกรรม และงานโครงสร้างต่าง ๆ อย่างมีประสิทธิภาพ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class=" card-out-green">
+                            <div class="card-green-content">
+                                <div class="d-flex justify-content-between">
+                                    <img class="bg_green_icon" src="{{ url('img/service/warehouse.svg') }}" height="60" width="60">
+                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">ขอรับบริการ</a>
+                                </div>
+                                <div class="ps-block__content_out-green pt-20">
+                                    <h3>Warehouse ให้เช่า</h3>
+                                    <p class="mb-0 min-h-145 fs-13px">
+                                        บริการให้เช่าโกดัง – คลังสินค้า ลานวางสินค้า พื้นที่ระยองและพื้นที่สงขลา แบบครบวงจร พร้อมพื้นที่ให้เลือกหลากหลายขนาด ตอบสนองทุกความต้องการของธุรกิจ ไม่ว่าจะเป็นการเก็บสินค้า หรือเป็นศูนย์กระจายสินค้า แบ่งให้เช่าตามความต้องการของลูกค้า พร้อมให้คำปรึกษาเกี่ยวกับการเลือกขนาดพื้นที่ที่เหมาะสม และสิ่งอำนวยความสะดวกครบครัน ระบบรักษาความปลอดภัย 24 ชั่วโมง
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- /////////////////////////////////////////////// -->
 
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                         <div class=" card-out-green">
