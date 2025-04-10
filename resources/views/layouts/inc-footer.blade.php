@@ -51,6 +51,7 @@
                             <li><a href="{{ url('/about') }}">เกี่ยวกับวงษ์พาณิชย์</a></li>
                             <li><a href="{{ url('/certificate') }}">ใบอนุญาตและรางวัล</a></li>
                             <li><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
+                            <li><a href="{{ url('/term') }}">นโยบายข้อมูลส่วนบุคคล</a></li>
                             @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Admin Login</a></li>
                             @else
@@ -82,6 +83,7 @@
                             <li><a href="{{ url('/about') }}">About us</a></li>
                             <li><a href="{{ url('/certificate') }}">License and Awards</a></li>
                             <li><a href="{{ url('/blog') }}">News</a></li>
+                            <li><a href="{{ url('/term') }}">Privacy Policy</a></li>
                             @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Admin Login</a></li>
                             @else

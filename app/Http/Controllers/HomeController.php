@@ -116,8 +116,40 @@ class HomeController extends Controller
       return view('about', $data);
     }
 
-    public function blog(){
+    public function steel(Request $request){
 
+
+        $search = $request['search'];
+
+      if($request['id'] == 0){
+
+        if($search == ''){
+          $count = product::count();
+        }else{
+          $count = product::where('name_pro', 'like', "%$search%")->count();
+        }
+
+      }else{
+
+        if($search == ''){
+
+          $count = product::where('cat_id', $request['id'])->count();
+
+        }else{
+
+          $count = product::where('cat_id', $request['id'])->where('name_pro', 'like', "%$search%")->count();
+
+        }
+      }
+
+      $data['count'] = $count;
+      $data['category_id'] = $request['id'];
+      $data['search'] = $search;
+      return view('steel', $data);
+
+    }
+
+    public function blog(){
 
       $objs = news::where('status', 1)->whereDate('startdate', '<=', date("Y-m-d"))->orderby('id', 'desc')->limit(1)->get();
       $data['objs'] = $objs;
@@ -189,6 +221,116 @@ class HomeController extends Controller
         }
 
     }
+
+    public function steel_find(Request $request){
+
+          $search = $request['search'];
+          $cat = $request['category'];
+          $brand = $request['brand'];
+        //  $data_b = explode(",",$brand); $count = product::where('name_pro', 'like', "%$search%")->count();
+
+          $data_b = ($brand != '')?explode(",",$brand):0;
+
+          if($cat == 10){
+
+            $results = DB::table('products')->select(
+                'products.*',
+                'products.id as id_q',
+                'unit_products.*'
+                )
+                ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.mysort', '!=', 0)
+                ->where('products.cat_id', $cat)->orderBy('products.mysort', 'asc')->where('products.status', 1)->paginate(12);
+
+          }else{
+
+            $results = DB::table('products')->select(
+                'products.*',
+                'products.id as id_q',
+                'unit_products.*'
+                )
+                ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')->where('products.mysort', '!=', 0)
+                ->where('products.sub_cat_id', $cat)->orderBy('products.mysort', 'asc')->where('products.status', 1)->paginate(12);
+
+          }
+
+
+
+            $artilces = '';
+            if ($request->ajax()) {
+                foreach ($results as $u) {
+
+                    $url = url('product_detail/'.$u->id_q);
+                    $img = url('images/wpnrayong/product/'.$u->image_pro);
+                    $discount = ($u->amount * $u->discount) / 100 ;
+
+                    if($u->discount == 0){
+
+                      if($u->typePrice == 1){
+                        if(session()->get('locale') == 'th'){
+                          $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                        }else{
+                          $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
+                        }
+                      }else{
+
+                        if($u->unit_id !== 3 && $u->unit_id !== null){
+                          $price_text = '<p class="ps-product__price text-green">฿'.number_format($u->amount, 2).'<b>'. $u->name_unit .'</b> </p>';
+                        }else{
+                          $price_text = '<p class="ps-product__price text-green">฿'.number_format($u->amount, 2).' </p>';
+                        }
+
+                      }
+
+                    }else{
+
+
+                      if($u->typePrice == 1){
+                        if(session()->get('locale') == 'th'){
+                          $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
+                        }else{
+                          $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
+                        }
+                      }else{
+
+                      if($u->unit_id !== 3 && $u->unit_id !== null){
+                        $price_text = '<p class="ps-product__price sale">฿'.number_format($u->amount-$discount, 2).' <del>฿'.number_format($u->amount, 2).' </del><b>'. $u->name_unit .'</b></p>';
+                      }else{
+                        $price_text = '<p class="ps-product__price sale">฿'.number_format($u->amount-$discount, 2).' <del>฿'.number_format($u->amount, 2).' </del></p>';
+                      }
+
+                    }
+
+                    }
+
+                    if($u->image_pro == 0){
+
+                    }else{
+
+                    }
+
+                    if(session()->get('locale') == 'th'){
+
+                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+
+                    }else{
+
+                        if($u->name_pro_en == null){
+
+                            $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
+
+                        }else{
+
+                            $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro_en.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro_en.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">View</a></div></div></div></div>';
+
+                        }
+                    }
+
+
+                }
+                return $artilces;
+            }
+            return view('blog');
+        }
 
     public function getRecomment(Request $request)
     {

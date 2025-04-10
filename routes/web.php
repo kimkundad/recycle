@@ -62,6 +62,8 @@ Route::get('/service', [App\Http\Controllers\HomeController::class, 'service']);
 
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
 
+Route::get('/steel', [App\Http\Controllers\HomeController::class, 'steel']);
+
 Route::get('/blog', [App\Http\Controllers\HomeController::class, 'blog']);
 Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'getArticles']);
 
@@ -76,6 +78,8 @@ Route::get('/category', [App\Http\Controllers\HomeController::class, 'category']
 Route::get('/category_find', [App\Http\Controllers\HomeController::class, 'getCategory']);
 
 Route::get('/recomment_find', [App\Http\Controllers\HomeController::class, 'getRecomment']);
+
+Route::get('/steel_find', [App\Http\Controllers\HomeController::class, 'steel_find']);
 
 Route::get('/certificate', [App\Http\Controllers\HomeController::class, 'certificate']);
 

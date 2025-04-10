@@ -105,6 +105,20 @@ function get_data_category(){
     return $objs;
 }
 
+
+function get_data_category2(){
+
+    $objs = category::where('id', 10)->where('status', 1)->get();
+    if($objs){
+        foreach($objs as $u ){
+            $sub = subcat::where('cat_id', $u->id)->where('status', 1)->get();
+            $u->option = $sub;
+        }
+    }
+
+    return $objs;
+}
+
 function formatDateThat($strDate)
 {
     $strYear = date("Y",strtotime($strDate));
