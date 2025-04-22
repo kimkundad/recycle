@@ -444,25 +444,58 @@ Product and Sevice - wpnrayong
 
             <div class="row">
 
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div class=" card-out-green">
-                            <div class="card-green-content">
-                                <div class="d-flex justify-content-between">
-                                    <img class="bg_green_icon" src="{{ url('img/service/รับรื้อถอน.png') }}" height="60" width="60">
-                                    <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
-                                </div>
-                                <div class="ps-block__content_out-green pt-20">
-                                    <h3>We provide demolition services for industrial factories, petrochemical plants, power plants, large buildings</h3>
-                                    <p class="mb-0 fs-12px">
-                                    We provide demolition services for industrial factories, petrochemical plants, power plants, large buildings,
-                                    and warehouses. Our work is systematically planned and managed by engineers specializing in demolition, utilizing modern and highly
-                                    efficient machinery, along with a comprehensive transportation system. Additionally, we purchase surplus materials from demolition projects,
-                                    including machinery, scrap metal, copper and stainless at competitive prices. On-site evaluations are free and we are pleasure to offer consultation services.
-                                </p>
-                                </div>
-                            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="card-out-green">
+                    <div class="card-green-content">
+                        <div class="d-flex justify-content-between">
+                            <img class="bg_green_icon" src="{{ url('img/service/รับรื้อถอน.png') }}" height="60" width="60">
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request Service</a>
+                        </div>
+                        <div class="ps-block__content_out-green pt-20">
+                            <h3>Industrial Plant, Petrochemical Plant, and Power Plant Demolition</h3>
+                            <p class="mb-0 min-h-125 fs-13px">
+                                We provide demolition services for industrial plants, petrochemical plants,<br>
+                                power plants, large buildings, and warehouses. Our projects are systematically planned and supervised by demolition engineers using modern, high-efficiency machinery. We offer a complete logistics system and purchase surplus equipment from demolitions, including machinery, scrap metal, copper, and stainless steel, at competitive prices.
+                            </p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="card-out-green">
+                    <div class="card-green-content">
+                        <div class="d-flex justify-content-between">
+                            <img class="bg_green_icon" src="{{ url('img/service/steel.svg') }}" height="60" width="60">
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/steel?id=10') }}">Request Service</a>
+                        </div>
+                        <div class="ps-block__content_out-green pt-20">
+                            <h3>Structural Steel</h3>
+                            <p class="mb-0 min-h-145 fs-13px">
+                                We offer a complete range of structural steel products in the Eastern region under the trusted name "WPN". Our commitment lies in sourcing high-quality steel products, with strict quality control and production processes that comply with TIS standards, to meet the diverse needs of construction, industrial projects, and various structural works effectively.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="card-out-green">
+                    <div class="card-green-content">
+                        <div class="d-flex justify-content-between">
+                            <img class="bg_green_icon" src="{{ url('img/service/warehouse.svg') }}" height="60" width="60">
+                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request Service</a>
+                        </div>
+                        <div class="ps-block__content_out-green pt-20">
+                            <h3>Warehouse for Rent</h3>
+                            <p class="mb-0 min-h-145 fs-13px">
+                                We offer comprehensive warehouse rental services, including storage yards, in Rayong and Songkhla areas. A variety of space sizes are available to meet all your business needs, whether for storage or as a distribution center. Spaces can be rented flexibly according to your requirements, with consultation services for selecting suitable space sizes. Fully equipped facilities and 24-hour security are provided.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
     <div class=" card-out-green">
