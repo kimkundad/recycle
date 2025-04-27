@@ -62,6 +62,8 @@ Route::get('/service', [App\Http\Controllers\HomeController::class, 'service']);
 
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
 
+Route::get('/warehouse', [App\Http\Controllers\HomeController::class, 'warehouse']);
+
 Route::get('/steel', [App\Http\Controllers\HomeController::class, 'steel']);
 
 Route::get('/blog', [App\Http\Controllers\HomeController::class, 'blog']);

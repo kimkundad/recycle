@@ -335,6 +335,8 @@
             <li class="menu-item-has-children">
                 <a href="{{ url('/service') }}">สินค้าและบริการ</a>
             </li>
+            <li class="menu-item-has-children"><a href="{{ url('/steel?id=10') }}">เหล็กรูปพรรณ</a></li>
+                    <li class="menu-item-has-children"><a href="{{ url('/warehouse') }}">Warehouse</a></li>
             <li class="menu-item-has-children">
                 <a href="{{ url('/about') }}">เกี่ยวกับเรา</a>
             </li>
@@ -356,6 +358,8 @@
             <li class="menu-item-has-children">
                 <a href="{{ url('/service') }}">Product and Sevice</a>
             </li>
+            <li class="menu-item-has-children"><a href="{{ url('/steel?id=10') }}">Steel</a></li>
+                    <li class="menu-item-has-children"><a href="{{ url('/warehouse') }}">Warehouse</a></li>
             <li class="menu-item-has-children">
                 <a href="{{ url('/about') }}">About us</a>
             </li>
