@@ -123,7 +123,7 @@ min-height: 90px
 <div class="ps-page--single" >
 
 
-<div class="ps-vendor-banner bg--cover" data-background="{{ url('img/slide/1743735166-WPN-Web-09_0_0.jpg') }}" style="background: url({{ url('img/slide/1743735166-WPN-Web-09_0_0.jpg') }});">
+<div class="ps-vendor-banner bg--cover" data-background="{{ url('img/slide/warehouse.jpg') }}" style="background: url({{ url('img/slide/warehouse.jpg') }});">
             <div class="container">
                 <h2>พื้นที่ระยอง ขนาด 40,000 ตร.ม. พื้นที่สงขลา ขนาด 29,600 ตร.ม. ทำเลดี ใกล้เส้นทางคมนาคมหลัก ระบบรักษาความปลอดภัย 24 ชม. แบ่งให้เช่าตามความต้องการ </h2><a class="ps-btn ps-btn--lg" href="{{ url('/contact') }}">Request service</a>
             </div>
