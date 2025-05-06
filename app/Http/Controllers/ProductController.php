@@ -75,7 +75,7 @@ class ProductController extends Controller
     public function create()
     {
         //
-        $cat = subcat::where('status', 1)->get();
+        $cat = subcat::get();
         $brand = brand::where('status', 1)->get();
         $unit_product = unit_product::where('unit_status', 1)->get();
 

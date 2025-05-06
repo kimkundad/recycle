@@ -127,7 +127,7 @@ class HomeController extends Controller
             )
             ->leftjoin('categories', 'categories.id',  'products.cat_id')
             ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')
-            ->where('products.type_pro', 2)
+            ->where('products.type_pro', 17)
             ->limit(6)
             ->get();
 
