@@ -2,9 +2,9 @@
 
 @section('title')
 @if (session()->get('locale') == 'th')
-เกี่ยวกับวงษ์พาณิชย์ - wpnrayong
+บริการให้เช่าโกดัง – คลังสินค้า ลานวางสินค้า - wpnrayong
 @else
-About us - wpnrayong
+Warehouse - wpnrayong
 @endif
 @stop
 
