@@ -136,7 +136,7 @@ min-height: 90px
                     <h4>บริการให้เช่าโกดัง – คลังสินค้า ลานวางสินค้า พื้นที่ระยองและพื้นที่สงขลา แบบครบวงจร <br>พร้อมพื้นที่ให้เลือกหลากหลายขนาด ตอบสนองทุกความต้องการของธุรกิจ</h4>
                 </div>
                 <div class="ps-section__content">
-                    <div class="row">
+                    <div class="row d-flex justify-content-center">
                         <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
                             <div class="ps-block--icon-box-2">
                                 <div class="ps-block__thumbnail"><img src="{{ url('/img/download.jpg') }}" alt=""></div>
