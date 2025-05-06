@@ -186,7 +186,7 @@ min-height: 90px
     <div class="container">
 
 
-        <div class="ps-section__content" style="padding-top: 0px;">
+        <div class="ps-section__content" style="padding-top: 0px; height: 380px;">
             <div class="">
                 <div class="row">
 
