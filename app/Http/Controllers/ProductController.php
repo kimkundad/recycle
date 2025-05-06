@@ -223,7 +223,7 @@ class ProductController extends Controller
 
         $img = product_image::where('product_id', $id)->get();
         $data['img'] = $img;
-        $cat = subcat::where('status', 1)->get();
+        $cat = subcat::get();
         $data['cat'] = $cat;
 
         $brand = brand::where('status', 1)->get();
