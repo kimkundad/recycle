@@ -188,7 +188,7 @@ min-height: 90px
 
         <div class="ps-section__content" style="padding-top: 0px; height: 380px;">
             <div class="">
-                <div class="row">
+                <div class="row d-flex justify-content-center">
 
 
                     @isset($pro)
