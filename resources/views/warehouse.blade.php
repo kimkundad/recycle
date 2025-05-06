@@ -125,7 +125,7 @@ min-height: 90px
 
 <div class="ps-vendor-banner bg--cover" data-background="{{ url('img/slide/warehouse.jpg') }}" style="background: url({{ url('img/slide/warehouse.jpg') }});">
             <div class="container">
-                <h2>พื้นที่ระยอง ขนาด 40,000 ตร.ม. พื้นที่สงขลา ขนาด 29,600 ตร.ม. ทำเลดี ใกล้เส้นทางคมนาคมหลัก ระบบรักษาความปลอดภัย 24 ชม. แบ่งให้เช่าตามความต้องการ </h2><a class="ps-btn ps-btn--lg" href="{{ url('/contact') }}">Request service</a>
+                <h2>พื้นที่ระยอง ขนาด 40,000 ตร.ม.. พื้นที่สงขลา ขนาด 29,600 ตร.ม.. ทำเลดี ใกล้เส้นทางคมนาคมหลัก ระบบรักษาความปลอดภัย 24 ชม. แบ่งให้เช่าตามความต้องการ </h2><a class="ps-btn ps-btn--lg" href="{{ url('/contact') }}">Request service</a>
             </div>
         </div>
 
@@ -159,7 +159,7 @@ min-height: 90px
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
+                        {{-- <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
                             <div class="ps-block--icon-box-2">
                                 <div class="ps-block__thumbnail"><img src="{{ url('/img/contact24.png') }}" alt=""></div>
                                 <div class="ps-block__content">
@@ -169,7 +169,7 @@ min-height: 90px
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -180,7 +180,7 @@ min-height: 90px
 
             <br><br>
                 <div class="ps-section__header" style="text-align: center;">
-                    <h3>คลังสินค้าให้เช่า และ ลานวางสินค้า พื้นที่ระยอง ขนาด 40,000 ตร.ม พื้นที่สงขลา ขนาด 16,000 ตร.ม ทำเลดี ใกล้เส้นทางคมนาคมหลัก ระบบรักษาความปลอดภัย 24 ชม. แบ่งให้เช่าตามความต้องการ</h3>
+                    <h3>คลังสินค้าให้เช่า และ ลานวางสินค้า พื้นที่ระยอง ขนาด 40,000 ตร.ม. พื้นที่สงขลา ขนาด 16,000 ตร.ม. ทำเลดี ใกล้เส้นทางคมนาคมหลัก ระบบรักษาความปลอดภัย 24 ชม. แบ่งให้เช่าตามความต้องการ</h3>
 
                     <div class="ps-deal-of-day">
     <div class="container">
