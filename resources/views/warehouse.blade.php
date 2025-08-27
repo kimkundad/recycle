@@ -190,133 +190,16 @@ min-height: 90px
             <div class="">
                 <div class="row d-flex justify-content-center">
 
-
-                    @isset($pro)
-                        @foreach($pro as $u)
-                            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
-                                <div class="ps-product">
-                                    <div class="ps-product__thumbnail h-min-set" ><a href="{{ url('product_detail/'.$u->id_q) }}">
-                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
-                                    </div>
-                                    <div class="ps-product__container">
-                                        @if(session()->get('locale') == 'th')
-                                        <a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
-                                        @else
-                                            @if($u->name_pro_en == null)
-                                                <a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
-                                            @else
-                                                <a class="ps-product__vendor" href="#">{{ $u->name_pro_en }}</a>
-                                            @endif
-
-                                        @endif
-                                        <div class="ps-product__content">
-                                            @if($u->discount == 0)
-
-                                            @if($u->typePrice == 1)
-                                            <p class="ps-product__price sale">
-                                                <a href="{{ url('/contact') }}">
-                                                    @if(session()->get('locale') == 'th')
-                                                    <b>ติดต่อฝ่ายขาย</b>
-                                                    @else
-                                                    <b>Contact Seller</b>
-                                                    @endif
-                                                </a>
-                                            </p>
-                                            @else
-                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
-                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
-                                                <b> {{ $u->name_unit }}</b>
-                                                @endif
-                                            </p>
-                                            @endif
-
-                                            @else
-
-                                            @php
-                                                $discount = ($u->amount * $u->discount) / 100 ;
-                                            @endphp
-
-                                            @if($u->typePrice == 1)
-                                            <p class="ps-product__price sale">
-                                                <a href="{{ url('/contact') }}">
-                                                    @if(session()->get('locale') == 'th')
-                                                    <b>ติดต่อฝ่ายขาย</b>
-                                                    @else
-                                                    <b>Contact Seller</b>
-                                                    @endif
-                                                </a>
-                                            </p>
-                                            @else
-                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
-                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
-                                                <b> {{ $u->name_unit }}</b>
-                                                @endif
-                                            </p>
-                                            @endif
-
-                                            @endif
-
-                                            @if(session()->get('locale') == 'th')
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
-                                            @else
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">View</a>
-                                            @endif
-                                        </div>
-                                        <div class="ps-product__content hover">
-                                            @if($u->discount == 0)
-
-                                            @if($u->typePrice == 1)
-                                            <p class="ps-product__price sale">
-                                                <a href="{{ url('/contact') }}">
-                                                    @if(session()->get('locale') == 'th')
-                                                    <b>ติดต่อฝ่ายขาย</b>
-                                                    @else
-                                                    <b>Contact Seller</b>
-                                                    @endif
-                                                </a>
-                                            </p>
-                                            @else
-                                            <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
-                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
-                                                <b> {{ $u->name_unit }}</b>
-                                                @endif
-                                            </p>
-                                            @endif
-
-                                            @else
-
-                                            @php
-                                                $discount = ($u->amount * $u->discount) / 100 ;
-                                            @endphp
-                                            @if($u->typePrice == 1)
-                                            <p class="ps-product__price sale">
-                                                <a href="{{ url('/contact') }}">
-                                                    @if(session()->get('locale') == 'th')
-                                                    <b>ติดต่อฝ่ายขาย</b>
-                                                    @else
-                                                    <b>Contact Seller</b>
-                                                    @endif
-                                                </a>
-                                            </p>
-                                            @else
-                                            <p class="ps-product__price sale">฿{{ number_format($u->amount-$discount, 2) }} <del>฿{{ number_format($u->amount, 2) }} </del>
-                                                @if($u->unit_id !== 3 && $u->unit_id !== null)
-                                                <b> {{ $u->name_unit }}</b>
-                                                @endif
-                                            </p>
-                                            @endif
-                                            @endif
-                                            @if(session()->get('locale') == 'th')
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
-                                            @else
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">View</a>
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    @endisset
+                        <div class="col-md-6 text-center">
+                        <a href="{{ url('product_detail/214') }}" >
+                            <img src="{{ url('/img/S__16621570_0.jpg') }}" alt="สาขาระยอง">
+                            สาขาระยอง</a>
+                        </div>
+                        <div class="col-md-6 text-center">
+                        <a href="{{ url('product_detail/214') }}" >
+                            <img src="{{ url('/img/S__16621572_0.jpg') }}" alt="สาขาสงขลา">
+                          สาขาสงขลา</a>
+                        </div>
 
                 </div>
             </div>
