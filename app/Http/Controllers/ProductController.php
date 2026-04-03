@@ -9,6 +9,9 @@ use App\Models\category;
 use App\Models\subcat;
 use App\Models\brand;
 use App\Models\product_image;
+use App\Models\DesignType;
+use App\Models\DesignMaterial;
+use App\Models\DesignSize;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\DB;
 use Response;
@@ -67,6 +70,29 @@ class ProductController extends Controller
 
     }
 
+    public function designProducts()
+    {
+        $objs = DB::table('products')->select(
+            'products.*',
+            'products.id as id_q',
+            'products.status as status1',
+            'subcats.*'
+            )
+            ->leftjoin('subcats', 'subcats.id', 'products.sub_cat_id')
+            ->where('products.sub_cat_id', 52)
+            ->orderBy('products.sort', 'asc')
+            ->orderBy('products.status', 'desc')
+            ->paginate(15);
+
+        $objs->setPath('');
+
+        $pageTitle = 'ผลิตภัณฑ์ดีไซน์';
+        $pageSubtitle = 'ผลิตภัณฑ์ดีไซน์ทั้งหมด';
+        $createUrl = url('admin/product/create');
+
+        return view('admin.product.design_products', compact('objs'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -78,10 +104,16 @@ class ProductController extends Controller
         $cat = subcat::get();
         $brand = brand::where('status', 1)->get();
         $unit_product = unit_product::where('unit_status', 1)->get();
+        $designTypes = DesignType::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+        $designMaterials = DesignMaterial::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+        $designSizes = DesignSize::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
 
         $data['unit_product'] = $unit_product;
         $data['cat'] = $cat;
         $data['brand'] = $brand;
+        $data['designTypes'] = $designTypes;
+        $data['designMaterials'] = $designMaterials;
+        $data['designSizes'] = $designSizes;
         $data['method'] = "post";
         $data['url'] = url('admin/product');
         return view('admin.product.create', $data);
@@ -149,6 +181,8 @@ class ProductController extends Controller
             $cat_id = $new->cat_id;
         }
 
+           $isDesignProduct = (int) $mysub === 52;
+
            $objs = new product();
            $objs->name_pro = $request['name_pro'];
            $objs->image_pro = $image->hashName();
@@ -173,7 +207,14 @@ class ProductController extends Controller
            $objs->condition_en = $request['condition_en'];
            $objs->title_pro_en = $request['title_pro_en'];
            $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
+           $objs->material = $isDesignProduct ? $request->input('material') : null;
+           $objs->material_en = $isDesignProduct ? $request->input('material_en') : null;
+           $objs->highlights = $isDesignProduct ? $request->input('highlights') : null;
+           $objs->highlights_en = $isDesignProduct ? $request->input('highlights_en') : null;
+           $objs->use_case = $isDesignProduct ? $request->input('use_case') : null;
+           $objs->use_case_en = $isDesignProduct ? $request->input('use_case_en') : null;
            $objs->save();
+           $this->syncDesignFilters($objs, $request, $isDesignProduct);
 
            return redirect(url('admin/product'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
 
@@ -229,11 +270,17 @@ class ProductController extends Controller
         $brand = brand::where('status', 1)->get();
         $data['brand'] = $brand;
 
-        $objs = product::find($id);
+        $objs = product::with(['designTypes', 'designMaterials', 'designSizes'])->find($id);
         $data['url'] = url('admin/product/'.$id);
         $data['method'] = "put";
         $data['objs'] = $objs;
         $data['pro_id'] = $id;
+        $data['designTypes'] = DesignType::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+        $data['designMaterials'] = DesignMaterial::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+        $data['designSizes'] = DesignSize::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+        $data['selectedDesignTypeIds'] = $objs ? $objs->designTypes->pluck('id')->toArray() : [];
+        $data['selectedDesignMaterialIds'] = $objs ? $objs->designMaterials->pluck('id')->toArray() : [];
+        $data['selectedDesignSizeIds'] = $objs ? $objs->designSizes->pluck('id')->toArray() : [];
         return view('admin.product.edit', $data);
     }
 
@@ -340,6 +387,8 @@ class ProductController extends Controller
                 $amount = $request['amount'];
             }
 
+            $isDesignProduct = (int) $mysub === 52;
+
             if($image == NULL){
 
            $objs = product::find($id);
@@ -365,7 +414,14 @@ class ProductController extends Controller
            $objs->condition_en = $request['condition_en'];
            $objs->title_pro_en = $request['title_pro_en'];
            $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
+           $objs->material = $isDesignProduct ? $request->input('material') : null;
+           $objs->material_en = $isDesignProduct ? $request->input('material_en') : null;
+           $objs->highlights = $isDesignProduct ? $request->input('highlights') : null;
+           $objs->highlights_en = $isDesignProduct ? $request->input('highlights_en') : null;
+           $objs->use_case = $isDesignProduct ? $request->input('use_case') : null;
+           $objs->use_case_en = $isDesignProduct ? $request->input('use_case_en') : null;
            $objs->save();
+           $this->syncDesignFilters($objs, $request, $isDesignProduct);
 
 
 
@@ -413,12 +469,33 @@ class ProductController extends Controller
            $objs->condition_en = $request['condition_en'];
            $objs->title_pro_en = $request['title_pro_en'];
            $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
+           $objs->material = $isDesignProduct ? $request->input('material') : null;
+           $objs->material_en = $isDesignProduct ? $request->input('material_en') : null;
+           $objs->highlights = $isDesignProduct ? $request->input('highlights') : null;
+           $objs->highlights_en = $isDesignProduct ? $request->input('highlights_en') : null;
+           $objs->use_case = $isDesignProduct ? $request->input('use_case') : null;
+           $objs->use_case_en = $isDesignProduct ? $request->input('use_case_en') : null;
            $objs->save();
+           $this->syncDesignFilters($objs, $request, $isDesignProduct);
 
             }
 
 
             return redirect(url('admin/product/'.$id.'/edit'))->with('edit_success','คุณทำการเพิ่มอสังหา สำเร็จ');
+    }
+
+    private function syncDesignFilters(product $product, Request $request, bool $isDesignProduct)
+    {
+        if (!$isDesignProduct) {
+            $product->designTypes()->sync([]);
+            $product->designMaterials()->sync([]);
+            $product->designSizes()->sync([]);
+            return;
+        }
+
+        $product->designTypes()->sync($request->input('design_type_ids', []));
+        $product->designMaterials()->sync($request->input('design_material_ids', []));
+        $product->designSizes()->sync($request->input('design_size_ids', []));
     }
 
     /**

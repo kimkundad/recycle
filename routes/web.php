@@ -60,6 +60,10 @@ Route::get('product_detail/{id}', [App\Http\Controllers\HomeController::class, '
 
 Route::get('/service', [App\Http\Controllers\HomeController::class, 'service']);
 
+Route::get('/design-products', [App\Http\Controllers\HomeController::class, 'designProducts']);
+Route::get('/design-products/find', [App\Http\Controllers\HomeController::class, 'designProductsFind']);
+Route::get('/design-products/{id}', [App\Http\Controllers\HomeController::class, 'designProductDetail']);
+
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
 
 Route::get('/warehouse', [App\Http\Controllers\HomeController::class, 'warehouse']);
@@ -139,6 +143,14 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::post('api/post_setting/', [App\Http\Controllers\SettingController::class, 'post_setting']);
 
     Route::get('admin/recommend/', [App\Http\Controllers\ProductController::class, 'recommend']);
+    Route::get('admin/design-products/', [App\Http\Controllers\ProductController::class, 'designProducts']);
+    Route::get('admin/design-product-filters/', [App\Http\Controllers\DesignProductFilterController::class, 'index']);
+    Route::get('admin/design-product-filters/create', [App\Http\Controllers\DesignProductFilterController::class, 'create']);
+    Route::post('admin/design-product-filters/', [App\Http\Controllers\DesignProductFilterController::class, 'store']);
+    Route::get('admin/design-product-filters/{group}/{id}/edit', [App\Http\Controllers\DesignProductFilterController::class, 'edit']);
+    Route::put('admin/design-product-filters/{group}/{id}', [App\Http\Controllers\DesignProductFilterController::class, 'update']);
+    Route::post('/api/api_post_status_design_product_filter', [App\Http\Controllers\DesignProductFilterController::class, 'api_post_status']);
+    Route::get('api/del_design_product_filter/{group}/{id}', [App\Http\Controllers\DesignProductFilterController::class, 'destroy']);
 
     Route::get('/admin/subcat/create/{id}', [App\Http\Controllers\SubCatController::class, 'create']);
     Route::get('/admin/subcat/create_new', [App\Http\Controllers\SubCatController::class, 'create_new']);

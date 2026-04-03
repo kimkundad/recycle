@@ -218,6 +218,98 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="js-design-product-fields" style="display: none;">
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">ประเภทสินค้า</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <select name="design_type_ids[]" class="form-select form-select-solid" multiple size="6">
+                                                @isset($designTypes)
+                                                @foreach($designTypes as $item)
+                                                <option value="{{ $item->id }}" @if(in_array($item->id, old('design_type_ids', $selectedDesignTypeIds ?? []))) selected @endif>
+                                                    {{ $item->name_th }}@if($item->name_en) / {{ $item->name_en }}@endif
+                                                </option>
+                                                @endforeach
+                                                @endisset
+                                            </select>
+                                            <div class="form-text">เลือกได้หลายประเภท หากยังไม่มีข้อมูลสามารถเพิ่มได้ที่เมนูตัวกรองสินค้าดีไซน์</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">วัสดุ</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <select name="design_material_ids[]" class="form-select form-select-solid" multiple size="6">
+                                                @isset($designMaterials)
+                                                @foreach($designMaterials as $item)
+                                                <option value="{{ $item->id }}" @if(in_array($item->id, old('design_material_ids', $selectedDesignMaterialIds ?? []))) selected @endif>
+                                                    {{ $item->name_th }}@if($item->name_en) / {{ $item->name_en }}@endif
+                                                </option>
+                                                @endforeach
+                                                @endisset
+                                            </select>
+                                            <div class="form-text">เลือกวัสดุได้หลายค่า เช่น เหล็ก + ไม้รีเคลม</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">ขนาด</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <select name="design_size_ids[]" class="form-select form-select-solid" multiple size="6">
+                                                @isset($designSizes)
+                                                @foreach($designSizes as $item)
+                                                <option value="{{ $item->id }}" @if(in_array($item->id, old('design_size_ids', $selectedDesignSizeIds ?? []))) selected @endif>
+                                                    {{ $item->name_th }}@if($item->name_en) / {{ $item->name_en }}@endif
+                                                </option>
+                                                @endforeach
+                                                @endisset
+                                            </select>
+                                            <div class="form-text">เลือกขนาดได้หลายค่า หากสินค้าชิ้นเดียวมีหลายเวอร์ชัน</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">วัสดุที่ใช้ (Material)</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="material" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('material', $objs->material) }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">วัสดุที่ใช้ (Material) En</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="material_en" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('material_en', $objs->material_en) }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">จุดเด่นสินค้า (Highlight / Features)</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="highlights" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('highlights', $objs->highlights) }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">จุดเด่นสินค้า (Highlight / Features) En</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="highlights_en" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('highlights_en', $objs->highlights_en) }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">การใช้งาน (Use Case)</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="use_case" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('use_case', $objs->use_case) }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">การใช้งาน (Use Case) En</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="use_case_en" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('use_case_en', $objs->use_case_en) }}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="row mb-6">
                                     <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">ชื่อสินค้า En</label>
@@ -727,6 +819,37 @@ myDropzone.on("removedfile", function (file) {
         dropzone.querySelector('.dropzone-remove-all').style.display = "none";
     }
 });
+
+const designSubcatId = '52';
+const subcatSelect = document.querySelector('select[name="sub_cat_id"]');
+const designFieldsWrap = document.querySelector('.js-design-product-fields');
+const designFieldInputs = designFieldsWrap ? designFieldsWrap.querySelectorAll('textarea, select') : [];
+const productForm = document.getElementById('kt_account_profile_details_form');
+
+function toggleDesignFields() {
+    if (!subcatSelect || !designFieldsWrap) {
+        return;
+    }
+
+    const isDesignProduct = subcatSelect.value === designSubcatId;
+    designFieldsWrap.style.display = isDesignProduct ? '' : 'none';
+
+    designFieldInputs.forEach(function (input) {
+        input.disabled = !isDesignProduct;
+        if (!isDesignProduct) {
+            input.value = '';
+        }
+    });
+}
+
+if (subcatSelect) {
+    subcatSelect.addEventListener('change', toggleDesignFields);
+    toggleDesignFields();
+}
+
+if (productForm) {
+    productForm.addEventListener('submit', toggleDesignFields);
+}
 
 </script>
 @stop('scripts')

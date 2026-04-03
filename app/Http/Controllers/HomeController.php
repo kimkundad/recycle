@@ -13,9 +13,13 @@ use App\Models\certificate;
 use App\Models\news;
 use App\Models\alliance;
 use App\Models\product_image;
+use App\Models\DesignType;
+use App\Models\DesignMaterial;
+use App\Models\DesignSize;
 use Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Str;
 use App\Mail\Contacted;
 use App\Models\hproject;
 
@@ -671,21 +675,167 @@ class HomeController extends Controller
 
     }
 
+    public function designProducts()
+    {
+      $data['count'] = product::where('sub_cat_id', 52)->where('status', 1)->count();
+      $data['designTypes'] = DesignType::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+      $data['designMaterials'] = DesignMaterial::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+      $data['designSizes'] = DesignSize::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+
+      return view('design-products-listing', $data);
+    }
+
+    public function designProductsFind(Request $request)
+    {
+      $typeIds = collect((array) $request->input('types', []))
+        ->filter(fn ($id) => is_numeric($id))
+        ->map(fn ($id) => (int) $id)
+        ->values()
+        ->all();
+
+      $materialIds = collect((array) $request->input('materials', []))
+        ->filter(fn ($id) => is_numeric($id))
+        ->map(fn ($id) => (int) $id)
+        ->values()
+        ->all();
+
+      $sizeIds = collect((array) $request->input('sizes', []))
+        ->filter(fn ($id) => is_numeric($id))
+        ->map(fn ($id) => (int) $id)
+        ->values()
+        ->all();
+
+      $sort = $request->input('sort', 'latest');
+
+      $results = DB::table('products')->select(
+        'products.*',
+        'products.id as id_q'
+        )
+        ->where('products.status', 1)
+        ->where('products.sub_cat_id', 52);
+
+      if (!empty($typeIds)) {
+        $results->whereExists(function ($query) use ($typeIds) {
+          $query->select(DB::raw(1))
+            ->from('product_design_type')
+            ->whereColumn('product_design_type.product_id', 'products.id')
+            ->whereIn('product_design_type.design_type_id', $typeIds);
+        });
+      }
+
+      if (!empty($materialIds)) {
+        $results->whereExists(function ($query) use ($materialIds) {
+          $query->select(DB::raw(1))
+            ->from('product_design_material')
+            ->whereColumn('product_design_material.product_id', 'products.id')
+            ->whereIn('product_design_material.design_material_id', $materialIds);
+        });
+      }
+
+      if (!empty($sizeIds)) {
+        $results->whereExists(function ($query) use ($sizeIds) {
+          $query->select(DB::raw(1))
+            ->from('product_design_size')
+            ->whereColumn('product_design_size.product_id', 'products.id')
+            ->whereIn('product_design_size.design_size_id', $sizeIds);
+        });
+      }
+
+      switch ($sort) {
+        case 'oldest':
+          $results->orderBy('products.id', 'asc');
+          break;
+        case 'name_asc':
+          $results->orderBy('products.name_pro', 'asc');
+          break;
+        case 'name_desc':
+          $results->orderBy('products.name_pro', 'desc');
+          break;
+        case 'sort_asc':
+          $results->orderBy('products.sort', 'asc')->orderBy('products.id', 'desc');
+          break;
+        default:
+          $results->orderBy('products.id', 'desc');
+          break;
+      }
+
+      $results = $results
+        ->paginate(12);
+
+      $articles = '';
+
+      if ($request->ajax()) {
+        foreach ($results as $u) {
+          $detailUrl = url('design-products/' . $u->id_q);
+          $contactUrl = url('contact');
+          $imageUrl = url('images/wpnrayong/product/' . $u->image_pro);
+
+          if (session()->get('locale') == 'th') {
+            $name = $u->name_pro;
+            $summarySource = $u->title_pro ?: strip_tags((string) $u->detail_pro);
+            $detailLabel = 'ดูรายละเอียด';
+            $contactLabel = 'สอบถาม';
+          } else {
+            $name = $u->name_pro_en ?: $u->name_pro;
+            $summarySource = $u->title_pro_en ?: $u->title_pro ?: strip_tags((string) ($u->detail_pro_en ?: $u->detail_pro));
+            $detailLabel = 'View Details';
+            $contactLabel = 'Inquire';
+          }
+
+          $summary = e(Str::limit(trim(strip_tags((string) $summarySource)), 110));
+          $name = e($name);
+
+          $articles .= '
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-4">
+                <article class="design-product-card">
+                    <a class="design-product-card__image" href="' . $detailUrl . '">
+                        <img src="' . $imageUrl . '" alt="' . $name . '" />
+                    </a>
+                    <div class="design-product-card__body">
+                        <h3 class="design-product-card__title">
+                            <a href="' . $detailUrl . '">' . $name . '</a>
+                        </h3>
+                        <p class="design-product-card__summary">' . $summary . '</p>
+                        <div class="design-product-card__actions">
+                            <a class="design-product-btn design-product-btn--primary" href="' . $detailUrl . '">' . $detailLabel . '</a>
+                            <a class="design-product-btn design-product-btn--secondary" href="' . $contactUrl . '">' . $contactLabel . '</a>
+                        </div>
+                    </div>
+                </article>
+            </div>';
+        }
+
+        return response()->json([
+          'html' => $articles,
+          'has_more' => $results->hasMorePages(),
+          'total' => $results->total(),
+        ]);
+      }
+
+      return '';
+    }
+
     public function product_detail($id){
+        $data = $this->getProductDetailData($id);
+        return view('product_detail', $data);
 
-      $img = product_image::where('product_id', $id)->get();
-      $data['img'] = $img;
+      }
 
-      // $pro = DB::table('products')->select(
-      //   'products.*',
-      //   'products.id as id_q',
-      //   'products.status as status1',
-      //   'categories.*'
-      //   )
-      //   ->leftjoin('categories', 'categories.id',  'products.cat_id')
-      //   ->where('products.type_pro', 2)
-      //   ->limit(6)
-      //   ->get();
+    public function designProductDetail($id)
+    {
+        $data = $this->getProductDetailData($id);
+
+        if (!isset($data['objs']) || (int) $data['objs']->sub_cat_id !== 52) {
+          abort(404);
+        }
+
+        return view('design-product-detail', $data);
+    }
+
+    private function getProductDetailData($id)
+    {
+        $img = product_image::where('product_id', $id)->get();
+        $data['img'] = $img;
 
         $pro = DB::table('products')->select(
           'products.*',
@@ -696,35 +846,40 @@ class HomeController extends Controller
           )
           ->leftjoin('categories', 'categories.id',  'products.cat_id')
           ->leftjoin('unit_products', 'unit_products.id',  'products.unit_id')
-          ->where('products.type_pro', 2)
+          ->where('products.sub_cat_id', 52)
           ->where('products.status', 1)
+          ->where('products.id', '!=', $id)
+          ->orderBy('products.sort', 'asc')
+          ->orderBy('products.id', 'desc')
           ->limit(6)
           ->get();
 
-      $data['pro'] = $pro;
+        $data['pro'] = $pro;
 
-      $objs = DB::table('products')->select(
-        'products.*',
-        'products.id as id_q',
-        'products.status as status1',
-        'categories.*'
-        )
-        ->leftjoin('categories', 'categories.id',  'products.cat_id')
-        ->where('products.id', $id)
-        ->first();
+        $objs = DB::table('products')->select(
+          'products.*',
+          'products.id as id_q',
+          'products.status as status1',
+          'categories.*'
+          )
+          ->leftjoin('categories', 'categories.id',  'products.cat_id')
+          ->where('products.id', $id)
+          ->first();
 
-        if(isset($objs->brand)){
-        $brand = brand::where('id', $objs->brand)->first();
-        $data['brand'] = $brand;
-        }else{
-        $data['brand'] = null;
+        if (!$objs) {
+          abort(404);
         }
 
+        if(isset($objs->brand)){
+          $brand = brand::where('id', $objs->brand)->first();
+          $data['brand'] = $brand;
+        }else{
+          $data['brand'] = null;
+        }
 
+        $data['objs'] = $objs;
 
-      $data['objs'] = $objs;
-      return view('product_detail', $data);
-
+        return $data;
     }
 
 
