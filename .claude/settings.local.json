@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan *)",
+      "PowerShell(& \"C:\\\\xampp\\\\php\\\\php.exe\" --version)"
+    ]
+  }
+}

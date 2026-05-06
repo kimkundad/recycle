@@ -606,7 +606,7 @@
                             <span class="design-detail-meta__label">{{ session()->get('locale') == 'th' ? 'ประเภท' : 'Category' }}</span>
                             <div class="design-detail-meta__value">{{ $objs->cat_name ?: (session()->get('locale') == 'th' ? 'ผลิตภัณฑ์ดีไซน์' : 'Design Product') }}</div>
                         </div>
-                        <div class="design-detail-meta__item">
+                        {{-- <div class="design-detail-meta__item">
                             <span class="design-detail-meta__label">{{ session()->get('locale') == 'th' ? 'Condition' : 'Condition' }}</span>
                             <div class="design-detail-meta__value">{{ session()->get('locale') == 'th' ? ($objs->condition ?: '-') : ($objs->condition_en ?: $objs->condition ?: '-') }}</div>
                         </div>
@@ -617,7 +617,7 @@
                         <div class="design-detail-meta__item">
                             <span class="design-detail-meta__label">{{ session()->get('locale') == 'th' ? 'น้ำหนักสุทธิ' : 'Net Weight' }}</span>
                             <div class="design-detail-meta__value">{{ $objs->weight ?: '-' }}</div>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="design-detail-contact">

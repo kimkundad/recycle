@@ -26,6 +26,35 @@
 
             <div id="kt_app_content" class="app-content flex-column-fluid">
                 <div id="kt_app_content_container" class="app-container container-xxl">
+
+                    @if(session('edit_success'))
+                        <div class="alert alert-success mb-5">{{ session('edit_success') }}</div>
+                    @endif
+
+                    <div class="card mb-8">
+                        <div class="card-header border-0 pt-5">
+                            <h3 class="card-title">
+                                <span class="card-label fw-bold fs-5">การแสดงผลตัวกรองบนหน้าเว็บไซต์</span>
+                            </h3>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="d-flex flex-wrap gap-8 align-items-center">
+                                <div class="form-check form-switch form-check-custom form-check-solid">
+                                    <input class="form-check-input w-45px h-30px js-filter-visibility" type="checkbox" id="show_filter_types" data-field="show_filter_types" @if($showFilterTypes) checked @endif>
+                                    <label class="form-check-label fw-semibold ms-3" for="show_filter_types">แสดงตัวกรอง "ประเภทสินค้า"</label>
+                                </div>
+                                <div class="form-check form-switch form-check-custom form-check-solid">
+                                    <input class="form-check-input w-45px h-30px js-filter-visibility" type="checkbox" id="show_filter_materials" data-field="show_filter_materials" @if($showFilterMaterials) checked @endif>
+                                    <label class="form-check-label fw-semibold ms-3" for="show_filter_materials">แสดงตัวกรอง "วัสดุ"</label>
+                                </div>
+                                <div class="form-check form-switch form-check-custom form-check-solid">
+                                    <input class="form-check-input w-45px h-30px js-filter-visibility" type="checkbox" id="show_filter_sizes" data-field="show_filter_sizes" @if($showFilterSizes) checked @endif>
+                                    <label class="form-check-label fw-semibold ms-3" for="show_filter_sizes">แสดงตัวกรอง "ขนาด"</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row g-5 g-xl-8">
                         @foreach($groupItems as $groupKey => $group)
                             <div class="col-xl-4">
@@ -99,6 +128,18 @@
                 data: {
                     group: $(this).data('group'),
                     item_id: $(this).data('id')
+                }
+            });
+        });
+
+        $('.js-filter-visibility').change(function () {
+            $.ajax({
+                type: 'POST',
+                url: '{{ url('api/update_design_filter_visibility') }}',
+                headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+                data: {
+                    field: $(this).data('field'),
+                    value: $(this).is(':checked') ? 1 : 0
                 }
             });
         });

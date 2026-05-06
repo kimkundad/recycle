@@ -270,7 +270,6 @@
                                     <!--end::Col-->
                                 </div>
 
-                            
 
                             </div>
                             <div class="card-footer d-flex justify-content-end py-6 px-9">
@@ -317,6 +316,5 @@
 @endsection
 
 @section('scripts')
-
 
 @stop('scripts')

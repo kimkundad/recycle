@@ -22,6 +22,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Str;
 use App\Mail\Contacted;
 use App\Models\hproject;
+use App\Models\setting;
 
 
 class HomeController extends Controller
@@ -677,10 +678,14 @@ class HomeController extends Controller
 
     public function designProducts()
     {
+      $siteSetting = setting::find(1);
       $data['count'] = product::where('sub_cat_id', 52)->where('status', 1)->count();
       $data['designTypes'] = DesignType::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
       $data['designMaterials'] = DesignMaterial::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
       $data['designSizes'] = DesignSize::where('status', 1)->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+      $data['showFilterTypes'] = $siteSetting ? (bool) $siteSetting->show_filter_types : true;
+      $data['showFilterMaterials'] = $siteSetting ? (bool) $siteSetting->show_filter_materials : true;
+      $data['showFilterSizes'] = $siteSetting ? (bool) $siteSetting->show_filter_sizes : true;
 
       return view('design-products-listing', $data);
     }

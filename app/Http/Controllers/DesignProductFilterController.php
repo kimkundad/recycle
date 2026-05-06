@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DesignMaterial;
 use App\Models\DesignSize;
 use App\Models\DesignType;
+use App\Models\setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -52,7 +53,30 @@ class DesignProductFilterController extends Controller
             ];
         }
 
+        $siteSetting = setting::find(1);
+        $data['showFilterTypes'] = $siteSetting ? (bool) $siteSetting->show_filter_types : true;
+        $data['showFilterMaterials'] = $siteSetting ? (bool) $siteSetting->show_filter_materials : true;
+        $data['showFilterSizes'] = $siteSetting ? (bool) $siteSetting->show_filter_sizes : true;
+
         return view('admin.design_product_filters.index', $data);
+    }
+
+    public function apiUpdateVisibility(Request $request)
+    {
+        $allowed = ['show_filter_types', 'show_filter_materials', 'show_filter_sizes'];
+        $field = $request->input('field');
+
+        if (!in_array($field, $allowed)) {
+            return response()->json(['success' => false], 422);
+        }
+
+        $objs = setting::find(1);
+        if ($objs) {
+            $objs->$field = (int) $request->input('value', 0);
+            $objs->save();
+        }
+
+        return response()->json(['success' => true]);
     }
 
     public function create(Request $request)

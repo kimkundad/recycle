@@ -135,7 +135,6 @@ class ProductController extends Controller
             'image_pro' => 'required',
             'sub_cat_id' => 'required',
             'brand' => 'required',
-            'sku' => 'required',
             'sum' => 'required'
         ]);
 
@@ -349,7 +348,6 @@ class ProductController extends Controller
             'name_pro' => 'required',
             'sub_cat_id' => 'required',
             'brand' => 'required',
-            'sku' => 'required',
             'amount' => 'required',
             'sum' => 'required'
         ]);

@@ -346,6 +346,10 @@ Upcycle Design Products - wpnrayong
         text-align: center;
     }
 
+    .design-products-layout--no-sidebar {
+        grid-template-columns: 1fr;
+    }
+
     @media (max-width: 991px) {
         .design-products-hero__wrap {
             padding: 36px 24px;
@@ -403,7 +407,7 @@ Upcycle Design Products - wpnrayong
 
 @section('content')
 <div class="design-products-page">
-    <section class="design-products-hero">
+    {{-- <section class="design-products-hero">
         <div class="container">
             <div class="design-products-hero__wrap">
                 <span class="design-products-hero__eyebrow">From Waste to Worth.</span>
@@ -422,17 +426,22 @@ Upcycle Design Products - wpnrayong
                 @endif
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="design-products-listing">
+    <section class="design-products-listing" >
         <div class="container">
-            <div class="design-products-layout">
+            @php
+                $hasSidebar = $showFilterTypes || $showFilterMaterials || $showFilterSizes;
+            @endphp
+            <div class="design-products-layout{{ $hasSidebar ? '' : ' design-products-layout--no-sidebar' }}" style="padding-top: 45px">
+                @if($hasSidebar)
                 <aside class="design-products-sidebar">
                     <div class="design-filter-intro">
                         <i class="icon-equalizer"></i>
                         <span>{{ session()->get('locale') == 'th' ? 'หมวดหมู่ : ผลิตภัณฑ์ดีไซน์' : 'Category : Design Products' }}</span>
                     </div>
 
+                    @if($showFilterTypes)
                     <div class="design-filter-group">
                         <h4 class="design-filter-group__title">{{ session()->get('locale') == 'th' ? 'ประเภทสินค้า' : 'Product Type' }}</h4>
                         @forelse($designTypes as $item)
@@ -446,7 +455,9 @@ Upcycle Design Products - wpnrayong
                         </div>
                         @endforelse
                     </div>
+                    @endif
 
+                    @if($showFilterMaterials)
                     <div class="design-filter-group">
                         <h4 class="design-filter-group__title">{{ session()->get('locale') == 'th' ? 'วัสดุ' : 'Material' }}</h4>
                         @forelse($designMaterials as $item)
@@ -460,7 +471,9 @@ Upcycle Design Products - wpnrayong
                         </div>
                         @endforelse
                     </div>
+                    @endif
 
+                    @if($showFilterSizes)
                     <div class="design-filter-group">
                         <h4 class="design-filter-group__title">{{ session()->get('locale') == 'th' ? 'ขนาด' : 'Size' }}</h4>
                         @forelse($designSizes as $item)
@@ -474,12 +487,14 @@ Upcycle Design Products - wpnrayong
                         </div>
                         @endforelse
                     </div>
+                    @endif
 
                     <div class="design-filter-actions">
                         <button class="design-filter-btn design-filter-btn--primary" type="button" id="design-filter-apply">{{ session()->get('locale') == 'th' ? 'ใช้ตัวกรอง' : 'Apply' }}</button>
                         <button class="design-filter-btn design-filter-btn--secondary" type="button" id="design-filter-reset">{{ session()->get('locale') == 'th' ? 'ล้างค่า' : 'Reset' }}</button>
                     </div>
                 </aside>
+                @endif
 
                 <div class="design-products-main">
                     <div class="design-products-toolbar">

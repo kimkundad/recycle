@@ -150,6 +150,7 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::get('admin/design-product-filters/{group}/{id}/edit', [App\Http\Controllers\DesignProductFilterController::class, 'edit']);
     Route::put('admin/design-product-filters/{group}/{id}', [App\Http\Controllers\DesignProductFilterController::class, 'update']);
     Route::post('/api/api_post_status_design_product_filter', [App\Http\Controllers\DesignProductFilterController::class, 'api_post_status']);
+    Route::post('/api/update_design_filter_visibility', [App\Http\Controllers\DesignProductFilterController::class, 'apiUpdateVisibility']);
     Route::get('api/del_design_product_filter/{group}/{id}', [App\Http\Controllers\DesignProductFilterController::class, 'destroy']);
 
     Route::get('/admin/subcat/create/{id}', [App\Http\Controllers\SubCatController::class, 'create']);
