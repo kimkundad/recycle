@@ -120,10 +120,10 @@
                     <li class="menu-item"><a href="{{ url('/') }}">หน้าแรก</a></li>
                     <li class="menu-item"><a href="{{ url('/service') }}">สินค้าและบริการ</a></li>
                     <li class="menu-item"><a href="{{ url('/steel?id=10') }}">เหล็กรูปพรรณ</a></li>
-                    {{-- <li class="menu-item"><a href="{{ url('/design-products') }}">ผลิตภัณฑ์ดีไซน์</a></li> --}}
+                    <li class="menu-item"><a href="{{ url('/design-products') }}">ผลิตภัณฑ์ดีไซน์</a></li>
                     <li class="menu-item"><a href="{{ url('/warehouse') }}">คลังสินค้า</a></li>
                     <li class="menu-item"><a href="{{ url('/about') }}">เกี่ยวกับเรา</a></li>
-                    <li class="menu-item"><a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a></li>
+                    <li class="menu-item"><a href="{{ url('/blog') }}">ประชาสัมพันธ์</a></li>
                     <li class="menu-item"><a href="{{ url('/contact') }}">ติดต่อเรา</a></li>
                 </ul>
                 <ul class="navigation__extra ">
