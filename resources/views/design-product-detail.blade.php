@@ -188,7 +188,7 @@
 
     .design-detail-summary {
         color: #536560;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.9;
         margin-bottom: 22px;
         max-width: 640px;
@@ -598,7 +598,7 @@
                     <h1 class="design-detail-title">{{ $localizedName }}</h1>
 
                     <p class="design-detail-summary">
-                        {{ session()->get('locale') == 'th' ? ($objs->title_pro ?: 'ผลงานดีไซน์ที่เปลี่ยนวัสดุเหลือใช้ให้กลายเป็นชิ้นงานที่ใช้งานได้จริงและมีคุณค่าในพื้นที่ของคุณ') : ($objs->title_pro_en ?: $objs->title_pro ?: 'A design-led piece that transforms surplus materials into something functional, distinctive, and worth keeping.') }}
+                        {!! nl2br(e(session()->get('locale') == 'th' ? ($objs->title_pro ?: 'ผลงานดีไซน์ที่เปลี่ยนวัสดุเหลือใช้ให้กลายเป็นชิ้นงานที่ใช้งานได้จริงและมีคุณค่าในพื้นที่ของคุณ') : ($objs->title_pro_en ?: $objs->title_pro ?: 'A design-led piece that transforms surplus materials into something functional, distinctive, and worth keeping.'))) !!}
                     </p>
 
                     <div class="design-detail-meta">
@@ -638,7 +638,7 @@
                 <div class="design-detail-body__card">
                     <h3>{{ $isThaiLocale ? 'คำอธิบายสินค้า' : 'Description' }}</h3>
                     <div class="design-detail-body__content">
-                        <p>{{ $localizedSummary }}</p>
+                        <p>{!! nl2br(e($localizedSummary)) !!}</p>
                     </div>
                 </div>
 
