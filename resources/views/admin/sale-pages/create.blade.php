@@ -207,8 +207,8 @@
 .sp-preview-content li{margin-bottom:4px;}
 .sp-preview-content a{color:#0f8f58;}
 .sp-preview-content table{width:100%;border-collapse:collapse;font-size:12px;display:block;overflow-x:auto;margin:10px 0;}
-.sp-preview-content th,.sp-preview-content td{border:1px solid #d4e4dc;padding:5px 7px;text-align:left;}
-.sp-preview-content th{background:#f0f7f4;font-weight:600;}
+.sp-preview-content th,.sp-preview-content td{border:none;padding:3px 5px;text-align:left;}
+.sp-preview-content th{font-weight:600;}
 .sp-preview-content blockquote{border-left:3px solid #0f8f58;margin:10px 0;padding:7px 12px;background:#f3faf6;border-radius:0 6px 6px 0;}
 .sp-preview-content hr{border:none;border-top:1px solid #e0ebe5;margin:14px 0;}
 .sp-preview-content figure.image{margin:8px 0;}

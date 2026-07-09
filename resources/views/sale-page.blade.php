@@ -25,8 +25,8 @@
 .sp-content li { margin-bottom: 6px; }
 .sp-content a { color: #0f8f58; }
 .sp-content table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; overflow-x: auto; display: block; }
-.sp-content th, .sp-content td { border: 1px solid #d4e4dc; padding: 8px 10px; text-align: left; }
-.sp-content th { background: #f0f7f4; font-weight: 600; }
+.sp-content th, .sp-content td { border: none; padding: 4px 6px; text-align: left; }
+.sp-content th { font-weight: 600; }
 .sp-content blockquote { border-left: 3px solid #0f8f58; margin: 14px 0; padding: 10px 16px; background: #f3faf6; color: #3a5a50; border-radius: 0 8px 8px 0; }
 .sp-content hr { border: none; border-top: 1px solid #e0ebe5; margin: 20px 0; }
 .sp-content figure.image { margin: 12px 0; }
