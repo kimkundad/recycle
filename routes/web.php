@@ -185,6 +185,7 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::resource('/admin/sale-pages', SalePageController::class);
     Route::get('/admin/sale-pages-files', [SalePageController::class, 'fileManager']);
     Route::post('/api/sale-page/upload-image', [SalePageController::class, 'uploadImage']);
+    Route::delete('/admin/sale-pages-files', [SalePageController::class, 'deleteImage']);
 
 });
 

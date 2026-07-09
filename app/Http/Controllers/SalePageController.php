@@ -78,8 +78,11 @@ class SalePageController extends Controller
         $bucket   = config('filesystems.disks.do_spaces.bucket');
         $endpoint = rtrim(config('filesystems.disks.do_spaces.endpoint'), '/');
 
-        $files = Storage::disk('do_spaces')->files('wpnrayong/sale-page');
-        $images = array_map(fn($f) => $endpoint . '/' . $bucket . '/' . $f, $files);
+        $files  = Storage::disk('do_spaces')->files('wpnrayong/sale-page');
+        $images = array_map(fn($f) => [
+            'path' => $f,
+            'url'  => $endpoint . '/' . $bucket . '/' . $f,
+        ], $files);
 
         return view('admin.sale-pages.file-manager', compact('images'));
     }
@@ -97,6 +100,20 @@ class SalePageController extends Controller
              . '/' . config('filesystems.disks.do_spaces.bucket')
              . '/' . $filename;
 
-        return response()->json(['url' => $url]);
+        return response()->json(['url' => $url, 'path' => $filename]);
+    }
+
+    public function deleteImage(Request $request)
+    {
+        $request->validate(['path' => 'required|string']);
+        $path = $request->input('path');
+
+        if (!str_starts_with($path, 'wpnrayong/sale-page/')) {
+            abort(403);
+        }
+
+        Storage::disk('do_spaces')->delete($path);
+
+        return response()->json(['ok' => true]);
     }
 }

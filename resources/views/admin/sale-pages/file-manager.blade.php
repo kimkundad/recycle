@@ -49,6 +49,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #
     overflow: hidden;
     cursor: pointer;
     transition: border-color 0.15s, box-shadow 0.15s;
+    position: relative;
 }
 .fm-item:hover { border-color: #3b82f6; box-shadow: 0 4px 12px rgba(59,130,246,0.2); }
 .fm-item img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
@@ -60,6 +61,29 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+/* delete button */
+.fm-delete {
+    position: absolute;
+    top: 5px; right: 5px;
+    width: 24px; height: 24px;
+    background: rgba(220,38,38,0.85);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.15s, background 0.15s;
+    padding: 0;
+}
+.fm-item:hover .fm-delete { opacity: 1; }
+.fm-delete:hover { background: rgba(185,28,28,1); }
+
 .fm-empty { padding: 40px; text-align: center; color: #94a3b8; font-size: 14px; }
 </style>
 </head>
@@ -75,10 +99,11 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #
 </div>
 
 <div class="fm-grid" id="fm-grid">
-    @forelse(array_reverse($images) as $url)
-    <div class="fm-item" onclick="selectImage('{{ $url }}')">
-        <img src="{{ $url }}" alt="" loading="lazy">
-        <div class="fm-item__name">{{ basename($url) }}</div>
+    @forelse(array_reverse($images) as $img)
+    <div class="fm-item" data-path="{{ $img['path'] }}" onclick="selectImage('{{ $img['url'] }}')">
+        <img src="{{ $img['url'] }}" alt="" loading="lazy">
+        <div class="fm-item__name">{{ basename($img['url']) }}</div>
+        <button class="fm-delete" onclick="deleteImage(event, this)" title="ลบรูป">✕</button>
     </div>
     @empty
     <div class="fm-empty" style="grid-column:1/-1">ยังไม่มีไฟล์ — อัพโหลดรูปแรกได้เลย</div>
@@ -86,6 +111,8 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #
 </div>
 
 <script>
+const CSRF = '{{ csrf_token() }}';
+
 function selectImage(url) {
     if (window.opener && window.opener._spFileManagerCallback) {
         window.opener._spFileManagerCallback(url);
@@ -93,13 +120,48 @@ function selectImage(url) {
     window.close();
 }
 
+function deleteImage(e, btn) {
+    e.stopPropagation();
+    if (!confirm('ลบรูปนี้ออกจาก DO Spaces?')) return;
+
+    const item = btn.closest('.fm-item');
+    const path = item.dataset.path;
+
+    btn.disabled = true;
+    btn.textContent = '…';
+
+    fetch('{{ url('admin/sale-pages-files') }}', {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': CSRF,
+        },
+        body: JSON.stringify({ path }),
+    })
+    .then(r => r.json())
+    .then(data => {
+        if (data.ok) {
+            item.style.opacity = '0';
+            item.style.transition = 'opacity 0.2s';
+            setTimeout(() => item.remove(), 200);
+        } else {
+            btn.disabled = false;
+            btn.textContent = '✕';
+        }
+    })
+    .catch(() => {
+        btn.disabled = false;
+        btn.textContent = '✕';
+    });
+}
+
 // upload multiple
 document.getElementById('fm-file-input').addEventListener('change', async function () {
     const files = Array.from(this.files);
     if (!files.length) return;
 
-    const status = document.getElementById('fm-upload-status');
-    const grid   = document.getElementById('fm-grid');
+    const status  = document.getElementById('fm-upload-status');
+    const grid    = document.getElementById('fm-grid');
     const emptyEl = grid.querySelector('.fm-empty');
 
     status.textContent = `กำลังอัพโหลด 0/${files.length}…`;
@@ -110,9 +172,9 @@ document.getElementById('fm-file-input').addEventListener('change', async functi
         fd.append('upload', file);
 
         try {
-            const res = await fetch('{{ url('api/sale-page/upload-image') }}', {
+            const res  = await fetch('{{ url('api/sale-page/upload-image') }}', {
                 method: 'POST',
-                headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+                headers: { 'X-CSRF-TOKEN': CSRF },
                 body: fd,
             });
             const data = await res.json();
@@ -120,8 +182,12 @@ document.getElementById('fm-file-input').addEventListener('change', async functi
                 if (emptyEl) emptyEl.remove();
                 const item = document.createElement('div');
                 item.className = 'fm-item';
+                item.dataset.path = data.path;
                 item.onclick = () => selectImage(data.url);
-                item.innerHTML = `<img src="${data.url}" loading="lazy"><div class="fm-item__name">${file.name}</div>`;
+                item.innerHTML = `
+                    <img src="${data.url}" loading="lazy">
+                    <div class="fm-item__name">${file.name}</div>
+                    <button class="fm-delete" onclick="deleteImage(event,this)" title="ลบรูป">✕</button>`;
                 grid.prepend(item);
             }
         } catch (e) {
