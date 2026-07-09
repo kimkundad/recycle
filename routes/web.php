@@ -15,6 +15,7 @@ use App\Http\Controllers\AllianceController;
 use App\Http\Controllers\HProjectController;
 use App\Http\Controllers\UnitproductController;
 use App\Http\Controllers\LangController;
+use App\Http\Controllers\SalePageController;
 
 
 /*
@@ -181,9 +182,13 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::post('/api/api_post_status_unit_product', [App\Http\Controllers\UnitproductController::class, 'api_post_status_unit_product']);
     Route::get('api/del_unit_product/{id}', [App\Http\Controllers\UnitproductController::class, 'del_unit_product']);
 
-    // UnitproductController
+    Route::resource('/admin/sale-pages', SalePageController::class);
+    Route::get('/admin/sale-pages-files', [SalePageController::class, 'fileManager']);
+    Route::post('/api/sale-page/upload-image', [SalePageController::class, 'uploadImage']);
 
 });
+
+Route::get('/sale-page/{slug}', [App\Http\Controllers\HomeController::class, 'salePage']);
 
 //การนำเอาไฟล์ที่อัพโหลดมาใช้งานใน Application
 Route::get('/images/{file}', function ($file) {

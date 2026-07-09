@@ -343,6 +343,20 @@
                     <!--end:Menu link-->
                 </div>
                 <div class="menu-item">
+                    <a class="menu-link" href="{{ url('admin/sale-pages') }}">
+                        <span class="menu-icon">
+                            <span class="svg-icon svg-icon-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" d="M19 15C21.2 15 23 13.2 23 11C23 8.80005 21.2 7 19 7C18.9 7 18.8 7.00005 18.7 7.00005C18.1 4.70005 16.1 3 13.7 3C11.3 3 9.2 4.80005 8.7 7.30005C6 7.90005 4 10.3 4 13C4 15.7 6 17.8 8.5 18C8.3 17.4 8.2 16.7 8.2 16C8.2 12.7 10.9 10 14.2 10C16.1 10 17.8 10.9 18.9 12.3C19 12.2 19 12.1 19 12V15Z" fill="currentColor"/>
+                                    <path d="M14.5 11.5C12.4 11.5 10.7 13.2 10.7 15.3C10.7 17.4 12.4 19.1 14.5 19.1C16.6 19.1 18.3 17.4 18.3 15.3C18.3 13.2 16.6 11.5 14.5 11.5ZM14.5 17C13.6 17 12.9 16.3 12.9 15.4C12.9 14.5 13.6 13.8 14.5 13.8C15.4 13.8 16.1 14.5 16.1 15.4C16.1 16.3 15.4 17 14.5 17Z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="menu-title">Sale Pages</span>
+                    </a>
+                </div>
+
+                <div class="menu-item">
                     <!--begin:Menu link-->
                     <a class="menu-link" href="{{ url('admin/setting') }}">
                         <span class="menu-icon">

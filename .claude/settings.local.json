@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(php artisan *)",
-      "PowerShell(& \"C:\\\\xampp\\\\php\\\\php.exe\" --version)"
+      "PowerShell(& \"C:\\\\xampp\\\\php\\\\php.exe\" --version)",
+      "WebFetch(domain:giffarinedemo.tht.me)",
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)",
+      "Skill(run)",
+      "Skill(run:*)"
     ]
   }
 }

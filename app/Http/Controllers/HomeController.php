@@ -990,4 +990,17 @@ class HomeController extends Controller
           ]);
             }
     }
+
+    public function salePage($slug)
+    {
+        $page = \App\Models\SalePage::where('slug', $slug)->where('status', 1)->firstOrFail();
+
+        \App\Models\SalePageView::create([
+            'sale_page_id' => $page->id,
+            'ip'           => request()->ip(),
+            'viewed_at'    => now(),
+        ]);
+
+        return view('sale-page', compact('page'));
+    }
 }
