@@ -29,6 +29,7 @@
 .sp-content th { font-weight: 600; }
 .sp-content blockquote { border-left: 3px solid #0f8f58; margin: 14px 0; padding: 10px 16px; background: #f3faf6; color: #3a5a50; border-radius: 0 8px 8px 0; }
 .sp-content hr { border: none; border-top: 1px solid #e0ebe5; margin: 20px 0; }
+.sp-content figure { margin-inline-start: 10px; margin-inline-end: 10px; }
 .sp-content figure.image { margin: 12px 0; }
 .sp-content figure.image figcaption { font-size: 13px; color: #6b8c82; text-align: center; margin-top: 6px; }
 
