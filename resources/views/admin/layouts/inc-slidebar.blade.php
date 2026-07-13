@@ -355,6 +355,21 @@
                         <span class="menu-title">Sale Pages</span>
                     </a>
                 </div>
+                <div class="menu-item">
+                    <a class="menu-link" href="{{ url('admin/sale-page-inquiries') }}">
+                        <span class="menu-icon">
+                            <span class="svg-icon svg-icon-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z" fill="currentColor"/>
+                                    <path d="M20 8L14 2V8H20Z" fill="currentColor"/>
+                                    <rect x="8" y="12" width="8" height="1.5" rx="0.75" fill="currentColor"/>
+                                    <rect x="8" y="15" width="5" height="1.5" rx="0.75" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="menu-title">คำขอใบเสนอราคา</span>
+                    </a>
+                </div>
 
                 <div class="menu-item">
                     <!--begin:Menu link-->

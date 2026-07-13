@@ -9,8 +9,10 @@ class SalePage extends Model
     protected $fillable = [
         'title', 'slug', 'body',
         'phone', 'phone_label', 'line_url', 'inquiry_url', 'inquiry_label',
-        'head_scripts', 'body_scripts', 'status',
+        'contacts', 'head_scripts', 'body_scripts', 'status',
     ];
+
+    protected $casts = ['contacts' => 'array'];
 
     public function views()
     {
@@ -20,5 +22,10 @@ class SalePage extends Model
     public function todayViews()
     {
         return $this->hasMany(SalePageView::class)->whereDate('viewed_at', today());
+    }
+
+    public function inquiries()
+    {
+        return $this->hasMany(SalePageInquiry::class);
     }
 }

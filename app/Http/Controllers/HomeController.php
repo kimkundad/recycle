@@ -1003,4 +1003,41 @@ class HomeController extends Controller
 
         return view('sale-page', compact('page'));
     }
+
+    public function salePageInquiry(Request $request, $slug)
+    {
+        $page = \App\Models\SalePage::where('slug', $slug)->where('status', 1)->firstOrFail();
+
+        $validated = $request->validate([
+            'name'    => 'required|string|max:100',
+            'phone'   => 'required|string|max:20',
+            'company' => 'nullable|string|max:100',
+            'email'   => 'nullable|email|max:100',
+            'message' => 'nullable|string|max:2000',
+        ]);
+
+        $validated['sale_page_id'] = $page->id;
+        $inquiry = \App\Models\SalePageInquiry::create($validated);
+
+        try {
+            Mail::raw(
+                "ขอใบเสนอราคาจาก Sale Page: {$page->title}\n" .
+                "URL: " . url('sale-page/' . $page->slug) . "\n\n" .
+                "ชื่อ-นามสกุล : {$inquiry->name}\n" .
+                "เบอร์โทรศัพท์ : {$inquiry->phone}\n" .
+                "บริษัท/โรงงาน : {$inquiry->company}\n" .
+                "อีเมล         : {$inquiry->email}\n\n" .
+                "รายละเอียด:\n{$inquiry->message}\n\n" .
+                "วันที่: " . now()->format('d/m/Y H:i'),
+                function ($msg) use ($page) {
+                    $msg->to('sales@wpnrayong.com')
+                        ->subject('[ใบเสนอราคา] ' . $page->title);
+                }
+            );
+        } catch (\Exception $e) {
+            // mail fail — record already saved, don't break UX
+        }
+
+        return response()->json(['ok' => true]);
+    }
 }

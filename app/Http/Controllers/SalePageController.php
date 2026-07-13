@@ -32,6 +32,10 @@ class SalePageController extends Controller
             'head_scripts', 'body_scripts',
         ]);
 
+        $data['contacts'] = array_values(array_filter(
+            $request->input('contacts', []),
+            fn($c) => !empty($c['name']) || !empty($c['phone'])
+        ));
         $data['status'] = $request->has('status') ? 1 : 0;
 
         SalePage::create($data);
@@ -60,6 +64,10 @@ class SalePageController extends Controller
             'head_scripts', 'body_scripts',
         ]);
 
+        $data['contacts'] = array_values(array_filter(
+            $request->input('contacts', []),
+            fn($c) => !empty($c['name']) || !empty($c['phone'])
+        ));
         $data['status'] = $request->has('status') ? 1 : 0;
 
         $objs->update($data);
@@ -101,6 +109,26 @@ class SalePageController extends Controller
              . '/' . $filename;
 
         return response()->json(['url' => $url, 'path' => $filename]);
+    }
+
+    public function inquiries(Request $request)
+    {
+        $query = \App\Models\SalePageInquiry::with('salePage')->orderBy('id', 'desc');
+
+        if ($request->filled('sale_page_id')) {
+            $query->where('sale_page_id', $request->sale_page_id);
+        }
+
+        $objs      = $query->paginate(30)->withQueryString();
+        $salePages = SalePage::orderBy('title')->get(['id', 'title']);
+
+        return view('admin.sale-pages.inquiries', compact('objs', 'salePages'));
+    }
+
+    public function destroyInquiry(int $id)
+    {
+        \App\Models\SalePageInquiry::findOrFail($id)->delete();
+        return response()->json(['ok' => true]);
     }
 
     public function deleteImage(Request $request)

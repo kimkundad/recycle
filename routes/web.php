@@ -186,10 +186,13 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::get('/admin/sale-pages-files', [SalePageController::class, 'fileManager']);
     Route::post('/api/sale-page/upload-image', [SalePageController::class, 'uploadImage']);
     Route::delete('/admin/sale-pages-files', [SalePageController::class, 'deleteImage']);
+    Route::get('/admin/sale-page-inquiries', [SalePageController::class, 'inquiries']);
+    Route::delete('/admin/sale-page-inquiries/{id}', [SalePageController::class, 'destroyInquiry']);
 
 });
 
 Route::get('/sale-page/{slug}', [App\Http\Controllers\HomeController::class, 'salePage']);
+Route::post('/sale-page/{slug}/inquiry', [App\Http\Controllers\HomeController::class, 'salePageInquiry']);
 
 //การนำเอาไฟล์ที่อัพโหลดมาใช้งานใน Application
 Route::get('/images/{file}', function ($file) {

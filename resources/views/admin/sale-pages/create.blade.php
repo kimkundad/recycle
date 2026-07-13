@@ -101,15 +101,24 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row mb-6">
+                                <label class="col-lg-3 col-form-label fw-semibold fs-6">
+                                    LINE URL
+                                    <span class="text-muted d-block fs-7">ปุ่ม LINE บน bottom bar + footer</span>
+                                </label>
+                                <div class="col-lg-9">
+                                    <input type="text" name="line_url" class="form-control" value="{{ old('line_url') }}" placeholder="https://line.me/ti/p/~@xxx หรือ https://lin.ee/xxx">
+                                </div>
+                            </div>
                             <div class="row mb-0">
                                 <label class="col-lg-3 col-form-label fw-semibold fs-6">
-                                    ปุ่มสอบถาม
-                                    <span class="text-muted d-block fs-7">URL หรือ LINE link</span>
+                                    ปุ่มสอบถาม (เพิ่มเติม)
+                                    <span class="text-muted d-block fs-7">URL สำรอง ถ้ามี</span>
                                 </label>
                                 <div class="col-lg-9">
                                     <div class="row g-3">
                                         <div class="col-8">
-                                            <input type="text" name="inquiry_url" class="form-control" value="{{ old('inquiry_url') }}" placeholder="https://line.me/... หรือ /contact">
+                                            <input type="text" name="inquiry_url" class="form-control" value="{{ old('inquiry_url') }}" placeholder="https://... หรือ /contact">
                                         </div>
                                         <div class="col-4">
                                             <input type="text" name="inquiry_label" class="form-control" value="{{ old('inquiry_label', 'สอบถาม') }}" placeholder="ข้อความปุ่ม">
@@ -117,6 +126,20 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    {{-- ผู้ติดต่อ footer --}}
+                    <div class="card mb-5">
+                        <div class="card-header border-0 pt-5">
+                            <h3 class="card-title fw-bold fs-4">ผู้ติดต่อ (footer)</h3>
+                            <div class="card-toolbar">
+                                <button type="button" class="btn btn-sm btn-light-success" onclick="addContact()">+ เพิ่มผู้ติดต่อ</button>
+                            </div>
+                        </div>
+                        <div class="card-body border-top p-9">
+                            <div id="contacts-wrap"></div>
+                            <p class="text-muted fs-7 mb-0">แสดงใน footer สีเข้ม — ระบุชื่อ, เบอร์โทร, อีเมล ของแต่ละคน</p>
                         </div>
                     </div>
 
@@ -301,5 +324,33 @@
             });
     }).catch(console.error);
 })();
+</script>
+<script>
+// Contacts repeater
+let _ci = 0;
+function escH(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function addContact(d={}) {
+    const i = _ci++;
+    const wrap = document.getElementById('contacts-wrap');
+    const row  = document.createElement('div');
+    row.className = 'border rounded p-4 mb-3 position-relative bg-light';
+    row.innerHTML = `
+        <button type="button" class="btn btn-sm btn-icon btn-light-danger position-absolute top-0 end-0 m-2" onclick="this.closest('.border').remove()" style="line-height:1;">✕</button>
+        <div class="row g-3">
+            <div class="col-12 col-md-4">
+                <label class="form-label fs-7 fw-semibold mb-1">ชื่อ-ตำแหน่ง</label>
+                <input type="text" name="contacts[${i}][name]" class="form-control form-control-sm" value="${escH(d.name)}" placeholder="คุณสมชาย (K. Chai)">
+            </div>
+            <div class="col-12 col-md-4">
+                <label class="form-label fs-7 fw-semibold mb-1">เบอร์โทร</label>
+                <input type="text" name="contacts[${i}][phone]" class="form-control form-control-sm" value="${escH(d.phone)}" placeholder="08x-xxx-xxxx">
+            </div>
+            <div class="col-12 col-md-4">
+                <label class="form-label fs-7 fw-semibold mb-1">อีเมล</label>
+                <input type="text" name="contacts[${i}][email]" class="form-control form-control-sm" value="${escH(d.email)}" placeholder="name@company.com">
+            </div>
+        </div>`;
+    wrap.appendChild(row);
+}
 </script>
 @stop('scripts')
