@@ -26,110 +26,81 @@
 <!-- <div class="ps-site-overlay"></div> -->
 <div class="ps-panel--sidebar" id="cart-mobile">
     <div class="ps-panel__header">
-        <h3>ติดต่อเรา</h3>
+        <h3>{{ __('common.sidebar.contact_title') }}</h3>
     </div>
     <div class="navigation__content">
         <div class="p-15">
             <div class="">
 
-                @if (session()->get('locale') == 'th')
                     <div class="box-green-800">
-                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
-                        <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
-                        <p>ที่อยู่ 1/1 หมู่ 4 ต.นิคมพัฒนา อ.นิคมพัฒนา จ.ระยอง 21180 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/data=!4m2!3m1!1s0x0:0x23f4b615e2e82d1c?sa=X&ved=1t:2428&hl=en-US&ictx=111" target="_blank">แผนที่</a></p>
+                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">{{ __('common.sidebar.address_label') }}</p>
+                        <h4 style="margin-bottom: 4px;">{{ __('common.sidebar.head_office') }}</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">{{ __('common.sidebar.company') }}</p>
+                        <p>{{ __('common.sidebar.head_address') }}<br>
+                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/data=!4m2!3m1!1s0x0:0x23f4b615e2e82d1c?sa=X&ved=1t:2428&hl=en-US&ictx=111" target="_blank">{{ __('common.map') }}</a></p>
 
-                        <h4 style="margin-bottom: 4px;">สำนักงานห้วยโป่ง</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
-                        <p>ที่อยู่ 22/9 ซ.ชากลูกหญ้า 4 ถ.วัดชากลูกหญ้า ต.ห้วยโป่ง อ.เมืองระยอง จ.ระยอง 21150 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+Rayong+Branch+3/@12.7513181,101.1252694,17z/data=!4m6!3m5!1s0x3102f028518c91f1:0xe8e3cd3c3b3c5ff3!8m2!3d12.7513181!4d101.1252694!16s%2Fg%2F11gblv0sqr?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">แผนที่</a></p>
+                        <h4 style="margin-bottom: 4px;">{{ __('common.sidebar.huaipong_office') }}</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">{{ __('common.sidebar.company') }}</p>
+                        <p>{{ __('common.sidebar.huaipong_address') }}<br>
+                        <a style="color: #ffbf00;" href="{{ __('common.sidebar.huaipong_map_url') }}" target="_blank">{{ __('common.map') }}</a></p>
 
-                        <h4 style="margin-bottom: 4px;">สำนักงานสงขลา</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">บริษัท วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด</p>
-                        <p>ที่อยู่ 428 หมู่2 ต.พะวง อ.เมืองสงขลา จ.สงขลา 90100 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%AA%E0%B8%87%E0%B8%82%E0%B8%A5%E0%B8%B2+428+Moo.2+T.+Pawong,+%E0%B8%AA%E0%B8%87%E0%B8%82%E0%B8%A5%E0%B8%B2/data=!4m2!3m1!1s0x304d33930e9c7071:0x5c2d395e1452c1f2?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBjI1LjkuMhgAINeCAyp1LDk0MjI2MDQ2LDk0MjQyNjEzLDk0MjIzMjk5LDk0MjE2NDEzLDk0MjEyNDk2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjE4NjUzLDk0MjI5ODM5LDQ3MDg0MzkzLDk0MjEzMjAwQgJUSA%3D%3D&g_st=al" target="_blank">แผนที่</a></p>
+                        <h4 style="margin-bottom: 4px;">{{ __('common.sidebar.songkhla_office') }}</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">{{ __('common.sidebar.company') }}</p>
+                        <p>{{ __('common.sidebar.songkhla_address') }}<br>
+                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%AA%E0%B8%87%E0%B8%82%E0%B8%A5%E0%B8%B2+428+Moo.2+T.+Pawong,+%E0%B8%AA%E0%B8%87%E0%B8%82%E0%B8%A5%E0%B8%B2/data=!4m2!3m1!1s0x304d33930e9c7071:0x5c2d395e1452c1f2?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBjI1LjkuMhgAINeCAyp1LDk0MjI2MDQ2LDk0MjQyNjEzLDk0MjIzMjk5LDk0MjE2NDEzLDk0MjEyNDk2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjE4NjUzLDk0MjI5ODM5LDQ3MDg0MzkzLDk0MjEzMjAwQgJUSA%3D%3D&g_st=al" target="_blank">{{ __('common.map') }}</a></p>
 
-                        <h4 class="mt-10">ช่องทางการติดต่อ</h4>
-                        <p>โทรศัพท์ : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a
+                        <h4 class="mt-10">{{ __('common.sidebar.channels') }}</h4>
+                        <p>{{ __('common.sidebar.phone_label') }} <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a
                                 href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a
                                 href="tel:0945692969">0945692969</a><br>
-                            อีเมล : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
+                            {{ __('common.sidebar.email_label') }} <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
-                @else
-                    <div class="box-green-800">
-                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
-                        <h4 style="margin-bottom: 4px;">Head office</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district Rayong 21180 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/data=!4m2!3m1!1s0x0:0x23f4b615e2e82d1c?sa=X&ved=1t:2428&hl=en-US&ictx=111" target="_blank">Map</a></p>
-
-                        <h4 style="margin-bottom: 4px;">Huai Pong Office</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>22/9 Soi.Chaklukya 4, Watchaklukya Road,
-                            Huaypong subdistrict, Muang Rayong district,
-                            Rayong province 21150 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/@12.7513181,101.1252694,17z?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
-
-                        <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>428 Moo. 2, Phawong Subdistrict, Mueang Songkhla District, Songkhla Province 90100 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%AA%E0%B8%87%E0%B8%82%E0%B8%A5%E0%B8%B2+428+Moo.2+T.+Pawong,+%E0%B8%AA%E0%B8%87%E0%B8%82%E0%B8%A5%E0%B8%B2/data=!4m2!3m1!1s0x304d33930e9c7071:0x5c2d395e1452c1f2?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBjI1LjkuMhgAINeCAyp1LDk0MjI2MDQ2LDk0MjQyNjEzLDk0MjIzMjk5LDk0MjE2NDEzLDk0MjEyNDk2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjE4NjUzLDk0MjI5ODM5LDQ3MDg0MzkzLDk0MjEzMjAwQgJUSA%3D%3D&g_st=al" target="_blank">Map</a></p>
-
-                        <h4 class="mt-10">Contact</h4>
-                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a
-                                href="tel:{{ get_phone() }}">{{ get_phone() }}</a> <a
-                                href="tel:0945692969">0945692969</a><br>
-                            Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
-                    </div>
-                @endif
             </div>
             <div class="d-15">
                 <form class="ps-form--contact-us" id="contactForm3" style="padding-bottom: 60px;">
 
-                    @if(session()->get('locale') == 'th')
                     <div class="row">
                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                             <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="ระบุชื่อ-นามสกุลของคุณ"
+                                <input type="input" class="form__field" placeholder="{{ __('common.form.name_placeholder') }}"
                                     name="name" id='name3' required />
-                                <label for="name" class="form__label">ชื่อ-นามสกุล</label>
+                                <label for="name" class="form__label">{{ __('common.form.name_label') }}</label>
                             </div>
                         </div>
                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                             <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="ระบุอีเมลของคุณ" name="email"
+                                <input type="input" class="form__field" placeholder="{{ __('common.form.email_placeholder') }}" name="email"
                                     id='email3' required />
-                                <label for="email" class="form__label">อีเมล</label>
+                                <label for="email" class="form__label">{{ __('common.form.email_label') }}</label>
                             </div>
                         </div>
                         <div class="col-xl-12col-lg-6 col-md-6 col-sm-12 col-12 ">
                             <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="ระบุเบอร์โทรศัพท์ของคุณ"
+                                <input type="input" class="form__field" placeholder="{{ __('common.form.phone_placeholder') }}"
                                     name="phone" id='phone3' required />
-                                <label for="phone" class="form__label">เบอร์โทรศัพท์</label>
+                                <label for="phone" class="form__label">{{ __('common.form.phone_label') }}</label>
                             </div>
                         </div>
 
                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                             <div class="form__group field">
                                 <select class="form__field" aria-label="Select example" name="type" id='type3'>
-                                    <option>กรุณาเลือกหัวข้อที่ต้องการ</option>
+                                    <option>{{ __('common.form.topic_select') }}</option>
                                     @if (type_contact())
                                         @foreach (type_contact() as $item)
                                             <option value="{{ $item->id }}">{{ $item->name }}</option>
                                         @endforeach
                                     @endif
                                 </select>
-                                <label for="name" class="form__label">หัวข้อที่ต้องการติดต่อ</label>
+                                <label for="name" class="form__label">{{ __('common.form.topic_label') }}</label>
                             </div>
                         </div>
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                             <div class="form__group field">
-                                <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage"
+                                <textarea class="form__field" placeholder="{{ __('common.form.message_placeholder') }}" style="height:80px" maxlength="500" name="massage"
                                     id='massage3'></textarea>
-                                <label for="massage" class="form__label">ข้อความ (<span
+                                <label for="massage" class="form__label">{{ __('common.form.message_label') }} (<span
                                         id="count3">500</span>/500)</label>
                             </div>
                         </div>
@@ -139,63 +110,8 @@
                     </div>
                     <div class="text-center mt-20">
                         <a class="ps-btn--fullwidth-green btn-block" id="btnSendData_mobile" href="#"
-                            style="border-radius: 5px">Send Message</a>
+                            style="border-radius: 5px">{{ __('common.form.send') }}</a>
                     </div>
-                    @else
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                            <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="ระบุชื่อ-นามสกุลของคุณ"
-                                    name="name" id='name3' required />
-                                <label for="name" class="form__label">First name - Last name</label>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                            <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="ระบุอีเมลของคุณ" name="email"
-                                    id='email3' required />
-                                <label for="email" class="form__label">Email</label>
-                            </div>
-                        </div>
-                        <div class="col-xl-12col-lg-6 col-md-6 col-sm-12 col-12 ">
-                            <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="ระบุเบอร์โทรศัพท์ของคุณ"
-                                    name="phone" id='phone3' required />
-                                <label for="phone" class="form__label">Phone</label>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                            <div class="form__group field">
-                                <select class="form__field" aria-label="Select example" name="type" id='type3'>
-                                    <option>Please select the desired topic.</option>
-                                    @if (type_contact())
-                                        @foreach (type_contact() as $item)
-                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                        @endforeach
-                                    @endif
-                                </select>
-                                <label for="name" class="form__label">Topic you want to contact</label>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                            <div class="form__group field">
-                                <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage"
-                                    id='massage3'></textarea>
-                                <label for="massage" class="form__label">message (<span
-                                        id="count3">500</span>/500)</label>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                            <div class="g-recaptcha" data-sitekey="6LdQnlkUAAAAAOfsIz7o-U6JSgrSMseulLvu7lI8"></div>
-                        </div>
-                    </div>
-                    <div class="text-center mt-20">
-                        <a class="ps-btn--fullwidth-green btn-block" id="btnSendData_mobile" href="#"
-                            style="border-radius: 5px">Send</a>
-                    </div>
-                    @endif
 
                 </form>
             </div>
@@ -205,11 +121,7 @@
 <!--include ../../data/menu/menu-product-categories-->
 <div class="ps-panel--sidebar" id="navigation-mobile">
     <div class="ps-panel__header">
-        @if(session()->get('locale') == 'th')
-        <h3>หมวดหมู่สินค้า</h3>
-        @else
-        <h3>Category</h3>
-        @endif
+        <h3>{{ __('common.sidebar.category_title') }}</h3>
     </div>
     <div class="ps-panel__content">
         <ul class="menu--mobile">
@@ -218,15 +130,7 @@
                 @foreach (get_data_category() as $u)
                     <li class="current-menu-item menu-item-has-children">
 
-                                        @if (session()->get('locale') == 'th')
-                                            <a href="#">{{ $u->cat_name }}</a>
-                                        @else
-                                            @if($u->cat_name_en == null)
-                                                <a href="#">{{ $u->cat_name }}</a>
-                                            @else
-                                                <a href="#">{{ $u->cat_name_en }}</a>
-                                            @endif
-                                        @endif
+                                            <a href="#">{{ localized($u, 'cat_name') }}</a>
 
                         <span class="sub-toggle">
 
@@ -235,17 +139,7 @@
                             @if ($u->option)
                                 @foreach ($u->option as $j)
                                     <li class="current-menu-item ">
-                                        @if(session()->get('locale') == 'th')
-                                        <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
-                                        @else
-
-                                            @if($j->sub_name_en == null)
-                                            <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
-                                            @else
-                                            <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name_en }}</a>
-                                            @endif
-
-                                        @endif
+                                        <a href="{{ url('category?id=' . $j->id) }}">{{ localized($j, 'sub_name') }}</a>
                                     </li>
                                 @endforeach
                             @endif
@@ -260,62 +154,34 @@
 </div>
 <div class="navigation--list">
     <div class="navigation__content">
-        @if(session()->get('locale') == 'th')
         <a class="navigation__item ps-toggle--sidebar" href="#menu-mobile">
             <i class="icon-list4"></i>
-            <span> เมนู</span>
+            <span> {{ __('common.sidebar.menu') }}</span>
         </a>
         <a class="navigation__item ps-toggle--sidebar" href="#navigation-mobile">
             <img src="{{ url('img/icon_product.png') }}" style="height: 28px;">
-            <span> หมวดหมู่สินค้า</span>
+            <span> {{ __('common.sidebar.category_title') }}</span>
         </a>
         <a class="navigation__item ps-toggle--sidebar" href="#search-sidebar">
             <i class="icon-magnifier"></i>
-            <span> ค้นหา</span>
+            <span> {{ __('common.sidebar.search') }}</span>
         </a>
         <a class="navigation__item ps-toggle--sidebar" href="#cart-mobile">
             <img src="{{ url('assets/img/icons/vendor-3.png') }}" style="height:26px">
-            <span> ติดต่อเรา</span>
+            <span> {{ __('common.nav.contact') }}</span>
         </a>
-        @else
-        <a class="navigation__item ps-toggle--sidebar" href="#menu-mobile">
-            <i class="icon-list4"></i>
-            <span> Menu</span>
-        </a>
-        <a class="navigation__item ps-toggle--sidebar" href="#navigation-mobile">
-            <img src="{{ url('img/icon_product.png') }}" style="height: 28px;">
-            <span> Category</span>
-        </a>
-        <a class="navigation__item ps-toggle--sidebar" href="#search-sidebar">
-            <i class="icon-magnifier"></i>
-            <span> Search</span>
-        </a>
-        <a class="navigation__item ps-toggle--sidebar" href="#cart-mobile">
-            <img src="{{ url('assets/img/icons/vendor-3.png') }}" style="height:26px">
-            <span> Contact us</span>
-        </a>
-        @endif
     </div>
 </div>
 <div class="ps-panel--sidebar" id="search-sidebar">
     <div class="ps-panel__header">
         <form class="ps-form--search-mobile" action="{{ url('/category') }}" method="get">
 
-            @if(session()->get('locale') == 'th')
             <div class="form-group--nest">
                 <input type="hidden" name="id" value="0">
                 <input class="form-control" name="search" type="text"
-                    placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่...">
+                    placeholder="{{ __('common.search.mobile_placeholder') }}">
                 <button><i class="icon-magnifier"></i></button>
             </div>
-            @else
-            <div class="form-group--nest">
-                <input type="hidden" name="id" value="0">
-                <input class="form-control" name="search" type="text"
-                    placeholder="Find what you need here....">
-                <button><i class="icon-magnifier"></i></button>
-            </div>
-            @endif
 
         </form>
     </div>
@@ -324,56 +190,31 @@
 
 <div class="ps-panel--sidebar" id="menu-mobile">
     <div class="ps-panel__header">
-        <h3>เมนู</h3>
+        <h3>{{ __('common.sidebar.menu_title') }}</h3>
     </div>
     <div class="ps-panel__content">
-        @if(session()->get('locale') == 'th')
         <ul class="menu--mobile">
             <li class="menu-item-has-children">
-                <a href="{{ url('/') }}">หน้าแรก</a>
+                <a href="{{ url('/') }}">{{ __('common.nav.home') }}</a>
             </li>
             <li class="menu-item-has-children">
-                <a href="{{ url('/service') }}">สินค้าและบริการ</a>
+                <a href="{{ url('/service') }}">{{ __('common.sidebar.mobile_service') }}</a>
             </li>
-            <li class="menu-item-has-children"><a href="{{ url('/steel?id=10') }}">เหล็กรูปพรรณ</a></li>
-                    <li class="menu-item-has-children"><a href="{{ url('/warehouse') }}">Warehouse</a></li>
+            <li class="menu-item-has-children"><a href="{{ url('/steel?id=10') }}">{{ __('common.nav.steel') }}</a></li>
+                    <li class="menu-item-has-children"><a href="{{ url('/warehouse') }}">{{ __('common.sidebar.mobile_warehouse') }}</a></li>
             <li class="menu-item-has-children">
-                <a href="{{ url('/about') }}">เกี่ยวกับเรา</a>
-            </li>
-            <li class="menu-item-has-children">
-                <a href="{{ url('/blog') }}">กิจกรรม & ประชาสัมพันธ์</a>
+                <a href="{{ url('/about') }}">{{ __('common.nav.about') }}</a>
             </li>
             <li class="menu-item-has-children">
-                <a href="{{ url('/contact') }}">ติดต่อเรา</a>
+                <a href="{{ url('/blog') }}">{{ __('common.footer.news') }}</a>
             </li>
             <li class="menu-item-has-children">
-                <a href="{{ url('/term') }}">นโยบายข้อมูลส่วนบุคคล</a>
+                <a href="{{ url('/contact') }}">{{ __('common.nav.contact') }}</a>
+            </li>
+            <li class="menu-item-has-children">
+                <a href="{{ url('/term') }}">{{ __('common.footer.privacy') }}</a>
             </li>
         </ul>
-        @else
-        <ul class="menu--mobile">
-            <li class="menu-item-has-children">
-                <a href="{{ url('/') }}">Home</a>
-            </li>
-            <li class="menu-item-has-children">
-                <a href="{{ url('/service') }}">Product and Sevice</a>
-            </li>
-            <li class="menu-item-has-children"><a href="{{ url('/steel?id=10') }}">Steel</a></li>
-                    <li class="menu-item-has-children"><a href="{{ url('/warehouse') }}">Warehouse</a></li>
-            <li class="menu-item-has-children">
-                <a href="{{ url('/about') }}">About us</a>
-            </li>
-            <li class="menu-item-has-children">
-                <a href="{{ url('/blog') }}">News</a>
-            </li>
-            <li class="menu-item-has-children">
-                <a href="{{ url('/contact') }}">Contact us</a>
-            </li>
-            <li class="menu-item-has-children">
-                <a href="{{ url('/term') }}">Privacy Policy</a>
-            </li>
-        </ul>
-        @endif
     </div>
 </div>
 <div id="loader-wrapper">
@@ -493,25 +334,13 @@
             <article class="ps-product--detailx ps-product--fullwidth ps-product--quickview">
                 <div class="ps-product__header p-20">
 
-                    @if(session()->get('locale') == 'th')
                     <div class="text-center">
                         <img src="{{ url('img/message 1.svg') }}">
-                        <h4 class="text-green fs-22px">ส่งข้อความสำเร็จ</h4>
-                        <p>เจ้าหน้าที่ได้รับข้อความของท่าน และจะรีบดำเนินการโดยทันที
-                            โปรดรอการติดต่อกลับผ่านช่องทางที่ท่านระบุไว้</p>
+                        <h4 class="text-green fs-22px">{{ __('common.success.title') }}</h4>
+                        <p>{{ __('common.success.body') }}</p>
                         <br>
-                        <a class="btn-green-b-pop btn_card_in btn-box mg-5 text-center" data-dismiss="modal">ปิด</a>
+                        <a class="btn-green-b-pop btn_card_in btn-box mg-5 text-center" data-dismiss="modal">{{ __('common.success.close') }}</a>
                     </div>
-                    @else
-                    <div class="text-center">
-                        <img src="{{ url('img/message 1.svg') }}">
-                        <h4 class="text-green fs-22px">Message submitted successfully</h4>
-                        <p>We have received your message and will proceed promptly
-                            Please kindly wait for contact via the channel you specified</p>
-                        <br>
-                        <a class="btn-green-b-pop btn_card_in btn-box mg-5 text-center" data-dismiss="modal">close</a>
-                    </div>
-                    @endif
 
                 </div>
             </article>
@@ -541,7 +370,7 @@
 
 
                         <br>
-                        <a class="btn-green-b-pop btn_card_in btn-box mg-5 text-center" data-dismiss="modal">ปิด</a>
+                        <a class="btn-green-b-pop btn_card_in btn-box mg-5 text-center" data-dismiss="modal">{{ __('common.sidebar.modal_close') }}</a>
                     </div>
 
                 </div>

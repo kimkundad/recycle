@@ -20,11 +20,26 @@ foreach ($names as $name) {
     }
     $failed = true;
     echo "=== $name\n";
-    foreach (array_diff($left, $right) as $i => $line) {
-        echo "- [" . ($i + 1) . "] $line\n";
+    // Compare as multisets so repeated lines and reordering are reported too.
+    $lc = array_count_values($left);
+    $rc = array_count_values($right);
+    foreach ($lc as $line => $n) {
+        if (($rc[$line] ?? 0) < $n) {
+            echo "- (x" . ($n - ($rc[$line] ?? 0)) . ") $line\n";
+        }
     }
-    foreach (array_diff($right, $left) as $i => $line) {
-        echo "+ [" . ($i + 1) . "] $line\n";
+    foreach ($rc as $line => $n) {
+        if (($lc[$line] ?? 0) < $n) {
+            echo "+ (x" . ($n - ($lc[$line] ?? 0)) . ") $line\n";
+        }
+    }
+    if ($lc == $rc) {
+        foreach ($left as $i => $line) {
+            if ($line !== $right[$i]) {
+                echo "  order differs from line " . ($i + 1) . ": '$line' vs '{$right[$i]}'\n";
+                break;
+            }
+        }
     }
 }
 echo $failed ? "DIFFERENT\n" : "IDENTICAL\n";
