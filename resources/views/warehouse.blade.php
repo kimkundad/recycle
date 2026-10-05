@@ -1,11 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-@if (session()->get('locale') == 'th')
-บริการให้เช่าโกดัง – คลังสินค้า ลานวางสินค้า - wpnrayong
-@else
-Warehouse - wpnrayong
-@endif
+{{ __('warehouse.meta_title') }}
 @stop
 
 @section('og')
@@ -106,11 +102,7 @@ min-height: 90px
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
-                    @if(session()->get('locale') == 'th')
-                    <h3>เช่า warehouse</h3>
-                    @else
-                    <h3>Warehouse</h3>
-                    @endif
+                    <h3>{{ __('warehouse.heading') }}</h3>
                 </div>
             </div>
 

@@ -1,11 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-    @if (session()->get('locale') == 'th')
-        บริการของเรา - wpnrayong
-    @else
-        License and Awards
-    @endif
+        {{ __('certificate.meta_title') }}
 @stop
 
 
@@ -36,11 +32,7 @@
             <div class="ps-section__header">
                 <div class="ps-block--countdown-deal">
                     <div class="ps-block__left">
-                        @if (session()->get('locale') == 'th')
-                            <h3>ใบอนุญาตและรางวัลทั้งหมด</h3>
-                        @else
-                            <h3>License and Awards</h3>
-                        @endif
+                            <h3>{{ __('certificate.heading') }}</h3>
                     </div>
                 </div>
 
