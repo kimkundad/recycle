@@ -1,11 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-@if (session()->get('locale') == 'th')
-ติดต่อเรา - wpnrayong
-@else
-Contact us - wpnrayong
-@endif
+{{ __('contact.meta_title') }}
 @stop
 
 @section('og')
@@ -29,11 +25,7 @@ Contact us - wpnrayong
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
-                    @if(session()->get('locale') == 'th')
-                    <h3>ติดต่อเรา</h3>
-                    @else
-                    <h3>Contact us</h3>
-                    @endif
+                    <h3>{{ __('contact.heading') }}</h3>
                 </div>
             </div>
         </div>
@@ -47,7 +39,7 @@ Contact us - wpnrayong
             <div class="col col-md-3">
                 <div class="set-box-green-800">
 
-                    @if(session()->get('locale') == 'th')
+                    @if(app()->getLocale() === 'th')
                     <div class="box-green-800">
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
                         <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
@@ -71,27 +63,25 @@ Contact us - wpnrayong
                     </div>
                     @else
                     <div class="box-green-800">
-                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
-                        <h4 style="margin-bottom: 4px;">Head office</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district, Rayong province 21180 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/data=!4m2!3m1!1s0x0:0x23f4b615e2e82d1c?sa=X&ved=1t:2428&hl=en-US&ictx=111&cshid=1741235549668208" target="_blank">Map</a></p>
+                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">{{ __('contact.address_label') }}</p>
+                        <h4 style="margin-bottom: 4px;">{{ __('contact.head_office') }}</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">{{ __('contact.company') }}</p>
+                        <p>{{ __('contact.head_address') }} <br>
+                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/data=!4m2!3m1!1s0x0:0x23f4b615e2e82d1c?sa=X&ved=1t:2428&hl=en-US&ictx=111&cshid=1741235549668208" target="_blank">{{ __('common.map') }}</a></p>
 
-                        <h4 style="margin-bottom: 4px;">Huai Pong Office</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>22/9 Soi.Chaklukya 4, Watchaklukya Road,
-                            Huaypong subdistrict, Muang Rayong district,
-                            Rayong province 21150 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+Rayong+Branch+3/@12.7513181,101.1252694,17z/data=!4m6!3m5!1s0x3102f028518c91f1:0xe8e3cd3c3b3c5ff3!8m2!3d12.7513181!4d101.1252694!16s%2Fg%2F11gblv0sqr?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
+                        <h4 style="margin-bottom: 4px;">{{ __('contact.huaipong_office') }}</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">{{ __('contact.company') }}</p>
+                        <p>{{ __('contact.huaipong_address') }} <br>
+                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+Rayong+Branch+3/@12.7513181,101.1252694,17z/data=!4m6!3m5!1s0x3102f028518c91f1:0xe8e3cd3c3b3c5ff3!8m2!3d12.7513181!4d101.1252694!16s%2Fg%2F11gblv0sqr?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">{{ __('common.map') }}</a></p>
 
 
-                        <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>428 Moo. 2, Phawong subdistrict, Mueang Songkhla district, Songkhla province 90100 <br>
-                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+Recycle+Rayong+SKL/@7.1349492,100.5747619,17z/data=!3m1!4b1!4m6!3m5!1s0x304d33930e9c7071:0x5c2d395e1452c1f2!8m2!3d7.1349492!4d100.5747619!16s%2Fg%2F11tfk8qn8b?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
-                        <h4 class="mt-10">Contact</h4>
-                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
-                        Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
+                        <h4 style="margin-bottom: 4px;">{{ __('contact.songkhla_office') }}</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">{{ __('contact.company') }}</p>
+                        <p>{{ __('contact.songkhla_address') }} <br>
+                        <a style="color: #ffbf00;" href="https://www.google.com/maps/place/WPN+Recycle+Rayong+SKL/@7.1349492,100.5747619,17z/data=!3m1!4b1!4m6!3m5!1s0x304d33930e9c7071:0x5c2d395e1452c1f2!8m2!3d7.1349492!4d100.5747619!16s%2Fg%2F11tfk8qn8b?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">{{ __('common.map') }}</a></p>
+                        <h4 class="mt-10">{{ __('contact.channels') }}</h4>
+                        <p>{{ __('contact.phone_label') }} <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
+                        {{ __('contact.email_label') }} <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @endif
 
@@ -100,38 +90,32 @@ Contact us - wpnrayong
             <div class="col col-md-7">
                 <div class="d-flex justify-content-end bg-white-con">
                     <form class="ps-form--contact-us" id="contactForm">
-                        @if(session()->get('locale') == 'th')
-                        <h3>ติดต่อเรา</h3>
-                        <p class="fs-16 fw-700">ท่านสามารถติดต่อสอบถาม ซื้อสินค้า ขอใช้บริการ ผ่านช่องทางด้านล่าง</p>
-                        @else
-                        <h3>Contact us</h3>
-                        <p class="fs-16 fw-700">You can contact us to inquire, purchase products, and request services through the channels below.</p>
-                        @endif
+                        <h3>{{ __('contact.heading') }}</h3>
+                        <p class="fs-16 fw-700">{{ __('contact.intro') }}</p>
 
-                        @if(session()->get('locale') == 'th')
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
                                 <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="ระบุชื่อ-นามสกุลของคุณ" name="name" id='name' required />
-                                    <label for="name" class="form__label">ชื่อ-นามสกุล</label>
+                                    <input type="input" class="form__field" placeholder="{{ __('contact.form.name_placeholder') }}" name="name" id='name' required />
+                                    <label for="name" class="form__label">{{ __('contact.form.name_label') }}</label>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
                                 <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="ระบุอีเมลของคุณ" name="email" id='email' required />
-                                    <label for="email" class="form__label">อีเมล</label>
+                                    <input type="input" class="form__field" placeholder="{{ __('contact.form.email_placeholder') }}" name="email" id='email' required />
+                                    <label for="email" class="form__label">{{ __('contact.form.email_label') }}</label>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
                                 <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="ระบุเบอร์โทรศัพท์ของคุณ" name="phone" id='phone' required />
-                                    <label for="phone" class="form__label">เบอร์โทรศัพท์</label>
+                                    <input type="input" class="form__field" placeholder="{{ __('contact.form.phone_placeholder') }}" name="phone" id='phone' required />
+                                    <label for="phone" class="form__label">{{ __('contact.form.phone_label') }}</label>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
                                 <div class="form__group field">
                                     <select class="form__field" aria-label="Select example" name="type" id='type'>
-                                        <option>กรุณาเลือกหัวข้อที่ต้องการ</option>
+                                        <option>{{ __('common.form.topic_select') }}</option>
 
                                         @isset($type_contact)
                                             @foreach ($type_contact as $item)
@@ -140,63 +124,14 @@ Contact us - wpnrayong
                                         @endisset
 
                                     </select>
-                                    <label for="name" class="form__label">หัวข้อที่ต้องการติดต่อ</label>
+                                    <label for="name" class="form__label">{{ __('common.form.topic_label') }}</label>
                                 </div>
                             </div>
 
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                 <div class="form__group field">
-                                    <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage" id='massage'></textarea>
-                                    <label for="massage" class="form__label">ข้อความ (<span id="count">500</span>/500)</label>
-                                </div>
-                            </div>
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                <div class="g-recaptcha" data-sitekey="6LdQnlkUAAAAAOfsIz7o-U6JSgrSMseulLvu7lI8"></div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-20">
-                            <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData" style="border-radius: 5px">ส่งข้อความ</button >
-                        </div>
-                        @else
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                                <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="Enter your first and last name." name="name" id='name' required />
-                                    <label for="name" class="form__label">First name and last name</label>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                                <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="Enter your email" name="email" id='email' required />
-                                    <label for="email" class="form__label">Email</label>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                                <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="Enter your phone number" name="phone" id='phone' required />
-                                    <label for="phone" class="form__label">Phone No.</label>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                                <div class="form__group field">
-                                    <select class="form__field" aria-label="Select example" name="type" id='type'>
-                                        <option>Please select the desired topic.</option>
-
-                                        @isset($type_contact)
-                                            @foreach ($type_contact as $item)
-                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                            @endforeach
-                                        @endisset
-
-                                    </select>
-                                    <label for="name" class="form__label">Topic you want to contact</label>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                <div class="form__group field">
-                                    <textarea class="form__field" placeholder="Required message" style="height:80px" maxlength="500" name="massage" id='massage'></textarea>
-                                    <label for="massage" class="form__label">message (<span id="count">500</span>/500)</label>
+                                    <textarea class="form__field" placeholder="{{ __('contact.form.message_placeholder') }}" style="height:80px" maxlength="500" name="massage" id='massage'></textarea>
+                                    <label for="massage" class="form__label">{{ __('common.form.message_label') }} (<span id="count">500</span>/500)</label>
                                 </div>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
@@ -204,9 +139,8 @@ Contact us - wpnrayong
                             </div>
                         </div>
                         <div class="text-center mt-20">
-                            <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData" style="border-radius: 5px">Send</button >
+                            <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData" style="border-radius: 5px">{{ __('contact.form.send') }}</button >
                         </div>
-                        @endif
 
                     </form>
                 </div>
@@ -220,7 +154,7 @@ Contact us - wpnrayong
     <div class="p-15">
         <div class="">
 
-                    @if(session()->get('locale') == 'th')
+                    @if(app()->getLocale() === 'th')
                     <div class="box-green-800">
                         <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">ที่อยู่</p>
                         <h4 style="margin-bottom: 4px;">สำนักงานใหญ่</h4>
@@ -242,71 +176,68 @@ Contact us - wpnrayong
                     </div>
                     @else
                     <div class="box-green-800">
-                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">Address</p>
-                        <h4 style="margin-bottom: 4px;">Head office</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>1/1 Moo 4 Nikhompattana subdistrict, Nikhompattana district, Rayong province 21180 <br>
-                        <a href="https://www.google.com/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/data=!4m2!3m1!1s0x0:0x23f4b615e2e82d1c?sa=X&ved=1t:2428&hl=en-US&ictx=111&cshid=1741235549668208" target="_blank">Map</a></p>
+                        <p style="margin-bottom: 4px; padding-bottom: 0px; font-size:16px">{{ __('contact.address_label') }}</p>
+                        <h4 style="margin-bottom: 4px;">{{ __('contact.head_office') }}</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">{{ __('contact.company') }}</p>
+                        <p>{{ __('contact.head_address') }} <br>
+                        <a href="https://www.google.com/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B9%80%E0%B8%84%E0%B8%B4%E0%B8%A5+%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/data=!4m2!3m1!1s0x0:0x23f4b615e2e82d1c?sa=X&ved=1t:2428&hl=en-US&ictx=111&cshid=1741235549668208" target="_blank">{{ __('common.map') }}</a></p>
 
-                        <h4 style="margin-bottom: 4px;">Huai Pong Office</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>22/9 Soi.Chaklukya 4, Watchaklukya Road,
-                            Huaypong subdistrict, Muang Rayong district,
-                            Rayong province 21150 <br>
-                        <a href="https://www.google.com/maps/place/WPN+Rayong+Branch+3/@12.7513181,101.1252694,17z/data=!4m6!3m5!1s0x3102f028518c91f1:0xe8e3cd3c3b3c5ff3!8m2!3d12.7513181!4d101.1252694!16s%2Fg%2F11gblv0sqr?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
+                        <h4 style="margin-bottom: 4px;">{{ __('contact.huaipong_office') }}</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">{{ __('contact.company') }}</p>
+                        <p>{{ __('contact.huaipong_address') }} <br>
+                        <a href="https://www.google.com/maps/place/WPN+Rayong+Branch+3/@12.7513181,101.1252694,17z/data=!4m6!3m5!1s0x3102f028518c91f1:0xe8e3cd3c3b3c5ff3!8m2!3d12.7513181!4d101.1252694!16s%2Fg%2F11gblv0sqr?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">{{ __('common.map') }}</a></p>
 
-                        <h4 style="margin-bottom: 4px;">Songkhla Office</h4>
-                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">Wongpanit Recycle Rayong Co., LTD.</p>
-                        <p>428 Moo. 2, Phawong subdistrict, Mueang Songkhla district, Songkhla province 90100 <br>
-                        <a href="https://www.google.com/maps/place/WPN+Recycle+Rayong+SKL/@7.1349492,100.5747619,17z/data=!3m1!4b1!4m6!3m5!1s0x304d33930e9c7071:0x5c2d395e1452c1f2!8m2!3d7.1349492!4d100.5747619!16s%2Fg%2F11tfk8qn8b?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Map</a></p>
+                        <h4 style="margin-bottom: 4px;">{{ __('contact.songkhla_office') }}</h4>
+                        <p style="padding-bottom: 1px; margin-bottom: 0rem;">{{ __('contact.company') }}</p>
+                        <p>{{ __('contact.songkhla_address') }} <br>
+                        <a href="https://www.google.com/maps/place/WPN+Recycle+Rayong+SKL/@7.1349492,100.5747619,17z/data=!3m1!4b1!4m6!3m5!1s0x304d33930e9c7071:0x5c2d395e1452c1f2!8m2!3d7.1349492!4d100.5747619!16s%2Fg%2F11tfk8qn8b?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">{{ __('common.map') }}</a></p>
 
-                        <h4 class="mt-10">Contact</h4>
-                        <p>Phone : <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
-                        Email : <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
+                        <h4 class="mt-10">{{ __('contact.channels') }}</h4>
+                        <p>{{ __('contact.phone_label') }} <a href="tel:{{ get_phone2() }}">{{ get_phone2() }}</a>, <a href="tel:{{ get_phone() }}">{{ get_phone() }}</a>, <a href="tel:0945692969">0945692969</a><br>
+                        {{ __('contact.email_label') }} <a href="mailto: {{ get_email() }}">{{ get_email() }}</a></p>
                     </div>
                     @endif
         </div>
         <div class="d-15">
             <form class="ps-form--contact-us" id="contactForm2">
 
-                @if(session()->get('locale') == 'th')
                 <div class="row">
                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="ระบุชื่อ-นามสกุลของคุณ" name="name" id='name2' required />
-                            <label for="name" class="form__label">ชื่อ-นามสกุล</label>
+                            <input type="input" class="form__field" placeholder="{{ __('contact.form2.name_placeholder') }}" name="name" id='name2' required />
+                            <label for="name" class="form__label">{{ __('contact.form2.name_label') }}</label>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="ระบุอีเมลของคุณ" name="email" id='email2' required />
-                            <label for="email" class="form__label">อีเมล</label>
+                            <input type="input" class="form__field" placeholder="{{ __('contact.form.email_placeholder') }}" name="email" id='email2' required />
+                            <label for="email" class="form__label">{{ __('contact.form.email_label') }}</label>
                         </div>
                     </div>
                     <div class="col-xl-12col-lg-6 col-md-6 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="ระบุเบอร์โทรศัพท์ของคุณ" name="phone" id='phone2' required />
-                            <label for="phone" class="form__label">เบอร์โทรศัพท์</label>
+                            <input type="input" class="form__field" placeholder="{{ __('contact.form.phone_placeholder') }}" name="phone" id='phone2' required />
+                            <label for="phone" class="form__label">{{ __('contact.form.phone_label') }}</label>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
                         <div class="form__group field">
                             <select class="form__field" aria-label="Select example" name="type" id='type2'>
-                                <option>กรุณาเลือกหัวข้อที่ต้องการ</option>
+                                <option>{{ __('common.form.topic_select') }}</option>
                                 @isset($type_contact)
                                     @foreach ($type_contact as $item)
                                         <option value="{{ $item->id }}">{{ $item->name }}</option>
                                     @endforeach
                                 @endisset
                             </select>
-                            <label for="name" class="form__label">หัวข้อที่ต้องการติดต่อ</label>
+                            <label for="name" class="form__label">{{ __('common.form.topic_label') }}</label>
                         </div>
                     </div>
 
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <div class="form__group field">
-                            <textarea class="form__field" placeholder="ระบุข้อความที่ต้องการ" style="height:80px" maxlength="500" name="massage" id='massage2'></textarea>
-                            <label for="massage" class="form__label">ข้อความ (<span id="count2">500</span>/500)</label>
+                            <textarea class="form__field" placeholder="{{ __('contact.form.message_placeholder') }}" style="height:80px" maxlength="500" name="massage" id='massage2'></textarea>
+                            <label for="massage" class="form__label">{{ __('common.form.message_label') }} (<span id="count2">500</span>/500)</label>
                         </div>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
@@ -315,57 +246,8 @@ Contact us - wpnrayong
 
                 </div>
                 <div class="text-center mt-20">
-                    <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData2" style="border-radius: 5px">ส่งข้อความ</button >
+                    <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData2" style="border-radius: 5px">{{ __('contact.form.send') }}</button >
                 </div>
-                @else
-                <div class="row">
-                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                        <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="ระบุชื่อ-นามสกุลของคุณ" name="name" id='name2' required />
-                            <label for="name" class="form__label">Enter your first and last name.</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                        <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="Enter your email" name="email" id='email2' required />
-                            <label for="email" class="form__label">Email</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-12col-lg-6 col-md-6 col-sm-12 col-12 ">
-                        <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="Enter your phone number" name="phone" id='phone2' required />
-                            <label for="phone" class="form__label">Phone No.</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                        <div class="form__group field">
-                            <select class="form__field" aria-label="Select example" name="type" id='type2'>
-                                <option>Please select the desired topic.</option>
-                                @isset($type_contact)
-                                    @foreach ($type_contact as $item)
-                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
-                                    @endforeach
-                                @endisset
-                            </select>
-                            <label for="name" class="form__label">Topic you want to contact</label>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                        <div class="form__group field">
-                            <textarea class="form__field" placeholder="Required message" style="height:80px" maxlength="500" name="massage" id='massage2'></textarea>
-                            <label for="massage" class="form__label">message (<span id="count2">500</span>/500)</label>
-                        </div>
-                    </div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                        <div class="g-recaptcha" data-sitekey="6LdQnlkUAAAAAOfsIz7o-U6JSgrSMseulLvu7lI8"></div>
-                    </div>
-
-                </div>
-                <div class="text-center mt-20">
-                    <button  class="ps-btn--fullwidth-green btn-block" id="btnSendData2" style="border-radius: 5px">Send</button >
-                </div>
-                @endif
 
             </form>
         </div>
@@ -409,11 +291,7 @@ $("#massage2").keyup(function(){
         console.log(formData)
     if(name == '' || msg == '' || email == '' || phone == '' || type == ''){
 
-    @if(session()->get('locale') == 'th')
-        swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
-    @else
-        swal("Please enter complete information.");
-    @endif
+    swal(@json(__('contact.incomplete')));
 
     }else{
       $.LoadingOverlay("show", {
@@ -453,11 +331,7 @@ $("#massage2").keyup(function(){
                     $.LoadingOverlay("hide");
                 }, 500);
 
-                @if(session()->get('locale') == 'th')
-                    swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
-                @else
-                    swal("Please enter complete information.");
-                @endif
+                swal(@json(__('contact.incomplete')));
 
               }
           },
@@ -482,11 +356,7 @@ $("#massage2").keyup(function(){
         console.log(formData)
     if(name == '' || msg == '' || email == '' || phone == '' || type == ''){
 
-        @if(session()->get('locale') == 'th')
-            swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
-        @else
-            swal("Please enter complete information.");
-        @endif
+        swal(@json(__('contact.incomplete')));
 
     }else{
       $.LoadingOverlay("show", {
@@ -526,11 +396,7 @@ $("#massage2").keyup(function(){
                     $.LoadingOverlay("hide");
                 }, 500);
 
-                @if(session()->get('locale') == 'th')
-                    swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
-                @else
-                    swal("Please enter complete information.");
-                @endif
+                swal(@json(__('contact.incomplete')));
 
               }
           },
