@@ -1,19 +1,15 @@
 @extends('layouts.template')
 
 @section('title')
-@if (session()->get('locale') == 'th')
-{{ $objs->name_pro }} - ผลิตภัณฑ์ดีไซน์
-@else
-{{ $objs->name_pro_en ?: $objs->name_pro }} - Upcycle Design Products
-@endif
+{{ localized($objs, 'name_pro') }} - {{ __('design.upcycle_design_products') }}
 @stop
 
 @section('og')
     <meta property="og:url" content="{{ url('/design-products/'.$objs->id_q) }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ session()->get('locale') == 'th' ? $objs->name_pro : ($objs->name_pro_en ?: $objs->name_pro) }}" />
+    <meta property="og:title" content="{{ localized($objs, 'name_pro') }}" />
     <meta property="og:image" content="{{ url('images/wpnrayong/product/'.$objs->image_pro) }}?v{{ time() }}" />
-    <meta property="og:description" content="{{ strip_tags(session()->get('locale') == 'th' ? ($objs->title_pro ?: get_facebook_detail()) : ($objs->title_pro_en ?: $objs->title_pro ?: get_facebook_detail())) }}" />
+    <meta property="og:description" content="{{ strip_tags(localized($objs, 'title_pro') ?? get_facebook_detail()) }}" />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="314" />
 @stop('og')
@@ -493,21 +489,12 @@
 @section('content')
 <div class="design-detail-page">
     @php
-        $isThaiLocale = session()->get('locale') == 'th';
-        $localizedName = $isThaiLocale ? $objs->name_pro : ($objs->name_pro_en ?: $objs->name_pro);
-        $localizedSummary = $isThaiLocale
-            ? ($objs->title_pro ?: 'ผลงานดีไซน์ที่เปลี่ยนวัสดุเหลือใช้ให้กลายเป็นชิ้นงานที่ใช้งานได้จริงและมีคุณค่าในพื้นที่ของคุณ')
-            : ($objs->title_pro_en ?: $objs->title_pro ?: 'A design-led piece that transforms surplus materials into something functional, distinctive, and worth keeping.');
-        $localizedDetail = $isThaiLocale ? ($objs->detail_pro ?: '') : ($objs->detail_pro_en ?: $objs->detail_pro ?: '');
-        $materialText = $isThaiLocale
-            ? ($objs->material ?: 'ยังไม่ได้ระบุข้อมูลวัสดุที่ใช้สำหรับสินค้าชิ้นนี้')
-            : ($objs->material_en ?: $objs->material ?: 'Material information has not been specified for this product yet.');
-        $highlightText = $isThaiLocale
-            ? ($objs->highlights ?: 'ยังไม่ได้ระบุจุดเด่นสินค้าสำหรับสินค้าชิ้นนี้')
-            : ($objs->highlights_en ?: $objs->highlights ?: 'Highlights have not been specified for this product yet.');
-        $useCaseText = $isThaiLocale
-            ? ($objs->use_case ?: 'ยังไม่ได้ระบุการใช้งานสำหรับสินค้าชิ้นนี้')
-            : ($objs->use_case_en ?: $objs->use_case ?: 'Use case information has not been specified for this product yet.');
+        $localizedName = localized($objs, 'name_pro');
+        $localizedSummary = localized($objs, 'title_pro') ?? __('design.summary_fallback');
+        $localizedDetail = localized($objs, 'detail_pro') ?? '';
+        $materialText = localized($objs, 'material') ?? __('design.material_fallback');
+        $highlightText = localized($objs, 'highlights') ?? __('design.highlights_fallback');
+        $useCaseText = localized($objs, 'use_case') ?? __('design.use_case_fallback');
     @endphp
 
 
@@ -515,22 +502,10 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li>
-                    @if (session()->get('locale') == 'th')
-                    <a href="{{ url('design-products') }}">ผลิตภัณฑ์ดีไซน์</a>
-                    @else
-                    <a href="{{ url('design-products') }}">Upcycle Design Products</a>
-                    @endif
+                    <a href="{{ url('design-products') }}">{{ __('design.upcycle_design_products') }}</a>
                 </li>
                 <li>
-                    @if (session()->get('locale') == 'th')
-                    {{ $objs->name_pro }}
-                    @else
-                        @if ($objs->name_pro_en == null)
-                        {{ $objs->name_pro }}
-                        @else
-                        {{ $objs->name_pro_en }}
-                        @endif
-                    @endif
+                    {{ $localizedName }}
                 </li>
             </ul>
         </div>
@@ -587,45 +562,45 @@
                                 >
                             </div>
                             <div class="design-gallery__hint">
-                                {{ session()->get('locale') == 'th' ? 'คลิกภาพย่อยเพื่อดูภาพเพิ่มเติม' : 'Select a thumbnail to view more images' }}
+                                {{ __('design.select_a_thumbnail_to_view_more_images') }}
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="design-detail-content ps-product__info">
-                    <span class="design-detail-kicker">{{ $isThaiLocale ? 'Design Product' : 'Upcycle Design Product' }}</span>
+                    <span class="design-detail-kicker">{{ __('design.upcycle_design_product') }}</span>
                     <h1 class="design-detail-title">{{ $localizedName }}</h1>
 
                     <p class="design-detail-summary">
-                        {!! nl2br(e(session()->get('locale') == 'th' ? ($objs->title_pro ?: 'ผลงานดีไซน์ที่เปลี่ยนวัสดุเหลือใช้ให้กลายเป็นชิ้นงานที่ใช้งานได้จริงและมีคุณค่าในพื้นที่ของคุณ') : ($objs->title_pro_en ?: $objs->title_pro ?: 'A design-led piece that transforms surplus materials into something functional, distinctive, and worth keeping.'))) !!}
+                        {!! nl2br(e($localizedSummary)) !!}
                     </p>
 
                     <div class="design-detail-meta">
                         <div class="design-detail-meta__item">
-                            <span class="design-detail-meta__label">{{ session()->get('locale') == 'th' ? 'ประเภท' : 'Category' }}</span>
-                            <div class="design-detail-meta__value">{{ $objs->cat_name ?: (session()->get('locale') == 'th' ? 'ผลิตภัณฑ์ดีไซน์' : 'Design Product') }}</div>
+                            <span class="design-detail-meta__label">{{ __('design.category') }}</span>
+                            <div class="design-detail-meta__value">{{ $objs->cat_name ?: (__('design.design_product')) }}</div>
                         </div>
                         {{-- <div class="design-detail-meta__item">
-                            <span class="design-detail-meta__label">{{ session()->get('locale') == 'th' ? 'Condition' : 'Condition' }}</span>
-                            <div class="design-detail-meta__value">{{ session()->get('locale') == 'th' ? ($objs->condition ?: '-') : ($objs->condition_en ?: $objs->condition ?: '-') }}</div>
+                            <span class="design-detail-meta__label">{{ __('design.condition') }}</span>
+                            <div class="design-detail-meta__value">{{ localized($objs, 'condition') ?? '-' }}</div>
                         </div>
                         <div class="design-detail-meta__item">
                             <span class="design-detail-meta__label">SKU</span>
                             <div class="design-detail-meta__value">{{ $objs->sku ?: '-' }}</div>
                         </div>
                         <div class="design-detail-meta__item">
-                            <span class="design-detail-meta__label">{{ session()->get('locale') == 'th' ? 'น้ำหนักสุทธิ' : 'Net Weight' }}</span>
+                            <span class="design-detail-meta__label">{{ __('design.net_weight') }}</span>
                             <div class="design-detail-meta__value">{{ $objs->weight ?: '-' }}</div>
                         </div> --}}
                     </div>
 
                     <div class="design-detail-contact">
-                        <h3>{{ session()->get('locale') == 'th' ? 'สนใจชิ้นงานนี้?' : 'Interested in this piece?' }}</h3>
-                        <p>{{ session()->get('locale') == 'th' ? 'สอบถามรายละเอียดเพิ่มเติม นัดชมสินค้า หรือพูดคุยเรื่องงานออกแบบและการใช้งานได้กับทีมของเรา' : 'Talk with our team for more details, viewing arrangements, or design-use consultation.' }}</p>
+                        <h3>{{ __('design.interested_in_this_piece') }}</h3>
+                        <p>{{ __('design.talk_with_our_team_for_more_details_view') }}</p>
                         <div class="design-detail-contact__actions">
-                            <a class="design-detail-btn design-detail-btn--light" href="{{ url('/contact') }}">{{ session()->get('locale') == 'th' ? 'สอบถามรายละเอียด' : 'Make an Inquiry' }}</a>
-                            <a class="design-detail-btn design-detail-btn--ghost" href="tel:{{ get_phone2() }}">{{ session()->get('locale') == 'th' ? 'โทรหาเรา' : 'Call Us' }}</a>
+                            <a class="design-detail-btn design-detail-btn--light" href="{{ url('/contact') }}">{{ __('design.make_an_inquiry') }}</a>
+                            <a class="design-detail-btn design-detail-btn--ghost" href="tel:{{ get_phone2() }}">{{ __('design.call_us') }}</a>
                             <a class="design-detail-btn design-detail-btn--ghost" target="_blank" href="{{ get_line() }}">LINE</a>
                         </div>
                     </div>
@@ -636,40 +611,40 @@
         <section class="design-detail-body">
             <div class="design-detail-sections">
                 <div class="design-detail-body__card">
-                    <h3>{{ $isThaiLocale ? 'คำอธิบายสินค้า' : 'Description' }}</h3>
+                    <h3>{{ __('design.description') }}</h3>
                     <div class="design-detail-body__content">
                         <p>{!! nl2br(e($localizedSummary)) !!}</p>
                     </div>
                 </div>
 
                 <div class="design-detail-body__card">
-                    <h3>{{ $isThaiLocale ? 'วัสดุที่ใช้' : 'Material' }}</h3>
+                    <h3>{{ __('design.material_2') }}</h3>
                     <div class="design-detail-body__content">
                         <p>{{ $materialText }}</p>
                     </div>
                 </div>
 
                 <div class="design-detail-body__card">
-                    <h3>{{ $isThaiLocale ? 'จุดเด่นสินค้า' : 'Highlights / Features' }}</h3>
+                    <h3>{{ __('design.highlights_features') }}</h3>
                     <div class="design-detail-body__content">
                         <p>{!! nl2br(e($highlightText)) !!}</p>
                     </div>
                 </div>
 
                 <div class="design-detail-body__card">
-                    <h3>{{ $isThaiLocale ? 'การใช้งาน' : 'Use Case' }}</h3>
+                    <h3>{{ __('design.use_case') }}</h3>
                     <div class="design-detail-body__content">
                         <p>{!! nl2br(e($useCaseText)) !!}</p>
                     </div>
                 </div>
 
                 <div class="design-detail-body__card design-detail-body__card--full">
-                    <h3>{{ $isThaiLocale ? 'รายละเอียดเพิ่มเติม' : 'Additional Information' }}</h3>
+                    <h3>{{ __('design.additional_information') }}</h3>
                     <div class="design-detail-body__content">
                         @if (!empty(trim(strip_tags($localizedDetail))))
                             {!! $localizedDetail !!}
                         @else
-                            <p>{{ $isThaiLocale ? 'สามารถสอบถามรายละเอียดเพิ่มเติมเกี่ยวกับขนาด การใช้งาน และแนวทางการจัดวางได้กับทีมงานของเรา' : 'Please contact our team for additional details on dimensions, usage guidance, and placement recommendations.' }}</p>
+                            <p>{{ __('design.please_contact_our_team_for_additional_d') }}</p>
                         @endif
                     </div>
                 </div>
@@ -678,21 +653,17 @@
 
         <section class="design-detail-body design-detail-body--legacy">
             <div class="design-detail-body__card">
-                <h3>{{ session()->get('locale') == 'th' ? 'รายละเอียดเพิ่มเติม' : 'Additional Information' }}</h3>
+                <h3>{{ __('design.additional_information') }}</h3>
                 <div class="design-detail-body__content">
-                    @if (session()->get('locale') == 'th')
-                        {!! $objs->detail_pro !!}
-                    @else
-                        {!! $objs->detail_pro_en ?: $objs->detail_pro !!}
-                    @endif
+                    {!! localized($objs, 'detail_pro') !!}
                 </div>
             </div>
         </section>
 
         <section class="design-detail-related">
             <div class="design-detail-related__header">
-                <h3>{{ session()->get('locale') == 'th' ? 'ชิ้นงานดีไซน์อื่นที่น่าสนใจ' : 'More Upcycle Design Products' }}</h3>
-                <a href="{{ url('/design-products') }}">{{ session()->get('locale') == 'th' ? 'ดูทั้งหมด' : 'View All' }}</a>
+                <h3>{{ __('design.more_upcycle_design_products') }}</h3>
+                <a href="{{ url('/design-products') }}">{{ __('design.view_all') }}</a>
             </div>
             <div class="row">
                 @foreach($pro as $u)
@@ -703,10 +674,10 @@
                             </a>
                             <div class="design-related-card__body">
                                 <a class="design-related-card__title" href="{{ url('/design-products/'.$u->id_q) }}">
-                                    {{ session()->get('locale') == 'th' ? $u->name_pro : ($u->name_pro_en ?: $u->name_pro) }}
+                                    {{ localized($u, 'name_pro') }}
                                 </a>
                                 <a class="design-related-card__link" href="{{ url('/design-products/'.$u->id_q) }}">
-                                    {{ session()->get('locale') == 'th' ? 'ดูรายละเอียด' : 'View Details' }}
+                                    {{ __('design.view_details') }}
                                 </a>
                             </div>
                         </article>

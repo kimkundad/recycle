@@ -2,15 +2,7 @@
 
 @section('title')
 
-    @if (session()->get('locale') == 'th')
-    {{ $objs->name_pro }} - wpnrayong
-    @else
-        @if ($objs->name_pro_en == null)
-        {{ $objs->name_pro }} - wpnrayong
-        @else
-        {{ $objs->name_pro_en }} - wpnrayong
-        @endif
-    @endif
+    {{ localized($objs, 'name_pro') }} - wpnrayong
 
 @stop
 
@@ -34,22 +26,10 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li>
-                    @if (session()->get('locale') == 'th')
-                    <a href="{{ url('category?id=0') }}">สินค้าทั้งหมด</a>
-                    @else
-                    <a href="{{ url('category?id=0') }}">All Products</a>
-                    @endif
+                    <a href="{{ url('category?id=0') }}">{{ __('product.all_products') }}</a>
                 </li>
                 <li>
-                    @if (session()->get('locale') == 'th')
-                    {{ $objs->name_pro }}
-                    @else
-                        @if ($objs->name_pro_en == null)
-                        {{ $objs->name_pro }}
-                        @else
-                        {{ $objs->name_pro_en }}
-                        @endif
-                    @endif
+                    {{ localized($objs, 'name_pro') }}
                 </li>
             </ul>
         </div>
@@ -112,15 +92,7 @@
                             </div>
                             <div class="ps-product__info">
 
-                            @if (session()->get('locale') == 'th')
-                            <h1>{{ $objs->name_pro }}</h1>
-                            @else
-                                @if ($objs->name_pro_en == null)
-                                <h1>{{ $objs->name_pro }}</h1>
-                                @else
-                                <h1>{{ $objs->name_pro_en }}</h1>
-                                @endif
-                            @endif
+                            <h1>{{ localized($objs, 'name_pro') }}</h1>
 
                                 <div class="d-flex">
                                             @if($objs->discount == 0)
@@ -149,25 +121,13 @@
                                         <p class="mt-10px"><strong>SKU:</strong> {{ $objs->sku }}</p>
                                         <p class="mt-10px"><strong>Net weight:</strong> {{ $objs->weight }}</p>
                                         <p class="mt-10px"><strong>Condition:</strong>
-                                            @if (session()->get('locale') == 'th')
-                                            <h1>{{ $objs->condition }}</h1>
-                                            @else
-                                                @if ($objs->condition_en == null)
-                                                <h1>{{ $objs->condition }}</h1>
-                                                @else
-                                                <h1>{{ $objs->condition_en }}</h1>
-                                                @endif
-                                            @endif
+                                            <h1>{{ localized($objs, 'condition') }}</h1>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="ps-product__variations bor-line-top">
                                     <figure>
-                                        @if (session()->get('locale') == 'th')
-                                        <figcaption class="contact-product-title">ติดต่อเพื่อซื้อสินค้า</figcaption>
-                                        @else
-                                        <figcaption class="contact-product-title">Contact to buy products</figcaption>
-                                        @endif
+                                        <figcaption class="contact-product-title">{{ __('product.contact_to_buy') }}</figcaption>
                                     </figure>
                                 </div>
                                 <div class="header d-flex">
@@ -199,24 +159,13 @@
 
                         <div class="ps-section--default mt-20 mb-5px">
                             <div class="ps-section__header mb-20">
-                                @if (session()->get('locale') == 'th')
-                                <h3>ข้อมูลเพิ่มเติม</h3>
-                                @else
-                                <h3>Additional information</h3>
-                                @endif
+                                <h3>{{ __('product.additional_info') }}</h3>
                             </div>
                         </div>
 
                             <p>
-                                @if (session()->get('locale') == 'th')
-                                    {!! $objs->detail_pro !!}
-                                @else
-                                    @if ($objs->condition_en == null)
-                                    {!! $objs->detail_pro !!}
-                                    @else
-                                    {!! $objs->detail_pro_en !!}
-                                    @endif
-                                @endif
+                                {{-- English keeps its existing rule: detail_pro_en only when condition_en is set. --}}
+                                {!! app()->getLocale() === 'en' ? ($objs->condition_en == null ? $objs->detail_pro : $objs->detail_pro_en) : localized($objs, 'detail_pro') !!}
                             </p>
 
 
@@ -226,21 +175,12 @@
             </div>
             <div class="ps-section--default ps-customer-bought">
                 <div class="ps-section__header">
-                    @if (session()->get('locale') == 'th')
                     <div class="d-flex justify-content-between">
-                        <h3>สินค้าแนะนำ</h3>
+                        <h3>{{ __('product.recommended') }}</h3>
                         <a href="{{ url('/category?id=0') }}" class="">
-                            ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
+                            {{ __('product.view_more') }} <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
                         </a>
                     </div>
-                    @else
-                    <div class="d-flex justify-content-between">
-                        <h3>Recommended</h3>
-                        <a href="{{ url('/category?id=0') }}" class="">
-                            View Moew <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
-                        </a>
-                    </div>
-                    @endif
                 </div>
                 <div class="ps-section__content">
                     <div class="">
@@ -254,16 +194,7 @@
                                         <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
                                     </div>
                                     <div class="ps-product__container">
-                                        @if(session()->get('locale') == 'th')
-                                        <a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
-                                        @else
-                                            @if($u->name_pro_en == null)
-                                                <a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
-                                            @else
-                                                <a class="ps-product__vendor" href="#">{{ $u->name_pro_en }}</a>
-                                            @endif
-
-                                        @endif
+                                        <a class="ps-product__vendor" href="#">{{ localized($u, 'name_pro') }}</a>
                                         <div class="ps-product__content">
                                             @if($u->discount == 0)
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
@@ -283,11 +214,7 @@
                                                 @endif
                                             </p>
                                             @endif
-                                            @if(session()->get('locale') == 'th')
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
-                                            @else
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">View</a>
-                                            @endif
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">{{ __('common.view_product') }}</a>
                                         </div>
                                         <div class="ps-product__content hover">
                                             @if($u->discount == 0)
@@ -308,11 +235,7 @@
                                                 @endif
                                             </p>
                                             @endif
-                                            @if(session()->get('locale') == 'th')
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
-                                            @else
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">View</a>
-                                            @endif
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">{{ __('common.view_product') }}</a>
                                         </div>
                                     </div>
                                 </div>

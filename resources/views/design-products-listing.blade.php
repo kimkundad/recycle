@@ -1,17 +1,13 @@
 ﻿@extends('layouts.template')
 
 @section('title')
-@if (session()->get('locale') == 'th')
-ผลิตภัณฑ์ดีไซน์ - wpnrayong
-@else
-Upcycle Design Products - wpnrayong
-@endif
+{{ __('design.upcycle_design_products') }} - wpnrayong
 @stop
 
 @section('og')
     <meta property="og:url" content="{{ url('/design-products') }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ session()->get('locale') == 'th' ? 'ผลิตภัณฑ์ดีไซน์' : 'Upcycle Design Products' }}" />
+    <meta property="og:title" content="{{ __('design.upcycle_design_products') }}" />
     <meta property="og:image" content="{{ get_facebook_img() }}?v{{ time() }}" />
     <meta property="og:description" content="{{ get_facebook_detail() }}" />
     <meta property="og:image:width" content="600" />
@@ -411,7 +407,7 @@ Upcycle Design Products - wpnrayong
         <div class="container">
             <div class="design-products-hero__wrap">
                 <span class="design-products-hero__eyebrow">From Waste to Worth.</span>
-                @if (session()->get('locale') == 'th')
+                @if (app()->getLocale() === 'th')
                     <h1>นิยามใหม่ของวัสดุอุตสาหกรรมเหลือใช้ สู่ผลงานดีไซน์ที่มีคุณค่า</h1>
                     <p>
                         เปลี่ยนวัสดุเหลือใช้ ให้เป็นเฟอร์นิเจอร์ดีไซน์ระดับพรีเมียม
@@ -438,20 +434,20 @@ Upcycle Design Products - wpnrayong
                 <aside class="design-products-sidebar">
                     <div class="design-filter-intro">
                         <i class="icon-equalizer"></i>
-                        <span>{{ session()->get('locale') == 'th' ? 'หมวดหมู่ : ผลิตภัณฑ์ดีไซน์' : 'Category : Design Products' }}</span>
+                        <span>{{ __('design.category_design_products') }}</span>
                     </div>
 
                     @if($showFilterTypes)
                     <div class="design-filter-group">
-                        <h4 class="design-filter-group__title">{{ session()->get('locale') == 'th' ? 'ประเภทสินค้า' : 'Product Type' }}</h4>
+                        <h4 class="design-filter-group__title">{{ __('design.product_type') }}</h4>
                         @forelse($designTypes as $item)
                         <div class="design-filter-option">
                             <input id="design-type-{{ $item->id }}" class="js-design-filter" data-filter-group="types" type="checkbox" value="{{ $item->id }}">
-                            <label for="design-type-{{ $item->id }}">{{ session()->get('locale') == 'th' ? $item->name_th : ($item->name_en ?: $item->name_th) }}</label>
+                            <label for="design-type-{{ $item->id }}">{{ localized(['name' => $item->name_th, 'name_en' => $item->name_en], 'name') }}</label>
                         </div>
                         @empty
                         <div class="design-filter-option">
-                            <label>{{ session()->get('locale') == 'th' ? 'ยังไม่มีข้อมูลประเภทสินค้า' : 'No product types yet' }}</label>
+                            <label>{{ __('design.no_product_types_yet') }}</label>
                         </div>
                         @endforelse
                     </div>
@@ -459,15 +455,15 @@ Upcycle Design Products - wpnrayong
 
                     @if($showFilterMaterials)
                     <div class="design-filter-group">
-                        <h4 class="design-filter-group__title">{{ session()->get('locale') == 'th' ? 'วัสดุ' : 'Material' }}</h4>
+                        <h4 class="design-filter-group__title">{{ __('design.material') }}</h4>
                         @forelse($designMaterials as $item)
                         <div class="design-filter-option">
                             <input id="design-material-{{ $item->id }}" class="js-design-filter" data-filter-group="materials" type="checkbox" value="{{ $item->id }}">
-                            <label for="design-material-{{ $item->id }}">{{ session()->get('locale') == 'th' ? $item->name_th : ($item->name_en ?: $item->name_th) }}</label>
+                            <label for="design-material-{{ $item->id }}">{{ localized(['name' => $item->name_th, 'name_en' => $item->name_en], 'name') }}</label>
                         </div>
                         @empty
                         <div class="design-filter-option">
-                            <label>{{ session()->get('locale') == 'th' ? 'ยังไม่มีข้อมูลวัสดุ' : 'No materials yet' }}</label>
+                            <label>{{ __('design.no_materials_yet') }}</label>
                         </div>
                         @endforelse
                     </div>
@@ -475,23 +471,23 @@ Upcycle Design Products - wpnrayong
 
                     @if($showFilterSizes)
                     <div class="design-filter-group">
-                        <h4 class="design-filter-group__title">{{ session()->get('locale') == 'th' ? 'ขนาด' : 'Size' }}</h4>
+                        <h4 class="design-filter-group__title">{{ __('design.size') }}</h4>
                         @forelse($designSizes as $item)
                         <div class="design-filter-option">
                             <input id="design-size-{{ $item->id }}" class="js-design-filter" data-filter-group="sizes" type="checkbox" value="{{ $item->id }}">
-                            <label for="design-size-{{ $item->id }}">{{ session()->get('locale') == 'th' ? $item->name_th : ($item->name_en ?: $item->name_th) }}</label>
+                            <label for="design-size-{{ $item->id }}">{{ localized(['name' => $item->name_th, 'name_en' => $item->name_en], 'name') }}</label>
                         </div>
                         @empty
                         <div class="design-filter-option">
-                            <label>{{ session()->get('locale') == 'th' ? 'ยังไม่มีข้อมูลขนาด' : 'No sizes yet' }}</label>
+                            <label>{{ __('design.no_sizes_yet') }}</label>
                         </div>
                         @endforelse
                     </div>
                     @endif
 
                     <div class="design-filter-actions">
-                        <button class="design-filter-btn design-filter-btn--primary" type="button" id="design-filter-apply">{{ session()->get('locale') == 'th' ? 'ใช้ตัวกรอง' : 'Apply' }}</button>
-                        <button class="design-filter-btn design-filter-btn--secondary" type="button" id="design-filter-reset">{{ session()->get('locale') == 'th' ? 'ล้างค่า' : 'Reset' }}</button>
+                        <button class="design-filter-btn design-filter-btn--primary" type="button" id="design-filter-apply">{{ __('design.apply') }}</button>
+                        <button class="design-filter-btn design-filter-btn--secondary" type="button" id="design-filter-reset">{{ __('design.reset') }}</button>
                     </div>
                 </aside>
                 @endif
@@ -499,20 +495,16 @@ Upcycle Design Products - wpnrayong
                 <div class="design-products-main">
                     <div class="design-products-toolbar">
                         <div class="design-products-toolbar__meta">
-                            @if (session()->get('locale') == 'th')
-                                แสดงสินค้าดีไซน์ทั้งหมด <strong id="design-products-count">{{ $count }}</strong> รายการ
-                            @else
-                                Showing <strong id="design-products-count">{{ $count }}</strong> upcycle design products
-                            @endif
+                            {!! __('design.showing_count', ['count' => '<strong id="design-products-count">' . (int) $count . '</strong>']) !!}
                         </div>
                         <div class="design-products-toolbar__actions">
-                            <span class="design-products-toolbar__chip">{{ session()->get('locale') == 'th' ? 'ตัวกรองจากฐานข้อมูล' : 'Database Filters' }}</span>
+                            <span class="design-products-toolbar__chip">{{ __('design.database_filters') }}</span>
                             <select id="design-products-sort" class="design-products-toolbar__sort">
-                                <option value="latest">{{ session()->get('locale') == 'th' ? 'ล่าสุด' : 'Latest' }}</option>
-                                <option value="sort_asc">{{ session()->get('locale') == 'th' ? 'แนะนำก่อน' : 'Featured First' }}</option>
-                                <option value="name_asc">{{ session()->get('locale') == 'th' ? 'ชื่อ A-Z' : 'Name A-Z' }}</option>
-                                <option value="name_desc">{{ session()->get('locale') == 'th' ? 'ชื่อ Z-A' : 'Name Z-A' }}</option>
-                                <option value="oldest">{{ session()->get('locale') == 'th' ? 'เก่าสุด' : 'Oldest' }}</option>
+                                <option value="latest">{{ __('design.latest') }}</option>
+                                <option value="sort_asc">{{ __('design.featured_first') }}</option>
+                                <option value="name_asc">{{ __('design.name_a_z') }}</option>
+                                <option value="name_desc">{{ __('design.name_z_a') }}</option>
+                                <option value="oldest">{{ __('design.oldest') }}</option>
                             </select>
                         </div>
                     </div>
@@ -603,7 +595,7 @@ Upcycle Design Products - wpnrayong
 
                     if (page === 1) {
                         $('#design-products-wrapper').html(
-                            '<div class="col-12"><div class="design-empty">{{ session()->get('locale') == 'th' ? 'ยังไม่มีสินค้าดีไซน์ในขณะนี้' : 'No design products are available at the moment.' }}</div></div>'
+                            '<div class="col-12"><div class="design-empty">{{ __('design.no_design_products_are_available_at_the_') }}</div></div>'
                         );
                     }
 

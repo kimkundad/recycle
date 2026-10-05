@@ -1,11 +1,7 @@
 @extends('layouts.template')
 <link rel="icon" type="image/png" sizes="32x32" href="{{ url('img/favicon_v5.png') }}" />
 @section('title')
-    @if (session()->get('locale') == 'th')
-        หมวดหมู่และสินค้า วงษ์พาณิชย์รีไซเคิล ระยอง - wpnrayong
-    @else
-        Product and Category - wpnrayong
-    @endif
+        {{ __('product.meta_title_category') }}
 
 @stop
 
@@ -41,25 +37,14 @@
 
     <div class="ps-breadcrumb">
         <div class="container">
-            @if (session()->get('locale') == 'th')
                 <div class="d-flex justify-content-between">
                     <ul class="breadcrumb">
-                        <li><a href="{{ url('/') }}">หน้าแรก</a></li>
-                        <li>สินค้าทั้งหมด</li>
+                        <li><a href="{{ url('/') }}">{{ __('common.nav.home') }}</a></li>
+                        <li>{{ __('product.all_products') }}</li>
                     </ul>
                     <a class="hide-green-ban-filter ps-btn set-btn-inner ps-btn--outline" href="#"
                         id="filter-sidebar"><i class="icon-equalizer"></i> Filter</a>
                 </div>
-            @else
-                <div class="d-flex justify-content-between">
-                    <ul class="breadcrumb">
-                        <li><a href="{{ url('/') }}">Home</a></li>
-                        <li>All Products</li>
-                    </ul>
-                    <a class="hide-green-ban-filter ps-btn set-btn-inner ps-btn--outline" href="#"
-                        id="filter-sidebar"><i class="icon-equalizer"></i> Filter</a>
-                </div>
-            @endif
         </div>
     </div>
 
@@ -73,11 +58,7 @@
                             <div class="d-flex">
                                 <img src="{{ url('img/filter-variant.png') }}" height="32" width="32">
                                 <div class="pt-5px">
-                                    @if (session()->get('locale') == 'th')
-                                        <h4 class="widget-title">หมวดหมู่ : ทุกหมวดหมู่</h4>
-                                    @else
-                                        <h4 class="widget-title">Category : All</h4>
-                                    @endif
+                                        <h4 class="widget-title">{{ __('product.category_all') }}</h4>
                                 </div>
                             </div>
                         </a>
@@ -85,25 +66,13 @@
                         <ul class="ps-list--categories">
 
                             <li class="">
-                                @if (session()->get('locale') == 'th')
-                                    <a href="{{ url('/recomment') }}">สินค้าแนะนำ</a>
-                                @else
-                                    <a href="{{ url('/recomment') }}">Recommended</a>
-                                @endif
+                                    <a href="{{ url('/recomment') }}">{{ __('product.recommended') }}</a>
                             </li>
                             @if (get_data_category())
                                 @foreach (get_data_category() as $u)
                                     <li class="current-menu-item menu-item-has-children">
 
-                                        @if (session()->get('locale') == 'th')
-                                            <a href="#">{{ $u->cat_name }}</a>
-                                        @else
-                                            @if($u->cat_name_en == null)
-                                                <a href="#">{{ $u->cat_name }}</a>
-                                            @else
-                                                <a href="#">{{ $u->cat_name_en }}</a>
-                                            @endif
-                                        @endif
+                                            <a href="#">{{ localized($u, 'cat_name') }}</a>
 
                                         <span class="sub-toggle">
                                             <i class="fa fa-angle-down"></i>
@@ -112,14 +81,11 @@
                                             @if ($u->option)
                                                 @foreach ($u->option as $j)
                                                     <li class="current-menu-item ">
-                                                    @if (session()->get('locale') == 'th')
-                                                        <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
+                                                    {{-- English keeps its existing markup: a "#" link when sub_name_en is set. --}}
+                                                    @if (app()->getLocale() === 'en' && $j->sub_name_en != null)
+                                                        <a class="ps-product__vendor" href="#">{{ $j->sub_name_en }}</a>
                                                     @else
-                                                        @if($j->sub_name_en == null)
-                                                        <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
-                                                        @else
-                                                            <a class="ps-product__vendor" href="#">{{ $j->sub_name_en }}</a>
-                                                        @endif
+                                                        <a href="{{ url('category?id=' . $j->id) }}">{{ localized($j, 'sub_name') }}</a>
                                                     @endif
                                                     </li>
                                                 @endforeach
@@ -152,11 +118,7 @@
                                 @if ($count > 12)
 
                                     <div class="text-center mt-30">
-                                        @if (session()->get('locale') == 'th')
-                                            <a class="green_btn_kim_out btn_card_in btn-box" href="#">ดูเพิ่มเติม</a>
-                                        @else
-                                            <a class="green_btn_kim_out btn_card_in btn-box" href="#">Read more</a>
-                                        @endif
+                                        <a class="green_btn_kim_out btn_card_in btn-box" href="#">{{ __('product.read_more') }}</a>
                                     </div>
 
                                     <br><br>
@@ -188,13 +150,8 @@
 
 <div class="ps-filter--sidebar hidden" id="filter_bar" style="display: none">
     <div class="ps-filter__header">
-        @if (session()->get('locale') == 'th')
-            <h3 class="text-green">ค้นหาหมวดหมู่และสินค้า</h3><a class="ps-btn--close ps-btn--no-boder"
+            <h3 class="text-green">{{ __('product.search_title') }}</h3><a class="ps-btn--close ps-btn--no-boder"
                 href="#"></a>
-        @else
-            <h3 class="text-green">Search categories and products</h3><a class="ps-btn--close ps-btn--no-boder"
-                href="#"></a>
-        @endif
     </div>
     <div class="ps-filter__content">
         <aside class="widget widget_shop ">
@@ -202,11 +159,7 @@
                 <div class="d-flex">
                     <img src="{{ url('img/filter-variant.png') }}" height="32" width="32">
                     <div class="pt-5px">
-                        @if (session()->get('locale') == 'th')
-                            <h4 class="widget-title">หมวดหมู่ : ทุกหมวดหมู่</h4>
-                        @else
-                            <h4 class="widget-title">Category : All</h4>
-                        @endif
+                            <h4 class="widget-title">{{ __('product.category_all') }}</h4>
                     </div>
                 </div>
             </a>
@@ -215,24 +168,12 @@
 
 
                 <li class="">
-                    @if (session()->get('locale') == 'th')
-                        <a href="{{ url('/recomment') }}">สินค้าแนะนำ</a>
-                    @else
-                        <a href="{{ url('/recomment') }}">Recommended</a>
-                    @endif
+                        <a href="{{ url('/recomment') }}">{{ __('product.recommended') }}</a>
                 </li>
                 @if (get_data_category())
                     @foreach (get_data_category() as $u)
                         <li class="current-menu-item menu-item-has-children">
-                                        @if (session()->get('locale') == 'th')
-                                            <a href="#">{{ $u->cat_name }}</a>
-                                        @else
-                                            @if($u->cat_name_en == null)
-                                                <a href="#">{{ $u->cat_name }}</a>
-                                            @else
-                                                <a href="#">{{ $u->cat_name_en }}</a>
-                                            @endif
-                                        @endif
+                                            <a href="#">{{ localized($u, 'cat_name') }}</a>
                             <span class="sub-toggle">
                                 <i class="fa fa-angle-down"></i>
                             </span>
@@ -240,14 +181,11 @@
                                 @if ($u->option)
                                     @foreach ($u->option as $j)
                                         <li class="current-menu-item ">
-                                                    @if (session()->get('locale') == 'th')
-                                                        <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
+                                                    {{-- English keeps its existing markup: a "#" link when sub_name_en is set. --}}
+                                                    @if (app()->getLocale() === 'en' && $j->sub_name_en != null)
+                                                        <a class="ps-product__vendor" href="#">{{ $j->sub_name_en }}</a>
                                                     @else
-                                                        @if($j->sub_name_en == null)
-                                                        <a href="{{ url('category?id=' . $j->id) }}">{{ $j->sub_name }}</a>
-                                                        @else
-                                                            <a class="ps-product__vendor" href="#">{{ $j->sub_name_en }}</a>
-                                                        @endif
+                                                        <a href="{{ url('category?id=' . $j->id) }}">{{ localized($j, 'sub_name') }}</a>
                                                     @endif
                                         </li>
                                     @endforeach
