@@ -1,6 +1,6 @@
 <!-- headers-->
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() === 'zh' ? 'zh-CN' : app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8">
@@ -19,6 +19,23 @@
     <meta property="fb:admins" content="100002037238809">
 
     @include('layouts.inc-style')
+    @if (app()->getLocale() === 'zh')
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+        <style>
+            html[lang="zh-CN"] body, html[lang="zh-CN"] h1, html[lang="zh-CN"] h2, html[lang="zh-CN"] h3,
+            html[lang="zh-CN"] h4, html[lang="zh-CN"] h5, html[lang="zh-CN"] h6,
+            html[lang="zh-CN"] span, html[lang="zh-CN"] p, html[lang="zh-CN"] li, html[lang="zh-CN"] strong,
+            html[lang="zh-CN"] option, html[lang="zh-CN"] label, html[lang="zh-CN"] input, html[lang="zh-CN"] a, html[lang="zh-CN"] b,
+            html[lang="zh-CN"] .ps-form--quick-search select.form-control, html[lang="zh-CN"] .ps-form--quick-search .form-control,
+            html[lang="zh-CN"] .table, html[lang="zh-CN"] .table td, html[lang="zh-CN"] .table th,
+            html[lang="zh-CN"] .ps-post .ps-post__title, html[lang="zh-CN"] .ps-btn--fullwidth-green,
+            html[lang="zh-CN"] .menu > li > a {
+                font-family: 'Prompt', 'Noto Sans SC', sans-serif !important;
+            }
+        </style>
+    @endif
     @yield('stylesheet')
 
     <!-- Google Tag Manager -->
