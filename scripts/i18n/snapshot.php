@@ -50,10 +50,12 @@ function visibleText(string $html): string
     // Keep user-visible attribute text (form placeholders, tooltips, alt text) as its own line.
     $html = preg_replace_callback('#<[^>]+>#', function ($tag) {
         preg_match_all('#\s(placeholder|title|alt|aria-label)\s*=\s*(["\'])(.*?)\2#is', $tag[0], $m, PREG_SET_ORDER);
-        return "\n" . implode("\n", array_map(fn ($a) => '@' . strtolower($a[1]) . ': ' . $a[3], $m)) . "\n";
+        return "\x01" . implode("\x01", array_map(fn ($a) => '@' . strtolower($a[1]) . ': ' . $a[3], $m)) . "\x01";
     }, $html);
+    // Whitespace inside a text node (including source line breaks) renders as one space,
+    // so only tag boundaries start a new line.
     $text = html_entity_decode($html, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-    $lines = array_filter(array_map(fn ($l) => preg_replace('/\s+/u', ' ', trim($l)), explode("\n", $text)), 'strlen');
+    $lines = array_filter(array_map(fn ($l) => trim(preg_replace('/\s+/u', ' ', $l)), explode("\x01", $text)), 'strlen');
     return implode("\n", $lines) . "\n";
 }
 
