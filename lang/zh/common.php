@@ -2,6 +2,11 @@
 
 return [
     'map' => '地图',
+    'view_all' => '查看全部',
+    'view_more' => '查看更多',
+    'contact_seller' => '联系销售',
+    'view_product' => '查看产品',
+    'read_more' => '阅读更多',
     'nav' => [
         'home' => '首页',
         'service' => '产品与服务',

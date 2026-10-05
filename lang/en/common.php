@@ -2,6 +2,11 @@
 
 return [
     'map' => 'Map',
+    'view_all' => 'View all',
+    'view_more' => 'View More',
+    'contact_seller' => 'Contact Seller',
+    'view_product' => 'View',
+    'read_more' => 'Read more',
     'nav' => [
         'home' => 'Home',
         'service' => 'Products and Services',
