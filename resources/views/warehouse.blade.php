@@ -117,7 +117,7 @@ min-height: 90px
 
 <div class="ps-vendor-banner bg--cover" data-background="{{ url('img/slide/warehouse.jpg') }}" style="background: url({{ url('img/slide/warehouse.jpg') }});">
             <div class="container">
-                <h2>พื้นที่ระยอง ขนาด 40,000 ตร.ม. พื้นที่สงขลา ขนาด 29,600 ตร.ม. ทำเลดี ใกล้เส้นทางคมนาคมหลัก ระบบรักษาความปลอดภัย 24 ชม. แบ่งให้เช่าตามความต้องการ </h2><a class="ps-btn ps-btn--lg" href="{{ url('/contact') }}">Request service</a>
+                <h2>{{ __('warehouse.banner') }}</h2><a class="ps-btn ps-btn--lg" href="{{ url('/contact') }}">{{ __('warehouse.request_service') }}</a>
             </div>
         </div>
 
@@ -125,7 +125,7 @@ min-height: 90px
             <div class="container">
                 <div class="ps-section__header">
                     {{-- <p>เช่า Warehouse คลังสินค้า และ ลางวางสินค้าให้เช่า</p> --}}
-                    <h4>บริการให้เช่าโกดัง – คลังสินค้า ลานวางสินค้า พื้นที่ระยองและพื้นที่สงขลา แบบครบวงจร <br>พร้อมพื้นที่ให้เลือกหลากหลายขนาด ตอบสนองทุกความต้องการของธุรกิจ</h4>
+                    <h4>{!! __('warehouse.intro') !!}</h4>
                 </div>
                 <div class="ps-section__content">
                     <div class="row d-flex justify-content-center">
@@ -133,9 +133,9 @@ min-height: 90px
                             <div class="ps-block--icon-box-2">
                                 <div class="ps-block__thumbnail"><img src="{{ url('/img/download.jpg') }}" alt=""></div>
                                 <div class="ps-block__content">
-                                    <h4>ใกล้เส้นทางคมนาคมหลัก</h4>
+                                    <h4>{{ __('warehouse.transport_title') }}</h4>
                                     <div class="ps-block__desc" data-mh="about-desc" style="height: 76.7812px;">
-                                        <p>ทำเลดี แบ่งให้เช่าตามความต้องการของลูกค้า พร้อมให้คำปรึกษาเกี่ยวกับการเลือกขนาดพื้นที่ที่เหมาะสม</p>
+                                        <p>{{ __('warehouse.transport_desc') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -144,9 +144,9 @@ min-height: 90px
                             <div class="ps-block--icon-box-2">
                                 <div class="ps-block__thumbnail"><img src="{{ url('/img/img001.png') }}" alt=""></div>
                                 <div class="ps-block__content">
-                                    <h4>ความปลอดภัยสูงสุด</h4>
+                                    <h4>{{ __('warehouse.security_title') }}</h4>
                                     <div class="ps-block__desc" data-mh="about-desc" style="height: 76.7812px;">
-                                        <p>การรักษาความปลอดภัยสูงสุดด้วย ระบบกล้องวงจรปิด</p>
+                                        <p>{{ __('warehouse.security_desc') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -184,13 +184,13 @@ min-height: 90px
 
                         <div class="col-md-6 text-center">
                         <a href="{{ url('product_detail/214') }}" >
-                            <img src="{{ url('/img/S__16621570_0.jpg') }}" alt="สาขาระยอง">
-                            สาขาระยอง</a>
+                            <img src="{{ url('/img/S__16621570_0.jpg') }}" alt="{{ __('warehouse.branch_rayong') }}">
+                            {{ __('warehouse.branch_rayong') }}</a>
                         </div>
                         <div class="col-md-6 text-center">
                         <a href="{{ url('product_detail/214') }}" >
-                            <img src="{{ url('/img/S__16621572_0.jpg') }}" alt="สาขาสงขลา">
-                          สาขาสงขลา</a>
+                            <img src="{{ url('/img/S__16621572_0.jpg') }}" alt="{{ __('warehouse.branch_songkhla') }}">
+                          {{ __('warehouse.branch_songkhla') }}</a>
                         </div>
 
                 </div>
@@ -200,9 +200,7 @@ min-height: 90px
 </div>
 
                     <p>
-                    บริการให้เช่าโกดัง – คลังสินค้า ลานวางสินค้า พื้นที่ระยองและพื้นที่สงขลา แบบครบวงจร พร้อมพื้นที่ให้เลือกหลากหลายขนาด ตอบสนองทุกความต้องการของธุรกิจ ไม่ว่าจะเป็นการเก็บสินค้า หรือเป็นศูนย์กระจายสินค้า แบ่งให้เช่าตามความต้องการของลูกค้า
-                    พร้อมให้คำปรึกษาเกี่ยวกับการเลือกขนาดพื้นที่ที่เหมาะสม และสิ่งอำนวยความสะดวกครบครัน ระบบรักษาความปลอดภัย 24 ชั่วโมง
-                    โครงสร้างพื้นฐานด้านสาธารณูปโภคที่มี เสถียรภาพ ช่วยให้ธุรกิจของคุณดำเนินไปอย่างสะดวก รวดเร็ว และมีประสิทธิภาพ</p>
+                    {{ __('warehouse.body') }}</p>
                 </div>
 
             </div>

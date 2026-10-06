@@ -42,6 +42,14 @@ class PublicViewsZhTest extends TestCase
         $this->assertSame([], $found);
     }
 
+    /** The warehouse page shows the same text in every locale, so it must come from lang files. */
+    public function test_warehouse_page_has_no_hardcoded_thai(): void
+    {
+        $src = preg_replace('/\{\{--.*?--\}\}/s', '', $this->view('warehouse'));
+        preg_match_all('/[^\n]*\p{Thai}[^\n]*/u', $src, $m);
+        $this->assertSame([], array_map('trim', $m[0]));
+    }
+
     public function test_project_headers_use_zh_localized(): void
     {
         $src = $this->view('service');
