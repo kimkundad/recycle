@@ -8,21 +8,26 @@ use Tests\TestCase;
 
 class I18nSpreadsheetTest extends TestCase
 {
-    private string $langBackup;
+    private string $langCopy;
 
+    /** Work on a temporary copy so the real lang/ directory is never written. */
     protected function setUp(): void
     {
         parent::setUp();
-        $this->langBackup = sys_get_temp_dir() . '/lang-backup-' . uniqid();
-        File::copyDirectory(lang_path(), $this->langBackup);
+        $this->langCopy = sys_get_temp_dir() . '/lang-' . uniqid();
+        $this->assertTrue(File::copyDirectory(base_path('lang'), $this->langCopy));
+        $this->app->useLangPath($this->langCopy);
     }
 
     protected function tearDown(): void
     {
-        File::deleteDirectory(lang_path());
-        File::copyDirectory($this->langBackup, lang_path());
-        File::deleteDirectory($this->langBackup);
+        File::deleteDirectory($this->langCopy);
         parent::tearDown();
+    }
+
+    public function test_does_not_write_to_the_real_lang_directory(): void
+    {
+        $this->assertNotSame(realpath(base_path('lang')), realpath(lang_path()));
     }
 
     public function test_export_then_import_round_trips_chinese(): void
