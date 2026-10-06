@@ -97,6 +97,8 @@ return [
 
     'fallback_locale' => 'th',
 
+    'supported_locales' => ['th', 'en', 'zh'],
+
     /*
     |--------------------------------------------------------------------------
     | Faker Locale

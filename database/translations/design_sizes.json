@@ -1,0 +1,26 @@
+{
+    "table": "design_sizes",
+    "rows": [
+        {
+            "id": 1,
+            "source_hash": "186a057a130946d7ee75d1ad16bc83c359febda84cff203252d0b55b17bceffd",
+            "zh": {
+                "name": "27*15*45厘米"
+            }
+        },
+        {
+            "id": 2,
+            "source_hash": "c74cf8b9a6efc7c3940e6c9a46b57d6e60b8b00a02f9909d0a6e3dd0c65d8833",
+            "zh": {
+                "name": "30*30 厘米"
+            }
+        },
+        {
+            "id": 3,
+            "source_hash": "ed290afac1fac671c569aad4ff6336b11f88e465db30476d451bef7435ef1608",
+            "zh": {
+                "name": "127.6 厘米*286.9 厘米*80 厘米"
+            }
+        }
+    ]
+}

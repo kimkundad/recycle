@@ -196,6 +196,13 @@
                                     </div>
 
                                     <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">วัสดุที่ใช้ (Material) (中文)</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="material_zh" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('material_zh') }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">จุดเด่นสินค้า (Highlight / Features)</label>
                                         <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                             <textarea name="highlights" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('highlights') }}</textarea>
@@ -210,6 +217,13 @@
                                     </div>
 
                                     <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">จุดเด่นสินค้า (Highlight / Features) (中文)</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="highlights_zh" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('highlights_zh') }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">การใช้งาน (Use Case)</label>
                                         <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                             <textarea name="use_case" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('use_case') }}</textarea>
@@ -220,6 +234,13 @@
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">การใช้งาน (Use Case) En</label>
                                         <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                             <textarea name="use_case_en" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('use_case_en') }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">การใช้งาน (Use Case) (中文)</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="use_case_zh" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('use_case_zh') }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -252,6 +273,23 @@
                                         @if ($errors->has('name_pro_en'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อสินค้า En</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">ชื่อสินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="name_pro_zh" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{old('name_pro_zh') ? old('name_pro_zh') : ''}}">
+                                    
+                                        @if ($errors->has('name_pro_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกชื่อสินค้า (中文)</div>
                                             </div>
                                         @endif
                                     </div>
@@ -384,6 +422,17 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label  fw-semibold fs-6">สภาพสินค้า สินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="condition_zh" class="form-control form-control-lg form-control-solid" placeholder="ใช้แล้ว, สภาพใหม่" value="{{old('condition_zh') ? old('condition_zh') : ''}}">
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
@@ -473,6 +522,19 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">คำอธิบายสั้นๆ สินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <textarea type="text" name="title_pro_zh" style="height: 100px"
+                                        class="form-control form-control-lg form-control-solid"
+                                        value="{{old('title_pro_zh') ? old('title_pro_zh') : ''}}"></textarea>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
@@ -512,6 +574,19 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <textarea name="kt_docs_ckeditor_classic_en" id="kt_docs_ckeditor_classic_en" >
+                                            <h1>กรอกรายละเอียดของสินค้า...</h1>
+                                        </textarea>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รายละเอียดสินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <textarea name="kt_docs_ckeditor_classic_zh" id="kt_docs_ckeditor_classic_zh" >
                                             <h1>กรอกรายละเอียดของสินค้า...</h1>
                                         </textarea>
                                     </div>
@@ -590,6 +665,11 @@ ClassicEditor
     .then(editor => {
         console.log(editor);
     })
+    .catch(error => {
+        console.error(error);
+    });
+ClassicEditor
+    .create(document.querySelector('#kt_docs_ckeditor_classic_zh'))
     .catch(error => {
         console.error(error);
     });

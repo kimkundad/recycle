@@ -1,11 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-@if (session()->get('locale') == 'th')
-บริการของเรา - wpnrayong
-@else
-Product and Sevice - wpnrayong
-@endif
+{{ __('service.meta_title') }}
 @stop
 
 
@@ -31,25 +27,14 @@ Product and Sevice - wpnrayong
 <div class="ps-deal-of-day" style="    padding-top: 50px;">
     <div class="container">
         <div class="ps-section__header">
-            @if(session()->get('locale') == 'th')
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
-                    <h3>หมวดหมู่สินค้า</h3>
+                    <h3>{{ __('home.category_heading') }}</h3>
                 </div>
             </div>
             <a href="{{ url('/category?id=0') }}" class="">
-                ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
+                {{ __('home.see_more') }} <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
             </a>
-            @else
-            <div class="ps-block--countdown-deal">
-                <div class="ps-block__left">
-                    <h3>Product category</h3>
-                </div>
-            </div>
-            <a href="{{ url('/category?id=0') }}" class="">
-                See more <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
-            </a>
-            @endif
 
         </div>
         <div class="ps-section__content">
@@ -79,7 +64,7 @@ Product and Sevice - wpnrayong
                                 <div class="ps-block__number photo_cat">
                                     <img class="img-fluid inheritpho " src="{{ url('images/wpnrayong/subcat/'.$u->image) }}">
                                 </div>
-                            <p style="margin-top:10px">{{ $u->sub_name }}</p>
+                            <p style="margin-top:10px">{{ zh_localized($u, 'sub_name') }}</p>
                             </a>
                         </div>
                     @endforeach
@@ -93,25 +78,14 @@ Product and Sevice - wpnrayong
 <div class="ps-deal-of-day">
     <div class="container">
         <div class="ps-section__header">
-            @if(session()->get('locale') == 'th')
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
-                    <h3>สินค้าแนะนำ</h3>
+                    <h3>{{ __('home.recommended') }}</h3>
                 </div>
             </div>
             <a href="{{ url('/recomment') }}" class="">
-                ดูเพิ่มเติม <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
+                {{ __('common.view_all') }} <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
             </a>
-            @else
-            <div class="ps-block--countdown-deal">
-                <div class="ps-block__left">
-                    <h3>Recommended Products</h3>
-                </div>
-            </div>
-            <a href="{{ url('/recomment') }}" class="">
-                View all <img class="img-icon-green_header_footer" src="{{ url('img/icon/PngItem_6391407.png') }}">
-            </a>
-            @endif
 
         </div>
         <div class="ps-section__content">
@@ -124,30 +98,17 @@ Product and Sevice - wpnrayong
                             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                 <div class="ps-product">
                                     <div class="ps-product__thumbnail h-min-set" ><a href="{{ url('product_detail/'.$u->id_q) }}">
-                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
+                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ zh_localized($u, 'name_pro') }}" /></a>
                                     </div>
                                     <div class="ps-product__container">
-                                        @if(session()->get('locale') == 'th')
-                                        <a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
-                                        @else
-                                            @if($u->name_pro_en == null)
-                                                <a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
-                                            @else
-                                                <a class="ps-product__vendor" href="#">{{ $u->name_pro_en }}</a>
-                                            @endif
-
-                                        @endif
+                                        <a class="ps-product__vendor" href="#">{{ localized($u, 'name_pro') }}</a>
                                         <div class="ps-product__content">
                                             @if($u->discount == 0)
 
                                             @if($u->typePrice == 1)
                                             <p class="ps-product__price sale">
                                                 <a href="{{ url('/contact') }}">
-                                                    @if(session()->get('locale') == 'th')
-                                                    <b>ติดต่อฝ่ายขาย</b>
-                                                    @else
-                                                    <b>Contact Seller</b>
-                                                    @endif
+                                                    <b>{{ __('common.contact_seller') }}</b>
                                                 </a>
                                             </p>
                                             @else
@@ -167,11 +128,7 @@ Product and Sevice - wpnrayong
                                             @if($u->typePrice == 1)
                                             <p class="ps-product__price sale">
                                                 <a href="{{ url('/contact') }}">
-                                                    @if(session()->get('locale') == 'th')
-                                                    <b>ติดต่อฝ่ายขาย</b>
-                                                    @else
-                                                    <b>Contact Seller</b>
-                                                    @endif
+                                                    <b>{{ __('common.contact_seller') }}</b>
                                                 </a>
                                             </p>
                                             @else
@@ -184,11 +141,7 @@ Product and Sevice - wpnrayong
 
                                             @endif
 
-                                            @if(session()->get('locale') == 'th')
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
-                                            @else
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">View</a>
-                                            @endif
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">{{ __('common.view_product') }}</a>
                                         </div>
                                         <div class="ps-product__content hover">
                                             @if($u->discount == 0)
@@ -196,11 +149,7 @@ Product and Sevice - wpnrayong
                                             @if($u->typePrice == 1)
                                             <p class="ps-product__price sale">
                                                 <a href="{{ url('/contact') }}">
-                                                    @if(session()->get('locale') == 'th')
-                                                    <b>ติดต่อฝ่ายขาย</b>
-                                                    @else
-                                                    <b>Contact Seller</b>
-                                                    @endif
+                                                    <b>{{ __('common.contact_seller') }}</b>
                                                 </a>
                                             </p>
                                             @else
@@ -219,11 +168,7 @@ Product and Sevice - wpnrayong
                                             @if($u->typePrice == 1)
                                             <p class="ps-product__price sale">
                                                 <a href="{{ url('/contact') }}">
-                                                    @if(session()->get('locale') == 'th')
-                                                    <b>ติดต่อฝ่ายขาย</b>
-                                                    @else
-                                                    <b>Contact Seller</b>
-                                                    @endif
+                                                    <b>{{ __('common.contact_seller') }}</b>
                                                 </a>
                                             </p>
                                             @else
@@ -234,11 +179,7 @@ Product and Sevice - wpnrayong
                                             </p>
                                             @endif
                                             @endif
-                                            @if(session()->get('locale') == 'th')
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">ดูข้อมูลสินค้า</a>
-                                            @else
-                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">View</a>
-                                            @endif
+                                            <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('product_detail/'.$u->id_q) }}">{{ __('common.view_product') }}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -257,18 +198,14 @@ Product and Sevice - wpnrayong
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
-                    @if(session()->get('locale') == 'th')
-                    <h3>บริการของเรา</h3>
-                    @else
-                    <h3>Our services</h3>
-                    @endif
+                    <h3>{{ __('home.our_services') }}</h3>
                 </div>
             </div>
 
 
         </div>
         <div class="ps-section__content">
-            @if(session()->get('locale') == 'th')
+            @if(app()->getLocale() === 'th')
             <div class="row">
 
 
@@ -449,13 +386,12 @@ Product and Sevice - wpnrayong
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/service/รับรื้อถอน.png') }}" height="60" width="60">
-                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request Service</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">{{ __('home.request_service') }}</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
-                            <h3>Industrial Plant, Petrochemical Plant, and Power Plant Demolition</h3>
+                                <h3>{{ __('home.services.demolition.title') }}</h3>
                             <p class="mb-0 min-h-125 fs-13px">
-                                We provide demolition services for industrial plants, petrochemical plants,<br>
-                                power plants, large buildings, and warehouses. Our projects are systematically planned and supervised by demolition engineers using modern, high-efficiency machinery. We offer a complete logistics system and purchase surplus equipment from demolitions, including machinery, scrap metal, copper, and stainless steel, at competitive prices.
+                                    {!! __('home.services.demolition.body') !!}
                             </p>
                         </div>
                     </div>
@@ -467,12 +403,12 @@ Product and Sevice - wpnrayong
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/service/steel.svg') }}" height="60" width="60">
-                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/steel?id=10') }}">Request Service</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/steel?id=10') }}">{{ __('home.request_service') }}</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
-                            <h3>Structural Steel</h3>
+                                <h3>{{ __('home.services.steel.title') }}</h3>
                             <p class="mb-0 min-h-145 fs-13px">
-                                We offer a complete range of structural steel products in the Eastern region under the trusted name "WPN". Our commitment lies in sourcing high-quality steel products, with strict quality control and production processes that comply with TIS standards, to meet the diverse needs of construction, industrial projects, and various structural works effectively.
+                                    {{ __('home.services.steel.body') }}
                             </p>
                         </div>
                     </div>
@@ -484,12 +420,12 @@ Product and Sevice - wpnrayong
                     <div class="card-green-content">
                         <div class="d-flex justify-content-between">
                             <img class="bg_green_icon" src="{{ url('img/service/warehouse.svg') }}" height="60" width="60">
-                            <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request Service</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">{{ __('home.request_service') }}</a>
                         </div>
                         <div class="ps-block__content_out-green pt-20">
-                            <h3>Warehouse for Rent</h3>
+                                <h3>{{ __('home.services.warehouse.title') }}</h3>
                             <p class="mb-0 min-h-145 fs-13px">
-                                We offer comprehensive warehouse rental services, including storage yards, in Rayong and Songkhla areas. A variety of space sizes are available to meet all your business needs, whether for storage or as a distribution center. Spaces can be rented flexibly according to your requirements, with consultation services for selecting suitable space sizes. Fully equipped facilities and 24-hour security are provided.
+                                    {{ __('home.services.warehouse.body') }}
                             </p>
                         </div>
                     </div>
@@ -502,18 +438,12 @@ Product and Sevice - wpnrayong
         <div class="card-green-content">
             <div class="d-flex justify-content-between">
                 <img class="bg_green_icon" src="{{ url('img/service/03-ให้คำปรึกษา.png') }}" height="60" width="60">
-                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">{{ __('home.request_service_alt') }}</a>
             </div>
             <div class="ps-block__content_out-green pt-20">
-                <h3>Consultancy about Comprehensive Recycling</h3>
+                                <h3>{{ __('home.services.consult.title') }}</h3>
                 <p class="mb-0 min-h-145 fs-12px hi-153">
-                    Consultancy services about comprehensive recycling
-                    with experience and expertise in recycling scrap materials,
-                    including both non-hazardous and hazardous materials from industrial factories,
-                    metals and all types of scrap materials.
-                    Consultancy about environmental quality management
-                    Providing training in waste separation and management
-                    with efficient recycling processes.
+                                    {{ __('home.services.consult.body') }}
                 </p>
             </div>
         </div>
@@ -524,13 +454,11 @@ Product and Sevice - wpnrayong
         <div class="card-green-content">
             <div class="d-flex justify-content-between">
                 <img class="bg_green_icon" src="{{ url('img/service/04-บริการทำลายเอกสาร.png') }}" height="60" width="60">
-                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">{{ __('home.request_service_alt') }}</a>
             </div>
             <div class="ps-block__content_out-green pt-20">
-                <h3>Dismantling, Removal, Transporting and Demolition of Scrap Materials</h3>
-                <p class="mb-0 min-h-125 fs-13px hi-153">Dismantling, removal, and transport services for factories, warehouses, machinery,
-                    and disused equipment by an efficient professional team with experience and expertise using labor-saving machinery for transporting goods,
-                    trucks, and safe cargo transport system management.
+                                <h3>{{ __('home.services.dismantle.title') }}</h3>
+                                <p class="mb-0 min-h-125 fs-13px hi-153">{{ __('home.services.dismantle.body') }}
                 </p>
             </div>
         </div>
@@ -543,14 +471,12 @@ Product and Sevice - wpnrayong
                 <div class="d-flex">
                     <img class="bg_green_icon ml-5px" src="{{ url('img/service/02-รับประมูลงานเหล็ก_2.png') }}" height="60" width="60">
                 </div>
-                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">{{ __('home.request_service_alt') }}</a>
             </div>
             <div class="ps-block__content_out-green pt-20">
-                <h3 style="font-size: 16px;">Purchase, Custody, and Sale of All Types of Scrap Materials and Equipment.</h3>
+                                <h3 style="font-size: 16px;">{{ __('home.services.surplus.title') }}</h3>
                 <p class="mb-0 min-h-125 fs-13px hi-153">
-                    Purchase, Custody, and Sale of all types of scrap materials and disused equipment,
-                    including both hazardous and non-hazardous materials from industrial factories, such as metals, stainless steel, copper,
-                    brass, aluminum, batteries, used oil, all types of plastic, motors, machinery, parts, etc.
+                                    {{ __('home.services.surplus.body') }}
                     </p>
             </div>
         </div>
@@ -563,14 +489,12 @@ Product and Sevice - wpnrayong
             <div class="d-flex justify-content-between">
 
                 <img class="bg_green_icon" src="{{ url('img/service/01-รับซื้อวัสดุรีไซเคิล.png') }}" height="60" width="60">
-                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">{{ __('home.request_service_alt') }}</a>
             </div>
             <div class="ps-block__content_out-green pt-20">
-                <h3>Recyclable Product Collection Services</h3>
+                                <h3>{{ __('home.services.storage.title') }}</h3>
                 <p class="mb-0 min-h-145 fs-13p hi-153x">
-                    The right recyclable product collection services
-                    Sufficient space and system for handling goods
-                    with consideration given to saving the environment and ensuring safety.<br> </p>
+                                    {!! __('home.services.storage.body') !!}</p>
             </div>
         </div>
     </div>
@@ -582,15 +506,12 @@ Product and Sevice - wpnrayong
                 <div class="d-flex">
                     <img class="bg_green_icon" src="{{ url('img/service/05-บริการจัดเก็บของเสียอุตสาหกรรม.png') }}" height="60" width="60">
                 </div>
-                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">{{ __('home.request_service_alt') }}</a>
             </div>
             <div class="ps-block__content_out-green pt-20">
-                <h3 style="font-size: 16px;">Waste and Materials Transport Services for Treatment/Disposal at the Destination </h3>
+                                <h3 style="font-size: 16px;">{{ __('home.services.waste.title') }}</h3>
                 <p class="mb-0 min-h-125 fs-13px hi-153">
-                    Waste and Materials transport service provision for treatment and disposal at the destination that is safe and meets standards.
-                    Plans for handling transport in emergency situations
-                    and permission to transport both toxic and non-toxic waste,
-                    including urgent service provision when factories require such services.</p>
+                                    {{ __('home.services.waste.body') }}</p>
             </div>
         </div>
     </div>
@@ -600,14 +521,12 @@ Product and Sevice - wpnrayong
         <div class="card-green-content">
             <div class="d-flex justify-content-between">
                 <img class="bg_green_icon" src="{{ url('img/service/shredder-industrial-icon.png') }}" height="60" width="60">
-                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">Request service</a>
+                                <a class="green_btn_kim_out btn_card_in" href="{{ url('/contact') }}">{{ __('home.request_service_alt') }}</a>
             </div>
             <div class="ps-block__content_out-green pt-20">
-                <h3 style="font-size: 14px;">Grinding, Sorting, Screening and Packaging Services for All Types of Plastic Objects</h3>
+                                <h3 style="font-size: 14px;">{{ __('home.services.plastic.title') }}</h3>
                 <p class="mb-0 min-h-125 fs-13px hi-153">
-                    Plastic service provision, particularly plastic sorting,
-                    grinding and screening for sorting by plastic type. Sending crushed plastic to the COMPOUND process
-                    and returning it to the factory to help reduce production costs and help support the environment.
+                                    {{ __('home.services.plastic.body') }}
 
                 </p>
             </div>
@@ -662,7 +581,7 @@ Product and Sevice - wpnrayong
                                     <li class="
                                     @if($h == 1)
                                     active
-                                    @endif"><a href="#tab-{{ $u->id }}" class="fs-12 aHilight" data-image="{{ $u->image }}">{{ $u->header }}</a></li>
+                                    @endif"><a href="#tab-{{ $u->id }}" class="fs-12 aHilight" data-image="{{ $u->image }}">{{ zh_localized($u, 'header') }}</a></li>
 
                                     @php
                                     $h++;
@@ -687,18 +606,9 @@ Product and Sevice - wpnrayong
                                     " id="tab-{{ $u->id }}">
                                         <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
                                             <div class="scrollable-content">
-                                                <h4>{{ $u->header }}</h4>
+                                                <h4>{{ zh_localized($u, 'header') }}</h4>
 
-                                                @if(session()->get('locale') == 'th')
-                                                <p style="font-size: 16px;">{{ $u->content }}</p>
-                                                @else
-                                                    @if($u->content_en == null)
-                                                        <p style="font-size: 16px;">{{ $u->content }}</p>
-                                                    @else
-                                                        <p style="font-size: 16px;">{{ $u->content_en }}</p>
-                                                    @endif
-
-                                                @endif
+                                                <p style="font-size: 16px;">{{ localized($u, 'content') }}</p>
 
                                             </div>
                                         </div>
@@ -765,7 +675,7 @@ Product and Sevice - wpnrayong
                                 <div class="ps-block__number">
                                     <img class="img-fluid" src="{{ url('images/wpnrayong/subcat/'.$u->image) }}">
                                 </div>
-                            <p style="margin-top:10px">{{ $u->sub_name }}</p>
+                            <p style="margin-top:10px">{{ zh_localized($u, 'sub_name') }}</p>
                             </a>
                         </div>
                     @endforeach
@@ -798,9 +708,9 @@ Product and Sevice - wpnrayong
                             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                 <div class="ps-product">
                                     <div class="ps-product__thumbnail"><a href="{{ url('product_detail/'.$u->id_q) }}">
-                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
+                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ zh_localized($u, 'name_pro') }}" /></a>
                                     </div>
-                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
+                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ zh_localized($u, 'name_pro') }}</a>
                                         <div class="ps-product__content">
                                             @if($u->discount == 0)
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}

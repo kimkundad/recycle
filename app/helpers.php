@@ -131,3 +131,38 @@ function formatDateThat($strDate)
     $strMonthThai=$strMonthCut[$strMonth];
     return "$strDay $strMonthThai $strYear ";
 }
+
+/**
+ * Read a translatable DB field for the current locale.
+ * th: field | en: field_en → field | zh: field_zh → field_en → field
+ */
+function localized($item, string $field): ?string
+{
+    if ($item === null) {
+        return null;
+    }
+
+    $candidates = match (app()->getLocale()) {
+        'zh' => [$field . '_zh', $field . '_en', $field],
+        'en' => [$field . '_en', $field],
+        default => [$field],
+    };
+
+    foreach ($candidates as $key) {
+        $value = data_get($item, $key);
+        if (is_string($value) ? trim($value) !== '' : $value !== null) {
+            return (string) $value;
+        }
+    }
+
+    return null;
+}
+
+/**
+ * For DB fields that the Thai and English site show untranslated today: localize only in
+ * Chinese, so TH/EN output stays exactly as it was.
+ */
+function zh_localized($item, string $field): ?string
+{
+    return app()->getLocale() === 'zh' ? localized($item, $field) : data_get($item, $field);
+}

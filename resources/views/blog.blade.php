@@ -1,11 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-@if (session()->get('locale') == 'th')
-กิจกรรม & ประชาสัมพันธ์ วงษ์พาณิชย์ - wpnrayong
-@else
-News - wpnrayong
-@endif
+{{ __('blog.meta_title') }}
 
 @stop
 
@@ -30,11 +26,7 @@ News - wpnrayong
         <div class="ps-section__header">
             <div class="ps-block--countdown-deal">
                 <div class="ps-block__left">
-                    @if(session()->get('locale') == 'th')
-                    <h3>กิจกรรม & ประชาสัมพันธ์</h3>
-                    @else
-                    <h3>News</h3>
-                    @endif
+                    <h3>{{ __('blog.heading') }}</h3>
                 </div>
             </div>
         </div>
@@ -48,41 +40,16 @@ News - wpnrayong
                 </div>
                 <div class="ps-post__content">
 
-                    @if(session()->get('locale') == 'th')
                         <div class="ps-post__top">
                             <div class="ps-post__meta">
-                            </div><a class="ps-post__title" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ $objs[0]->title }}</a>
+                            </div><a class="ps-post__title" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ localized($objs[0], 'title') }}</a>
                             <div class="ps-post__desc">
-                                <p style="overflow: hidden; max-height: 270px;">{{ $objs[0]->sub_title }}…</p>
+                                <p style="overflow: hidden; max-height: 270px;">{{ localized($objs[0], 'sub_title') }}…</p>
                             </div>
                         </div>
-                    @else
-                        @if($objs[0]->title_en == null)
-                        <div class="ps-post__top">
-                            <div class="ps-post__meta">
-                            </div><a class="ps-post__title" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ $objs[0]->title }}</a>
-                            <div class="ps-post__desc">
-                                <p style="overflow: hidden; max-height: 270px;">{{ $objs[0]->sub_title }}…</p>
-                            </div>
-                        </div>
-                        @else
-                        <div class="ps-post__top">
-                            <div class="ps-post__meta">
-                            </div><a class="ps-post__title" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ $objs[0]->title_en }}</a>
-                            <div class="ps-post__desc">
-                                <p style="overflow: hidden; max-height: 270px;">{{ $objs[0]->sub_title_en }}…</p>
-                            </div>
-                        </div>
-                        @endif
 
-                    @endif
-
-                    <p>{{ formatDateThat($objs[0]->startdate) }} BY WPN </a></p>
-                    @if(session()->get('locale') == 'th')
-                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$objs[0]->id) }}">อ่านต่อ</a>
-                    @else
-                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$objs[0]->id) }}">Read more</a>
-                    @endif
+                    <p>{{ formatDateThat($objs[0]->startdate) }} {{ __('blog.by_wpn') }} </a></p>
+                    <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ __('common.read_more') }}</a>
                 </div>
             </div>
             @endisset
@@ -94,11 +61,7 @@ News - wpnrayong
             @if(count($objs) > 6)
             <div class="text-center mt-30">
 
-                    @if(session()->get('locale') == 'th')
-                    <a class="green_btn_kim_out btn_card_in btn-box" href="#">ดูเพิ่มเติม</a>
-                    @else
-                    <a class="green_btn_kim_out btn_card_in btn-box" href="#">Read more</a>
-                    @endif
+                    <a class="green_btn_kim_out btn_card_in btn-box" href="#">{{ __('product.read_more') }}</a>
 
             </div>
             <br><br>

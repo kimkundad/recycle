@@ -105,6 +105,23 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">1. หัวข้อ (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="header_zh" class="form-control form-control-lg form-control-solid" placeholder="วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด" value="{{old('header_zh') ? old('header_zh') : ''}}">
+                                    
+                                        @if ($errors->has('header_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอก หัวข้อ </div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
                                 
 
                                 <div class="row mb-6">
@@ -135,6 +152,23 @@
                                         @if ($errors->has('content'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกรายละเอียด En</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">3. รายละเอียด (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <textarea class="form-control form-control-lg form-control-solid" id="textareaAutosize" placeholder="จำหน่ายเครื่องจักร ทั้งมือหนึ่ง มือสอง รับเข้าประมูลงานต่างๆ อาทิ เหล็ก 
+                                        โครงสร้าง เศษเหล็ก สแตนเลส อลูมิเนียม อัลลอย..." rows="10" name="content_zh" >{{old('content_zh') ? old('content_zh') : ''}} </textarea>
+                                        @if ($errors->has('content'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกรายละเอียด (中文)</div>
                                             </div>
                                         @endif
                                     </div>

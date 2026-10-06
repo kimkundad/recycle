@@ -1,11 +1,7 @@
 @extends('layouts.template')
 <link rel="icon" type="image/png" sizes="32x32" href="{{ url('img/favicon_v5.png') }}" />
 @section('title')
-@if (session()->get('locale') == 'th')
-เหล็กรูปพรรณ - wpnrayong
-@else
-structural steel products - wpnrayong
-@endif
+{{ __('steel.meta_title') }}
 @stop
 
 
@@ -39,25 +35,14 @@ structural steel products - wpnrayong
 
     <div class="ps-breadcrumb">
         <div class="container">
-            @if (session()->get('locale') == 'th')
                 <div class="d-flex justify-content-between">
                     <ul class="breadcrumb">
-                        <li><a href="{{ url('/') }}">หน้าแรก</a></li>
-                        <li>เหล็กรูปพรรณ</li>
+                        <li><a href="{{ url('/') }}">{{ __('common.nav.home') }}</a></li>
+                        <li>{{ __('steel.breadcrumb') }}</li>
                     </ul>
                     <a class="hide-green-ban-filter ps-btn set-btn-inner ps-btn--outline" href="#"
-                        id="filter-sidebar"><i class="icon-equalizer"></i> Filter</a>
+                        id="filter-sidebar"><i class="icon-equalizer"></i> {{ __('common.filter') }}</a>
                 </div>
-            @else
-                <div class="d-flex justify-content-between">
-                    <ul class="breadcrumb">
-                        <li><a href="{{ url('/') }}">Home</a></li>
-                        <li>Structural steel</li>
-                    </ul>
-                    <a class="hide-green-ban-filter ps-btn set-btn-inner ps-btn--outline" href="#"
-                        id="filter-sidebar"><i class="icon-equalizer"></i> Filter</a>
-                </div>
-            @endif
         </div>
     </div>
 
@@ -72,11 +57,7 @@ structural steel products - wpnrayong
                             <div class="d-flex">
                                 <img src="{{ url('img/filter-variant.png') }}" height="32" width="32">
                                 <div class="pt-5px">
-                                    @if (session()->get('locale') == 'th')
-                                        <h4 class="widget-title">เหล็กรูปพรรณทั้งหมด</h4>
-                                    @else
-                                        <h4 class="widget-title">Structural steel All</h4>
-                                    @endif
+                                        <h4 class="widget-title">{{ __('steel.all') }}</h4>
                                 </div>
                             </div>
                         </a>
@@ -88,15 +69,7 @@ structural steel products - wpnrayong
                                 @foreach (get_data_category2() as $u)
                                     <li class="current-menu-item menu-item-has-children">
 
-                                    @if (session()->get('locale') == 'th')
-                                            <a href="#">{{ $u->cat_name }}</a>
-                                        @else
-                                            @if($u->cat_name_en == null)
-                                                <a href="#">{{ $u->cat_name }}</a>
-                                            @else
-                                                <a href="#">{{ $u->cat_name_en }}</a>
-                                            @endif
-                                        @endif
+                                            <a href="#">{{ localized($u, 'cat_name') }}</a>
 
                                         <span class="sub-toggle">
                                             <i class="fa fa-angle-down"></i>
@@ -105,14 +78,11 @@ structural steel products - wpnrayong
                                             @if ($u->option)
                                                 @foreach ($u->option as $j)
                                                     <li class="current-menu-item active">
-                                                    @if (session()->get('locale') == 'th')
-                                                        <a href="{{ url('steel?id=' . $j->id) }}">{{ $j->sub_name }}</a>
+                                                    {{-- English keeps its existing markup: a "#" link when sub_name_en is set. --}}
+                                                    @if (app()->getLocale() === 'en' && $j->sub_name_en != null)
+                                                        <a class="ps-product__vendor" href="#">{{ $j->sub_name_en }}</a>
                                                     @else
-                                                        @if($j->sub_name_en == null)
-                                                        <a href="{{ url('steel?id=' . $j->id) }}">{{ $j->sub_name }}</a>
-                                                        @else
-                                                            <a class="ps-product__vendor" href="#">{{ $j->sub_name_en }}</a>
-                                                        @endif
+                                                        <a href="{{ url('steel?id=' . $j->id) }}">{{ localized($j, 'sub_name') }}</a>
                                                     @endif
                                                     </li>
                                                 @endforeach
@@ -171,13 +141,8 @@ structural steel products - wpnrayong
 
 <div class="ps-filter--sidebar hidden" id="filter_bar" style="display: none">
     <div class="ps-filter__header">
-        @if (session()->get('locale') == 'th')
-            <h3 class="text-green">ค้นหาหมวดหมู่และสินค้า</h3><a class="ps-btn--close ps-btn--no-boder"
+            <h3 class="text-green">{{ __('steel.search_title') }}</h3><a class="ps-btn--close ps-btn--no-boder"
                 href="#"></a>
-        @else
-            <h3 class="text-green">Search categories and products</h3><a class="ps-btn--close ps-btn--no-boder"
-                href="#"></a>
-        @endif
     </div>
     <div class="ps-filter__content">
         <aside class="widget widget_shop ">
@@ -185,11 +150,7 @@ structural steel products - wpnrayong
                 <div class="d-flex">
                     <img src="{{ url('img/filter-variant.png') }}" height="32" width="32">
                     <div class="pt-5px">
-                        @if (session()->get('locale') == 'th')
-                            <h4 class="widget-title">หมวดหมู่ : ทุกหมวดหมู่</h4>
-                        @else
-                            <h4 class="widget-title">Category : All</h4>
-                        @endif
+                            <h4 class="widget-title">{{ __('steel.category_all') }}</h4>
                     </div>
                 </div>
             </a>
@@ -201,7 +162,7 @@ structural steel products - wpnrayong
                 @if (get_data_category2())
                     @foreach (get_data_category2() as $u)
                         <li class="current-menu-item menu-item-has-children">
-                            <a href="#" class="active">{{ $u->cat_name }}</a>
+                            <a href="#" class="active">{{ zh_localized($u, 'cat_name') }}</a>
                             <span class="sub-toggle">
                                 <i class="fa fa-angle-down"></i>
                             </span>
@@ -209,7 +170,7 @@ structural steel products - wpnrayong
                                 @if ($u->option)
                                     @foreach ($u->option as $j)
                                         <li class="current-menu-item ">
-                                            <a href="{{ url('steel?id=' . $j->id) }}">{{ $j->sub_name }}</a>
+                                            <a href="{{ url('steel?id=' . $j->id) }}">{{ zh_localized($j, 'sub_name') }}</a>
                                         </li>
                                     @endforeach
                                 @endif

@@ -1,0 +1,35 @@
+{
+    "table": "design_types",
+    "rows": [
+        {
+            "id": 1,
+            "source_hash": "a718f5605cdd714be02657fa0b673da889e409d9a399361ae93b7ad10a2ad754",
+            "fields": {
+                "name": {
+                    "th": "สินค้าสำหรับองค์กร",
+                    "en": "Corperate Products"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "source_hash": "64dd3836a02f51313326a1c877d5174ad8d6088a2891fea05b83abb1ac1c33a8",
+            "fields": {
+                "name": {
+                    "th": "ของตกแต่ง",
+                    "en": "Decorations"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "source_hash": "ba45ecd829b534a0bb48eff8b4bd7d1bd3cba0ff54e8fccfee2592c70cecb012",
+            "fields": {
+                "name": {
+                    "th": "เฟอร์นิเจอร์",
+                    "en": "furniture"
+                }
+            }
+        }
+    ]
+}

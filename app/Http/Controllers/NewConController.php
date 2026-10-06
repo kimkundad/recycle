@@ -124,8 +124,11 @@ class NewConController extends Controller
            $objs->sub_title = $request['sub_title'];
            $objs->detail = $request['detail'];
            $objs->title_en = $request['title_en'];
+           $objs->title_zh = $request['title_zh'];
            $objs->sub_title_en = $request['sub_title_en'];
+           $objs->sub_title_zh = $request['sub_title_zh'];
            $objs->detail_en = $request['detail_en'];
+           $objs->detail_zh = $request['detail_zh'];
            $objs->type = $request['type'];
            $objs->startdate = $request['startdate'];
            $objs->image = $input['imagename'];
@@ -201,8 +204,11 @@ class NewConController extends Controller
            $objs->sub_title = $request['sub_title'];
            $objs->detail = $request['detail'];
            $objs->title_en = $request['title_en'];
+           $objs->title_zh = $request['title_zh'];
            $objs->sub_title_en = $request['sub_title_en'];
+           $objs->sub_title_zh = $request['sub_title_zh'];
            $objs->detail_en = $request['detail_en'];
+           $objs->detail_zh = $request['detail_zh'];
            $objs->type = $request['type'];
            $objs->startdate = $request['startdate'];
            $objs->type = 0;
@@ -230,8 +236,11 @@ class NewConController extends Controller
            $objs->sub_title = $request['sub_title'];
            $objs->detail = $request['detail'];
            $objs->title_en = $request['title_en'];
+           $objs->title_zh = $request['title_zh'];
            $objs->sub_title_en = $request['sub_title_en'];
+           $objs->sub_title_zh = $request['sub_title_zh'];
            $objs->detail_en = $request['detail_en'];
+           $objs->detail_zh = $request['detail_zh'];
            $objs->type = $request['type'];
            $objs->image = $input['imagename'];
            $objs->startdate = $request['startdate'];

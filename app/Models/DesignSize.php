@@ -12,6 +12,7 @@ class DesignSize extends Model
     protected $fillable = [
         'name_th',
         'name_en',
+        'name_zh',
         'slug',
         'sort',
         'status',

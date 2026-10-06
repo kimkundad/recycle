@@ -150,6 +150,23 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">ชื่อกิจกรรม & ประชาสัมพันธ์สินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="title_zh" class="form-control form-control-lg form-control-solid" placeholder="10 อันดับขยะที่นำมารีไซเคิลมากที่สุด" value="{{old('title_zh') ? old('title_zh') : ''}}">
+
+                                        @if ($errors->has('title_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกชื่อกิจกรรม & ประชาสัมพันธ์สินค้า (中文)</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">ตั้งวันที่เริ่มแสดง</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
@@ -209,6 +226,22 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รายละเอียดแบบย่อ (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <textarea class="form-control form-control-lg form-control-solid" id="textareaAutosize" placeholder="รายละเอียดแบบย่อ..." rows="3" name="sub_title_zh" >{{old('sub_title_zh') ? old('sub_title_zh') : ''}} </textarea>
+                                        @if ($errors->has('sub_title_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกรายละเอียดแบบย่อ (中文)</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
@@ -242,6 +275,25 @@
                                         @if ($errors->has('detail_en'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกรายละเอียด En</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-2 col-form-label fw-semibold fs-6">รายละเอียด (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-10 fv-row fv-plugins-icon-container">
+                                        <textarea name="detail_zh" class="summernote" id="kt_docs_ckeditor_classic" >
+                                            <h3>กรอกรายละเอียด...</h3>
+                                            {{old('detail_zh') ? old('detail_zh') : ''}}
+                                        </textarea>
+                                        @if ($errors->has('detail_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกรายละเอียด (中文)</div>
                                             </div>
                                         @endif
                                     </div>

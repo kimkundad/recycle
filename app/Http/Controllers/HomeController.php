@@ -183,6 +183,36 @@ class HomeController extends Controller
     }
 
 
+    /**
+     * One article card for the AJAX "load more" list.
+     * English keeps its existing behaviour: posts without title_en show the Thai card.
+     */
+    private function articleCardHtml($result): string
+    {
+        $url = url('blog_detail/'.$result->id);
+        $img = url('media/'.$result->image);
+        $untranslated = app()->getLocale() === 'en' && $result->title_en == null;
+        $title = $untranslated ? $result->title : localized($result, 'title');
+        $subTitle = $untranslated ? $result->sub_title : localized($result, 'sub_title');
+        $readMore = e($untranslated ? __('common.read_more', [], 'th') : __('common.read_more'));
+
+        return '<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$title.'" style="max-height: 190px; min-height: 190px;"></div><div class="ps-post__content"><a class="ps-post__title" style="min-height: 72px; max-height: 72px; overflow: hidden;"  href="'.$url.'">'.$title.'</a><p style="min-height: 68px; max-height: 68px; overflow: hidden;">'.$subTitle.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">'.$readMore.'</a></div></div></div>';
+    }
+
+    /**
+     * One product card for the AJAX product lists.
+     * English keeps its existing labels: the first button is always Thai, and the hover
+     * button reads "View" only for products that have an English name.
+     */
+    private function productCardHtml($u, string $url, string $img, string $priceText): string
+    {
+        $name = localized($u, 'name_pro');
+        $isEnglish = app()->getLocale() === 'en';
+        $primary = e($isEnglish ? __('common.view_product', [], 'th') : __('common.view_product'));
+        $hover = e($isEnglish && $u->name_pro_en == null ? __('common.view_product', [], 'th') : __('common.view_product'));
+
+        return '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$name.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$name.'</a><div class="ps-product__content">'.$priceText.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">'.$primary.'</a></div><div class="ps-product__content hover">'.$priceText.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">'.$hover.'</a></div></div></div></div>';
+    }
     public function getArticles(Request $request)
     {
 
@@ -191,42 +221,11 @@ class HomeController extends Controller
         $results = news::where('status', 1)->where('id', '!=', $objs->id)->whereDate('startdate', '<=', date("Y-m-d"))->orderby('id', 'desc')->paginate(6);
         $artilces = '';
 
-        if(session()->get('locale') == 'th'){
-
-          if ($request->ajax()) {
+        if ($request->ajax()) {
             foreach ($results as $result) {
-
-                $url = url('blog_detail/'.$result->id);
-                $img = url('media/'.$result->image);
-                $artilces.='<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$result->title.'" style="max-height: 190px; min-height: 190px;"></div><div class="ps-post__content"><a class="ps-post__title" style="min-height: 72px; max-height: 72px; overflow: hidden;"  href="'.$url.'">'.$result->title.'</a><p style="min-height: 68px; max-height: 68px; overflow: hidden;">'.$result->sub_title.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">อ่านต่อ</a></div></div></div>';
+                $artilces .= $this->articleCardHtml($result);
             }
             return $artilces;
-        }
-
-        }else{
-
-          if ($request->ajax()) {
-            foreach ($results as $result) {
-
-                if($result->title_en == null){
-
-                    $url = url('blog_detail/'.$result->id);
-                    $img = url('media/'.$result->image);
-                    $artilces.='<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$result->title.'" style="max-height: 190px; min-height: 190px;"></div><div class="ps-post__content"><a class="ps-post__title" style="min-height: 72px; max-height: 72px; overflow: hidden;"  href="'.$url.'">'.$result->title.'</a><p style="min-height: 68px; max-height: 68px; overflow: hidden;">'.$result->sub_title.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">อ่านต่อ</a></div></div></div>';
-
-
-                }else{
-
-                    $url = url('blog_detail/'.$result->id);
-                    $img = url('media/'.$result->image);
-                    $artilces.='<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 "><div class="ps-post"><div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;"><a class="ps-post__overlay" href="'.$url.'"></a><img src="'.$img.'" alt="'.$result->title_en.'" style="max-height: 190px; min-height: 190px;"></div><div class="ps-post__content"><a class="ps-post__title" style="min-height: 72px; max-height: 72px; overflow: hidden;"  href="'.$url.'">'.$result->title_en.'</a><p style="min-height: 68px; max-height: 68px; overflow: hidden;">'.$result->sub_title_en.'</p><a class="ps-btn ps-btn--fullwidth-green"  href="'.$url.'">Read more</a></div></div></div>';
-
-                }
-
-            }
-            return $artilces;
-        }
-
         }
 
         return view('blog');
@@ -241,7 +240,7 @@ class HomeController extends Controller
       $artilces = '';
       $img = url('img/certificate/'.$data->image);
         if ($request->ajax()) {
-          $artilces.='<h4 class="text-gray-400 fs-16px">'.$data->name.'</h4><img src="'.$img.'" class="img-fluid" style="width: 100%">';
+          $artilces.='<h4 class="text-gray-400 fs-16px">'.zh_localized($data, 'name').'</h4><img src="'.$img.'" class="img-fluid" style="width: 100%">';
           return $artilces;
         }
 
@@ -291,11 +290,7 @@ class HomeController extends Controller
                     if($u->discount == 0){
 
                       if($u->typePrice == 1){
-                        if(session()->get('locale') == 'th'){
-                          $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
-                        }else{
-                          $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
-                        }
+                          $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>'.e(__('common.contact_seller')).'</b></a></p>';
                       }else{
 
                         if($u->unit_id !== 3 && $u->unit_id !== null){
@@ -310,11 +305,7 @@ class HomeController extends Controller
 
 
                       if($u->typePrice == 1){
-                        if(session()->get('locale') == 'th'){
-                          $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
-                        }else{
-                          $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
-                        }
+                          $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>'.e(__('common.contact_seller')).'</b></a></p>';
                       }else{
 
                       if($u->unit_id !== 3 && $u->unit_id !== null){
@@ -333,22 +324,7 @@ class HomeController extends Controller
 
                     }
 
-                    if(session()->get('locale') == 'th'){
-
-                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
-
-                    }else{
-
-                        if($u->name_pro_en == null){
-
-                            $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
-
-                        }else{
-
-                            $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro_en.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro_en.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">View</a></div></div></div></div>';
-
-                        }
-                    }
+                    $artilces .= $this->productCardHtml($u, $url, $img, $price_text);
 
 
                 }
@@ -378,11 +354,7 @@ class HomeController extends Controller
                 if($u->discount == 0){
 
                   if($u->typePrice == 1){
-                    if(session()->get('locale') == 'th'){
-                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
-                    }else{
-                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
-                    }
+                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>'.e(__('common.contact_seller')).'</b></a></p>';
 
                   }else{
 
@@ -398,11 +370,7 @@ class HomeController extends Controller
 
 
                   if($u->typePrice == 1){
-                    if(session()->get('locale') == 'th'){
-                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
-                    }else{
-                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
-                    }
+                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>'.e(__('common.contact_seller')).'</b></a></p>';
 
                   }else{
 
@@ -422,22 +390,7 @@ class HomeController extends Controller
 
                 }
 
-                if(session()->get('locale') == 'th'){
-
-                    $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
-
-                }else{
-
-                    if($u->name_pro_en == null){
-
-                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
-
-                    }else{
-
-                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro_en.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro_en.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">View</a></div></div></div></div>';
-
-                    }
-                }
+                $artilces .= $this->productCardHtml($u, $url, $img, $price_text);
             }
             return $artilces;
         }
@@ -551,11 +504,7 @@ class HomeController extends Controller
                 if($u->discount == 0){
 
                   if($u->typePrice == 1){
-                    if(session()->get('locale') == 'th'){
-                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
-                    }else{
-                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
-                    }
+                      $price_text = '<p class="ps-product__price text-green"><a href="'.url('/contact').'"><b>'.e(__('common.contact_seller')).'</b></a></p>';
                   }else{
 
                     if($u->unit_id !== 3 && $u->unit_id !== null){
@@ -570,11 +519,7 @@ class HomeController extends Controller
 
 
                   if($u->typePrice == 1){
-                    if(session()->get('locale') == 'th'){
-                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>ติดต่อฝ่ายขาย</b></a></p>';
-                    }else{
-                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>Contact Seller</b></a></p>';
-                    }
+                      $price_text = '<p class="ps-product__price sale"><a href="'.url('/contact').'"><b>'.e(__('common.contact_seller')).'</b></a></p>';
                   }else{
 
                   if($u->unit_id !== 3 && $u->unit_id !== null){
@@ -593,22 +538,7 @@ class HomeController extends Controller
 
                 }
 
-                if(session()->get('locale') == 'th'){
-
-                    $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
-
-                }else{
-
-                    if($u->name_pro_en == null){
-
-                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div></div></div></div>';
-
-                    }else{
-
-                        $artilces.='<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-10 fix-pad"><div class="ps-product"><div class="ps-product__thumbnail h-min-set" ><a href="'.$url.'"><img src="'.$img.'" alt="'.$u->name_pro_en.'" /></a></div><div class="ps-product__container"><a class="ps-product__vendor" href="#">'.$u->name_pro_en.'</a><div class="ps-product__content">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">ดูข้อมูลสินค้า</a></div><div class="ps-product__content hover">'.$price_text.'<a class="ps-btn ps-btn--fullwidth-green" href="'.$url.'">View</a></div></div></div></div>';
-
-                    }
-                }
+                $artilces .= $this->productCardHtml($u, $url, $img, $price_text);
 
 
             }
@@ -775,17 +705,10 @@ class HomeController extends Controller
           $contactUrl = url('contact');
           $imageUrl = url('images/wpnrayong/product/' . $u->image_pro);
 
-          if (session()->get('locale') == 'th') {
-            $name = $u->name_pro;
-            $summarySource = $u->title_pro ?: strip_tags((string) $u->detail_pro);
-            $detailLabel = 'ดูรายละเอียด';
-            $contactLabel = 'สอบถาม';
-          } else {
-            $name = $u->name_pro_en ?: $u->name_pro;
-            $summarySource = $u->title_pro_en ?: $u->title_pro ?: strip_tags((string) ($u->detail_pro_en ?: $u->detail_pro));
-            $detailLabel = 'View Details';
-            $contactLabel = 'Inquire';
-          }
+          $name = localized($u, 'name_pro');
+          $summarySource = localized($u, 'title_pro') ?? strip_tags((string) localized($u, 'detail_pro'));
+          $detailLabel = e(__('design.view_details'));
+          $contactLabel = e(__('design.inquire'));
 
           $summary = e(Str::limit(trim(strip_tags((string) $summarySource)), 110));
           $name = e($name);

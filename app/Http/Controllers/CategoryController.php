@@ -114,6 +114,7 @@ class CategoryController extends Controller
            $objs = new category();
            $objs->cat_name = $request['cat_name'];
            $objs->cat_name_en = $request['cat_name_en'];
+           $objs->cat_name_zh = $request['cat_name_zh'];
            $objs->image = $image->hashName();
            $objs->status = $status;
            $objs->save();
@@ -181,6 +182,7 @@ class CategoryController extends Controller
            $objs = category::find($id);
            $objs->cat_name = $request['cat_name'];
            $objs->cat_name_en = $request['cat_name_en'];
+           $objs->cat_name_zh = $request['cat_name_zh'];
            $objs->status = $status;
            $objs->save();
 
@@ -207,6 +209,7 @@ class CategoryController extends Controller
            $objs = category::find($id);
            $objs->cat_name = $request['cat_name'];
            $objs->cat_name_en = $request['cat_name_en'];
+           $objs->cat_name_zh = $request['cat_name_zh'];
            $objs->image = $image->hashName();
            $objs->status = $status;
            $objs->save();

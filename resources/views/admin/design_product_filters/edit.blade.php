@@ -34,6 +34,13 @@
                                         <input type="text" name="name_en" class="form-control form-control-lg form-control-solid" value="{{ old('name_en', $objs->name_en) }}">
                                     </div>
                                 </div>
+
+                                <div class="row mb-6">
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">ชื่อภาษาจีน (中文)</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" name="name_zh" class="form-control form-control-lg form-control-solid" value="{{ old('name_zh', $objs->name_zh) }}">
+                                    </div>
+                                </div>
                                 <div class="row mb-6">
                                     <label class="col-lg-4 col-form-label fw-semibold fs-6">ลำดับ</label>
                                     <div class="col-lg-8">

@@ -1,0 +1,35 @@
+{
+    "table": "type_contacts",
+    "rows": [
+        {
+            "id": 1,
+            "source_hash": "e9ea1b37543d996e12f74c197a7037cd8c88b69bf71a92d87865d9682659f2b0",
+            "fields": {
+                "name": {
+                    "th": "ติดต่อซื้อสินค้า",
+                    "en": "buy"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "source_hash": "6af2b53dfde5e38a609d7a30a83b23f8c19c4138ad3b7e6dd303294bce284add",
+            "fields": {
+                "name": {
+                    "th": "ติดต่อขายสินค้า",
+                    "en": "sell"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "source_hash": "f877bae5225345477bda32d062ace39729f28c966f0ea6e6dbbbe3021742c2cc",
+            "fields": {
+                "name": {
+                    "th": "ขอรับบริการ",
+                    "en": "Request service"
+                }
+            }
+        }
+    ]
+}

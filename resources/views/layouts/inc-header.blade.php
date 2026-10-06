@@ -7,70 +7,29 @@
             <div class="header__center pt-10">
                 <form class="ps-form--quick-search" action="{{ url('/category') }}" method="get">
                     <div class="form-group--icon"><i class="icon-chevron-down"></i>
-                        @if(session()->get('locale') == 'th')
                         <select class="form-control" name="id">
-                            <option value="0" selected="selected">หมวดหมู่ : ทั้งหมด</option>
+                            <option value="0" selected="selected">{{ __('common.search.category_all') }}</option>
                             @if(get_data_category())
                                 @foreach(get_data_category() as $u)
-                                    <option class="level-0" style="color: #009247; font-weight: 700; font-size: 14px;" disabled>{{ $u->cat_name }}</option>
+                                    <option class="level-0" style="color: #009247; font-weight: 700; font-size: 14px;" disabled>{{ localized($u, 'cat_name') }}</option>
                                     @if($u->option)
                                         @foreach($u->option as $j)
-                                            <option class="level-0" value="{{ $j->id }}" style="padding-left:15px">{{ $j->sub_name }}</option>
+                                            {{-- English keeps its existing rule: sub_name_en only when the parent category has cat_name_en. --}}
+                                            <option class="level-0" value="{{ $j->id }}" style="padding-left:15px">{{ app()->getLocale() === 'en' && $u->cat_name_en == null ? $j->sub_name : localized($j, 'sub_name') }}</option>
                                         @endforeach
                                     @endif
                                 @endforeach
                             @endif
                         </select>
-                        @else
-
-                        <select class="form-control" name="id">
-                            <option value="0" selected="selected">Category : All</option>
-                            @if(get_data_category())
-                                @foreach(get_data_category() as $u)
-
-                                @if($u->cat_name_en == null)
-                                <option class="level-0" style="color: #009247; font-weight: 700; font-size: 14px;" disabled>{{ $u->cat_name }}</option>
-                                @else
-                                <option class="level-0" style="color: #009247; font-weight: 700; font-size: 14px;" disabled>{{ $u->cat_name_en }}</option>
-                                @endif
-
-                                    @if($u->option)
-                                        @foreach($u->option as $j)
-
-                                        @if($u->cat_name_en == null)
-                                        <option class="level-0" value="{{ $j->id }}" style="padding-left:15px">{{ $j->sub_name }}</option>
-                                        @else
-                                        <option class="level-0" value="{{ $j->id }}" style="padding-left:15px">{{ $j->sub_name_en }}</option>
-                                        @endif
-
-                                        @endforeach
-                                    @endif
-                                @endforeach
-                            @endif
-                        </select>
-                        @endif
 
                     </div>
 
-                    @if(session()->get('locale') == 'th')
-
                     @isset($search)
-                    <input class="form-control" name="search" type="text" value="{{ $search === "" ?  : $search }}" placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่..." id="input-search" />
+                    <input class="form-control" name="search" type="text" value="{{ $search === "" ?  : $search }}" placeholder="{{ __('common.search.placeholder') }}" id="input-search" />
                     @else
-                    <input class="form-control" name="search" type="text"  placeholder="ค้นหาสิ่งที่คุณต้องการที่นี่..." id="input-search" />
+                    <input class="form-control" name="search" type="text"  placeholder="{{ __('common.search.placeholder') }}" id="input-search" />
                     @endisset
-                    <button>ค้นหา</button>
-
-                    @else
-
-                    @isset($search)
-                    <input class="form-control" name="search" type="text" value="{{ $search === "" ?  : $search }}" placeholder="Find what you need here..." id="input-search" />
-                    @else
-                    <input class="form-control" name="search" type="text"  placeholder="Find what you need here..." id="input-search" />
-                    @endisset
-                    <button>Find</button>
-
-                    @endif
+                    <button>{{ __('common.search.button') }}</button>
                 </form>
             </div>
             <div class="header__right pt-10">
@@ -96,14 +55,17 @@
                     </a>
 
                     <div class="ps-dropdown language"><a href="#">
-                        @if(session()->get('locale') == 'en')
+                        @if(app()->getLocale() === 'en')
                         <img height="50" class="img-flag" src="{{ url('img/icon/english_icon.png') }}"></a>
+                        @elseif(app()->getLocale() === 'zh')
+                        <img height="50" class="img-flag" src="{{ url('img/flag/cn.svg') }}" alt="中文" style="border-radius: 50%;"></a>
                         @else
                         <img height="50" class="img-flag" src="{{ url('img/icon/thai_icon.png') }}"></a>
                         @endif
 
                         <ul class="ps-dropdown-menu">
                             <li><a href="{{ url('/lang/change?lang=en') }}"><img src="{{ url('img/flag/en.png') }}" alt="" /> English</a></li>
+                            <li><a href="{{ url('/lang/change?lang=zh') }}"><img src="{{ url('img/flag/cn.svg') }}" height="12" alt="" /> 中文</a></li>
                             <li><a href="{{ url('/lang/change?lang=th') }}"><img src="{{ url('img/flag/th.png') }}" height="12" /> ภาษาไทย</a></li>
                         </ul>
                     </div>
@@ -114,43 +76,24 @@
     </div>
     <nav class="navigation navigation_header" style="">
         <div class="container">
-            @if(session()->get('locale') == 'th')
             <div class="navigation__right">
                 <ul class="menu">
-                    <li class="menu-item"><a href="{{ url('/') }}">หน้าแรก</a></li>
-                    <li class="menu-item"><a href="{{ url('/service') }}">สินค้าและบริการ</a></li>
-                    <li class="menu-item"><a href="{{ url('/steel?id=10') }}">เหล็กรูปพรรณ</a></li>
-                    <li class="menu-item"><a href="{{ url('/design-products') }}">ผลิตภัณฑ์ดีไซน์</a></li>
-                    <li class="menu-item"><a href="{{ url('/warehouse') }}">คลังสินค้า</a></li>
-                    <li class="menu-item"><a href="{{ url('/about') }}">เกี่ยวกับเรา</a></li>
-                    <li class="menu-item"><a href="{{ url('/blog') }}">ประชาสัมพันธ์</a></li>
-                    <li class="menu-item"><a href="{{ url('/contact') }}">ติดต่อเรา</a></li>
+                    <li class="menu-item"><a href="{{ url('/') }}">{{ __('common.nav.home') }}</a></li>
+                    <li class="menu-item"><a href="{{ url('/service') }}">{{ __('common.nav.service') }}</a></li>
+                    <li class="menu-item"><a href="{{ url('/steel?id=10') }}">{{ __('common.nav.steel') }}</a></li>
+                    @if (app()->getLocale() === 'th')
+                    <li class="menu-item"><a href="{{ url('/design-products') }}">{{ __('common.nav.design_products') }}</a></li>
+                    @endif
+                    <li class="menu-item"><a href="{{ url('/warehouse') }}">{{ __('common.nav.warehouse') }}</a></li>
+                    <li class="menu-item"><a href="{{ url('/about') }}">{{ __('common.nav.about') }}</a></li>
+                    <li class="menu-item"><a href="{{ url('/blog') }}">{{ __('common.nav.news') }}</a></li>
+                    <li class="menu-item"><a href="{{ url('/contact') }}">{{ __('common.nav.contact') }}</a></li>
                 </ul>
                 <ul class="navigation__extra ">
-                    <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >ซื้อสินค้า</a></li>
-                    {{-- <li><a class="green_btn_kim" href="#"  data-toggle="modal" data-target="#product-quickview" >ขายสินค้า</a></li> --}}
-                    <li><a class="green_btn_kim" href="{{ url('/contact') }}"  >ขายสินค้า</a></li>
+                    <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >{{ __('common.nav.buy') }}</a></li>
+                    <li><a class="green_btn_kim" href="{{ url('/contact') }}"  >{{ __('common.nav.sell') }}</a></li>
                 </ul>
             </div>
-            @else
-            <div class="navigation__right">
-                <ul class="menu">
-                    <li class="menu-item"><a href="{{ url('/') }}">Home</a></li>
-                    <li class="menu-item"><a href="{{ url('/service') }}">Products and Services</a></li>
-                    <li class="menu-item"><a href="{{ url('/steel?id=10') }}">Steel</a></li>
-                    {{-- <li class="menu-item"><a href="{{ url('/design-products') }}">Upcycle Design Products</a></li> --}}
-                    <li class="menu-item"><a href="{{ url('/warehouse') }}">Warehouse</a></li>
-                    <li class="menu-item"><a href="{{ url('/about') }}">About us</a></li>
-                    <li class="menu-item"><a href="{{ url('/blog') }}">News</a></li>
-                    <li class="menu-item"><a href="{{ url('/contact') }}">Contact us</a></li>
-                </ul>
-                <ul class="navigation__extra ">
-                    <li><a class="white_btn_kim" href="{{ url('/category?id=0') }}" >Buy</a></li>
-                    {{-- <li><a class="green_btn_kim" href="#"  data-toggle="modal" data-target="#product-quickview" >ขายสินค้า</a></li> --}}
-                    <li><a class="green_btn_kim" href="{{ url('/contact') }}"  >Sale</a></li>
-                </ul>
-            </div>
-            @endif
         </div>
     </nav>
 </header>
@@ -178,14 +121,17 @@
                     </a>
                     <div class="ps-dropdown language" style="padding-left: 5px;">
                         <a href="#">
-                        @if(session()->get('locale') == 'en')
+                        @if(app()->getLocale() === 'en')
                         <img height="50" class="img-flag img_langx" src="{{ url('img/icon/english_icon.png') }}" ></a>
+                        @elseif(app()->getLocale() === 'zh')
+                        <img height="50" class="img-flag img_langx" src="{{ url('img/flag/cn.svg') }}" alt="中文" style="border-radius: 50%;" ></a>
                         @else
                         <img height="50" class="img-flag img_langx" src="{{ url('img/icon/thai_icon.png') }}" ></a>
                         @endif
 
                         <ul class="ps-dropdown-menu">
                             <li><a href="{{ url('/lang/change?lang=en') }}"><img src="{{ url('img/flag/en.png') }}" alt="" /> English</a></li>
+                            <li><a href="{{ url('/lang/change?lang=zh') }}"><img src="{{ url('img/flag/cn.svg') }}" height="12" alt="" /> 中文</a></li>
                             <li><a href="{{ url('/lang/change?lang=th') }}"><img src="{{ url('img/flag/th.png') }}" height="12" /> ภาษาไทย</a></li>
                         </ul>
                     </div>

@@ -24,9 +24,13 @@ class LangController extends Controller
     */
     public function change(Request $request)
     {
-        App::setLocale($request->lang);
-        session()->put('locale', $request->lang);
-  
+        $lang = $request->query('lang');
+
+        if (in_array($lang, config('app.supported_locales'), true)) {
+            App::setLocale($lang);
+            session()->put('locale', $lang);
+        }
+
         return redirect()->back();
     }
 }
