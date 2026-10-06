@@ -80,6 +80,7 @@ return [
         'message_placeholder' => 'ระบุข้อความที่ต้องการ',
         'message_label' => 'ข้อความ',
         'send' => 'Send Message',
+        'incomplete' => 'กรูณา ป้อนข้อมูลให้ครบถ้วน',
     ],
     'success' => [
         'title' => 'ส่งข้อความสำเร็จ',

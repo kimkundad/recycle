@@ -141,7 +141,7 @@ $("#massage3").keyup(function(){
       var type = document.getElementById("type3").value;
         console.log(formData)
     if(name == '' || msg == '' || email == '' || phone == '' || type == ''){
-      swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+      swal(@json(__('common.form.incomplete')));
     }else{
       $.LoadingOverlay("show", {
         background  : "rgba(255, 255, 255, 0.4)",
@@ -182,7 +182,7 @@ $("#massage3").keyup(function(){
                 setTimeout(function(){
                     $.LoadingOverlay("hide");
                 }, 500);
-                swal("กรูณา ป้อนข้อมูลให้ครบถ้วน");
+                swal(@json(__('common.form.incomplete')));
               }
           },
           error: function () {

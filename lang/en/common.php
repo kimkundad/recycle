@@ -82,6 +82,7 @@ return [
         'message_placeholder' => 'ระบุข้อความที่ต้องการ',
         'message_label' => 'message',
         'send' => 'Send',
+        'incomplete' => 'กรูณา ป้อนข้อมูลให้ครบถ้วน',
     ],
     'success' => [
         'title' => 'Message submitted successfully',

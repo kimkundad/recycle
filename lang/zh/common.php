@@ -80,6 +80,7 @@ return [
         'message_placeholder' => '请输入留言内容',
         'message_label' => '留言',
         'send' => '发送',
+        'incomplete' => '请填写完整信息。',
     ],
     'success' => [
         'title' => '留言发送成功',
