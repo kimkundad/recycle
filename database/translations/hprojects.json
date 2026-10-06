@@ -1,0 +1,80 @@
+{
+    "table": "hprojects",
+    "rows": [
+        {
+            "id": 1,
+            "source_hash": "5bd864d3730b8f3967fec895d322b0b28df1fe8ba62c8aac5c91e213b28cb291",
+            "zh": {
+                "header": "重型设备运输项目（ROC）",
+                "content": "WPN 获 SCG 集团旗下 Rayong Olefins Co., Ltd.（ROC）选定，负责运输已停用的换热器。运输由专门从事重型设备运输的资深专业团队执行，过程包括路线勘察和周密规划，确保符合运输标准，保证从起点到终点的最高安全水平。"
+            }
+        },
+        {
+            "id": 2,
+            "source_hash": "4abbe3b5da9f4769580c44b6d7c1697c0081faf7d84291fab875442187b44b5b",
+            "zh": {
+                "header": "混合动力汽车（BMW）电池生产线拆除项目（BOI）",
+                "content": "WPN 获 Draexlmaier Automotive Systems (Thailand) Co., Ltd. 选定并委托，负责拆除和销毁已停产生产工艺中使用的技术设备。拆除工作由专门从事洁净室（Process Clean Room）退役的资深专业团队执行，包括全面规划、彻底销毁使设备无法再用，以及严格的保密措施，确保客户的专有生产技术不被泄露。"
+            }
+        },
+        {
+            "id": 3,
+            "source_hash": "72ad3ac699aea525653410a418e5d672eeb691a80b1af5bf3eadb1047e3ffe24",
+            "zh": {
+                "header": "BETAGRO SK1 厂房拆除",
+                "content": "WPN 获 BETAGRO PUBLIC COMPANY LIMITED 选定并委托，负责拆除 SK1 生产厂房。该厂房为多层建筑，生产工艺复杂且高度特殊。拆除工作由技术娴熟、经验丰富的专业团队执行，遵循正确的工程原则并严格遵守安全标准，同时进行周密规划，确保不对周边生产区域造成任何影响或损害。"
+            }
+        },
+        {
+            "id": 4,
+            "source_hash": "f639fe2b03fa141a6a6e18cec4078d733b8caf5d121a78e66f9be4767cbbbe17",
+            "en": {
+                "content": "WPN was selected by the Metropolitan Electricity Authority (MEA) as the winning bidder to purchase more than 200 end-of-life electrical transformers from across Bangkok and the surrounding provinces in the MEA service area. WPN brought the transformers into the recycling process, separating the components to recover oil, copper and steel for resale."
+            },
+            "zh": {
+                "header": "首都电力局（MEA）",
+                "content": "WPN 获首都电力局（MEA）选定为中标方，收购曼谷及周边府 MEA 服务区内 200 多台已到使用年限的变压器。WPN 将变压器纳入回收流程，通过拆分部件回收油、铜和钢材以供转售。"
+            }
+        },
+        {
+            "id": 5,
+            "source_hash": "1e6a82a6141e9f134b7b296e7403b7a2b3ecc87b2fccba6ad2ab5530acecc9ba",
+            "zh": {
+                "header": "Supavut Industry Co., Ltd.",
+                "content": "WPN 在竞标中获选，负责拆除并收购 Supavut Industry Co., Ltd. 的厂房建材、机械及工厂设备。该公司是泰国汽车行业的主要塑料零部件制造商。我们在大型机械拆除项目方面经验丰富的专业团队，监督了从规划、拆除设计到将闲置物料转入回收流程的全过程。"
+            }
+        },
+        {
+            "id": 6,
+            "source_hash": "bcef7fabb905ee9f7ec08f9566847ca1b55a2b7be30e5f886d2f486e4d8acbdb",
+            "zh": {
+                "header": "PTT Global Chemical PCL",
+                "content": "WPN 获全球化工行业领先企业之一 PTT Global Chemical Public Co., Ltd.（GC）选定，以最高安全标准搬运并拆除重量超过 200 吨的压力容器及大型石化蒸馏塔。"
+            }
+        },
+        {
+            "id": 7,
+            "source_hash": "37fe80ff4a946e0079ce2f80d0f4fa91c12a4adc647ebb226c72c3917fb8938a",
+            "zh": {
+                "header": "PTTEP 海上闲置设备",
+                "content": "WPN 获 PTTEP 选定，收购其勘探与生产（E&P）钻井和生产过程中的闲置设备，如钻头（drilling bits）、套管（casing）、生产油管（production tubing）、井口采油树（Wellhead Christmas Tree）、结构钢、备件，以及海上起重机、系泊缆、锚、护舷等船用设备。这些设备可作为可再利用物资出售或进入回收流程进一步利用。"
+            }
+        },
+        {
+            "id": 8,
+            "source_hash": "927dc498844c1cc9251fc8baf18c7934984379f3472f216390aa71cc51e99686",
+            "zh": {
+                "header": "Thai Oil 炼油厂",
+                "content": "WPN 获 Thai Oil 炼油厂选定，收购炼油厂项目及生产过程中的闲置设备，如电力电缆、钢管、油罐钢板、机械、大型高压变压器等。WPN 高效地将这些设备纳入回收流程，并注重将回收材料用于其他行业。例如，油罐钢板被加工成钢板用于地面铺设和造船业，输油管用于抽沙船行业，变压器经检测和系统认证后重新使用或拆分零部件出售。"
+            }
+        },
+        {
+            "id": 9,
+            "source_hash": "f3cec4c794f374846f7e2fb072ad16c0e399016b89ea2d15b0a01ea157c62252",
+            "zh": {
+                "header": "AGC Vinythai Chemical",
+                "content": "WPN 获 AGC Vinythai Chemical 选定，收购其生产工艺厂房及原料仓库的全部钢材和设备。WPN 将工厂的所有钢梁和结构钢纳入回收流程，经切割整理后重新用于其他工程，如新建工厂、住宅或办公楼等。"
+            }
+        }
+    ]
+}

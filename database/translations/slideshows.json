@@ -1,0 +1,84 @@
+{
+    "table": "slideshows",
+    "rows": [
+        {
+            "id": 3,
+            "source_hash": "16237c740f92e5eff2486c5aa2f8151be4536096b6c9adb25765f539de399c38",
+            "zh": {
+                "title": "Wongpanit Recycle Rayong (WPN)",
+                "big_title": "回收 - 销售",
+                "sub_title": "我们收购和销售各类设备、机械（全新及二手），以及碳钢、铜、黄铜、不锈钢、铝等原材料",
+                "g_btn_text": "了解更多",
+                "w_btn_text": "了解更多"
+            }
+        },
+        {
+            "id": 4,
+            "source_hash": "38acb5d9f9dabaffbc719083d36a29a8d20ec7dd65b4cc98f191ff9bedd69749",
+            "en": {
+                "w_btn_text": "Sell"
+            },
+            "zh": {
+                "title": "Wongpanit Recycle Rayong (WPN)",
+                "big_title": "专业咨询",
+                "sub_title": "我们是拥有 15 年以上经验的专业顾问，提供回收与环保方面的咨询服务。",
+                "g_btn_text": "了解更多",
+                "w_btn_text": "出售"
+            }
+        },
+        {
+            "id": 5,
+            "source_hash": "884d12e6d04e55e6f3536ed0cb133a75cc6090b42a3a8f5f5edc514caa61119c",
+            "en": {
+                "w_btn_text": "Sell"
+            },
+            "zh": {
+                "title": "Wongpanit Recycle Rayong (WPN)",
+                "big_title": "拆卸、拆除与搬运服务",
+                "sub_title": "我们拥有专业团队，提供各类建筑、仓库、机械及闲置设备的拆除、搬运和销毁服务。",
+                "g_btn_text": "了解更多",
+                "w_btn_text": "出售"
+            }
+        },
+        {
+            "id": 6,
+            "source_hash": "82c02ee59971095a2efa49d32a9ebdd39d4fa9c243001435a340afa3bafad505",
+            "zh": {
+                "title": "Wongpanit Recycle Rayong (WPN)",
+                "big_title": "工厂拆除——一站式服务",
+                "sub_title": "我们为工业厂房、石化厂、发电厂、大型建筑及仓库提供拆除服务，并由高素质专业团队负责机械搬迁。所有工作均在最高安全标准下进行。我们还以优惠价格收购机械、废钢、废铜及不锈钢。",
+                "g_btn_text": "阅读更多"
+            }
+        },
+        {
+            "id": 7,
+            "source_hash": "96dc457747f439b34688bb966353935caf8ed6b8de07617fe0f7dbab0db6be67",
+            "zh": {
+                "title": "Wongpanit Recycle Rayong (WPN)",
+                "big_title": "型钢",
+                "sub_title": "我们供应全系列各类型钢产品，通过符合泰国工业标准（TIS）的标准化生产流程严格把控质量。产品可靠，快速准时直送工地，服务覆盖全国。",
+                "g_btn_text": "了解更多"
+            }
+        },
+        {
+            "id": 8,
+            "source_hash": "d0452cc0495c44f0bcbb331ace10437959307f5758e52efdc7244b877afe38fe",
+            "zh": {
+                "title": "Wongpanit Recycle Rayong (WPN)",
+                "big_title": "仓库及堆场租赁",
+                "sub_title": "仓库及堆场出租\n罗勇区域：40,000 平方米\n宋卡区域：16,000 平方米\n地段优越，靠近主要交通干线。24 小时安保系统。可根据您的需求灵活租赁。",
+                "g_btn_text": "了解更多"
+            }
+        },
+        {
+            "id": 9,
+            "source_hash": "7b88fb64570d4a2f4a032b70d4fd35edca241964dc380fb9faf2c0345dfba6a8",
+            "zh": {
+                "title": "From Waste to Worth",
+                "big_title": "WPN ART",
+                "sub_title": "废弃材料蜕变为有价值、可持续设计的旅程\n减少废弃物，并以设计与高水准手工艺提升价值\n每件作品都附有其故事、来源及环保价值\n可即刻为您的企业或空间塑造 ESG 形象",
+                "g_btn_text": "了解更多"
+            }
+        }
+    ]
+}

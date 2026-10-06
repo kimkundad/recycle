@@ -1,0 +1,26 @@
+{
+    "table": "design_materials",
+    "rows": [
+        {
+            "id": 1,
+            "source_hash": "ac1e7b8415810158ef71a56dd2bc68418fb3ace49ef37616f6ece2bf96bbb24a",
+            "zh": {
+                "name": "树脂"
+            }
+        },
+        {
+            "id": 2,
+            "source_hash": "3049ba7a05eeecc5ca00c32876a419b9e7503aa481fdba807bdbde9221a7bc52",
+            "zh": {
+                "name": "石材"
+            }
+        },
+        {
+            "id": 3,
+            "source_hash": "141889efbe404e899b315ba5619fecc27d43f9add65bebade7b338db8fa457a1",
+            "zh": {
+                "name": "钢材"
+            }
+        }
+    ]
+}

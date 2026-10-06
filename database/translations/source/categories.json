@@ -1,0 +1,105 @@
+{
+    "table": "categories",
+    "rows": [
+        {
+            "id": 9,
+            "source_hash": "96656ec213e04dead0d419f05d3f971e1f8492ae14e5bb9fe9ed00f79e603f25",
+            "fields": {
+                "cat_name": {
+                    "th": "Scrap - เศษโลหะและวัสดุที่ไม่ใช่โลหะ",
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 10,
+            "source_hash": "1dfcf2e57f901ef5c5a5ab3445d0d570252bcee89b3c8d3f560ad8ad8ff031a5",
+            "fields": {
+                "cat_name": {
+                    "th": "Steel - เหล็กรูปพรรณ",
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 11,
+            "source_hash": "7cea2090f46fdeb5bdee272bf4fbea0a90b0811bfefa6331fe7ce1392428a6c9",
+            "fields": {
+                "cat_name": {
+                    "th": "Stainless Steel & Alloy - สเตนเลสและอัลลอย",
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 12,
+            "source_hash": "f168b0fcbe326f2e8ffcf11c06f0449b04018dee247cb6b5ba2f5fc566ab8fc2",
+            "fields": {
+                "cat_name": {
+                    "th": "Machinery - มอเตอร์และเครื่องจักร",
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 13,
+            "source_hash": "cb07a68a530a13cc3bb56a35cf63f9a56156a17b582ad3ceeb1fbf5fa1ac2cf3",
+            "fields": {
+                "cat_name": {
+                    "th": "Equipment - อุปกรณ์และเครื่องมือ",
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 14,
+            "source_hash": "792965455285db745799a964fd7d253ae21694fb0724e0c96f0c9e937f89d96f",
+            "fields": {
+                "cat_name": {
+                    "th": "Others - สินค้าหมวดอื่นๆ",
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 15,
+            "source_hash": "b373d780ede7978f49ed4a3e561185b7f769d3eced3afd37e5c736b8aadddc06",
+            "fields": {
+                "cat_name": {
+                    "th": "Fitting - ฟิตติ้ง",
+                    "en": "Fitting - ฟิตติ้ง"
+                }
+            }
+        },
+        {
+            "id": 16,
+            "source_hash": "fcafc540ce5572a53e0305b04cd5b6c19b992cd759bb1b5a353b095cba6603d6",
+            "fields": {
+                "cat_name": {
+                    "th": "คลังสินค้าให้เช่า",
+                    "en": "Warehouse"
+                }
+            }
+        },
+        {
+            "id": 17,
+            "source_hash": "54feac65f4fa870e6ce898990610f1147f5b1eb46d66585813dea867f8fb2997",
+            "fields": {
+                "cat_name": {
+                    "th": "Warehouse",
+                    "en": "Warehouse"
+                }
+            }
+        },
+        {
+            "id": 18,
+            "source_hash": "4e9838a3146e4db43c3c0d015c43f0b07e91e939f96a9c9e5a85e8540539b2e1",
+            "fields": {
+                "cat_name": {
+                    "th": "ผลิตภัณฑ์ดีไซน์",
+                    "en": "Upcycle Design Products"
+                }
+            }
+        }
+    ]
+}

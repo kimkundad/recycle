@@ -1,0 +1,93 @@
+{
+    "table": "categories",
+    "rows": [
+        {
+            "id": 9,
+            "source_hash": "96656ec213e04dead0d419f05d3f971e1f8492ae14e5bb9fe9ed00f79e603f25",
+            "en": {
+                "cat_name": "Scrap - Metal and Non-Metal Scrap"
+            },
+            "zh": {
+                "cat_name": "Scrap - 废金属及非金属废料"
+            }
+        },
+        {
+            "id": 10,
+            "source_hash": "1dfcf2e57f901ef5c5a5ab3445d0d570252bcee89b3c8d3f560ad8ad8ff031a5",
+            "en": {
+                "cat_name": "Steel - Structural Steel"
+            },
+            "zh": {
+                "cat_name": "Steel - 型钢"
+            }
+        },
+        {
+            "id": 11,
+            "source_hash": "7cea2090f46fdeb5bdee272bf4fbea0a90b0811bfefa6331fe7ce1392428a6c9",
+            "en": {
+                "cat_name": "Stainless Steel & Alloy - Stainless Steel and Alloy"
+            },
+            "zh": {
+                "cat_name": "Stainless Steel & Alloy - 不锈钢及合金"
+            }
+        },
+        {
+            "id": 12,
+            "source_hash": "f168b0fcbe326f2e8ffcf11c06f0449b04018dee247cb6b5ba2f5fc566ab8fc2",
+            "en": {
+                "cat_name": "Machinery - Motors and Machinery"
+            },
+            "zh": {
+                "cat_name": "Machinery - 电机及机械"
+            }
+        },
+        {
+            "id": 13,
+            "source_hash": "cb07a68a530a13cc3bb56a35cf63f9a56156a17b582ad3ceeb1fbf5fa1ac2cf3",
+            "en": {
+                "cat_name": "Equipment - Equipment and Tools"
+            },
+            "zh": {
+                "cat_name": "Equipment - 设备与工具"
+            }
+        },
+        {
+            "id": 14,
+            "source_hash": "792965455285db745799a964fd7d253ae21694fb0724e0c96f0c9e937f89d96f",
+            "en": {
+                "cat_name": "Others - Other Categories"
+            },
+            "zh": {
+                "cat_name": "Others - 其他类别"
+            }
+        },
+        {
+            "id": 15,
+            "source_hash": "b373d780ede7978f49ed4a3e561185b7f769d3eced3afd37e5c736b8aadddc06",
+            "zh": {
+                "cat_name": "Fitting - 管件"
+            }
+        },
+        {
+            "id": 16,
+            "source_hash": "fcafc540ce5572a53e0305b04cd5b6c19b992cd759bb1b5a353b095cba6603d6",
+            "zh": {
+                "cat_name": "仓库出租"
+            }
+        },
+        {
+            "id": 17,
+            "source_hash": "54feac65f4fa870e6ce898990610f1147f5b1eb46d66585813dea867f8fb2997",
+            "zh": {
+                "cat_name": "仓库"
+            }
+        },
+        {
+            "id": 18,
+            "source_hash": "4e9838a3146e4db43c3c0d015c43f0b07e91e939f96a9c9e5a85e8540539b2e1",
+            "zh": {
+                "cat_name": "升级再造设计产品"
+            }
+        }
+    ]
+}

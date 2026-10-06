@@ -1,0 +1,187 @@
+{
+    "table": "slideshows",
+    "rows": [
+        {
+            "id": 3,
+            "source_hash": "16237c740f92e5eff2486c5aa2f8151be4536096b6c9adb25765f539de399c38",
+            "fields": {
+                "title": {
+                    "th": "วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด",
+                    "en": "Wongpanit Recycle Rayong (WPN)"
+                },
+                "big_title": {
+                    "th": "รับซื้อ-ขาย",
+                    "en": "Buy - Sell"
+                },
+                "sub_title": {
+                    "th": "จำหน่ายเครื่องจักร อุปกรณ์ วัสดุ ทั้งมือหนึ่ง มือสอง\r\nจำหน่ายเศษโลหะ ทองแดง ทองเหลือง สเตนเลส อลูมิเนียม และโลหะอื่น",
+                    "en": "We buy and sell various equipment, machinery, all first and second-handed, as well as raw material such as carbon steel, copper, brass, stainless, aluminum, and others"
+                },
+                "g_btn_text": {
+                    "th": "ข้อมูลเพิ่มเติม",
+                    "en": "More Information"
+                },
+                "w_btn_text": {
+                    "th": "ข้อมูลเพิ่มเติม",
+                    "en": "More information"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "source_hash": "38acb5d9f9dabaffbc719083d36a29a8d20ec7dd65b4cc98f191ff9bedd69749",
+            "fields": {
+                "title": {
+                    "th": "วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด",
+                    "en": "Wongpanit Recycle Rayong (WPN)"
+                },
+                "big_title": {
+                    "th": "ให้คำปรึกษาด้านรีไซเคิลแบบครบวงจร",
+                    "en": "Professional Consultantcy"
+                },
+                "sub_title": {
+                    "th": "เราเป็นบริษัทผู้เชี่ยวชาญพร้อมให้คำปรึกษาด้านรีไซเคิลและสิ่งแวดล้อม   \r\nโดยทีมงานที่มีประสบการณ์อย่างยาวนาน",
+                    "en": "We are professional consultant with more than 15-year experience in terms of recycling and environment."
+                },
+                "g_btn_text": {
+                    "th": "ข้อมูลเพิ่มเติม",
+                    "en": "More Information"
+                },
+                "w_btn_text": {
+                    "th": "ขายสินค้า",
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 5,
+            "source_hash": "884d12e6d04e55e6f3536ed0cb133a75cc6090b42a3a8f5f5edc514caa61119c",
+            "fields": {
+                "title": {
+                    "th": "วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด",
+                    "en": "Wongpanit Recycle Rayong (WPN)"
+                },
+                "big_title": {
+                    "th": "รับรื้อ ถอน ขนย้าย และทำลาย",
+                    "en": "Dismantling, Removal and Transport Services"
+                },
+                "sub_title": {
+                    "th": "บริการรื้อ ถอน ขนย้าย โรงงาน คลังสินค้า เครื่องจักร \r\nและทำลายวัสดุอุปกรณ์ที่ไม่ใช้แล้ว โดยทีมงานมืออาชีพ",
+                    "en": "We have experts to provide services of demolishing, transporting, and destroying any buildings, warehouses, machines, and obsolete equipment."
+                },
+                "g_btn_text": {
+                    "th": "ข้อมูลเพิ่มเติม",
+                    "en": "More Information"
+                },
+                "w_btn_text": {
+                    "th": "ขายสินค้า",
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 6,
+            "source_hash": "82c02ee59971095a2efa49d32a9ebdd39d4fa9c243001435a340afa3bafad505",
+            "fields": {
+                "title": {
+                    "th": "วงษ์พาณิชย์รีไซเคิล ระยอง จำกัด",
+                    "en": "Wongpanit Recycle Rayong (WPN)"
+                },
+                "big_title": {
+                    "th": "ทุบ รื้อถอนโรงงาน เคลียร์พื้นที่ ครบจบ ที่เดียว",
+                    "en": "Demolition Factory – All in One Place"
+                },
+                "sub_title": {
+                    "th": "รับรื้อถอนโรงงานอุตสาหกรรม โรงงานปิโตรเคมี โรงไฟฟ้า อาคารขนาดใหญ่ คลังสินค้า พร้อมขนย้ายเครื่องจักร ด้วยทีมงานผู้เชี่ยวชาญอย่างมืออาชีพ ภายใต้มาตรฐานความปลอดภัยสูงสุด รวมทั้งรับซื้อเครื่องจักร เศษเหล็ก เศษทองแดง สแตนเลส ให้ราคาดี",
+                    "en": "We provide demolition services for industrial factories, petrochemical plants, power plants, large buildings, and warehouses, along with machinery relocation, by a team of highly skilled professionals. All work is carried out under the highest safety standards. We also offer the purchase of machinery, scrap metal, copper, and stainless steel at competitive prices."
+                },
+                "g_btn_text": {
+                    "th": "ข้อมูลเพิ่มเติม",
+                    "en": "readmore"
+                },
+                "w_btn_text": {
+                    "th": null,
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 7,
+            "source_hash": "96dc457747f439b34688bb966353935caf8ed6b8de07617fe0f7dbab0db6be67",
+            "fields": {
+                "title": {
+                    "th": "วงษ์พาณิชย์ รีไซเคิล ระยอง จำกัด",
+                    "en": "Wongpanit Recycle Rayong (WPN)"
+                },
+                "big_title": {
+                    "th": "เหล็กรูปพรรณ",
+                    "en": "Structural Steel"
+                },
+                "sub_title": {
+                    "th": "จำหน่ายเหล็กรูปพรรณทุกชนิดแบบครบวงจร ควบคุมคุณภาพอย่างเข้มงวด ด้วยกระบวนการผลิตที่ได้มาตรฐาน มอก. ใช้งานได้อย่างมั่นใจ ส่งตรงถึงไซต์งาน รวดเร็ว ตรงเวลาพร้อมให้บริการทั่วประเทศ",
+                    "en": "We supply a comprehensive range of structural steel products of all types, with strict quality control through standardized production processes that comply with Thai Industrial Standards (TIS). Our products are reliable, delivered directly to the construction site quickly and on time, and we offer nationwide service."
+                },
+                "g_btn_text": {
+                    "th": "ข้อมูลเพิ่มเติม",
+                    "en": "More Information"
+                },
+                "w_btn_text": {
+                    "th": null,
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 8,
+            "source_hash": "d0452cc0495c44f0bcbb331ace10437959307f5758e52efdc7244b877afe38fe",
+            "fields": {
+                "title": {
+                    "th": "วงษ์พาณิชย์ รีไซเคิล ระยอง จำกัด",
+                    "en": "Wongpanit Recycle Rayong (WPN)"
+                },
+                "big_title": {
+                    "th": "คลังสินค้า ลานวางสินค้าให้เช่า",
+                    "en": "Warehouse and Storage Rental"
+                },
+                "sub_title": {
+                    "th": "พื้นที่ระยอง ขนาด 40,000 ตร.ม. พื้นที่สงขลา ขนาด 29,600 ตร.ม. ทำเลดี ใกล้เส้นทางคมนาคมหลัก ระบบรักษาความปลอดภัย 24 ชม. แบ่งให้เช่าตามความต้องการ",
+                    "en": "Warehouse and Storage Yard for Rent\r\nRayong area: 40,000 sq.m.\r\nSongkhla area: 16,000 sq.m.\r\nPrime locations near major transportation routes. 24-hour security system. Flexible rental options based on your needs."
+                },
+                "g_btn_text": {
+                    "th": "ข้อมูลเพิ่มเติม",
+                    "en": "More Information"
+                },
+                "w_btn_text": {
+                    "th": null,
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 9,
+            "source_hash": "7b88fb64570d4a2f4a032b70d4fd35edca241964dc380fb9faf2c0345dfba6a8",
+            "fields": {
+                "title": {
+                    "th": "From Waste to Worth",
+                    "en": "From Waste to Worth"
+                },
+                "big_title": {
+                    "th": "WPN ART",
+                    "en": "WPN ART"
+                },
+                "sub_title": {
+                    "th": "การเดินทางของวัสดุที่เคยถูกทิ้งสู่การออกแบบที่มีคุณค่าและความยั่งยืน\r\nลดของเสีย พร้อมเพิ่มมูลค่าด้วยงานดีไซน์และงานฝีมือระดับสูง\r\nทุกผลงานมาพร้อมเรื่องราว แหล่งที่มา และคุณค่าด้านสิ่งแวดล้อม\r\nที่สามารถต่อยอดเป็นภาพลักษณ์ ESG ให้กับองค์กรหรือพื้นที่ของคุณได้ทันที",
+                    "en": "การเดินทางของวัสดุที่เคยถูกทิ้งสู่การออกแบบที่มีคุณค่าและความยั่งยืน\r\nลดของเสีย พร้อมเพิ่มมูลค่าด้วยงานดีไซน์และงานฝีมือระดับสูง\r\nทุกผลงานมาพร้อมเรื่องราว แหล่งที่มา และคุณค่าด้านสิ่งแวดล้อม\r\nที่สามารถต่อยอดเป็นภาพลักษณ์ ESG ให้กับองค์กรหรือพื้นที่ของคุณได้ทันที"
+                },
+                "g_btn_text": {
+                    "th": "ข้อมูลเพิ่มเติม",
+                    "en": "More Information"
+                },
+                "w_btn_text": {
+                    "th": null,
+                    "en": null
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "table": "hprojects",
+    "rows": [
+        {
+            "id": 1,
+            "source_hash": "5bd864d3730b8f3967fec895d322b0b28df1fe8ba62c8aac5c91e213b28cb291",
+            "fields": {
+                "header": {
+                    "th": "Handing Heavy Equipment Transportation Project (ROC)",
+                    "en": null
+                },
+                "content": {
+                    "th": "WPN ได้รับการคัดเลือกจากบริษัท RAYONG OLEFINS CO., LTD. (ROC) ในเคลือ SCG. ให้เป็นผู้ขนย้ายอุปกรณ์แลกเปลี่ยนอุณหภูมิ (Heats Exchanger) ที่ได้ยกเลิกการใช้งานแล้ว และได้ทำการขนย้ายโดยทีมงานที่มีประสบการณ์และ  ความชำนาญระดับมืออาชีพด้านการขนย้ายอุปกรณ์ขนาดใหญ่ (Specialist Heavy Equipment Transportation) พร้อมทั้งการสำรวจเส้นทางและวางแผนการขนย้ายฯ ตามมาตรฐานการขนส่งเพื่อให้มีความปลอดภัยสูงสุดในการขนย้ายตั้งแต่ต้นทางจนถึงปลายทาง",
+                    "en": "WPN has been selected by Rayong Olefins Co., Ltd. (ROC), a subsidiary of SCG, to transport decommissioned heat exchangers. The transportation was carried out by a team of experienced professionals specializing in heavy equipment transportation. The process included route surveys and meticulous planning to ensure compliance with transportation standards, guaranteeing the highest level of safety from the point of origin to the final destination."
+                }
+            }
+        },
+        {
+            "id": 2,
+            "source_hash": "4abbe3b5da9f4769580c44b6d7c1697c0081faf7d84291fab875442187b44b5b",
+            "fields": {
+                "header": {
+                    "th": "Demolition Production Line Battery Hybrid Car (BMW) Under BOI",
+                    "en": null
+                },
+                "content": {
+                    "th": "WPN เป็นผู้ถูกคัดเลือกและได้รับความไว้วางใจจาก Draexlmaier Automotive Systems (Thailand) Co., Ltd.ให้เป็นผู้ดำเนินการรื้อ-ถอนและทำลาย Technology ในกระบวนการผลิตฯที่ถูกยกเลิกการผลิต และได้ทำการรื้อ-ถอนโดยทีมงานที่ประสบการณ์และมีความชำนาญด้านการรื้อ-ถอน Process Clean Room ตั้งแต่การแผนงานการรื้อ-ถอนฯ พร้อมทั้งการทำลายให้เสียสภาพโดยสมบูรณ์และตระหนักถึงการเก็บรักษาความลับโดยไม่เผยแพร่ Technology ที่เกี่ยวข้องกับกระบวนการผลิตของลูกค้า",
+                    "en": "WPN has been selected and entrusted by Draexlmaier Automotive Systems (Thailand) Co., Ltd. to carry out the dismantling and destruction of technology used in discontinued production processes. The dismantling was executed by a team of experienced professionals specializing in Process Clean Room decommissioning. This included comprehensive planning, complete destruction to render the equipment non-functional, and strict confidentiality measures to ensure that no proprietary production technology was disclosed."
+                }
+            }
+        },
+        {
+            "id": 3,
+            "source_hash": "72ad3ac699aea525653410a418e5d672eeb691a80b1af5bf3eadb1047e3ffe24",
+            "fields": {
+                "header": {
+                    "th": "BETAGRO SK1 Building Demolition",
+                    "en": null
+                },
+                "content": {
+                    "th": "WPN เป็นผู้ถูกคัดเลือกและได้รับความไว้วางใจจาก BETAGRO PUBLIC COMPANY LIMITED ให้เป็นผู้ดำเนินการรื้อ-ถอน อาคารการผลิต SK1 ซึ่งเป็นอาคารการผลิตที่มีกระบวนการผลิตที่ซับซ้อนหลายชั้นและมีความสูงพิเศษ และได้ทำการรื้อ-ถอนโดยทีมงานที่มีทักษะ ประสบการณ์ ความชำนาญ และขั้นตอนการทำงานที่ถูกต้องตามหลักวิศวกรรมภายใต้มาตรฐานความปลอดภัย รวมทั้งการวางแผนการทำงานเพื่อไม่ให้ไม่เกิดผลกระทบและความเสียหายกับกระบวนการผลิตภายในพื้นที่ข้างเคียง",
+                    "en": "WPN has been selected and entrusted by BETAGRO PUBLIC COMPANY LIMITED. to carry out the dismantling of the SK1 production building, a multi-story facility with complex production processes and exceptional height. The dismantling was executed by a team of skilled and experienced professionals, following proper engineering principles and adhering to strict safety standards. Additionally, meticulous planning was undertaken to ensure that the work did not cause any impact or damage to the surrounding production areas."
+                }
+            }
+        },
+        {
+            "id": 4,
+            "source_hash": "f639fe2b03fa141a6a6e18cec4078d733b8caf5d121a78e66f9be4767cbbbe17",
+            "fields": {
+                "header": {
+                    "th": "Metropolitan Electricity Authorit",
+                    "en": null
+                },
+                "content": {
+                    "th": "WPN ได้รับการคัดเลือกจากการไฟฟ้านครหลวง (กฟน.) ให้ชนะประมูลการจัดซื้อหม้อแปลงไฟฟ้าจำนวนกว่า200ลูกที่หมดอายุการใช้งานทั้งในเขตกรุงเทพฯ และปริมณฑลของการไฟฟ้านครหลวง โดย WPN ได้นำหม้อแปลงเข้าสู่กระบวนการรีไซเคิล ด้วยการคัดแยกชิ้นส่วนซึ่งได้ทั้งน้ำมัน ทองแดง และเหล็ก เพื่อจำหน่ายต่อไป",
+                    "en": null
+                }
+            }
+        },
+        {
+            "id": 5,
+            "source_hash": "1e6a82a6141e9f134b7b296e7403b7a2b3ecc87b2fccba6ad2ab5530acecc9ba",
+            "fields": {
+                "header": {
+                    "th": "Supavut Industry Co., Ltd.",
+                    "en": null
+                },
+                "content": {
+                    "th": "WPN ได้รับการคัดเลือก ประมูลรื้อถอนและซื้อวัสดุส่วนอาคาร เครื่องจักร และอุปกรณ์ในโรงงาน จากบริษัท สุภาวุฒิ อินดัสทรี จำกัด ซึ่งเป็นผู้ผลิตชิ้นส่วนพลาสติกในอุตสาหกรรมรถยนต์รายใหญ่ของประเทศไทย โดยทีมงานมืออาชีพที่ประสบการณ์ด้านโครงการการรื้อถอน ด้วยเครื่องจักรใหญ่ ควบคุมตั้งแต่การวางแผนและออกแบบการรื้อถอน จนถึงขั้นตอนการขนย้ายวัสดุที่ไม่ใช้แล้วสู่ขบวนการรีไซเคิลต่อไป",
+                    "en": "WPN was selected in the bidding for the dismantling and purchase of building materials, machinery, and factory equipment from Supavut Industry Co., Ltd., which is a major manufacturer of plastic parts in the automobile industry in Thailand. Our team of experienced professionals in dismantling projects involving large machinery supervised work from planning and dismantling design to the step of moving disused materials into the recycling process."
+                }
+            }
+        },
+        {
+            "id": 6,
+            "source_hash": "bcef7fabb905ee9f7ec08f9566847ca1b55a2b7be30e5f886d2f486e4d8acbdb",
+            "fields": {
+                "header": {
+                    "th": "PTT Global Chemical PCL",
+                    "en": null
+                },
+                "content": {
+                    "th": "WPN ได้รับการคัดเลือกจาก บริษัท พีทีที โกบอล เคมิคอล จำกัด (มหาชน) หรือ GC ซึ่งเป็นบริษัทอันดับหนึ่งของโลกในกลุ่มธุรกิจเคมีภัณฑ์ ในการขนย้าย และรื้อถอน Pressure Vessel หรือ หอกลั่นปิโตรเคมีขนาดใหญ่ น้ำหนักมากกว่า 200 ตัน โดยการขนย้ายที่มีมาตรฐานความปลอดภัยสูงสุด",
+                    "en": "WPN was selected by PTT Global Chemical Public Co., Ltd. (GC), one of the world’s top companies in the chemicals business, to move and dismantle pressure vessels or large petrochemical distillation columns weighing more than 200 tons with the highest safety standards."
+                }
+            }
+        },
+        {
+            "id": 7,
+            "source_hash": "37fe80ff4a946e0079ce2f80d0f4fa91c12a4adc647ebb226c72c3917fb8938a",
+            "fields": {
+                "header": {
+                    "th": "PTTEP-Offshore surplus",
+                    "en": null
+                },
+                "content": {
+                    "th": "WPN ได้รับคัดเลือกจาก PTTEP ในการจัดซื้ออุปกรณ์ที่เหลือใช้จากกระบวนการขุดเจาะและการผลิตของ (E&P) อาทิ หัวขุดเจาะ Drilling Bits, Casing, Production Tubing, Wellhead Christmas Tree, Structure Steel, Sparepart รวมถึงอุปกรณ์ทางเรือ เช่น Offshore Crane, Mooring Rope, Anchor, Fender ฯลฯ โดยอุปกรณ์ต่างๆสามารถนำไปใช้เพื่อนำเข้าสู่กระบวนการ reused และ รีไซเคิลเพื่อจำหน่ายต่อไป",
+                    "en": "WPN was selected by PTTEP in a purchase of surplus equipment from E&P’s drilling and production processes such as drilling bits, casing, production tubing, Wellhead Christmas Tree, structure steel, spare parts, and marine equipment such as offshore cranes, mooring, anchors, and fenders, etc. The equipment can be sell as re-useable and recycling for further utilization."
+                }
+            }
+        },
+        {
+            "id": 8,
+            "source_hash": "927dc498844c1cc9251fc8baf18c7934984379f3472f216390aa71cc51e99686",
+            "fields": {
+                "header": {
+                    "th": "Thai Oil Refinery",
+                    "en": null
+                },
+                "content": {
+                    "th": "WPN ได้รับการคัดเลือกจากโรงกลั่นน้ำมันไทยออยล์จัดซื้ออุปกรณ์ที่เหลือใช้จากโครงการและขบวนการผลิตของโรงกลั่นน้ำมัน อาทิ สายไฟ ท่อเหล็ก เหล็กถังน้ำมัน เครื่องจักร หม้อแปลงแรงสูงขนาดใหญ่ ฯลฯ โดย WPN ได้นำเข้าสู่กระบวนการรีไซเคิลอย่างมีประสิทธิภาพ และเน้นขบวนการการนำวัสดุที่ได้มาไปใช้ประโยชน์ในอุตสาหกรรมอื่น เช่น แผ่นถังน้ำมันซึ่งเป็นเศษเหล็กมาทำเป็นแผ่นเหล็ก เพื่อนำไปใช้ในงานปูพื้น อุตสาหกรรมต่อเรือ ส่วนท่อน้ำมันได้นำไปใช้ในอุตสาหกรรมเรือดูดทราย เป็นต้น หม้อแปลงไฟฟ้าได้นำไปตรวจสอบและรับรองระบบเพื่อนำไปใช้ใหม่หรือนำมาแยกส่วนเพื่อจำหน่ายต่อไป",
+                    "en": "WPN was selected by the Thai Oil refinery in a purchase of surplus equipment from projects and production processes of the refinery such as power cables, steel pipes, oil tanks steel pages, machinery, large high-power transformers, etc. WPN effectively brought the said equipment into the recycling process and focused on the process of utilizing the acquired materials in other industries. For example, steel plate of oil tank were used to make steel sheets used in flooring work and the shipbuilding industry while oil pipes were used in the sand dredging industry, etc., and transformers have been inspected and had systems certified for reuse or breakdown to sell parts further."
+                }
+            }
+        },
+        {
+            "id": 9,
+            "source_hash": "f3cec4c794f374846f7e2fb072ad16c0e399016b89ea2d15b0a01ea157c62252",
+            "fields": {
+                "header": {
+                    "th": "AGC Vinythai Chemical",
+                    "en": null
+                },
+                "content": {
+                    "th": "WPN ได้รับการคัดเลือกจาก AGC Vinythai Chemical ในการจัดซื้อเหล็กและอุปกรณ์ทั้งหมดของอาคารขบวนการผลิต และอาคารคลังจัดเก็บวัตถุดิบ โดย WPN ได้นำเหล็กบีมและเหล็กทั้งหมดที่เป็นโครงสร้างของโรงงานเข้าสู่กระบวนการรีไซเคิล ด้วยการนำมาตัดแต่งเพื่อนำกลับไปใช้ประโยชน์ในงานอื่น ๆ ไม่ว่าจะเป็นการสร้างโรงงานใหม่ สร้างบ้าน หรือสร้างสำนักงาน เป็นต้น",
+                    "en": "WPN was selected by AGC Vinythai Chemical in the purchase of steel and all equipment of production process buildings and raw material storage warehouse buildings. WPN brought all steel beams and structure steel of the factory into the recycling process by cutting steel for reutilization in other work such as new factory construction, housing construction or office construction, etc."
+                }
+            }
+        }
+    ]
+}
