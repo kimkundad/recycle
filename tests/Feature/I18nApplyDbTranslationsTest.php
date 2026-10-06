@@ -84,6 +84,19 @@ class I18nApplyDbTranslationsTest extends TestCase
         $this->apply()->expectsOutputToContain('categories: 0 fields written')->assertExitCode(0);
     }
 
+    public function test_second_run_does_not_report_its_own_en_fills_as_source_changes(): void
+    {
+        $this->writeFile('categories', [
+            ['id' => 2, 'source_hash' => $this->hash('categories', 2), 'en' => ['cat_name' => 'Steel'], 'zh' => ['cat_name' => '钢材']],
+        ]);
+        $this->apply()->assertExitCode(0);
+
+        $this->apply()
+            ->doesntExpectOutputToContain('source changed')
+            ->expectsOutputToContain('categories: 0 fields written')
+            ->assertExitCode(0);
+    }
+
     public function test_dry_run_writes_nothing(): void
     {
         $this->writeFile('categories', [['id' => 1, 'source_hash' => $this->hash('categories', 1), 'zh' => ['cat_name' => '废料']]]);

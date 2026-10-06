@@ -48,6 +48,14 @@ class ZhColumnsMigrationTest extends TestCase
         }
     }
 
+    /** DigitalOcean Managed MySQL enforces sql_require_primary_key. */
+    public function test_bookkeeping_table_has_a_primary_key(): void
+    {
+        $this->migration->up();
+
+        $this->assertTrue(Schema::hasColumn('zh_columns_added', 'id'));
+    }
+
     public function test_down_removes_only_columns_it_added(): void
     {
         $this->migration->up();

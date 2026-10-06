@@ -54,7 +54,7 @@ class I18nApplyDbTranslations extends Command
                         $this->line("  skipped id {$row['id']}: row no longer exists");
                         continue;
                     }
-                    if (SourceRow::hash($table, $current) !== $row['source_hash']) {
+                    if (!$this->sourceUnchanged($table, $current, $row)) {
                         $this->line("  skipped id {$row['id']}: source changed since export");
                         continue;
                     }
@@ -85,5 +85,25 @@ class I18nApplyDbTranslations extends Command
         }
 
         return $failed ? self::FAILURE : self::SUCCESS;
+    }
+
+    /**
+     * True when the row's source still matches the export. English values this command
+     * filled itself on an earlier run are ignored, so a re-run is not reported as an edit.
+     */
+    private function sourceUnchanged(string $table, object $current, array $row): bool
+    {
+        if (SourceRow::hash($table, $current) === $row['source_hash']) {
+            return true;
+        }
+        $withoutOwnFills = clone $current;
+        foreach ($row['en'] ?? [] as $field => $value) {
+            $column = TranslatableFields::MAP[$table][$field]['en'];
+            if (($withoutOwnFills->{$column} ?? null) === $value) {
+                $withoutOwnFills->{$column} = null;
+            }
+        }
+
+        return SourceRow::hash($table, $withoutOwnFills) === $row['source_hash'];
     }
 }

@@ -19,6 +19,7 @@ return new class extends Migration
     {
         if (!Schema::hasTable(self::LOG)) {
             Schema::create(self::LOG, function (Blueprint $t) {
+                $t->id(); // DigitalOcean Managed MySQL requires a primary key on every table
                 $t->string('table_name');
                 $t->string('column_name');
             });

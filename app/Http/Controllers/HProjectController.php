@@ -90,6 +90,7 @@ class HProjectController extends Controller
 
            $objs = new hproject();
            $objs->header = $request['header'];
+           $objs->header_zh = $request['header_zh'];
            $objs->content = $request['content'];
            $objs->content_en = $request['content_en'];
            $objs->content_zh = $request['content_zh'];
@@ -156,6 +157,7 @@ class HProjectController extends Controller
 
                 $objs = hproject::find($id);
                 $objs->header = $request['header'];
+                $objs->header_zh = $request['header_zh'];
                 $objs->content = $request['content'];
                 $objs->content_en = $request['content_en'];
                 $objs->content_zh = $request['content_zh'];
@@ -182,6 +184,7 @@ class HProjectController extends Controller
 
                 $objs = hproject::find($id);
                 $objs->header = $request['header'];
+                $objs->header_zh = $request['header_zh'];
                 $objs->content = $request['content'];
                 $objs->content_en = $request['content_en'];
                 $objs->content_zh = $request['content_zh'];
