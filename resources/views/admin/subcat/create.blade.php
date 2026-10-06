@@ -137,6 +137,23 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">ชื่อซับหมวดหมู่สินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="sub_name_zh" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{old('sub_name_zh') ? old('sub_name_zh') : ''}}">
+                               
+                                        @if ($errors->has('sub_name_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกชื่อซับหมวดหมู่สินค้า (中文)</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
                                 {{-- <div class="row mb-6">
                                     <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">รูป Icon</label>

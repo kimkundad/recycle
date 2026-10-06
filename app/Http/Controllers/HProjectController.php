@@ -92,6 +92,7 @@ class HProjectController extends Controller
            $objs->header = $request['header'];
            $objs->content = $request['content'];
            $objs->content_en = $request['content_en'];
+           $objs->content_zh = $request['content_zh'];
            $objs->image = $filename;
            $objs->status = $status;
            $objs->save();
@@ -157,6 +158,7 @@ class HProjectController extends Controller
                 $objs->header = $request['header'];
                 $objs->content = $request['content'];
                 $objs->content_en = $request['content_en'];
+                $objs->content_zh = $request['content_zh'];
                 $objs->status = $status;
                 $objs->save();
 
@@ -182,6 +184,7 @@ class HProjectController extends Controller
                 $objs->header = $request['header'];
                 $objs->content = $request['content'];
                 $objs->content_en = $request['content_en'];
+                $objs->content_zh = $request['content_zh'];
                 $objs->status = $status;
                 $objs->image = $filename;
                 $objs->save();

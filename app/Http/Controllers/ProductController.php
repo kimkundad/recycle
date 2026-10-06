@@ -203,15 +203,22 @@ class ProductController extends Controller
            $objs->mysort = $request['mysort'];
            $objs->typePrice = $request['typePrice'];
            $objs->name_pro_en = $request['name_pro_en'];
+           $objs->name_pro_zh = $request['name_pro_zh'];
            $objs->condition_en = $request['condition_en'];
+           $objs->condition_zh = $request['condition_zh'];
            $objs->title_pro_en = $request['title_pro_en'];
+           $objs->title_pro_zh = $request['title_pro_zh'];
            $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
+           $objs->detail_pro_zh = $request['kt_docs_ckeditor_classic_zh'];
            $objs->material = $isDesignProduct ? $request->input('material') : null;
            $objs->material_en = $isDesignProduct ? $request->input('material_en') : null;
+           $objs->material_zh = $isDesignProduct ? $request->input('material_zh') : null;
            $objs->highlights = $isDesignProduct ? $request->input('highlights') : null;
            $objs->highlights_en = $isDesignProduct ? $request->input('highlights_en') : null;
+           $objs->highlights_zh = $isDesignProduct ? $request->input('highlights_zh') : null;
            $objs->use_case = $isDesignProduct ? $request->input('use_case') : null;
            $objs->use_case_en = $isDesignProduct ? $request->input('use_case_en') : null;
+           $objs->use_case_zh = $isDesignProduct ? $request->input('use_case_zh') : null;
            $objs->save();
            $this->syncDesignFilters($objs, $request, $isDesignProduct);
 
@@ -409,15 +416,22 @@ class ProductController extends Controller
            $objs->mysort = $request['mysort'];
            $objs->typePrice = $request['typePrice'];
            $objs->name_pro_en = $request['name_pro_en'];
+           $objs->name_pro_zh = $request['name_pro_zh'];
            $objs->condition_en = $request['condition_en'];
+           $objs->condition_zh = $request['condition_zh'];
            $objs->title_pro_en = $request['title_pro_en'];
+           $objs->title_pro_zh = $request['title_pro_zh'];
            $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
+           $objs->detail_pro_zh = $request['kt_docs_ckeditor_classic_zh'];
            $objs->material = $isDesignProduct ? $request->input('material') : null;
            $objs->material_en = $isDesignProduct ? $request->input('material_en') : null;
+           $objs->material_zh = $isDesignProduct ? $request->input('material_zh') : null;
            $objs->highlights = $isDesignProduct ? $request->input('highlights') : null;
            $objs->highlights_en = $isDesignProduct ? $request->input('highlights_en') : null;
+           $objs->highlights_zh = $isDesignProduct ? $request->input('highlights_zh') : null;
            $objs->use_case = $isDesignProduct ? $request->input('use_case') : null;
            $objs->use_case_en = $isDesignProduct ? $request->input('use_case_en') : null;
+           $objs->use_case_zh = $isDesignProduct ? $request->input('use_case_zh') : null;
            $objs->save();
            $this->syncDesignFilters($objs, $request, $isDesignProduct);
 
@@ -464,15 +478,22 @@ class ProductController extends Controller
            $objs->mysort = $request['mysort'];
            $objs->typePrice = $request['typePrice'];
            $objs->name_pro_en = $request['name_pro_en'];
+           $objs->name_pro_zh = $request['name_pro_zh'];
            $objs->condition_en = $request['condition_en'];
+           $objs->condition_zh = $request['condition_zh'];
            $objs->title_pro_en = $request['title_pro_en'];
+           $objs->title_pro_zh = $request['title_pro_zh'];
            $objs->detail_pro_en = $request['kt_docs_ckeditor_classic_en'];
+           $objs->detail_pro_zh = $request['kt_docs_ckeditor_classic_zh'];
            $objs->material = $isDesignProduct ? $request->input('material') : null;
            $objs->material_en = $isDesignProduct ? $request->input('material_en') : null;
+           $objs->material_zh = $isDesignProduct ? $request->input('material_zh') : null;
            $objs->highlights = $isDesignProduct ? $request->input('highlights') : null;
            $objs->highlights_en = $isDesignProduct ? $request->input('highlights_en') : null;
+           $objs->highlights_zh = $isDesignProduct ? $request->input('highlights_zh') : null;
            $objs->use_case = $isDesignProduct ? $request->input('use_case') : null;
            $objs->use_case_en = $isDesignProduct ? $request->input('use_case_en') : null;
+           $objs->use_case_zh = $isDesignProduct ? $request->input('use_case_zh') : null;
            $objs->save();
            $this->syncDesignFilters($objs, $request, $isDesignProduct);
 

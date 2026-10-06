@@ -282,6 +282,13 @@
                                     </div>
 
                                     <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">วัสดุที่ใช้ (Material) (中文)</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="material_zh" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('material_zh', $objs->material_zh) }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">จุดเด่นสินค้า (Highlight / Features)</label>
                                         <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                             <textarea name="highlights" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('highlights', $objs->highlights) }}</textarea>
@@ -292,6 +299,13 @@
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">จุดเด่นสินค้า (Highlight / Features) En</label>
                                         <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                             <textarea name="highlights_en" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('highlights_en', $objs->highlights_en) }}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">จุดเด่นสินค้า (Highlight / Features) (中文)</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="highlights_zh" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('highlights_zh', $objs->highlights_zh) }}</textarea>
                                         </div>
                                     </div>
 
@@ -308,6 +322,13 @@
                                             <textarea name="use_case_en" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('use_case_en', $objs->use_case_en) }}</textarea>
                                         </div>
                                     </div>
+
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">การใช้งาน (Use Case) (中文)</label>
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <textarea name="use_case_zh" style="height: 100px" class="form-control form-control-lg form-control-solid">{{ old('use_case_zh', $objs->use_case_zh) }}</textarea>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="row mb-6">
@@ -321,6 +342,23 @@
                                         @if ($errors->has('name_pro_en'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกชื่อสินค้า En</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">ชื่อสินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="name_pro_zh" class="form-control form-control-lg form-control-solid" placeholder="เศษเหล็ก อลูมิเนียม" value="{{ $objs->name_pro_zh }}">
+
+                                        @if ($errors->has('name_pro_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกชื่อสินค้า (中文)</div>
                                             </div>
                                         @endif
                                     </div>
@@ -452,6 +490,17 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label  fw-semibold fs-6">สภาพสินค้า สินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="condition_zh" class="form-control form-control-lg form-control-solid" placeholder="ใช้แล้ว, สภาพใหม่" value="{{ $objs->condition_zh }}">
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
@@ -543,6 +592,18 @@
                                     <!--end::Col-->
                                 </div>
 
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">คำอธิบายสั้นๆ สินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <textarea type="text" name="title_pro_zh" style="height: 100px"
+                                        class="form-control form-control-lg form-control-solid" >{{ $objs->title_pro_zh }}</textarea>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
@@ -609,6 +670,19 @@
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <textarea name="kt_docs_ckeditor_classic_en" id="kt_docs_ckeditor_classic_en" >
                                             {{ $objs->detail_pro_en }}
+                                        </textarea>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">รายละเอียดสินค้า (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <textarea name="kt_docs_ckeditor_classic_zh" id="kt_docs_ckeditor_classic_zh" >
+                                            {{ $objs->detail_pro_zh }}
                                         </textarea>
                                     </div>
                                     <!--end::Col-->
@@ -707,6 +781,10 @@ ClassicEditor
     .then(editor => {
         console.log(editor);
     })
+    .catch(error => {
+        console.error(error);
+    });
+    ClassicEditor.create(document.querySelector('#kt_docs_ckeditor_classic_zh'))
     .catch(error => {
         console.error(error);
     });

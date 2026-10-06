@@ -145,6 +145,23 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">1. ชื่อ slide show (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="title_zh" class="form-control form-control-lg form-control-solid" placeholder="ตั้งชื่อ slide show ภาษาจีน (中文)" value="{{ $objs->title_zh }}">
+                                    
+                                        @if ($errors->has('title_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกชื่อ slide show (中文)</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">2. ตัวอักษรตัวโต</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
@@ -179,6 +196,23 @@
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">2. ตัวอักษรตัวโต (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="big_title_zh" class="form-control form-control-lg form-control-solid" placeholder="รับซื้อ-ขาย En" value="{{ $objs->big_title_zh }}">
+                                    
+                                        @if ($errors->has('big_title_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอก ตัวอักษรตัวโต slide show (中文)</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">3. รายละเอียดแบบย่อ</label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
@@ -204,6 +238,22 @@
                                         @if ($errors->has('sub_title_en'))
                                             <div class="fv-plugins-message-container invalid-feedback">
                                                 <div>กรุณากรอกรายละเอียดแบบย่อ En</div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label fw-semibold fs-6">3. รายละเอียดแบบย่อ (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <textarea class="form-control form-control-lg form-control-solid" id="textareaAutosize" placeholder="Selling both new and second hand machinery and accepting auctions for..." rows="3" name="sub_title_zh" >{{ $objs->sub_title_zh }} </textarea>
+                                        @if ($errors->has('sub_title_zh'))
+                                            <div class="fv-plugins-message-container invalid-feedback">
+                                                <div>กรุณากรอกรายละเอียดแบบย่อ (中文)</div>
                                             </div>
                                         @endif
                                     </div>
@@ -251,6 +301,17 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="text" name="g_btn_text_en" class="form-control form-control-lg form-control-solid" placeholder="Buy" value="{{ $objs->g_btn_text_en }}">
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label  fw-semibold fs-6">4.1.1 Text ปุ่มเขียว (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="g_btn_text_zh" class="form-control form-control-lg form-control-solid" placeholder="Buy" value="{{ $objs->g_btn_text_zh }}">
                                     </div>
                                     <!--end::Col-->
                                 </div>
@@ -316,6 +377,17 @@
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row fv-plugins-icon-container">
                                         <input type="text" name="w_btn_text_en" class="form-control form-control-lg form-control-solid" placeholder="Sele" value="{{ $objs->w_btn_text_en }}">
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="row mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-4 col-form-label  fw-semibold fs-6">4.2.1 Text ปุ่มขาว (中文)</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                        <input type="text" name="w_btn_text_zh" class="form-control form-control-lg form-control-solid" placeholder="Sele" value="{{ $objs->w_btn_text_zh }}">
                                     </div>
                                     <!--end::Col-->
                                 </div>

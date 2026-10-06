@@ -79,6 +79,7 @@ class TypeConController extends Controller
            $objs = new type_contact();
            $objs->name = $request['name'];
            $objs->name_en = $request['name_en'];
+           $objs->name_zh = $request['name_zh'];
            $objs->status = $status;
            $objs->save();
 
@@ -139,6 +140,7 @@ class TypeConController extends Controller
             $objs = type_contact::find($id);
             $objs->name = $request['name'];
             $objs->name_en = $request['name_en'];
+            $objs->name_zh = $request['name_zh'];
             $objs->status = $status;
             $objs->save();
 

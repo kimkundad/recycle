@@ -114,6 +114,7 @@ class DesignProductFilterController extends Controller
         $modelClass::create([
             'name_th' => $request->input('name_th'),
             'name_en' => $request->input('name_en'),
+            'name_zh' => $request->input('name_zh'),
             'slug' => $slug,
             'sort' => $request->input('sort', 0),
             'status' => $status,
@@ -156,6 +157,7 @@ class DesignProductFilterController extends Controller
 
         $objs->name_th = $request->input('name_th');
         $objs->name_en = $request->input('name_en');
+        $objs->name_zh = $request->input('name_zh');
         $objs->slug = $slug;
         $objs->sort = $request->input('sort', 0);
         $objs->status = $status;

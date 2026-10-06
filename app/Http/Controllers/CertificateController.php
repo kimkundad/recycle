@@ -94,6 +94,7 @@ class CertificateController extends Controller
            $objs = new certificate();
            $objs->name = $request['name'];
            $objs->name_en = $request['name_en'];
+           $objs->name_zh = $request['name_zh'];
            $objs->sort = $sort;
            $objs->image = $input['imagename'];
            $objs->status = $status;
@@ -165,6 +166,7 @@ class CertificateController extends Controller
            $objs = certificate::find($id);
            $objs->name = $request['name'];
            $objs->name_en = $request['name_en'];
+           $objs->name_zh = $request['name_zh'];
            $objs->status = $status;
            $objs->sort = $sort;
            $objs->save();
@@ -188,6 +190,7 @@ class CertificateController extends Controller
            $objs = certificate::find($id);
            $objs->name = $request['name'];
            $objs->name_en = $request['name_en'];
+           $objs->name_zh = $request['name_zh'];
            $objs->image = $input['imagename'];
            $objs->sort = $sort;
            $objs->status = $status;
