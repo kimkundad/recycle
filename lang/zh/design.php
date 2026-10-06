@@ -42,4 +42,5 @@ return [
     'highlights_fallback' => '该产品尚未注明产品亮点。',
     'use_case_fallback' => '该产品尚未注明使用场景。',
     'showing_count' => '共 :count 件升级再造设计产品',
+    'inquire' => '咨询',
 ];

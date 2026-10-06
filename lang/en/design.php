@@ -42,4 +42,5 @@ return [
     'highlights_fallback' => 'Highlights have not been specified for this product yet.',
     'use_case_fallback' => 'Use case information has not been specified for this product yet.',
     'showing_count' => 'Showing :count upcycle design products',
+    'inquire' => 'Inquire',
 ];
