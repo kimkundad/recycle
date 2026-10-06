@@ -443,7 +443,7 @@
                         @forelse($designTypes as $item)
                         <div class="design-filter-option">
                             <input id="design-type-{{ $item->id }}" class="js-design-filter" data-filter-group="types" type="checkbox" value="{{ $item->id }}">
-                            <label for="design-type-{{ $item->id }}">{{ localized(['name' => $item->name_th, 'name_en' => $item->name_en], 'name') }}</label>
+                            <label for="design-type-{{ $item->id }}">{{ localized(['name' => $item->name_th, 'name_en' => $item->name_en, 'name_zh' => $item->name_zh], 'name') }}</label>
                         </div>
                         @empty
                         <div class="design-filter-option">
@@ -459,7 +459,7 @@
                         @forelse($designMaterials as $item)
                         <div class="design-filter-option">
                             <input id="design-material-{{ $item->id }}" class="js-design-filter" data-filter-group="materials" type="checkbox" value="{{ $item->id }}">
-                            <label for="design-material-{{ $item->id }}">{{ localized(['name' => $item->name_th, 'name_en' => $item->name_en], 'name') }}</label>
+                            <label for="design-material-{{ $item->id }}">{{ localized(['name' => $item->name_th, 'name_en' => $item->name_en, 'name_zh' => $item->name_zh], 'name') }}</label>
                         </div>
                         @empty
                         <div class="design-filter-option">
@@ -475,7 +475,7 @@
                         @forelse($designSizes as $item)
                         <div class="design-filter-option">
                             <input id="design-size-{{ $item->id }}" class="js-design-filter" data-filter-group="sizes" type="checkbox" value="{{ $item->id }}">
-                            <label for="design-size-{{ $item->id }}">{{ localized(['name' => $item->name_th, 'name_en' => $item->name_en], 'name') }}</label>
+                            <label for="design-size-{{ $item->id }}">{{ localized(['name' => $item->name_th, 'name_en' => $item->name_en, 'name_zh' => $item->name_zh], 'name') }}</label>
                         </div>
                         @empty
                         <div class="design-filter-option">

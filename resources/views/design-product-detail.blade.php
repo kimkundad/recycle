@@ -543,7 +543,7 @@
                                     data-image="{{ $galleryImage['full'] }}"
                                     aria-label="Gallery image {{ $index + 1 }}"
                                 >
-                                    <img src="{{ $galleryImage['thumb'] }}" alt="{{ $objs->name_pro }}">
+                                    <img src="{{ $galleryImage['thumb'] }}" alt="{{ zh_localized($objs, 'name_pro') }}">
                                 </button>
                             @endforeach
                         </div>
@@ -558,7 +558,7 @@
                                 <img
                                     id="design-gallery-main-image"
                                     src="{{ $mainImage['full'] ?? url('images/wpnrayong/product/'.$objs->image_pro) }}"
-                                    alt="{{ $objs->name_pro }}"
+                                    alt="{{ zh_localized($objs, 'name_pro') }}"
                                 >
                             </div>
                             <div class="design-gallery__hint">
@@ -670,7 +670,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
                         <article class="design-related-card">
                             <a class="design-related-card__image" href="{{ url('/design-products/'.$u->id_q) }}">
-                                <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}">
+                                <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ zh_localized($u, 'name_pro') }}">
                             </a>
                             <div class="design-related-card__body">
                                 <a class="design-related-card__title" href="{{ url('/design-products/'.$u->id_q) }}">

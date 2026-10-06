@@ -9,7 +9,7 @@
 @section('og')
     <meta property="og:url"           content="{{ url('/product_detail/'.$objs->id_q) }}" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{ $objs->name_pro }}" />
+    <meta property="og:title"         content="{{ zh_localized($objs, 'name_pro') }}" />
     <meta property="og:image"         content="{{ url('images/wpnrayong/product/'.$objs->image_pro) }}?v{{time()}}" />
     <meta property="og:description"   content="{{ get_facebook_detail() }}" />
     <meta property="og:image:width" content="600" />
@@ -51,7 +51,7 @@
                                             @foreach($img as $u)
                                             <div class="item">
                                                 <a href="{{ url('images/wpnrayong/product_images/'.$u->image) }}">
-                                                    <img src="{{ url('images/wpnrayong/product_images/'.$u->image) }}" alt="{{ $objs->name_pro }}">
+                                                    <img src="{{ url('images/wpnrayong/product_images/'.$u->image) }}" alt="{{ zh_localized($objs, 'name_pro') }}">
                                                 </a>
                                             </div>
                                             @endforeach
@@ -63,14 +63,14 @@
                                     @isset($img)
                                         @foreach($img as $u)
                                             <div class="item">
-                                                <img src="{{ url('images/wpnrayong/product_images/'.$u->image) }}" alt="{{ $objs->name_pro }}">
+                                                <img src="{{ url('images/wpnrayong/product_images/'.$u->image) }}" alt="{{ zh_localized($objs, 'name_pro') }}">
                                             </div>
                                         @endforeach
                                     @endisset
                                 </div>
 
                                 @else
-                                <img src="{{ url('images/wpnrayong/product/'.$objs->image_pro) }}" alt="{{ $objs->name_pro }}" />
+                                <img src="{{ url('images/wpnrayong/product/'.$objs->image_pro) }}" alt="{{ zh_localized($objs, 'name_pro') }}" />
                                 @endif
                                 {{-- <figure>
                                     <div class="ps-wrapper">
@@ -112,7 +112,7 @@
 
                                 <div class="ps-product__desc">
                                     <p>
-                                        {{ $objs->title_pro }}
+                                        {{ zh_localized($objs, 'title_pro') }}
                                     </p>
                                     <div class="ps-product__specification">
                                         @if($brand)
@@ -191,7 +191,7 @@
                             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                 <div class="ps-product">
                                     <div class="ps-product__thumbnail h-min-set" ><a href="{{ url('product_detail/'.$u->id_q) }}">
-                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
+                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ zh_localized($u, 'name_pro') }}" /></a>
                                     </div>
                                     <div class="ps-product__container">
                                         <a class="ps-product__vendor" href="#">{{ localized($u, 'name_pro') }}</a>

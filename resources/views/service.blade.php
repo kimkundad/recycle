@@ -98,7 +98,7 @@
                             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                 <div class="ps-product">
                                     <div class="ps-product__thumbnail h-min-set" ><a href="{{ url('product_detail/'.$u->id_q) }}">
-                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
+                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ zh_localized($u, 'name_pro') }}" /></a>
                                     </div>
                                     <div class="ps-product__container">
                                         <a class="ps-product__vendor" href="#">{{ localized($u, 'name_pro') }}</a>
@@ -581,7 +581,7 @@
                                     <li class="
                                     @if($h == 1)
                                     active
-                                    @endif"><a href="#tab-{{ $u->id }}" class="fs-12 aHilight" data-image="{{ $u->image }}">{{ $u->header }}</a></li>
+                                    @endif"><a href="#tab-{{ $u->id }}" class="fs-12 aHilight" data-image="{{ $u->image }}">{{ zh_localized($u, 'header') }}</a></li>
 
                                     @php
                                     $h++;
@@ -606,7 +606,7 @@
                                     " id="tab-{{ $u->id }}">
                                         <div class="scrollable visible-slider colored-slider" data-plugin-scrollable style="height: 350px;">
                                             <div class="scrollable-content">
-                                                <h4>{{ $u->header }}</h4>
+                                                <h4>{{ zh_localized($u, 'header') }}</h4>
 
                                                 <p style="font-size: 16px;">{{ localized($u, 'content') }}</p>
 
@@ -708,9 +708,9 @@
                             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6 fix-pad">
                                 <div class="ps-product">
                                     <div class="ps-product__thumbnail"><a href="{{ url('product_detail/'.$u->id_q) }}">
-                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ $u->name_pro }}" /></a>
+                                        <img src="{{ url('images/wpnrayong/product/'.$u->image_pro) }}" alt="{{ zh_localized($u, 'name_pro') }}" /></a>
                                     </div>
-                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ $u->name_pro }}</a>
+                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">{{ zh_localized($u, 'name_pro') }}</a>
                                         <div class="ps-product__content">
                                             @if($u->discount == 0)
                                             <p class="ps-product__price text-green">฿{{ number_format($u->amount, 2) }}
