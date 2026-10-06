@@ -12,4 +12,5 @@ return [
     'contact_to_buy' => 'Contact to buy products',
     'additional_info' => 'Additional information',
     'view_more' => 'View Moew',
+    'brand_label' => 'Brand:',
 ];

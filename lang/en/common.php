@@ -7,6 +7,9 @@ return [
     'contact_seller' => 'Contact Seller',
     'view_product' => 'View',
     'read_more' => 'Read more',
+    'filter' => 'Filter',
+    'admin_login' => 'Admin Login',
+    'search_for' => 'Search for...',
     'nav' => [
         'home' => 'Home',
         'service' => 'Products and Services',

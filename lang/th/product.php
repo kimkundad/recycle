@@ -12,4 +12,5 @@ return [
     'contact_to_buy' => 'ติดต่อเพื่อซื้อสินค้า',
     'additional_info' => 'ข้อมูลเพิ่มเติม',
     'view_more' => 'ดูเพิ่มเติม',
+    'brand_label' => 'Brand:',
 ];

@@ -41,7 +41,7 @@
                         <li>{{ __('product.all_products_alt') }}</li>
                     </ul>
                     <a class="hide-green-ban-filter ps-btn set-btn-inner ps-btn--outline" href="#"
-                        id="filter-sidebar"><i class="icon-equalizer"></i> Filter</a>
+                        id="filter-sidebar"><i class="icon-equalizer"></i> {{ __('common.filter') }}</a>
                 </div>
         </div>
     </div>

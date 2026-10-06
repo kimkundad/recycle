@@ -7,6 +7,9 @@ return [
     'contact_seller' => '联系销售',
     'view_product' => '查看产品',
     'read_more' => '阅读更多',
+    'filter' => '筛选',
+    'admin_login' => '管理员登录',
+    'search_for' => '搜索...',
     'nav' => [
         'home' => '首页',
         'service' => '产品与服务',

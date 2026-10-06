@@ -225,7 +225,7 @@
     <div class="ps-search__content">
         <form class="ps-form--primary-search" action="{{ url('/category') }}" method="get">
             <input type="hidden" name="id" value="0">
-            <input class="form-control" name="search" type="text" placeholder="Search for...">
+            <input class="form-control" name="search" type="text" placeholder="{{ __('common.search_for') }}">
             <button><i class="aroma-magnifying-glass"></i></button>
         </form>
     </div>

@@ -46,10 +46,10 @@
                             <li><a href="{{ url('/blog') }}">{{ __('common.footer.news') }}</a></li>
                             <li><a href="{{ url('/term') }}">{{ __('common.footer.privacy') }}</a></li>
                             @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Admin Login</a></li>
+                            <li><a href="{{ url('/login') }}">{{ __('common.admin_login') }}</a></li>
                             @else
                             @if(Auth::user()->roles[0]->name == 'superadmin' || Auth::user()->roles[0]->name == 'admin')
-                            <li><a href="{{ url('/admin/dashboard') }}">Admin Login</a></li>
+                            <li><a href="{{ url('/admin/dashboard') }}">{{ __('common.admin_login') }}</a></li>
                             @endif
                             @endif
                         </ul>

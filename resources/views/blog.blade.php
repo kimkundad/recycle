@@ -48,7 +48,7 @@
                             </div>
                         </div>
 
-                    <p>{{ formatDateThat($objs[0]->startdate) }} BY WPN </a></p>
+                    <p>{{ formatDateThat($objs[0]->startdate) }} {{ __('blog.by_wpn') }} </a></p>
                     <a class="ps-btn ps-btn--fullwidth-green" href="{{ url('blog_detail/'.$objs[0]->id) }}">{{ __('common.read_more') }}</a>
                 </div>
             </div>

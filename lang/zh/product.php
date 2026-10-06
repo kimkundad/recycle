@@ -12,4 +12,5 @@ return [
     'contact_to_buy' => '联系购买',
     'additional_info' => '更多信息',
     'view_more' => '查看更多',
+    'brand_label' => '品牌：',
 ];

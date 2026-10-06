@@ -57,7 +57,7 @@
 
             <div class="blog_detail_in">
                 <h4 class="mt-20">{{ localized($objs, 'title') }}</h4>
-                <p class="blog_date">{{ formatDateThat($objs->startdate) }} BY WPN </p>
+                <p class="blog_date">{{ formatDateThat($objs->startdate) }} {{ __('blog.by_wpn') }} </p>
                 <p>
                     {!! localized($objs, 'detail') !!}
                 </p>

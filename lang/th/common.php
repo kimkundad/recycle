@@ -7,6 +7,9 @@ return [
     'contact_seller' => 'ติดต่อฝ่ายขาย',
     'view_product' => 'ดูข้อมูลสินค้า',
     'read_more' => 'อ่านต่อ',
+    'filter' => 'Filter',
+    'admin_login' => 'Admin Login',
+    'search_for' => 'Search for...',
     'nav' => [
         'home' => 'หน้าแรก',
         'service' => 'สินค้าและบริการ',
