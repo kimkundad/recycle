@@ -88,7 +88,7 @@
                                     <option>{{ __('common.form.topic_select') }}</option>
                                     @if (type_contact())
                                         @foreach (type_contact() as $item)
-                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                            <option value="{{ $item->id }}">{{ zh_localized($item, 'name') }}</option>
                                         @endforeach
                                     @endif
                                 </select>

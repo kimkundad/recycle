@@ -64,7 +64,7 @@
                                 <div class="ps-block__number photo_cat">
                                     <img class="img-fluid inheritpho " src="{{ url('images/wpnrayong/subcat/'.$u->image) }}">
                                 </div>
-                            <p style="margin-top:10px">{{ $u->sub_name }}</p>
+                            <p style="margin-top:10px">{{ zh_localized($u, 'sub_name') }}</p>
                             </a>
                         </div>
                     @endforeach
@@ -675,7 +675,7 @@
                                 <div class="ps-block__number">
                                     <img class="img-fluid" src="{{ url('images/wpnrayong/subcat/'.$u->image) }}">
                                 </div>
-                            <p style="margin-top:10px">{{ $u->sub_name }}</p>
+                            <p style="margin-top:10px">{{ zh_localized($u, 'sub_name') }}</p>
                             </a>
                         </div>
                     @endforeach

@@ -157,3 +157,12 @@ function localized($item, string $field): ?string
 
     return null;
 }
+
+/**
+ * For DB fields that the Thai and English site show untranslated today: localize only in
+ * Chinese, so TH/EN output stays exactly as it was.
+ */
+function zh_localized($item, string $field): ?string
+{
+    return app()->getLocale() === 'zh' ? localized($item, $field) : data_get($item, $field);
+}

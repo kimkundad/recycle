@@ -55,4 +55,18 @@ class LocalizedHelperTest extends TestCase
         $this->assertNull(localized($this->row([]), 'title'));
         $this->assertNull(localized(null, 'title'));
     }
+
+    public function test_zh_only_localizes_in_chinese_and_keeps_base_field_otherwise(): void
+    {
+        $row = $this->row(['name' => 'ไทย', 'name_en' => 'EN']);
+
+        App::setLocale('zh');
+        $this->assertSame('EN', zh_localized($row, 'name'));
+
+        App::setLocale('en');
+        $this->assertSame('ไทย', zh_localized($row, 'name'));
+
+        App::setLocale('th');
+        $this->assertSame('ไทย', zh_localized($row, 'name'));
+    }
 }

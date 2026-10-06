@@ -47,9 +47,9 @@
                         @foreach ($objs as $u)
                             <div class="col-md-4 mt-15">
                                 <button class="ps-btn--fullwidth-green btn-block" id="btnSendData"
-                                    style="border-radius: 5px; border: solid 1px #009247 ">{{ $u->name }}</button>
+                                    style="border-radius: 5px; border: solid 1px #009247 ">{{ zh_localized($u, 'name') }}</button>
                                 <img src="{{ url('img/certificate/' . $u->image) }}" data-toggle="modal"
-                                    data-target="#product-cer{{ $u->id }}" alt="{{ $u->name }}" class='img-fluid'
+                                    data-target="#product-cer{{ $u->id }}" alt="{{ zh_localized($u, 'name') }}" class='img-fluid'
                                     style="border: solid 1px #009247; 
                         border-radius: 5px;  max-height:450px;   width: 100%;">
                             </div>
