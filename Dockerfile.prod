@@ -1,0 +1,55 @@
+# ==========================================
+# Stage 1: Build Vite assets (public/build)
+# ==========================================
+FROM node:20-alpine AS assets
+
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+# ==========================================
+# Stage 2: PHP app runtime (php-fpm)
+# ==========================================
+# Pinned, not a floating 8.2 tag: 8.2.35 carries the fix for the October 2026
+# RCEs (CVE-2026-109618 / CVE-2026-109619). Bump this line to move PHP.
+# Debian, not alpine, so www-data is uid 33 like on the Ubuntu host and the
+# bind-mounted uploads/storage stay writable.
+FROM php:8.2.35-fpm AS app-runtime
+
+COPY --from=mlocati/php-extension-installer:2 /usr/bin/install-php-extensions /usr/local/bin/
+RUN install-php-extensions bcmath exif gd intl opcache pdo_mysql redis zip
+
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
+
+COPY docker/php/php.prod.ini /usr/local/etc/php/conf.d/zz-prod.ini
+
+WORKDIR /var/www/app
+
+# Install vendor before copying the code so this layer stays cached until
+# composer.lock changes.
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --no-scripts --no-autoloader --no-interaction --prefer-dist
+
+COPY . .
+COPY --from=assets /app/public/build ./public/build
+
+RUN composer dump-autoload --no-dev --optimize \
+ && php artisan package:discover --ansi \
+ && chown -R www-data:www-data storage bootstrap/cache
+
+ENV TZ=Asia/Bangkok
+EXPOSE 9000
+CMD ["php-fpm"]
+
+# ==========================================
+# Stage 3: Nginx runtime (static files + FastCGI to php)
+# ==========================================
+FROM nginx:alpine AS nginx-runtime
+
+COPY docker/nginx/nginx.prod.conf /etc/nginx/conf.d/default.conf
+COPY --from=app-runtime /var/www/app/public /var/www/app/public
+
+EXPOSE 80

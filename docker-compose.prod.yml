@@ -1,0 +1,32 @@
+services:
+  nginx:
+    image: ${NGINX_IMAGE}:${IMAGE_TAG}
+    container_name: recycle-nginx
+    ports:
+      # Loopback only: the host nginx proxies here. Docker's published ports
+      # skip ufw, so 0.0.0.0 would let anyone bypass the host nginx.
+      - "127.0.0.1:8087:80"
+    volumes:
+      # Admin uploads land in these public folders; keep them outside the
+      # image so a deploy doesn't wipe them.
+      - ./uploads/media:/var/www/app/public/media:ro
+      - ./uploads/img/hproject:/var/www/app/public/img/hproject:ro
+      - ./uploads/img/slide:/var/www/app/public/img/slide:ro
+      - ./uploads/img/all_image:/var/www/app/public/img/all_image:ro
+    depends_on:
+      - php
+    restart: unless-stopped
+
+  php:
+    image: ${APP_IMAGE}:${IMAGE_TAG}
+    container_name: recycle-php
+    volumes:
+      - ./.env:/var/www/app/.env:ro
+      - ./storage:/var/www/app/storage
+      - ./uploads/media:/var/www/app/public/media
+      - ./uploads/img/hproject:/var/www/app/public/img/hproject
+      - ./uploads/img/slide:/var/www/app/public/img/slide
+      - ./uploads/img/all_image:/var/www/app/public/img/all_image
+    environment:
+      TZ: Asia/Bangkok
+    restart: unless-stopped
