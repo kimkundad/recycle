@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\certificate;
-use Intervention\Image\ImageManagerStatic as Image;
+use App\Support\SpacesUpload;
 use Illuminate\Support\Facades\DB;
 
 class CertificateController extends Controller
@@ -75,10 +75,7 @@ class CertificateController extends Controller
 
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
-          $img = Image::make($image->getRealPath());
-          $img->resize(800, 800, function ($constraint) {
-          $constraint->aspectRatio();
-        })->save('img/certificate/'.$input['imagename']);
+          SpacesUpload::image($image, 'certificate', $input['imagename'], 800, 800);
 
         $status = 0;
         $sort = 0;
@@ -177,15 +174,11 @@ class CertificateController extends Controller
           ->where('id', $id)
           ->first();
 
-          $file_path = 'img/certificate/'.$img->image;
-          unlink($file_path);
+          SpacesUpload::delete('certificate', $img->image);
 
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
-          $img = Image::make($image->getRealPath());
-          $img->resize(800, 800, function ($constraint) {
-          $constraint->aspectRatio();
-            })->save('img/certificate/'.$input['imagename']);
+          SpacesUpload::image($image, 'certificate', $input['imagename'], 800, 800);
      
            $objs = certificate::find($id);
            $objs->name = $request['name'];
@@ -216,8 +209,7 @@ class CertificateController extends Controller
             ->first();
 
             if(isset($objs->image)){
-              $file_path = 'img/certificate/'.$objs->image;
-               unlink($file_path);
+              SpacesUpload::delete('certificate', $objs->image);
             }
 
         $obj = certificate::find($id);

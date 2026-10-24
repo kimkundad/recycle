@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\hproject;
-use Intervention\Image\ImageManagerStatic as Image;
+use App\Support\SpacesUpload;
 use Illuminate\Support\Facades\DB;
 
 class HProjectController extends Controller
@@ -77,9 +77,8 @@ class HProjectController extends Controller
 
            $image = $request->file('image');
 
-           $path = 'img/hproject/';
             $filename = time()."-".$image->getClientOriginalName();
-            $image->move($path, $filename);
+            SpacesUpload::file($image, 'hproject', $filename);
 
            $status = 0;
             if(isset($request['status'])){
@@ -170,16 +169,10 @@ class HProjectController extends Controller
                 ->where('id', $id)
                 ->first();
 
-                if($img->image){
+                SpacesUpload::delete('hproject', $img->image);
 
-                    $file_path = 'img/hproject/'.$img->image;
-                    unlink($file_path);
-
-                }
-
-                $path = 'img/hproject/';
                 $filename = time()."-".$image->getClientOriginalName();
-                $image->move($path, $filename);
+                SpacesUpload::file($image, 'hproject', $filename);
 
 
                 $objs = hproject::find($id);
@@ -213,8 +206,7 @@ class HProjectController extends Controller
             ->first();
 
             if(isset($objs->image)){
-              $file_path = 'img/hproject/'.$objs->image;
-               unlink($file_path);
+              SpacesUpload::delete('hproject', $objs->image);
             }
         //
         $obj = hproject::find($id);

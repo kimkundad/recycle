@@ -1,1 +1,1 @@
-<img src="{{ url('img/certificate/'.$image) }}" class="img-fluid" style="width: 100%">
+<img src="{{ url('images/wpnrayong/certificate/'.$image) }}" class="img-fluid" style="width: 100%">

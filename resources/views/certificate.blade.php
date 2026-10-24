@@ -48,7 +48,7 @@
                             <div class="col-md-4 mt-15">
                                 <button class="ps-btn--fullwidth-green btn-block" id="btnSendData"
                                     style="border-radius: 5px; border: solid 1px #009247 ">{{ zh_localized($u, 'name') }}</button>
-                                <img src="{{ url('img/certificate/' . $u->image) }}" data-toggle="modal"
+                                <img src="{{ url('images/wpnrayong/certificate/' . $u->image) }}" data-toggle="modal"
                                     data-target="#product-cer{{ $u->id }}" alt="{{ zh_localized($u, 'name') }}" class='img-fluid'
                                     style="border: solid 1px #009247; 
                         border-radius: 5px;  max-height:450px;   width: 100%;">
@@ -72,7 +72,7 @@
                                         <div class="ps-product__header p-20">
 
                                             <div class="text-center">
-                                                <img src="{{ url('img/certificate/' . $u->image) }}" style="width:100%">
+                                                <img src="{{ url('images/wpnrayong/certificate/' . $u->image) }}" style="width:100%">
                                             </div>
 
                                         </div>

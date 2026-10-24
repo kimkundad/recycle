@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\alliance;
-use Intervention\Image\ImageManagerStatic as Image;
+use App\Support\SpacesUpload;
 use Illuminate\Support\Facades\DB;
 
 
@@ -74,10 +74,7 @@ class AllianceController extends Controller
 
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
-          $img = Image::make($image->getRealPath());
-          $img->resize(250, 250, function ($constraint) {
-          $constraint->aspectRatio();
-        })->save('img/alliance/'.$input['imagename']);
+          SpacesUpload::image($image, 'alliance', $input['imagename'], 250, 250);
 
         $status = 0;
         if(isset($request['status'])){
@@ -159,15 +156,11 @@ class AllianceController extends Controller
           ->where('id', $id)
           ->first();
 
-          $file_path = 'img/alliance/'.$img->image;
-          unlink($file_path);
+          SpacesUpload::delete('alliance', $img->image);
 
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
-          $img = Image::make($image->getRealPath());
-          $img->resize(250, 250, function ($constraint) {
-          $constraint->aspectRatio();
-          })->save('img/alliance/'.$input['imagename']);
+          SpacesUpload::image($image, 'alliance', $input['imagename'], 250, 250);
      
            $objs = alliance::find($id);
            $objs->name = $request['name'];
@@ -195,8 +188,7 @@ class AllianceController extends Controller
             ->first();
 
             if(isset($objs->image)){
-              $file_path = 'img/alliance/'.$objs->image;
-               unlink($file_path);
+              SpacesUpload::delete('alliance', $objs->image);
             }
 
         $obj = alliance::find($id);

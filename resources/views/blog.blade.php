@@ -36,7 +36,7 @@
             <div class="ps-post ps-post--horizontal">
                 <div class="ps-post__thumbnail" >
                     <a class="ps-post__overlay" href="{{ url('blog_detail/'.$objs[0]->id) }}"></a>
-                    <img src="{{ url('media/'.$objs[0]->image) }}" alt="{{ $objs[0]->title }}">
+                    <img src="{{ url('images/wpnrayong/news/'.$objs[0]->image) }}" alt="{{ $objs[0]->title }}">
                 </div>
                 <div class="ps-post__content">
 
