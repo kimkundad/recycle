@@ -13,6 +13,9 @@ services:
       - ./uploads/img/hproject:/var/www/app/public/img/hproject:ro
       - ./uploads/img/slide:/var/www/app/public/img/slide:ro
       - ./uploads/img/all_image:/var/www/app/public/img/all_image:ro
+      - ./uploads/img/certificate:/var/www/app/public/img/certificate:ro
+      - ./uploads/img/alliance:/var/www/app/public/img/alliance:ro
+      - ./uploads/img/brand:/var/www/app/public/img/brand:ro
     depends_on:
       - php
     restart: unless-stopped
@@ -27,6 +30,9 @@ services:
       - ./uploads/img/hproject:/var/www/app/public/img/hproject
       - ./uploads/img/slide:/var/www/app/public/img/slide
       - ./uploads/img/all_image:/var/www/app/public/img/all_image
+      - ./uploads/img/certificate:/var/www/app/public/img/certificate
+      - ./uploads/img/alliance:/var/www/app/public/img/alliance
+      - ./uploads/img/brand:/var/www/app/public/img/brand
     environment:
       TZ: Asia/Bangkok
     restart: unless-stopped

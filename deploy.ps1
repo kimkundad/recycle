@@ -1,29 +1,31 @@
 # ==========================================
 # deploy.ps1 — Build & Push (Windows)
 # ==========================================
-# Builds from a clean checkout of HEAD, so uncommitted work never ships.
-# Usage: .\deploy.ps1            -> tag yyyy-MM-dd-01
-#        .\deploy.ps1 -Suffix 02 -> second deploy of the day
+# Builds from a clean checkout of a commit, so uncommitted work never ships.
+# Usage: .\deploy.ps1                              -> HEAD, tag yyyy-MM-dd-01
+#        .\deploy.ps1 -Suffix 02                   -> second deploy of the day
+#        .\deploy.ps1 -Suffix 02 -Ref hotfix/xyz   -> build another branch/commit
 
-param([string]$Suffix = "01")
+param([string]$Suffix = "01", [string]$Ref = "HEAD")
 
 $registry   = "ghcr.io/kimkundad"
 $tag        = "$(Get-Date -Format 'yyyy-MM-dd')-$Suffix"
 $appImage   = "$registry/recycle-app:$tag"
 $nginxImage = "$registry/recycle-nginx:$tag"
-$commit     = git rev-parse --short HEAD
+$commit     = git rev-parse --short "$Ref^{commit}"
+if ($LASTEXITCODE) { throw "unknown ref: $Ref" }
 
-if (git status --porcelain) {
+if ($Ref -eq "HEAD" -and (git status --porcelain)) {
     Write-Host "Note: uncommitted changes are NOT included in this build." -ForegroundColor Yellow
 }
 git fetch -q origin
-if ([int](git rev-list --count "origin/main..HEAD") -gt 0) {
-    Write-Host "Note: HEAD ($commit) has commits that are not pushed to origin/main." -ForegroundColor Yellow
+if (-not (git branch -r --contains $commit)) {
+    Write-Host "Note: $commit is not on any pushed branch yet." -ForegroundColor Yellow
 }
 
 $ctx = Join-Path $env:TEMP "recycle-build-$tag"
 if (Test-Path $ctx) { git worktree remove --force $ctx }
-git worktree add --detach $ctx HEAD
+git worktree add --detach $ctx $commit
 if ($LASTEXITCODE) { throw "git worktree add failed" }
 
 try {
