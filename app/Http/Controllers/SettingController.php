@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\setting;
-use Intervention\Image\ImageManagerStatic as Image;
+use App\Support\SpacesUpload;
 use Illuminate\Support\Facades\DB;
 
 class SettingController extends Controller
@@ -41,14 +41,12 @@ class SettingController extends Controller
               // }
                 
     
-                $path = 'media/';
                 $filename = time().'.'.$image->getClientOriginalExtension();
-                $image->move($path, $filename);
-    
+                SpacesUpload::file($image, 'setting', $filename);
+
               }else{
-                $path = 'media/';
                 $filename = time().'.'.$image->getClientOriginalExtension();
-                $image->move($path, $filename);
+                SpacesUpload::file($image, 'setting', $filename);
               }
 
               $objs = setting::find($id);

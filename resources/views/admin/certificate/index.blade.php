@@ -97,7 +97,7 @@
                                             <td>{{ $item->sort }}</td>
                                             <td>
                                                 <div class="symbol symbol-50px">
-                                                    <img src="{{ url('img/certificate/'.$item->image) }}" alt="">
+                                                    <img src="{{ url('images/wpnrayong/certificate/'.$item->image) }}" alt="">
                                                 </div>
                                             </td>
                                             <td>

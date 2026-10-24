@@ -71,8 +71,8 @@
         @isset($slide)
             @foreach ($slide as $item)
 
-                <div class="ps-banner--autopart align-items-center cover" data-background="{{ url('/img/slide/'.$item->image) }}">
-                    <img src="{{ url('/img/slide/'.$item->image) }}" alt="">
+                <div class="ps-banner--autopart align-items-center cover" data-background="{{ url('images/wpnrayong/slide/'.$item->image) }}">
+                    <img src="{{ url('images/wpnrayong/slide/'.$item->image) }}" alt="">
                     <div class="d-flex">
                             <div class="ps-banner__content" >
                                 <h4 class="sub-head-w">{{ localized($item, 'title') }}</h4>
@@ -725,7 +725,7 @@
                 @isset($ban)
                     @foreach ($ban as $item)
                         <div class="ps-block--testimonial text-center">
-                            <img src="{{ url('img/alliance/'.$item->image) }}" alt="{{ $item->name }}" class="max-h-55">
+                            <img src="{{ url('images/wpnrayong/alliance/'.$item->image) }}" alt="{{ $item->name }}" class="max-h-55">
                         </div>
                     @endforeach
                 @endisset
@@ -755,37 +755,37 @@
             <div class="dg-wrapper ps-section__content">
                 <div class="text-center img_ro img_rotation1" data-image="{{ $cer[0]->id }}">
                     <div class="scale-100">
-                        <img src="{{ url('img/certificate/'.$cer[0]->image) }}" >
+                        <img src="{{ url('images/wpnrayong/certificate/'.$cer[0]->image) }}" >
                         {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[0]->name }}</h4> --}}
                     </div>
                 </div>
                 <div class="text-center img_ro img_rotation2" data-image="{{ $cer[1]->id }}">
                     <div class="scale-100">
-                        <img src="{{ url('img/certificate/'.$cer[1]->image) }}" >
+                        <img src="{{ url('images/wpnrayong/certificate/'.$cer[1]->image) }}" >
                         {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[1]->name }}</h4> --}}
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation3" data-image="{{ $cer[2]->id }}">
                     <div class="scale-100">
-                        <img src="{{ url('img/certificate/'.$cer[2]->image) }}" >
+                        <img src="{{ url('images/wpnrayong/certificate/'.$cer[2]->image) }}" >
                         {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[2]->name }}</h4> --}}
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation4" data-image="{{ $cer[3]->id }}">
                     <div class="scale-100 text-center">
-                        <img src="{{ url('img/certificate/'.$cer[3]->image) }}" >
+                        <img src="{{ url('images/wpnrayong/certificate/'.$cer[3]->image) }}" >
                         {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[3]->name }}</h4> --}}
                 </div>
                 </div>
                 <div class="text-center img_ro img_rotation5" data-image="{{ $cer[4]->id }}">
                     <div class="scale-100 text-center">
-                        <img src="{{ url('img/certificate/'.$cer[4]->image) }}" >
+                        <img src="{{ url('images/wpnrayong/certificate/'.$cer[4]->image) }}" >
                         {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[4]->name }}</h4> --}}
                     </div>
                 </div>
                 <div class="text-center img_ro img_rotation6" data-image="{{ $cer[5]->id }}">
                     <div class="scale-100 text-center">
-                        <img src="{{ url('img/certificate/'.$cer[5]->image) }}" >
+                        <img src="{{ url('images/wpnrayong/certificate/'.$cer[5]->image) }}" >
                         {{-- <h4 class="text-gray-400 fs-16px">{{ $cer[5]->name }}</h4> --}}
                     </div>
                 </div>
@@ -822,7 +822,7 @@
                             <div class="ps-post">
                                 <div class="ps-post__thumbnail" style="overflow: hidden; max-height: 190px; min-height: 190px;">
                                     <a class="ps-post__overlay" href="{{ url('blog_detail/'.$item->id) }}"></a>
-                                    <img src="{{ url('media/'.$item->image) }}" alt="{{ $item->title }}" style="max-height: 190px; min-height: 190px;">
+                                    <img src="{{ url('images/wpnrayong/news/'.$item->image) }}" alt="{{ $item->title }}" style="max-height: 190px; min-height: 190px;">
                                 </div>
 
                                 <div class="ps-post__content">

@@ -190,7 +190,7 @@ class HomeController extends Controller
     private function articleCardHtml($result): string
     {
         $url = url('blog_detail/'.$result->id);
-        $img = url('media/'.$result->image);
+        $img = url('images/wpnrayong/news/'.$result->image);
         $untranslated = app()->getLocale() === 'en' && $result->title_en == null;
         $title = $untranslated ? $result->title : localized($result, 'title');
         $subTitle = $untranslated ? $result->sub_title : localized($result, 'sub_title');
@@ -238,7 +238,7 @@ class HomeController extends Controller
       $data = certificate::where('id', $data_id)->first();
 
       $artilces = '';
-      $img = url('img/certificate/'.$data->image);
+      $img = url('images/wpnrayong/certificate/'.$data->image);
         if ($request->ajax()) {
           $artilces.='<h4 class="text-gray-400 fs-16px">'.zh_localized($data, 'name').'</h4><img src="'.$img.'" class="img-fluid" style="width: 100%">';
           return $artilces;

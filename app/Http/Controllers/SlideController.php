@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\slideshow;
-use Intervention\Image\ImageManagerStatic as Image;
+use App\Support\SpacesUpload;
 use Illuminate\Support\Facades\DB;
 
 class SlideController extends Controller
@@ -77,9 +77,8 @@ class SlideController extends Controller
            
            $image = $request->file('image');
 
-           $path = 'img/slide/';
             $filename = time()."-".$image->getClientOriginalName();
-            $image->move($path, $filename);
+            SpacesUpload::file($image, 'slide', $filename);
 
         $status = 0;
         if(isset($request['status'])){
@@ -234,12 +233,10 @@ class SlideController extends Controller
           ->where('id', $id)
           ->first();
 
-          $file_path = 'img/slide/'.$img->image;
-          unlink($file_path);
+          SpacesUpload::delete('slide', $img->image);
 
-          $path = 'img/slide/';
           $filename = time()."-".$image->getClientOriginalName();
-          $image->move($path, $filename);
+          SpacesUpload::file($image, 'slide', $filename);
      
            $objs = slideshow::find($id);
            $objs->title = $request['title'];
@@ -284,8 +281,7 @@ class SlideController extends Controller
             ->first();
 
             if(isset($objs->image)){
-              $file_path = 'img/slide/'.$objs->image;
-               unlink($file_path);
+              SpacesUpload::delete('slide', $objs->image);
             }
 
         $obj = slideshow::find($id);

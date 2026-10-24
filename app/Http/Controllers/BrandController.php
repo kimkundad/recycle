@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\brand;
 use App\Models\product;
-use Intervention\Image\ImageManagerStatic as Image;
+use App\Support\SpacesUpload;
 use Illuminate\Support\Facades\DB;
 
 class BrandController extends Controller
@@ -84,10 +84,7 @@ class BrandController extends Controller
 
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
-          $img = Image::make($image->getRealPath());
-          $img->resize(250, 250, function ($constraint) {
-          $constraint->aspectRatio();
-        })->save('img/brand/'.$input['imagename']);
+          SpacesUpload::image($image, 'brand', $input['imagename'], 250, 250);
 
         $status = 0;
         if(isset($request['status'])){
@@ -172,15 +169,11 @@ class BrandController extends Controller
           ->where('id', $id)
           ->first();
 
-          $file_path = 'img/brand/'.$img->image;
-          unlink($file_path);
+          SpacesUpload::delete('brand', $img->image);
 
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
-          $img = Image::make($image->getRealPath());
-          $img->resize(250, 250, function ($constraint) {
-          $constraint->aspectRatio();
-          })->save('img/brand/'.$input['imagename']);
+          SpacesUpload::image($image, 'brand', $input['imagename'], 250, 250);
      
            $objs = brand::find($id);
            $objs->name = $request['name'];
@@ -208,8 +201,7 @@ class BrandController extends Controller
             ->first();
 
             if(isset($objs->image)){
-              $file_path = 'img/brand/'.$objs->image;
-               unlink($file_path);
+              SpacesUpload::delete('brand', $objs->image);
             }
 
         $obj = brand::find($id);

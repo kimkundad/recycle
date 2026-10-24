@@ -11,7 +11,7 @@
     <meta property="og:url"           content="https://wpnrayong.com/blog_detail/{{ $objs->id }}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ $objs->title }}" />
-    <meta property="og:image"         content="{{ url('media/'.$objs->image) }}?v{{time()}}" />
+    <meta property="og:image"         content="{{ url('images/wpnrayong/news/'.$objs->image) }}?v{{time()}}" />
     <meta property="og:description"   content="{{ zh_localized($objs, 'sub_title') }}" />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="314" />
@@ -53,7 +53,7 @@
 <div class="ps-deal-of-day mt-10">
     <div class="container">
         <div class="ps-blog__content bor_shadow">
-            <img src="{{ url('media/'.$objs->image) }}" class="img-fluid" style="width:100%">
+            <img src="{{ url('images/wpnrayong/news/'.$objs->image) }}" class="img-fluid" style="width:100%">
 
             <div class="blog_detail_in">
                 <h4 class="mt-20">{{ localized($objs, 'title') }}</h4>

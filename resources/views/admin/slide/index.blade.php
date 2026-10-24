@@ -94,7 +94,7 @@
                                         <tr id="{{$item->id}}">
                                             <td>
                                                 <div class=" " >
-                                                    <img src="{{ url('img/slide/'.$item->image) }}" style="height:75px">
+                                                    <img src="{{ url('images/wpnrayong/slide/'.$item->image) }}" style="height:75px">
                                                 </div>
                                             </td>
                                             <td>

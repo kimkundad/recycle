@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\news;
-use Intervention\Image\ImageManagerStatic as Image;
+use App\Support\SpacesUpload;
 use Illuminate\Support\Facades\DB;
 
 class NewConController extends Controller
@@ -30,9 +30,9 @@ class NewConController extends Controller
             $extension = $request->file('upload')->getClientOriginalExtension();
             $fileName = $fileName . '_' . time() . '.' . $extension;
     
-            $request->file('upload')->move(public_path('media'), $fileName);
-    
-            $url = asset('media/' . $fileName);
+            SpacesUpload::file($request->file('upload'), 'editor', $fileName);
+
+            $url = SpacesUpload::publicUrl('editor', $fileName);
             return response()->json(['fileName' => $fileName, 'uploaded'=> 1, 'url' => $url]);
         }
     }
@@ -40,11 +40,10 @@ class NewConController extends Controller
     public function upload_img(Request $request){
 
         $image = $request->file('image');
-        $pathaa = 'img/all_image/';
               $filename = time()."-".$image->getClientOriginalName();
-              $image->move($pathaa, $filename);
+              SpacesUpload::file($image, 'editor', $filename);
 
-        echo url('img/all_image/'.$filename);
+        echo SpacesUpload::publicUrl('editor', $filename);
       }
 
 
@@ -107,10 +106,7 @@ class NewConController extends Controller
 
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
-          $img = Image::make($image->getRealPath());
-          $img->resize(1568, 1045, function ($constraint) {
-          $constraint->aspectRatio();
-        })->save('media/'.$input['imagename']);
+          SpacesUpload::image($image, 'news', $input['imagename'], 1568, 1045);
 
         $status = 0;
         if(isset($request['status'])){
@@ -221,15 +217,11 @@ class NewConController extends Controller
           ->where('id', $id)
           ->first();
 
-          $file_path = 'media/'.$img->image;
-          unlink($file_path);
+          SpacesUpload::delete('news', $img->image);
 
             $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
 
-          $img = Image::make($image->getRealPath());
-          $img->resize(1568, 1045, function ($constraint) {
-          $constraint->aspectRatio();
-          })->save('media/'.$input['imagename']);
+          SpacesUpload::image($image, 'news', $input['imagename'], 1568, 1045);
      
            $objs = news::find($id);
            $objs->title = $request['title'];
@@ -267,8 +259,7 @@ class NewConController extends Controller
             ->first();
 
             if(isset($objs->image)){
-              $file_path = 'media/'.$objs->image;
-               unlink($file_path);
+              SpacesUpload::delete('news', $objs->image);
             }
 
         $obj = news::find($id);

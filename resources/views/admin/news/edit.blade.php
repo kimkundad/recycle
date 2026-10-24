@@ -78,7 +78,7 @@
                                         <!--begin::Image input-->
                                         <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{ url('img/media-image-size.png') }}')">
                                             <!--begin::Preview existing avatar แแ-->
-                                            <div class="image-input-wrapper " style="background-image: url({{ url('media/'.$objs->image) }}); width:380px; height:200px"></div>
+                                            <div class="image-input-wrapper " style="background-image: url({{ url('images/wpnrayong/news/'.$objs->image) }}); width:380px; height:200px"></div>
                                             <!--end::Preview existing avatar-->
                                             <!--begin::Label-->
                                             <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="เปลี่ยน รูปกิจกรรม & ประชาสัมพันธ์สินค้า">
