@@ -34,8 +34,11 @@ class FilesMigrateToSpaces extends Command
     /** HTML columns whose embedded editor images (/img/all_image/, /media/) move to the editor/ folder. */
     public const HTML = ['news' => ['detail', 'detail_en', 'detail_zh']];
 
-    /** A link to an editor image on this site: absolute, or root-relative right after a quote, "(" or "=". */
-    private const EMBED = '~(?:https?://(?:www\.)?wpnrayong\.com|(?<=["\'(=]))/(img/all_image|media)/([^"\'\s<>)]+)~';
+    /**
+     * A link to an editor image on this site, absolute or root-relative right after a quote or "=".
+     * Names may hold raw spaces and parentheses, so the name runs to the closing quote.
+     */
+    private const EMBED = '~(?:https?://(?:www\.)?wpnrayong\.com|(?<=["\'=]))/(img/all_image|media)/([^"\'<>]+)~';
 
     private array $done;
     private array $stats;

@@ -36,8 +36,9 @@ class FilesMigrateToSpacesTest extends TestCase
             'image' => '5.png',
             'detail' => '<img src="https://www.wpnrayong.com/img/all_image/1-%E0%B8%81.jpg"><img src="/media/a_1.png">',
             'detail_en' => '<img src="https://wpnrayong.com/img/all_image/1-ก.jpg"> <img src="https://www.wpnrayong.com/img/all_image/missing.jpg">',
-            'detail_zh' => null,
+            'detail_zh' => '<p><img src="https://www.wpnrayong.com/img/all_image/2-a b (7)_0.jpg" width="100%"></p>',
         ]);
+        DB::table('news')->insert(['image' => null, 'detail' => '<p>no images</p>']);
 
         Http::fake([
             self::SRC . '/img/slide/1-cover%20side.jpg' => Http::response('slide-bytes'),
@@ -45,6 +46,7 @@ class FilesMigrateToSpacesTest extends TestCase
             self::SRC . '/media/5.png' => Http::response('news-bytes'),
             self::SRC . '/img/all_image/1-%E0%B8%81.jpg' => Http::response('editor-bytes'),
             self::SRC . '/media/a_1.png' => Http::response('media-bytes'),
+            self::SRC . '/img/all_image/2-a%20b%20%287%29_0.jpg' => Http::response('spaced-bytes'),
             '*' => Http::response('', 404),
         ]);
     }
@@ -77,7 +79,9 @@ class FilesMigrateToSpacesTest extends TestCase
         $this->assertSame('5.png', $news->image);
         $this->assertSame('<img src="' . self::BUCKET_URL . '/editor/1-%E0%B8%81.jpg"><img src="' . self::BUCKET_URL . '/editor/a_1.png">', $news->detail);
         $this->assertSame('<img src="' . self::BUCKET_URL . '/editor/1-%E0%B8%81.jpg"> <img src="https://www.wpnrayong.com/img/all_image/missing.jpg">', $news->detail_en);
-        $this->assertNull($news->detail_zh);
+        $this->assertSame('<p><img src="' . self::BUCKET_URL . '/editor/2-a%20b%20%287%29_0.jpg" width="100%"></p>', $news->detail_zh);
+        $this->assertSame('spaced-bytes', $disk->get('wpnrayong/editor/2-a b (7)_0.jpg'));
+        $this->assertSame('<p>no images</p>', DB::table('news')->find(2)->detail);
     }
 
     public function test_second_run_skips_files_already_on_spaces(): void
